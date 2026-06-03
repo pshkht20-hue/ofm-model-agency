@@ -4,55 +4,71 @@ import Link from 'next/link';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { ReviewCard } from '@/components/ui/ReviewCard';
-import { ReviewStars } from '@/components/ui/ReviewStars';
+import { ReviewsSummary } from '@/components/ui/ReviewsSummary';
 import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
 import { MODEL_REVIEWS } from '@/lib/content/reviews';
 
 export function ModelReviewsSection() {
+  const featured = MODEL_REVIEWS.find((r) => r.featured);
+  const rest = MODEL_REVIEWS.filter((r) => !r.featured);
+
   return (
-    <SectionShell id="reviews" variant="elevated">
+    <SectionShell id="reviews" variant="elevated" wide innerClassName="max-w-6xl">
       <SectionHeader
         eyebrow="Отзывы моделей"
-        title="Что говорят те, кто уже работает с нами"
-        description="Живые тексты с согласия участниц. Без гарантий дохода — только личный опыт сотрудничества с OFM."
+        title="Реальные истории — без идеального глянца"
+        description="Как в обычных отзывах: разный опыт, цифры без гарантий, иногда 4 звезды и ответ от команды. Так спокойнее решиться на заявку."
       />
 
-      {/* Сводка доверия — стиль агрегатора отзывов, без ложной привязки к Google */}
-      <div className="mb-10 md:mb-12 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 py-6 px-6 rounded-2xl border border-white/[0.08] bg-white/[0.02]">
-        <div className="text-center sm:text-left">
-          <div className="flex items-center justify-center sm:justify-start gap-2">
-            <span className="text-4xl font-semibold text-white tracking-tight">5.0</span>
-            <ReviewStars size="md" variant="gold" />
-          </div>
-          <p className="text-xs text-white/40 mt-1">
-            Средняя оценка по {MODEL_REVIEWS.length} отзывам на сайте
-          </p>
-        </div>
-        <div className="hidden sm:block w-px h-12 bg-white/10" aria-hidden />
-        <ul className="text-xs text-white/45 space-y-1.5 text-center sm:text-left max-w-xs">
-          <li>✓ Публикация с письменного согласия</li>
-          <li>✓ Имена и детали — по запросу моделей</li>
-          <li>
-            ✓ Больше вопросов — в{' '}
-            <Link href="/faq" className="text-accent-pink hover:text-accent-cyan transition">
-              FAQ
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <ReviewsSummary />
 
-      <StaggerGrid className="grid md:grid-cols-2 gap-4 md:gap-5">
-        {MODEL_REVIEWS.map((review) => (
+      {featured && (
+        <div className="mb-5 md:mb-6">
+          <p className="text-[10px] uppercase tracking-[0.22em] text-white/30 mb-3 px-1">
+            Подробный отзыв
+          </p>
+          <ReviewCard review={featured} featured />
+        </div>
+      )}
+
+      <p className="text-[10px] uppercase tracking-[0.22em] text-white/30 mb-3 px-1">
+        Ещё отзывы
+      </p>
+
+      {/* Desktop grid */}
+      <StaggerGrid className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+        {rest.map((review) => (
           <StaggerItem key={review.id}>
             <ReviewCard review={review} />
           </StaggerItem>
         ))}
       </StaggerGrid>
 
-      <p className="mt-8 text-center text-[11px] text-white/30 leading-relaxed max-w-2xl mx-auto">
-        Отзывы не являются публичными отзывами Google Maps / Google Business. Это
-        подтверждённые отзывы моделей OFM&apos;s Model Agency, размещённые с их разрешения.
-        Доходы указаны как ориентиры и не гарантируются для новых заявок.
+      {/* Mobile: горизонтальный скролл — привычный паттерн для отзывов */}
+      <div className="md:hidden -mx-5 px-5 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide flex gap-4">
+        {MODEL_REVIEWS.map((review) => (
+          <div
+            key={review.id}
+            className="snap-center shrink-0 w-[min(88vw,340px)] first:ml-0"
+          >
+            <ReviewCard review={review} featured={review.featured} />
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <p className="text-center text-sm text-white/50 max-w-lg">
+          Узнали себя в историях? Оставьте заявку — обсудим ваш кейс без обязательств.
+        </p>
+        <Link href="/#contact" className="btn-primary shrink-0 !py-2.5 !px-6 !text-sm">
+          Подать заявку
+        </Link>
+      </div>
+
+      <p className="mt-8 text-center text-[10px] text-white/28 leading-relaxed max-w-3xl mx-auto">
+        Публикуем отзывы моделей OFM&apos;s Model Agency с их письменного согласия. Это не отзывы
+        из Google Maps / Google Business. Указанные суммы — личные ориентиры прошлых периодов, не
+        гарантия дохода для новых участниц. Имена — первые, по запросу моделей.
       </p>
     </SectionShell>
   );
