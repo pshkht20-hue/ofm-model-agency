@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OFM's Model Agency — сайт
 
-## Getting Started
+Лендинг агентства на Next.js. Деплой через Vercel из GitHub.
 
-First, run the development server:
+## Быстрый старт
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Telegram-форма
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Скопируйте `.env.example` → `.env.local`
+2. Заполните `TELEGRAM_BOT_TOKEN` и `TELEGRAM_CHAT_ID`
+3. На Vercel добавьте те же переменные в **Settings → Environment Variables**
 
-## Learn More
+## Публикация на GitHub
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+git add .
+git commit -m "описание изменений"
+git push
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Vercel пересоберёт сайт автоматически.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Структура
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Путь | Назначение |
+|------|------------|
+| `app/page.tsx` | Главная страница |
+| `components/ContactForm.tsx` | Форма заявки |
+| `app/api/application/route.ts` | API → Telegram |
+| `lib/telegram.ts` | Отправка в Telegram |
