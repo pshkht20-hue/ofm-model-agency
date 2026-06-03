@@ -1,26 +1,74 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google';
+import { JsonLd } from '@/components/JsonLd';
+import { getSiteUrl, siteConfig } from '@/lib/site';
+import './globals.css';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["400", "700"],
+  variable: '--font-playfair',
+  subsets: ['latin'],
+  weight: ['400', '700'],
 });
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  title: "OFM's Model Agency",
-  description: "Premium OnlyFans Agency",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.shortName}`,
+  },
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  category: 'business',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'ru_RU',
+    url: '/',
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: '/',
+  },
+  icons: {
+    icon: [{ url: '/icon', type: 'image/png' }],
+    apple: [{ url: '/apple-icon', type: 'image/png' }],
+  },
 };
 
 export default function RootLayout({
@@ -29,8 +77,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru" className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}>
+    <html
+      lang="ru"
+      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
+    >
       <body className="min-h-full font-sans antialiased">
+        <JsonLd />
         {children}
       </body>
     </html>

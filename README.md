@@ -11,6 +11,10 @@ npm run dev
 
 Откройте http://localhost:3000
 
+## SEO
+
+В Vercel добавьте `NEXT_PUBLIC_SITE_URL` = ваш домен (например `https://ofm-model-agency.vercel.app`).
+
 ## Telegram-форма
 
 1. Скопируйте `.env.example` → `.env.local`
