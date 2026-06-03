@@ -102,13 +102,70 @@
     "how": {
       "eyebrow": "Process",
       "title": "How we work",
+      "subtitle": "A clear path from application to stable income — no surprises and no endless “calls for the sake of calls.” Every stage is defined upfront.",
+      "cta": "Apply now",
+      "footerNote": "Average time from approval to launch — 7–14 days. First manager reply — within 24 hours.",
       "steps": [
-        { "title": "Application", "desc": "You fill out a short form — about 3–4 minutes." },
-        { "title": "Initial review", "desc": "Within 24 hours we review your profile and reach out." },
-        { "title": "Intro call", "desc": "We interview you and discuss collaboration options." },
-        { "title": "Strategy", "desc": "Plan: content, pricing and promotion." },
-        { "title": "Setup & launch", "desc": "Profile setup, content and go-live." },
-        { "title": "Growth & support", "desc": "Reports, analytics and revenue growth." }
+        {
+          "title": "Application",
+          "duration": "3–4 min",
+          "desc": "You complete a short form on the site: name, Telegram, age, and a few questions about experience. No ten-page resume — only what we need for an initial decision.",
+          "highlights": [
+            "Works fully on mobile",
+            "Data sent over a secure connection",
+            "Confirmation in Telegram after submit"
+          ]
+        },
+        {
+          "title": "Initial review",
+          "duration": "up to 24h",
+          "desc": "The team reviews your profile, niche, and monetization potential. If it’s a fit — we message you on Telegram and schedule a call. If not — we explain why honestly, without leaving you hanging.",
+          "highlights": [
+            "Review of look, niche, and content readiness",
+            "Platform rules check (18+)",
+            "Clear answer: yes / no / what to improve"
+          ]
+        },
+        {
+          "title": "Intro call",
+          "duration": "30–60 min",
+          "desc": "Video or voice on Telegram: we meet, discuss income expectations, schedule, anonymity, and content format. You ask questions — we show how work runs at OFM.",
+          "highlights": [
+            "Terms, rev share, and collaboration model",
+            "Boundaries and content taboos",
+            "Answers on chats, marketing, and payouts"
+          ]
+        },
+        {
+          "title": "Strategy",
+          "duration": "2–5 days",
+          "desc": "We build a roadmap: positioning, pricing, first-month content plan, traffic sources, and KPIs. You approve the plan before launch — not a silent “we’ll do what we know.”",
+          "highlights": [
+            "Plan for posts, PPV, mass messages, promos",
+            "Pricing tailored to niche and audience",
+            "Launch calendar and team owners"
+          ]
+        },
+        {
+          "title": "Setup & launch",
+          "duration": "5–10 days",
+          "desc": "In parallel we set up OnlyFans, visuals, chat managers, and first ad setups. Goal: go live with a ready funnel, not an empty profile and hope.",
+          "highlights": [
+            "Bio, header, pinned posts",
+            "First content pack and test mass messages",
+            "Traffic starts on launch day or the next"
+          ]
+        },
+        {
+          "title": "Growth & support",
+          "duration": "ongoing",
+          "desc": "After launch — weekly reports, metric reviews, and strategy tweaks. Your manager and marketing scale what works; chats drive LTV and PPV sales.",
+          "highlights": [
+            "Reports on subs, chats, PPV, and traffic",
+            "Regular calls or Telegram updates",
+            "Scale ads and content based on numbers"
+          ]
+        }
       ]
     },
     "services": {

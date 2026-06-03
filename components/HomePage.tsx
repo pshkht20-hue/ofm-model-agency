@@ -28,6 +28,7 @@ import { ScrollProgress } from '@/components/ScrollProgress';
 import { StickyMobileCta } from '@/components/StickyMobileCta';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { BenefitsSection } from '@/components/BenefitsSection';
+import { HowItWorksSection } from '@/components/HowItWorksSection';
 import { FeatureCard } from '@/components/ui/FeatureCard';
 import { ModelReviewsSection } from '@/components/ModelReviewsSection';
 import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
@@ -37,14 +38,11 @@ import { HomeSeoBlock } from '@/components/seo/HomeSeoBlock';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 
 const SERVICE_ICONS = [Users, MessageCircle, TrendingUp, Camera, BarChart3, Shield] as const;
-const STEP_NUMS = ['01', '02', '03', '04', '05', '06'] as const;
-
 type Item = { title: string; desc: string };
 
 export function HomePage() {
   const t = useTranslations('home');
 
-  const steps = t.raw('how.steps') as Item[];
   const services = t.raw('services.items') as Item[];
 
   return (
@@ -179,20 +177,7 @@ export function HomePage() {
 
       <BenefitsSection />
 
-      <SectionShell id="how" variant="elevated">
-        <SectionHeader eyebrow={t('how.eyebrow')} title={t('how.title')} />
-        <StaggerGrid className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {steps.map((step, i) => (
-            <StaggerItem key={STEP_NUMS[i]}>
-              <FeatureCard
-                step={STEP_NUMS[i]}
-                title={step.title}
-                description={step.desc}
-              />
-            </StaggerItem>
-          ))}
-        </StaggerGrid>
-      </SectionShell>
+      <HowItWorksSection />
 
       <SectionDivider />
       <CreatorPlatformSection />

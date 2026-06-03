@@ -102,13 +102,70 @@
     "how": {
       "eyebrow": "Proceso",
       "title": "Cómo trabajamos",
+      "subtitle": "Un camino claro de la solicitud al ingreso estable — sin sorpresas ni llamadas infinitas “por llamar”. Cada etapa está definida de antemano.",
+      "cta": "Enviar solicitud",
+      "footerNote": "Plazo medio desde la aprobación hasta el lanzamiento — 7–14 días. Primera respuesta del manager — en 24 horas.",
       "steps": [
-        { "title": "Solicitud", "desc": "Completas un formulario corto — 3–4 minutos." },
-        { "title": "Evaluación inicial", "desc": "En 24 horas revisamos tu perfil y te contactamos." },
-        { "title": "Conocimiento", "desc": "Entrevista y opciones de colaboración." },
-        { "title": "Estrategia", "desc": "Plan: contenido, precios y promoción." },
-        { "title": "Preparación y lanzamiento", "desc": "Perfil, contenido y salida al mercado." },
-        { "title": "Crecimiento y apoyo", "desc": "Informes, analítica y crecimiento de ingresos." }
+        {
+          "title": "Solicitud",
+          "duration": "3–4 min",
+          "desc": "Completas un formulario corto en la web: nombre, Telegram, edad y algunas preguntas sobre experiencia. Sin currículum de diez páginas — solo lo necesario para decidir.",
+          "highlights": [
+            "Todo se puede rellenar desde el móvil",
+            "Datos enviados por conexión segura",
+            "Confirmación en Telegram tras enviar"
+          ]
+        },
+        {
+          "title": "Evaluación inicial",
+          "duration": "hasta 24 h",
+          "desc": "El equipo revisa perfil, nicho y potencial de monetización. Si encaja — te escribimos por Telegram y agendamos llamada. Si no — explicamos por qué con honestidad, sin dejarte en espera.",
+          "highlights": [
+            "Revisión de imagen, nicho y preparación de contenido",
+            "Comprobación de normas de la plataforma (18+)",
+            "Respuesta clara: sí / no / qué mejorar"
+          ]
+        },
+        {
+          "title": "Conocimiento",
+          "duration": "30–60 min",
+          "desc": "Videollamada o voz en Telegram: nos conocemos, hablamos de ingresos esperados, horario, anonimato y formato de contenido. Tú preguntas — nosotros mostramos cómo funciona OFM.",
+          "highlights": [
+            "Condiciones, reparto y modelo de colaboración",
+            "Límites y tabúes de contenido",
+            "Respuestas sobre chats, marketing y pagos"
+          ]
+        },
+        {
+          "title": "Estrategia",
+          "duration": "2–5 días",
+          "desc": "Armamos la hoja de ruta: posicionamiento, precios, plan de contenido del primer mes, fuentes de tráfico y KPI. Lo apruebas antes del lanzamiento — no un “haremos lo que sabemos” en silencio.",
+          "highlights": [
+            "Plan de posts, PPV, mensajes masivos y promos",
+            "Precios según nicho y audiencia",
+            "Calendario de lanzamiento y responsables"
+          ]
+        },
+        {
+          "title": "Preparación y lanzamiento",
+          "duration": "5–10 días",
+          "desc": "En paralelo configuramos OnlyFans, visuales, chat managers y primeras campañas. Objetivo: salir con embudo listo, no perfil vacío y esperanza.",
+          "highlights": [
+            "Bio, cabecera y posts fijados",
+            "Primer pack de contenido y mensajes de prueba",
+            "Tráfico el día del lanzamiento o al siguiente"
+          ]
+        },
+        {
+          "title": "Crecimiento y apoyo",
+          "duration": "continuo",
+          "desc": "Tras el lanzamiento — informes semanales, métricas y ajustes de estrategia. Manager y marketing escalan lo que funciona; los chats impulsan LTV y ventas PPV.",
+          "highlights": [
+            "Informes de suscripciones, chats, PPV y tráfico",
+            "Llamadas regulares o updates en Telegram",
+            "Escalar anuncios y contenido con datos"
+          ]
+        }
       ]
     },
     "services": {
