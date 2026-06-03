@@ -38,12 +38,20 @@ function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string
   );
 }
 
-function AnimatedStat({ number, suffix = "", prefix = "", label, decimals = 0 }) {
+interface AnimatedStatProps {
+  number: number;
+  suffix?: string;
+  prefix?: string;
+  label: string;
+  decimals?: number;
+}
+
+function AnimatedStat({ number, suffix = "", prefix = "", label, decimals = 0 }: AnimatedStatProps) {
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => 
     decimals > 0 ? latest.toFixed(decimals) : Math.floor(latest)
   );
-  const [displayValue, setDisplayValue] = useState(0);
+  const [displayValue, setDisplayValue] = useState<string | number>(0);
 
   useEffect(() => {
     const controls = animate(count, number, {
