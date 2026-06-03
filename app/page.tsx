@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import { ContactForm } from '@/components/ContactForm';
+import { Navbar } from '@/components/Navbar';
 import { motion } from 'framer-motion';
 import { useMotionValue, useTransform, animate } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -79,54 +80,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
 
-    {/* ==================== NAVBAR ==================== */}
-<nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-xl border-b border-white/10">
-  <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
-    
-    {/* Логотип */}
-    <div className="flex items-center gap-3">
-      <div className="relative flex items-center justify-center w-9 h-9 md:w-11 md:h-11">
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-purple-600 to-violet-600 rounded-2xl"></div>
-        <div className="absolute inset-[1.5px] bg-black rounded-2xl"></div>
-        <div className="relative z-10">
-          <span className="text-white font-bold text-[19px] md:text-[22px] tracking-[-1.5px]">OFM</span>
-        </div>
-      </div>
-
-      <div className="hidden sm:block">
-        <div className="font-semibold text-[17px] md:text-[21px] tracking-[-0.5px] leading-none">OFM's Model Agency</div>
-        <div className="text-[9px] md:text-[10px] text-white/50 tracking-[1.5px] -mt-0.5">LUXURY ONLYFANS MANAGEMENT</div>
-      </div>
-    </div>
-
-    {/* Меню (только на десктопе) */}
-    <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wider">
-      <a href="#about" className="hover:text-pink-400 transition">О нас</a>
-      <a href="#how" className="hover:text-pink-400 transition">Как мы работаем</a>
-      <a href="#models" className="hover:text-pink-400 transition">Модели</a>
-      <a href="#results" className="hover:text-pink-400 transition">Результаты</a>
-      <a href="#reviews" className="hover:text-pink-400 transition">Отзывы</a>
-    </div>
-
-    {/* Кнопки */}
-    <div className="flex items-center gap-2 md:gap-3">
-      <a 
-        href="#contact" 
-        className="hidden md:block px-5 py-2.5 text-sm font-medium border border-white/25 rounded-full hover:bg-white/5 transition"
-      >
-        Подать заявку
-      </a>
-
-      <a 
-        href="#contact" 
-        className="bg-white text-black px-5 md:px-7 py-2.5 md:py-[13px] rounded-full text-sm font-semibold flex items-center gap-2 active:scale-[0.985] transition"
-      >
-        Стать моделью
-        <ArrowRight className="w-4 h-4" />
-      </a>
-    </div>
-  </div>
-</nav>
+    <Navbar />
 
 {/* ==================== HERO СЕКЦИЯ ==================== */}
 <section className="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
