@@ -1,58 +1,145 @@
 'use client';
 
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import {
+  motion,
+  useMotionValue,
+  useTransform,
+  animate,
+  useInView,
+} from 'framer-motion';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
+import type { LucideIcon } from 'lucide-react';
+
+export type StatAccent = 'pink' | 'cyan' | 'violet';
 
 type AnimatedStatProps = {
   number: number;
-  suffix?: string;
-  prefix?: string;
+  suffix?: ReactNode;
+  prefix?: ReactNode;
   label: string;
+  hint?: string;
+  icon?: LucideIcon;
   decimals?: number;
   index?: number;
+  accent?: StatAccent;
+};
+
+const accentGlow: Record<StatAccent, string> = {
+  pink: 'rgba(255, 91, 181, 0.35)',
+  cyan: 'rgba(0, 212, 255, 0.35)',
+  violet: 'rgba(168, 85, 247, 0.35)',
+};
+
+const accentBorder: Record<StatAccent, string> = {
+  pink: 'group-hover:border-accent-pink/35 group-hover:shadow-[0_0_40px_-12px_rgba(255,91,181,0.45)]',
+  cyan: 'group-hover:border-accent-cyan/35 group-hover:shadow-[0_0_40px_-12px_rgba(0,212,255,0.4)]',
+  violet: 'group-hover:border-accent-violet/35 group-hover:shadow-[0_0_40px_-12px_rgba(168,85,247,0.4)]',
 };
 
 export function AnimatedStat({
   number,
-  suffix = '',
-  prefix = '',
+  suffix,
+  prefix,
   label,
+  hint,
+  icon: Icon,
   decimals = 0,
   index = 0,
+  accent = 'pink',
 }: AnimatedStatProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-60px' });
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) =>
-    decimals > 0 ? latest.toFixed(decimals) : Math.floor(latest)
+    decimals > 0 ? latest.toFixed(decimals) : String(Math.floor(latest))
   );
-  const [displayValue, setDisplayValue] = useState<string | number>(0);
+  const [displayValue, setDisplayValue] = useState(decimals > 0 ? '0.0' : '0');
 
   useEffect(() => {
+    if (!isInView) return;
     const controls = animate(count, number, {
-      duration: 1.8,
-      ease: 'easeOut',
+      duration: 2.2,
+      ease: [0.22, 1, 0.36, 1],
+      delay: index * 0.12,
     });
     const unsubscribe = rounded.on('change', (v) => setDisplayValue(v));
     return () => {
       controls.stop();
       unsubscribe();
     };
-  }, [count, number, rounded]);
+  }, [count, number, rounded, isInView, index]);
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="relative px-4"
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ delay: index * 0.08, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+      className="group relative h-full"
     >
-      <div className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight flex items-baseline justify-center gap-1">
-        {prefix && <span className="text-accent-cyan">{prefix}</span>}
-        <motion.span className="text-white">{displayValue}</motion.span>
-        {suffix && <span className="text-accent-pink">{suffix}</span>}
-      </div>
-      <div className="label-stat mt-3 text-center">{label}</div>
-      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-gradient-to-r from-transparent via-accent-pink/50 to-transparent opacity-0 md:opacity-100" />
+      <motion.article
+        whileHover={{ y: -4 }}
+        transition={{ type: 'spring', stiffness: 380, damping: 26 }}
+        className={`relative flex flex-col items-center text-center h-full px-4 py-8 md:py-10 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm transition-[border-color,box-shadow] duration-400 ${accentBorder[accent]}`}
+      >
+        <div
+          className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          style={{
+            background: `radial-gradient(ellipse 80% 60% at 50% 100%, ${accentGlow[accent]}, transparent 70%)`,
+          }}
+        />
+
+        {Icon && (
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 + 0.15, type: 'spring', stiffness: 300 }}
+            className="relative mb-5 icon-wrap-bright !w-11 !h-11 group-hover:scale-110 transition-transform duration-300"
+          >
+            <Icon className="w-5 h-5" strokeWidth={1.5} />
+          </motion.div>
+        )}
+
+        <div className="relative font-serif text-[clamp(2.5rem,6vw,3.75rem)] font-normal tracking-tight leading-none flex items-baseline justify-center flex-wrap gap-0.5">
+          {prefix && (
+            <motion.span
+              initial={{ opacity: 0, x: -6 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: index * 0.12 + 0.3 }}
+              className="text-accent-cyan text-[0.85em]"
+            >
+              {prefix}
+            </motion.span>
+          )}
+          <span className="text-white tabular-nums">{displayValue}</span>
+          {suffix && (
+            <motion.span
+              initial={{ opacity: 0, scale: 0.6 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: index * 0.12 + 0.5, type: 'spring', stiffness: 400 }}
+              className="text-accent-pink text-[0.92em]"
+            >
+              {suffix}
+            </motion.span>
+          )}
+        </div>
+
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={isInView ? { scaleX: 1 } : {}}
+          transition={{ delay: index * 0.12 + 0.65, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="relative w-12 h-px mt-5 mb-4 bg-gradient-to-r from-transparent via-accent-pink/60 to-transparent origin-center"
+        />
+
+        <p className="label-stat relative z-10 max-w-[11rem]">{label}</p>
+        {hint && (
+          <p className="mt-2 text-[10px] tracking-[0.12em] uppercase text-white/30 relative z-10">
+            {hint}
+          </p>
+        )}
+      </motion.article>
     </motion.div>
   );
 }

@@ -25,7 +25,7 @@ import {
 } from '@/components/CreatorTheme';
 import { ModelShowcase } from '@/components/ModelShowcase';
 import { SectionHeader } from '@/components/SectionHeader';
-import { AnimatedStat } from '@/components/AnimatedStat';
+import { StatsShowcase } from '@/components/StatsShowcase';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { StickyMobileCta } from '@/components/StickyMobileCta';
 import { SectionShell } from '@/components/ui/SectionShell';
@@ -221,21 +221,7 @@ export default function Home() {
       <CreatorFeatureMarquee />
       <SectionDivider />
 
-      {/* STATS */}
-      <section
-        id="results"
-        className="relative border-y border-white/[0.06] bg-[#0a0a10] py-16 md:py-20 overflow-hidden"
-      >
-        <div className="section-glow absolute inset-0 pointer-events-none" aria-hidden />
-        <div className="max-w-6xl mx-auto px-5 md:px-8 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-4">
-            <AnimatedStat number={200} suffix="+" label="Моделей в агентстве" index={0} />
-            <AnimatedStat number={18.4} suffix="M" prefix="$" label="Заработано моделями" decimals={1} index={1} />
-            <AnimatedStat number={94} suffix="%" label="Средний рост дохода" index={2} />
-            <AnimatedStat number={24} suffix="/7" label="Поддержка и чаты" index={3} />
-          </div>
-        </div>
-      </section>
+      <StatsShowcase />
 
       <SectionDivider />
 
