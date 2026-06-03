@@ -41,13 +41,62 @@
     "benefits": {
       "eyebrow": "Ventajas",
       "title": "Por qué nos eligen",
+      "subtitle": "Gestión estructurada de cuenta, tráfico y chats — sin caos ni promesas de «dinero fácil». Esto es lo que recibe cada creadora en OFM.",
       "items": [
-        { "title": "Manager personal", "desc": "Un manager dedicado trabaja contigo 7 días a la semana." },
-        { "title": "Marketing potente", "desc": "Promoción profesional y crecimiento de tráfico." },
-        { "title": "Resultados reales", "desc": "Ingreso medio de nuestras modelos — $12,000 a $35,000+ al mes." },
-        { "title": "Confidencialidad total", "desc": "Protección de identidad y apoyo legal." },
-        { "title": "Enfoque individual", "desc": "Estrategia personal para cada creadora." },
-        { "title": "Inicio rápido", "desc": "De la solicitud al primer pago — normalmente 7–14 días." }
+        {
+          "title": "Manager personal",
+          "desc": "Tienes un manager personal: un único contacto para estrategia, contenido y pagos. Conoce tu cuenta y la lleva hacia tus objetivos, sin pasar tareas entre departamentos.",
+          "highlights": [
+            "Contacto diario por Telegram, siete días a la semana",
+            "Alineación de plan de contenido, precios y promos",
+            "Apoyo en disputas con fans y la plataforma"
+          ]
+        },
+        {
+          "title": "Marketing potente",
+          "desc": "El equipo construye el embudo desde el primer clic hasta la suscripción y la compra de PPV. Probamos creatividades, audiencias y fuentes para escalar lo que convierte.",
+          "highlights": [
+            "Reddit, Twitter/X, TikTok, partners y tráfico de pago",
+            "Tests A/B de portadas, bio y ofertas",
+            "Analítica semanal por fuente de suscripciones"
+          ]
+        },
+        {
+          "title": "Resultados reales",
+          "desc": "Con trabajo constante, el ingreso medio es de $12,000 a $35,000+ al mes. El crecimiento es por etapas: base estable, luego escala de PPV y retención de top fans.",
+          "highlights": [
+            "Informes claros de suscripciones, chats y PPV",
+            "Enfoque en LTV del fan, no ventas puntuales",
+            "Casos de crecimiento de cero a ingreso estable"
+          ]
+        },
+        {
+          "title": "Confidencialidad total",
+          "desc": "El anonimato y la seguridad son la base del negocio en OnlyFans. Ayudamos a separar identidad y marca, organizar procesos y reaccionar rápido ante filtraciones y doxxing.",
+          "highlights": [
+            "Guía sobre VPN, geo y datos de pago",
+            "Apoyo legal en DMCA y derechos de autor",
+            "Monitorización de filtraciones y retiradas rápidas"
+          ]
+        },
+        {
+          "title": "Enfoque individual",
+          "desc": "Sin plantilla genérica: la estrategia encaja con tu imagen, nicho, idioma de audiencia y horario. GFE, fetiche, fitness — posicionamiento y contenido a tu medida.",
+          "highlights": [
+            "Auditoría de perfil y competencia antes del lanzamiento",
+            "Precios y menú de servicios personalizados",
+            "Revisión de estrategia cada 2–4 semanas"
+          ]
+        },
+        {
+          "title": "Inicio rápido",
+          "desc": "De solicitud aprobada a primeros pagos suele ser 7–14 días. Perfil, contenido y tráfico se configuran en paralelo para no perder semanas sin ingresos.",
+          "highlights": [
+            "Checklist de lanzamiento y plantillas de bio y posts fijados",
+            "El equipo prepara primeras publicaciones y mensajes masivos",
+            "Onboarding en chats y reglas con fans"
+          ]
+        }
       ]
     },
     "how": {

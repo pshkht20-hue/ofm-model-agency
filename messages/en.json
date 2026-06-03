@@ -41,13 +41,62 @@
     "benefits": {
       "eyebrow": "Benefits",
       "title": "Why creators choose us",
+      "subtitle": "Structured account, traffic, and chat management — no chaos and no “easy money” hype. Here is what every creator gets at OFM.",
       "items": [
-        { "title": "Dedicated manager", "desc": "A personal manager works with you 7 days a week." },
-        { "title": "Strong marketing", "desc": "Professional promotion and traffic growth." },
-        { "title": "Real results", "desc": "Average creator income — $12,000 to $35,000+ per month." },
-        { "title": "Full confidentiality", "desc": "Identity protection and legal support." },
-        { "title": "Tailored approach", "desc": "A personal strategy for every creator." },
-        { "title": "Fast launch", "desc": "From application to first payouts — usually 7–14 days." }
+        {
+          "title": "Dedicated manager",
+          "desc": "You get one personal manager — a single point of contact for strategy, content, and payouts. They know your account and drive it toward goals instead of bouncing tasks between departments.",
+          "highlights": [
+            "Daily Telegram contact, seven days a week",
+            "Content plan, pricing, and promo alignment",
+            "Support with fan disputes and platform issues"
+          ]
+        },
+        {
+          "title": "Strong marketing",
+          "desc": "Our team builds the funnel from first click to subscription and PPV purchase. We test creatives, audiences, and sources to scale what actually converts.",
+          "highlights": [
+            "Reddit, Twitter/X, TikTok, partners, and paid traffic",
+            "A/B tests for covers, bio, and offers",
+            "Weekly analytics by subscription source"
+          ]
+        },
+        {
+          "title": "Real results",
+          "desc": "With consistent work, average creator income is $12,000 to $35,000+ per month. Growth is staged: stable base first, then PPV scale and top-fan retention.",
+          "highlights": [
+            "Clear reports on subs, chats, and PPV",
+            "Focus on fan LTV, not one-off sales",
+            "Case studies from zero to stable income"
+          ]
+        },
+        {
+          "title": "Full confidentiality",
+          "desc": "Anonymity and safety are the foundation of an OnlyFans business. We help separate identity from brand, set up processes, and respond fast to leaks and doxxing.",
+          "highlights": [
+            "Guidance on VPN, geo, and payment data",
+            "Legal support for DMCA and copyright",
+            "Leak monitoring and rapid takedowns"
+          ]
+        },
+        {
+          "title": "Tailored approach",
+          "desc": "No copy-paste playbook: strategy fits your look, niche, audience language, and schedule. GFE, fetish, fitness — positioning and content adapt to you.",
+          "highlights": [
+            "Profile and competitor audit before launch",
+            "Custom pricing and service menu",
+            "Strategy reviews every 2–4 weeks"
+          ]
+        },
+        {
+          "title": "Fast launch",
+          "desc": "From approved application to first payouts is usually 7–14 days. Profile, content, and traffic are set up in parallel so prep weeks do not mean zero revenue.",
+          "highlights": [
+            "Launch checklist and bio / pinned post templates",
+            "Team prepares first posts and mass messages",
+            "Chat onboarding and fan communication rules"
+          ]
+        }
       ]
     },
     "how": {

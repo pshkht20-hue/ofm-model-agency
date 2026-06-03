@@ -4,7 +4,6 @@ import {
   ArrowRight,
   Users,
   TrendingUp,
-  Award,
   Shield,
   Heart,
   Zap,
@@ -28,6 +27,7 @@ import { StatsShowcase } from '@/components/StatsShowcase';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { StickyMobileCta } from '@/components/StickyMobileCta';
 import { SectionShell } from '@/components/ui/SectionShell';
+import { BenefitsSection } from '@/components/BenefitsSection';
 import { FeatureCard } from '@/components/ui/FeatureCard';
 import { ModelReviewsSection } from '@/components/ModelReviewsSection';
 import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
@@ -36,7 +36,6 @@ import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
 import { HomeSeoBlock } from '@/components/seo/HomeSeoBlock';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 
-const BENEFIT_ICONS = [Users, TrendingUp, Award, Shield, Heart, Zap] as const;
 const SERVICE_ICONS = [Users, MessageCircle, TrendingUp, Camera, BarChart3, Shield] as const;
 const STEP_NUMS = ['01', '02', '03', '04', '05', '06'] as const;
 
@@ -45,7 +44,6 @@ type Item = { title: string; desc: string };
 export function HomePage() {
   const t = useTranslations('home');
 
-  const benefits = t.raw('benefits.items') as Item[];
   const steps = t.raw('how.steps') as Item[];
   const services = t.raw('services.items') as Item[];
 
@@ -179,20 +177,7 @@ export function HomePage() {
       <SectionDivider />
       <StatsShowcase />
 
-      <SectionShell id="about">
-        <SectionHeader eyebrow={t('benefits.eyebrow')} title={t('benefits.title')} />
-        <StaggerGrid className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {benefits.map((item, i) => (
-            <StaggerItem key={item.title}>
-              <FeatureCard
-                icon={BENEFIT_ICONS[i]}
-                title={item.title}
-                description={item.desc}
-              />
-            </StaggerItem>
-          ))}
-        </StaggerGrid>
-      </SectionShell>
+      <BenefitsSection />
 
       <SectionShell id="how" variant="elevated">
         <SectionHeader eyebrow={t('how.eyebrow')} title={t('how.title')} />
