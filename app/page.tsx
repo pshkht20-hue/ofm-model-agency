@@ -14,6 +14,7 @@ import {
   Camera 
 } from 'lucide-react';
 import Image from 'next/image';
+import { ContactForm } from '@/components/ContactForm';
 import { motion } from 'framer-motion';
 import { useMotionValue, useTransform, animate } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -546,15 +547,8 @@ export default function Home() {
       Оставь заявку прямо сейчас. Наш менеджер свяжется с тобой в течение 24 часов и расскажет все детали.
     </p>
 
-    {/* Кнопка */}
     <div className="mb-10">
-      <a 
-        href="#contact" 
-        className="inline-flex items-center justify-center gap-4 bg-white text-black text-xl font-semibold px-16 py-6 rounded-2xl hover:bg-white/90 active:scale-[0.985] transition-all shadow-2xl"
-      >
-        Подать заявку
-        <ArrowRight className="w-6 h-6" />
-      </a>
+      <ContactForm />
     </div>
 
     {/* Trust signals */}
