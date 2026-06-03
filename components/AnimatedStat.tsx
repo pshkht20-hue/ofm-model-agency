@@ -81,7 +81,7 @@ export function AnimatedStat({
       <motion.article
         whileHover={{ y: -4 }}
         transition={{ type: 'spring', stiffness: 380, damping: 26 }}
-        className={`relative flex flex-col items-center text-center h-full px-4 py-8 md:py-10 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm transition-[border-color,box-shadow] duration-400 ${accentBorder[accent]}`}
+        className={`relative flex flex-col items-center text-center h-full px-4 py-8 md:py-10 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm transition-[border-color,box-shadow] duration-400 neon-stat-card ${accentBorder[accent]}`}
       >
         <div
           className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"

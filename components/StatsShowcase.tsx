@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Clock, DollarSign, TrendingUp, Users } from 'lucide-react';
 import { AnimatedStat } from '@/components/AnimatedStat';
+import { NeonAccents } from '@/components/ui/NeonAccents';
 
 const STATS = [
   {
@@ -54,6 +55,7 @@ export function StatsShowcase() {
     >
       <div className="section-grid absolute inset-0 opacity-40 pointer-events-none" aria-hidden />
       <div className="section-glow absolute inset-0 pointer-events-none" aria-hidden />
+      <NeonAccents variant="stats" />
 
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,720px)] h-48 bg-accent-pink/10 blur-[100px] rounded-full pointer-events-none animate-glow-pulse"

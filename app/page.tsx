@@ -33,6 +33,7 @@ import { FeatureCard } from '@/components/ui/FeatureCard';
 import { ReviewCard } from '@/components/ui/ReviewCard';
 import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
 import { SectionDivider } from '@/components/ui/SectionDivider';
+import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
 
 const BENEFITS = [
   { icon: Users, title: 'Личный менеджер', desc: 'Закреплённый менеджер работает с тобой 7 дней в неделю.' },
@@ -111,6 +112,7 @@ const SERVICES = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#050508] text-[#f4f2ef] overflow-x-hidden premium-grain">
+      <NeonAmbience />
       <ScrollProgress />
       <Navbar />
       <StickyMobileCta />
@@ -127,6 +129,7 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent-violet/20 rounded-full blur-[80px] animate-glow-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
 
         <CreatorFloatingMotifs />
+        <NeonAccents variant="hero" />
 
         <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
           <HeroBadgeBright />
@@ -286,6 +289,7 @@ export default function Home() {
         <div className="section-grid absolute inset-0 opacity-50" aria-hidden />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(168,85,247,0.2),transparent)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_30%_at_50%_0%,rgba(255,91,181,0.1),transparent)]" />
+        <NeonAccents variant="contact" />
 
         <div className="max-w-4xl mx-auto px-5 md:px-8 text-center relative z-10">
           <motion.div
@@ -335,6 +339,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="bg-[#030306] border-t border-white/[0.06] py-12 md:py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_50%_100%,rgba(255,91,181,0.06),transparent)] pointer-events-none" />
+        <NeonAccents variant="footer" />
         <div className="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-12">
             <div className="lg:col-span-2">

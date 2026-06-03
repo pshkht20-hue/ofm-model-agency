@@ -134,6 +134,7 @@ body {
 /* ——— Cards ——— */
 .card-glass,
 .card-premium {
+  position: relative;
   background: linear-gradient(
     155deg,
     rgba(255, 255, 255, 0.05) 0%,
@@ -148,12 +149,52 @@ body {
     transform 0.35s ease;
 }
 
+.card-glass::before,
+.card-glass::after,
+.card-premium::before,
+.card-premium::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  opacity: 0.35;
+  transition: opacity 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card-glass::before,
+.card-premium::before {
+  top: 10px;
+  left: 10px;
+  border-top: 1px solid rgba(255, 91, 181, 0.35);
+  border-left: 1px solid rgba(255, 91, 181, 0.35);
+  border-radius: 4px 0 0 0;
+  box-shadow: -4px -4px 14px -6px rgba(255, 91, 181, 0.4);
+}
+
+.card-glass::after,
+.card-premium::after {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+  border-right: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 0 0 4px 0;
+  box-shadow: 4px 4px 14px -6px rgba(0, 212, 255, 0.35);
+}
+
 .card-glass:hover,
 .card-premium:hover {
   border-color: rgba(255, 91, 181, 0.35);
   box-shadow:
     0 0 0 1px rgba(255, 91, 181, 0.1),
     0 20px 50px -24px rgba(255, 91, 181, 0.25);
+}
+
+.card-glass:hover::before,
+.card-glass:hover::after,
+.card-premium:hover::before,
+.card-premium:hover::after {
+  opacity: 0.85;
 }
 
 /* ——— Buttons ——— */
@@ -237,7 +278,19 @@ body {
   border: 1px solid rgba(255, 91, 181, 0.4);
   border-radius: 9999px;
   backdrop-filter: blur(12px);
-  box-shadow: 0 0 24px -8px rgba(255, 91, 181, 0.35);
+  box-shadow:
+    0 0 24px -8px rgba(255, 91, 181, 0.35),
+    inset 0 0 12px -6px rgba(255, 91, 181, 0.15);
+}
+
+.neon-stat-card {
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.neon-stat-card:hover {
+  box-shadow:
+    0 0 0 1px rgba(255, 91, 181, 0.08),
+    inset 0 1px 0 0 rgba(255, 91, 181, 0.12);
 }
 
 .icon-wrap-bright {
@@ -250,10 +303,35 @@ body {
   background: rgba(255, 91, 181, 0.08);
   border: 1px solid rgba(255, 91, 181, 0.22);
   color: var(--accent-pink);
+  box-shadow: 0 0 16px -6px rgba(255, 91, 181, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.eyebrow-bright::before,
+.eyebrow-bright::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  vertical-align: middle;
+  box-shadow: 0 0 8px 1px currentColor;
+  opacity: 0.7;
+}
+
+.eyebrow-bright::before {
+  background: var(--accent-pink);
+  color: var(--accent-pink);
+}
+
+.eyebrow-bright::after {
+  background: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
 .divider-brand {
+  position: relative;
   height: 1px;
   background: linear-gradient(
     90deg,
@@ -262,6 +340,21 @@ body {
     rgba(0, 212, 255, 0.35) 70%,
     transparent
   );
+}
+
+.divider-brand::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-pink);
+  box-shadow:
+    0 0 10px 2px rgba(255, 91, 181, 0.6),
+    0 0 20px 4px rgba(168, 85, 247, 0.25);
 }
 
 .divider-gold {
@@ -366,6 +459,11 @@ body {
   }
 
   .btn-primary:hover::after {
+    animation: none;
+  }
+
+  .eyebrow-bright::before,
+  .eyebrow-bright::after {
     animation: none;
   }
 }

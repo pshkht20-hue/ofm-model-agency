@@ -11,7 +11,7 @@ export function SectionDivider() {
           whileInView={{ scaleX: 1, opacity: 1 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="h-px w-full divider-brand origin-center"
+          className="h-px w-full divider-brand origin-center shadow-[0_0_14px_1px_rgba(255,91,181,0.25)]"
         />
       </div>
     </div>

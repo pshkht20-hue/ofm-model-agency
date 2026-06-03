@@ -74,13 +74,17 @@ export const CREATOR_FEATURES: Feature[] = [
 export function CreatorFeatureMarquee() {
   return (
     <div className="relative w-full overflow-hidden border-y border-white/[0.06] bg-[#0a0a10]/90 py-4">
+      <div
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-pink/40 to-transparent pointer-events-none"
+        aria-hidden
+      />
       <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0a0a10] to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0a0a10] to-transparent z-10 pointer-events-none" />
       <div className="flex gap-3 animate-marquee w-max px-4">
         {[...CREATOR_FEATURES, ...CREATOR_FEATURES].map((item, i) => (
           <div
             key={`${item.label}-${i}`}
-            className="flex items-center gap-2.5 shrink-0 px-4 py-2.5 rounded-full bg-white/[0.04] border border-white/[0.08] hover:border-accent-pink/30 transition-colors"
+            className="flex items-center gap-2.5 shrink-0 px-4 py-2.5 rounded-full bg-white/[0.04] border border-white/[0.08] hover:border-accent-pink/30 hover:shadow-[0_0_16px_-6px_rgba(255,91,181,0.4)] transition-all"
           >
             <item.icon className="w-4 h-4 text-accent-pink" strokeWidth={1.75} />
             <span className="text-sm text-white/85 whitespace-nowrap">{item.label}</span>
