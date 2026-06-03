@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { ContactForm } from '@/components/ContactForm';
 import { Navbar } from '@/components/Navbar';
+import { Logo } from '@/components/Logo';
 import { ModelShowcase } from '@/components/ModelShowcase';
 import { SectionHeader } from '@/components/SectionHeader';
 import { motion } from 'framer-motion';
@@ -427,22 +428,7 @@ export default function Home() {
       {/* Логотип и описание */}
       <div className="lg:col-span-2">
         
-        {/* === ПРЕМИАЛЬНЫЙ ЛОГОТИП === */}
-        <div className="flex items-center gap-4 mb-6">
-          <div className="relative flex items-center justify-center w-11 h-11">
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-purple-600 to-violet-600 rounded-2xl"></div>
-            <div className="absolute inset-[1.5px] bg-black rounded-2xl"></div>
-            <div className="relative z-10 flex flex-col items-center justify-center">
-              <span className="text-white font-bold text-[22px] tracking-[-1.5px] leading-none">OFM</span>
-            </div>
-          </div>
-
-          <div>
-            <div className="font-medium text-lg tracking-tight leading-none">OFM&apos;s Model Agency</div>
-            <div className="eyebrow text-[9px] mt-1 !tracking-[0.22em]">Luxury OnlyFans Management</div>
-          </div>
-        </div>
-        {/* === КОНЕЦ ЛОГОТИПА === */}
+        <Logo size="lg" href="#" wordmarkOnMobile className="mb-6" />
 
         <p className="max-w-md text-body">
           Премиальное агентство, которое помогает амбициозным девушкам строить успешную карьеру на OnlyFans с полной конфиденциальностью и поддержкой.

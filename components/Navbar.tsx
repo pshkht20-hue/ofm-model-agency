@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
+import { Logo } from '@/components/Logo';
 
 const NAV_LINKS = [
   { href: '#about', label: 'О нас' },
@@ -35,26 +36,7 @@ export function Navbar() {
     <>
       <nav className="fixed top-0 left-0 right-0 z-[60] bg-[#050508]/90 backdrop-blur-xl border-b border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-[4.5rem] md:h-20">
-          <a href="#" className="flex items-center gap-3" onClick={closeMenu}>
-            <div className="relative flex items-center justify-center w-9 h-9 md:w-11 md:h-11">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#c9a87c] via-[#9333ea] to-[#4c1d95] rounded-2xl opacity-90" />
-              <div className="absolute inset-[1.5px] bg-[#050508] rounded-2xl" />
-              <div className="relative z-10">
-                <span className="font-serif text-white text-lg md:text-xl tracking-tight">
-                  OFM
-                </span>
-              </div>
-            </div>
-
-            <div className="hidden sm:block">
-              <div className="font-medium text-base md:text-lg tracking-tight leading-none">
-                OFM&apos;s Model Agency
-              </div>
-              <div className="eyebrow text-[8px] md:text-[9px] mt-1 !tracking-[0.2em]">
-                Luxury Management
-              </div>
-            </div>
-          </a>
+          <Logo size="md" showWordmark href="#" onClick={closeMenu} />
 
           <div className="hidden md:flex items-center gap-10 text-[13px] font-medium tracking-[0.06em] text-white/70">
             {NAV_LINKS.map((link) => (
