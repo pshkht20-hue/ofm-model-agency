@@ -16,6 +16,7 @@ import {
 import { ContactForm } from '@/components/ContactForm';
 import { Navbar } from '@/components/Navbar';
 import { ModelShowcase } from '@/components/ModelShowcase';
+import { SectionHeader } from '@/components/SectionHeader';
 import { motion } from 'framer-motion';
 import { useMotionValue, useTransform, animate } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -66,19 +67,19 @@ function AnimatedStat({ number, suffix = "", prefix = "", label, decimals = 0 }:
 
   return (
     <div>
-      <div className="text-5xl font-semibold tracking-tighter text-white flex items-baseline justify-center gap-1">
+      <div className="font-serif text-5xl md:text-6xl font-normal tracking-tight text-white flex items-baseline justify-center gap-1">
         {prefix}
         <motion.span>{displayValue}</motion.span>
         {suffix}
       </div>
-      <div className="mt-2 text-sm text-white/60 tracking-widest">{label}</div>
+      <div className="label-stat mt-3">{label}</div>
     </div>
   );
 }
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="min-h-screen bg-[#050508] text-[#f4f2ef] overflow-x-hidden premium-grain">
 
     <Navbar />
 
@@ -86,10 +87,11 @@ export default function Home() {
 <section className="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
   
   {/* Фон */}
-  <div className="absolute inset-0 bg-[#0a0a0f]"></div>
-  <div className="absolute inset-0 bg-[radial-gradient(at_30%_20%,#4c1d95_0%,transparent_50%)]"></div>
-  <div className="absolute inset-0 bg-[radial-gradient(at_70%_80%,#831d4e_0%,transparent_55%)]"></div>
-  <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_0.5px,transparent_1px)] bg-[length:4px_4px]"></div>
+  <div className="absolute inset-0 bg-[#050508]"></div>
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(88,28,135,0.35),transparent)]"></div>
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_100%_100%,rgba(131,29,78,0.2),transparent)]"></div>
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_0%_80%,rgba(201,168,124,0.08),transparent)]"></div>
+  <div className="absolute inset-0 bg-[radial-gradient(#ffffff06_0.5px,transparent_1px)] bg-[length:3px_3px]"></div>
 
   <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
     
@@ -98,14 +100,14 @@ export default function Home() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="inline-flex items-center gap-3 bg-black/70 border border-white/30 px-7 py-2.5 rounded-full mb-10 text-sm tracking-[3px] backdrop-blur-xl"
+      className="badge-luxury mb-12"
     >
-      <Sparkles className="w-4 h-4 text-pink-400" />
-      <span className="font-medium text-white">LUXURY ONLYFANS AGENCY</span>
+      <Sparkles className="w-3.5 h-3.5 text-gold" />
+      <span>Luxury OnlyFans Agency</span>
     </motion.div>
 
     {/* Заголовок (появляется по строкам) */}
-    <div className="font-serif text-[72px] md:text-[92px] leading-[0.92] tracking-[-3.5px] mb-8">
+    <div className="heading-display text-[clamp(3rem,10vw,5.75rem)] mb-10">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -118,7 +120,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.45 }}
       >
-        <span className="text-white/90">Твои правила.</span>
+        <span className="italic text-gold-light/95">Твои правила.</span>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -134,11 +136,11 @@ export default function Home() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 1.0 }}
-      className="max-w-2xl mx-auto text-2xl md:text-3xl text-zinc-300 mb-12 leading-tight tracking-[-0.3px]"
+      className="text-lead max-w-2xl mx-auto mb-14"
     >
-      Эксклюзивное агентство, которое помогает амбициозным девушкам<br />
-      зарабатывать от <span className="text-white font-medium">$15,000+</span> в месяц<br />
-      и жить так, как они всегда мечтали.
+      Эксклюзивное агентство для амбициозных моделей —<br className="hidden sm:block" />
+      доход от <span className="text-gold-light font-normal">$15,000+</span> в месяц<br className="hidden sm:block" />
+      и полная поддержка на каждом этапе.
     </motion.p>
 
     {/* Кнопки */}
@@ -150,10 +152,10 @@ export default function Home() {
         transition={{ duration: 0.6, delay: 1.3 }}
         whileHover={{ scale: 1.015 }}
         whileTap={{ scale: 0.985 }}
-        className="group inline-flex items-center justify-center gap-3 bg-white text-black text-lg font-semibold px-14 py-5 rounded-2xl hover:bg-white/90 transition-all shadow-2xl"
+        className="btn-primary group"
       >
         Стать моделью
-        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
+        <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
       </motion.a>
 
       <motion.a 
@@ -161,7 +163,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1.45 }}
-        className="inline-flex items-center justify-center gap-3 border border-white/25 hover:border-white/60 hover:bg-white/5 text-lg font-medium px-10 py-5 rounded-2xl transition-all"
+        className="btn-secondary"
       >
         Посмотреть истории успеха
       </motion.a>
@@ -172,10 +174,10 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 1.7 }}
-      className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm text-white/50 tracking-widest"
+      className="flex flex-wrap justify-center gap-x-12 gap-y-3 text-xs tracking-[0.2em] uppercase text-white/40"
     >
-      <div>Более <span className="text-white/80">200 моделей</span></div>
-      <div>Средний доход <span className="text-white/80">$18,400 / мес</span></div>
+      <div>Более <span className="text-gold-light">200</span> моделей</div>
+      <div>Средний доход <span className="text-gold-light">$18,400</span></div>
       <div>Топ-1% агентств</div>
     </motion.div>
   </div>
@@ -185,14 +187,14 @@ export default function Home() {
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 0.6, delay: 2.0 }}
-  className="absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/15 text-[9px] tracking-[4px] z-20"
+  className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/20 text-[9px] tracking-[0.35em] z-20 uppercase"
 >
-  SCROLL TO EXPLORE
+  Листайте вниз
   <div className="w-px h-6 bg-gradient-to-b from-white/15 to-transparent"></div>
 </motion.div>
 </section>
 {/* ==================== TRUST BAR ==================== */}
-<section className="border-y border-white/10 bg-zinc-950 py-14">
+<section id="results" className="border-y border-white/[0.06] bg-[#0a0a10] py-16 md:py-20">
   <div className="max-w-6xl mx-auto px-8">
     <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 text-center">
       <AnimatedStat number={200} suffix="+" label="МОДЕЛЕЙ В АГЕНТСТВЕ" />
@@ -203,15 +205,11 @@ export default function Home() {
   </div>
 </section>
       {/* ==================== ПОЧЕМУ ВЫБИРАЮТ НАС ==================== */}
-<section id="about" className="py-24 bg-black">
-  <div className="max-w-6xl mx-auto px-8">
-    
-    <div className="text-center mb-16">
-      <div className="text-pink-500 text-sm tracking-[3px] mb-3">ПРЕИМУЩЕСТВА</div>
-      <h2 className="text-6xl font-bold tracking-tighter">Почему выбирают нас</h2>
-    </div>
+<section id="about" className="py-24 md:py-32 bg-[#050508]">
+  <div className="max-w-6xl mx-auto px-5 md:px-8">
+    <SectionHeader eyebrow="Преимущества" title="Почему выбирают нас" />
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
       {[
         { icon: Users, title: "Личный менеджер", desc: "Закреплённый менеджер работает с тобой 7 дней в неделю." },
         { icon: TrendingUp, title: "Мощный маркетинг", desc: "Профессиональное продвижение и работа с трафиком." },
@@ -226,13 +224,13 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
           viewport={{ once: true }}
-          className="group bg-zinc-950 border border-white/10 p-9 rounded-3xl hover:border-pink-500/40 transition-all"
+          className="group card-premium p-8 md:p-9"
         >
-          <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-white/5 mb-8 group-hover:bg-pink-500/10 transition-colors">
-            <item.icon className="w-7 h-7 text-pink-500" />
+          <div className="icon-wrap mb-7 group-hover:border-gold/40 transition-colors">
+            <item.icon className="w-6 h-6" strokeWidth={1.5} />
           </div>
-          <h3 className="text-2xl font-semibold tracking-tight mb-4">{item.title}</h3>
-          <p className="text-white/70 leading-relaxed">{item.desc}</p>
+          <h3 className="heading-card mb-3">{item.title}</h3>
+          <p className="text-body">{item.desc}</p>
         </motion.div>
       ))}
     </div>
@@ -240,15 +238,11 @@ export default function Home() {
 </section>
 
 {/* ==================== КАК МЫ РАБОТАЕМ ==================== */}
-<section id="how" className="py-24 bg-zinc-950">
-  <div className="max-w-6xl mx-auto px-8">
-    
-    <div className="text-center mb-16">
-      <div className="text-pink-500 text-sm tracking-[3px] mb-3">ПРОЗРАЧНЫЙ ПРОЦЕСС</div>
-      <h2 className="text-6xl font-bold tracking-tighter">Как мы работаем</h2>
-    </div>
+<section id="how" className="py-24 md:py-32 bg-[#0a0a10]">
+  <div className="max-w-6xl mx-auto px-5 md:px-8">
+    <SectionHeader eyebrow="Процесс" title="Как мы работаем" />
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
       {[
         { num: "01", title: "Подача заявки", desc: "Ты заполняешь короткую форму. Это занимает всего 3–4 минуты." },
         { num: "02", title: "Первичная оценка", desc: "В течение 24 часов мы изучаем твой профиль и связываемся с тобой." },
@@ -263,13 +257,13 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.08 }}
           viewport={{ once: true }}
-          className="group bg-black border border-white/10 p-9 rounded-3xl hover:border-pink-500/40 transition-all flex flex-col"
+          className="group card-premium p-8 md:p-9 flex flex-col"
         >
-          <div className="text-6xl font-bold text-pink-500/90 mb-8 tracking-tighter group-hover:text-pink-500 transition-colors">
+          <div className="font-serif text-5xl text-gold/80 mb-6 tracking-tight group-hover:text-gold transition-colors">
             {step.num}
           </div>
-          <h3 className="text-2xl font-semibold tracking-tight mb-4">{step.title}</h3>
-          <p className="text-white/70 leading-relaxed flex-1">{step.desc}</p>
+          <h3 className="heading-card mb-3">{step.title}</h3>
+          <p className="text-body flex-1">{step.desc}</p>
         </motion.div>
       ))}
     </div>
@@ -279,20 +273,15 @@ export default function Home() {
       <ModelShowcase />
 
 {/* ==================== ОТЗЫВЫ МОДЕЛЕЙ ==================== */}
-<section id="reviews" className="py-24 bg-zinc-950">
-  <div className="max-w-6xl mx-auto px-8">
-    
-    {/* Заголовок */}
-    <div className="text-center mb-16">
-      <div className="text-pink-500 text-sm tracking-[3px] mb-3">РЕАЛЬНЫЕ ИСТОРИИ</div>
-      <h2 className="text-6xl font-bold tracking-tighter">Что говорят наши модели</h2>
-      <p className="mt-4 text-xl text-white/60 max-w-lg mx-auto">
-        Девушки, которые уже изменили свою жизнь вместе с нами
-      </p>
-    </div>
+<section id="reviews" className="py-24 md:py-32 bg-[#0a0a10]">
+  <div className="max-w-6xl mx-auto px-5 md:px-8">
+    <SectionHeader
+      eyebrow="Отзывы"
+      title="Что говорят наши модели"
+      description="Девушки, которые уже изменили свою жизнь вместе с нами"
+    />
 
-    {/* Отзывы */}
-    <div className="grid md:grid-cols-2 gap-6">
+    <div className="grid md:grid-cols-2 gap-5 md:gap-6">
       
       {[
         {
@@ -318,21 +307,18 @@ export default function Home() {
       ].map((review, index) => (
         <div 
           key={index} 
-          className="bg-black border border-white/10 p-9 rounded-3xl hover:border-pink-500/40 transition-all flex flex-col"
+          className="card-premium p-8 md:p-9 flex flex-col"
         >
           <div className="flex-1">
-            <div className="text-pink-500 mb-6">
-              ★★★★★
-            </div>
-            
-            <p className="text-lg text-white/90 leading-relaxed">
-              “{review.text}”
+            <div className="text-gold text-sm tracking-widest mb-6">★★★★★</div>
+            <p className="font-serif text-xl md:text-2xl text-white/90 leading-relaxed italic">
+              &ldquo;{review.text}&rdquo;
             </p>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-white/10">
-            <div className="font-semibold text-lg">{review.name}</div>
-            <div className="text-emerald-400 text-sm mt-1">{review.earnings}</div>
+          <div className="mt-8 pt-6 border-t border-white/[0.06]">
+            <div className="font-medium text-base tracking-tight">{review.name}</div>
+            <div className="text-gold-light/90 text-sm mt-1.5 tracking-wide">{review.earnings}</div>
           </div>
         </div>
       ))}
@@ -341,20 +327,15 @@ export default function Home() {
 </section>
 
 {/* ==================== ЧТО МЫ ПРЕДЛАГАЕМ (УСЛУГИ) ==================== */}
-<section className="py-24 bg-black">
-  <div className="max-w-6xl mx-auto px-8">
-    
-    {/* Заголовок */}
-    <div className="text-center mb-16">
-      <div className="text-pink-500 text-sm tracking-[3px] mb-3">НАШИ УСЛУГИ</div>
-      <h2 className="text-6xl font-bold tracking-tighter">Что мы предлагаем</h2>
-      <p className="mt-4 text-xl text-white/60 max-w-lg mx-auto">
-        Полный спектр услуг для максимального роста твоего аккаунта
-      </p>
-    </div>
+<section className="py-24 md:py-32 bg-[#050508]">
+  <div className="max-w-6xl mx-auto px-5 md:px-8">
+    <SectionHeader
+      eyebrow="Услуги"
+      title="Что мы предлагаем"
+      description="Полный спектр услуг для максимального роста вашего аккаунта"
+    />
 
-    {/* Услуги */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
       
       {[
         {
@@ -390,14 +371,13 @@ export default function Home() {
       ].map((service, index) => (
         <div 
           key={index} 
-          className="group bg-zinc-950 border border-white/10 p-9 rounded-3xl hover:border-pink-500/40 transition-all flex flex-col"
+          className="group card-premium p-8 md:p-9 flex flex-col"
         >
-          <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-white/5 mb-8 group-hover:bg-pink-500/10 transition-colors">
-            <service.icon className="w-7 h-7 text-pink-500" />
+          <div className="icon-wrap mb-7">
+            <service.icon className="w-6 h-6" strokeWidth={1.5} />
           </div>
-          
-          <h3 className="text-2xl font-semibold tracking-tight mb-4">{service.title}</h3>
-          <p className="text-white/70 leading-relaxed flex-1">{service.desc}</p>
+          <h3 className="heading-card mb-3">{service.title}</h3>
+          <p className="text-body flex-1">{service.desc}</p>
         </div>
       ))}
     </div>
@@ -405,25 +385,19 @@ export default function Home() {
 </section>
 
       {/* ==================== ФИНАЛЬНЫЙ ПРИЗЫВ К ДЕЙСТВИЮ ==================== */}
-<section id="contact" className="py-24 bg-gradient-to-b from-zinc-950 to-black relative overflow-hidden">
+<section id="contact" className="py-24 md:py-32 bg-[#050508] relative overflow-hidden">
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(76,29,149,0.25),transparent)]"></div>
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_30%_at_50%_0%,rgba(201,168,124,0.06),transparent)]"></div>
   
-  {/* Декоративный фон */}
-  <div className="absolute inset-0 bg-[radial-gradient(at_center,#4c1d95_0%,transparent_70%)] opacity-40"></div>
-  
-  <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
-    
-    <div className="mb-8">
-      <div className="inline-block px-5 py-2 bg-white/5 border border-white/10 rounded-full text-sm tracking-[2px] mb-6">
-        ПОСЛЕДНИЙ ШАГ К НОВОЙ ЖИЗНИ
-      </div>
-    </div>
-
-    <h2 className="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-8">
-      Готова начать<br />зарабатывать по-настоящему?
+  <div className="max-w-4xl mx-auto px-5 md:px-8 text-center relative z-10">
+    <p className="eyebrow mb-6">Следующий шаг</p>
+    <h2 className="heading-section text-[clamp(2.5rem,6vw,4.25rem)] mb-8">
+      Готова начать
+      <br />
+      <span className="italic text-gold-light/90">зарабатывать по-настоящему?</span>
     </h2>
-
-    <p className="text-2xl text-white/70 max-w-2xl mx-auto mb-12 leading-tight">
-      Оставь заявку прямо сейчас. Наш менеджер свяжется с тобой в течение 24 часов и расскажет все детали.
+    <p className="text-lead max-w-2xl mx-auto mb-12">
+      Оставьте заявку — менеджер свяжется с вами в Telegram в течение 24 часов.
     </p>
 
     <div className="mb-10">
@@ -431,22 +405,22 @@ export default function Home() {
     </div>
 
     {/* Trust signals */}
-    <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-white/50">
+    <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-xs tracking-[0.15em] uppercase text-white/40">
       <div className="flex items-center gap-2">
-        <Shield className="w-4 h-4" /> Полная конфиденциальность
+        <Shield className="w-3.5 h-3.5 text-gold" /> Конфиденциальность
       </div>
       <div className="flex items-center gap-2">
-        <Zap className="w-4 h-4" /> Ответ в течение 24 часов
+        <Zap className="w-3.5 h-3.5 text-gold" /> Ответ за 24 часа
       </div>
       <div className="flex items-center gap-2">
-        Полная поддержка
+        <Heart className="w-3.5 h-3.5 text-gold" /> Поддержка 24/7
       </div>
     </div>
   </div>
 </section>
 {/* ==================== FOOTER ==================== */}
-<footer className="bg-black border-t border-white/10 py-16">
-  <div className="max-w-7xl mx-auto px-8">
+<footer className="bg-[#030306] border-t border-white/[0.06] py-16 md:py-20">
+  <div className="max-w-7xl mx-auto px-5 md:px-8">
     
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-12">
       
@@ -464,34 +438,34 @@ export default function Home() {
           </div>
 
           <div>
-            <div className="font-semibold text-[21px] tracking-[-0.5px] leading-none">OFM's Model Agency</div>
-            <div className="text-[10px] text-white/50 tracking-[2px] -mt-0.5">LUXURY ONLYFANS MANAGEMENT</div>
+            <div className="font-medium text-lg tracking-tight leading-none">OFM&apos;s Model Agency</div>
+            <div className="eyebrow text-[9px] mt-1 !tracking-[0.22em]">Luxury OnlyFans Management</div>
           </div>
         </div>
         {/* === КОНЕЦ ЛОГОТИПА === */}
 
-        <p className="max-w-md text-white/60 leading-relaxed">
+        <p className="max-w-md text-body">
           Премиальное агентство, которое помогает амбициозным девушкам строить успешную карьеру на OnlyFans с полной конфиденциальностью и поддержкой.
         </p>
       </div>
 
       {/* Навигация */}
       <div>
-        <div className="font-semibold mb-6 tracking-wider text-sm">НАВИГАЦИЯ</div>
-        <div className="flex flex-col gap-y-3 text-white/70">
-          <a href="#about" className="hover:text-white transition">О нас</a>
-          <a href="#how" className="hover:text-white transition">Как мы работаем</a>
-          <a href="#models" className="hover:text-white transition">Модели</a>
-          <a href="#results" className="hover:text-white transition">Результаты</a>
-          <a href="#reviews" className="hover:text-white transition">Отзывы</a>
+        <div className="eyebrow mb-6 !text-[10px]">Навигация</div>
+        <div className="flex flex-col gap-y-3 text-sm text-white/55">
+          <a href="#about" className="hover:text-gold-light transition">О нас</a>
+          <a href="#how" className="hover:text-gold-light transition">Как мы работаем</a>
+          <a href="#models" className="hover:text-gold-light transition">Модели</a>
+          <a href="#results" className="hover:text-gold-light transition">Результаты</a>
+          <a href="#reviews" className="hover:text-gold-light transition">Отзывы</a>
         </div>
       </div>
 
       {/* Контакты */}
       <div>
-        <div className="font-semibold mb-6 tracking-wider text-sm">СВЯЗАТЬСЯ С НАМИ</div>
-        <div className="flex flex-col gap-y-3 text-white/70">
-          <a href="#contact" className="hover:text-white transition">Подать заявку</a>
+        <div className="eyebrow mb-6 !text-[10px]">Связь</div>
+        <div className="flex flex-col gap-y-3 text-sm text-white/55">
+          <a href="#contact" className="hover:text-gold-light transition">Подать заявку</a>
           <div className="text-white/50">Ответим в течение 24 часов</div>
           <div className="text-white/50 mt-2">Полная конфиденциальность</div>
         </div>
@@ -499,13 +473,13 @@ export default function Home() {
     </div>
 
     {/* Нижняя часть */}
-    <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-y-4 text-sm text-white/50">
+    <div className="mt-16 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-y-4 text-xs text-white/40 tracking-wide">
       <div>
         © {new Date().getFullYear()} OFM's Model Agency. Все права защищены.
       </div>
       <div className="flex gap-x-6">
-        <a href="#" className="hover:text-white transition">Политика конфиденциальности</a>
-        <a href="#" className="hover:text-white transition">Условия использования</a>
+        <a href="#" className="hover:text-gold-light transition">Политика конфиденциальности</a>
+        <a href="#" className="hover:text-gold-light transition">Условия использования</a>
       </div>
     </div>
   </div>

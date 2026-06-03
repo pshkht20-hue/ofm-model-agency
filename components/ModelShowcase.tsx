@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { modelCases, type ModelCase } from '@/lib/models';
+import { SectionHeader } from '@/components/SectionHeader';
 
 function ModelCard({
   model,
@@ -18,7 +19,7 @@ function ModelCard({
 }) {
   return (
     <article
-      className={`group relative overflow-hidden rounded-3xl bg-zinc-900 border border-white/10 ${className}`}
+      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] ${className}`}
     >
       <Image
         src={model.image}
@@ -34,7 +35,7 @@ function ModelCard({
 
       <div className="absolute top-4 left-4 right-4 flex justify-between items-start gap-2">
         {model.tag && (
-          <span className="px-3 py-1 bg-pink-500/90 text-[10px] font-semibold tracking-widest rounded-full uppercase">
+          <span className="px-3 py-1 bg-gold/90 text-[#0a0a0a] text-[10px] font-semibold tracking-widest rounded-full uppercase">
             {model.tag}
           </span>
         )}
@@ -45,16 +46,16 @@ function ModelCard({
 
       <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
         <p className="text-white/50 text-xs tracking-widest mb-1 uppercase">результат с OFM</p>
-        <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-2">
+        <h3 className="font-serif text-2xl md:text-3xl font-normal text-white mb-2">
           {model.name}
         </h3>
         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <span className="text-2xl md:text-3xl font-semibold text-emerald-400">
+          <span className="font-serif text-2xl md:text-3xl text-gold-light">
             {model.earnings}
           </span>
-          <span className="text-sm text-white/55">/ месяц</span>
+          <span className="text-sm text-white/50">/ месяц</span>
         </div>
-        <p className="mt-2 text-sm text-pink-300/90 font-medium">{model.growth} за первые месяцы</p>
+        <p className="mt-2 text-sm text-gold/90 tracking-wide">{model.growth} за первые месяцы</p>
       </div>
     </article>
   );
@@ -65,20 +66,19 @@ export function ModelShowcase() {
   const rest = modelCases.filter((m) => m.id !== featured.id);
 
   return (
-    <section id="models" className="py-24 bg-black">
+    <section id="models" className="py-24 md:py-32 bg-[#050508]">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14 md:mb-16"
         >
-          <div className="text-pink-500 text-sm tracking-[3px] mb-3">РЕАЛЬНЫЕ РЕЗУЛЬТАТЫ</div>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">Наши модели</h2>
-          <p className="mt-4 text-lg md:text-xl text-white/60 max-w-xl mx-auto leading-relaxed">
-            Девушки, которые уже зарабатывают серьёзные деньги вместе с нами
-          </p>
+          <SectionHeader
+            eyebrow="Результаты"
+            title="Наши модели"
+            description="Девушки, которые уже зарабатывают серьёзные деньги вместе с нами"
+          />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
@@ -120,7 +120,7 @@ export function ModelShowcase() {
         <div className="text-center mt-12">
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 border border-white/30 hover:border-white hover:bg-white/5 px-8 py-4 rounded-2xl text-sm font-medium transition-all"
+            className="btn-secondary !rounded-full"
           >
             Хочу такой же результат
             <ArrowRight className="w-4 h-4" />

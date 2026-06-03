@@ -16,8 +16,9 @@ const geistMono = Geist_Mono({
 
 const playfair = Playfair_Display({
   variable: '--font-playfair',
-  subsets: ['latin'],
-  weight: ['400', '700'],
+  subsets: ['latin', 'cyrillic'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
 });
 
 const siteUrl = getSiteUrl();
@@ -81,7 +82,7 @@ export default function RootLayout({
       lang="ru"
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
     >
-      <body className="min-h-full font-sans antialiased">
+      <body className="min-h-full font-sans antialiased bg-[#050508] text-[#f4f2ef]">
         <JsonLd />
         {children}
       </body>
