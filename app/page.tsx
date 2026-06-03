@@ -1,7 +1,6 @@
 'use client';
 
 import { 
-  Sparkles, 
   ArrowRight, 
   Users, 
   TrendingUp, 
@@ -16,6 +15,13 @@ import {
 import { ContactForm } from '@/components/ContactForm';
 import { Navbar } from '@/components/Navbar';
 import { Logo } from '@/components/Logo';
+import {
+  CreatorFeatureMarquee,
+  CreatorFloatingMotifs,
+  CreatorPlatformSection,
+  HeroBadgeBright,
+  LegalDisclaimer,
+} from '@/components/CreatorTheme';
 import { ModelShowcase } from '@/components/ModelShowcase';
 import { SectionHeader } from '@/components/SectionHeader';
 import { motion } from 'framer-motion';
@@ -89,22 +95,21 @@ export default function Home() {
   
   {/* Фон */}
   <div className="absolute inset-0 bg-[#050508]"></div>
-  <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(88,28,135,0.35),transparent)]"></div>
-  <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_100%_100%,rgba(131,29,78,0.2),transparent)]"></div>
-  <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_0%_80%,rgba(201,168,124,0.08),transparent)]"></div>
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(255,91,181,0.2),transparent)]"></div>
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_100%_100%,rgba(168,85,247,0.18),transparent)]"></div>
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_0%_80%,rgba(0,212,255,0.08),transparent)]"></div>
   <div className="absolute inset-0 bg-[radial-gradient(#ffffff06_0.5px,transparent_1px)] bg-[length:3px_3px]"></div>
 
+  <CreatorFloatingMotifs />
+
   <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-    
-    {/* Бейдж */}
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="badge-luxury mb-12"
+      className="mb-12"
     >
-      <Sparkles className="w-3.5 h-3.5 text-gold" />
-      <span>Luxury OnlyFans Agency</span>
+      <HeroBadgeBright />
     </motion.div>
 
     {/* Заголовок (появляется по строкам) */}
@@ -121,7 +126,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.45 }}
       >
-        <span className="italic text-gold-light/95">Твои правила.</span>
+        <span className="text-gradient-brand italic">Твои правила.</span>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -140,7 +145,7 @@ export default function Home() {
       className="text-lead max-w-2xl mx-auto mb-14"
     >
       Эксклюзивное агентство для амбициозных моделей —<br className="hidden sm:block" />
-      доход от <span className="text-gold-light font-normal">$15,000+</span> в месяц<br className="hidden sm:block" />
+      доход от <span className="text-accent-pink font-medium">$15,000+</span> в месяц<br className="hidden sm:block" />
       и полная поддержка на каждом этапе.
     </motion.p>
 
@@ -177,8 +182,8 @@ export default function Home() {
       transition={{ duration: 0.6, delay: 1.7 }}
       className="flex flex-wrap justify-center gap-x-12 gap-y-3 text-xs tracking-[0.2em] uppercase text-white/40"
     >
-      <div>Более <span className="text-gold-light">200</span> моделей</div>
-      <div>Средний доход <span className="text-gold-light">$18,400</span></div>
+      <div>Более <span className="text-accent-pink">200</span> моделей</div>
+      <div>Средний доход <span className="text-accent-cyan">$18,400</span></div>
       <div>Топ-1% агентств</div>
     </motion.div>
   </div>
@@ -194,6 +199,9 @@ export default function Home() {
   <div className="w-px h-6 bg-gradient-to-b from-white/15 to-transparent"></div>
 </motion.div>
 </section>
+
+<CreatorFeatureMarquee />
+
 {/* ==================== TRUST BAR ==================== */}
 <section id="results" className="border-y border-white/[0.06] bg-[#0a0a10] py-16 md:py-20">
   <div className="max-w-6xl mx-auto px-8">
@@ -270,6 +278,8 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+      <CreatorPlatformSection />
 
       <ModelShowcase />
 
@@ -458,14 +468,15 @@ export default function Home() {
       </div>
     </div>
 
-    {/* Нижняя часть */}
-    <div className="mt-16 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-y-4 text-xs text-white/40 tracking-wide">
+    <LegalDisclaimer className="mt-12 max-w-3xl" />
+
+    <div className="mt-10 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-y-4 text-xs text-white/40 tracking-wide">
       <div>
-        © {new Date().getFullYear()} OFM's Model Agency. Все права защищены.
+        © {new Date().getFullYear()} OFM&apos;s Model Agency. Все права защищены.
       </div>
       <div className="flex gap-x-6">
-        <a href="#" className="hover:text-gold-light transition">Политика конфиденциальности</a>
-        <a href="#" className="hover:text-gold-light transition">Условия использования</a>
+        <a href="#" className="hover:text-accent-pink transition">Политика конфиденциальности</a>
+        <a href="#" className="hover:text-accent-pink transition">Условия использования</a>
       </div>
     </div>
   </div>
