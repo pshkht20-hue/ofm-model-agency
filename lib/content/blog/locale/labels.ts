@@ -25,12 +25,22 @@ const LABELS_ES: Record<BlogCategory, string> = {
   safety: 'Seguridad y privacidad',
 };
 
+const LABELS_UK: Record<BlogCategory, string> = {
+  agency: 'Агентство та management',
+  marketing: 'Маркетинг і зростання',
+  money: 'Гроші та монетизація',
+  start: 'Старт і контент',
+  safety: 'Безпека та конфіденційність',
+};
+
 export function getBlogCategoryLabels(locale: Locale): Record<BlogCategory, string> {
   switch (locale) {
     case 'en':
       return LABELS_EN;
     case 'es':
       return LABELS_ES;
+    case 'uk':
+      return LABELS_UK;
     case 'ru':
     default:
       return LABELS_RU;

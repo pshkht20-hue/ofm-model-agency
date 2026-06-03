@@ -3,6 +3,7 @@ import type { FaqCategory, FaqItem } from './types';
 import { FAQ_CATEGORIES_RU } from './ru';
 import { FAQ_CATEGORIES_EN } from './en';
 import { FAQ_CATEGORIES_ES } from './es';
+import { FAQ_CATEGORIES_UK } from './uk';
 
 export type { FaqItem, FaqCategory } from './types';
 
@@ -12,6 +13,8 @@ export function getFaqCategories(locale: Locale): FaqCategory[] {
       return FAQ_CATEGORIES_EN;
     case 'es':
       return FAQ_CATEGORIES_ES;
+    case 'uk':
+      return FAQ_CATEGORIES_UK;
     case 'ru':
     default:
       return FAQ_CATEGORIES_RU;

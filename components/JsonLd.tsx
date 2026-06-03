@@ -5,6 +5,7 @@ import { ServiceJsonLd } from '@/components/seo/StructuredData';
 
 const htmlLang: Record<Locale, string> = {
   ru: 'ru-RU',
+  uk: 'uk-UA',
   en: 'en-US',
   es: 'es-ES',
 };

@@ -35,6 +35,17 @@ const ERRORS: Record<
     messageTooLong: 'Message is too long',
     submitFailed: 'Could not submit your application. Try again later or message us on Telegram.',
   },
+  uk: {
+    nameRequired: 'Вкажіть ім\'я (мінімум 2 символи)',
+    nameTooLong: 'Ім\'я занадто довге',
+    telegramRequired: 'Вкажіть Telegram для зв\'язку',
+    telegramTooLong: 'Telegram занадто довгий',
+    ageInvalid: 'Вкажіть коректний вік (18–99)',
+    instagramTooLong: 'Instagram занадто довгий',
+    messageTooLong: 'Повідомлення занадто довге',
+    submitFailed:
+      'Не вдалося надіслати заявку. Спробуйте пізніше або напишіть нам у Telegram.',
+  },
   es: {
     nameRequired: 'Indica tu nombre (mínimo 2 caracteres)',
     nameTooLong: 'El nombre es demasiado largo',

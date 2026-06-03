@@ -21,6 +21,7 @@ export function generateStaticParams() {
 
 const DATE_LOCALE: Record<Locale, string> = {
   ru: 'ru-RU',
+  uk: 'uk-UA',
   en: 'en-US',
   es: 'es-ES',
 };

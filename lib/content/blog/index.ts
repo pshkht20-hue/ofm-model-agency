@@ -3,6 +3,7 @@ import type { BlogCategory, BlogPost } from '@/lib/content/blog/types';
 import { getBlogCover } from '@/lib/content/blog/covers';
 import { getEnglishBlogOverlay } from '@/lib/content/blog/locale/en';
 import { getSpanishBlogOverlay } from '@/lib/content/blog/locale/es';
+import { getUkrainianBlogOverlay } from '@/lib/content/blog/locale/uk';
 import { getBlogCategoryLabels } from '@/lib/content/blog/locale/labels';
 import type { BlogPostLocaleOverlay } from '@/lib/content/blog/locale/types';
 import { agencyPosts } from '@/lib/content/blog/posts/agency';
@@ -42,6 +43,8 @@ function getOverlay(locale: Locale): Record<string, BlogPostLocaleOverlay> | nul
       return getEnglishBlogOverlay();
     case 'es':
       return getSpanishBlogOverlay();
+    case 'uk':
+      return getUkrainianBlogOverlay();
     case 'ru':
     default:
       return null;
