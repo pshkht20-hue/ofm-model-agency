@@ -7,26 +7,22 @@ import { SectionShell } from '@/components/ui/SectionShell';
 import { ReviewCard } from '@/components/ui/ReviewCard';
 import { ReviewsSummary } from '@/components/ui/ReviewsSummary';
 import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
-import { MODEL_REVIEWS } from '@/lib/content/reviews';
+import { getModelReviews } from '@/lib/content/reviews';
 import { Link } from '@/i18n/navigation';
-import { routing, type Locale } from '@/i18n/routing';
+import type { Locale } from '@/i18n/routing';
 
 export function ModelReviewsSection() {
   const t = useTranslations('reviews');
   const locale = useLocale() as Locale;
-  const featured = MODEL_REVIEWS.find((r) => r.featured);
-  const rest = MODEL_REVIEWS.filter((r) => !r.featured);
-  const showOriginalNote = locale !== routing.defaultLocale;
+  const reviews = getModelReviews(locale);
+  const featured = reviews.find((r) => r.featured);
+  const rest = reviews.filter((r) => !r.featured);
 
   return (
     <SectionShell id="reviews" variant="elevated" wide innerClassName="max-w-6xl">
       <SectionHeader eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
 
       <ReviewsSummary />
-
-      {showOriginalNote && (
-        <p className="text-center text-xs text-white/40 -mt-4 mb-6">{t('originalLanguage')}</p>
-      )}
 
       {featured && (
         <div className="mb-5 md:mb-6">
@@ -50,7 +46,7 @@ export function ModelReviewsSection() {
       </StaggerGrid>
 
       <div className="md:hidden -mx-5 px-5 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide flex gap-4">
-        {MODEL_REVIEWS.map((review) => (
+        {reviews.map((review) => (
           <div key={review.id} className="snap-center shrink-0 w-[min(88vw,340px)]">
             <ReviewCard review={review} featured={review.featured} />
           </div>

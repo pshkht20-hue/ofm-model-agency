@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { getApiErrors } from '@/lib/i18n/api-errors';
 import {
   formatApplicationMessage,
   sendTelegramMessage,
@@ -17,10 +18,14 @@ function trim(value: unknown): string {
   return typeof value === 'string' ? value.trim() : '';
 }
 
-function validate(body: Record<string, unknown>): {
+function validate(
+  body: Record<string, unknown>,
+  locale?: string,
+): {
   ok: true;
   data: ApplicationPayload;
 } | { ok: false; error: string } {
+  const e = getApiErrors(typeof body.locale === 'string' ? body.locale : locale);
   if (trim(body.website)) {
     return { ok: true, data: { name: '', telegram: '' } };
   }
@@ -32,25 +37,25 @@ function validate(body: Record<string, unknown>): {
   const message = trim(body.message);
 
   if (!name || name.length < 2) {
-    return { ok: false, error: 'Укажите имя (минимум 2 символа)' };
+    return { ok: false, error: e.nameRequired };
   }
   if (name.length > MAX_LENGTH.name) {
-    return { ok: false, error: 'Имя слишком длинное' };
+    return { ok: false, error: e.nameTooLong };
   }
   if (!telegram || telegram.length < 3) {
-    return { ok: false, error: 'Укажите Telegram для связи' };
+    return { ok: false, error: e.telegramRequired };
   }
   if (telegram.length > MAX_LENGTH.telegram) {
-    return { ok: false, error: 'Telegram слишком длинный' };
+    return { ok: false, error: e.telegramTooLong };
   }
   if (age && (!/^\d{1,2}$/.test(age) || Number(age) < 18 || Number(age) > 99)) {
-    return { ok: false, error: 'Укажите корректный возраст (18–99)' };
+    return { ok: false, error: e.ageInvalid };
   }
   if (instagram.length > MAX_LENGTH.instagram) {
-    return { ok: false, error: 'Instagram слишком длинный' };
+    return { ok: false, error: e.instagramTooLong };
   }
   if (message.length > MAX_LENGTH.message) {
-    return { ok: false, error: 'Сообщение слишком длинное' };
+    return { ok: false, error: e.messageTooLong };
   }
 
   return {
@@ -68,7 +73,7 @@ function validate(body: Record<string, unknown>): {
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as Record<string, unknown>;
-    const result = validate(body);
+    const result = validate(body, typeof body.locale === 'string' ? body.locale : undefined);
 
     if (!result.ok) {
       return NextResponse.json({ error: result.error }, { status: 400 });
@@ -84,9 +89,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Application submit error:', error);
-    return NextResponse.json(
-      { error: 'Не удалось отправить заявку. Попробуйте позже или напишите нам в Telegram.' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: getApiErrors().submitFailed }, { status: 500 });
   }
 }

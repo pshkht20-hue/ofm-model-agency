@@ -1,24 +1,4 @@
-export type AgencyReply = {
-  text: string;
-  dateLabel: string;
-};
-
-export type ModelReview = {
-  id: string;
-  name: string;
-  meta: string;
-  dateLabel: string;
-  text: string;
-  rating: number;
-  resultNote?: string;
-  initials: string;
-  avatarHue: number;
-  tags?: string[];
-  /** «Полезно» — как на карточках отзывов; не у всех, чтобы выглядело естественно */
-  helpfulCount?: number;
-  agencyReply?: AgencyReply;
-  featured?: boolean;
-};
+import type { ModelReview } from './types';
 
 export const MODEL_REVIEWS: ModelReview[] = [
   {
@@ -106,14 +86,3 @@ export const MODEL_REVIEWS: ModelReview[] = [
     avatarHue: 210,
   },
 ];
-
-export function getReviewStats() {
-  const total = MODEL_REVIEWS.length;
-  const sum = MODEL_REVIEWS.reduce((acc, r) => acc + r.rating, 0);
-  const average = Math.round((sum / total) * 10) / 10;
-  const distribution = [5, 4, 3, 2, 1].map((star) => ({
-    star,
-    count: MODEL_REVIEWS.filter((r) => r.rating === star).length,
-  }));
-  return { total, average, distribution };
-}

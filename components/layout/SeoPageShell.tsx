@@ -1,11 +1,14 @@
+'use client';
+
 import type { ReactNode } from 'react';
-import { Link } from '@/i18n/navigation';
 import { ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { Navbar } from '@/components/Navbar';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { NeonAmbience } from '@/components/ui/NeonAccents';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
+import { Link } from '@/i18n/navigation';
 
 type Crumb = { label: string; href?: string };
 
@@ -20,6 +23,8 @@ export function SeoPageShell({
   breadcrumbs,
   showCta = true,
 }: SeoPageShellProps) {
+  const t = useTranslations('seoShell');
+
   return (
     <div className="min-h-screen bg-[#050508] text-[#f4f2ef] overflow-x-hidden premium-grain">
       <NeonAmbience />
@@ -32,16 +37,11 @@ export function SeoPageShell({
           {children}
           {showCta && (
             <div className="mt-14 p-8 md:p-10 rounded-2xl border border-white/[0.08] bg-white/[0.02] text-center">
-              <p className="eyebrow-bright mb-3">OnlyFans агентство</p>
-              <h2 className="font-serif text-2xl md:text-3xl text-white mb-4">
-                Готовы обсудить сотрудничество?
-              </h2>
-              <p className="text-body mb-8 max-w-lg mx-auto">
-                Подайте заявку — менеджер OFM&apos;s Model Agency ответит в Telegram в течение 24
-                часов.
-              </p>
+              <p className="eyebrow-bright mb-3">{t('eyebrow')}</p>
+              <h2 className="font-serif text-2xl md:text-3xl text-white mb-4">{t('ctaTitle')}</h2>
+              <p className="text-body mb-8 max-w-lg mx-auto">{t('ctaBody')}</p>
               <Link href="/#contact" className="btn-primary inline-flex">
-                Подать заявку
+                {t('ctaButton')}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

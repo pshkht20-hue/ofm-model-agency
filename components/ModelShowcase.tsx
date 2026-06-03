@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { modelCases, type ModelCase } from '@/lib/models';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
@@ -12,11 +13,17 @@ function ModelCard({
   className = '',
   sizes,
   priority = false,
+  resultLabel,
+  perMonthLabel,
+  altTemplate,
 }: {
   model: ModelCase;
   className?: string;
   sizes: string;
   priority?: boolean;
+  resultLabel: string;
+  perMonthLabel: string;
+  altTemplate: string;
 }) {
   return (
     <motion.article
@@ -26,7 +33,7 @@ function ModelCard({
     >
       <Image
         src={model.image}
-        alt={`Кейс модели ${model.name}`}
+        alt={altTemplate.replace('{name}', model.name)}
         fill
         sizes={sizes}
         priority={priority}
@@ -48,11 +55,11 @@ function ModelCard({
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
-        <p className="text-white/45 text-[10px] tracking-[0.2em] mb-2 uppercase">Результат</p>
+        <p className="text-white/45 text-[10px] tracking-[0.2em] mb-2 uppercase">{resultLabel}</p>
         <h3 className="font-serif text-2xl md:text-3xl text-white mb-2">{model.name}</h3>
         <div className="flex flex-wrap items-baseline gap-x-2">
           <span className="text-gradient-brand text-2xl md:text-3xl font-medium">{model.earnings}</span>
-          <span className="text-sm text-white/50">/ месяц</span>
+          <span className="text-sm text-white/50">{perMonthLabel}</span>
         </div>
         <p className="mt-2 text-sm text-accent-pink/90">{model.growth}</p>
       </div>
@@ -61,16 +68,14 @@ function ModelCard({
 }
 
 export function ModelShowcase() {
+  const t = useTranslations('models');
   const featured = modelCases.find((m) => m.featured) ?? modelCases[0];
   const rest = modelCases.filter((m) => m.id !== featured.id);
+  const altTemplate = t('altCase');
 
   return (
     <SectionShell id="models" wide>
-      <SectionHeader
-        eyebrow="Кейсы"
-        title="Наши модели"
-        description="Девушки, которые уже зарабатывают серьёзные деньги вместе с нами"
-      />
+      <SectionHeader eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
         <motion.div
@@ -85,6 +90,9 @@ export function ModelShowcase() {
             className="aspect-[4/5] md:aspect-[4/4.2] min-h-[420px]"
             sizes="(max-width: 1024px) 100vw, 58vw"
             priority
+            resultLabel={t('result')}
+            perMonthLabel={t('perMonth')}
+            altTemplate={altTemplate}
           />
         </motion.div>
 
@@ -102,6 +110,9 @@ export function ModelShowcase() {
                 model={model}
                 className="aspect-[16/11] md:aspect-auto h-full min-h-[200px] md:min-h-[240px]"
                 sizes="(max-width: 1024px) 100vw, 38vw"
+                resultLabel={t('result')}
+                perMonthLabel={t('perMonth')}
+                altTemplate={altTemplate}
               />
             </motion.div>
           ))}
@@ -114,8 +125,8 @@ export function ModelShowcase() {
         viewport={{ once: true }}
         className="text-center mt-12"
       >
-        <a href="/#contact" className="btn-secondary !rounded-full">
-          Хочу такой же результат
+        <a href="#contact" className="btn-secondary !rounded-full">
+          {t('cta')}
           <ArrowRight className="w-4 h-4" />
         </a>
       </motion.div>

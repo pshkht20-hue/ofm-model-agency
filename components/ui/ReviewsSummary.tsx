@@ -1,14 +1,16 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Star } from 'lucide-react';
 import { ReviewStars } from '@/components/ui/ReviewStars';
 import { getReviewStats } from '@/lib/content/reviews';
 import { Link } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/routing';
 
 export function ReviewsSummary() {
   const t = useTranslations('reviews.summary');
-  const { total, average, distribution } = getReviewStats();
+  const locale = useLocale() as Locale;
+  const { total, average, distribution } = getReviewStats(locale);
   const maxCount = Math.max(...distribution.map((d) => d.count), 1);
 
   return (

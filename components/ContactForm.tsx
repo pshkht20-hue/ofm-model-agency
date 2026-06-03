@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
@@ -12,6 +12,7 @@ const inputClass =
 
 export function ContactForm() {
   const t = useTranslations('contactForm');
+  const locale = useLocale();
   const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -28,6 +29,7 @@ export function ContactForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          locale,
           name: formData.get('name'),
           age: formData.get('age'),
           telegram: formData.get('telegram'),

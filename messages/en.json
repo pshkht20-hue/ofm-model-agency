@@ -1,9 +1,4 @@
 {
-  "localeNotice": {
-    "title": "Articles & FAQ in Russian",
-    "body": "Full articles are currently in Russian. The site interface is in your language. Our managers reply in English and Spanish.",
-    "cta": "Apply now"
-  },
   "nav": {
     "about": "About",
     "how": "How we work",
@@ -99,7 +94,6 @@
     "ctaText": "See yourself in these stories? Apply — we'll discuss your case with no obligation.",
     "ctaButton": "Apply",
     "disclaimer": "Reviews are published with written consent from OFM's Model Agency creators. Not Google Maps reviews. Amounts are personal benchmarks, not guaranteed income.",
-    "originalLanguage": "Review texts are in the original language (Russian).",
     "summary": {
       "title": "Collaboration rating",
       "basedOn": "based on {count} reviews on this site",
@@ -125,6 +119,115 @@
     "aboutPlaceholder": "Briefly about you and experience (optional)",
     "submitAnother": "Submit another application",
     "consent": "By submitting, you agree we may use your data to contact you."
+  },
+  "common": {
+    "home": "Home",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "minRead": "min",
+    "updated": "Updated: March 2026",
+    "breadcrumbs": "Breadcrumbs"
+  },
+  "seoShell": {
+    "eyebrow": "OnlyFans agency",
+    "ctaTitle": "Ready to discuss working together?",
+    "ctaBody": "Apply — an OFM's Model Agency manager will reply on Telegram within 24 hours.",
+    "ctaButton": "Apply"
+  },
+  "seoHome": {
+    "eyebrow": "OnlyFans agency",
+    "title": "Premium agency for creators who want growth and support",
+    "p1": "An OnlyFans agency for creators who need professional management: marketing, chat management, content strategy, and analytics. We help grow revenue on subscription creator platforms and handle day-to-day operations.",
+    "p2": "If you're choosing an OnlyFans agency, start with transparent terms and real case studies. See our <faq>FAQ</faq> for common questions and our <blog>blog</blog> for guides for new and active creators.",
+    "p3": "Apply on the homepage — a manager will reach out on Telegram within 24 hours with a personal plan and no pressure.",
+    "linkAgency": "How to choose an agency",
+    "linkFaq": "All FAQ questions"
+  },
+  "creator": {
+    "badge": "Agency for creator platforms",
+    "marquee": [
+      { "label": "Subscribers & fans", "hint": "Audience growth" },
+      { "label": "Direct messages", "hint": "Chats & DM sales" },
+      { "label": "Paid content", "hint": "Subs & exclusives" },
+      { "label": "Monetization", "hint": "Tips & customs" },
+      { "label": "Growth analytics", "hint": "Reports & strategy" },
+      { "label": "Confidentiality", "hint": "Identity protection" }
+    ],
+    "platformEyebrow": "Creator platforms",
+    "platformTitle": "The subscription content ecosystem",
+    "platformDesc": "OFM is an independent agency. We help creators grow accounts on platforms like OnlyFans: marketing, chats, content, and revenue growth.",
+    "trademarkShort": "OnlyFans® is a trademark of Fenix International Limited. OFM is not affiliated with OnlyFans and is not its official representative.",
+    "legalDisclaimer": "OnlyFans® is a registered trademark of its owner. OFM's Model Agency is independent and not affiliated with OnlyFans. Services for 18+ content creators."
+  },
+  "stats": {
+    "eyebrow": "Results",
+    "title": "Numbers that",
+    "titleAccent": "speak for themselves",
+    "footnote": "Data updated quarterly · creators' privacy preserved",
+    "items": [
+      { "label": "Creators in the agency", "hint": "Active roster" },
+      { "label": "Earned by creators", "hint": "Total over the year" },
+      { "label": "Average revenue growth", "hint": "First 6 months" },
+      { "label": "Support & chats", "hint": "No days off" }
+    ]
+  },
+  "models": {
+    "eyebrow": "Case studies",
+    "title": "Our creators",
+    "description": "Creators already earning serious revenue with us",
+    "result": "Result",
+    "perMonth": "/ month",
+    "cta": "I want similar results",
+    "altCase": "Creator case study {name}"
+  },
+  "blogUi": {
+    "readArticle": "Read article →",
+    "readAlso": "Read also",
+    "backToAll": "← All articles",
+    "eyebrow": "Blog",
+    "title": "OnlyFans guides for creators",
+    "lead": "{count} articles on management, marketing, monetization, and safety — practical focus for 2026.",
+    "body": "Useful if you're choosing an OnlyFans agency, growing solo, or comparing teams. Total reading time — about {minutes} minutes.",
+    "footer": "Questions about working with us — see <faq>FAQ</faq> or <apply>apply on the site</apply>.",
+    "meta": {
+      "title": "OnlyFans blog — agency, marketing & revenue growth guides",
+      "description": "Expert articles: OnlyFans management, 2026 marketing, chats & PPV, pricing, Reddit, safety, and getting started. OFM's Model Agency."
+    }
+  },
+  "faqUi": {
+    "eyebrow": "Questions & answers",
+    "title": "FAQ: OnlyFans agency & management",
+    "lead": "{count} answers on how professional OnlyFans agencies work: services, commission, contracts, account safety, and applying to OFM's Model Agency.",
+    "body": "Based on common creator-management practice (chats, marketing, revenue share). Didn't find your question — <contact>message a manager</contact>.",
+    "footer": "Also read our <blog>blog</blog>: guides on choosing an agency and getting started.",
+    "meta": {
+      "title": "FAQ — OnlyFans agency: management, fees & safety",
+      "description": "Answers on OnlyFans management: services, commission, contracts, 24/7 chats, privacy, applying to OFM, and avoiding scams."
+    }
+  },
+  "legalUi": {
+    "privacyTitle": "Privacy policy",
+    "termsTitle": "Terms of use",
+    "privacyMeta": {
+      "title": "Privacy policy",
+      "description": "OFM's Model Agency privacy policy: what data we collect when you apply and how we protect it."
+    },
+    "termsMeta": {
+      "title": "Terms of use",
+      "description": "OFM's Model Agency terms of use: applications, liability, and intellectual property."
+    }
+  },
+  "reviewCard": {
+    "verifiedTitle": "Creator confirmed this review before publication",
+    "honestRating": "honest rating",
+    "helpfulOne": "person found this helpful",
+    "helpfulFew": "people found this helpful",
+    "helpfulMany": "people marked this helpful",
+    "agencyReply": "Reply from OFM's Agency",
+    "starsLabel": "Rating {rating} out of {max}"
+  },
+  "coverPhoto": {
+    "photo": "Photo:"
   },
   "meta": {
     "siteTitle": "OnlyFans agency for creators — OFM's Model Agency",

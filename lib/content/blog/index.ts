@@ -1,14 +1,20 @@
+import type { Locale } from '@/i18n/routing';
 import type { BlogCategory, BlogPost } from '@/lib/content/blog/types';
 import { getBlogCover } from '@/lib/content/blog/covers';
+import { getEnglishBlogOverlay } from '@/lib/content/blog/locale/en';
+import { getSpanishBlogOverlay } from '@/lib/content/blog/locale/es';
+import { getBlogCategoryLabels } from '@/lib/content/blog/locale/labels';
+import type { BlogPostLocaleOverlay } from '@/lib/content/blog/locale/types';
 import { agencyPosts } from '@/lib/content/blog/posts/agency';
 import { marketingPosts } from '@/lib/content/blog/posts/marketing';
 import { moneyPosts } from '@/lib/content/blog/posts/money';
 import { startPosts } from '@/lib/content/blog/posts/start';
 import { safetyPosts } from '@/lib/content/blog/posts/safety';
+import { resolveLocale } from '@/lib/content/locale';
 
 export type { BlogBlock, BlogCategory, BlogPost } from '@/lib/content/blog/types';
 export type { BlogCover } from '@/lib/content/blog/covers';
-export { BLOG_CATEGORY_LABELS } from '@/lib/content/blog/types';
+export { getBlogCategoryLabels } from '@/lib/content/blog/locale/labels';
 
 function attachCovers(posts: BlogPost[]): BlogPost[] {
   return posts.map((post) => ({
@@ -25,29 +31,77 @@ const RAW_POSTS: BlogPost[] = [
   ...safetyPosts,
 ];
 
-export const BLOG_POSTS: BlogPost[] = attachCovers(RAW_POSTS);
+const BASE_POSTS: BlogPost[] = attachCovers(RAW_POSTS);
 
-export function getBlogPost(slug: string): BlogPost | undefined {
-  const post = BLOG_POSTS.find((p) => p.slug === slug);
+/** @deprecated Use getBlogPosts(locale) for locale-aware listings */
+export const BLOG_POSTS: BlogPost[] = BASE_POSTS;
+
+function getOverlay(locale: Locale): Record<string, BlogPostLocaleOverlay> | null {
+  switch (locale) {
+    case 'en':
+      return getEnglishBlogOverlay();
+    case 'es':
+      return getSpanishBlogOverlay();
+    case 'ru':
+    default:
+      return null;
+  }
+}
+
+function applyLocale(post: BlogPost, locale: Locale): BlogPost {
+  const overlay = getOverlay(locale)?.[post.slug];
+  if (!overlay) return post;
+  return {
+    ...post,
+    title: overlay.title,
+    description: overlay.description,
+    keywords: overlay.keywords,
+    blocks: overlay.blocks,
+  };
+}
+
+export function getBlogPosts(locale?: string | Locale): BlogPost[] {
+  const resolved = resolveLocale(locale);
+  return BASE_POSTS.map((post) => applyLocale(post, resolved));
+}
+
+export function getBlogPost(slug: string, locale?: string | Locale): BlogPost | undefined {
+  const post = BASE_POSTS.find((p) => p.slug === slug);
   if (!post) return undefined;
-  return { ...post, cover: post.cover ?? getBlogCover(slug) };
-}
-
-export function getAllBlogSlugs(): string[] {
-  return BLOG_POSTS.map((p) => p.slug);
-}
-
-export function getPostsByCategory(category: BlogCategory): BlogPost[] {
-  return BLOG_POSTS.filter((p) => p.category === category).sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  const resolved = resolveLocale(locale);
+  return applyLocale(
+    { ...post, cover: post.cover ?? getBlogCover(slug) },
+    resolved
   );
 }
 
-export function getRelatedPosts(slug: string, limit = 3): BlogPost[] {
-  const current = getBlogPost(slug);
+export function getAllBlogSlugs(): string[] {
+  return BASE_POSTS.map((p) => p.slug);
+}
+
+export function getPostsByCategory(
+  category: BlogCategory,
+  locale?: string | Locale
+): BlogPost[] {
+  return getBlogPosts(locale)
+    .filter((p) => p.category === category)
+    .sort(
+      (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    );
+}
+
+export function getRelatedPosts(
+  slug: string,
+  limit = 3,
+  locale?: string | Locale
+): BlogPost[] {
+  const current = getBlogPost(slug, locale);
   if (!current) return [];
-  return BLOG_POSTS.filter((p) => p.slug !== slug && p.category === current.category)
-    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+  return getBlogPosts(locale)
+    .filter((p) => p.slug !== slug && p.category === current.category)
+    .sort(
+      (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    )
     .slice(0, limit);
 }
 

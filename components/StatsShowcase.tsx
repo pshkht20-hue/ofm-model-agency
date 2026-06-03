@@ -2,36 +2,21 @@
 
 import { motion } from 'framer-motion';
 import { Clock, DollarSign, TrendingUp, Users } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { AnimatedStat } from '@/components/AnimatedStat';
 import { NeonAccents } from '@/components/ui/NeonAccents';
 
-const STATS = [
-  {
-    number: 200,
-    suffix: '+',
-    label: 'Моделей в агентстве',
-    hint: 'Активный пул',
-    icon: Users,
-    accent: 'pink' as const,
-  },
+const STAT_CONFIG = [
+  { number: 200, suffix: '+', icon: Users, accent: 'pink' as const },
   {
     number: 18.4,
     prefix: '$',
     suffix: 'M',
-    label: 'Заработано моделями',
-    hint: 'Суммарно за год',
     icon: DollarSign,
     decimals: 1,
     accent: 'cyan' as const,
   },
-  {
-    number: 94,
-    suffix: '%',
-    label: 'Средний рост дохода',
-    hint: 'За первые 6 мес.',
-    icon: TrendingUp,
-    accent: 'violet' as const,
-  },
+  { number: 94, suffix: '%', icon: TrendingUp, accent: 'violet' as const },
   {
     number: 24,
     suffix: (
@@ -40,14 +25,21 @@ const STATS = [
         <span>7</span>
       </>
     ),
-    label: 'Поддержка и чаты',
-    hint: 'Без выходных',
     icon: Clock,
     accent: 'pink' as const,
   },
 ] as const;
 
 export function StatsShowcase() {
+  const t = useTranslations('stats');
+  const items = t.raw('items') as { label: string; hint: string }[];
+
+  const stats = STAT_CONFIG.map((config, i) => ({
+    ...config,
+    label: items[i]?.label ?? '',
+    hint: items[i]?.hint ?? '',
+  }));
+
   return (
     <section
       id="results"
@@ -79,10 +71,10 @@ export function StatsShowcase() {
           transition={{ duration: 0.5 }}
           className="text-center mb-8 md:mb-10"
         >
-          <p className="eyebrow-bright mb-3">Результаты</p>
+          <p className="eyebrow-bright mb-3">{t('eyebrow')}</p>
           <h2 className="font-serif text-2xl md:text-3xl text-white/95 tracking-tight">
-            Цифры, которые{' '}
-            <span className="text-gradient-brand italic">говорят сами за себя</span>
+            {t('title')}{' '}
+            <span className="text-gradient-brand italic">{t('titleAccent')}</span>
           </h2>
         </motion.div>
 
@@ -101,7 +93,7 @@ export function StatsShowcase() {
           />
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-            {STATS.map((stat, index) => (
+            {stats.map((stat, index) => (
               <AnimatedStat key={stat.label} {...stat} index={index} />
             ))}
           </div>
@@ -114,7 +106,7 @@ export function StatsShowcase() {
           transition={{ delay: 0.5 }}
           className="text-center text-xs text-white/30 mt-6 md:mt-8 tracking-wide"
         >
-          Данные обновляются ежеквартально · конфиденциальность моделей сохранена
+          {t('footnote')}
         </motion.p>
       </div>
 

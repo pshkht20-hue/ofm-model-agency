@@ -1,14 +1,6 @@
-export type FaqItem = {
-  question: string;
-  answer: string;
-};
+import type { FaqCategory } from './types';
 
-export type FaqCategory = {
-  title: string;
-  items: FaqItem[];
-};
-
-export const FAQ_CATEGORIES: FaqCategory[] = [
+export const FAQ_CATEGORIES_RU: FaqCategory[] = [
   {
     title: 'Об агентстве и сотрудничестве',
     items: [
@@ -85,7 +77,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: 'Сколько в среднем зарабатывают модели с агентством?',
         answer:
-          'Диапазон очень широкий: от первых сотен долларов у новичков до пятизначных сумм у топ-аккаунтов. В OFM ориентир по опыту части моделей — от $12 000 до $35 000+ в месяц, но это не гарантия и не «минимальная ставка». Результат зависит от ниши, дисциплины, контента и объёма трафика.',
+          'Диапазон очень широкий: от первых сотен долларов у новичков до пятизначных сумм у топ-аккаунтов. В OFM ориентир по опыту части моделей — от $12,000 до $35,000+ в месяц, но это не гарантия и не «минимальная ставка». Результат зависит от ниши, дисциплины, контента и объёма трафика.',
       },
       {
         question: 'Какой срок договора и можно ли выйти из сотрудничества?',
@@ -200,6 +192,3 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     ],
   },
 ];
-
-/** Плоский список для Schema.org FAQPage и поиска */
-export const FAQ_ITEMS: FaqItem[] = FAQ_CATEGORIES.flatMap((c) => c.items);

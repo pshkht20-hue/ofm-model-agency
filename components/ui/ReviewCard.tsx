@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { BadgeCheck, ThumbsUp } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import type { ModelReview } from '@/lib/content/reviews';
 import { ReviewStars } from '@/components/ui/ReviewStars';
 
@@ -11,7 +12,17 @@ type ReviewCardProps = {
 };
 
 export function ReviewCard({ review, featured = false }: ReviewCardProps) {
+  const t = useTranslations('reviewCard');
   const isFeatured = featured || review.featured;
+
+  const helpfulLabel =
+    review.helpfulCount !== undefined
+      ? review.helpfulCount === 1
+        ? t('helpfulOne')
+        : review.helpfulCount < 5
+          ? t('helpfulFew')
+          : t('helpfulMany')
+      : null;
 
   return (
     <motion.article
@@ -51,7 +62,7 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
                 </h3>
                 <span
                   className="inline-flex items-center text-accent-cyan/85"
-                  title="Модель подтвердила отзыв перед публикацией"
+                  title={t('verifiedTitle')}
                 >
                   <BadgeCheck className="w-3.5 h-3.5" strokeWidth={2} />
                 </span>
@@ -66,7 +77,7 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
           <div className="mt-2 flex items-center gap-2 flex-wrap">
             <ReviewStars rating={review.rating} variant="gold" />
             {review.rating < 5 && (
-              <span className="text-[10px] text-white/35">честная оценка</span>
+              <span className="text-[10px] text-white/35">{t('honestRating')}</span>
             )}
           </div>
         </div>
@@ -99,16 +110,11 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
         </p>
       )}
 
-      {review.helpfulCount !== undefined && (
+      {review.helpfulCount !== undefined && helpfulLabel && (
         <div className="mt-4 flex items-center gap-1.5 text-[11px] text-white/32">
           <ThumbsUp className="w-3 h-3 text-white/25" strokeWidth={1.75} />
           <span>
-            {review.helpfulCount}{' '}
-            {review.helpfulCount === 1
-              ? 'человеку было полезно'
-              : review.helpfulCount < 5
-                ? 'людям было полезно'
-                : 'людям отметили полезным'}
+            {review.helpfulCount} {helpfulLabel}
           </span>
         </div>
       )}
@@ -116,7 +122,7 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
       {review.agencyReply && (
         <div className="mt-4 pt-4 border-t border-white/[0.06]">
           <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] px-4 py-3">
-            <p className="text-[10px] font-medium text-accent-pink/80 mb-1.5">Ответ OFM&apos;s Agency</p>
+            <p className="text-[10px] font-medium text-accent-pink/80 mb-1.5">{t('agencyReply')}</p>
             <p className="text-[13px] text-white/62 leading-relaxed">{review.agencyReply.text}</p>
             <p className="text-[10px] text-white/28 mt-2">{review.agencyReply.dateLabel}</p>
           </div>

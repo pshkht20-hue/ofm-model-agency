@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import {
   MessageCircle,
   Users,
@@ -11,7 +12,6 @@ import {
   Heart,
   Shield,
   Sparkles,
-  type LucideIcon,
 } from 'lucide-react';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
@@ -56,22 +56,21 @@ export function CreatorFloatingMotifs() {
   );
 }
 
-type Feature = {
-  icon: LucideIcon;
-  label: string;
-  hint: string;
-};
+const FEATURE_ICONS = [Users, MessageCircle, Lock, DollarSign, TrendingUp, Shield] as const;
 
-export const CREATOR_FEATURES: Feature[] = [
-  { icon: Users, label: 'Подписчики и фаны', hint: 'Рост аудитории' },
-  { icon: MessageCircle, label: 'Личные сообщения', hint: 'Чаты и продажи в DM' },
-  { icon: Lock, label: 'Платный контент', hint: 'Подписки и эксклюзив' },
-  { icon: DollarSign, label: 'Монетизация', hint: 'Чаевые и кастом' },
-  { icon: TrendingUp, label: 'Аналитика роста', hint: 'Отчёты и стратегия' },
-  { icon: Shield, label: 'Конфиденциальность', hint: 'Защита личности' },
-];
+function useCreatorFeatures() {
+  const t = useTranslations('creator');
+  const items = t.raw('marquee') as { label: string; hint: string }[];
+  return FEATURE_ICONS.map((icon, i) => ({
+    icon,
+    label: items[i]?.label ?? '',
+    hint: items[i]?.hint ?? '',
+  }));
+}
 
 export function CreatorFeatureMarquee() {
+  const features = useCreatorFeatures();
+
   return (
     <div className="relative w-full overflow-hidden border-y border-white/[0.06] bg-[#0a0a10]/90 py-4">
       <div
@@ -81,7 +80,7 @@ export function CreatorFeatureMarquee() {
       <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0a0a10] to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0a0a10] to-transparent z-10 pointer-events-none" />
       <div className="flex gap-3 animate-marquee w-max px-4">
-        {[...CREATOR_FEATURES, ...CREATOR_FEATURES].map((item, i) => (
+        {[...features, ...features].map((item, i) => (
           <div
             key={`${item.label}-${i}`}
             className="flex items-center gap-2.5 shrink-0 px-4 py-2.5 rounded-full bg-white/[0.04] border border-white/[0.08] hover:border-accent-pink/30 hover:shadow-[0_0_16px_-6px_rgba(255,91,181,0.4)] transition-all"
@@ -99,16 +98,19 @@ export function CreatorFeatureMarquee() {
 }
 
 export function CreatorPlatformSection() {
+  const t = useTranslations('creator');
+  const features = useCreatorFeatures();
+
   return (
     <SectionShell variant="default">
       <SectionHeader
-        eyebrow="Creator-платформы"
-        title="Экосистема подписного контента"
-        description="OFM — независимое агентство. Помогаем моделям развивать аккаунты на платформах вроде OnlyFans: маркетинг, чаты, контент и рост дохода."
+        eyebrow={t('platformEyebrow')}
+        title={t('platformTitle')}
+        description={t('platformDesc')}
       />
 
       <StaggerGrid className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-        {CREATOR_FEATURES.map((item) => (
+        {features.map((item) => (
           <StaggerItem key={item.label}>
             <FeatureCard icon={item.icon} title={item.label} description={item.hint} />
           </StaggerItem>
@@ -121,24 +123,25 @@ export function CreatorPlatformSection() {
         viewport={{ once: true }}
         className="mt-10 text-center text-xs text-white/35 max-w-2xl mx-auto leading-relaxed"
       >
-        OnlyFans® — торговая марка Fenix International Limited. OFM не связана с OnlyFans и не
-        является её официальным представителем.
+        {t('trademarkShort')}
       </motion.p>
     </SectionShell>
   );
 }
 
 export function LegalDisclaimer({ className = '' }: { className?: string }) {
+  const t = useTranslations('creator');
+
   return (
     <p className={`text-[11px] text-white/30 leading-relaxed ${className}`}>
-      OnlyFans® является зарегистрированной торговой маркой её правообладателя. OFM&apos;s Model
-      Agency — независимое агентство; мы не аффилированы с OnlyFans. Услуги для создателей
-      контента 18+.
+      {t('legalDisclaimer')}
     </p>
   );
 }
 
 export function HeroBadgeBright() {
+  const t = useTranslations('creator');
+
   return (
     <motion.span
       initial={{ opacity: 0, scale: 0.9 }}
@@ -147,7 +150,7 @@ export function HeroBadgeBright() {
       className="badge-bright inline-flex items-center gap-2"
     >
       <Sparkles className="w-3.5 h-3.5 text-accent-cyan" />
-      Агентство для creator-платформ
+      {t('badge')}
     </motion.span>
   );
 }

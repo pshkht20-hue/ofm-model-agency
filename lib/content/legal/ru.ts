@@ -1,4 +1,4 @@
-export type LegalSection = { title: string; paragraphs: string[] };
+import type { LegalSection } from './types';
 
 export const PRIVACY_SECTIONS: LegalSection[] = [
   {
