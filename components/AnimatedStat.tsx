@@ -108,7 +108,7 @@ export function AnimatedStat({
               initial={{ opacity: 0, x: -6 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: index * 0.12 + 0.3 }}
-              className="text-accent-cyan text-[0.85em]"
+              className="text-white text-[0.85em]"
             >
               {prefix}
             </motion.span>
