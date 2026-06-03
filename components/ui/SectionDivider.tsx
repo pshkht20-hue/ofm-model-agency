@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export function SectionDivider() {
   return (
-    <div className="relative py-2 md:py-3" aria-hidden>
+    <div className="relative py-0.5 md:py-1" aria-hidden>
       <div className="max-w-3xl mx-auto px-8 h-px overflow-hidden">
         <motion.div
           initial={{ scaleX: 0, opacity: 0 }}

@@ -23,7 +23,7 @@ export function SectionShell({
   return (
     <section
       id={id}
-      className={`relative py-24 md:py-32 overflow-hidden ${bg} ${className}`}
+      className={`relative py-16 md:py-22 overflow-hidden ${bg} ${className}`}
     >
       <div className="section-grid absolute inset-0 pointer-events-none opacity-80" aria-hidden />
       <div className="section-glow absolute inset-0 pointer-events-none" aria-hidden />

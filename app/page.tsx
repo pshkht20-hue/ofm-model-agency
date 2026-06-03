@@ -223,8 +223,6 @@ export default function Home() {
 
       <StatsShowcase />
 
-      <SectionDivider />
-
       <SectionShell id="about">
         <SectionHeader eyebrow="Преимущества" title="Почему выбирают нас" />
         <StaggerGrid className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
@@ -283,7 +281,7 @@ export default function Home() {
       </SectionShell>
 
       {/* CONTACT */}
-      <section id="contact" className="relative py-24 md:py-32 overflow-hidden">
+      <section id="contact" className="relative py-16 md:py-22 overflow-hidden">
         <div className="absolute inset-0 bg-[#050508]" />
         <div className="section-grid absolute inset-0 opacity-50" aria-hidden />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(168,85,247,0.2),transparent)]" />
@@ -335,7 +333,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#030306] border-t border-white/[0.06] py-16 md:py-20 relative overflow-hidden">
+      <footer className="bg-[#030306] border-t border-white/[0.06] py-12 md:py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_50%_100%,rgba(255,91,181,0.06),transparent)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-12">

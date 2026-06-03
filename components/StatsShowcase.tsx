@@ -50,7 +50,7 @@ export function StatsShowcase() {
   return (
     <section
       id="results"
-      className="relative border-y border-white/[0.06] bg-[#0a0a10] py-20 md:py-28 overflow-hidden"
+      className="relative border-y border-white/[0.06] bg-[#0a0a10] py-14 md:py-18 overflow-hidden"
     >
       <div className="section-grid absolute inset-0 opacity-40 pointer-events-none" aria-hidden />
       <div className="section-glow absolute inset-0 pointer-events-none" aria-hidden />
@@ -75,7 +75,7 @@ export function StatsShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-8 md:mb-10"
         >
           <p className="eyebrow-bright mb-3">Результаты</p>
           <h2 className="font-serif text-2xl md:text-3xl text-white/95 tracking-tight">
@@ -110,7 +110,7 @@ export function StatsShowcase() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center text-xs text-white/30 mt-10 md:mt-12 tracking-wide"
+          className="text-center text-xs text-white/30 mt-6 md:mt-8 tracking-wide"
         >
           Данные обновляются ежеквартально · конфиденциальность моделей сохранена
         </motion.p>

@@ -21,7 +21,7 @@ export function SectionHeader({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-      className={`text-center mb-14 md:mb-16 ${className}`}
+      className={`text-center mb-10 md:mb-12 ${className}`}
     >
       <motion.p
         initial={{ opacity: 0, letterSpacing: '0.15em' }}
@@ -39,7 +39,7 @@ export function SectionHeader({
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.15 }}
-        className="divider-brand max-w-xs mx-auto mt-10 origin-center"
+        className="divider-brand max-w-xs mx-auto mt-7 origin-center"
       />
     </motion.div>
   );
