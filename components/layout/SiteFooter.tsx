@@ -5,6 +5,7 @@ import { Logo } from '@/components/Logo';
 import { LegalDisclaimer } from '@/components/CreatorTheme';
 import { NeonAccents } from '@/components/ui/NeonAccents';
 import { Link } from '@/i18n/navigation';
+import { SocialLinks } from '@/components/social/SocialLinks';
 
 export function SiteFooter() {
   const t = useTranslations('footer');
@@ -32,8 +33,8 @@ export function SiteFooter() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_50%_100%,rgba(255,91,181,0.06),transparent)] pointer-events-none" />
       <NeonAccents variant="footer" />
       <div className="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-12">
-          <div className="lg:col-span-2">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-y-12 gap-x-8">
+          <div className="md:col-span-2 lg:col-span-2">
             <Logo size="lg" href="/" wordmarkOnMobile className="mb-6" />
             <p className="max-w-md text-body">{t('tagline')}</p>
           </div>
@@ -72,6 +73,10 @@ export function SiteFooter() {
                 {t('apply')}
               </Link>
             </div>
+          </div>
+
+          <div className="md:col-span-2 lg:col-span-1">
+            <SocialLinks variant="footer" />
           </div>
         </div>
 

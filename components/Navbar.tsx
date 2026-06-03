@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { Logo } from '@/components/Logo';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { Link } from '@/i18n/navigation';
+import { SocialLinks } from '@/components/social/SocialLinks';
 
 export function Navbar() {
   const t = useTranslations('nav');
@@ -75,6 +76,7 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-2 md:gap-3">
+            <SocialLinks variant="nav" className="hidden lg:flex mr-1" />
             <LanguageSwitcher compact />
 
             <Link
@@ -150,6 +152,10 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               ))}
+            </div>
+
+            <div className="mt-8">
+              <SocialLinks variant="menu" onLinkClick={closeMenu} />
             </div>
           </div>
 

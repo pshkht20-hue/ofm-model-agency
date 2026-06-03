@@ -13,6 +13,16 @@
     "closeMenu": "Закрити меню",
     "language": "Мова"
   },
+  "social": {
+    "footerTitle": "Соцмережі",
+    "footerLead": "Новини агентства, кейси та відповіді менеджера — підписуйтесь на зручній платформі.",
+    "menuEyebrow": "Ми в соцмережах",
+    "menuLead": "Слідкуйте за OFM і пишіть у Telegram — відповідаємо найшвидше там.",
+    "telegram": "Telegram",
+    "instagram": "Instagram",
+    "x": "X (Twitter)",
+    "tiktok": "TikTok"
+  },
   "footer": {
     "reviews": "Відгуки",
     "tagline": "OnlyFans агентство для амбітних моделей: маркетинг, менеджмент, чати 24/7 та конфіденційність.",

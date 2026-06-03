@@ -13,6 +13,16 @@
     "closeMenu": "Close menu",
     "language": "Language"
   },
+  "social": {
+    "footerTitle": "Social",
+    "footerLead": "Agency news, case studies, and manager replies — follow us where you prefer.",
+    "menuEyebrow": "Follow us",
+    "menuLead": "Stay updated on OFM — Telegram is the fastest way to reach us.",
+    "telegram": "Telegram",
+    "instagram": "Instagram",
+    "x": "X (Twitter)",
+    "tiktok": "TikTok"
+  },
   "footer": {
     "reviews": "Reviews",
     "tagline": "OnlyFans agency for ambitious creators: marketing, management, 24/7 chats and confidentiality.",
