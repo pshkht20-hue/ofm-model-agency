@@ -16,7 +16,7 @@ import {
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useMotionValue, useTransform, animate } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 // Компонент для анимации цифр
 function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string }) {
   const motionValue = useMotionValue(0);
@@ -35,6 +35,34 @@ function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string
       <motion.span>{rounded}</motion.span>
       {suffix}
     </span>
+  );
+}
+
+function AnimatedStat({ number, suffix = "", prefix = "", label, decimals = 0 }) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => 
+    decimals > 0 ? latest.toFixed(decimals) : Math.floor(latest)
+  );
+  const [displayValue, setDisplayValue] = useState(0);
+
+  useEffect(() => {
+    const controls = animate(count, number, {
+      duration: 1.8,
+      ease: "easeOut",
+    });
+    const unsubscribe = rounded.on("change", (v) => setDisplayValue(v));
+    return () => { controls.stop(); unsubscribe(); };
+  }, [number]);
+
+  return (
+    <div>
+      <div className="text-5xl font-semibold tracking-tighter text-white flex items-baseline justify-center gap-1">
+        {prefix}
+        <motion.span>{displayValue}</motion.span>
+        {suffix}
+      </div>
+      <div className="mt-2 text-sm text-white/60 tracking-widest">{label}</div>
+    </div>
   );
 }
 
@@ -200,9 +228,17 @@ export default function Home() {
   <div className="w-px h-6 bg-gradient-to-b from-white/15 to-transparent"></div>
 </motion.div>
 </section>
-
-
-
+{/* ==================== TRUST BAR ==================== */}
+<section className="border-y border-white/10 bg-zinc-950 py-14">
+  <div className="max-w-6xl mx-auto px-8">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 text-center">
+      <AnimatedStat number={200} suffix="+" label="МОДЕЛЕЙ В АГЕНТСТВЕ" />
+      <AnimatedStat number={18.4} suffix="M" prefix="$" label="ЗАРАБОТАНО МОДЕЛЯМИ" decimals={1} />
+      <AnimatedStat number={94} suffix="%" label="СРЕДНИЙ РОСТ ДОХОДА" />
+      <AnimatedStat number={24} suffix="/7" label="ПОДДЕРЖКА И ЧАТЫ" />
+    </div>
+  </div>
+</section>
       {/* ==================== ПОЧЕМУ ВЫБИРАЮТ НАС ==================== */}
 <section id="about" className="py-24 bg-black">
   <div className="max-w-6xl mx-auto px-8">
