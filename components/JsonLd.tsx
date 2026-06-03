@@ -1,7 +1,15 @@
+import type { Locale } from '@/i18n/routing';
+import { openGraphLocale } from '@/i18n/routing';
 import { getSiteUrl, siteConfig } from '@/lib/site';
 import { ServiceJsonLd } from '@/components/seo/StructuredData';
 
-export function JsonLd() {
+const htmlLang: Record<Locale, string> = {
+  ru: 'ru-RU',
+  en: 'en-US',
+  es: 'es-ES',
+};
+
+export function JsonLd({ locale = 'ru' }: { locale?: Locale }) {
   const siteUrl = getSiteUrl();
 
   const organization = {
@@ -19,7 +27,7 @@ export function JsonLd() {
     '@type': 'WebSite',
     name: siteConfig.name,
     url: siteUrl,
-    inLanguage: 'ru-RU',
+    inLanguage: htmlLang[locale] ?? openGraphLocale[locale],
     description: siteConfig.description,
   };
 

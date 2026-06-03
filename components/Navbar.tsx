@@ -3,20 +3,24 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { Logo } from '@/components/Logo';
-
-const NAV_LINKS = [
-  { href: '/#about', label: 'О нас' },
-  { href: '/#how', label: 'Как мы работаем' },
-  { href: '/#models', label: 'Модели' },
-  { href: '/#results', label: 'Результаты' },
-  { href: '/blog', label: 'Блог' },
-  { href: '/faq', label: 'FAQ' },
-] as const;
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { Link } from '@/i18n/navigation';
 
 export function Navbar() {
+  const t = useTranslations('nav');
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const NAV_LINKS = [
+    { href: '/#about' as const, label: t('about') },
+    { href: '/#how' as const, label: t('how') },
+    { href: '/#models' as const, label: t('models') },
+    { href: '/#results' as const, label: t('results') },
+    { href: '/blog' as const, label: t('blog') },
+    { href: '/faq' as const, label: t('faq') },
+  ];
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -57,34 +61,36 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-[4.5rem] md:h-20">
           <Logo size="md" showWordmark href="/" onClick={closeMenu} />
 
-          <div className="hidden md:flex items-center gap-10 text-[13px] font-medium text-white/65">
+          <div className="hidden md:flex items-center gap-8 text-[13px] font-medium text-white/65">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="relative py-1 hover:text-white transition-colors group"
               >
                 {link.label}
                 <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gradient-to-r from-accent-pink to-accent-cyan transition-all duration-300 group-hover:w-full" />
-              </a>
+              </Link>
             ))}
           </div>
 
           <div className="flex items-center gap-2 md:gap-3">
-            <a
+            <LanguageSwitcher compact />
+
+            <Link
               href="/#contact"
               className="hidden md:inline-flex px-5 py-2.5 text-[13px] font-medium border border-white/12 rounded-full text-white/75 hover:border-accent-pink/50 hover:text-white transition-all"
             >
-              Подать заявку
-            </a>
+              {t('apply')}
+            </Link>
 
-            <a
+            <Link
               href="/#contact"
               className="hidden sm:inline-flex btn-primary !py-2.5 !px-6 !text-[13px] !shadow-[0_0_20px_-8px_rgba(255,91,181,0.6)]"
             >
-              Стать моделью
+              {t('becomeModel')}
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
 
             <button
               type="button"
@@ -92,7 +98,7 @@ export function Navbar() {
               className="md:hidden flex items-center justify-center w-11 h-11 rounded-xl border border-white/10 hover:border-accent-pink/40 transition"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
-              aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
+              aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
             >
               {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -111,7 +117,7 @@ export function Navbar() {
           type="button"
           className="absolute inset-0 bg-black/90 backdrop-blur-lg"
           onClick={closeMenu}
-          aria-label="Закрыть меню"
+          aria-label={t('closeMenu')}
         />
 
         <motion.div
@@ -122,32 +128,39 @@ export function Navbar() {
           }`}
         >
           <div className="flex-1 overflow-y-auto px-6 py-8">
-            <p className="eyebrow-bright mb-6">Навигация</p>
+            <p className="eyebrow-bright mb-4">{t('navigation')}</p>
+            <div className="flex flex-col gap-2 mb-6">
+              <span className="text-[10px] uppercase tracking-widest text-white/35">{t('language')}</span>
+              <LanguageSwitcher />
+            </div>
             <div className="flex flex-col">
               {NAV_LINKS.map((link, i) => (
-                <motion.a
+                <motion.div
                   key={link.href}
-                  href={link.href}
-                  onClick={closeMenu}
                   initial={{ opacity: 0, x: -12 }}
                   animate={menuOpen ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: i * 0.05 }}
-                  className="font-serif text-2xl py-4 border-b border-white/[0.06] text-white/90 hover:text-accent-pink transition"
                 >
-                  {link.label}
-                </motion.a>
+                  <Link
+                    href={link.href}
+                    onClick={closeMenu}
+                    className="font-serif text-2xl py-4 border-b border-white/[0.06] text-white/90 hover:text-accent-pink transition block"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
 
           <div className="p-6 flex flex-col gap-3 border-t border-white/[0.06]">
-            <a href="/#contact" onClick={closeMenu} className="btn-secondary w-full !rounded-full">
-              Подать заявку
-            </a>
-            <a href="/#contact" onClick={closeMenu} className="btn-primary w-full">
-              Стать моделью
+            <Link href="/#contact" onClick={closeMenu} className="btn-secondary w-full !rounded-full">
+              {t('apply')}
+            </Link>
+            <Link href="/#contact" onClick={closeMenu} className="btn-primary w-full">
+              {t('becomeModel')}
               <ArrowRight className="w-5 h-5" />
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

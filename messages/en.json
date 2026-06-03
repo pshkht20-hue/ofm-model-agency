@@ -1,0 +1,133 @@
+{
+  "localeNotice": {
+    "title": "Articles & FAQ in Russian",
+    "body": "Full articles are currently in Russian. The site interface is in your language. Our managers reply in English and Spanish.",
+    "cta": "Apply now"
+  },
+  "nav": {
+    "about": "About",
+    "how": "How we work",
+    "models": "Models",
+    "results": "Results",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "apply": "Apply",
+    "becomeModel": "Become a model",
+    "navigation": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "footer": {
+    "reviews": "Reviews",
+    "tagline": "OnlyFans agency for ambitious creators: marketing, management, 24/7 chats and confidentiality.",
+    "navTitle": "Navigation",
+    "resourcesTitle": "Resources",
+    "apply": "Apply",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "guideAgency": "How to choose an agency"
+  },
+  "home": {
+    "hero": {
+      "line1": "Your life.",
+      "line2": "Your rules.",
+      "line3": "Your success.",
+      "srOnly": "— OnlyFans agency for creators OFM's Model Agency",
+      "lead": "Exclusive agency for ambitious creators —<br></br>income from <income></income> per month<br></br>and full support at every step.",
+      "incomeHighlight": "$15,000+",
+      "ctaPrimary": "Become a model",
+      "ctaSecondary": "Success stories",
+      "statModels": "creators",
+      "statIncome": "Avg. income",
+      "statTop": "Top 1% agencies",
+      "scroll": "Scroll down"
+    },
+    "benefits": {
+      "eyebrow": "Benefits",
+      "title": "Why creators choose us",
+      "items": [
+        { "title": "Dedicated manager", "desc": "A personal manager works with you 7 days a week." },
+        { "title": "Strong marketing", "desc": "Professional promotion and traffic growth." },
+        { "title": "Real results", "desc": "Average creator income — $12,000 to $35,000+ per month." },
+        { "title": "Full confidentiality", "desc": "Identity protection and legal support." },
+        { "title": "Tailored approach", "desc": "A personal strategy for every creator." },
+        { "title": "Fast launch", "desc": "From application to first payouts — usually 7–14 days." }
+      ]
+    },
+    "how": {
+      "eyebrow": "Process",
+      "title": "How we work",
+      "steps": [
+        { "title": "Application", "desc": "You fill out a short form — about 3–4 minutes." },
+        { "title": "Initial review", "desc": "Within 24 hours we review your profile and reach out." },
+        { "title": "Intro call", "desc": "We interview you and discuss collaboration options." },
+        { "title": "Strategy", "desc": "Plan: content, pricing and promotion." },
+        { "title": "Setup & launch", "desc": "Profile setup, content and go-live." },
+        { "title": "Growth & support", "desc": "Reports, analytics and revenue growth." }
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "What we offer",
+      "description": "Full-service support to grow your account",
+      "items": [
+        { "title": "Account management", "desc": "Full OnlyFans management: profile, content and fans." },
+        { "title": "24/7 chats", "desc": "Chat managers work around the clock and boost sales." },
+        { "title": "Marketing", "desc": "Ads, social media and partnerships for subscriber growth." },
+        { "title": "Content strategy", "desc": "Content plan, shoots and visual brand." },
+        { "title": "Analytics", "desc": "Weekly reports and revenue optimization." },
+        { "title": "Protection", "desc": "Privacy, legal support and leak control." }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Next step",
+      "title": "Ready to start",
+      "titleAccent": "earning for real?",
+      "lead": "Submit your application — a manager will contact you on Telegram within 24 hours.",
+      "privacy": "Confidential",
+      "response": "Reply within 24h",
+      "support": "24/7 support"
+    }
+  },
+  "reviews": {
+    "eyebrow": "Creator reviews",
+    "title": "Real stories — no perfect gloss",
+    "description": "Like real reviews: mixed experiences, no income guarantees, sometimes 4 stars and team replies.",
+    "featuredLabel": "In-depth review",
+    "moreLabel": "More reviews",
+    "ctaText": "See yourself in these stories? Apply — we'll discuss your case with no obligation.",
+    "ctaButton": "Apply",
+    "disclaimer": "Reviews are published with written consent from OFM's Model Agency creators. Not Google Maps reviews. Amounts are personal benchmarks, not guaranteed income.",
+    "originalLanguage": "Review texts are in the original language (Russian).",
+    "summary": {
+      "title": "Collaboration rating",
+      "basedOn": "based on {count} reviews on this site",
+      "consent": "Consent before publishing",
+      "replies": "Agency replies included",
+      "faqLink": "FAQ on terms"
+    }
+  },
+  "contactForm": {
+    "name": "Name",
+    "age": "Age",
+    "telegram": "Telegram",
+    "instagram": "Instagram (optional)",
+    "message": "Message",
+    "submit": "Submit application",
+    "sending": "Sending…",
+    "successTitle": "Application sent",
+    "successBody": "A manager will contact you on Telegram within 24 hours.",
+    "errorGeneric": "Could not send",
+    "errorNetwork": "No connection. Check your network and try again.",
+    "honeypot": "Leave this field empty",
+    "about": "About you",
+    "aboutPlaceholder": "Briefly about you and experience (optional)",
+    "submitAnother": "Submit another application",
+    "consent": "By submitting, you agree we may use your data to contact you."
+  },
+  "meta": {
+    "siteTitle": "OnlyFans agency for creators — OFM's Model Agency",
+    "siteDescription": "Premium OnlyFans agency: management, marketing, 24/7 chats and revenue growth. Apply — a manager will reach out on Telegram within 24 hours."
+  }
+}

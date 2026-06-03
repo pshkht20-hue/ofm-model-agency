@@ -1,25 +1,37 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { setRequestLocale } from 'next-intl/server';
+import { ContentLocaleNotice } from '@/components/ContentLocaleNotice';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { FaqAccordion } from '@/components/seo/FaqAccordion';
 import { FaqPageJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import { FAQ_CATEGORIES, FAQ_ITEMS } from '@/lib/content/faq';
+import { Link } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = createPageMetadata({
-  title: 'FAQ — OnlyFans агентство: вопросы о менеджменте, % и безопасности',
-  description:
-    'Подробные ответы о OnlyFans management: услуги, комиссия, договор, чаты 24/7, конфиденциальность, заявка в OFM и как не попасть к мошенникам.',
-  path: '/faq',
-  keywords: [
-    'onlyfans агентство faq',
-    'onlyfans management вопросы',
-    'сколько берет onlyfans агентство',
-    'как выбрать onlyfans агентство',
-  ],
-});
+type Props = { params: Promise<{ locale: string }> };
 
-export default function FaqPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return createPageMetadata({
+    title: 'FAQ — OnlyFans агентство: вопросы о менеджменте, % и безопасности',
+    description:
+      'Подробные ответы о OnlyFans management: услуги, комиссия, договор, чаты 24/7, конфиденциальность, заявка в OFM и как не попасть к мошенникам.',
+    path: '/faq',
+    locale: locale as Locale,
+    keywords: [
+      'onlyfans агентство faq',
+      'onlyfans management вопросы',
+      'сколько берет onlyfans агентство',
+      'как выбрать onlyfans агентство',
+    ],
+  });
+}
+
+export default async function FaqPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <SeoPageShell breadcrumbs={[{ label: 'FAQ' }]}>
       <FaqPageJsonLd items={FAQ_ITEMS} />
@@ -29,6 +41,8 @@ export default function FaqPage() {
           { name: 'FAQ', path: '/faq' },
         ]}
       />
+
+      <ContentLocaleNotice />
 
       <p className="eyebrow-bright mb-4">Вопросы и ответы</p>
       <h1 className="heading-section text-[clamp(2rem,5vw,3rem)] mb-6">

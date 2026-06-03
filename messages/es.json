@@ -1,0 +1,133 @@
+{
+  "localeNotice": {
+    "title": "Artículos y FAQ en ruso",
+    "body": "Los textos completos están en ruso por ahora. La interfaz del sitio está en tu idioma. Los managers responden en inglés y español.",
+    "cta": "Enviar solicitud"
+  },
+  "nav": {
+    "about": "Nosotros",
+    "how": "Cómo trabajamos",
+    "models": "Modelos",
+    "results": "Resultados",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "apply": "Solicitud",
+    "becomeModel": "Ser modelo",
+    "navigation": "Menú",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "language": "Idioma"
+  },
+  "footer": {
+    "reviews": "Opiniones",
+    "tagline": "Agencia OnlyFans para creadoras ambiciosas: marketing, gestión, chats 24/7 y confidencialidad.",
+    "navTitle": "Navegación",
+    "resourcesTitle": "Recursos",
+    "apply": "Solicitud",
+    "privacy": "Privacidad",
+    "terms": "Términos de uso",
+    "guideAgency": "Cómo elegir agencia"
+  },
+  "home": {
+    "hero": {
+      "line1": "Tu vida.",
+      "line2": "Tus reglas.",
+      "line3": "Tu éxito.",
+      "srOnly": "— Agencia OnlyFans para creadoras OFM's Model Agency",
+      "lead": "Agencia exclusiva para creadoras ambiciosas —<br></br>ingresos desde <income></income> al mes<br></br>y apoyo completo en cada etapa.",
+      "incomeHighlight": "$15,000+",
+      "ctaPrimary": "Ser modelo",
+      "ctaSecondary": "Historias de éxito",
+      "statModels": "modelos",
+      "statIncome": "Ingreso medio",
+      "statTop": "Top 1% agencias",
+      "scroll": "Desplázate"
+    },
+    "benefits": {
+      "eyebrow": "Ventajas",
+      "title": "Por qué nos eligen",
+      "items": [
+        { "title": "Manager personal", "desc": "Un manager dedicado trabaja contigo 7 días a la semana." },
+        { "title": "Marketing potente", "desc": "Promoción profesional y crecimiento de tráfico." },
+        { "title": "Resultados reales", "desc": "Ingreso medio de nuestras modelos — $12,000 a $35,000+ al mes." },
+        { "title": "Confidencialidad total", "desc": "Protección de identidad y apoyo legal." },
+        { "title": "Enfoque individual", "desc": "Estrategia personal para cada creadora." },
+        { "title": "Inicio rápido", "desc": "De la solicitud al primer pago — normalmente 7–14 días." }
+      ]
+    },
+    "how": {
+      "eyebrow": "Proceso",
+      "title": "Cómo trabajamos",
+      "steps": [
+        { "title": "Solicitud", "desc": "Completas un formulario corto — 3–4 minutos." },
+        { "title": "Evaluación inicial", "desc": "En 24 horas revisamos tu perfil y te contactamos." },
+        { "title": "Conocimiento", "desc": "Entrevista y opciones de colaboración." },
+        { "title": "Estrategia", "desc": "Plan: contenido, precios y promoción." },
+        { "title": "Preparación y lanzamiento", "desc": "Perfil, contenido y salida al mercado." },
+        { "title": "Crecimiento y apoyo", "desc": "Informes, analítica y crecimiento de ingresos." }
+      ]
+    },
+    "services": {
+      "eyebrow": "Servicios",
+      "title": "Qué ofrecemos",
+      "description": "Servicio integral para maximizar el crecimiento de tu cuenta",
+      "items": [
+        { "title": "Gestión de cuenta", "desc": "Gestión completa de OnlyFans: perfil, contenido y fans." },
+        { "title": "Chats 24/7", "desc": "Managers de chat todo el día y más ventas." },
+        { "title": "Marketing", "desc": "Anuncios, redes y partnerships para suscriptores." },
+        { "title": "Estrategia de contenido", "desc": "Plan de contenido, shoots y marca visual." },
+        { "title": "Analítica", "desc": "Informes semanales y optimización de ingresos." },
+        { "title": "Protección", "desc": "Privacidad, apoyo legal y control de filtraciones." }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Siguiente paso",
+      "title": "¿Lista para empezar",
+      "titleAccent": "a ganar de verdad?",
+      "lead": "Envía tu solicitud — un manager te escribirá por Telegram en 24 horas.",
+      "privacy": "Confidencial",
+      "response": "Respuesta en 24 h",
+      "support": "Soporte 24/7"
+    }
+  },
+  "reviews": {
+    "eyebrow": "Opiniones de modelos",
+    "title": "Historias reales — sin brillo perfecto",
+    "description": "Como reseñas reales: experiencias distintas, sin garantías de ingresos, a veces 4 estrellas y respuesta del equipo.",
+    "featuredLabel": "Opinión detallada",
+    "moreLabel": "Más opiniones",
+    "ctaText": "¿Te identificas? Envía solicitud — hablamos de tu caso sin compromiso.",
+    "ctaButton": "Solicitud",
+    "disclaimer": "Opiniones publicadas con consentimiento escrito de las modelos de OFM's Model Agency. No son reseñas de Google Maps. Las cifras son referencias personales, no garantía de ingresos.",
+    "originalLanguage": "Los textos de opiniones están en el idioma original (ruso).",
+    "summary": {
+      "title": "Valoración del trabajo conjunto",
+      "basedOn": "según {count} opiniones en el sitio",
+      "consent": "Consentimiento antes de publicar",
+      "replies": "Respuestas de la agencia",
+      "faqLink": "FAQ sobre condiciones"
+    }
+  },
+  "contactForm": {
+    "name": "Nombre",
+    "age": "Edad",
+    "telegram": "Telegram",
+    "instagram": "Instagram (opcional)",
+    "message": "Mensaje",
+    "submit": "Enviar solicitud",
+    "sending": "Enviando…",
+    "successTitle": "Solicitud enviada",
+    "successBody": "Un manager te contactará por Telegram en 24 horas.",
+    "errorGeneric": "Error al enviar",
+    "errorNetwork": "Sin conexión. Revisa internet e inténtalo de nuevo.",
+    "honeypot": "No rellenes este campo",
+    "about": "Sobre ti",
+    "aboutPlaceholder": "Cuéntanos brevemente (opcional)",
+    "submitAnother": "Enviar otra solicitud",
+    "consent": "Al enviar, aceptas que usemos tus datos para contactarte."
+  },
+  "meta": {
+    "siteTitle": "Agencia OnlyFans para modelos — OFM's Model Agency",
+    "siteDescription": "Agencia OnlyFans premium: gestión, marketing, chats 24/7 y crecimiento de ingresos. Solicitud — manager en Telegram en 24 horas."
+  }
+}

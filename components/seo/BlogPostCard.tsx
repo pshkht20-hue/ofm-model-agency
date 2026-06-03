@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import type { BlogPost } from '@/lib/content/blog';
 import { BLOG_CATEGORY_LABELS } from '@/lib/content/blog';
 import { BlogCoverImage } from '@/components/seo/BlogCoverImage';

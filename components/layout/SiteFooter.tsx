@@ -1,23 +1,32 @@
-import Link from 'next/link';
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { Logo } from '@/components/Logo';
 import { LegalDisclaimer } from '@/components/CreatorTheme';
 import { NeonAccents } from '@/components/ui/NeonAccents';
-
-const NAV = [
-  { href: '/#about', label: 'О нас' },
-  { href: '/#how', label: 'Как мы работаем' },
-  { href: '/#models', label: 'Модели' },
-  { href: '/#results', label: 'Результаты' },
-  { href: '/#reviews', label: 'Отзывы' },
-] as const;
-
-const RESOURCES = [
-  { href: '/faq', label: 'FAQ' },
-  { href: '/blog', label: 'Блог' },
-  { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Как выбрать агентство' },
-] as const;
+import { Link } from '@/i18n/navigation';
 
 export function SiteFooter() {
+  const t = useTranslations('footer');
+  const tNav = useTranslations('nav');
+
+  const NAV = [
+    { href: '/#about' as const, label: tNav('about') },
+    { href: '/#how' as const, label: tNav('how') },
+    { href: '/#models' as const, label: tNav('models') },
+    { href: '/#results' as const, label: tNav('results') },
+    { href: '/#reviews' as const, label: t('reviews') },
+  ];
+
+  const RESOURCES = [
+    { href: '/faq' as const, label: tNav('faq') },
+    { href: '/blog' as const, label: tNav('blog') },
+    {
+      href: '/blog/kak-vybrat-onlyfans-agentstvo' as const,
+      label: t('guideAgency'),
+    },
+  ];
+
   return (
     <footer className="bg-[#030306] border-t border-white/[0.06] py-12 md:py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_50%_100%,rgba(255,91,181,0.06),transparent)] pointer-events-none" />
@@ -26,14 +35,11 @@ export function SiteFooter() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-12">
           <div className="lg:col-span-2">
             <Logo size="lg" href="/" wordmarkOnMobile className="mb-6" />
-            <p className="max-w-md text-body">
-              OnlyFans агентство для амбициозных моделей: маркетинг, менеджмент, чаты 24/7 и
-              конфиденциальность.
-            </p>
+            <p className="max-w-md text-body">{t('tagline')}</p>
           </div>
 
           <div>
-            <p className="eyebrow-bright mb-6 !text-[10px]">Навигация</p>
+            <p className="eyebrow-bright mb-6 !text-[10px]">{t('navTitle')}</p>
             <div className="flex flex-col gap-y-3 text-sm text-white/55">
               {NAV.map(({ href, label }) => (
                 <Link
@@ -48,7 +54,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="eyebrow-bright mb-6 !text-[10px]">Полезное</p>
+            <p className="eyebrow-bright mb-6 !text-[10px]">{t('resourcesTitle')}</p>
             <div className="flex flex-col gap-y-3 text-sm text-white/55">
               {RESOURCES.map(({ href, label }) => (
                 <Link
@@ -63,7 +69,7 @@ export function SiteFooter() {
                 href="/#contact"
                 className="link-hover-line hover:text-accent-pink transition w-fit"
               >
-                Подать заявку
+                {t('apply')}
               </Link>
             </div>
           </div>
@@ -75,10 +81,10 @@ export function SiteFooter() {
           <span>© {new Date().getFullYear()} OFM&apos;s Model Agency</span>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             <Link href="/privacy" className="link-hover-line hover:text-accent-pink transition">
-              Политика конфиденциальности
+              {t('privacy')}
             </Link>
             <Link href="/terms" className="link-hover-line hover:text-accent-pink transition">
-              Условия использования
+              {t('terms')}
             </Link>
           </div>
         </div>

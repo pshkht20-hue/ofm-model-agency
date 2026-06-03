@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { setRequestLocale } from 'next-intl/server';
+import { ContentLocaleNotice } from '@/components/ContentLocaleNotice';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { BlogPostCard } from '@/components/seo/BlogPostCard';
 import { BreadcrumbJsonLd } from '@/components/seo/StructuredData';
@@ -9,22 +10,32 @@ import {
   BLOG_POSTS,
   getPostsByCategory,
 } from '@/lib/content/blog';
+import { Link } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = createPageMetadata({
-  title: 'Блог OnlyFans — гайды по агентству, маркетингу и росту дохода',
-  description:
-    '14 экспертных статей: OnlyFans management, маркетинг 2026, чаты и PPV, цены, Reddit, безопасность и старт для моделей. OFM\'s Model Agency.',
-  path: '/blog',
-  keywords: [
-    'блог onlyfans',
-    'onlyfans гайд',
-    'onlyfans маркетинг статья',
-    'onlyfans агентство блог',
-  ],
-});
+type Props = { params: Promise<{ locale: string }> };
 
-export default function BlogIndexPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return createPageMetadata({
+    title: 'Блог OnlyFans — гайды по агентству, маркетингу и росту дохода',
+    description:
+      "14 экспертных статей: OnlyFans management, маркетинг 2026, чаты и PPV, цены, Reddit, безопасность и старт для моделей. OFM's Model Agency.",
+    path: '/blog',
+    locale: locale as Locale,
+    keywords: [
+      'блог onlyfans',
+      'onlyfans гайд',
+      'onlyfans маркетинг статья',
+      'onlyfans агентство блог',
+    ],
+  });
+}
+
+export default async function BlogIndexPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const totalMinutes = BLOG_POSTS.reduce((s, p) => s + p.readMinutes, 0);
 
   return (
@@ -35,6 +46,8 @@ export default function BlogIndexPage() {
           { name: 'Блог', path: '/blog' },
         ]}
       />
+
+      <ContentLocaleNotice />
 
       <p className="eyebrow-bright mb-4">Блог</p>
       <h1 className="heading-section text-[clamp(2rem,5vw,3rem)] mb-6">

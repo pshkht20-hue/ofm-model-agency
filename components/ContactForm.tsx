@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
@@ -10,6 +11,7 @@ const inputClass =
   'w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder:text-white/30 focus:outline-none focus:border-accent-pink/50 focus:ring-1 focus:ring-accent-pink/25 transition';
 
 export function ContactForm() {
+  const t = useTranslations('contactForm');
   const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -38,7 +40,7 @@ export function ContactForm() {
       const data = (await response.json()) as { error?: string };
 
       if (!response.ok) {
-        setErrorMessage(data.error ?? 'Ошибка отправки');
+        setErrorMessage(data.error ?? t('errorGeneric'));
         setStatus('error');
         return;
       }
@@ -46,7 +48,7 @@ export function ContactForm() {
       setStatus('success');
       form.reset();
     } catch {
-      setErrorMessage('Нет соединения. Проверьте интернет и попробуйте снова.');
+      setErrorMessage(t('errorNetwork'));
       setStatus('error');
     }
   }
@@ -74,7 +76,7 @@ export function ContactForm() {
             transition={{ delay: 0.2 }}
             className="font-serif text-2xl font-normal"
           >
-            Заявка отправлена
+            {t('successTitle')}
           </motion.h3>
           <motion.p
             initial={{ opacity: 0, y: 8 }}
@@ -82,14 +84,14 @@ export function ContactForm() {
             transition={{ delay: 0.3 }}
             className="text-white/65 leading-relaxed"
           >
-            Спасибо! Менеджер свяжется с вами в Telegram в течение 24 часов.
+            {t('successBody')}
           </motion.p>
           <button
             type="button"
             onClick={() => setStatus('idle')}
             className="mt-2 text-sm text-accent-pink hover:text-accent-cyan transition link-hover-line"
           >
-            Отправить ещё одну заявку
+            {t('submitAnother')}
           </button>
         </div>
       </motion.div>
@@ -105,7 +107,7 @@ export function ContactForm() {
       <div className="grid gap-5">
         <div className="grid sm:grid-cols-2 gap-5">
           <label className="block">
-            <span className="block text-sm text-white/60 mb-2">Имя *</span>
+            <span className="block text-sm text-white/60 mb-2">{t('name')} *</span>
             <input
               type="text"
               name="name"
@@ -113,19 +115,17 @@ export function ContactForm() {
               minLength={2}
               maxLength={100}
               autoComplete="name"
-              placeholder="Анна"
               className={inputClass}
               disabled={status === 'loading'}
             />
           </label>
           <label className="block">
-            <span className="block text-sm text-white/60 mb-2">Возраст</span>
+            <span className="block text-sm text-white/60 mb-2">{t('age')}</span>
             <input
               type="number"
               name="age"
               min={18}
               max={99}
-              placeholder="21"
               className={inputClass}
               disabled={status === 'loading'}
             />
@@ -133,7 +133,7 @@ export function ContactForm() {
         </div>
 
         <label className="block">
-          <span className="block text-sm text-white/60 mb-2">Telegram *</span>
+          <span className="block text-sm text-white/60 mb-2">{t('telegram')} *</span>
           <input
             type="text"
             name="telegram"
@@ -147,7 +147,7 @@ export function ContactForm() {
         </label>
 
         <label className="block">
-          <span className="block text-sm text-white/60 mb-2">Instagram</span>
+          <span className="block text-sm text-white/60 mb-2">{t('instagram')}</span>
           <input
             type="text"
             name="instagram"
@@ -159,12 +159,12 @@ export function ContactForm() {
         </label>
 
         <label className="block">
-          <span className="block text-sm text-white/60 mb-2">О себе</span>
+          <span className="block text-sm text-white/60 mb-2">{t('about')}</span>
           <textarea
             name="message"
             rows={4}
             maxLength={2000}
-            placeholder="Коротко расскажите о себе и опыте (необязательно)"
+            placeholder={t('aboutPlaceholder')}
             className={`${inputClass} resize-y min-h-[120px]`}
             disabled={status === 'loading'}
           />
@@ -194,19 +194,17 @@ export function ContactForm() {
         {status === 'loading' ? (
           <>
             <Loader2 className="w-5 h-5 animate-spin" />
-            Отправляем...
+            {t('sending')}
           </>
         ) : (
           <>
-            Отправить заявку
+            {t('submit')}
             <ArrowRight className="w-5 h-5" />
           </>
         )}
       </button>
 
-      <p className="mt-4 text-xs text-white/40 text-center leading-relaxed">
-        Нажимая кнопку, вы соглашаетесь на обработку данных для связи с вами.
-      </p>
+      <p className="mt-4 text-xs text-white/40 text-center leading-relaxed">{t('consent')}</p>
     </form>
   );
 }

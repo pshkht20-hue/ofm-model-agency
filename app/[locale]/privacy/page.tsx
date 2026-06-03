@@ -1,17 +1,28 @@
 import type { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import { PRIVACY_SECTIONS } from '@/lib/content/legal';
+import type { Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = createPageMetadata({
-  title: 'Политика конфиденциальности',
-  description:
-    'Политика конфиденциальности OFM\'s Model Agency: какие данные собираем при заявке на сайте и как их защищаем.',
-  path: '/privacy',
-});
+type Props = { params: Promise<{ locale: string }> };
 
-export default function PrivacyPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return createPageMetadata({
+    title: 'Политика конфиденциальности',
+    description:
+      "Политика конфиденциальности OFM's Model Agency: какие данные собираем при заявке на сайте и как их защищаем.",
+    path: '/privacy',
+    locale: locale as Locale,
+  });
+}
+
+export default async function PrivacyPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <SeoPageShell breadcrumbs={[{ label: 'Политика конфиденциальности' }]} showCta={false}>
       <BreadcrumbJsonLd

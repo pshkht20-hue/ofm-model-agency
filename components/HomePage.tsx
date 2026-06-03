@@ -13,6 +13,7 @@ import {
   Camera,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { ContactForm } from '@/components/ContactForm';
 import { Navbar } from '@/components/Navbar';
 import {
@@ -35,58 +36,19 @@ import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
 import { HomeSeoBlock } from '@/components/seo/HomeSeoBlock';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 
-const BENEFITS = [
-  { icon: Users, title: 'Личный менеджер', desc: 'Закреплённый менеджер работает с тобой 7 дней в неделю.' },
-  { icon: TrendingUp, title: 'Мощный маркетинг', desc: 'Профессиональное продвижение и работа с трафиком.' },
-  { icon: Award, title: 'Реальные результаты', desc: 'Средний доход наших моделей — от $12,000 до $35,000+ в месяц.' },
-  { icon: Shield, title: 'Полная конфиденциальность', desc: 'Защита личности и юридическая поддержка.' },
-  { icon: Heart, title: 'Индивидуальный подход', desc: 'Персональная стратегия под каждую модель.' },
-  { icon: Zap, title: 'Быстрый старт', desc: 'От заявки до первых выплат обычно 7–14 дней.' },
-] as const;
+const BENEFIT_ICONS = [Users, TrendingUp, Award, Shield, Heart, Zap] as const;
+const SERVICE_ICONS = [Users, MessageCircle, TrendingUp, Camera, BarChart3, Shield] as const;
+const STEP_NUMS = ['01', '02', '03', '04', '05', '06'] as const;
 
-const STEPS = [
-  { num: '01', title: 'Подача заявки', desc: 'Ты заполняешь короткую форму. Это занимает всего 3–4 минуты.' },
-  { num: '02', title: 'Первичная оценка', desc: 'В течение 24 часов мы изучаем твой профиль и связываемся с тобой.' },
-  { num: '03', title: 'Личное знакомство', desc: 'Проводим интервью и обсуждаем возможности сотрудничества.' },
-  { num: '04', title: 'Разработка стратегии', desc: 'План: контент, ценообразование и продвижение.' },
-  { num: '05', title: 'Подготовка и запуск', desc: 'Настройка профиля, контент и первый выход.' },
-  { num: '06', title: 'Рост и поддержка', desc: 'Отчёты, аналитика и работа над ростом дохода.' },
-] as const;
+type Item = { title: string; desc: string };
 
-const SERVICES = [
-  {
-    icon: Users,
-    title: 'Управление аккаунтом',
-    desc: 'Полное ведение OnlyFans: профиль, контент и работа с фанами.',
-  },
-  {
-    icon: MessageCircle,
-    title: 'Чаты 24/7',
-    desc: 'Чат-менеджеры отвечают круглосуточно и увеличивают продажи.',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Маркетинг',
-    desc: 'Реклама, соцсети и партнёрские программы для роста подписчиков.',
-  },
-  {
-    icon: Camera,
-    title: 'Контент-стратегия',
-    desc: 'Контент-план, съёмки и визуальный стиль бренда.',
-  },
-  {
-    icon: BarChart3,
-    title: 'Аналитика',
-    desc: 'Еженедельные отчёты и оптимизация дохода.',
-  },
-  {
-    icon: Shield,
-    title: 'Защита',
-    desc: 'Конфиденциальность, юридическая поддержка и контроль утечек.',
-  },
-] as const;
+export function HomePage() {
+  const t = useTranslations('home');
 
-export default function Home() {
+  const benefits = t.raw('benefits.items') as Item[];
+  const steps = t.raw('how.steps') as Item[];
+  const services = t.raw('services.items') as Item[];
+
   return (
     <div className="min-h-screen bg-[#050508] text-[#f4f2ef] overflow-x-hidden premium-grain">
       <NeonAmbience />
@@ -94,7 +56,6 @@ export default function Home() {
       <Navbar />
       <StickyMobileCta />
 
-      {/* HERO */}
       <section className="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
         <div className="absolute inset-0 bg-[#050508]" />
         <div className="section-grid absolute inset-0 opacity-60" aria-hidden />
@@ -103,7 +64,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_0%_80%,rgba(0,212,255,0.08),transparent)]" />
 
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent-pink/20 rounded-full blur-[100px] animate-glow-pulse pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent-violet/20 rounded-full blur-[80px] animate-glow-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
+        <div
+          className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent-violet/20 rounded-full blur-[80px] animate-glow-pulse pointer-events-none"
+          style={{ animationDelay: '1s' }}
+        />
 
         <CreatorFloatingMotifs />
         <NeonAccents variant="hero" />
@@ -123,7 +87,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              Твоя жизнь.
+              {t('hero.line1')}
             </motion.span>
             <motion.span
               className="block text-gradient-brand italic"
@@ -131,7 +95,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.45 }}
             >
-              Твои правила.
+              {t('hero.line2')}
             </motion.span>
             <motion.span
               className="block"
@@ -139,11 +103,9 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.7 }}
             >
-              Твой успех.
+              {t('hero.line3')}
             </motion.span>
-            <span className="sr-only">
-              — OnlyFans агентство для моделей OFM&apos;s Model Agency
-            </span>
+            <span className="sr-only">{t('hero.srOnly')}</span>
           </motion.h1>
 
           <motion.p
@@ -152,9 +114,12 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 1 }}
             className="text-lead max-w-2xl mx-auto mb-14"
           >
-            Эксклюзивное агентство для амбициозных моделей —<br className="hidden sm:block" />
-            доход от <span className="text-accent-pink font-medium">$15,000+</span> в месяц<br className="hidden sm:block" />
-            и полная поддержка на каждом этапе.
+            {t.rich('hero.lead', {
+              income: () => (
+                <span className="text-accent-pink font-medium">{t('hero.incomeHighlight')}</span>
+              ),
+              br: () => <br className="hidden sm:block" />,
+            })}
           </motion.p>
 
           <motion.div
@@ -164,12 +129,12 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <motion.a
-              href="/#contact"
+              href="#contact"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="btn-primary group"
             >
-              Стать моделью
+              {t('hero.ctaPrimary')}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
             </motion.a>
             <motion.a
@@ -178,7 +143,7 @@ export default function Home() {
               whileTap={{ scale: 0.98 }}
               className="btn-secondary"
             >
-              Истории успеха
+              {t('hero.ctaSecondary')}
             </motion.a>
           </motion.div>
 
@@ -189,12 +154,13 @@ export default function Home() {
             className="flex flex-wrap justify-center gap-x-12 gap-y-3 text-xs tracking-[0.2em] uppercase text-white/40"
           >
             <span>
-              <strong className="text-accent-pink font-semibold">200+</strong> моделей
+              <strong className="text-accent-pink font-semibold">200+</strong> {t('hero.statModels')}
             </span>
             <span>
-              Средний доход <strong className="text-accent-cyan font-semibold">$18,400</strong>
+              {t('hero.statIncome')}{' '}
+              <strong className="text-accent-cyan font-semibold">$18,400</strong>
             </span>
-            <span>Топ-1% агентств</span>
+            <span>{t('hero.statTop')}</span>
           </motion.div>
         </div>
 
@@ -204,33 +170,40 @@ export default function Home() {
           transition={{ delay: 2 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/25 text-[9px] tracking-[0.35em] z-20 uppercase animate-scroll-hint"
         >
-          Листайте вниз
+          {t('hero.scroll')}
           <div className="w-px h-8 bg-gradient-to-b from-accent-pink/40 to-transparent" />
         </motion.div>
       </section>
 
       <CreatorFeatureMarquee />
       <SectionDivider />
-
       <StatsShowcase />
 
       <SectionShell id="about">
-        <SectionHeader eyebrow="Преимущества" title="Почему выбирают нас" />
+        <SectionHeader eyebrow={t('benefits.eyebrow')} title={t('benefits.title')} />
         <StaggerGrid className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {BENEFITS.map((item) => (
+          {benefits.map((item, i) => (
             <StaggerItem key={item.title}>
-              <FeatureCard icon={item.icon} title={item.title} description={item.desc} />
+              <FeatureCard
+                icon={BENEFIT_ICONS[i]}
+                title={item.title}
+                description={item.desc}
+              />
             </StaggerItem>
           ))}
         </StaggerGrid>
       </SectionShell>
 
       <SectionShell id="how" variant="elevated">
-        <SectionHeader eyebrow="Процесс" title="Как мы работаем" />
+        <SectionHeader eyebrow={t('how.eyebrow')} title={t('how.title')} />
         <StaggerGrid className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {STEPS.map((step) => (
-            <StaggerItem key={step.num}>
-              <FeatureCard step={step.num} title={step.title} description={step.desc} />
+          {steps.map((step, i) => (
+            <StaggerItem key={STEP_NUMS[i]}>
+              <FeatureCard
+                step={STEP_NUMS[i]}
+                title={step.title}
+                description={step.desc}
+              />
             </StaggerItem>
           ))}
         </StaggerGrid>
@@ -240,19 +213,22 @@ export default function Home() {
       <CreatorPlatformSection />
       <ModelShowcase />
       <SectionDivider />
-
       <ModelReviewsSection />
 
       <SectionShell>
         <SectionHeader
-          eyebrow="Услуги"
-          title="Что мы предлагаем"
-          description="Полный спектр услуг для максимального роста вашего аккаунта"
+          eyebrow={t('services.eyebrow')}
+          title={t('services.title')}
+          description={t('services.description')}
         />
         <StaggerGrid className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {SERVICES.map((service) => (
+          {services.map((service, i) => (
             <StaggerItem key={service.title}>
-              <FeatureCard icon={service.icon} title={service.title} description={service.desc} />
+              <FeatureCard
+                icon={SERVICE_ICONS[i]}
+                title={service.title}
+                description={service.desc}
+              />
             </StaggerItem>
           ))}
         </StaggerGrid>
@@ -260,7 +236,6 @@ export default function Home() {
 
       <HomeSeoBlock />
 
-      {/* CONTACT */}
       <section id="contact" className="relative py-16 md:py-22 overflow-hidden">
         <div className="absolute inset-0 bg-[#050508]" />
         <div className="section-grid absolute inset-0 opacity-50" aria-hidden />
@@ -274,15 +249,13 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="eyebrow-bright mb-6">Следующий шаг</p>
+            <p className="eyebrow-bright mb-6">{t('contact.eyebrow')}</p>
             <h2 className="heading-section text-[clamp(2.5rem,6vw,4.25rem)] mb-8">
-              Готова начать
+              {t('contact.title')}
               <br />
-              <span className="text-gradient-brand italic">зарабатывать по-настоящему?</span>
+              <span className="text-gradient-brand italic">{t('contact.titleAccent')}</span>
             </h2>
-            <p className="text-lead max-w-2xl mx-auto mb-12">
-              Оставьте заявку — менеджер свяжется с вами в Telegram в течение 24 часов.
-            </p>
+            <p className="text-lead max-w-2xl mx-auto mb-12">{t('contact.lead')}</p>
           </motion.div>
 
           <motion.div
@@ -301,13 +274,13 @@ export default function Home() {
             className="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-10 text-xs tracking-[0.15em] uppercase text-white/40"
           >
             <span className="flex items-center gap-2">
-              <Shield className="w-3.5 h-3.5 text-accent-pink" /> Конфиденциальность
+              <Shield className="w-3.5 h-3.5 text-accent-pink" /> {t('contact.privacy')}
             </span>
             <span className="flex items-center gap-2">
-              <Zap className="w-3.5 h-3.5 text-accent-cyan" /> Ответ за 24 часа
+              <Zap className="w-3.5 h-3.5 text-accent-cyan" /> {t('contact.response')}
             </span>
             <span className="flex items-center gap-2">
-              <Heart className="w-3.5 h-3.5 text-accent-violet" /> Поддержка 24/7
+              <Heart className="w-3.5 h-3.5 text-accent-violet" /> {t('contact.support')}
             </span>
           </motion.div>
         </div>

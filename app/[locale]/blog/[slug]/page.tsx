@@ -1,23 +1,27 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
+import { ContentLocaleNotice } from '@/components/ContentLocaleNotice';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { ArticleBody } from '@/components/seo/ArticleBody';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import { BLOG_CATEGORY_LABELS, getAllBlogSlugs, getBlogPost } from '@/lib/content/blog';
 import { RelatedPosts } from '@/components/seo/RelatedPosts';
 import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
+import { Link } from '@/i18n/navigation';
+import { routing, type Locale } from '@/i18n/routing';
 import { getSiteUrl } from '@/lib/site';
 import { createPageMetadata } from '@/lib/seo';
 
-type Props = { params: Promise<{ slug: string }> };
+type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export function generateStaticParams() {
-  return getAllBlogSlugs().map((slug) => ({ slug }));
+  const slugs = getAllBlogSlugs();
+  return routing.locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return {};
 
@@ -25,6 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: post.description,
     path: `/blog/${post.slug}`,
+    locale: locale as Locale,
     keywords: post.keywords,
     image: post.cover
       ? { url: `${getSiteUrl()}${post.cover.localSrc}`, alt: post.cover.alt }
@@ -33,7 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const post = getBlogPost(slug);
   if (!post) notFound();
 
@@ -52,6 +58,8 @@ export default async function BlogPostPage({ params }: Props) {
           { name: post.title, path: `/blog/${post.slug}` },
         ]}
       />
+
+      <ContentLocaleNotice />
 
       <Link
         href="/blog"

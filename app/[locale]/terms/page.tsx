@@ -1,17 +1,28 @@
 import type { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import { TERMS_SECTIONS } from '@/lib/content/legal';
+import type { Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = createPageMetadata({
-  title: 'Условия использования сайта',
-  description:
-    'Условия использования сайта OFM\'s Model Agency: заявки, ответственность, интеллектуальная собственность.',
-  path: '/terms',
-});
+type Props = { params: Promise<{ locale: string }> };
 
-export default function TermsPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return createPageMetadata({
+    title: 'Условия использования сайта',
+    description:
+      "Условия использования сайта OFM's Model Agency: заявки, ответственность, интеллектуальная собственность.",
+    path: '/terms',
+    locale: locale as Locale,
+  });
+}
+
+export default async function TermsPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <SeoPageShell breadcrumbs={[{ label: 'Условия использования' }]} showCta={false}>
       <BreadcrumbJsonLd

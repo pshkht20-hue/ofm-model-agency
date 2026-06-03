@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 const SIZES = {
   sm: { mark: 36, gap: 10, title: 'text-[15px]', tag: 'text-[8px]' },

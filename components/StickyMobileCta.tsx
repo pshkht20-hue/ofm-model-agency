@@ -3,8 +3,10 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export function StickyMobileCta() {
+  const t = useTranslations('nav');
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -24,10 +26,10 @@ export function StickyMobileCta() {
           className="fixed bottom-0 left-0 right-0 z-[55] p-4 md:hidden pointer-events-none"
         >
           <a
-            href="/#contact"
+            href="#contact"
             className="btn-primary w-full pointer-events-auto shadow-[0_-8px_40px_-8px_rgba(255,91,181,0.5)]"
           >
-            Стать моделью
+            {t('becomeModel')}
             <ArrowRight className="w-5 h-5" />
           </a>
         </motion.div>

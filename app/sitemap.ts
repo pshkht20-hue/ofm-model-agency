@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllBlogSlugs } from '@/lib/content/blog';
+import { routing, type Locale } from '@/i18n/routing';
+import { pathForLocale } from '@/lib/i18n/paths';
 import { getSiteUrl } from '@/lib/site';
 
 const STATIC_ROUTES = ['', '/faq', '/blog', '/privacy', '/terms'] as const;
@@ -7,20 +9,31 @@ const STATIC_ROUTES = ['', '/faq', '/blog', '/privacy', '/terms'] as const;
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();
   const now = new Date();
+  const slugs = getAllBlogSlugs();
 
-  const staticPages: MetadataRoute.Sitemap = STATIC_ROUTES.map((path) => ({
-    url: `${siteUrl}${path}`,
-    lastModified: now,
-    changeFrequency: path === '' ? 'weekly' : path === '/blog' ? 'weekly' : 'monthly',
-    priority: path === '' ? 1 : path === '/faq' ? 0.9 : path === '/blog' ? 0.85 : 0.5,
-  }));
+  const entries: MetadataRoute.Sitemap = [];
 
-  const blogPages: MetadataRoute.Sitemap = getAllBlogSlugs().map((slug) => ({
-    url: `${siteUrl}/blog/${slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly',
-    priority: 0.8,
-  }));
+  for (const locale of routing.locales) {
+    for (const path of STATIC_ROUTES) {
+      const localized = pathForLocale(path, locale as Locale);
+      entries.push({
+        url: `${siteUrl}${localized}`,
+        lastModified: now,
+        changeFrequency: path === '' ? 'weekly' : path === '/blog' ? 'weekly' : 'monthly',
+        priority: path === '' ? 1 : path === '/faq' ? 0.9 : path === '/blog' ? 0.85 : 0.5,
+      });
+    }
 
-  return [...staticPages, ...blogPages];
+    for (const slug of slugs) {
+      const localized = pathForLocale(`/blog/${slug}`, locale as Locale);
+      entries.push({
+        url: `${siteUrl}${localized}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+      });
+    }
+  }
+
+  return entries;
 }

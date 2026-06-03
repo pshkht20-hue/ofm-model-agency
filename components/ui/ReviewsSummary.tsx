@@ -1,11 +1,13 @@
 'use client';
 
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { Star } from 'lucide-react';
 import { ReviewStars } from '@/components/ui/ReviewStars';
 import { getReviewStats } from '@/lib/content/reviews';
+import { Link } from '@/i18n/navigation';
 
 export function ReviewsSummary() {
+  const t = useTranslations('reviews.summary');
   const { total, average, distribution } = getReviewStats();
   const maxCount = Math.max(...distribution.map((d) => d.count), 1);
 
@@ -14,7 +16,7 @@ export function ReviewsSummary() {
       <div className="p-6 md:p-8 grid md:grid-cols-[auto_1fr_auto] gap-8 items-center">
         <div className="text-center md:text-left">
           <div className="text-[11px] uppercase tracking-[0.2em] text-white/35 mb-2">
-            Оценка сотрудничества
+            {t('title')}
           </div>
           <div className="flex items-center justify-center md:justify-start gap-3">
             <span className="text-5xl font-semibold text-white tabular-nums tracking-tight">
@@ -27,7 +29,7 @@ export function ReviewsSummary() {
                 variant="gold"
               />
               <p className="text-xs text-white/40 mt-1">
-                на основе {total} отзывов на сайте
+                {t('basedOn', { count: total })}
               </p>
             </div>
           </div>
@@ -53,15 +55,15 @@ export function ReviewsSummary() {
 
         <ul className="text-xs text-white/45 space-y-2 md:text-right md:max-w-[220px]">
           <li className="flex md:justify-end gap-2">
-            <span className="text-accent-pink">●</span> Согласие перед публикацией
+            <span className="text-accent-pink">●</span> {t('consent')}
           </li>
           <li className="flex md:justify-end gap-2">
-            <span className="text-accent-cyan">●</span> Есть ответы агентства
+            <span className="text-accent-cyan">●</span> {t('replies')}
           </li>
           <li className="flex md:justify-end gap-2">
             <span className="text-accent-violet">●</span>
             <Link href="/faq" className="hover:text-white transition underline-offset-2 hover:underline">
-              FAQ по условиям
+              {t('faqLink')}
             </Link>
           </li>
         </ul>
