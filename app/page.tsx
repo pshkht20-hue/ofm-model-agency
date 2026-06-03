@@ -14,45 +14,87 @@ import {
   Camera 
 } from 'lucide-react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useMotionValue, useTransform, animate } from 'framer-motion';
+import { useEffect } from 'react';
+// Компонент для анимации цифр
+function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string }) {
+  const motionValue = useMotionValue(0);
+  const rounded = useTransform(motionValue, (latest) => Math.floor(latest));
+
+  useEffect(() => {
+    const controls = animate(motionValue, value, {
+      duration: 1.8,
+      ease: "easeOut",
+    });
+    return controls.stop;
+  }, [motionValue, value]);
+
+  return (
+    <span>
+      <motion.span>{rounded}</motion.span>
+      {suffix}
+    </span>
+  );
+}
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
 
     {/* ==================== NAVBAR ==================== */}
-<nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-white/10">
-  <div className="max-w-7xl mx-auto px-5 flex items-center justify-between h-[68px]">
+<nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-xl border-b border-white/10">
+  <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
     
     {/* Логотип */}
     <div className="flex items-center gap-3">
-      <div className="relative flex items-center justify-center w-9 h-9">
+      <div className="relative flex items-center justify-center w-9 h-9 md:w-11 md:h-11">
         <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-purple-600 to-violet-600 rounded-2xl"></div>
         <div className="absolute inset-[1.5px] bg-black rounded-2xl"></div>
         <div className="relative z-10">
-          <span className="text-white font-bold text-[19px] tracking-[-1.5px]">OFM</span>
+          <span className="text-white font-bold text-[19px] md:text-[22px] tracking-[-1.5px]">OFM</span>
         </div>
       </div>
 
-      <div>
-        <div className="font-semibold text-[17px] tracking-[-0.5px] leading-none">OFM's Model Agency</div>
+      <div className="hidden sm:block">
+        <div className="font-semibold text-[17px] md:text-[21px] tracking-[-0.5px] leading-none">OFM's Model Agency</div>
+        <div className="text-[9px] md:text-[10px] text-white/50 tracking-[1.5px] -mt-0.5">LUXURY ONLYFANS MANAGEMENT</div>
       </div>
     </div>
 
-    {/* Кнопка */}
-    <a 
-      href="#contact" 
-      className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2 active:scale-[0.985] transition-all"
-    >
-      Стать моделью
-      <ArrowRight className="w-4 h-4" />
-    </a>
+    {/* Меню (только на десктопе) */}
+    <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wider">
+      <a href="#about" className="hover:text-pink-400 transition">О нас</a>
+      <a href="#how" className="hover:text-pink-400 transition">Как мы работаем</a>
+      <a href="#models" className="hover:text-pink-400 transition">Модели</a>
+      <a href="#results" className="hover:text-pink-400 transition">Результаты</a>
+      <a href="#reviews" className="hover:text-pink-400 transition">Отзывы</a>
+    </div>
+
+    {/* Кнопки */}
+    <div className="flex items-center gap-2 md:gap-3">
+      <a 
+        href="#contact" 
+        className="hidden md:block px-5 py-2.5 text-sm font-medium border border-white/25 rounded-full hover:bg-white/5 transition"
+      >
+        Подать заявку
+      </a>
+
+      <a 
+        href="#contact" 
+        className="bg-white text-black px-5 md:px-7 py-2.5 md:py-[13px] rounded-full text-sm font-semibold flex items-center gap-2 active:scale-[0.985] transition"
+      >
+        Стать моделью
+        <ArrowRight className="w-4 h-4" />
+      </a>
+    </div>
   </div>
 </nav>
 
 {/* ==================== HERO СЕКЦИЯ ==================== */}
 <section className="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
   
-  {/* Роскошный фон */}
+  {/* Фон */}
   <div className="absolute inset-0 bg-[#0a0a0f]"></div>
   <div className="absolute inset-0 bg-[radial-gradient(at_30%_20%,#4c1d95_0%,transparent_50%)]"></div>
   <div className="absolute inset-0 bg-[radial-gradient(at_70%_80%,#831d4e_0%,transparent_55%)]"></div>
@@ -61,146 +103,138 @@ export default function Home() {
   <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
     
     {/* Бейдж */}
-    <div className="inline-flex items-center gap-3 bg-black/70 border border-white/30 px-7 py-2.5 rounded-full mb-10 text-sm tracking-[3px] backdrop-blur-xl">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="inline-flex items-center gap-3 bg-black/70 border border-white/30 px-7 py-2.5 rounded-full mb-10 text-sm tracking-[3px] backdrop-blur-xl"
+    >
       <Sparkles className="w-4 h-4 text-pink-400" />
       <span className="font-medium text-white">LUXURY ONLYFANS AGENCY</span>
+    </motion.div>
+
+    {/* Заголовок (появляется по строкам) */}
+    <div className="font-serif text-[72px] md:text-[92px] leading-[0.92] tracking-[-3.5px] mb-8">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
+        Твоя жизнь.
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.45 }}
+      >
+        <span className="text-white/90">Твои правила.</span>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.7 }}
+      >
+        Твой успех.
+      </motion.div>
     </div>
 
-    {/* Заголовок */}
-    <h1 className="font-serif text-[72px] md:text-[92px] leading-[0.92] tracking-[-3.5px] mb-8">
-      Твоя жизнь.<br />
-      <span className="text-white/90">Твои правила.</span><br />
-      Твой успех.
-    </h1>
-
     {/* Подзаголовок */}
-    <p className="max-w-2xl mx-auto text-2xl md:text-3xl text-zinc-300 mb-12 leading-tight tracking-[-0.3px]">
+    <motion.p 
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay: 1.0 }}
+      className="max-w-2xl mx-auto text-2xl md:text-3xl text-zinc-300 mb-12 leading-tight tracking-[-0.3px]"
+    >
       Эксклюзивное агентство, которое помогает амбициозным девушкам<br />
       зарабатывать от <span className="text-white font-medium">$15,000+</span> в месяц<br />
       и жить так, как они всегда мечтали.
-    </p>
+    </motion.p>
 
     {/* Кнопки */}
     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-      <a 
+      <motion.a 
         href="#contact" 
-        className="group inline-flex items-center justify-center gap-3 bg-white text-black text-lg font-semibold px-14 py-5 rounded-2xl hover:bg-white/90 active:scale-[0.985] transition-all shadow-2xl"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.3 }}
+        whileHover={{ scale: 1.015 }}
+        whileTap={{ scale: 0.985 }}
+        className="group inline-flex items-center justify-center gap-3 bg-white text-black text-lg font-semibold px-14 py-5 rounded-2xl hover:bg-white/90 transition-all shadow-2xl"
       >
         Стать моделью
         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
-      </a>
+      </motion.a>
 
-      <a 
+      <motion.a 
         href="#models" 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.45 }}
         className="inline-flex items-center justify-center gap-3 border border-white/25 hover:border-white/60 hover:bg-white/5 text-lg font-medium px-10 py-5 rounded-2xl transition-all"
       >
         Посмотреть истории успеха
-      </a>
+      </motion.a>
     </div>
 
-    {/* Доверие */}
-    <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm text-white/50 tracking-widest">
+    {/* Trust signals */}
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6, delay: 1.7 }}
+      className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm text-white/50 tracking-widest"
+    >
       <div>Более <span className="text-white/80">200 моделей</span></div>
       <div>Средний доход <span className="text-white/80">$18,400 / мес</span></div>
       <div>Топ-1% агентств</div>
-    </div>
+    </motion.div>
   </div>
 
   {/* Индикатор прокрутки */}
-  <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 text-xs tracking-[3px] z-20">
-    
-    <div className="w-px h-10 bg-gradient-to-b from-white/30 to-transparent"></div>
-  </div>
+<motion.div 
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.6, delay: 2.0 }}
+  className="absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/15 text-[9px] tracking-[4px] z-20"
+>
+  SCROLL TO EXPLORE
+  <div className="w-px h-6 bg-gradient-to-b from-white/15 to-transparent"></div>
+</motion.div>
 </section>
 
-      {/* ==================== TRUST BAR / ГЛАВНЫЕ ЦИФРЫ ==================== */}
-<section className="border-y border-white/10 bg-zinc-950 py-12">
-  <div className="max-w-6xl mx-auto px-8">
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 text-center">
-      
-      <div>
-        <div className="text-5xl font-semibold tracking-tighter text-white">200+</div>
-        <div className="mt-2 text-sm text-white/60 tracking-widest">МОДЕЛЕЙ В АГЕНТСТВЕ</div>
-      </div>
 
-      <div>
-        <div className="text-5xl font-semibold tracking-tighter text-white">$18.4M</div>
-        <div className="mt-2 text-sm text-white/60 tracking-widest">ЗАРАБОТАНО МОДЕЛЯМИ</div>
-      </div>
-
-      <div>
-        <div className="text-5xl font-semibold tracking-tighter text-white">94%</div>
-        <div className="mt-2 text-sm text-white/60 tracking-widest">СРЕДНИЙ РОСТ ДОХОДА</div>
-      </div>
-
-      <div>
-        <div className="text-5xl font-semibold tracking-tighter text-white">24/7</div>
-        <div className="mt-2 text-sm text-white/60 tracking-widest">ПОДДЕРЖКА И ЧАТЫ</div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
       {/* ==================== ПОЧЕМУ ВЫБИРАЮТ НАС ==================== */}
 <section id="about" className="py-24 bg-black">
   <div className="max-w-6xl mx-auto px-8">
     
-    {/* Заголовок */}
     <div className="text-center mb-16">
       <div className="text-pink-500 text-sm tracking-[3px] mb-3">ПРЕИМУЩЕСТВА</div>
       <h2 className="text-6xl font-bold tracking-tighter">Почему выбирают нас</h2>
-      <p className="mt-4 text-xl text-white/60 max-w-md mx-auto">
-        Мы помогаем моделям не просто зарабатывать, а строить настоящую карьеру
-      </p>
     </div>
 
-    {/* Карточки преимуществ */}
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
       {[
-        {
-          icon: Users,
-          title: "Личный менеджер",
-          desc: "Закреплённый менеджер работает с тобой 7 дней в неделю. Помогает с контентом, стратегией и общением с фанами."
-        },
-        {
-          icon: TrendingUp,
-          title: "Мощный маркетинг",
-          desc: "Профессиональное продвижение, реклама и работа с трафиком. Мы знаем, как привлекать платёжеспособных фанатов."
-        },
-        {
-          icon: Award,
-          title: "Реальные результаты",
-          desc: "Средний доход наших моделей — от $12,000 до $35,000+ в месяц. Многие увеличивают заработок в 3–5 раз."
-        },
-        {
-          icon: Shield,
-          title: "Полная конфиденциальность",
-          desc: "Защита личности, юридическая поддержка и строгие правила конфиденциальности. Твоя безопасность — наш приоритет."
-        },
-        {
-          icon: Heart,
-          title: "Индивидуальный подход",
-          desc: "Мы не используем шаблоны. Для каждой модели разрабатывается персональная стратегия роста."
-        },
-        {
-          icon: Zap,
-          title: "Быстрый старт",
-          desc: "От подачи заявки до первых выплат обычно проходит 7–14 дней. Мы помогаем запуститься максимально быстро."
-        }
+        { icon: Users, title: "Личный менеджер", desc: "Закреплённый менеджер работает с тобой 7 дней в неделю." },
+        { icon: TrendingUp, title: "Мощный маркетинг", desc: "Профессиональное продвижение и работа с трафиком." },
+        { icon: Award, title: "Реальные результаты", desc: "Средний доход наших моделей — от $12,000 до $35,000+ в месяц." },
+        { icon: Shield, title: "Полная конфиденциальность", desc: "Защита личности и юридическая поддержка." },
+        { icon: Heart, title: "Индивидуальный подход", desc: "Персональная стратегия под каждую модель." },
+        { icon: Zap, title: "Быстрый старт", desc: "От заявки до первых выплат обычно 7–14 дней." }
       ].map((item, index) => (
-        <div 
-          key={index} 
-          className="group bg-zinc-950 border border-white/10 p-9 rounded-3xl hover:border-pink-500/40 transition-all duration-300 hover:-translate-y-1"
+        <motion.div 
+          key={index}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className="group bg-zinc-950 border border-white/10 p-9 rounded-3xl hover:border-pink-500/40 transition-all"
         >
           <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-white/5 mb-8 group-hover:bg-pink-500/10 transition-colors">
             <item.icon className="w-7 h-7 text-pink-500" />
           </div>
-          
           <h3 className="text-2xl font-semibold tracking-tight mb-4">{item.title}</h3>
           <p className="text-white/70 leading-relaxed">{item.desc}</p>
-        </div>
+        </motion.div>
       ))}
     </div>
   </div>
@@ -210,60 +244,34 @@ export default function Home() {
 <section id="how" className="py-24 bg-zinc-950">
   <div className="max-w-6xl mx-auto px-8">
     
-    {/* Заголовок секции */}
     <div className="text-center mb-16">
       <div className="text-pink-500 text-sm tracking-[3px] mb-3">ПРОЗРАЧНЫЙ ПРОЦЕСС</div>
       <h2 className="text-6xl font-bold tracking-tighter">Как мы работаем</h2>
-      <p className="mt-4 text-xl text-white/60 max-w-lg mx-auto">
-        Простой и понятный процесс из 6 этапов. Никаких скрытых условий.
-      </p>
     </div>
 
-    {/* Шаги */}
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {[
-        {
-          num: "01",
-          title: "Подача заявки",
-          desc: "Ты заполняешь короткую форму. Это занимает всего 3–4 минуты. Никаких лишних вопросов на старте."
-        },
-        {
-          num: "02",
-          title: "Первичная оценка",
-          desc: "В течение 24 часов мы изучаем твой профиль и связываемся с тобой для короткого разговора."
-        },
-        {
-          num: "03",
-          title: "Личное знакомство",
-          desc: "Проводим детальное интервью. Обсуждаем твои цели, текущую ситуацию и возможности сотрудничества."
-        },
-        {
-          num: "04",
-          title: "Разработка стратегии",
-          desc: "Создаём индивидуальный план: контент-стратегия, ценообразование, продвижение и цели на первые месяцы."
-        },
-        {
-          num: "05",
-          title: "Подготовка и запуск",
-          desc: "Помогаем с настройкой профиля, созданием контента, запуском рекламы и первым выходом на платформу."
-        },
-        {
-          num: "06",
-          title: "Рост и поддержка",
-          desc: "Постоянный мониторинг, оптимизация, еженедельные отчёты и работа над увеличением твоего дохода."
-        }
+        { num: "01", title: "Подача заявки", desc: "Ты заполняешь короткую форму. Это занимает всего 3–4 минуты." },
+        { num: "02", title: "Первичная оценка", desc: "В течение 24 часов мы изучаем твой профиль и связываемся с тобой." },
+        { num: "03", title: "Личное знакомство", desc: "Проводим детальное интервью и обсуждаем возможности сотрудничества." },
+        { num: "04", title: "Разработка стратегии", desc: "Создаём индивидуальный план: контент, ценообразование и продвижение." },
+        { num: "05", title: "Подготовка и запуск", desc: "Помогаем с настройкой профиля, созданием контента и первым выходом." },
+        { num: "06", title: "Рост и поддержка", desc: "Постоянный мониторинг, еженедельные отчёты и работа над ростом дохода." }
       ].map((step, index) => (
-        <div 
-          key={index} 
-          className="group bg-black border border-white/10 p-9 rounded-3xl hover:border-pink-500/40 transition-all duration-300 flex flex-col"
+        <motion.div 
+          key={index}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.08 }}
+          viewport={{ once: true }}
+          className="group bg-black border border-white/10 p-9 rounded-3xl hover:border-pink-500/40 transition-all flex flex-col"
         >
           <div className="text-6xl font-bold text-pink-500/90 mb-8 tracking-tighter group-hover:text-pink-500 transition-colors">
             {step.num}
           </div>
-          
           <h3 className="text-2xl font-semibold tracking-tight mb-4">{step.title}</h3>
           <p className="text-white/70 leading-relaxed flex-1">{step.desc}</p>
-        </div>
+        </motion.div>
       ))}
     </div>
   </div>
