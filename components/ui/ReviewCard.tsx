@@ -1,46 +1,62 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { BadgeCheck } from 'lucide-react';
+import type { ModelReview } from '@/lib/content/reviews';
+import { ReviewStars } from '@/components/ui/ReviewStars';
 
-type ReviewCardProps = {
-  name: string;
-  earnings: string;
-  text: string;
-};
-
-export function ReviewCard({ name, earnings, text }: ReviewCardProps) {
+export function ReviewCard({ review }: { review: ModelReview }) {
   return (
     <motion.article
-      whileHover={{ y: -4 }}
-      className="group card-glass relative p-8 md:p-9 flex flex-col overflow-hidden"
+      whileHover={{ y: -3 }}
+      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+      className="group relative flex flex-col h-full rounded-2xl border border-white/[0.08] bg-[#0c0c12] p-5 md:p-6 shadow-[0_1px_0_0_rgba(255,255,255,0.04)_inset] hover:border-white/[0.14] hover:shadow-[0_12px_40px_-20px_rgba(255,91,181,0.25)] transition-[border-color,box-shadow] duration-300"
     >
-      <div className="absolute top-0 right-0 w-32 h-32 bg-accent-pink/10 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-      <div className="flex-1 relative">
-        <div className="flex gap-0.5 text-accent-pink mb-6 text-sm tracking-widest">
-          {'★★★★★'.split('').map((star, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.05 * i }}
-            >
-              {star}
-            </motion.span>
-          ))}
+      {/* Верхняя полоса как у карточек отзывов */}
+      <div className="flex items-start gap-3">
+        <div
+          className="shrink-0 w-11 h-11 rounded-full flex items-center justify-center text-sm font-semibold text-white border border-white/10 shadow-[0_0_20px_-6px_rgba(255,91,181,0.4)]"
+          style={{
+            background: `linear-gradient(135deg, hsl(${review.avatarHue} 70% 45%), hsl(${(review.avatarHue + 40) % 360} 60% 35%))`,
+          }}
+          aria-hidden
+        >
+          {review.initials}
         </div>
-        <p className="font-serif text-xl md:text-2xl text-white/90 leading-relaxed">
-          <span className="text-accent-pink/60 text-3xl leading-none mr-1">&ldquo;</span>
-          {text}
-          <span className="text-accent-pink/60 text-3xl leading-none ml-0.5">&rdquo;</span>
-        </p>
+
+        <div className="flex-1 min-w-0">
+          <div className="flex items-start justify-between gap-2">
+            <div>
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <h3 className="font-medium text-[15px] text-white/95">{review.name}</h3>
+                <span
+                  className="inline-flex items-center gap-0.5 text-[10px] text-accent-cyan/90"
+                  title="Отзыв модели с согласия на публикацию"
+                >
+                  <BadgeCheck className="w-3.5 h-3.5" strokeWidth={2} />
+                </span>
+              </div>
+              <p className="text-xs text-white/45 mt-0.5">{review.meta}</p>
+            </div>
+            <time className="text-[11px] text-white/35 whitespace-nowrap shrink-0">
+              {review.dateLabel}
+            </time>
+          </div>
+
+          <div className="mt-2">
+            <ReviewStars variant="gold" />
+          </div>
+        </div>
       </div>
 
-      <div className="mt-8 pt-6 border-t border-white/[0.06] relative">
-        <div className="font-medium text-base tracking-tight">{name}</div>
-        <div className="text-gradient-brand text-sm mt-1.5 font-medium">{earnings}</div>
-      </div>
+      <p className="mt-4 text-[15px] leading-relaxed text-white/78 flex-1">{review.text}</p>
+
+      {review.resultNote && (
+        <p className="mt-4 pt-3 border-t border-white/[0.06] text-xs text-white/42 leading-relaxed">
+          {review.resultNote}
+          <span className="text-white/30"> · индивидуальный результат</span>
+        </p>
+      )}
     </motion.article>
   );
 }

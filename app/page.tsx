@@ -28,7 +28,7 @@ import { ScrollProgress } from '@/components/ScrollProgress';
 import { StickyMobileCta } from '@/components/StickyMobileCta';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { FeatureCard } from '@/components/ui/FeatureCard';
-import { ReviewCard } from '@/components/ui/ReviewCard';
+import { ModelReviewsSection } from '@/components/ModelReviewsSection';
 import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
 import { SectionDivider } from '@/components/ui/SectionDivider';
 import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
@@ -51,29 +51,6 @@ const STEPS = [
   { num: '04', title: 'Разработка стратегии', desc: 'План: контент, ценообразование и продвижение.' },
   { num: '05', title: 'Подготовка и запуск', desc: 'Настройка профиля, контент и первый выход.' },
   { num: '06', title: 'Рост и поддержка', desc: 'Отчёты, аналитика и работа над ростом дохода.' },
-] as const;
-
-const REVIEWS = [
-  {
-    name: 'Анна, 24 года',
-    earnings: 'Зарабатываю $28k+/мес',
-    text: 'За 5 месяцев я увеличила свой доход в 4 раза. Личный менеджер реально помогает каждый день.',
-  },
-  {
-    name: 'Виктория, 27 лет',
-    earnings: 'Зарабатываю $19k+/мес',
-    text: 'Индивидуальный подход — мне помогают развиваться как бренду, а не просто ведут аккаунт.',
-  },
-  {
-    name: 'София, 22 года',
-    earnings: 'Зарабатываю $32k+/мес',
-    text: 'За полгода прошла путь от $3k до $32k в месяц. Маркетинг и стратегия на высшем уровне.',
-  },
-  {
-    name: 'Мария, 25 лет',
-    earnings: 'Зарабатываю $24k+/мес',
-    text: 'Ценю конфиденциальность и профессионализм. Менеджер всегда даёт полезные советы по контенту.',
-  },
 ] as const;
 
 const SERVICES = [
@@ -264,20 +241,7 @@ export default function Home() {
       <ModelShowcase />
       <SectionDivider />
 
-      <SectionShell id="reviews" variant="elevated">
-        <SectionHeader
-          eyebrow="Отзывы"
-          title="Что говорят наши модели"
-          description="Девушки, которые уже изменили свою жизнь вместе с нами"
-        />
-        <StaggerGrid className="grid md:grid-cols-2 gap-5 md:gap-6">
-          {REVIEWS.map((review) => (
-            <StaggerItem key={review.name}>
-              <ReviewCard {...review} />
-            </StaggerItem>
-          ))}
-        </StaggerGrid>
-      </SectionShell>
+      <ModelReviewsSection />
 
       <SectionShell>
         <SectionHeader
