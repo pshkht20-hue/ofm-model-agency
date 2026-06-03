@@ -13,11 +13,6 @@ import {
   Shield,
   Sparkles,
 } from 'lucide-react';
-import { SectionHeader } from '@/components/SectionHeader';
-import { SectionShell } from '@/components/ui/SectionShell';
-import { FeatureCard } from '@/components/ui/FeatureCard';
-import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
-
 const FLOATING_ICONS = [
   { Icon: MessageCircle, x: '8%', y: '18%', delay: 0 },
   { Icon: Heart, x: '88%', y: '22%', delay: 0.4 },
@@ -94,38 +89,6 @@ export function CreatorFeatureMarquee() {
         ))}
       </div>
     </div>
-  );
-}
-
-export function CreatorPlatformSection() {
-  const t = useTranslations('creator');
-  const features = useCreatorFeatures();
-
-  return (
-    <SectionShell variant="default">
-      <SectionHeader
-        eyebrow={t('platformEyebrow')}
-        title={t('platformTitle')}
-        description={t('platformDesc')}
-      />
-
-      <StaggerGrid className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-        {features.map((item) => (
-          <StaggerItem key={item.label}>
-            <FeatureCard icon={item.icon} title={item.label} description={item.hint} />
-          </StaggerItem>
-        ))}
-      </StaggerGrid>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="mt-10 text-center text-xs text-white/35 max-w-2xl mx-auto leading-relaxed"
-      >
-        {t('trademarkShort')}
-      </motion.p>
-    </SectionShell>
   );
 }
 

@@ -18,7 +18,6 @@ import { Navbar } from '@/components/Navbar';
 import {
   CreatorFeatureMarquee,
   CreatorFloatingMotifs,
-  CreatorPlatformSection,
   HeroBadgeBright,
 } from '@/components/CreatorTheme';
 import { ModelShowcase } from '@/components/ModelShowcase';
@@ -180,7 +179,6 @@ export function HomePage() {
       <HowItWorksSection />
 
       <SectionDivider />
-      <CreatorPlatformSection />
       <ModelShowcase />
       <SectionDivider />
       <ModelReviewsSection />
