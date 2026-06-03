@@ -13,9 +13,9 @@ import {
   BarChart3, 
   Camera 
 } from 'lucide-react';
-import Image from 'next/image';
 import { ContactForm } from '@/components/ContactForm';
 import { Navbar } from '@/components/Navbar';
+import { ModelShowcase } from '@/components/ModelShowcase';
 import { motion } from 'framer-motion';
 import { useMotionValue, useTransform, animate } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -276,82 +276,7 @@ export default function Home() {
   </div>
 </section>
 
-      {/* ==================== НАШИ МОДЕЛИ / РЕЗУЛЬТАТЫ ==================== */}
-<section id="models" className="py-24 bg-black">
-  <div className="max-w-7xl mx-auto px-8">
-    
-    <div className="text-center mb-16">
-      <div className="text-pink-500 text-sm tracking-[3px] mb-3">РЕАЛЬНЫЕ РЕЗУЛЬТАТЫ</div>
-      <h2 className="text-6xl font-bold tracking-tighter">Наши модели</h2>
-      <p className="mt-4 text-xl text-white/60 max-w-lg mx-auto">
-        Девушки, которые уже зарабатывают серьёзные деньги вместе с нами
-      </p>
-    </div>
-
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {[
-        {
-          name: "Анна",
-          earnings: "$28,400",
-          growth: "+340% за 4 месяца",
-          img: "https://picsum.photos/id/1011/800/600"
-        },
-        {
-          name: "Виктория",
-          earnings: "$19,700",
-          growth: "+210% за 3 месяца",
-          img: "https://picsum.photos/id/1005/800/600"
-        },
-        {
-          name: "София",
-          earnings: "$32,100",
-          growth: "+480% за 5 месяцев",
-          img: "https://picsum.photos/id/1009/800/600"
-        }
-      ].map((model, index) => (
-        <div 
-          key={index} 
-          className="group relative aspect-[4/3.2] rounded-3xl overflow-hidden cursor-pointer bg-zinc-900"
-        >
-          <Image 
-            src={model.img} 
-            alt={model.name} 
-            fill 
-            className="object-cover group-hover:scale-105 transition-transform duration-700" 
-          />
-          
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
-          
-          <div className="absolute bottom-0 left-0 right-0 p-8">
-            <div className="mb-3">
-              <span className="px-3 py-1 bg-pink-500 text-xs font-medium tracking-widest rounded-full">
-                TOP MODEL
-              </span>
-            </div>
-            
-            <div className="text-white text-3xl font-semibold tracking-tight mb-1">{model.name}</div>
-            
-            <div className="flex items-baseline gap-3">
-              <div className="text-2xl font-semibold text-emerald-400">{model.earnings}</div>
-              <div className="text-sm text-white/60">/ месяц</div>
-            </div>
-            
-            <div className="text-sm text-white/70 mt-1">{model.growth}</div>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <div className="text-center mt-12">
-      <a 
-        href="#contact" 
-        className="inline-flex items-center gap-3 border border-white/30 hover:border-white px-8 py-4 rounded-2xl text-sm font-medium transition-all"
-      >
-        Посмотреть больше историй успеха <ArrowRight className="w-4 h-4" />
-      </a>
-    </div>
-  </div>
-</section>
+      <ModelShowcase />
 
 {/* ==================== ОТЗЫВЫ МОДЕЛЕЙ ==================== */}
 <section id="reviews" className="py-24 bg-zinc-950">

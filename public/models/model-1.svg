@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1a0a2e"/>
+      <stop offset="0.5" stop-color="#2d1b4e"/>
+      <stop offset="1" stop-color="#0a0a0f"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="600" y1="200" x2="600" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ec4899" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#9333ea" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <ellipse cx="600" cy="420" rx="280" ry="320" fill="url(#glow)"/>
+  <path d="M600 280c-72 0-130 88-130 196v120c0 22 18 40 40 40h180c22 0 40-18 40-40V476c0-108-58-196-130-196z" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="600" y="780" text-anchor="middle" fill="#ffffff" fill-opacity="0.35" font-family="system-ui,sans-serif" font-size="22" letter-spacing="4">( $" · model-1</text>
+</svg>
