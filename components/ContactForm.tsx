@@ -1,12 +1,13 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
+import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
 const inputClass =
-  'w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder:text-white/30 focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/20 transition font-light tracking-wide';
+  'w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder:text-white/30 focus:outline-none focus:border-accent-pink/50 focus:ring-1 focus:ring-accent-pink/25 transition';
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>('idle');
@@ -52,25 +53,46 @@ export function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div
+      <motion.div
         id="contact-form"
+        initial={{ opacity: 0, scale: 0.96 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         className="max-w-xl mx-auto text-left card-premium p-8 md:p-10"
       >
         <div className="flex flex-col items-center text-center gap-4 py-4">
-          <CheckCircle2 className="w-14 h-14 text-emerald-400" />
-          <h3 className="font-serif text-2xl font-normal">Заявка отправлена</h3>
-          <p className="text-white/65 leading-relaxed">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: 'spring', stiffness: 260, damping: 18, delay: 0.1 }}
+          >
+            <CheckCircle2 className="w-14 h-14 text-emerald-400" />
+          </motion.div>
+          <motion.h3
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="font-serif text-2xl font-normal"
+          >
+            Заявка отправлена
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-white/65 leading-relaxed"
+          >
             Спасибо! Менеджер свяжется с вами в Telegram в течение 24 часов.
-          </p>
+          </motion.p>
           <button
             type="button"
             onClick={() => setStatus('idle')}
-            className="mt-2 text-sm text-gold hover:text-gold-light transition"
+            className="mt-2 text-sm text-accent-pink hover:text-accent-cyan transition link-hover-line"
           >
             Отправить ещё одну заявку
           </button>
         </div>
-      </div>
+      </motion.div>
     );
   }
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Logo } from '@/components/Logo';
 
 const NAV_LINKS = [
@@ -14,6 +15,7 @@ const NAV_LINKS = [
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -21,6 +23,13 @@ export function Navbar() {
       document.body.style.overflow = '';
     };
   }, [menuOpen]);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     const onResize = () => {
@@ -34,18 +43,28 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-[60] bg-[#050508]/90 backdrop-blur-xl border-b border-white/[0.06]">
+      <motion.nav
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 border-b ${
+          scrolled
+            ? 'bg-[#050508]/95 backdrop-blur-xl border-white/[0.08] shadow-[0_8px_32px_-12px_rgba(255,91,181,0.15)]'
+            : 'bg-[#050508]/70 backdrop-blur-md border-transparent'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-[4.5rem] md:h-20">
           <Logo size="md" showWordmark href="#" onClick={closeMenu} />
 
-          <div className="hidden md:flex items-center gap-10 text-[13px] font-medium tracking-[0.06em] text-white/70">
+          <div className="hidden md:flex items-center gap-10 text-[13px] font-medium text-white/65">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="hover:text-gold-light transition-colors duration-300"
+                className="relative py-1 hover:text-white transition-colors group"
               >
                 {link.label}
+                <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gradient-to-r from-accent-pink to-accent-cyan transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </div>
@@ -53,14 +72,14 @@ export function Navbar() {
           <div className="flex items-center gap-2 md:gap-3">
             <a
               href="#contact"
-              className="hidden md:inline-flex px-5 py-2.5 text-[13px] font-medium tracking-wide border border-white/15 rounded-full text-white/80 hover:border-gold/40 hover:text-gold-light transition-all"
+              className="hidden md:inline-flex px-5 py-2.5 text-[13px] font-medium border border-white/12 rounded-full text-white/75 hover:border-accent-pink/50 hover:text-white transition-all"
             >
               Подать заявку
             </a>
 
             <a
               href="#contact"
-              className="hidden sm:inline-flex btn-primary !py-2.5 !px-6 !text-[13px] !shadow-none"
+              className="hidden sm:inline-flex btn-primary !py-2.5 !px-6 !text-[13px] !shadow-[0_0_20px_-8px_rgba(255,91,181,0.6)]"
             >
               Стать моделью
               <ArrowRight className="w-4 h-4" />
@@ -69,7 +88,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setMenuOpen((open) => !open)}
-              className="md:hidden flex items-center justify-center w-11 h-11 rounded-xl border border-white/10 hover:border-gold/30 transition"
+              className="md:hidden flex items-center justify-center w-11 h-11 rounded-xl border border-white/10 hover:border-accent-pink/40 transition"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
@@ -78,7 +97,7 @@ export function Navbar() {
             </button>
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       <div
         id="mobile-menu"
@@ -89,28 +108,33 @@ export function Navbar() {
       >
         <button
           type="button"
-          className="absolute inset-0 bg-black/85 backdrop-blur-md"
+          className="absolute inset-0 bg-black/90 backdrop-blur-lg"
           onClick={closeMenu}
           aria-label="Закрыть меню"
         />
 
-        <div
-          className={`absolute top-[4.5rem] left-0 right-0 bottom-0 bg-[#050508] border-t border-white/[0.06] flex flex-col transition-transform duration-300 ease-out ${
-            menuOpen ? 'translate-y-0' : '-translate-y-4'
+        <motion.div
+          initial={false}
+          animate={menuOpen ? { y: 0 } : { y: -16 }}
+          className={`absolute top-[4.5rem] left-0 right-0 bottom-0 bg-[#050508] border-t border-white/[0.06] flex flex-col ${
+            menuOpen ? '' : 'pointer-events-none'
           }`}
         >
           <div className="flex-1 overflow-y-auto px-6 py-8">
-            <p className="eyebrow mb-6">Навигация</p>
+            <p className="eyebrow-bright mb-6">Навигация</p>
             <div className="flex flex-col">
-              {NAV_LINKS.map((link) => (
-                <a
+              {NAV_LINKS.map((link, i) => (
+                <motion.a
                   key={link.href}
                   href={link.href}
                   onClick={closeMenu}
-                  className="font-serif text-2xl py-4 border-b border-white/[0.06] text-white/90 hover:text-gold-light transition"
+                  initial={{ opacity: 0, x: -12 }}
+                  animate={menuOpen ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: i * 0.05 }}
+                  className="font-serif text-2xl py-4 border-b border-white/[0.06] text-white/90 hover:text-accent-pink transition"
                 >
                   {link.label}
-                </a>
+                </motion.a>
               ))}
             </div>
           </div>
@@ -124,7 +148,7 @@ export function Navbar() {
               <ArrowRight className="w-5 h-5" />
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

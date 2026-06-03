@@ -80,7 +80,10 @@ export function Logo({
 
   const content = (
     <>
-      <LogoMark size={s.mark} className="shrink-0 drop-shadow-[0_0_20px_rgba(255,91,181,0.35)]" />
+      <LogoMark
+        size={s.mark}
+        className="shrink-0 drop-shadow-[0_0_20px_rgba(255,91,181,0.35)] transition-[filter] duration-300 group-hover:drop-shadow-[0_0_28px_rgba(255,91,181,0.55)]"
+      />
       {showWordmark && (
         <div
           className={`min-w-0 text-left ${wordmarkVisibility}`}
@@ -98,7 +101,7 @@ export function Logo({
     </>
   );
 
-  const wrapClass = `inline-flex items-center ${className}`;
+  const wrapClass = `group inline-flex items-center transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] ${className}`;
 
   if (href) {
     return (
