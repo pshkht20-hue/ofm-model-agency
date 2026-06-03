@@ -7,7 +7,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { localeLabels, localeShort, routing, type Locale } from '@/i18n/routing';
 
-export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
+export function LanguageSwitcher({
+  compact = false,
+  toolbar = false,
+}: {
+  compact?: boolean;
+  /** Встроен в панель шапки — без собственной рамки */
+  toolbar?: boolean;
+}) {
   const t = useTranslations('languageSwitcher');
   const locale = useLocale() as Locale;
   const pathname = usePathname();
@@ -45,9 +52,15 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className={`inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-sm text-white/80 hover:border-accent-pink/40 hover:bg-white/[0.06] hover:text-white transition-all ${
-          compact ? 'h-9 px-2.5' : 'h-10 px-3.5'
-        } ${open ? 'border-accent-pink/45 bg-white/[0.07] text-white' : ''}`}
+        className={`inline-flex items-center gap-1.5 rounded-full text-white/80 hover:text-white transition-all ${
+          toolbar
+            ? 'h-8 px-2.5 hover:bg-white/[0.06]'
+            : `border border-white/10 bg-white/[0.04] backdrop-blur-sm hover:border-accent-pink/40 hover:bg-white/[0.06] ${
+                compact ? 'h-9 px-2.5' : 'h-10 px-3.5'
+              }`
+        } ${open && !toolbar ? 'border-accent-pink/45 bg-white/[0.07] text-white' : ''} ${
+          open && toolbar ? 'bg-white/[0.06] text-white' : ''
+        }`}
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label={t('ariaLabel')}

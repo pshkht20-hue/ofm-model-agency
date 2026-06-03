@@ -39,7 +39,7 @@ export function Navbar() {
 
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth >= 768) setMenuOpen(false);
+      if (window.innerWidth >= 1024) setMenuOpen(false);
     };
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
@@ -59,50 +59,61 @@ export function Navbar() {
             : 'bg-[#050508]/70 backdrop-blur-md border-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-[4.5rem] md:h-20">
-          <Logo size="md" showWordmark href="/" onClick={closeMenu} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 lg:h-[4.25rem] grid grid-cols-[auto_1fr_auto] items-center gap-3 lg:gap-6">
+          <Logo size="md" showWordmark href="/" onClick={closeMenu} className="min-w-0 shrink-0" />
 
-          <div className="hidden md:flex items-center gap-8 text-[13px] font-medium text-white/65">
+          <nav
+            className="hidden lg:flex items-center justify-center gap-4 xl:gap-5 min-w-0"
+            aria-label={t('navigation')}
+          >
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative py-1 hover:text-white transition-colors group"
+                className="relative py-1 text-[12px] xl:text-[13px] font-medium text-white/60 hover:text-white transition-colors whitespace-nowrap group"
               >
                 {link.label}
                 <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gradient-to-r from-accent-pink to-accent-cyan transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
-          </div>
+          </nav>
 
-          <div className="flex items-center gap-2 md:gap-3">
-            <SocialLinks variant="nav" className="hidden lg:flex mr-1" />
-            <LanguageSwitcher compact />
+          <div className="flex items-center justify-end gap-1.5 sm:gap-2 shrink-0">
+            <div
+              className="hidden md:flex items-center rounded-full border border-white/[0.08] bg-white/[0.03] p-0.5"
+              aria-label={t('navigation')}
+            >
+              <div className="hidden xl:flex items-center pl-1 pr-0.5">
+                <SocialLinks variant="nav" />
+              </div>
+              <span className="hidden xl:block w-px h-5 bg-white/10 mx-0.5" aria-hidden />
+              <LanguageSwitcher compact toolbar />
+            </div>
+
+            <div className="md:hidden">
+              <LanguageSwitcher compact toolbar />
+            </div>
 
             <Link
               href="/#contact"
-              className="hidden md:inline-flex px-5 py-2.5 text-[13px] font-medium border border-white/12 rounded-full text-white/75 hover:border-accent-pink/50 hover:text-white transition-all"
+              className="hidden md:inline-flex btn-primary !h-9 !py-0 !px-4 lg:!px-5 !text-xs lg:!text-[13px] !shadow-[0_0_18px_-6px_rgba(255,91,181,0.55)] whitespace-nowrap shrink-0"
             >
-              {t('apply')}
-            </Link>
-
-            <Link
-              href="/#contact"
-              className="hidden sm:inline-flex btn-primary !py-2.5 !px-6 !text-[13px] !shadow-[0_0_20px_-8px_rgba(255,91,181,0.6)]"
-            >
-              {t('becomeModel')}
-              <ArrowRight className="w-4 h-4" />
+              <span className="lg:hidden">{t('apply')}</span>
+              <span className="hidden lg:inline-flex items-center gap-1.5">
+                {t('becomeModel')}
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
             </Link>
 
             <button
               type="button"
               onClick={() => setMenuOpen((open) => !open)}
-              className="md:hidden flex items-center justify-center w-11 h-11 rounded-xl border border-white/10 hover:border-accent-pink/40 transition"
+              className="lg:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-white/10 bg-white/[0.03] hover:border-accent-pink/40 transition shrink-0"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
             >
-              {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {menuOpen ? <X className="w-[18px] h-[18px]" /> : <Menu className="w-[18px] h-[18px]" />}
             </button>
           </div>
         </div>
@@ -110,7 +121,7 @@ export function Navbar() {
 
       <div
         id="mobile-menu"
-        className={`fixed inset-0 z-[55] md:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 z-[55] lg:hidden transition-opacity duration-300 ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         aria-hidden={!menuOpen}
@@ -125,47 +136,47 @@ export function Navbar() {
         <motion.div
           initial={false}
           animate={menuOpen ? { y: 0 } : { y: -16 }}
-          className={`absolute top-[4.5rem] left-0 right-0 bottom-0 bg-[#050508] border-t border-white/[0.06] flex flex-col ${
+          className={`absolute top-14 left-0 right-0 bottom-0 bg-[#050508] border-t border-white/[0.06] flex flex-col ${
             menuOpen ? '' : 'pointer-events-none'
           }`}
         >
-          <div className="flex-1 overflow-y-auto px-6 py-8">
-            <p className="eyebrow-bright mb-4">{t('navigation')}</p>
-            <div className="flex flex-col gap-2 mb-6">
-              <span className="text-[10px] uppercase tracking-widest text-white/35">{t('language')}</span>
-              <LanguageSwitcher />
+          <div className="flex-1 overflow-y-auto px-5 py-6">
+            <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4 mb-6">
+              <SocialLinks variant="menu" onLinkClick={closeMenu} />
             </div>
+
+            <p className="eyebrow-bright mb-3">{t('navigation')}</p>
             <div className="flex flex-col">
               {NAV_LINKS.map((link, i) => (
                 <motion.div
                   key={link.href}
                   initial={{ opacity: 0, x: -12 }}
                   animate={menuOpen ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: i * 0.05 }}
+                  transition={{ delay: i * 0.04 }}
                 >
                   <Link
                     href={link.href}
                     onClick={closeMenu}
-                    className="font-serif text-2xl py-4 border-b border-white/[0.06] text-white/90 hover:text-accent-pink transition block"
+                    className="font-serif text-xl py-3.5 border-b border-white/[0.06] text-white/90 hover:text-accent-pink transition block"
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
             </div>
-
-            <div className="mt-8">
-              <SocialLinks variant="menu" onLinkClick={closeMenu} />
-            </div>
           </div>
 
-          <div className="p-6 flex flex-col gap-3 border-t border-white/[0.06]">
-            <Link href="/#contact" onClick={closeMenu} className="btn-secondary w-full !rounded-full">
+          <div className="p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] flex flex-col gap-2.5 border-t border-white/[0.06]">
+            <Link
+              href="/#contact"
+              onClick={closeMenu}
+              className="btn-secondary w-full !rounded-full !py-3 !text-sm"
+            >
               {t('apply')}
             </Link>
-            <Link href="/#contact" onClick={closeMenu} className="btn-primary w-full">
+            <Link href="/#contact" onClick={closeMenu} className="btn-primary w-full !py-3">
               {t('becomeModel')}
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </motion.div>

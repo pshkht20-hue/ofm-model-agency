@@ -5,29 +5,30 @@ import { useTranslations } from 'next-intl';
 import { getSocialLinks, type SocialLink, type SocialPlatform } from '@/lib/social';
 import { SocialIcon } from '@/components/social/SocialIcons';
 
-const PLATFORM_ACCENTS: Record<
-  SocialPlatform,
-  { ring: string; glow: string; icon: string }
-> = {
+const PLATFORM_NEON: Record<SocialPlatform, { surface: string; icon: string; glow: string }> = {
   telegram: {
-    ring: 'group-hover:border-[#2AABEE]/50',
-    glow: 'group-hover:shadow-[0_0_24px_-6px_rgba(42,171,238,0.55)]',
-    icon: 'group-hover:text-[#2AABEE]',
+    surface:
+      'border-[#2AABEE]/30 shadow-[0_0_16px_-4px_rgba(42,171,238,0.5)] hover:border-[#2AABEE]/70 hover:shadow-[0_0_24px_0px_rgba(42,171,238,0.65),0_0_40px_-8px_rgba(42,171,238,0.35)]',
+    icon: 'text-[#2AABEE]/90 group-hover:text-[#5bc8f5]',
+    glow: 'bg-[#2AABEE]/25',
   },
   instagram: {
-    ring: 'group-hover:border-accent-pink/50',
-    glow: 'group-hover:shadow-[0_0_24px_-6px_rgba(255,91,181,0.5)]',
-    icon: 'group-hover:text-accent-pink',
+    surface:
+      'border-accent-pink/30 shadow-[0_0_16px_-4px_rgba(255,91,181,0.45)] hover:border-accent-pink/65 hover:shadow-[0_0_24px_0px_rgba(255,91,181,0.6),0_0_40px_-8px_rgba(168,85,247,0.25)]',
+    icon: 'text-accent-pink/90 group-hover:text-accent-pink',
+    glow: 'bg-accent-pink/25',
   },
   x: {
-    ring: 'group-hover:border-white/35',
-    glow: 'group-hover:shadow-[0_0_20px_-8px_rgba(255,255,255,0.25)]',
-    icon: 'group-hover:text-white',
+    surface:
+      'border-white/15 shadow-[0_0_14px_-4px_rgba(255,255,255,0.2)] hover:border-white/40 hover:shadow-[0_0_22px_0px_rgba(255,255,255,0.35),0_0_32px_-8px_rgba(255,255,255,0.15)]',
+    icon: 'text-white/75 group-hover:text-white',
+    glow: 'bg-white/15',
   },
   tiktok: {
-    ring: 'group-hover:border-accent-cyan/45',
-    glow: 'group-hover:shadow-[0_0_24px_-6px_rgba(0,212,255,0.45)]',
-    icon: 'group-hover:text-accent-cyan',
+    surface:
+      'border-accent-cyan/25 shadow-[0_0_16px_-4px_rgba(0,212,255,0.4)] hover:border-accent-cyan/60 hover:shadow-[0_0_24px_0px_rgba(0,212,255,0.55),0_0_36px_-8px_rgba(0,212,255,0.3)]',
+    icon: 'text-accent-cyan/85 group-hover:text-accent-cyan',
+    glow: 'bg-accent-cyan/20',
   },
 };
 
@@ -50,9 +51,10 @@ function SocialLinkButton({
   index: number;
   onLinkClick?: () => void;
 }) {
-  const accent = PLATFORM_ACCENTS[link.platform];
+  const neon = PLATFORM_NEON[link.platform];
   const isFooter = variant === 'footer';
   const isMenu = variant === 'menu';
+  const isNav = variant === 'nav';
 
   return (
     <motion.a
@@ -65,29 +67,31 @@ function SocialLinkButton({
       initial={isMenu ? { opacity: 0, y: 8 } : false}
       animate={isMenu ? { opacity: 1, y: 0 } : undefined}
       transition={{ delay: index * 0.06, duration: 0.35 }}
-      whileHover={{ y: -3, scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
-      className={`group relative flex items-center justify-center rounded-xl border border-white/[0.1] bg-[#0a0a10]/80 backdrop-blur-sm text-white/50 transition-all duration-300 ${accent.ring} ${accent.glow} ${
+      whileHover={{ y: isNav ? -2 : -3, scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className={`group relative flex items-center justify-center border bg-[#0a0a10]/90 backdrop-blur-sm transition-all duration-300 ${neon.surface} ${
         isFooter
-          ? 'h-12 w-12 md:h-14 md:w-14'
+          ? 'h-12 w-12 md:h-14 md:w-14 rounded-xl'
           : isMenu
-            ? 'h-12 w-12'
-            : 'h-10 w-10'
+            ? 'h-11 w-11 rounded-xl'
+            : 'h-8 w-8 rounded-lg'
       }`}
     >
       <span
-        className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-white/[0.06] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className={`pointer-events-none absolute inset-0 rounded-[inherit] opacity-60 blur-md transition-opacity duration-300 group-hover:opacity-100 ${neon.glow}`}
+        aria-hidden
+      />
+      <span
+        className="pointer-events-none absolute inset-0 rounded-[inherit] bg-gradient-to-br from-white/[0.08] to-transparent opacity-40"
         aria-hidden
       />
       <SocialIcon
         platform={link.platform}
-        className={`relative z-10 transition-colors duration-300 ${accent.icon} ${
-          isFooter ? 'h-5 w-5 md:h-[22px] md:w-[22px]' : 'h-[18px] w-[18px]'
+        className={`relative z-10 transition-all duration-300 ${neon.icon} ${
+          isFooter ? 'h-5 w-5 md:h-[22px] md:w-[22px]' : isNav ? 'h-4 w-4' : 'h-[18px] w-[18px]'
         }`}
       />
-      {isFooter && (
-        <span className="sr-only">{label}</span>
-      )}
+      {isFooter && <span className="sr-only">{label}</span>}
     </motion.a>
   );
 }
@@ -106,7 +110,7 @@ export function SocialLinks({
 
   if (variant === 'nav') {
     return (
-      <div className={`flex items-center gap-1.5 ${className}`} role="list">
+      <div className={`flex items-center gap-1 ${className}`} role="list">
         {links.map((link, i) => (
           <SocialLinkButton
             key={link.platform}
@@ -124,23 +128,20 @@ export function SocialLinks({
   if (variant === 'menu') {
     return (
       <div className={className}>
-        <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4 md:p-5">
-          <p className="text-[10px] uppercase tracking-[0.22em] text-white/35 mb-1">
-            {t('menuEyebrow')}
-          </p>
-          <p className="text-sm text-white/55 mb-4 leading-relaxed">{t('menuLead')}</p>
-          <div className="flex flex-wrap gap-3" role="list">
-            {links.map((link, i) => (
-              <SocialLinkButton
-                key={link.platform}
-                link={link}
-                variant="menu"
-                label={labelFor(link.platform)}
-                index={i}
-                onLinkClick={onLinkClick}
-              />
-            ))}
-          </div>
+        <p className="text-[10px] uppercase tracking-[0.22em] text-white/35 mb-3">
+          {t('menuEyebrow')}
+        </p>
+        <div className="flex flex-wrap gap-2.5" role="list">
+          {links.map((link, i) => (
+            <SocialLinkButton
+              key={link.platform}
+              link={link}
+              variant="menu"
+              label={labelFor(link.platform)}
+              index={i}
+              onLinkClick={onLinkClick}
+            />
+          ))}
         </div>
       </div>
     );
