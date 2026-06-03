@@ -335,6 +335,14 @@
   "coverPhoto": {
     "photo": "Фото:"
   },
+  "likes": {
+    "like": "Подобається",
+    "liked": "Вам сподобалось",
+    "helpful": "Корисно",
+    "helpfulLiked": "Відмітили корисним",
+    "ariaLike": "Поставити лайк",
+    "ariaUnlike": "Прибрати лайк"
+  },
   "languageSwitcher": {
     "menuTitle": "Мова сайту",
     "ariaLabel": "Обрати мову"

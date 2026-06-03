@@ -5,6 +5,7 @@ import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { ArticleBody } from '@/components/seo/ArticleBody';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import { getAllBlogSlugs, getBlogCategoryLabels, getBlogPost } from '@/lib/content/blog';
+import { BlogArticleLikeBar } from '@/components/seo/BlogArticleLikeBar';
 import { RelatedPosts } from '@/components/seo/RelatedPosts';
 import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
 import { Link } from '@/i18n/navigation';
@@ -89,7 +90,7 @@ export default async function BlogPostPage({ params }: Props) {
       <p className="text-lead mb-6">{post.description}</p>
       <time
         dateTime={post.publishedAt}
-        className="text-xs text-white/35 uppercase tracking-widest block mb-10 pb-10 border-b border-white/[0.06]"
+        className="text-xs text-white/35 uppercase tracking-widest block mb-6"
       >
         {new Date(post.publishedAt).toLocaleDateString(DATE_LOCALE[blogLocale], {
           day: 'numeric',
@@ -97,6 +98,8 @@ export default async function BlogPostPage({ params }: Props) {
           year: 'numeric',
         })}
       </time>
+
+      <BlogArticleLikeBar slug={post.slug} />
 
       <ArticleBody blocks={post.blocks} />
       <RelatedPosts slug={post.slug} locale={blogLocale} />

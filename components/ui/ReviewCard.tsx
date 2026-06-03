@@ -1,9 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { BadgeCheck, ThumbsUp } from 'lucide-react';
+import { BadgeCheck } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import type { ModelReview } from '@/lib/content/reviews';
+import { getReviewLikeBase } from '@/lib/likes/seed';
+import { LikeButton } from '@/components/ui/LikeButton';
 import { ReviewStars } from '@/components/ui/ReviewStars';
 
 type ReviewCardProps = {
@@ -14,15 +16,6 @@ type ReviewCardProps = {
 export function ReviewCard({ review, featured = false }: ReviewCardProps) {
   const t = useTranslations('reviewCard');
   const isFeatured = featured || review.featured;
-
-  const helpfulLabel =
-    review.helpfulCount !== undefined
-      ? review.helpfulCount === 1
-        ? t('helpfulOne')
-        : review.helpfulCount < 5
-          ? t('helpfulFew')
-          : t('helpfulMany')
-      : null;
 
   return (
     <motion.article
@@ -110,14 +103,14 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
         </p>
       )}
 
-      {review.helpfulCount !== undefined && helpfulLabel && (
-        <div className="mt-4 flex items-center gap-1.5 text-[11px] text-white/32">
-          <ThumbsUp className="w-3 h-3 text-white/25" strokeWidth={1.75} />
-          <span>
-            {review.helpfulCount} {helpfulLabel}
-          </span>
-        </div>
-      )}
+      <div className="mt-4 pt-4 border-t border-white/[0.06] flex justify-start">
+        <LikeButton
+          kind="review"
+          itemId={review.id}
+          baseCount={getReviewLikeBase(review.id, review.helpfulCount)}
+          variant="helpful"
+        />
+      </div>
 
       {review.agencyReply && (
         <div className="mt-4 pt-4 border-t border-white/[0.06]">

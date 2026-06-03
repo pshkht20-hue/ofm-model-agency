@@ -335,6 +335,14 @@
   "coverPhoto": {
     "photo": "Foto:"
   },
+  "likes": {
+    "like": "Me gusta",
+    "liked": "Te gustó",
+    "helpful": "Útil",
+    "helpfulLiked": "Marcado útil",
+    "ariaLike": "Dar me gusta",
+    "ariaUnlike": "Quitar me gusta"
+  },
   "languageSwitcher": {
     "menuTitle": "Idioma del sitio",
     "ariaLabel": "Elegir idioma"
