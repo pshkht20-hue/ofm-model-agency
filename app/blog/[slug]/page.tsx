@@ -6,6 +6,8 @@ import { ArticleBody } from '@/components/seo/ArticleBody';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import { BLOG_CATEGORY_LABELS, getAllBlogSlugs, getBlogPost } from '@/lib/content/blog';
 import { RelatedPosts } from '@/components/seo/RelatedPosts';
+import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
+import { getSiteUrl } from '@/lib/site';
 import { createPageMetadata } from '@/lib/seo';
 
 type Props = { params: Promise<{ slug: string }> };
@@ -24,6 +26,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.description,
     path: `/blog/${post.slug}`,
     keywords: post.keywords,
+    image: post.cover
+      ? { url: `${getSiteUrl()}${post.cover.localSrc}`, alt: post.cover.alt }
+      : undefined,
   });
 }
 
@@ -55,14 +60,20 @@ export default async function BlogPostPage({ params }: Props) {
         ← Все статьи
       </Link>
 
+      {post.cover && (
+        <div className="mb-10 -mx-1">
+          <BlogCoverImage cover={post.cover} priority variant="hero" />
+        </div>
+      )}
+
       <p className="eyebrow-bright mb-4">
         {BLOG_CATEGORY_LABELS[post.category]} · {post.readMinutes} мин
       </p>
       <h1 className="heading-section text-[clamp(1.75rem,4vw,2.75rem)] mb-4">{post.title}</h1>
-      <p className="text-lead mb-8">{post.description}</p>
+      <p className="text-lead mb-6">{post.description}</p>
       <time
         dateTime={post.publishedAt}
-        className="text-xs text-white/35 uppercase tracking-widest block mb-10"
+        className="text-xs text-white/35 uppercase tracking-widest block mb-10 pb-10 border-b border-white/[0.06]"
       >
         {new Date(post.publishedAt).toLocaleDateString('ru-RU', {
           day: 'numeric',

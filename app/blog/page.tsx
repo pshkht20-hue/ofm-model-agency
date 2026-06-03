@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
+import { BlogPostCard } from '@/components/seo/BlogPostCard';
 import { BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import {
   BLOG_CATEGORIES_ORDER,
@@ -60,35 +61,9 @@ export default function BlogIndexPage() {
               >
                 {BLOG_CATEGORY_LABELS[category]}
               </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {posts.map((post) => (
-                  <li key={post.slug}>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="group block card-glass p-6 md:p-7 hover:border-accent-pink/30 transition-colors"
-                    >
-                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2">
-                        <time
-                          dateTime={post.publishedAt}
-                          className="text-[10px] uppercase tracking-[0.2em] text-white/40"
-                        >
-                          {new Date(post.publishedAt).toLocaleDateString('ru-RU', {
-                            day: 'numeric',
-                            month: 'long',
-                            year: 'numeric',
-                          })}
-                        </time>
-                        <span className="text-[10px] text-white/30">·</span>
-                        <span className="text-[10px] uppercase tracking-[0.15em] text-accent-pink/80">
-                          {post.readMinutes} мин
-                        </span>
-                      </div>
-                      <h3 className="heading-card group-hover:text-accent-pink transition-colors">
-                        {post.title}
-                      </h3>
-                      <p className="text-body mt-2 line-clamp-2">{post.description}</p>
-                    </Link>
-                  </li>
+                  <BlogPostCard key={post.slug} post={post} />
                 ))}
               </ul>
             </section>

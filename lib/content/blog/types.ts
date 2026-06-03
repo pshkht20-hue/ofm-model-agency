@@ -7,6 +7,8 @@ export type BlogBlock =
   | { type: 'ul'; items: string[] }
   | { type: 'tip'; text: string };
 
+import type { BlogCover } from '@/lib/content/blog/covers';
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -16,6 +18,7 @@ export type BlogPost = {
   keywords: string[];
   readMinutes: number;
   blocks: BlogBlock[];
+  cover?: BlogCover;
 };
 
 export const BLOG_CATEGORY_LABELS: Record<BlogCategory, string> = {

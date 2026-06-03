@@ -27,7 +27,7 @@ export function SeoPageShell({
       <Navbar />
 
       <main className="pt-24 md:pt-28 pb-16 md:pb-20">
-        <div className="max-w-3xl mx-auto px-5 md:px-8">
+        <div className="max-w-3xl mx-auto px-5 md:px-8 w-full">
           {breadcrumbs && breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
           {children}
           {showCta && (

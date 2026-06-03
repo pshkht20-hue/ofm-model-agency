@@ -7,6 +7,7 @@ type PageMeta = {
   path: string;
   keywords?: string[];
   noIndex?: boolean;
+  image?: { url: string; alt?: string };
 };
 
 export function createPageMetadata({
@@ -15,7 +16,10 @@ export function createPageMetadata({
   path,
   keywords = [],
   noIndex = false,
+  image,
 }: PageMeta): Metadata {
+  const ogImages = image ? [{ url: image.url, alt: image.alt ?? title }] : undefined;
+
   return {
     title,
     description,
@@ -28,11 +32,13 @@ export function createPageMetadata({
       siteName: siteConfig.name,
       title,
       description,
+      images: ogImages,
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: image ? [image.url] : undefined,
     },
     robots: noIndex
       ? { index: false, follow: false }
