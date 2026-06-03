@@ -3,15 +3,20 @@ import Link from 'next/link';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { FaqAccordion } from '@/components/seo/FaqAccordion';
 import { FaqPageJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
-import { FAQ_ITEMS } from '@/lib/content/faq';
+import { FAQ_CATEGORIES, FAQ_ITEMS } from '@/lib/content/faq';
 import { createPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'FAQ — OnlyFans агентство для моделей | OFM',
+  title: 'FAQ — OnlyFans агентство: вопросы о менеджменте, % и безопасности',
   description:
-    'Ответы на частые вопросы об OnlyFans агентстве: как выбрать команду, условия, конфиденциальность, заявка и заработок моделей.',
+    'Подробные ответы о OnlyFans management: услуги, комиссия, договор, чаты 24/7, конфиденциальность, заявка в OFM и как не попасть к мошенникам.',
   path: '/faq',
-  keywords: ['onlyfans агентство faq', 'вопросы onlyfans агентство'],
+  keywords: [
+    'onlyfans агентство faq',
+    'onlyfans management вопросы',
+    'сколько берет onlyfans агентство',
+    'как выбрать onlyfans агентство',
+  ],
 });
 
 export default function FaqPage() {
@@ -27,18 +32,22 @@ export default function FaqPage() {
 
       <p className="eyebrow-bright mb-4">Вопросы и ответы</p>
       <h1 className="heading-section text-[clamp(2rem,5vw,3rem)] mb-6">
-        FAQ об OnlyFans агентстве
+        FAQ: OnlyFans агентство и management
       </h1>
-      <p className="text-lead mb-10">
-        Собрали ответы для моделей, которые ищут надёжное агентство: условия, подача заявки,
-        конфиденциальность и рост дохода. Не нашли ответ —{' '}
+      <p className="text-lead mb-4">
+        {FAQ_ITEMS.length} ответов о том, как работают профессиональные OnlyFans агентства: услуги,
+        комиссия, договор, безопасность аккаунта и заявка в OFM&apos;s Model Agency.
+      </p>
+      <p className="text-body mb-10">
+        Материал основан на общей практике creator-management (чаты, маркетинг, revenue share).
+        Не нашли вопрос —{' '}
         <Link href="/#contact" className="text-accent-pink hover:text-accent-cyan transition">
-          напишите нам
+          напишите менеджеру
         </Link>
         .
       </p>
 
-      <FaqAccordion items={FAQ_ITEMS} />
+      <FaqAccordion categories={FAQ_CATEGORIES} />
 
       <p className="text-body mt-10">
         Читайте также в{' '}
