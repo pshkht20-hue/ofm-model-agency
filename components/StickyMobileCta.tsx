@@ -24,7 +24,7 @@ export function StickyMobileCta() {
           className="fixed bottom-0 left-0 right-0 z-[55] p-4 md:hidden pointer-events-none"
         >
           <a
-            href="#contact"
+            href="/#contact"
             className="btn-primary w-full pointer-events-auto shadow-[0_-8px_40px_-8px_rgba(255,91,181,0.5)]"
           >
             Стать моделью

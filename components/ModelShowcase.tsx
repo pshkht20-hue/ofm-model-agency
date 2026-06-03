@@ -114,7 +114,7 @@ export function ModelShowcase() {
         viewport={{ once: true }}
         className="text-center mt-12"
       >
-        <a href="#contact" className="btn-secondary !rounded-full">
+        <a href="/#contact" className="btn-secondary !rounded-full">
           Хочу такой же результат
           <ArrowRight className="w-4 h-4" />
         </a>

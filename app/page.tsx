@@ -15,13 +15,11 @@ import {
 import { motion } from 'framer-motion';
 import { ContactForm } from '@/components/ContactForm';
 import { Navbar } from '@/components/Navbar';
-import { Logo } from '@/components/Logo';
 import {
   CreatorFeatureMarquee,
   CreatorFloatingMotifs,
   CreatorPlatformSection,
   HeroBadgeBright,
-  LegalDisclaimer,
 } from '@/components/CreatorTheme';
 import { ModelShowcase } from '@/components/ModelShowcase';
 import { SectionHeader } from '@/components/SectionHeader';
@@ -34,6 +32,8 @@ import { ReviewCard } from '@/components/ui/ReviewCard';
 import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
 import { SectionDivider } from '@/components/ui/SectionDivider';
 import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
+import { HomeSeoBlock } from '@/components/seo/HomeSeoBlock';
+import { SiteFooter } from '@/components/layout/SiteFooter';
 
 const BENEFITS = [
   { icon: Users, title: 'Личный менеджер', desc: 'Закреплённый менеджер работает с тобой 7 дней в неделю.' },
@@ -134,29 +134,40 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
           <HeroBadgeBright />
 
-          <div className="heading-display text-[clamp(3rem,10vw,5.75rem)] mb-10 mt-12">
-            <motion.div
+          <motion.h1
+            className="heading-display text-[clamp(3rem,10vw,5.75rem)] mb-10 mt-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.span
+              className="block"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               Твоя жизнь.
-            </motion.div>
-            <motion.div
+            </motion.span>
+            <motion.span
+              className="block text-gradient-brand italic"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.45 }}
             >
-              <span className="text-gradient-brand italic">Твои правила.</span>
-            </motion.div>
-            <motion.div
+              Твои правила.
+            </motion.span>
+            <motion.span
+              className="block"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.7 }}
             >
               Твой успех.
-            </motion.div>
-          </div>
+            </motion.span>
+            <span className="sr-only">
+              — OnlyFans агентство для моделей OFM&apos;s Model Agency
+            </span>
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -176,7 +187,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <motion.a
-              href="#contact"
+              href="/#contact"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="btn-primary group"
@@ -283,6 +294,8 @@ export default function Home() {
         </StaggerGrid>
       </SectionShell>
 
+      <HomeSeoBlock />
+
       {/* CONTACT */}
       <section id="contact" className="relative py-16 md:py-22 overflow-hidden">
         <div className="absolute inset-0 bg-[#050508]" />
@@ -336,67 +349,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-[#030306] border-t border-white/[0.06] py-12 md:py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_50%_100%,rgba(255,91,181,0.06),transparent)] pointer-events-none" />
-        <NeonAccents variant="footer" />
-        <div className="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-12">
-            <div className="lg:col-span-2">
-              <Logo size="lg" href="#" wordmarkOnMobile className="mb-6" />
-              <p className="max-w-md text-body">
-                Премиальное агентство для амбициозных моделей на creator-платформах с полной
-                конфиденциальностью и поддержкой.
-              </p>
-            </div>
-
-            <div>
-              <p className="eyebrow-bright mb-6 !text-[10px]">Навигация</p>
-              <div className="flex flex-col gap-y-3 text-sm text-white/55">
-                {[
-                  ['#about', 'О нас'],
-                  ['#how', 'Как мы работаем'],
-                  ['#models', 'Модели'],
-                  ['#results', 'Результаты'],
-                  ['#reviews', 'Отзывы'],
-                ].map(([href, label]) => (
-                  <a
-                    key={href}
-                    href={href}
-                    className="link-hover-line hover:text-accent-pink transition w-fit"
-                  >
-                    {label}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <p className="eyebrow-bright mb-6 !text-[10px]">Связь</p>
-              <div className="flex flex-col gap-y-3 text-sm text-white/55">
-                <a href="#contact" className="link-hover-line hover:text-accent-pink transition w-fit">
-                  Подать заявку
-                </a>
-                <span className="text-white/40">Ответим в течение 24 часов</span>
-              </div>
-            </div>
-          </div>
-
-          <LegalDisclaimer className="mt-12 max-w-3xl" />
-
-          <div className="mt-10 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-y-4 text-xs text-white/40">
-            <span>© {new Date().getFullYear()} OFM&apos;s Model Agency</span>
-            <div className="flex gap-x-6">
-              <a href="#" className="link-hover-line hover:text-accent-pink transition">
-                Политика конфиденциальности
-              </a>
-              <a href="#" className="link-hover-line hover:text-accent-pink transition">
-                Условия использования
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

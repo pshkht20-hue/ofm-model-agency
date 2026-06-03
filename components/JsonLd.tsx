@@ -1,4 +1,5 @@
 import { getSiteUrl, siteConfig } from '@/lib/site';
+import { ServiceJsonLd } from '@/components/seo/StructuredData';
 
 export function JsonLd() {
   const siteUrl = getSiteUrl();
@@ -24,6 +25,7 @@ export function JsonLd() {
 
   return (
     <>
+      <ServiceJsonLd />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}

@@ -6,11 +6,12 @@ import { motion } from 'framer-motion';
 import { Logo } from '@/components/Logo';
 
 const NAV_LINKS = [
-  { href: '#about', label: 'О нас' },
-  { href: '#how', label: 'Как мы работаем' },
-  { href: '#models', label: 'Модели' },
-  { href: '#results', label: 'Результаты' },
-  { href: '#reviews', label: 'Отзывы' },
+  { href: '/#about', label: 'О нас' },
+  { href: '/#how', label: 'Как мы работаем' },
+  { href: '/#models', label: 'Модели' },
+  { href: '/#results', label: 'Результаты' },
+  { href: '/blog', label: 'Блог' },
+  { href: '/faq', label: 'FAQ' },
 ] as const;
 
 export function Navbar() {
@@ -54,7 +55,7 @@ export function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-[4.5rem] md:h-20">
-          <Logo size="md" showWordmark href="#" onClick={closeMenu} />
+          <Logo size="md" showWordmark href="/" onClick={closeMenu} />
 
           <div className="hidden md:flex items-center gap-10 text-[13px] font-medium text-white/65">
             {NAV_LINKS.map((link) => (
@@ -71,14 +72,14 @@ export function Navbar() {
 
           <div className="flex items-center gap-2 md:gap-3">
             <a
-              href="#contact"
+              href="/#contact"
               className="hidden md:inline-flex px-5 py-2.5 text-[13px] font-medium border border-white/12 rounded-full text-white/75 hover:border-accent-pink/50 hover:text-white transition-all"
             >
               Подать заявку
             </a>
 
             <a
-              href="#contact"
+              href="/#contact"
               className="hidden sm:inline-flex btn-primary !py-2.5 !px-6 !text-[13px] !shadow-[0_0_20px_-8px_rgba(255,91,181,0.6)]"
             >
               Стать моделью
@@ -140,10 +141,10 @@ export function Navbar() {
           </div>
 
           <div className="p-6 flex flex-col gap-3 border-t border-white/[0.06]">
-            <a href="#contact" onClick={closeMenu} className="btn-secondary w-full !rounded-full">
+            <a href="/#contact" onClick={closeMenu} className="btn-secondary w-full !rounded-full">
               Подать заявку
             </a>
-            <a href="#contact" onClick={closeMenu} className="btn-primary w-full">
+            <a href="/#contact" onClick={closeMenu} className="btn-primary w-full">
               Стать моделью
               <ArrowRight className="w-5 h-5" />
             </a>
