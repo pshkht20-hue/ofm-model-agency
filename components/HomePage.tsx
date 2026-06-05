@@ -17,6 +17,7 @@ import { StickyMobileCta } from '@/components/StickyMobileCta';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { BenefitsSection } from '@/components/BenefitsSection';
 import { HowItWorksSection } from '@/components/HowItWorksSection';
+import { IncomeCalculatorSection } from '@/components/IncomeCalculatorSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { ModelReviewsSection } from '@/components/ModelReviewsSection';
 import { SectionDivider } from '@/components/ui/SectionDivider';
@@ -161,6 +162,8 @@ export function HomePage() {
 
       <HowItWorksSection />
 
+      <SectionDivider />
+      <IncomeCalculatorSection />
       <SectionDivider />
       <ModelShowcase />
       <SectionDivider />

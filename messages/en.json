@@ -245,6 +245,74 @@
         }
       ]
     },
+    "calculator": {
+      "eyebrow": "Calculator",
+      "title": "Discover your income potential",
+      "subtitle": "3 quick questions — a personalized forecast based on real OFM case studies",
+      "progress": "Step {current} of {total}",
+      "back": "Back",
+      "next": "Next",
+      "calculate": "Calculate",
+      "restart": "Start over",
+      "disclaimer": "An estimate, not a guarantee. Actual income depends on content, niche, consistency, and team engagement.",
+      "questions": {
+        "experience": {
+          "title": "Do you have an OnlyFans account?",
+          "options": {
+            "none": { "label": "No — planning to start", "desc": "Launch from zero — profile, content, and traffic handled for you" },
+            "starter": { "label": "Yes, under $3K/mo", "desc": "Profile exists — need structured growth and chats" },
+            "active": { "label": "Yes, $3K+/mo", "desc": "Active account — scale PPV and retention" }
+          }
+        },
+        "social": {
+          "title": "How strong is your social presence?",
+          "options": {
+            "none": { "label": "Almost no audience", "desc": "We build traffic from scratch — Reddit, partners, paid" },
+            "under5k": { "label": "Up to 5K followers", "desc": "Existing base — convert into OF subs" },
+            "mid": { "label": "5K — 50K", "desc": "Strong foundation for a fast start" },
+            "strong": { "label": "50K+", "desc": "Ready traffic — focus on monetization and LTV" }
+          }
+        },
+        "hours": {
+          "title": "How many hours per week can you commit?",
+          "options": {
+            "light": { "label": "5–10 hours", "desc": "Part-time — team handles chats and marketing" },
+            "medium": { "label": "10–20 hours", "desc": "Optimal balance of content and growth" },
+            "intense": { "label": "20+ hours", "desc": "Maximum pace — faster path to stable income" }
+          }
+        }
+      },
+      "result": {
+        "eyebrow": "Your forecast",
+        "title": "Potential with OFM",
+        "rangeLabel": "Income estimate / mo",
+        "withAgency": "with agency",
+        "timeline": "Time to stable income",
+        "timelines": {
+          "none": "6–10 wks",
+          "starter": "4–8 wks",
+          "active": "3–6 wks"
+        },
+        "agencyNote": "With an agency, average uplift vs. solo work is +15–35% thanks to 24/7 chats, marketing, and strategy.",
+        "insightsTitle": "Personal recommendations",
+        "tiers": {
+          "launch": "Launch",
+          "growth": "Growth",
+          "scale": "Scale",
+          "elite": "Top"
+        },
+        "cta": "Get your plan on Telegram",
+        "ctaSecondary": "View case studies"
+      },
+      "insights": {
+        "launchSupport": "We recommend a full launch: profile, first posts, and traffic in parallel — so you don't lose weeks on prep.",
+        "socialGrowth": "Focus on 1–2 traffic channels — the OFM team will test creatives and sources for your niche.",
+        "moreHours": "At 10–20 hrs/week the forecast rises noticeably: more content means better PPV conversion and fan retention.",
+        "scaleReady": "You have a strong base — prioritize PPV scripts, VIP fans, and ad scaling.",
+        "momentum": "You're on the right track: weekly reports and price tweaks every 7 days will accelerate growth.",
+        "agencyBoost": "Your OFM manager will build a strategy for your profile — from niche to pricing and posting schedule."
+      }
+    },
     "contact": {
       "eyebrow": "Next step",
       "title": "Ready to start",
