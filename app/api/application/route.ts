@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { formatVisitorGeo, getVisitorGeo } from '@/lib/geo/request';
 import { getApiErrors } from '@/lib/i18n/api-errors';
 import {
   formatApplicationMessage,
@@ -82,7 +83,9 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true });
     }
 
-    const text = formatApplicationMessage(result.data);
+    const locale = typeof body.locale === 'string' ? body.locale : undefined;
+    const location = formatVisitorGeo(getVisitorGeo(request));
+    const text = formatApplicationMessage({ ...result.data, locale, location: location ?? undefined });
     await sendTelegramMessage(text);
 
     return NextResponse.json({ success: true });
