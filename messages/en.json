@@ -287,13 +287,23 @@
     ]
   },
   "models": {
-    "eyebrow": "Case studies",
-    "title": "Our creators",
-    "description": "Creators already earning serious revenue with us",
-    "result": "Result",
-    "perMonth": "/ month",
+    "eyebrow": "Results",
+    "title": "Real case studies",
+    "description": "OFM creator earnings screenshots — total net revenue and peak months. Published with consent; no personal data shown.",
+    "totalNet": "Total net",
+    "peakMonth": "Peak month",
+    "perMonth": "/ mo",
+    "verified": "Verified",
+    "aggregateLabel": "Combined across 3 cases",
+    "aggregateHint": "net over full collaboration period",
     "cta": "I want similar results",
-    "altCase": "Creator case study {name}"
+    "disclaimer": "Platform statistics screenshots published with creators' consent. Figures reflect individual case results, not guaranteed income. OFM is not affiliated with OnlyFans.",
+    "altScreenshot": "Earnings statistics — {tier} case",
+    "tiers": {
+      "elite": "Elite",
+      "pro": "Pro",
+      "prime": "Prime"
+    }
   },
   "blogUi": {
     "readArticle": "Read article →",

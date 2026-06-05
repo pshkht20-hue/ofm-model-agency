@@ -287,13 +287,23 @@
     ]
   },
   "models": {
-    "eyebrow": "Casos",
-    "title": "Nuestras modelos",
-    "description": "Creadoras que ya ganan en serio con nosotros",
-    "result": "Resultado",
+    "eyebrow": "Resultados",
+    "title": "Casos reales",
+    "description": "Capturas de estadísticas de modelos OFM — ingresos netos totales y meses pico. Publicadas con consentimiento, sin datos personales.",
+    "totalNet": "Net total",
+    "peakMonth": "Mes pico",
     "perMonth": "/ mes",
+    "verified": "Verificado",
+    "aggregateLabel": "Combinado en 3 casos",
+    "aggregateHint": "net en todo el periodo de colaboración",
     "cta": "Quiero resultados así",
-    "altCase": "Caso de modelo {name}"
+    "disclaimer": "Capturas de estadísticas de la plataforma con consentimiento de las modelos. Las cifras reflejan resultados individuales, no ingresos garantizados. OFM no está afiliado a OnlyFans.",
+    "altScreenshot": "Estadísticas de ingresos — caso {tier}",
+    "tiers": {
+      "elite": "Elite",
+      "pro": "Pro",
+      "prime": "Prime"
+    }
   },
   "blogUi": {
     "readArticle": "Leer artículo →",
