@@ -90,7 +90,9 @@ function ResultStats({
   const style = TIER_STYLES[item.tier];
 
   return (
-    <div className={`flex min-w-0 flex-1 flex-col justify-center ${featured ? 'lg:py-2' : ''}`}>
+    <div
+      className={`flex min-w-0 flex-1 flex-col justify-center ${featured ? 'w-full items-start lg:py-2' : 'w-full items-start'}`}
+    >
       {featured && (
         <div className="mb-4 hidden lg:block">
           <ScreenshotCaption item={item} />
@@ -104,27 +106,25 @@ function ResultStats({
         value={item.totalNet}
         maximumFractionDigits={0}
         size={featured ? 'hero' : 'lg'}
-        accent={featured ? style.amountAccent : undefined}
-        className={`mt-1 ${featured ? '' : 'text-white'}`}
+        className="mt-1 text-white"
       />
 
-      <div className="mt-5 flex items-end justify-between gap-3 border-t border-white/[0.06] pt-4">
-        <div className="min-w-0">
-          <p className="text-[10px] uppercase tracking-[0.16em] text-white/38">
-            {t('peakMonth')}
-          </p>
+      <div className="mt-5 border-t border-white/[0.06] pt-4">
+        <p className="text-[10px] uppercase tracking-[0.16em] text-white/38">
+          {t('peakMonth')}
+        </p>
+        <div className="mt-1 inline-flex flex-wrap items-center gap-1.5">
           <UsdDisplay
             value={item.monthlyHighlight}
             maximumFractionDigits={0}
             size="md"
             accent={style.amountAccent}
-            className="mt-1"
             amountClassName="font-semibold"
           />
-        </div>
-        <div className="flex items-center gap-1 rounded-full border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 text-[11px] text-white/50">
-          <TrendingUp className="h-3.5 w-3.5 text-accent-cyan" aria-hidden />
-          {t('perMonth')}
+          <div className="flex shrink-0 items-center gap-1 rounded-full border border-white/[0.08] bg-white/[0.03] px-2 py-0.5 text-[11px] text-white/50">
+            <TrendingUp className="h-3.5 w-3.5 text-accent-cyan" aria-hidden />
+            {t('perMonth')}
+          </div>
         </div>
       </div>
     </div>
@@ -170,7 +170,7 @@ function ResultCard({
 
       <div
         className={`flex flex-col gap-5 px-4 pb-5 pt-4 sm:px-5 sm:pb-6 ${
-          featured ? 'lg:flex-row lg:items-start lg:gap-8 lg:pb-7' : 'items-center'
+          featured ? 'lg:flex-row lg:items-start lg:gap-8 lg:pb-7' : 'items-center sm:items-stretch'
         }`}
       >
         <ScreenshotFrame
