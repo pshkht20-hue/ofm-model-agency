@@ -31,6 +31,7 @@
     "apply": "Solicitud",
     "privacy": "Privacidad",
     "terms": "Términos de uso",
+    "cookieSettings": "Configuración de cookies",
     "guideAgency": "Cómo elegir agencia"
   },
   "home": {
@@ -350,6 +351,19 @@
     "helpfulLiked": "Marcado útil",
     "ariaLike": "Dar me gusta",
     "ariaUnlike": "Quitar me gusta"
+  },
+  "cookieConsent": {
+    "title": "Usamos cookies",
+    "description": "Las cookies necesarias permiten que el sitio funcione. Las analíticas (Google Analytics) solo con su consentimiento. Más información en la",
+    "privacyLink": "Política de privacidad",
+    "accept": "Aceptar todas",
+    "reject": "Solo necesarias",
+    "detailsToggle": "Más sobre cookies",
+    "necessaryTitle": "Necesarias",
+    "necessaryDesc": "Idioma de la interfaz y recordar su elección. Siempre activas.",
+    "analyticsTitle": "Analíticas",
+    "analyticsDesc": "Google Analytics 4 — estadísticas anónimas de visitas. Solo si usted lo acepta.",
+    "legalNote": "Puede cambiar su elección en cualquier momento en «Configuración de cookies» en el pie de página. Rechazar la analítica no afecta el envío de solicitudes."
   },
   "languageSwitcher": {
     "menuTitle": "Idioma del sitio",

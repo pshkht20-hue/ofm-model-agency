@@ -5,6 +5,7 @@ import { Logo } from '@/components/Logo';
 import { LegalDisclaimer } from '@/components/CreatorTheme';
 import { NeonAccents } from '@/components/ui/NeonAccents';
 import { Link } from '@/i18n/navigation';
+import { CookieSettingsButton } from '@/components/consent/CookieSettingsButton';
 import { SocialLinks } from '@/components/social/SocialLinks';
 
 export function SiteFooter() {
@@ -91,6 +92,7 @@ export function SiteFooter() {
             <Link href="/terms" className="link-hover-line hover:text-accent-pink transition">
               {t('terms')}
             </Link>
+            <CookieSettingsButton />
           </div>
         </div>
       </div>

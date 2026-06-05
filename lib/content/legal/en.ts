@@ -4,49 +4,75 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     title: '1. General provisions',
     paragraphs: [
-      'This Privacy Policy describes how OFM\'s Model Agency ("we") processes data you submit through the website and application form.',
-      'By using the website, you agree to the terms of this policy.',
+      'This Privacy Policy describes how OFM\'s Model Agency ("we", "the agency") processes personal data when you use ofmmodels.com and submit an application.',
+      'Data controller: OFM\'s Model Agency. For privacy inquiries, contact us via the application form on the website.',
+      'By using the website after reading this policy, you acknowledge these processing terms. Submitting an application constitutes consent to process the data you provide for the purpose of contacting you.',
     ],
   },
   {
     title: '2. Data we collect',
     paragraphs: [
-      'When you submit an application: name, age (if provided), Telegram contact, Instagram (if provided), and information about yourself.',
-      'Technical data: IP address, browser type, cookies — to the extent necessary for website operation and analytics.',
+      'Application data (you provide voluntarily): name, age (if provided), Telegram contact or phone number, interests (if filled in), 18+ age confirmation.',
+      'Technical data when submitting an application: approximate location (country and city) based on IP address — for internal processing by our team only; full IP addresses are not included in notifications.',
+      'Website visit data: interface language, browser and device type, pages viewed — only if you consent to analytics cookies (Google Analytics 4).',
+      'Necessary cookies: storing your language preference and your cookie consent choice.',
     ],
   },
   {
-    title: '3. Purposes of processing',
+    title: '3. Cookies and similar technologies',
     paragraphs: [
-      'Contacting you regarding your application and evaluating potential collaboration.',
-      'Improving the website and ensuring service security.',
-      'Compliance with legal obligations.',
+      'Necessary cookies enable core website functionality (language, remembering your cookie choice). They do not require separate consent.',
+      'Analytics cookies (Google Analytics 4) are used only after your explicit consent via the "Accept all" banner. If you choose "Necessary only", analytics is not activated.',
+      'You may change your choice at any time via "Cookie settings" in the website footer.',
+      'Your consent record is stored until you change your choice or clear browser data.',
     ],
   },
   {
-    title: '4. Disclosure to third parties',
+    title: '4. Purposes and legal bases',
     paragraphs: [
-      'Application data is shared with authorized managers and message delivery services (such as Telegram) solely for processing your request.',
-      'We do not sell personal data to third parties.',
+      'Processing your application and contacting you — performance of your request / pre-contractual steps.',
+      'Approximate IP-based geolocation when you apply — legitimate interest to evaluate applications and organize manager workflows.',
+      'Visit analytics — your consent (for users in the EU/EEA and other jurisdictions where required).',
+      'Website security and legal compliance — legitimate interest and legal obligations.',
     ],
   },
   {
-    title: '5. Storage and security',
+    title: '5. Disclosure to third parties',
     paragraphs: [
-      'Data is retained for a limited period necessary to process the application and maintain correspondence.',
-      'Organizational and technical measures are in place to protect against unauthorized access.',
+      'Application data is shared with authorized agency managers and notification delivery services (Telegram Bot API) solely to handle your request.',
+      'Google Analytics (Google LLC) — only with your consent to analytics cookies; data may be processed on Google servers, including outside your country.',
+      'Website hosting (Vercel Inc.) processes technical data to provide infrastructure.',
+      'We do not sell or rent personal data to third parties for their marketing.',
     ],
   },
   {
-    title: '6. Your rights',
+    title: '6. Retention and security',
     paragraphs: [
-      'You may request clarification, correction, or deletion of your data by contacting us through the form on the website.',
+      'Application data is retained in manager correspondence and Telegram notifications as long as needed to review your application and potential collaboration, but not beyond a reasonable period without your consent.',
+      'GA4 analytics data is retained according to Google Analytics settings (by default up to 14 months for standard reports).',
+      'We apply organizational and technical measures: HTTPS, restricted access to notifications, server-side storage of secret keys.',
     ],
   },
   {
-    title: '7. Contact',
+    title: '7. Your rights',
     paragraphs: [
-      'For privacy-related inquiries, please reach out via the application form on the OFM\'s Model Agency homepage.',
+      'You may request access, correction, deletion, restriction of processing, or object to processing — via the application form on the website.',
+      'You may withdraw consent to analytics cookies at any time via "Cookie settings" in the footer.',
+      'EU/EEA residents may lodge a complaint with their local data protection authority if they believe processing violates the GDPR.',
+      'We will respond within a reasonable time, typically within 30 days.',
+    ],
+  },
+  {
+    title: '8. Age',
+    paragraphs: [
+      'The website and application form are intended for individuals aged 18 or older. By submitting an application, you confirm that you are at least 18 years old.',
+    ],
+  },
+  {
+    title: '9. Policy updates',
+    paragraphs: [
+      'We may update this policy. The current version is always published on this page. Material cookie changes may trigger the consent banner again.',
+      'Last updated: June 2026.',
     ],
   },
 ];
@@ -55,38 +81,37 @@ export const TERMS_SECTIONS: LegalSection[] = [
   {
     title: '1. Purpose of the website',
     paragraphs: [
-      'The OFM\'s Model Agency website provides information about agency services and an application form. The website is not an official representation of the OnlyFans platform.',
+      'The OFM\'s Model Agency website provides information about agency services and an application form. The website is not an official OnlyFans representative.',
     ],
   },
   {
     title: '2. Applications and collaboration',
     paragraphs: [
-      'Submitting an application does not create contractual obligations. Terms of collaboration are agreed separately with a manager after your candidacy is approved.',
+      'Submitting an application does not create contractual obligations. Collaboration terms are agreed separately with a manager after approval.',
     ],
   },
   {
     title: '3. Accuracy of information',
     paragraphs: [
-      'You agree to provide accurate contact information. We reserve the right to reject an application without stating reasons.',
+      'You agree to provide accurate contact details and confirm that you are at least 18 years old. We may decline an application without stating reasons.',
     ],
   },
   {
     title: '4. Intellectual property',
     paragraphs: [
-      'Website materials (text, design, logo) are protected by copyright. Copying without consent is prohibited.',
+      'Website materials (text, design, logo) are protected by copyright. Copying without permission is prohibited.',
     ],
   },
   {
     title: '5. Limitation of liability',
     paragraphs: [
-      'Income figures on the website are provided as benchmarks based on the experience of some models and do not guarantee results for every user.',
-      'We are not liable for interruptions in third-party services (hosting, messaging platforms).',
+      'Information on the website is for reference only. Income and results depend on many factors and are not guaranteed.',
     ],
   },
   {
-    title: '6. Changes to terms',
+    title: '6. Governing law',
     paragraphs: [
-      'We may update these Terms. The current version is always published on this page.',
+      'Use of the website is governed by these terms and applicable law. Disputes should be resolved through negotiation where possible.',
     ],
   },
 ];
