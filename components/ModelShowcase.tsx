@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { combinedNetTotal, resultCases, type ResultCase } from '@/lib/results/cases';
 import { formatUsd } from '@/lib/results/format';
 import { SectionHeader } from '@/components/SectionHeader';
+import { IPhoneFrame } from '@/components/ui/IPhoneFrame';
 import { SectionShell } from '@/components/ui/SectionShell';
 
 const TIER_STYLES: Record<
@@ -33,32 +34,29 @@ const TIER_STYLES: Record<
 function ScreenshotFrame({
   item,
   priority = false,
-  frameClassName = 'max-w-[260px]',
+  phoneSize = 'md',
 }: {
   item: ResultCase;
   priority?: boolean;
-  frameClassName?: string;
+  phoneSize?: 'sm' | 'md' | 'lg';
 }) {
   const t = useTranslations('models');
 
   return (
-    <div className={`w-full shrink-0 ${frameClassName}`}>
-      <div className="relative rounded-[1.5rem] border border-white/[0.14] bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-2 shadow-[0_24px_48px_-28px_rgba(0,0,0,0.9)]">
-        <div className="pointer-events-none absolute left-1/2 top-2.5 h-1 w-10 -translate-x-1/2 rounded-full bg-white/20" aria-hidden />
-        <div className="mt-3 overflow-hidden rounded-[1.15rem] border border-black/10 bg-white">
-          <Image
-            src={item.image}
-            alt={t('altScreenshot', { tier: t(`tiers.${item.tier}`) })}
-            width={item.imageWidth}
-            height={item.imageHeight}
-            quality={100}
-            priority={priority}
-            sizes="(max-width: 768px) 72vw, (max-width: 1200px) 320px, 360px"
-            className="h-auto w-full"
-          />
-        </div>
-      </div>
-      <div className="mt-2.5 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center">
+    <div className="w-full shrink-0">
+      <IPhoneFrame size={phoneSize}>
+        <Image
+          src={item.image}
+          alt={t('altScreenshot', { tier: t(`tiers.${item.tier}`) })}
+          width={item.imageWidth}
+          height={item.imageHeight}
+          quality={100}
+          priority={priority}
+          sizes="(max-width: 768px) 72vw, (max-width: 1200px) 280px, 320px"
+          className="h-auto w-full"
+        />
+      </IPhoneFrame>
+      <div className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center">
         <span className="inline-flex items-center gap-1 rounded-md bg-white/[0.04] px-2 py-0.5 text-[9px] font-medium uppercase tracking-wider text-white/50">
           <BadgeCheck className="h-3 w-3 text-accent-cyan/80" aria-hidden />
           {t('verified')}
@@ -155,7 +153,7 @@ function ResultCard({
         <ScreenshotFrame
           item={item}
           priority={priority}
-          frameClassName={featured ? 'max-w-[300px] lg:max-w-[320px]' : 'max-w-[240px]'}
+          phoneSize={featured ? 'lg' : 'sm'}
         />
         <ResultStats item={item} featured={featured} />
       </div>
