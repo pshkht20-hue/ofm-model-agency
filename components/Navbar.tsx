@@ -59,8 +59,15 @@ export function Navbar() {
             : 'bg-[#050508]/70 backdrop-blur-md border-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 lg:h-[4.25rem] grid grid-cols-[auto_1fr_auto] items-center gap-3 lg:gap-6">
-          <Logo size="md" showWordmark href="/" onClick={closeMenu} className="min-w-0 shrink-0" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[3.75rem] sm:h-14 lg:h-[4.25rem] flex lg:grid lg:grid-cols-[auto_1fr_auto] items-center gap-2 sm:gap-3 lg:gap-6">
+          <Logo
+            size="nav"
+            showWordmark
+            wordmarkOnMobile
+            href="/"
+            onClick={closeMenu}
+            className="min-w-0 shrink"
+          />
 
           <nav
             className="hidden lg:flex items-center justify-center gap-4 xl:gap-5 min-w-0"
@@ -78,7 +85,7 @@ export function Navbar() {
             ))}
           </nav>
 
-          <div className="flex items-center justify-end gap-1.5 sm:gap-2 shrink-0">
+          <div className="flex items-center justify-end gap-1.5 sm:gap-2 shrink-0 ml-auto lg:ml-0">
             <div
               className="hidden md:flex items-center rounded-full border border-white/[0.08] bg-white/[0.03] p-0.5"
               aria-label={t('navigation')}
@@ -108,12 +115,16 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setMenuOpen((open) => !open)}
-              className="lg:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-white/10 bg-white/[0.03] hover:border-accent-pink/40 transition shrink-0"
+              className="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl border border-white/[0.12] bg-white/[0.04] hover:border-accent-pink/45 hover:bg-white/[0.06] active:scale-[0.97] transition shrink-0 shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset]"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
             >
-              {menuOpen ? <X className="w-[18px] h-[18px]" /> : <Menu className="w-[18px] h-[18px]" />}
+              {menuOpen ? (
+                <X className="w-5 h-5 text-white/90" strokeWidth={1.75} />
+              ) : (
+                <Menu className="w-5 h-5 text-white/90" strokeWidth={1.75} />
+              )}
             </button>
           </div>
         </div>
@@ -136,7 +147,7 @@ export function Navbar() {
         <motion.div
           initial={false}
           animate={menuOpen ? { y: 0 } : { y: -16 }}
-          className={`absolute top-14 left-0 right-0 bottom-0 bg-[#050508] border-t border-white/[0.06] flex flex-col ${
+          className={`absolute top-[3.75rem] sm:top-14 left-0 right-0 bottom-0 bg-[#050508] border-t border-white/[0.06] flex flex-col ${
             menuOpen ? '' : 'pointer-events-none'
           }`}
         >

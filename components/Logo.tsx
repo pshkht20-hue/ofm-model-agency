@@ -1,6 +1,7 @@
 import { Link } from '@/i18n/navigation';
 
 const SIZES = {
+  nav: { mark: 38, gap: 8, title: 'text-[12px] sm:text-[14px] lg:text-base', tag: 'text-[6px] sm:text-[7px] lg:text-[8px]' },
   sm: { mark: 36, gap: 10, title: 'text-[15px]', tag: 'text-[8px]' },
   md: { mark: 44, gap: 12, title: 'text-base md:text-lg', tag: 'text-[8px] md:text-[9px]' },
   lg: { mark: 52, gap: 14, title: 'text-lg md:text-xl', tag: 'text-[9px]' },
@@ -89,11 +90,12 @@ export function Logo({
           className={`min-w-0 text-left ${wordmarkVisibility}`}
           style={{ marginLeft: s.gap }}
         >
-          <div className={`font-semibold tracking-tight leading-none ${s.title}`}>
-            <span className="text-gradient-brand">OFM</span>
-            <span className="text-white/95">&apos;s Agency</span>
+          <div className={`font-semibold tracking-tight leading-[1.1] text-white ${s.title}`}>
+            OFM&apos;s Agency
           </div>
-          <div className={`text-[9px] md:text-[10px] font-medium tracking-[0.22em] uppercase text-white/45 mt-1`}>
+          <div
+            className={`font-medium tracking-[0.18em] sm:tracking-[0.22em] uppercase text-white/45 mt-0.5 sm:mt-1 leading-none ${s.tag}`}
+          >
             Creator Management
           </div>
         </div>
