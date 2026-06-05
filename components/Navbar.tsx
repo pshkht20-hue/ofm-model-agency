@@ -66,7 +66,7 @@ export function Navbar() {
             wordmarkOnMobile
             href="/"
             onClick={closeMenu}
-            className="min-w-0 shrink"
+            className="shrink-0"
           />
 
           <nav

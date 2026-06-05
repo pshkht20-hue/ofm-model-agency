@@ -87,10 +87,10 @@ export function Logo({
       />
       {showWordmark && (
         <div
-          className={`min-w-0 text-left ${wordmarkVisibility}`}
+          className={`shrink-0 text-left ${wordmarkVisibility}`}
           style={{ marginLeft: s.gap }}
         >
-          <div className={`font-semibold tracking-tight leading-[1.1] text-white ${s.title}`}>
+          <div className={`font-semibold tracking-tight leading-[1.1] text-white whitespace-nowrap ${s.title}`}>
             OFM&apos;s Agency
           </div>
           <div
