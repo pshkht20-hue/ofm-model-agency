@@ -17,7 +17,7 @@ export function IPhoneFrame({ children, className = '', size = 'md' }: Props) {
     <div className={`relative mx-auto ${SIZE_CLASS[size]} ${className}`}>
       {/* Мягкая подсветка под устройством */}
       <div
-        className="pointer-events-none absolute -inset-x-6 bottom-0 top-[18%] rounded-full bg-accent-pink/[0.07] blur-3xl"
+        className="pointer-events-none absolute -inset-x-4 top-[12%] bottom-[28%] rounded-full bg-accent-pink/[0.05] blur-3xl"
         aria-hidden
       />
 

@@ -12,38 +12,54 @@ import { UsdDisplay } from '@/components/ui/UsdDisplay';
 
 const TIER_STYLES: Record<
   ResultCase['tier'],
-  { badge: string; glow: string; accent: string }
+  { badge: string; glow: string; amountAccent: 'elite' | 'pro' | 'prime' }
 > = {
   elite: {
     badge: 'from-accent-pink to-accent-violet',
     glow: 'shadow-[0_0_48px_-12px_rgba(255,91,181,0.45)]',
-    accent: 'text-accent-pink',
+    amountAccent: 'elite',
   },
   pro: {
     badge: 'from-accent-violet to-accent-cyan/80',
     glow: 'shadow-[0_0_40px_-14px_rgba(168,85,247,0.4)]',
-    accent: 'text-accent-violet',
+    amountAccent: 'pro',
   },
   prime: {
     badge: 'from-accent-cyan/90 to-accent-violet/70',
     glow: 'shadow-[0_0_36px_-14px_rgba(0,212,255,0.28)]',
-    accent: 'text-accent-cyan',
+    amountAccent: 'prime',
   },
 };
+
+function ScreenshotCaption({ item }: { item: ResultCase }) {
+  const t = useTranslations('models');
+
+  return (
+    <div className="relative z-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-1.5 text-center">
+      <span className="inline-flex items-center gap-1 rounded-full border border-white/[0.1] bg-white/[0.06] px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-white/75 backdrop-blur-sm">
+        <BadgeCheck className="h-3 w-3 text-accent-cyan" aria-hidden />
+        {t('verified')}
+      </span>
+      <span className="text-[11px] text-white/55">{item.periodLabel}</span>
+    </div>
+  );
+}
 
 function ScreenshotFrame({
   item,
   priority = false,
   phoneSize = 'md',
+  featured = false,
 }: {
   item: ResultCase;
   priority?: boolean;
   phoneSize?: 'sm' | 'md' | 'lg';
+  featured?: boolean;
 }) {
   const t = useTranslations('models');
 
   return (
-    <div className="w-full shrink-0">
+    <div className={`w-full shrink-0 ${featured ? 'lg:w-[300px]' : ''}`}>
       <IPhoneFrame size={phoneSize}>
         <Image
           src={item.image}
@@ -56,12 +72,8 @@ function ScreenshotFrame({
           className="h-auto w-full"
         />
       </IPhoneFrame>
-      <div className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center">
-        <span className="inline-flex items-center gap-1 rounded-md bg-white/[0.04] px-2 py-0.5 text-[9px] font-medium uppercase tracking-wider text-white/50">
-          <BadgeCheck className="h-3 w-3 text-accent-cyan/80" aria-hidden />
-          {t('verified')}
-        </span>
-        <span className="text-[10px] text-white/35">{item.periodLabel}</span>
+      <div className={`mt-4 pb-1 ${featured ? 'lg:hidden' : ''}`}>
+        <ScreenshotCaption item={item} />
       </div>
     </div>
   );
@@ -78,7 +90,13 @@ function ResultStats({
   const style = TIER_STYLES[item.tier];
 
   return (
-    <div className={`flex flex-1 flex-col justify-center ${featured ? 'lg:py-4' : ''}`}>
+    <div className={`flex min-w-0 flex-1 flex-col justify-center ${featured ? 'lg:py-2' : ''}`}>
+      {featured && (
+        <div className="mb-4 hidden lg:block">
+          <ScreenshotCaption item={item} />
+        </div>
+      )}
+
       <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/40">
         {t('totalNet')}
       </p>
@@ -86,7 +104,8 @@ function ResultStats({
         value={item.totalNet}
         maximumFractionDigits={0}
         size={featured ? 'hero' : 'lg'}
-        className="mt-1 text-white"
+        accent={featured ? style.amountAccent : undefined}
+        className={`mt-1 ${featured ? '' : 'text-white'}`}
       />
 
       <div className="mt-5 flex items-end justify-between gap-3 border-t border-white/[0.06] pt-4">
@@ -98,7 +117,8 @@ function ResultStats({
             value={item.monthlyHighlight}
             maximumFractionDigits={0}
             size="md"
-            className={`mt-1 ${style.accent}`}
+            accent={style.amountAccent}
+            className="mt-1"
             amountClassName="font-semibold"
           />
         </div>
@@ -129,7 +149,7 @@ function ResultCard({
     <motion.article
       whileHover={{ y: -3 }}
       transition={{ type: 'spring', stiffness: 320, damping: 28 }}
-      className={`group relative overflow-hidden rounded-2xl border border-white/[0.09] bg-[#07070e]/80 backdrop-blur-sm transition-[border-color,box-shadow] duration-500 hover:border-accent-pink/30 ${style.glow} ${className}`}
+      className={`group relative overflow-visible rounded-2xl border border-white/[0.09] bg-[#07070e]/80 backdrop-blur-sm transition-[border-color,box-shadow] duration-500 hover:border-accent-pink/30 ${style.glow} ${className}`}
     >
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-pink/40 to-transparent opacity-60"
@@ -150,13 +170,14 @@ function ResultCard({
 
       <div
         className={`flex flex-col gap-5 px-4 pb-5 pt-4 sm:px-5 sm:pb-6 ${
-          featured ? 'lg:flex-row lg:items-center lg:gap-8' : 'items-center'
+          featured ? 'lg:flex-row lg:items-start lg:gap-8 lg:pb-7' : 'items-center'
         }`}
       >
         <ScreenshotFrame
           item={item}
           priority={priority}
           phoneSize={featured ? 'lg' : 'sm'}
+          featured={featured}
         />
         <ResultStats item={item} featured={featured} />
       </div>
@@ -184,7 +205,7 @@ export function ModelShowcase() {
         <span className="text-[11px] uppercase tracking-[0.18em] text-white/40">
           {t('aggregateLabel')}
         </span>
-        <UsdDisplay value={aggregate} compact size="hero" gradient />
+        <UsdDisplay value={aggregate} compact size="hero" accent="shimmer" />
         <span className="text-xs text-white/45">{t('aggregateHint')}</span>
       </motion.div>
 
