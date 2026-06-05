@@ -11,8 +11,8 @@ export type ApplicationPayload = {
   name: string;
   age?: string;
   telegram: string;
-  instagram?: string;
   message?: string;
+  ageConfirmed?: boolean;
 };
 
 export function formatApplicationMessage(data: ApplicationPayload): string {
@@ -22,11 +22,9 @@ export function formatApplicationMessage(data: ApplicationPayload): string {
     `👤 <b>Имя:</b> ${escapeTelegramHtml(data.name)}`,
     data.age ? `🎂 <b>Возраст:</b> ${escapeTelegramHtml(data.age)}` : null,
     `📱 <b>Telegram:</b> ${escapeTelegramHtml(data.telegram)}`,
-    data.instagram
-      ? `📸 <b>Instagram:</b> ${escapeTelegramHtml(data.instagram)}`
-      : null,
+    data.ageConfirmed ? '✅ <b>18+:</b> подтверждено' : null,
     data.message
-      ? `\n💬 <b>О себе:</b>\n${escapeTelegramHtml(data.message)}`
+      ? `\n✨ <b>Интересы:</b>\n${escapeTelegramHtml(data.message)}`
       : null,
   ];
 

@@ -10,7 +10,6 @@ const MAX_LENGTH = {
   name: 100,
   age: 3,
   telegram: 64,
-  instagram: 64,
   message: 2000,
 };
 
@@ -33,8 +32,8 @@ function validate(
   const name = trim(body.name);
   const telegram = trim(body.telegram);
   const age = trim(body.age);
-  const instagram = trim(body.instagram);
   const message = trim(body.message);
+  const ageConfirmed = body.ageConfirmed === true;
 
   if (!name || name.length < 2) {
     return { ok: false, error: e.nameRequired };
@@ -48,11 +47,11 @@ function validate(
   if (telegram.length > MAX_LENGTH.telegram) {
     return { ok: false, error: e.telegramTooLong };
   }
+  if (!ageConfirmed) {
+    return { ok: false, error: e.ageConfirmRequired };
+  }
   if (age && (!/^\d{1,2}$/.test(age) || Number(age) < 18 || Number(age) > 99)) {
     return { ok: false, error: e.ageInvalid };
-  }
-  if (instagram.length > MAX_LENGTH.instagram) {
-    return { ok: false, error: e.instagramTooLong };
   }
   if (message.length > MAX_LENGTH.message) {
     return { ok: false, error: e.messageTooLong };
@@ -63,8 +62,8 @@ function validate(
     data: {
       name,
       telegram,
+      ageConfirmed,
       ...(age && { age }),
-      ...(instagram && { instagram }),
       ...(message && { message }),
     },
   };
