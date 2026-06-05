@@ -59,7 +59,7 @@ export function Navbar() {
             : 'bg-[#050508]/70 backdrop-blur-md border-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[3.75rem] sm:h-14 lg:h-[4.25rem] flex lg:grid lg:grid-cols-[auto_1fr_auto] items-center gap-2 sm:gap-3 lg:gap-6">
+        <div className="max-w-7xl mx-auto w-full min-w-0 px-4 sm:px-6 lg:px-8 h-[3.75rem] sm:h-14 lg:h-[4.25rem] flex lg:grid lg:grid-cols-[auto_1fr_auto] items-center gap-2 sm:gap-3 lg:gap-6">
           <Logo
             size="nav"
             showWordmark
@@ -103,13 +103,13 @@ export function Navbar() {
 
             <Link
               href="/#contact"
-              className="hidden md:inline-flex btn-primary !h-9 !py-0 !px-4 lg:!px-5 !text-xs lg:!text-[13px] !shadow-[0_0_18px_-6px_rgba(255,91,181,0.55)] whitespace-nowrap shrink-0"
+              className="hidden lg:inline-flex btn-primary !h-9 !py-0 !px-4 xl:!px-5 !text-[13px] !shadow-[0_0_18px_-6px_rgba(255,91,181,0.55)] whitespace-nowrap shrink-0"
             >
-              <span className="lg:hidden">{t('apply')}</span>
-              <span className="hidden lg:inline-flex items-center gap-1.5">
+              <span className="hidden xl:inline-flex items-center gap-1.5">
                 {t('becomeModel')}
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
+              <span className="xl:hidden">{t('apply')}</span>
             </Link>
 
             <button
