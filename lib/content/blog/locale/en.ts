@@ -238,6 +238,64 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
     ],
   },
+  'onlyfans-agentstvo-ukraina': {
+    title: 'OnlyFans Agency in Ukraine: How to Choose a Team and Avoid Scams',
+    description:
+      'Guide for creators in Ukraine and the diaspora: remote work, 24/7 chats, marketing, red flags, case studies, and applying to OFM.',
+    keywords: [
+      'onlyfans agency ukraine',
+      'onlyfans agency kyiv',
+      'onlyfans management ukraine',
+    ],
+    blocks: [
+      {
+        type: 'p',
+        text: 'Ukraine is one of the most active OnlyFans markets in Eastern Europe—strong English, remote-work culture, and many creators looking for agencies with clear terms. A Google search for “OnlyFans agency Ukraine” leads to Layboard listings and forums where professional management and scams look identical. This guide covers what full-service should include, how to verify a team, and how OFM works with UA-based creators.',
+      },
+      {
+        type: 'h2',
+        text: 'Why UA creators choose agencies over solo',
+      },
+      {
+        type: 'p',
+        text: 'Up to 85% of OnlyFans net revenue often comes from DMs. Solo creators lose sales overnight (US/EU prime time) while spending ~60% of time on chats and marketing. An agency covers 24/7 chats, traffic, and analytics while you focus on content.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Kyiv, Odesa, Lviv, Kharkiv—fully remote; no studio required',
+          'Diaspora creators (Poland, Germany, Czechia) often target UA/EN audiences',
+          'Anonymity, payouts, and transparent commission matter more than headline “$30k” promises',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Red flags when choosing an agency in Ukraine',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Upfront “promotion” or “onboarding” fees before launch',
+          'Single OnlyFans password instead of role-based access',
+          'Fixed income promises without niche analysis',
+          'No contract, NDA, or written service list',
+          'Pressure to “sign today” with no 30-day exit',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'How OFM works with Ukraine-based creators',
+      },
+      {
+        type: 'p',
+        text: 'OFM partners with creators in Ukraine, Europe, and beyond—fully remote. Apply at ofmmodels.com; a manager replies on Telegram within 24 hours. No entry fee. Real case studies with platform statistics screenshots are published on the site (with creators’ consent).',
+      },
+      {
+        type: 'p',
+        text: 'Compare at least two agencies using our checklist articles, read the FAQ, and review case studies. If you want an OnlyFans agency in Ukraine with 24/7 chats and transparent terms—apply on the homepage. No obligation until you agree on terms.',
+      },
+    ],
+  },
   'onlyfans-marketing-strategiya-2026': {
     title: 'OnlyFans Marketing 2026: Full Growth Strategy',
     description:

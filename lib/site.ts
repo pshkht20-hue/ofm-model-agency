@@ -2,19 +2,23 @@ export const siteConfig = {
   name: "OFM's Model Agency",
   shortName: 'OFM',
   tagline: 'LUXURY ONLYFANS MANAGEMENT',
-  title: "OnlyFans агентство для моделей — OFM's Model Agency",
+  title: "OFM Model Agency — OnlyFans агентство для моделей",
   description:
-    'Премиальное OnlyFans агентство: менеджмент, маркетинг, чаты 24/7 и рост дохода. Подайте заявку — менеджер свяжется в Telegram в течение 24 часов. Конфиденциально.',
+    'OnlyFans агентство OFM: менеджмент, чаты 24/7, маркетинг и реальные кейсы дохода. Заявка на сайте — ответ в Telegram за 24 часа. Украина, Европа, удалённо.',
   keywords: [
     'OnlyFans агентство',
     'onlyfans агентство для моделей',
+    'onlyfans агентство украина',
+    'onlyfans агентство україна',
     'OnlyFans management',
     'агентство для моделей OnlyFans',
     'как выбрать onlyfans агентство',
+    'стать моделью onlyfans',
     'продвижение OnlyFans',
     'менеджмент OnlyFans',
     'заработок на OnlyFans',
     'OFM Model Agency',
+    'ofmmodels',
   ],
 } as const;
 

@@ -211,6 +211,43 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
     ],
   },
+  'onlyfans-agentstvo-ukraina': {
+    title: 'Agencia OnlyFans en Ucrania: cómo elegir equipo y evitar estafas',
+    description:
+      'Guía para creadoras en Ucrania y la diáspora: trabajo remoto, chats 24/7, marketing, señales de alerta y solicitud en OFM.',
+    keywords: ['agencia onlyfans ucrania', 'onlyfans agency ukraine'],
+    blocks: [
+      {
+        type: 'p',
+        text: 'Ucrania es uno de los mercados OnlyFans más activos en Europa del Este. Buscar «agencia OnlyFans Ucrania» lleva a Layboard y foros donde management profesional y estafa se ven igual. Esta guía explica qué debe incluir un servicio completo y cómo trabaja OFM con creadoras de UA.',
+      },
+      {
+        type: 'h2',
+        text: 'Por qué las creadoras de UA eligen agencia',
+      },
+      {
+        type: 'p',
+        text: 'Hasta el 85% del ingreso neto suele venir de los DM. Una agencia cubre chats 24/7, tráfico y analítica mientras tú te enfocas en contenido—desde Kyiv, Odesa o en remoto desde la UE.',
+      },
+      {
+        type: 'h2',
+        text: 'Señales de alerta',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Pagos anticipados antes del lanzamiento',
+          'Una sola contraseña de OnlyFans',
+          'Promesas de ingreso fijo sin análisis',
+          'Sin contrato ni NDA',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'OFM trabaja con creadoras en Ucrania y Europa de forma remota. Solicitud en ofmmodels.com—respuesta en Telegram en 24 h, sin cuota de entrada. Casos reales publicados en el sitio.',
+      },
+    ],
+  },
   'onlyfans-marketing-strategiya-2026': {
     title: 'Marketing de OnlyFans 2026: estrategia completa de crecimiento',
     description:

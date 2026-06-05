@@ -42,6 +42,15 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@kmuza',
     unsplashUrl: 'https://unsplash.com/photos/turned-on-gray-laptop-computer-hpjSkU2UYSU',
   },
+  'onlyfans-agentstvo-ukraina': {
+    localSrc: '/blog/covers/onlyfans-agentstvo-dlya-nachinayushchih.jpg',
+    remoteSrc:
+      'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=80',
+    alt: 'Городской пейзаж — удалённая работа модели',
+    photographer: 'Luca Bravo',
+    photographerUrl: 'https://unsplash.com/@lucabravo',
+    unsplashUrl: 'https://unsplash.com/photos/landscape-photography-of-mountains-4V8uMZx8FYA',
+  },
   'onlyfans-agentstvo-moshennichestvo': {
     localSrc: '/blog/covers/onlyfans-agentstvo-moshennichestvo.jpg',
     remoteSrc:
