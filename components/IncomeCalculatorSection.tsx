@@ -332,8 +332,6 @@ export function IncomeCalculatorSection() {
                       </ul>
                     </div>
 
-                    <p className="text-center text-xs leading-relaxed text-white/30">{t('disclaimer')}</p>
-
                     <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
                       <a href="#contact" className="btn-primary group justify-center">
                         {t('result.cta')}
@@ -384,6 +382,13 @@ export function IncomeCalculatorSection() {
                 </button>
               </div>
             )}
+
+            <div className="mt-6 rounded-xl border border-white/[0.07] bg-white/[0.02] p-4 md:p-5">
+              <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
+                {t('legalTitle')}
+              </p>
+              <p className="text-xs leading-relaxed text-white/38">{t('legalNotice')}</p>
+            </div>
           </div>
         </div>
       </div>
