@@ -1,7 +1,9 @@
-export function formatUsd(
-  value: number,
-  options?: { compact?: boolean; maximumFractionDigits?: number },
-): string {
+export type UsdFormatOptions = {
+  compact?: boolean;
+  maximumFractionDigits?: number;
+};
+
+export function formatUsd(value: number, options?: UsdFormatOptions): string {
   const { compact = false, maximumFractionDigits = 0 } = options ?? {};
 
   if (compact && value >= 1_000_000) {
@@ -20,4 +22,16 @@ export function formatUsd(
     maximumFractionDigits,
     minimumFractionDigits: maximumFractionDigits,
   }).format(value);
+}
+
+export function usdParts(
+  value: number,
+  options?: UsdFormatOptions,
+): { symbol: string; amount: string } {
+  const formatted = formatUsd(value, options);
+  const match = formatted.match(/^(\$)(.+)$/);
+  return {
+    symbol: match?.[1] ?? '$',
+    amount: match?.[2] ?? formatted.replace(/^\$/, ''),
+  };
 }

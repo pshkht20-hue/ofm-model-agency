@@ -5,10 +5,10 @@ import { ArrowRight, BadgeCheck, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { combinedNetTotal, resultCases, type ResultCase } from '@/lib/results/cases';
-import { formatUsd } from '@/lib/results/format';
 import { SectionHeader } from '@/components/SectionHeader';
 import { IPhoneFrame } from '@/components/ui/IPhoneFrame';
 import { SectionShell } from '@/components/ui/SectionShell';
+import { UsdDisplay } from '@/components/ui/UsdDisplay';
 
 const TIER_STYLES: Record<
   ResultCase['tier'],
@@ -82,22 +82,25 @@ function ResultStats({
       <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/40">
         {t('totalNet')}
       </p>
-      <p
-        className={`mt-1 font-serif tracking-tight text-white ${
-          featured ? 'text-4xl md:text-[2.75rem]' : 'text-3xl'
-        }`}
-      >
-        {formatUsd(item.totalNet, { maximumFractionDigits: 0 })}
-      </p>
+      <UsdDisplay
+        value={item.totalNet}
+        maximumFractionDigits={0}
+        size={featured ? 'hero' : 'lg'}
+        className="mt-1 text-white"
+      />
 
       <div className="mt-5 flex items-end justify-between gap-3 border-t border-white/[0.06] pt-4">
-        <div>
+        <div className="min-w-0">
           <p className="text-[10px] uppercase tracking-[0.16em] text-white/38">
             {t('peakMonth')}
           </p>
-          <p className={`mt-1 text-xl font-semibold tabular-nums ${style.accent}`}>
-            {formatUsd(item.monthlyHighlight, { maximumFractionDigits: 0 })}
-          </p>
+          <UsdDisplay
+            value={item.monthlyHighlight}
+            maximumFractionDigits={0}
+            size="md"
+            className={`mt-1 ${style.accent}`}
+            amountClassName="font-semibold"
+          />
         </div>
         <div className="flex items-center gap-1 rounded-full border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 text-[11px] text-white/50">
           <TrendingUp className="h-3.5 w-3.5 text-accent-cyan" aria-hidden />
@@ -181,9 +184,7 @@ export function ModelShowcase() {
         <span className="text-[11px] uppercase tracking-[0.18em] text-white/40">
           {t('aggregateLabel')}
         </span>
-        <span className="font-serif text-2xl text-gradient-brand md:text-3xl">
-          {formatUsd(aggregate, { compact: true })}
-        </span>
+        <UsdDisplay value={aggregate} compact size="hero" gradient />
         <span className="text-xs text-white/45">{t('aggregateHint')}</span>
       </motion.div>
 

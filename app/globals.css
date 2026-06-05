@@ -20,6 +20,7 @@
   --color-surface: var(--surface);
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
   --font-serif: var(--font-playfair), "Times New Roman", serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 html {
@@ -57,6 +58,30 @@ body {
 
 .font-serif {
   font-family: var(--font-playfair), serif;
+}
+
+.amount-display {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  letter-spacing: -0.045em;
+}
+
+.amount-display-symbol {
+  font-size: 0.68em;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  opacity: 0.78;
+}
+
+.amount-display-value {
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.text-gradient-brand.amount-display .amount-display-symbol {
+  opacity: 1;
+  font-weight: 600;
 }
 
 .heading-display {
