@@ -141,10 +141,6 @@ export function Navbar() {
           }`}
         >
           <div className="flex-1 overflow-y-auto px-5 py-6">
-            <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4 mb-6">
-              <SocialLinks variant="menu" onLinkClick={closeMenu} />
-            </div>
-
             <p className="eyebrow-bright mb-3">{t('navigation')}</p>
             <div className="flex flex-col">
               {NAV_LINKS.map((link, i) => (
@@ -163,6 +159,10 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               ))}
+            </div>
+
+            <div className="mt-8 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4">
+              <SocialLinks variant="menu" onLinkClick={closeMenu} />
             </div>
           </div>
 

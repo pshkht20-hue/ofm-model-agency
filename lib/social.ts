@@ -1,26 +1,22 @@
-export type SocialPlatform = 'telegram' | 'instagram' | 'x' | 'tiktok';
+export type SocialPlatform = 'telegram' | 'instagram';
 
 export type SocialLink = {
   platform: SocialPlatform;
   href: string;
 };
 
-/** Замените ссылки или задайте NEXT_PUBLIC_SOCIAL_* в .env */
+/** Задайте NEXT_PUBLIC_SOCIAL_TELEGRAM и NEXT_PUBLIC_SOCIAL_INSTAGRAM в Vercel / .env */
 const DEFAULT_LINKS: Record<SocialPlatform, string> = {
-  telegram: 'https://t.me/',
+  telegram: 'https://t.me/Azalia_agency',
   instagram: 'https://instagram.com/',
-  x: 'https://x.com/',
-  tiktok: 'https://www.tiktok.com/',
 };
 
 const ENV_KEYS: Record<SocialPlatform, string> = {
   telegram: 'NEXT_PUBLIC_SOCIAL_TELEGRAM',
   instagram: 'NEXT_PUBLIC_SOCIAL_INSTAGRAM',
-  x: 'NEXT_PUBLIC_SOCIAL_X',
-  tiktok: 'NEXT_PUBLIC_SOCIAL_TIKTOK',
 };
 
-const ORDER: SocialPlatform[] = ['telegram', 'instagram', 'x', 'tiktok'];
+const ORDER: SocialPlatform[] = ['telegram', 'instagram'];
 
 function resolveHref(platform: SocialPlatform): string | null {
   const fromEnv = process.env[ENV_KEYS[platform]]?.trim();

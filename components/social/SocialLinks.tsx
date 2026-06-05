@@ -18,18 +18,6 @@ const PLATFORM_NEON: Record<SocialPlatform, { surface: string; icon: string; glo
     icon: 'text-accent-pink/90 group-hover:text-accent-pink',
     glow: 'bg-accent-pink/25',
   },
-  x: {
-    surface:
-      'border-white/15 shadow-[0_0_14px_-4px_rgba(255,255,255,0.2)] hover:border-white/40 hover:shadow-[0_0_22px_0px_rgba(255,255,255,0.35),0_0_32px_-8px_rgba(255,255,255,0.15)]',
-    icon: 'text-white/75 group-hover:text-white',
-    glow: 'bg-white/15',
-  },
-  tiktok: {
-    surface:
-      'border-accent-cyan/25 shadow-[0_0_16px_-4px_rgba(0,212,255,0.4)] hover:border-accent-cyan/60 hover:shadow-[0_0_24px_0px_rgba(0,212,255,0.55),0_0_36px_-8px_rgba(0,212,255,0.3)]',
-    icon: 'text-accent-cyan/85 group-hover:text-accent-cyan',
-    glow: 'bg-accent-cyan/20',
-  },
 };
 
 type SocialLinksProps = {
