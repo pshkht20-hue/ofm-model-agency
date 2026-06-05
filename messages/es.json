@@ -38,12 +38,13 @@
       "line2": "Tus reglas.",
       "line3": "Tu éxito.",
       "srOnly": "— Agencia OnlyFans para creadoras OFM's Model Agency",
-      "lead": "Agencia exclusiva para creadoras ambiciosas —<br></br>ingresos desde <income></income> al mes<br></br>y apoyo completo en cada etapa.",
+      "lead": "Agencia exclusiva para creadoras ambiciosas —<br></br>total de página desde <income></income> al mes<br></br>y apoyo completo en cada etapa.",
       "incomeHighlight": "$15,000+",
       "ctaPrimary": "Ser modelo",
       "ctaSecondary": "Historias de éxito",
       "statModels": "modelos",
-      "statIncome": "Ingreso medio",
+      "statIncome": "Total medio",
+      "balanceNote": "Todas las cifras del sitio son gross total del balance OnlyFans — no el ingreso neto de la modelo tras comisiones.",
       "statTop": "Top 1% agencias",
       "scroll": "Desplázate"
     },
@@ -72,7 +73,7 @@
         },
         {
           "title": "Resultados reales",
-          "desc": "Con trabajo constante, el ingreso medio es de $12,000 a $35,000+ al mes. El crecimiento es por etapas: base estable, luego escala de PPV y retención de top fans.",
+          "desc": "Con trabajo constante, el total medio de página es de $12,000 a $35,000+ al mes (gross). El crecimiento es por etapas: base estable, luego escala de PPV y retención de top fans.",
           "highlights": [
             "Informes claros de suscripciones, chats y PPV",
             "Enfoque en LTV del fan, no ventas puntuales",
@@ -247,7 +248,7 @@
     },
     "calculator": {
       "eyebrow": "Calculadora",
-      "title": "Descubre tu potencial de ingresos",
+      "title": "Descubre tu potencial de total de página",
       "subtitle": "4 preguntas rápidas — pronóstico personalizado basado en casos reales de OFM",
       "progress": "Paso {current} de {total}",
       "back": "Atrás",
@@ -304,7 +305,7 @@
         "rangeLabel": "Estimación total balance / mes",
         "balanceNote": "Suma bruta en el balance de tu página OnlyFans (gross total), no tus ganancias netas tras comisiones de plataforma y agencia.",
         "withAgency": "con agencia",
-        "timeline": "Tiempo hasta ingreso estable",
+        "timeline": "Tiempo hasta total estable",
         "timelines": {
           "none": "6–10 sem.",
           "starter": "4–8 sem.",
@@ -368,7 +369,7 @@
     "moreLabel": "Más opiniones",
     "ctaText": "¿Te identificas? Envía solicitud — hablamos de tu caso sin compromiso.",
     "ctaButton": "Solicitud",
-    "disclaimer": "Opiniones publicadas con consentimiento escrito de las modelos de OFM's Model Agency. No son reseñas de Google Maps. Las cifras son referencias personales, no garantía de ingresos.",
+    "disclaimer": "Opiniones publicadas con consentimiento escrito de las modelos de OFM's Model Agency. No son reseñas de Google Maps. Las cifras son gross total del balance, no ingreso neto ni garantía de resultado.",
     "summary": {
       "title": "Valoración del trabajo conjunto",
       "basedOn": "según {count} opiniones en el sitio",
@@ -437,27 +438,27 @@
     "eyebrow": "Resultados",
     "title": "Cifras que",
     "titleAccent": "hablan por sí solas",
-    "footnote": "Datos actualizados trimestralmente · privacidad de las modelos preservada",
+    "footnote": "Gross total del balance OnlyFans · no ingreso neto de la modelo · datos actualizados trimestralmente",
     "items": [
       { "label": "Modelos en la agencia", "hint": "Plantilla activa" },
-      { "label": "Ganado por modelos", "hint": "Total en el año" },
-      { "label": "Crecimiento medio de ingresos", "hint": "Primeros 6 meses" },
+      { "label": "Total de balances", "hint": "Gross · total anual" },
+      { "label": "Crecimiento del total", "hint": "Primeros 6 meses" },
       { "label": "Soporte y chats", "hint": "Sin días libres" }
     ]
   },
   "models": {
     "eyebrow": "Resultados",
     "title": "Casos reales",
-    "description": "Capturas de estadísticas de modelos OFM — ingresos netos totales y meses pico. Publicadas con consentimiento, sin datos personales.",
-    "totalNet": "Net total",
-    "peakMonth": "Mes pico",
+    "description": "Capturas de estadísticas OnlyFans — total del balance de página y meses pico. Gross total, no ingreso neto de la modelo. Publicadas con consentimiento, sin datos personales.",
+    "totalNet": "Total del periodo",
+    "peakMonth": "Pico total / mes",
     "perMonth": "/ mes",
     "verified": "Verificado",
     "aggregateLabel": "Combinado en 3 casos",
-    "aggregateHint": "net en todo el periodo de colaboración",
+    "aggregateHint": "gross total · no net de la modelo",
     "cta": "Quiero resultados así",
-    "disclaimer": "Capturas de estadísticas de la plataforma con consentimiento de las modelos. Las cifras reflejan resultados individuales, no ingresos garantizados. OFM no está afiliado a OnlyFans.",
-    "altScreenshot": "Estadísticas de ingresos — caso {tier}",
+    "disclaimer": "Capturas de estadísticas OnlyFans con consentimiento de las modelos. Las cifras son gross total del balance, no ingreso neto ni garantía de resultado. OFM no está afiliado a OnlyFans.",
+    "altScreenshot": "Total del balance de página — caso {tier}",
     "tiers": {
       "elite": "Elite",
       "pro": "Pro",
@@ -540,6 +541,6 @@
   },
   "meta": {
     "siteTitle": "Agencia OnlyFans para modelos — OFM's Model Agency",
-    "siteDescription": "Agencia OnlyFans premium: gestión, marketing, chats 24/7 y crecimiento de ingresos. Solicitud — manager en Telegram en 24 horas."
+    "siteDescription": "Agencia OnlyFans premium: gestión, marketing, chats 24/7 y crecimiento del total de página. Solicitud — manager en Telegram en 24 horas."
   }
 }

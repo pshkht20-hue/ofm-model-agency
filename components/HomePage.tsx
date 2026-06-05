@@ -141,6 +141,15 @@ export function HomePage() {
             </span>
             <span>{t('hero.statTop')}</span>
           </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.75 }}
+            className="mx-auto mt-4 max-w-lg text-center text-[10px] leading-relaxed tracking-wide text-white/30"
+          >
+            {t('hero.balanceNote')}
+          </motion.p>
         </div>
 
         <motion.div

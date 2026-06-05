@@ -38,12 +38,13 @@
       "line2": "Your rules.",
       "line3": "Your success.",
       "srOnly": "— OnlyFans agency for creators OFM's Model Agency",
-      "lead": "Exclusive agency for ambitious creators —<br></br>income from <income></income> per month<br></br>and full support at every step.",
+      "lead": "Exclusive agency for ambitious creators —<br></br>page total from <income></income> per month<br></br>and full support at every step.",
       "incomeHighlight": "$15,000+",
       "ctaPrimary": "Become a model",
       "ctaSecondary": "Success stories",
       "statModels": "creators",
-      "statIncome": "Avg. income",
+      "statIncome": "Avg. page total",
+      "balanceNote": "All figures on this site are gross OnlyFans page totals — not the creator's net payout after fees.",
       "statTop": "Top 1% agencies",
       "scroll": "Scroll down"
     },
@@ -72,7 +73,7 @@
         },
         {
           "title": "Real results",
-          "desc": "With consistent work, average creator income is $12,000 to $35,000+ per month. Growth is staged: stable base first, then PPV scale and top-fan retention.",
+          "desc": "With consistent work, average page total is $12,000 to $35,000+ per month (gross). Growth is staged: stable base first, then PPV scale and top-fan retention.",
           "highlights": [
             "Clear reports on subs, chats, and PPV",
             "Focus on fan LTV, not one-off sales",
@@ -247,7 +248,7 @@
     },
     "calculator": {
       "eyebrow": "Calculator",
-      "title": "Discover your income potential",
+      "title": "Discover your page total potential",
       "subtitle": "4 quick questions — a personalized forecast based on real OFM case studies",
       "progress": "Step {current} of {total}",
       "back": "Back",
@@ -304,7 +305,7 @@
         "rangeLabel": "Total balance estimate / mo",
         "balanceNote": "Gross total shown on your OnlyFans page balance — not your net earnings after platform and agency fees.",
         "withAgency": "with agency",
-        "timeline": "Time to stable income",
+        "timeline": "Time to stable page total",
         "timelines": {
           "none": "6–10 wks",
           "starter": "4–8 wks",
@@ -368,7 +369,7 @@
     "moreLabel": "More reviews",
     "ctaText": "See yourself in these stories? Apply — we'll discuss your case with no obligation.",
     "ctaButton": "Apply",
-    "disclaimer": "Reviews are published with written consent from OFM's Model Agency creators. Not Google Maps reviews. Amounts are personal benchmarks, not guaranteed income.",
+    "disclaimer": "Reviews are published with written consent from OFM's Model Agency creators. Not Google Maps reviews. Amounts are gross page totals, not net payout or guaranteed results.",
     "summary": {
       "title": "Collaboration rating",
       "basedOn": "based on {count} reviews on this site",
@@ -437,27 +438,27 @@
     "eyebrow": "Results",
     "title": "Numbers that",
     "titleAccent": "speak for themselves",
-    "footnote": "Data updated quarterly · creators' privacy preserved",
+    "footnote": "Gross OnlyFans page totals · not creators' net payout · data updated quarterly",
     "items": [
       { "label": "Creators in the agency", "hint": "Active roster" },
-      { "label": "Earned by creators", "hint": "Total over the year" },
-      { "label": "Average revenue growth", "hint": "First 6 months" },
+      { "label": "Combined page total", "hint": "Gross · over the year" },
+      { "label": "Total growth", "hint": "First 6 months" },
       { "label": "Support & chats", "hint": "No days off" }
     ]
   },
   "models": {
     "eyebrow": "Results",
     "title": "Real case studies",
-    "description": "OFM creator earnings screenshots — total net revenue and peak months. Published with consent; no personal data shown.",
-    "totalNet": "Total net",
-    "peakMonth": "Peak month",
+    "description": "OnlyFans statistics screenshots — page balance totals and peak months. Gross totals, not creators' net payout. Published with consent; no personal data shown.",
+    "totalNet": "Total for period",
+    "peakMonth": "Peak total / mo",
     "perMonth": "/ mo",
     "verified": "Verified",
     "aggregateLabel": "Combined across 3 cases",
-    "aggregateHint": "net over full collaboration period",
+    "aggregateHint": "gross total · not creator net",
     "cta": "I want similar results",
-    "disclaimer": "Platform statistics screenshots published with creators' consent. Figures reflect individual case results, not guaranteed income. OFM is not affiliated with OnlyFans.",
-    "altScreenshot": "Earnings statistics — {tier} case",
+    "disclaimer": "OnlyFans statistics screenshots published with creators' consent. Figures are gross page totals, not net payout or guaranteed results. OFM is not affiliated with OnlyFans.",
+    "altScreenshot": "Page balance total — {tier} case",
     "tiers": {
       "elite": "Elite",
       "pro": "Pro",
@@ -540,6 +541,6 @@
   },
   "meta": {
     "siteTitle": "OnlyFans agency for creators — OFM's Model Agency",
-    "siteDescription": "Premium OnlyFans agency: management, marketing, 24/7 chats and revenue growth. Apply — a manager will reach out on Telegram within 24 hours."
+    "siteDescription": "Premium OnlyFans agency: management, marketing, 24/7 chats and real page total case studies. Apply — a manager will reach out on Telegram within 24 hours."
   }
 }
