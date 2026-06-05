@@ -222,6 +222,7 @@
     "name": "Name",
     "age": "Age",
     "telegram": "Telegram",
+    "telegramPlaceholder": "@username or phone number",
     "message": "Message",
     "submit": "Submit application",
     "sending": "Sending…",
@@ -231,8 +232,8 @@
     "errorNetwork": "No connection. Check your network and try again.",
     "honeypot": "Leave this field empty",
     "interests": "Interests",
-    "interestsHint": "This helps us understand your brand image and what type of creator you are.",
-    "interestsPlaceholder": "Hobbies, style, niche, vibe — anything that shows your type (optional)",
+    "interestsHint": "This helps us understand your image and type — what we'll build your strategy around.",
+    "interestsPlaceholder": "Hobbies, style, image — anything that reveals your type (optional)",
     "ageConfirm": "I am 18 years old",
     "submitAnother": "Submit another application",
     "consent": "By submitting, you agree we may use your data to contact you."

@@ -155,7 +155,7 @@ export function ContactForm() {
             required
             minLength={3}
             maxLength={64}
-            placeholder="@username"
+            placeholder={t('telegramPlaceholder')}
             className={inputClass}
             disabled={status === 'loading'}
           />
