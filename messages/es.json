@@ -353,17 +353,17 @@
     "ariaUnlike": "Quitar me gusta"
   },
   "cookieConsent": {
-    "title": "Usamos cookies",
-    "description": "Las cookies necesarias permiten que el sitio funcione. Las analíticas (Google Analytics) solo con su consentimiento. Más información en la",
-    "privacyLink": "Política de privacidad",
-    "accept": "Aceptar todas",
+    "title": "Cookies",
+    "description": "necesarias para el sitio; analítica solo con su consentimiento",
+    "privacyLink": "política de privacidad",
+    "accept": "Aceptar",
     "reject": "Solo necesarias",
-    "detailsToggle": "Más sobre cookies",
+    "detailsToggle": "Más info",
     "necessaryTitle": "Necesarias",
-    "necessaryDesc": "Idioma de la interfaz y recordar su elección. Siempre activas.",
-    "analyticsTitle": "Analíticas",
-    "analyticsDesc": "Google Analytics 4 — estadísticas anónimas de visitas. Solo si usted lo acepta.",
-    "legalNote": "Puede cambiar su elección en cualquier momento en «Configuración de cookies» en el pie de página. Rechazar la analítica no afecta el envío de solicitudes."
+    "necessaryDesc": "idioma y su preferencia de cookies",
+    "analyticsTitle": "Analítica",
+    "analyticsDesc": "Google Analytics, solo con consentimiento",
+    "legalNote": "Cambie su elección en «Configuración de cookies» en el pie de página."
   },
   "languageSwitcher": {
     "menuTitle": "Idioma del sitio",

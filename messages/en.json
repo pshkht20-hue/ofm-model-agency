@@ -353,17 +353,17 @@
     "ariaUnlike": "Remove like"
   },
   "cookieConsent": {
-    "title": "We use cookies",
-    "description": "Necessary cookies keep the site working. Analytics cookies (Google Analytics) are used only with your consent. Learn more in our",
-    "privacyLink": "Privacy Policy",
-    "accept": "Accept all",
-    "reject": "Necessary only",
-    "detailsToggle": "More about cookies",
-    "necessaryTitle": "Necessary",
-    "necessaryDesc": "Interface language and remembering your cookie choice. Always active.",
+    "title": "Cookies",
+    "description": "essential for the site to work; analytics only with your consent",
+    "privacyLink": "privacy policy",
+    "accept": "Accept",
+    "reject": "Essential only",
+    "detailsToggle": "Learn more",
+    "necessaryTitle": "Essential",
+    "necessaryDesc": "language and your cookie preference",
     "analyticsTitle": "Analytics",
-    "analyticsDesc": "Google Analytics 4 — anonymous visit statistics. Enabled only if you choose.",
-    "legalNote": "You can change your choice anytime via \"Cookie settings\" in the footer. Declining analytics does not affect submitting an application."
+    "analyticsDesc": "Google Analytics, consent-based only",
+    "legalNote": "Change your choice anytime via \"Cookie settings\" in the footer."
   },
   "languageSwitcher": {
     "menuTitle": "Site language",

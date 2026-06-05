@@ -1,7 +1,7 @@
 'use client';
 
 import { AnimatePresence, motion } from 'framer-motion';
-import { Cookie, ChevronDown, Shield } from 'lucide-react';
+import { Cookie, ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
@@ -41,112 +41,114 @@ export function CookieConsent() {
           role="dialog"
           aria-labelledby="cookie-consent-title"
           aria-describedby="cookie-consent-desc"
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 24 }}
-          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-x-0 bottom-0 z-[80] p-4 sm:p-5 pointer-events-none"
+          exit={{ opacity: 0, y: 16 }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          className="fixed inset-x-0 bottom-0 z-[80] pointer-events-none px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-4"
         >
-          <div className="pointer-events-auto mx-auto max-w-3xl overflow-hidden rounded-2xl border border-white/[0.1] bg-[#0a0a12]/95 shadow-[0_-8px_48px_-12px_rgba(255,91,181,0.25),0_0_0_1px_rgba(255,255,255,0.04)] backdrop-blur-xl">
+          <div className="pointer-events-auto mx-auto max-w-4xl overflow-hidden rounded-xl border border-white/[0.09] bg-[#07070d]/94 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.55)] backdrop-blur-md">
             <div
-              className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-pink/50 to-transparent"
+              className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.12] to-transparent"
               aria-hidden
             />
 
-            <div className="relative p-5 sm:p-6">
-              <div className="flex gap-4">
-                <div
-                  className="hidden sm:flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-accent-pink/25 bg-accent-pink/[0.08] text-accent-pink"
-                  aria-hidden
-                >
-                  <Cookie className="h-5 w-5" />
+            <div className="relative p-3 sm:px-4 sm:py-3">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+                <div className="flex min-w-0 flex-1 items-start gap-2.5">
+                  <span
+                    className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03] text-white/45"
+                    aria-hidden
+                  >
+                    <Cookie className="h-3.5 w-3.5" />
+                  </span>
+
+                  <div className="min-w-0 flex-1">
+                    <p
+                      id="cookie-consent-desc"
+                      className="text-[12px] sm:text-[13px] text-white/58 leading-snug"
+                    >
+                      <span
+                        id="cookie-consent-title"
+                        className="font-medium text-white/82"
+                      >
+                        {t('title')}
+                      </span>
+                      {' — '}
+                      {t('description')}{' '}
+                      <Link
+                        href="/privacy"
+                        className="text-white/72 underline decoration-white/25 underline-offset-2 transition hover:text-white hover:decoration-accent-pink/50"
+                      >
+                        {t('privacyLink')}
+                      </Link>
+                      .
+                    </p>
+
+                    <button
+                      type="button"
+                      onClick={() => setDetailsOpen((open) => !open)}
+                      className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-medium text-white/38 transition hover:text-white/62"
+                      aria-expanded={detailsOpen}
+                    >
+                      {t('detailsToggle')}
+                      <ChevronDown
+                        className={`h-3 w-3 transition-transform ${detailsOpen ? 'rotate-180' : ''}`}
+                        aria-hidden
+                      />
+                    </button>
+                  </div>
                 </div>
 
-                <div className="min-w-0 flex-1">
-                  <h2
-                    id="cookie-consent-title"
-                    className="font-serif text-lg sm:text-xl text-white/95 tracking-tight"
-                  >
-                    {t('title')}
-                  </h2>
-                  <p
-                    id="cookie-consent-desc"
-                    className="mt-2 text-sm text-white/55 leading-relaxed"
-                  >
-                    {t('description')}{' '}
-                    <Link
-                      href="/privacy"
-                      className="text-accent-pink hover:text-accent-cyan transition underline-offset-2 hover:underline"
-                    >
-                      {t('privacyLink')}
-                    </Link>
-                    .
-                  </p>
-
+                <div className="flex shrink-0 gap-2 sm:pl-0">
                   <button
                     type="button"
-                    onClick={() => setDetailsOpen((open) => !open)}
-                    className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-white/45 hover:text-white/70 transition"
-                    aria-expanded={detailsOpen}
+                    onClick={() => choose('necessary')}
+                    className="flex-1 sm:flex-none rounded-lg border border-white/[0.1] bg-transparent px-3 py-2 text-[12px] sm:text-[13px] font-medium text-white/62 transition hover:border-white/[0.18] hover:bg-white/[0.04] hover:text-white/85 whitespace-nowrap"
                   >
-                    <Shield className="h-3.5 w-3.5" aria-hidden />
-                    {t('detailsToggle')}
-                    <ChevronDown
-                      className={`h-3.5 w-3.5 transition-transform ${detailsOpen ? 'rotate-180' : ''}`}
-                      aria-hidden
-                    />
+                    {t('reject')}
                   </button>
-
-                  <AnimatePresence initial={false}>
-                    {detailsOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.25 }}
-                        className="overflow-hidden"
-                      >
-                        <ul className="mt-3 space-y-2.5 rounded-xl border border-white/[0.06] bg-white/[0.02] p-3.5 text-xs text-white/50 leading-relaxed">
-                          <li>
-                            <span className="font-medium text-white/70">
-                              {t('necessaryTitle')}
-                            </span>
-                            {' — '}
-                            {t('necessaryDesc')}
-                          </li>
-                          <li>
-                            <span className="font-medium text-white/70">
-                              {t('analyticsTitle')}
-                            </span>
-                            {' — '}
-                            {t('analyticsDesc')}
-                          </li>
-                        </ul>
-                        <p className="mt-3 text-[11px] text-white/35 leading-relaxed">
-                          {t('legalNote')}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <button
+                    type="button"
+                    onClick={() => choose('all')}
+                    className="flex-1 sm:flex-none rounded-lg border border-accent-pink/35 bg-accent-pink/90 px-3.5 py-2 text-[12px] sm:text-[13px] font-medium text-white shadow-[0_0_20px_-10px_rgba(255,91,181,0.55)] transition hover:bg-accent-pink hover:brightness-105 whitespace-nowrap"
+                  >
+                    {t('accept')}
+                  </button>
                 </div>
               </div>
 
-              <div className="mt-5 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-end gap-2.5 sm:gap-3">
-                <button
-                  type="button"
-                  onClick={() => choose('necessary')}
-                  className="w-full sm:w-auto rounded-full border border-white/[0.12] bg-white/[0.03] px-5 py-2.5 text-sm font-medium text-white/70 transition hover:border-white/[0.22] hover:bg-white/[0.06] hover:text-white"
-                >
-                  {t('reject')}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => choose('all')}
-                  className="w-full sm:w-auto btn-primary px-6 py-2.5 text-sm"
-                >
-                  {t('accept')}
-                </button>
-              </div>
+              <AnimatePresence initial={false}>
+                {detailsOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.22 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="mt-3 border-t border-white/[0.06] pt-3">
+                      <ul className="grid gap-2 text-[11px] sm:text-xs text-white/48 leading-relaxed sm:grid-cols-2">
+                        <li className="rounded-lg bg-white/[0.02] px-2.5 py-2">
+                          <span className="font-medium text-white/68">
+                            {t('necessaryTitle')}
+                          </span>
+                          <span className="text-white/42"> — {t('necessaryDesc')}</span>
+                        </li>
+                        <li className="rounded-lg bg-white/[0.02] px-2.5 py-2">
+                          <span className="font-medium text-white/68">
+                            {t('analyticsTitle')}
+                          </span>
+                          <span className="text-white/42"> — {t('analyticsDesc')}</span>
+                        </li>
+                      </ul>
+                      <p className="mt-2 text-[10px] sm:text-[11px] text-white/32 leading-relaxed">
+                        {t('legalNote')}
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
         </motion.div>

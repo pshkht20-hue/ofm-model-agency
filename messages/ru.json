@@ -353,17 +353,17 @@
     "ariaUnlike": "Убрать лайк"
   },
   "cookieConsent": {
-    "title": "Мы используем cookies",
-    "description": "Необходимые cookies нужны для работы сайта. Аналитические — только с вашего согласия (Google Analytics). Подробнее в",
-    "privacyLink": "Политике конфиденциальности",
-    "accept": "Принять все",
-    "reject": "Только необходимые",
-    "detailsToggle": "Подробнее о cookies",
+    "title": "Cookies",
+    "description": "необходимые для работы сайта, аналитика — только с вашего согласия",
+    "privacyLink": "политике конфиденциальности",
+    "accept": "Принять",
+    "reject": "Только нужные",
+    "detailsToggle": "Подробнее",
     "necessaryTitle": "Необходимые",
-    "necessaryDesc": "Язык интерфейса и запоминание вашего выбора. Не отключаются.",
-    "analyticsTitle": "Аналитические",
-    "analyticsDesc": "Google Analytics 4 — анонимная статистика посещений. Включаются только по вашему выбору.",
-    "legalNote": "Вы можете изменить выбор в любой момент через «Настройки cookies» в подвале сайта. Отказ от аналитики не влияет на отправку заявки."
+    "necessaryDesc": "язык и ваш выбор по cookies",
+    "analyticsTitle": "Аналитика",
+    "analyticsDesc": "Google Analytics, только по согласию",
+    "legalNote": "Изменить выбор: «Настройки cookies» в подвале сайта."
   },
   "languageSwitcher": {
     "menuTitle": "Язык сайта",
