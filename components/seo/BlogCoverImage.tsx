@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 import type { BlogCover } from '@/lib/content/blog/covers';
 
 type BlogCoverImageProps = {
@@ -12,6 +15,7 @@ export function BlogCoverImage({
   priority = false,
   variant = 'hero',
 }: BlogCoverImageProps) {
+  const [src, setSrc] = useState(cover.localSrc);
   const isCard = variant === 'card';
   const height = isCard ? 'h-44 md:h-52' : 'h-52 md:h-72';
   const sizes = isCard
@@ -21,12 +25,15 @@ export function BlogCoverImage({
   return (
     <figure className={`relative w-full overflow-hidden rounded-2xl border border-white/[0.08] ${height} group`}>
       <Image
-        src={cover.localSrc}
+        src={src}
         alt={cover.alt}
         fill
         priority={priority}
         sizes={sizes}
         className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+        onError={() => {
+          if (src !== cover.remoteSrc) setSrc(cover.remoteSrc);
+        }}
       />
       <div
         className="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/40 to-transparent pointer-events-none"

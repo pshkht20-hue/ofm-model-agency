@@ -43,7 +43,7 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     unsplashUrl: 'https://unsplash.com/photos/turned-on-gray-laptop-computer-hpjSkU2UYSU',
   },
   'onlyfans-agentstvo-ukraina': {
-    localSrc: '/blog/covers/onlyfans-agentstvo-dlya-nachinayushchih.jpg',
+    localSrc: '/blog/covers/onlyfans-agentstvo-ukraina.jpg',
     remoteSrc:
       'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=80',
     alt: 'Городской пейзаж — удалённая работа модели',
