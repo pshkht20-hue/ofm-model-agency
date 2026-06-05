@@ -4,6 +4,7 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google';
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import { JsonLd } from '@/components/JsonLd';
 import { routing, openGraphLocale, type Locale } from '@/i18n/routing';
 import { getSiteUrl, siteConfig } from '@/lib/site';
@@ -85,6 +86,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
     >
       <body className="min-h-full font-sans antialiased bg-[#050508] text-[#f4f2ef]">
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           <JsonLd locale={locale as Locale} />
           {children}
