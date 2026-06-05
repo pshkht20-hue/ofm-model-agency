@@ -1,7 +1,7 @@
 import { Link } from '@/i18n/navigation';
 
 const SIZES = {
-  nav: { mark: 38, gap: 8, title: 'text-[12px] sm:text-[14px] lg:text-base', tag: 'text-[6px] sm:text-[7px] lg:text-[8px]' },
+  nav: { mark: 36, gap: 7, title: 'text-[11px] sm:text-[13px] lg:text-base', tag: 'text-[6px] sm:text-[7px] lg:text-[8px]' },
   sm: { mark: 36, gap: 10, title: 'text-[15px]', tag: 'text-[8px]' },
   md: { mark: 44, gap: 12, title: 'text-base md:text-lg', tag: 'text-[8px] md:text-[9px]' },
   lg: { mark: 52, gap: 14, title: 'text-lg md:text-xl', tag: 'text-[9px]' },
@@ -11,6 +11,8 @@ type LogoProps = {
   size?: keyof typeof SIZES;
   showWordmark?: boolean;
   wordmarkOnMobile?: boolean;
+  /** Скрыть подпись Creator Management до lg (для компактной шапки) */
+  hideTaglineBelowLg?: boolean;
   href?: string;
   className?: string;
   onClick?: () => void;
@@ -72,6 +74,7 @@ export function Logo({
   size = 'md',
   showWordmark = true,
   wordmarkOnMobile = false,
+  hideTaglineBelowLg = false,
   href = '#',
   className = '',
   onClick,
@@ -87,14 +90,16 @@ export function Logo({
       />
       {showWordmark && (
         <div
-          className={`shrink-0 text-left ${wordmarkVisibility}`}
+          className={`min-w-0 overflow-hidden text-left ${wordmarkVisibility}`}
           style={{ marginLeft: s.gap }}
         >
           <div className={`font-semibold tracking-tight leading-[1.1] text-white whitespace-nowrap ${s.title}`}>
             OFM&apos;s Agency
           </div>
           <div
-            className={`font-medium tracking-[0.18em] sm:tracking-[0.22em] uppercase text-white/45 mt-0.5 sm:mt-1 leading-none ${s.tag}`}
+            className={`font-medium tracking-[0.18em] sm:tracking-[0.22em] uppercase text-white/45 mt-0.5 sm:mt-1 leading-none ${s.tag} ${
+              hideTaglineBelowLg ? 'hidden lg:block' : ''
+            }`}
           >
             Creator Management
           </div>
@@ -103,7 +108,7 @@ export function Logo({
     </>
   );
 
-  const wrapClass = `group inline-flex items-center transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] ${className}`;
+  const wrapClass = `group flex items-center min-w-0 max-w-full transition-transform duration-300 lg:hover:scale-[1.02] lg:active:scale-[0.98] ${className}`;
 
   if (href) {
     return (
