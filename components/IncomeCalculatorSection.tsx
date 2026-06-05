@@ -274,8 +274,11 @@ export function IncomeCalculatorSection() {
                           </span>
                         </div>
 
-                        <p className="mb-3 text-xs uppercase tracking-[0.18em] text-white/40">
+                        <p className="mb-1 text-xs uppercase tracking-[0.18em] text-white/40">
                           {t('result.rangeLabel')}
+                        </p>
+                        <p className="mb-4 text-[11px] leading-relaxed text-white/35">
+                          {t('result.balanceNote')}
                         </p>
 
                         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-2">

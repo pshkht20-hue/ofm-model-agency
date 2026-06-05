@@ -254,7 +254,7 @@
       "next": "Next",
       "calculate": "Calculate",
       "restart": "Start over",
-      "disclaimer": "An estimate, not a guarantee. Actual income depends on content, niche, consistency, and team engagement.",
+      "disclaimer": "An estimate of total OnlyFans page balance, not the creator's net payout. Not a guarantee — depends on content, niche, consistency, and team support.",
       "questions": {
         "experience": {
           "title": "Do you have an OnlyFans account?",
@@ -300,7 +300,8 @@
       "result": {
         "eyebrow": "Your forecast",
         "title": "Potential with OFM",
-        "rangeLabel": "Income estimate / mo",
+        "rangeLabel": "Total balance estimate / mo",
+        "balanceNote": "Gross total shown on your OnlyFans page balance — not your net earnings after platform and agency fees.",
         "withAgency": "with agency",
         "timeline": "Time to stable income",
         "timelines": {
@@ -308,7 +309,7 @@
           "starter": "4–8 wks",
           "active": "3–6 wks"
         },
-        "agencyNote": "With an agency, average uplift vs. solo work is +15–35% thanks to 24/7 chats, marketing, and strategy.",
+        "agencyNote": "Figures reflect page total. With an agency, average total uplift vs. solo work is +15–35% thanks to 24/7 chats, marketing, and strategy.",
         "insightsTitle": "Personal recommendations",
         "tiers": {
           "launch": "Launch",
@@ -345,7 +346,7 @@
         "archetypeBlonde": "Girl-next-door is competitive but stable: lives, photosets, and personal DMs deliver predictable growth.",
         "archetypeTattoo": "Alt looks stand out in the feed: edgy roleplay and customs can add +250% to average spend from engaged fans.",
         "archetypeEbony": "Ethnic niche is growing globally: dance, curves, and GFE build a strong base for repeat purchases.",
-        "archetypeBabyface": "Cute look + GFE and soft roleplay: fans pay for closeness fantasy, not just content."
+        "archetypeBabyface": "Babyface is one of the most in-demand archetypes: GFE and soft roleplay drive high LTV. Even starting from zero with no audience, a realistic benchmark is $16K+/mo with the OFM team."
       }
     },
     "contact": {

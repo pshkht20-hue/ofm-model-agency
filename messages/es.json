@@ -254,7 +254,7 @@
       "next": "Siguiente",
       "calculate": "Calcular",
       "restart": "Empezar de nuevo",
-      "disclaimer": "Una estimación, no una garantía. El ingreso real depende del contenido, nicho, constancia y el equipo.",
+      "disclaimer": "Estimación del total del balance de la página OnlyFans, no el ingreso neto de la modelo. No es garantía — depende del contenido, nicho, constancia y el equipo.",
       "questions": {
         "experience": {
           "title": "¿Tienes cuenta de OnlyFans?",
@@ -300,7 +300,8 @@
       "result": {
         "eyebrow": "Tu pronóstico",
         "title": "Potencial con OFM",
-        "rangeLabel": "Estimación de ingreso / mes",
+        "rangeLabel": "Estimación total balance / mes",
+        "balanceNote": "Suma bruta en el balance de tu página OnlyFans (gross total), no tus ganancias netas tras comisiones de plataforma y agencia.",
         "withAgency": "con agencia",
         "timeline": "Tiempo hasta ingreso estable",
         "timelines": {
@@ -308,7 +309,7 @@
           "starter": "4–8 sem.",
           "active": "3–6 sem."
         },
-        "agencyNote": "Con agencia, el aumento medio vs. trabajo en solitario es +15–35% gracias a chats 24/7, marketing y estrategia.",
+        "agencyNote": "Las cifras reflejan el total de la página. Con agencia, el aumento medio del total vs. trabajo en solitario es +15–35% gracias a chats 24/7, marketing y estrategia.",
         "insightsTitle": "Recomendaciones personalizadas",
         "tiers": {
           "launch": "Inicio",
@@ -345,7 +346,7 @@
         "archetypeBlonde": "Girl-next-door es competitivo pero estable: lives, photosets y DMs personales dan crecimiento predecible.",
         "archetypeTattoo": "El look alt destaca en el feed: roleplay edgy y customs pueden sumar +250% al gasto medio de fans comprometidos.",
         "archetypeEbony": "El nicho étnico crece globalmente: baile, curves y GFE — base sólida para compras repetidas.",
-        "archetypeBabyface": "Look cute + GFE y roleplay suave: los fans pagan por la fantasía de cercanía, no solo por contenido."
+        "archetypeBabyface": "Babyface es uno de los arquetipos más demandados: GFE y roleplay suave generan alto LTV. Incluso empezando de cero sin audiencia, un referente realista es $16K+/mes con el equipo OFM."
       }
     },
     "contact": {

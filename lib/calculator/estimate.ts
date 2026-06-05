@@ -32,40 +32,29 @@ export type CalculatorResult = {
   timelineKey: 'none' | 'starter' | 'active';
 };
 
-const EXPERIENCE_BASE: Record<Experience, [number, number]> = {
-  none: [2_800, 7_500],
-  starter: [5_500, 14_000],
-  active: [11_000, 26_000],
-};
+/** Абсолютный минимум total баланса страницы (даже без типажа, аудитории и времени) */
+const GLOBAL_FLOOR_LOW = 7_000;
+const GLOBAL_FLOOR_HIGH = 8_000;
 
-const SOCIAL_MULT: Record<Social, number> = {
-  none: 0.88,
-  under5k: 1,
-  mid: 1.22,
-  strong: 1.48,
+/**
+ * Диапазоны total баланса страницы OnlyFans (gross), не net модели.
+ * `min` — score 0: без опыта, без аудитории, минимум времени.
+ * `max` — score 1: опыт + соцсети + полная занятость.
+ */
+const ARCHETYPE_BANDS: Record<
+  Archetype,
+  { low: [number, number]; high: [number, number] }
+> = {
+  exploring: { low: [7_000, 13_000], high: [11_000, 26_000] },
+  natural: { low: [7_000, 12_000], high: [10_000, 24_000] },
+  babyface: { low: [16_000, 24_000], high: [40_000, 58_000] },
+  cosplay: { low: [18_000, 28_000], high: [45_000, 68_000] },
+  asian: { low: [15_000, 26_000], high: [42_000, 62_000] },
+  busty: { low: [14_000, 24_000], high: [38_000, 55_000] },
+  blonde: { low: [10_000, 18_000], high: [32_000, 50_000] },
+  tattoo: { low: [11_000, 19_000], high: [34_000, 48_000] },
+  ebony: { low: [11_000, 20_000], high: [35_000, 52_000] },
 };
-
-const HOURS_MULT: Record<Hours, number> = {
-  light: 0.78,
-  medium: 1,
-  intense: 1.28,
-};
-
-/** Нейтральные варианты без «штрафа» — рост через стратегию агентства */
-const ARCHETYPE_MULT: Record<Archetype, [number, number]> = {
-  exploring: [1, 1.08],
-  natural: [0.98, 1.06],
-  cosplay: [1.18, 1.42],
-  asian: [1.14, 1.36],
-  busty: [1.1, 1.3],
-  blonde: [1.06, 1.24],
-  tattoo: [1.08, 1.28],
-  ebony: [1.08, 1.26],
-  babyface: [1.04, 1.22],
-};
-
-const AGENCY_LOW = 1.14;
-const AGENCY_HIGH = 1.36;
 
 const ARCHETYPE_INSIGHT: Record<Archetype, string> = {
   exploring: 'archetypeExplore',
@@ -83,6 +72,18 @@ function roundToHundred(value: number): number {
   return Math.round(value / 100) * 100;
 }
 
+function lerp(from: number, to: number, t: number): number {
+  return roundToHundred(from + (to - from) * t);
+}
+
+/** 0 = новичок без аудитории и времени, 1 = опыт + соцсети + полная занятость */
+function profileScore(answers: CalculatorAnswers): number {
+  const experience = { none: 0, starter: 0.45, active: 1 }[answers.experience];
+  const social = { none: 0, under5k: 0.3, mid: 0.65, strong: 1 }[answers.social];
+  const hours = { light: 0, medium: 0.5, intense: 1 }[answers.hours];
+  return (experience + social + hours) / 3;
+}
+
 function resolveTier(high: number): ResultTier {
   if (high < 9_000) return 'launch';
   if (high < 20_000) return 'growth';
@@ -95,7 +96,7 @@ function resolveInsights(answers: CalculatorAnswers): string[] {
 
   if (answers.experience === 'none') keys.push('launchSupport');
   if (answers.social === 'none' || answers.social === 'under5k') keys.push('socialGrowth');
-  if (answers.hours === 'light') keys.push('moreHours');
+  if (answers.hours === 'light' && answers.archetype !== 'babyface') keys.push('moreHours');
   if (answers.experience === 'active' && answers.social !== 'none') keys.push('scaleReady');
   if (answers.experience === 'starter' && answers.hours !== 'light') keys.push('momentum');
 
@@ -104,30 +105,24 @@ function resolveInsights(answers: CalculatorAnswers): string[] {
   return [...new Set(keys)].slice(0, 4);
 }
 
+function finalizeRange(low: number, high: number): { low: number; high: number } {
+  let safeLow = Math.max(low, GLOBAL_FLOOR_LOW);
+  let safeHigh = Math.max(high, GLOBAL_FLOOR_HIGH, safeLow + 1_500);
+  return { low: roundToHundred(safeLow), high: roundToHundred(safeHigh) };
+}
+
+function estimateFromArchetypeBand(answers: CalculatorAnswers): { low: number; high: number } {
+  const band = ARCHETYPE_BANDS[answers.archetype];
+  const score = profileScore(answers);
+
+  return finalizeRange(
+    lerp(band.low[0], band.low[1], score),
+    lerp(band.high[0], band.high[1], score),
+  );
+}
+
 export function estimateIncome(answers: CalculatorAnswers): CalculatorResult {
-  const [baseLow, baseHigh] = EXPERIENCE_BASE[answers.experience];
-  const [archLowMult, archHighMult] = ARCHETYPE_MULT[answers.archetype];
-  const socialHours = SOCIAL_MULT[answers.social] * HOURS_MULT[answers.hours];
-
-  let low = roundToHundred(baseLow * socialHours * AGENCY_LOW * archLowMult);
-  let high = roundToHundred(baseHigh * socialHours * AGENCY_HIGH * archHighMult);
-
-  const topArchetypes: Archetype[] = ['cosplay', 'asian', 'busty'];
-  const ceiling =
-    answers.experience === 'active' &&
-    answers.social === 'strong' &&
-    answers.hours === 'intense' &&
-    topArchetypes.includes(answers.archetype)
-      ? 85_000
-      : answers.experience === 'active'
-        ? 60_000
-        : answers.archetype === 'cosplay' || answers.archetype === 'asian'
-          ? 48_000
-          : 44_000;
-
-  high = Math.min(high, ceiling);
-  low = Math.min(low, Math.round(high * 0.4));
-  low = Math.max(low, 2_400);
+  const { low, high } = estimateFromArchetypeBand(answers);
 
   return {
     tier: resolveTier(high),
