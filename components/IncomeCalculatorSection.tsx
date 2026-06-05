@@ -10,6 +10,7 @@ import { UsdDisplay } from '@/components/ui/UsdDisplay';
 import {
   estimateIncome,
   QUESTION_ORDER,
+  type Archetype,
   type CalculatorAnswers,
   type Experience,
   type Hours,
@@ -57,9 +58,10 @@ type OptionCardProps = {
   label: string;
   description: string;
   onSelect: () => void;
+  highlighted?: boolean;
 };
 
-function OptionCard({ selected, label, description, onSelect }: OptionCardProps) {
+function OptionCard({ selected, label, description, onSelect, highlighted = false }: OptionCardProps) {
   const onMove = useCallback((e: MouseEvent<HTMLButtonElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -78,7 +80,9 @@ function OptionCard({ selected, label, description, onSelect }: OptionCardProps)
       className={`group relative w-full overflow-hidden rounded-2xl border p-5 text-left transition-colors duration-300 ${
         selected
           ? 'border-accent-pink/50 bg-accent-pink/[0.08] shadow-[0_0_32px_-8px_rgba(255,91,181,0.45)]'
-          : 'border-white/[0.08] bg-[#0a0a10]/80 hover:border-white/[0.16]'
+          : highlighted
+            ? 'border-accent-cyan/20 bg-accent-cyan/[0.04] hover:border-accent-cyan/35'
+            : 'border-white/[0.08] bg-[#0a0a10]/80 hover:border-white/[0.16]'
       }`}
     >
       <div
@@ -118,11 +122,7 @@ export function IncomeCalculatorSection() {
   const totalSteps = QUESTION_ORDER.length;
 
   const result = useMemo(() => {
-    if (
-      !answers.experience ||
-      !answers.social ||
-      !answers.hours
-    ) {
+    if (!answers.experience || !answers.archetype || !answers.social || !answers.hours) {
       return null;
     }
     return estimateIncome(answers as CalculatorAnswers);
@@ -133,7 +133,7 @@ export function IncomeCalculatorSection() {
 
   const currentValue = answers[questionId as keyof CalculatorAnswers];
 
-  function selectOption(value: Experience | Social | Hours) {
+  function selectOption(value: Experience | Archetype | Social | Hours) {
     setAnswers((prev) => ({ ...prev, [questionId]: value }));
   }
 
@@ -207,23 +207,37 @@ export function IncomeCalculatorSection() {
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <h3 className="heading-card mb-6 text-xl md:text-2xl">
+                  <h3 className="heading-card mb-3 text-xl md:text-2xl">
                     {t(`questions.${questionId}.title`)}
                   </h3>
 
-                  <div className="space-y-3">
+                  {questionId === 'archetype' && (
+                    <p className="mb-6 text-sm leading-relaxed text-white/50">
+                      {t('questions.archetype.hint')}
+                    </p>
+                  )}
+
+                  <div
+                    className={`space-y-3 ${
+                      questionId === 'archetype'
+                        ? 'max-h-[min(52vh,420px)] overflow-y-auto pr-1'
+                        : ''
+                    }`}
+                  >
                     {optionKeys.map((key) => {
                       const option = t.raw(`questions.${questionId}.options.${key}`) as {
                         label: string;
                         desc: string;
                       };
+                      const isInclusive = questionId === 'archetype' && (key === 'exploring' || key === 'natural');
                       return (
                         <OptionCard
                           key={key}
                           selected={currentValue === key}
                           label={option.label}
                           description={option.desc}
-                          onSelect={() => selectOption(key as Experience & Social & Hours)}
+                          onSelect={() => selectOption(key as Experience & Archetype & Social & Hours)}
+                          highlighted={isInclusive}
                         />
                       );
                     })}
@@ -251,6 +265,9 @@ export function IncomeCalculatorSection() {
                           <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-pink/30 bg-accent-pink/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-accent-pink">
                             <Sparkles className="h-3 w-3" />
                             {t(`result.tiers.${result.tier}`)}
+                          </span>
+                          <span className="inline-flex items-center rounded-full border border-accent-cyan/25 bg-accent-cyan/[0.08] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-accent-cyan/90">
+                            {t(`result.archetypes.${result.archetype}`)}
                           </span>
                           <span className="text-[10px] uppercase tracking-[0.14em] text-white/35">
                             {t('result.withAgency')}

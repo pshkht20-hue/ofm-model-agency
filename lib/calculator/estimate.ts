@@ -2,8 +2,21 @@ export type Experience = 'none' | 'starter' | 'active';
 export type Social = 'none' | 'under5k' | 'mid' | 'strong';
 export type Hours = 'light' | 'medium' | 'intense';
 
+/** Типаж / ниша — «exploring» и «natural» без штрафа, с акцентом на стратегию */
+export type Archetype =
+  | 'exploring'
+  | 'natural'
+  | 'cosplay'
+  | 'asian'
+  | 'busty'
+  | 'blonde'
+  | 'tattoo'
+  | 'ebony'
+  | 'babyface';
+
 export type CalculatorAnswers = {
   experience: Experience;
+  archetype: Archetype;
   social: Social;
   hours: Hours;
 };
@@ -12,6 +25,7 @@ export type ResultTier = 'launch' | 'growth' | 'scale' | 'elite';
 
 export type CalculatorResult = {
   tier: ResultTier;
+  archetype: Archetype;
   low: number;
   high: number;
   insightKeys: string[];
@@ -37,8 +51,33 @@ const HOURS_MULT: Record<Hours, number> = {
   intense: 1.28,
 };
 
+/** Нейтральные варианты без «штрафа» — рост через стратегию агентства */
+const ARCHETYPE_MULT: Record<Archetype, [number, number]> = {
+  exploring: [1, 1.08],
+  natural: [0.98, 1.06],
+  cosplay: [1.18, 1.42],
+  asian: [1.14, 1.36],
+  busty: [1.1, 1.3],
+  blonde: [1.06, 1.24],
+  tattoo: [1.08, 1.28],
+  ebony: [1.08, 1.26],
+  babyface: [1.04, 1.22],
+};
+
 const AGENCY_LOW = 1.14;
 const AGENCY_HIGH = 1.36;
+
+const ARCHETYPE_INSIGHT: Record<Archetype, string> = {
+  exploring: 'archetypeExplore',
+  natural: 'archetypeNatural',
+  cosplay: 'archetypeCosplay',
+  asian: 'archetypeAsian',
+  busty: 'archetypeBusty',
+  blonde: 'archetypeBlonde',
+  tattoo: 'archetypeTattoo',
+  ebony: 'archetypeEbony',
+  babyface: 'archetypeBabyface',
+};
 
 function roundToHundred(value: number): number {
   return Math.round(value / 100) * 100;
@@ -52,7 +91,7 @@ function resolveTier(high: number): ResultTier {
 }
 
 function resolveInsights(answers: CalculatorAnswers): string[] {
-  const keys: string[] = [];
+  const keys: string[] = [ARCHETYPE_INSIGHT[answers.archetype]];
 
   if (answers.experience === 'none') keys.push('launchSupport');
   if (answers.social === 'none' || answers.social === 'under5k') keys.push('socialGrowth');
@@ -62,28 +101,37 @@ function resolveInsights(answers: CalculatorAnswers): string[] {
 
   if (!keys.includes('agencyBoost')) keys.push('agencyBoost');
 
-  return [...new Set(keys)].slice(0, 3);
+  return [...new Set(keys)].slice(0, 4);
 }
 
 export function estimateIncome(answers: CalculatorAnswers): CalculatorResult {
   const [baseLow, baseHigh] = EXPERIENCE_BASE[answers.experience];
-  const mult = SOCIAL_MULT[answers.social] * HOURS_MULT[answers.hours];
+  const [archLowMult, archHighMult] = ARCHETYPE_MULT[answers.archetype];
+  const socialHours = SOCIAL_MULT[answers.social] * HOURS_MULT[answers.hours];
 
-  let low = roundToHundred(baseLow * mult * AGENCY_LOW);
-  let high = roundToHundred(baseHigh * mult * AGENCY_HIGH);
+  let low = roundToHundred(baseLow * socialHours * AGENCY_LOW * archLowMult);
+  let high = roundToHundred(baseHigh * socialHours * AGENCY_HIGH * archHighMult);
 
+  const topArchetypes: Archetype[] = ['cosplay', 'asian', 'busty'];
   const ceiling =
-    answers.experience === 'active' && answers.social === 'strong' && answers.hours === 'intense'
-      ? 82_000
+    answers.experience === 'active' &&
+    answers.social === 'strong' &&
+    answers.hours === 'intense' &&
+    topArchetypes.includes(answers.archetype)
+      ? 85_000
       : answers.experience === 'active'
-        ? 58_000
-        : 42_000;
+        ? 60_000
+        : answers.archetype === 'cosplay' || answers.archetype === 'asian'
+          ? 48_000
+          : 44_000;
 
   high = Math.min(high, ceiling);
-  low = Math.min(low, Math.round(high * 0.42));
+  low = Math.min(low, Math.round(high * 0.4));
+  low = Math.max(low, 2_400);
 
   return {
     tier: resolveTier(high),
+    archetype: answers.archetype,
     low,
     high,
     insightKeys: resolveInsights(answers),
@@ -91,5 +139,5 @@ export function estimateIncome(answers: CalculatorAnswers): CalculatorResult {
   };
 }
 
-export const QUESTION_ORDER = ['experience', 'social', 'hours'] as const;
+export const QUESTION_ORDER = ['experience', 'archetype', 'social', 'hours'] as const;
 export type QuestionId = (typeof QUESTION_ORDER)[number];

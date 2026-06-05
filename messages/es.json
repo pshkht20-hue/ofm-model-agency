@@ -248,7 +248,7 @@
     "calculator": {
       "eyebrow": "Calculadora",
       "title": "Descubre tu potencial de ingresos",
-      "subtitle": "3 preguntas rápidas — pronóstico personalizado basado en casos reales de OFM",
+      "subtitle": "4 preguntas rápidas — pronóstico personalizado basado en casos reales de OFM",
       "progress": "Paso {current} de {total}",
       "back": "Atrás",
       "next": "Siguiente",
@@ -262,6 +262,21 @@
             "none": { "label": "No — solo planeo empezar", "desc": "Lanzamiento desde cero — perfil, contenido y tráfico incluidos" },
             "starter": { "label": "Sí, menos de $3K/mes", "desc": "Perfil existente — necesitas crecimiento y chats" },
             "active": { "label": "Sí, $3K+/mes", "desc": "Cuenta activa — escalar PPV y retención" }
+          }
+        },
+        "archetype": {
+          "title": "¿Qué arquetipo te representa mejor?",
+          "hint": "No hay respuesta incorrecta. Cada creadora es única — te ayudamos a encontrar o potenciar una imagen que monetice tus fortalezas. Cosplay y roleplay funcionan con cualquier tipo de cuerpo y look.",
+          "options": {
+            "exploring": { "label": "Aún no lo sé — ayúdenme a encontrar mi nicho", "desc": "Tu manager elegirá un nicho según tu look, personalidad y horario — de cosplay a GFE" },
+            "natural": { "label": "Mi propio estilo, sin nicho fijo", "desc": "Construiremos una marca sobre ti: contenido, precios y posicionamiento — sin plantillas" },
+            "cosplay": { "label": "Cosplay / roleplay", "desc": "Anime, juegos, personajes — nicho top; el foco es el personaje, no un cuerpo \"perfecto\"" },
+            "asian": { "label": "Asian / Kawaii", "desc": "Nicho étnico con fans leales — kawaii, exotic, GFE personal" },
+            "busty": { "label": "Busty / curvas", "desc": "Nicho físico con alta demanda — fotos, PPV y customs para fans dedicados" },
+            "blonde": { "label": "Blonde / girl-next-door", "desc": "Look clásico — dulce, cercana o bombshell, demanda estable" },
+            "tattoo": { "label": "Tattoo / Alt", "desc": "Estilo alternativo — imagen edgy, fetish de tatuajes, roleplay a medida" },
+            "ebony": { "label": "Ebony / Afro", "desc": "Nicho étnico con appeal cultural — baile, curves, GFE para audiencia leal" },
+            "babyface": { "label": "Babyface / cute", "desc": "Look dulce y juvenil — GFE, fetish suave, escenarios de roleplay" }
           }
         },
         "social": {
@@ -301,6 +316,17 @@
           "scale": "Escala",
           "elite": "Top"
         },
+        "archetypes": {
+          "exploring": "Buscando nicho",
+          "natural": "Marca personal",
+          "cosplay": "Cosplay",
+          "asian": "Asian / Kawaii",
+          "busty": "Busty",
+          "blonde": "Blonde",
+          "tattoo": "Alt / Tattoo",
+          "ebony": "Ebony",
+          "babyface": "Babyface"
+        },
         "cta": "Obtener plan en Telegram",
         "ctaSecondary": "Ver casos de éxito"
       },
@@ -310,7 +336,16 @@
         "moreHours": "Con 10–20 h/semana el pronóstico sube notablemente: más contenido = mejor conversión PPV y retención.",
         "scaleReady": "Tienes una base fuerte — prioriza scripts PPV, fans VIP y escalado de anuncios.",
         "momentum": "Vas por buen camino: informes semanales y ajustes de precios cada 7 días acelerarán el crecimiento.",
-        "agencyBoost": "Tu manager OFM creará una estrategia para tu perfil — desde nicho hasta precios y calendario de publicaciones."
+        "agencyBoost": "Tu manager OFM creará una estrategia para tu perfil — desde nicho hasta precios y calendario de publicaciones.",
+        "archetypeExplore": "En la consulta mapeamos 2–3 nichos para ti — cosplay, GFE, fetish o lifestyle. Un arquetipo se puede construir aunque aún no tengas uno definido.",
+        "archetypeNatural": "Una marca personal también monetiza: consistencia, conexión con fans y posicionamiento claro. Te empaquetamos a ti — no una plantilla genérica.",
+        "archetypeCosplay": "Cosplay puede sumar +300% en tips de customs: los fans pagan por el personaje y la fantasía. El disfraz y el roleplay importan más que un cuerpo \"perfecto\".",
+        "archetypeAsian": "Los nichos kawaii mantienen 70–90% de retención: GFE personal y PPV dirigido generan ingreso estable de fans leales.",
+        "archetypeBusty": "Nicho de demanda constante: combinar con cosplay o roleplay potencia el PPV. Ajustamos precios y plan de contenido a tu formato.",
+        "archetypeBlonde": "Girl-next-door es competitivo pero estable: lives, photosets y DMs personales dan crecimiento predecible.",
+        "archetypeTattoo": "El look alt destaca en el feed: roleplay edgy y customs pueden sumar +250% al gasto medio de fans comprometidos.",
+        "archetypeEbony": "El nicho étnico crece globalmente: baile, curves y GFE — base sólida para compras repetidas.",
+        "archetypeBabyface": "Look cute + GFE y roleplay suave: los fans pagan por la fantasía de cercanía, no solo por contenido."
       }
     },
     "contact": {
