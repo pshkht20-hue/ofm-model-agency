@@ -97,7 +97,7 @@ export function HomePage() {
               income: () => (
                 <span className="text-accent-pink font-medium">{t('hero.incomeHighlight')}</span>
               ),
-              br: () => <br className="hidden sm:block" />,
+              br: () => <br />,
             })}
           </motion.p>
 

@@ -38,7 +38,7 @@
       "line2": "Your rules.",
       "line3": "Your success.",
       "srOnly": "— OnlyFans agency for creators OFM's Model Agency",
-      "lead": "Exclusive agency for ambitious creators —<br></br>page total from <income></income> per month<br></br>and full support at every step.",
+      "lead": "Exclusive agency for ambitious creators<br></br>Page total from <income></income> per month and<br></br>full support at every step.",
       "incomeHighlight": "$15,000+",
       "ctaPrimary": "Become a model",
       "ctaSecondary": "Success stories",
@@ -248,7 +248,7 @@
     },
     "calculator": {
       "eyebrow": "Calculator",
-      "title": "Discover your page total potential",
+      "title": "Discover your potential with OFM agency!",
       "subtitle": "4 quick questions — a personalized forecast based on real OFM case studies",
       "progress": "Step {current} of {total}",
       "back": "Back",
