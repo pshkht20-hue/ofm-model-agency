@@ -59,9 +59,9 @@ export function Navbar() {
             : 'bg-[#050508]/70 backdrop-blur-md border-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 h-14 lg:h-[4.25rem]">
-          {/* Мобильная шапка: только логотип, язык и меню */}
-          <div className="flex h-full items-center justify-between gap-3 lg:hidden">
+        <div className="max-w-7xl mx-auto w-full px-3 sm:px-6 lg:px-8 h-[3.75rem] sm:h-14 lg:h-[4.25rem]">
+          {/* Мобильная шапка */}
+          <div className="flex h-full items-center justify-between gap-2 lg:hidden">
             <Logo
               size="nav"
               showWordmark
@@ -71,20 +71,27 @@ export function Navbar() {
               onClick={closeMenu}
             />
 
-            <div className="flex shrink-0 items-center gap-1.5">
+            <div className="flex shrink-0 items-center gap-1 sm:gap-1.5">
               <LanguageSwitcher compact toolbar />
+              <Link
+                href="/#contact"
+                onClick={closeMenu}
+                className="btn-primary !h-8 !py-0 !px-2.5 sm:!px-3 !text-[10px] sm:!text-[11px] !gap-0 !shadow-[0_0_16px_-6px_rgba(255,91,181,0.55)] whitespace-nowrap shrink-0"
+              >
+                {t('apply')}
+              </Link>
               <button
                 type="button"
                 onClick={() => setMenuOpen((open) => !open)}
-                className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/[0.12] bg-white/[0.04] hover:border-accent-pink/45 hover:bg-white/[0.06] active:scale-[0.97] transition shrink-0 shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset]"
+                className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-xl border border-white/[0.12] bg-white/[0.04] hover:border-accent-pink/45 hover:bg-white/[0.06] active:scale-[0.97] transition shrink-0 shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset]"
                 aria-expanded={menuOpen}
                 aria-controls="mobile-menu"
                 aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
               >
                 {menuOpen ? (
-                  <X className="w-5 h-5 text-white/90" strokeWidth={1.75} />
+                  <X className="w-[18px] h-[18px] sm:w-5 sm:h-5 text-white/90" strokeWidth={1.75} />
                 ) : (
-                  <Menu className="w-5 h-5 text-white/90" strokeWidth={1.75} />
+                  <Menu className="w-[18px] h-[18px] sm:w-5 sm:h-5 text-white/90" strokeWidth={1.75} />
                 )}
               </button>
             </div>
@@ -154,7 +161,7 @@ export function Navbar() {
         <motion.div
           initial={false}
           animate={menuOpen ? { y: 0 } : { y: -16 }}
-          className={`absolute top-14 left-0 right-0 bottom-0 bg-[#050508] border-t border-white/[0.06] flex flex-col ${
+          className={`absolute top-[3.75rem] sm:top-14 left-0 right-0 bottom-0 bg-[#050508] border-t border-white/[0.06] flex flex-col ${
             menuOpen ? '' : 'pointer-events-none'
           }`}
         >

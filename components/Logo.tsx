@@ -1,7 +1,7 @@
 import { Link } from '@/i18n/navigation';
 
 const SIZES = {
-  nav: { mark: 36, gap: 7, title: 'text-[11px] sm:text-[13px] lg:text-base', tag: 'text-[6px] sm:text-[7px] lg:text-[8px]' },
+  nav: { mark: 40, gap: 8, title: 'text-[13px] sm:text-[15px]', tag: 'text-[6px] sm:text-[7px] lg:text-[8px]' },
   sm: { mark: 36, gap: 10, title: 'text-[15px]', tag: 'text-[8px]' },
   md: { mark: 44, gap: 12, title: 'text-base md:text-lg', tag: 'text-[8px] md:text-[9px]' },
   lg: { mark: 52, gap: 14, title: 'text-lg md:text-xl', tag: 'text-[9px]' },
