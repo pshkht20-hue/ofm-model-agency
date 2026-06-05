@@ -59,22 +59,43 @@ export function Navbar() {
             : 'bg-[#050508]/70 backdrop-blur-md border-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto w-full min-w-0 px-4 sm:px-6 lg:px-8 h-14 lg:h-[4.25rem]">
-          <div className="flex h-full items-center justify-between gap-2 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-6">
-            <div className="min-w-0 flex-1 lg:flex-none">
-              <Logo
-                size="nav"
-                showWordmark
-                wordmarkOnMobile
-                hideTaglineBelowLg
-                href="/"
-                onClick={closeMenu}
-                className="w-full"
-              />
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 h-14 lg:h-[4.25rem]">
+          {/* Мобильная шапка: только логотип, язык и меню */}
+          <div className="flex h-full items-center justify-between gap-3 lg:hidden">
+            <Logo
+              size="nav"
+              showWordmark
+              wordmarkOnMobile
+              hideTaglineBelowLg
+              href="/"
+              onClick={closeMenu}
+            />
+
+            <div className="flex shrink-0 items-center gap-1.5">
+              <LanguageSwitcher compact toolbar />
+              <button
+                type="button"
+                onClick={() => setMenuOpen((open) => !open)}
+                className="flex items-center justify-center w-10 h-10 rounded-xl border border-white/[0.12] bg-white/[0.04] hover:border-accent-pink/45 hover:bg-white/[0.06] active:scale-[0.97] transition shrink-0 shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset]"
+                aria-expanded={menuOpen}
+                aria-controls="mobile-menu"
+                aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
+              >
+                {menuOpen ? (
+                  <X className="w-5 h-5 text-white/90" strokeWidth={1.75} />
+                ) : (
+                  <Menu className="w-5 h-5 text-white/90" strokeWidth={1.75} />
+                )}
+              </button>
             </div>
+          </div>
+
+          {/* Десктопная шапка */}
+          <div className="hidden lg:grid h-full grid-cols-[auto_1fr_auto] items-center gap-6">
+            <Logo size="md" showWordmark href="/" onClick={closeMenu} />
 
             <nav
-              className="hidden lg:flex items-center justify-center gap-4 xl:gap-5 min-w-0"
+              className="flex items-center justify-center gap-4 xl:gap-5 min-w-0"
               aria-label={t('navigation')}
             >
               {NAV_LINKS.map((link) => (
@@ -89,13 +110,9 @@ export function Navbar() {
               ))}
             </nav>
 
-            <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
-              <div className="lg:hidden">
-                <LanguageSwitcher compact toolbar />
-              </div>
-
+            <div className="flex shrink-0 items-center gap-2">
               <div
-                className="hidden lg:flex items-center rounded-full border border-white/[0.08] bg-white/[0.03] p-0.5"
+                className="flex items-center rounded-full border border-white/[0.08] bg-white/[0.03] p-0.5"
                 aria-label={t('navigation')}
               >
                 <div className="hidden xl:flex items-center pl-1 pr-0.5">
@@ -107,7 +124,7 @@ export function Navbar() {
 
               <Link
                 href="/#contact"
-                className="hidden lg:inline-flex btn-primary !h-9 !py-0 !px-4 xl:!px-5 !text-[13px] !shadow-[0_0_18px_-6px_rgba(255,91,181,0.55)] whitespace-nowrap shrink-0"
+                className="btn-primary !h-9 !py-0 !px-4 xl:!px-5 !text-[13px] !shadow-[0_0_18px_-6px_rgba(255,91,181,0.55)] whitespace-nowrap shrink-0"
               >
                 <span className="hidden xl:inline-flex items-center gap-1.5">
                   {t('becomeModel')}
@@ -115,21 +132,6 @@ export function Navbar() {
                 </span>
                 <span className="xl:hidden">{t('apply')}</span>
               </Link>
-
-              <button
-                type="button"
-                onClick={() => setMenuOpen((open) => !open)}
-                className="lg:hidden flex items-center justify-center w-10 h-10 rounded-xl border border-white/[0.12] bg-white/[0.04] hover:border-accent-pink/45 hover:bg-white/[0.06] active:scale-[0.97] transition shrink-0 shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset]"
-                aria-expanded={menuOpen}
-                aria-controls="mobile-menu"
-                aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
-              >
-                {menuOpen ? (
-                  <X className="w-5 h-5 text-white/90" strokeWidth={1.75} />
-                ) : (
-                  <Menu className="w-5 h-5 text-white/90" strokeWidth={1.75} />
-                )}
-              </button>
             </div>
           </div>
         </div>

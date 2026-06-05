@@ -90,7 +90,7 @@ export function Logo({
       />
       {showWordmark && (
         <div
-          className={`min-w-0 overflow-hidden text-left ${wordmarkVisibility}`}
+          className={`shrink-0 text-left ${wordmarkVisibility}`}
           style={{ marginLeft: s.gap }}
         >
           <div className={`font-semibold tracking-tight leading-[1.1] text-white whitespace-nowrap ${s.title}`}>
@@ -108,7 +108,7 @@ export function Logo({
     </>
   );
 
-  const wrapClass = `group flex items-center min-w-0 max-w-full transition-transform duration-300 lg:hover:scale-[1.02] lg:active:scale-[0.98] ${className}`;
+  const wrapClass = `group inline-flex items-center shrink-0 transition-transform duration-300 lg:hover:scale-[1.02] lg:active:scale-[0.98] ${className}`;
 
   if (href) {
     return (
