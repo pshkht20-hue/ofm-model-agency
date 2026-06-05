@@ -1,16 +1,6 @@
 'use client';
 
-import {
-  ArrowRight,
-  Users,
-  TrendingUp,
-  Shield,
-  Heart,
-  Zap,
-  MessageCircle,
-  BarChart3,
-  Camera,
-} from 'lucide-react';
+import { ArrowRight, Shield, Heart, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { ContactForm } from '@/components/ContactForm';
@@ -21,28 +11,21 @@ import {
   HeroBadgeBright,
 } from '@/components/CreatorTheme';
 import { ModelShowcase } from '@/components/ModelShowcase';
-import { SectionHeader } from '@/components/SectionHeader';
 import { StatsShowcase } from '@/components/StatsShowcase';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { StickyMobileCta } from '@/components/StickyMobileCta';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { BenefitsSection } from '@/components/BenefitsSection';
 import { HowItWorksSection } from '@/components/HowItWorksSection';
-import { FeatureCard } from '@/components/ui/FeatureCard';
+import { ServicesSection } from '@/components/ServicesSection';
 import { ModelReviewsSection } from '@/components/ModelReviewsSection';
-import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
 import { SectionDivider } from '@/components/ui/SectionDivider';
 import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
 import { HomeSeoBlock } from '@/components/seo/HomeSeoBlock';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 
-const SERVICE_ICONS = [Users, MessageCircle, TrendingUp, Camera, BarChart3, Shield] as const;
-type Item = { title: string; desc: string };
-
 export function HomePage() {
   const t = useTranslations('home');
-
-  const services = t.raw('services.items') as Item[];
 
   return (
     <div className="min-h-screen bg-[#050508] text-[#f4f2ef] overflow-x-hidden premium-grain">
@@ -183,24 +166,7 @@ export function HomePage() {
       <SectionDivider />
       <ModelReviewsSection />
 
-      <SectionShell>
-        <SectionHeader
-          eyebrow={t('services.eyebrow')}
-          title={t('services.title')}
-          description={t('services.description')}
-        />
-        <StaggerGrid className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {services.map((service, i) => (
-            <StaggerItem key={service.title}>
-              <FeatureCard
-                icon={SERVICE_ICONS[i]}
-                title={service.title}
-                description={service.desc}
-              />
-            </StaggerItem>
-          ))}
-        </StaggerGrid>
-      </SectionShell>
+      <ServicesSection />
 
       <HomeSeoBlock />
 

@@ -182,14 +182,69 @@
     "services": {
       "eyebrow": "Services",
       "title": "What we offer",
-      "description": "Full-service support to grow your account",
+      "description": "Six pillars that cover 90% of what top OnlyFans creators need — one team instead of scattered freelancers and chaotic DMs.",
+      "footerNote": "Everything is included in one partnership model: transparent revenue share, Telegram reporting, and a manager who runs the project from launch to scale. Typical path to stable income — 4–8 weeks with consistent content.",
       "items": [
-        { "title": "Account management", "desc": "Full OnlyFans management: profile, content and fans." },
-        { "title": "24/7 chats", "desc": "Chat managers work around the clock and boost sales." },
-        { "title": "Marketing", "desc": "Ads, social media and partnerships for subscriber growth." },
-        { "title": "Content strategy", "desc": "Content plan, shoots and visual brand." },
-        { "title": "Analytics", "desc": "Weekly reports and revenue optimization." },
-        { "title": "Protection", "desc": "Privacy, legal support and leak control." }
+        {
+          "title": "Account management",
+          "badge": "full stack",
+          "desc": "End-to-end OnlyFans ops: bio, pricing, posts, and fan relationships. You create content — we handle the operations that solo creators lose 60% of their time to, plus costly setup mistakes.",
+          "highlights": [
+            "Daily checks on profile, pricing, and pinned posts",
+            "Every change approved with you — no silent edits",
+            "One project manager on Telegram for the full journey"
+          ]
+        },
+        {
+          "title": "24/7 chats",
+          "badge": "< 3 min",
+          "desc": "Pro chat managers in your voice, around the clock. Up to 85% of OnlyFans revenue comes from DMs — we never leave fans hanging during US and EU peak hours.",
+          "highlights": [
+            "Average reply time under 3 minutes in prime time",
+            "PPV, customs, and renewal scripts tailored to your brand",
+            "Weekly review of chats, conversion, and average order value"
+          ]
+        },
+        {
+          "title": "Marketing",
+          "badge": "ROI-first",
+          "desc": "Traffic from TikTok, Instagram, Reddit, and paid funnels — tested with numbers, not “spray budget and hope.” We only scale channels that pay back on LTV and subscriber cost.",
+          "highlights": [
+            "UTMs and funnels — see which source brings paying fans",
+            "Partnerships, shoutout networks, and collabs for your niche",
+            "A/B tests on bio, offers, and first post until we find a winner"
+          ]
+        },
+        {
+          "title": "Content strategy",
+          "badge": "monthly plan",
+          "desc": "A forward plan: what to shoot, how to package PPV and mass messages so subs don’t churn after two weeks. Ideas fit your schedule, look, and boundaries — no burnout from random shoots.",
+          "highlights": [
+            "Shoot concepts and references for your niche",
+            "Consistent visual style: covers, previews, stories",
+            "Post calendar and Telegram reminders"
+          ]
+        },
+        {
+          "title": "Analytics",
+          "badge": "weekly",
+          "desc": "Reports in plain numbers: subs, chats, PPV, LTV, and traffic sources. Growth decisions come from team data — not “I guess it’s time to raise the price.”",
+          "highlights": [
+            "Net/gross trends vs. previous periods",
+            "Top sources and paid conversion breakdown",
+            "Pricing and promo recommendations every 7 days"
+          ]
+        },
+        {
+          "title": "Protection",
+          "badge": "NDA",
+          "desc": "Anonymity, DMCA, and leak monitoring so content doesn’t spread and your identity stays controlled. Internal access policies and legal checklists for peace of mind.",
+          "highlights": [
+            "Geo blocks and profile privacy settings",
+            "Fast takedown requests for leaks and reposts",
+            "NDA templates and personal data handling rules"
+          ]
+        }
       ]
     },
     "contact": {

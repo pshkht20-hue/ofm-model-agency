@@ -182,14 +182,69 @@
     "services": {
       "eyebrow": "Servicios",
       "title": "Qué ofrecemos",
-      "description": "Servicio integral para maximizar el crecimiento de tu cuenta",
+      "description": "Seis pilares que cubren el 90% de lo que necesitan las top creators de OnlyFans — un solo equipo en lugar de freelancers sueltos y DMs caóticos.",
+      "footerNote": "Todo está incluido en un único modelo de colaboración: porcentaje transparente, informes por Telegram y un manager que lleva el proyecto del lanzamiento al escalado. Camino típico a ingresos estables — 4–8 semanas con contenido regular.",
       "items": [
-        { "title": "Gestión de cuenta", "desc": "Gestión completa de OnlyFans: perfil, contenido y fans." },
-        { "title": "Chats 24/7", "desc": "Managers de chat todo el día y más ventas." },
-        { "title": "Marketing", "desc": "Anuncios, redes y partnerships para suscriptores." },
-        { "title": "Estrategia de contenido", "desc": "Plan de contenido, shoots y marca visual." },
-        { "title": "Analítica", "desc": "Informes semanales y optimización de ingresos." },
-        { "title": "Protección", "desc": "Privacidad, apoyo legal y control de filtraciones." }
+        {
+          "title": "Gestión de cuenta",
+          "badge": "llave en mano",
+          "desc": "Ciclo completo de OnlyFans: bio, precios, publicaciones y relación con fans. Tú creas contenido — nosotros la operación que a las solistas les consume hasta el 60% del tiempo y errores caros de configuración.",
+          "highlights": [
+            "Control diario de perfil, precios y posts fijados",
+            "Cada cambio se aprueba contigo — sin sorpresas",
+            "Un manager de proyecto en Telegram de principio a fin"
+          ]
+        },
+        {
+          "title": "Chats 24/7",
+          "badge": "< 3 min",
+          "desc": "Managers de chat profesionales con tu tono de voz, 24 horas. Hasta el 85% del ingreso en OnlyFans viene de los mensajes privados — no dejamos fans sin respuesta en horas pico de EE. UU. y Europa.",
+          "highlights": [
+            "Tiempo medio de respuesta bajo 3 minutos en prime time",
+            "Scripts de PPV, customs y renovaciones adaptados a tu marca",
+            "Revisión semanal de chats, conversión y ticket medio"
+          ]
+        },
+        {
+          "title": "Marketing",
+          "badge": "ROI primero",
+          "desc": "Tráfico de TikTok, Instagram, Reddit y funnels de pago — con pruebas y números, no «tiramos presupuesto y rezamos». Solo escalamos canales que pagan por LTV y coste por suscriptor.",
+          "highlights": [
+            "UTM y funnels — ves de dónde viene el fan que paga",
+            "Partnerships, shoutouts y colabs para tu nicho",
+            "Tests A/B de bio, ofertas y primer post hasta ganar"
+          ]
+        },
+        {
+          "title": "Estrategia de contenido",
+          "badge": "plan mensual",
+          "desc": "Plan adelantado: qué grabar, cómo empaquetar PPV y masivos para que la suscripción no caduque a las dos semanas. Ideas según tu agenda, look y límites — sin burnout por shoots al azar.",
+          "highlights": [
+            "Conceptos de grabación y referencias para tu nicho",
+            "Estilo visual coherente: portadas, previews, stories",
+            "Calendario de posts y recordatorios en Telegram"
+          ]
+        },
+        {
+          "title": "Analítica",
+          "badge": "semanal",
+          "desc": "Informes en cifras claras: suscripciones, chats, PPV, LTV y fuentes de tráfico. Decisiones de crecimiento con datos del equipo — no con «creo que toca subir el precio».",
+          "highlights": [
+            "Tendencias net/gross vs. periodos anteriores",
+            "Desglose de mejores fuentes y conversión a pago",
+            "Recomendaciones de precios y promos cada 7 días"
+          ]
+        },
+        {
+          "title": "Protección",
+          "badge": "NDA",
+          "desc": "Anonimato, DMCA y monitorización de filtraciones para que el contenido no se propague y tu identidad quede bajo control. Políticas internas de acceso y checklists legales para trabajar tranquila.",
+          "highlights": [
+            "Bloqueos geo y ajustes de privacidad del perfil",
+            "Solicitudes rápidas de eliminación de leaks y reposts",
+            "Plantillas NDA y reglas de datos personales"
+          ]
+        }
       ]
     },
     "contact": {
