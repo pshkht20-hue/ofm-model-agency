@@ -87,6 +87,8 @@
 | Июнь 2026 | Запрос индексации 4 URL | /, /uk, /blog, /faq |
 | Июнь 2026 | GA4 создан + тег на сайте | G-BE38Q3QSRN, данные поступают |
 | Июнь 2026 | Код на GitHub | main синхронизирован |
+| Июнь 2026 | SEO-ACTION-PLAN + доработки сайта (Hero, калькулятор, gross total, Navbar) | См. `docs/SEO-ACTION-PLAN-ofmmodels.md` |
+| Июнь 2026 | Анализ YouTube Anton Sokolovskiy Marketing → SEO-инсайты | Рабочий стол + action plan |
 
 ---
 

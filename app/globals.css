@@ -47,6 +47,31 @@ body {
   color: transparent;
 }
 
+.hero-gradient-shimmer {
+  background-size: 220% 100%;
+  background-position: 0% center;
+}
+
+.hero-scan-beam {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 212, 255, 0.15) 20%,
+    rgba(255, 91, 181, 0.85) 50%,
+    rgba(168, 85, 247, 0.4) 80%,
+    transparent 100%
+  );
+  box-shadow: 0 0 24px rgba(255, 91, 181, 0.35);
+}
+
+.hero-corner {
+  box-shadow: 0 0 12px rgba(255, 91, 181, 0.12);
+}
+
+.hero-cta-glow {
+  will-change: box-shadow;
+}
+
 .eyebrow,
 .eyebrow-bright {
   font-size: 0.6875rem;
@@ -575,6 +600,11 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-gradient-shimmer {
+    background-size: 100% auto;
+    background-position: 0 center;
+  }
+
   .animate-marquee,
   .animate-scroll-hint,
   .animate-glow-pulse,
