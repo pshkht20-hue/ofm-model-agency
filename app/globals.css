@@ -72,6 +72,66 @@ body {
   will-change: box-shadow;
 }
 
+.hero-aurora-blob {
+  will-change: transform, opacity;
+  mix-blend-mode: screen;
+}
+
+.hero-spotlight {
+  background: radial-gradient(
+    ellipse 100% 100% at 50% 50%,
+    rgba(255, 91, 181, 0.28) 0%,
+    rgba(168, 85, 247, 0.14) 38%,
+    rgba(0, 212, 255, 0.06) 58%,
+    transparent 72%
+  );
+  will-change: transform, opacity;
+  mix-blend-mode: screen;
+}
+
+.hero-light-rays {
+  background: conic-gradient(
+    from 0deg at 50% 38%,
+    transparent 0deg,
+    rgba(255, 91, 181, 0.04) 18deg,
+    transparent 36deg,
+    rgba(0, 212, 255, 0.035) 72deg,
+    transparent 90deg,
+    rgba(168, 85, 247, 0.04) 140deg,
+    transparent 160deg,
+    rgba(255, 91, 181, 0.03) 220deg,
+    transparent 240deg,
+    rgba(0, 212, 255, 0.03) 300deg,
+    transparent 320deg
+  );
+  will-change: transform, opacity;
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}
+
+.hero-grid-drift {
+  will-change: background-position, transform, opacity;
+}
+
+.hero-horizon-glow {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 212, 255, 0.2) 20%,
+    rgba(255, 91, 181, 0.55) 50%,
+    rgba(168, 85, 247, 0.35) 80%,
+    transparent 100%
+  );
+  box-shadow:
+    0 0 40px rgba(255, 91, 181, 0.25),
+    0 -8px 32px rgba(168, 85, 247, 0.12);
+  will-change: transform, opacity;
+}
+
+.hero-star {
+  will-change: transform, opacity;
+}
+
 .eyebrow,
 .eyebrow-bright {
   font-size: 0.6875rem;
@@ -600,6 +660,15 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-aurora-blob,
+  .hero-spotlight,
+  .hero-light-rays,
+  .hero-grid-drift,
+  .hero-star,
+  .hero-horizon-glow {
+    will-change: auto;
+  }
+
   .hero-gradient-shimmer {
     background-size: 100% auto;
     background-position: 0 center;

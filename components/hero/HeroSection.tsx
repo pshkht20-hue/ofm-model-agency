@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { CreatorFloatingMotifs } from '@/components/CreatorTheme';
+import { HeroBackground } from '@/components/hero/HeroBackground';
 import { NeonAccents } from '@/components/ui/NeonAccents';
 
 gsap.registerPlugin(useGSAP);
@@ -53,14 +54,10 @@ export function HeroSection() {
         gsap.set('[data-hero-note]', { opacity: 0 });
         gsap.set('[data-hero-scroll]', { opacity: 0, y: 12 });
         gsap.set('[data-hero-corner]', { opacity: 0, scale: 0.75 });
-        gsap.set('[data-hero-grid]', { opacity: 0 });
-        gsap.set('[data-hero-orb]', { scale: 0.6, opacity: 0 });
 
         const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-        tl.to('[data-hero-grid]', { opacity: 0.6, duration: 1.4 }, 0)
-          .to('[data-hero-orb]', { scale: 1, opacity: 1, duration: 1.6, stagger: 0.2, ease: 'power2.out' }, 0)
-          .to('[data-hero-scan]', { scaleX: 1, duration: 1.1, ease: 'power2.inOut' }, 0.15)
+        tl.to('[data-hero-scan]', { scaleX: 1, duration: 1.1, ease: 'power2.inOut' }, 0.15)
           .to('[data-hero-scan]', { opacity: 0, x: '40%', duration: 0.7, ease: 'power2.in' }, 0.85)
           .to('[data-hero-corner]', { opacity: 0.55, scale: 1, duration: 0.55, stagger: 0.07 }, 0.25)
           .to(
@@ -118,17 +115,6 @@ export function HeroSection() {
           ease: 'power1.inOut',
           delay: 2.4,
         });
-
-        gsap.to('[data-hero-orb]', {
-          y: '+=20',
-          x: '+=8',
-          duration: 4.5,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          stagger: { each: 0.6, from: 'random' },
-          delay: 1.5,
-        });
       });
 
       return () => mm.revert();
@@ -142,24 +128,7 @@ export function HeroSection() {
       className="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden"
       aria-label={t('hero.srOnly')}
     >
-      <div className="absolute inset-0 bg-[#050508]" />
-      <div
-        data-hero-grid
-        className="section-grid absolute inset-0 opacity-60"
-        aria-hidden
-      />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(255,91,181,0.22),transparent)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_100%_100%,rgba(168,85,247,0.18),transparent)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_0%_80%,rgba(0,212,255,0.08),transparent)]" />
-
-      <div
-        data-hero-orb
-        className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent-pink/20 rounded-full blur-[100px] pointer-events-none"
-      />
-      <div
-        data-hero-orb
-        className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent-violet/20 rounded-full blur-[80px] pointer-events-none"
-      />
+      <HeroBackground sectionRef={sectionRef} />
 
       <div
         data-hero-scan
