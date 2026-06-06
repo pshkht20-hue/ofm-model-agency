@@ -6,48 +6,16 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
 
-type Particle = {
-  id: number;
-  left: number;
-  top: number;
-  size: 1 | 2 | 3;
-  tone: 'pink' | 'cyan' | 'violet' | 'white';
-};
-
-const PARTICLES: Particle[] = Array.from({ length: 56 }, (_, i) => ({
+/** Sparkles kept to edges — never clutter the headline */
+const EDGE_SPARKLES = Array.from({ length: 28 }, (_, i) => ({
   id: i,
-  left: ((i * 37 + 11) % 94) + 3,
-  top: ((i * 53 + 19) % 88) + 6,
-  size: (i % 7 === 0 ? 3 : i % 3 === 0 ? 2 : 1) as 1 | 2 | 3,
-  tone: (['pink', 'cyan', 'violet', 'white'] as const)[i % 4],
+  left: i % 2 === 0 ? ((i * 13) % 14) + 1 : 100 - (((i * 11) % 14) + 1),
+  top: ((i * 29 + 17) % 82) + 8,
+  delay: (i * 0.17) % 3,
 }));
 
-const AURORA = [
-  { color: 'pink', w: '42%', h: '38%', left: '18%', top: '8%', blur: 110 },
-  { color: 'violet', w: '48%', h: '44%', left: '52%', top: '52%', blur: 120 },
-  { color: 'cyan', w: '32%', h: '28%', left: '4%', top: '62%', blur: 90 },
-  { color: 'pink', w: '36%', h: '32%', left: '58%', top: '-6%', blur: 100 },
-  { color: 'violet', w: '28%', h: '24%', left: '72%', top: '28%', blur: 85 },
-] as const;
-
-const particleToneClass: Record<Particle['tone'], string> = {
-  pink: 'bg-accent-pink/70 shadow-[0_0_8px_1px_rgba(255,91,181,0.45)]',
-  cyan: 'bg-accent-cyan/60 shadow-[0_0_8px_1px_rgba(0,212,255,0.4)]',
-  violet: 'bg-accent-violet/65 shadow-[0_0_8px_1px_rgba(168,85,247,0.4)]',
-  white: 'bg-white/50 shadow-[0_0_6px_1px_rgba(255,255,255,0.25)]',
-};
-
-const particleSizeClass: Record<Particle['size'], string> = {
-  1: 'w-0.5 h-0.5',
-  2: 'w-1 h-1',
-  3: 'w-1.5 h-1.5',
-};
-
-const auroraColorClass: Record<(typeof AURORA)[number]['color'], string> = {
-  pink: 'bg-accent-pink/25',
-  violet: 'bg-accent-violet/22',
-  cyan: 'bg-accent-cyan/18',
-};
+const RUNWAY_LANES = 9;
+const RUNWAY_STRIPES = 7;
 
 type HeroBackgroundProps = {
   sectionRef: RefObject<HTMLElement | null>;
@@ -66,103 +34,102 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
       });
 
       mm.add('(prefers-reduced-motion: no-preference)', () => {
+        gsap.set('[data-hero-studio]', { opacity: 0 });
+        gsap.set('[data-hero-runway]', { opacity: 0, y: 24 });
+        gsap.set('[data-hero-stripe]', { opacity: 0 });
+        gsap.set('[data-hero-sweep]', { y: '-20%', opacity: 0 });
+        gsap.set('[data-hero-frame]', { scaleY: 0, opacity: 0 });
+        gsap.set('[data-hero-sparkle]', { opacity: 0, scale: 0 });
         gsap.set('[data-hero-grid]', { opacity: 0 });
-        gsap.set('[data-hero-aurora]', { scale: 0.5, opacity: 0 });
-        gsap.set('[data-hero-star]', { opacity: 0, scale: 0 });
-        gsap.set('[data-hero-rays]', { opacity: 0, rotate: 0 });
-        gsap.set('[data-hero-spotlight]', { scale: 0.8, opacity: 0 });
-        gsap.set('[data-hero-horizon]', { scaleX: 0, opacity: 0 });
 
         const intro = gsap.timeline();
         intro
-          .to('[data-hero-spotlight]', { scale: 1, opacity: 1, duration: 2, ease: 'power2.out' }, 0)
-          .to('[data-hero-aurora]', { scale: 1, opacity: 1, duration: 2.2, stagger: 0.12, ease: 'power2.out' }, 0.1)
-          .to('[data-hero-rays]', { opacity: 1, duration: 1.8, ease: 'power2.out' }, 0.2)
-          .to('[data-hero-grid]', { opacity: 0.55, duration: 1.6, ease: 'power2.out' }, 0.15)
-          .to('[data-hero-horizon]', { scaleX: 1, opacity: 1, duration: 1.4, ease: 'power3.out' }, 0.35)
+          .to('[data-hero-studio]', { opacity: 1, duration: 1.8, stagger: 0.1, ease: 'power2.out' }, 0)
+          .to('[data-hero-runway]', { opacity: 1, y: 0, duration: 1.6, ease: 'power3.out' }, 0.15)
+          .to('[data-hero-stripe]', { opacity: 1, duration: 0.8, stagger: 0.06, ease: 'power2.out' }, 0.35)
+          .to('[data-hero-grid]', { opacity: 0.22, duration: 1.4, ease: 'power2.out' }, 0.2)
+          .to('[data-hero-frame]', { scaleY: 1, opacity: 1, duration: 1.2, stagger: 0.08, ease: 'power3.out' }, 0.45)
           .to(
-            '[data-hero-star]',
-            { opacity: 1, scale: 1, duration: 0.6, stagger: { each: 0.02, from: 'random' }, ease: 'power2.out' },
-            0.5,
+            '[data-hero-sparkle]',
+            { opacity: 1, scale: 1, duration: 0.5, stagger: { each: 0.03, from: 'random' }, ease: 'power2.out' },
+            0.6,
           );
 
-        AURORA.forEach((_, i) => {
-          const el = `[data-hero-aurora="${i}"]`;
-          gsap.to(el, {
-            x: 'random(-48, 48)',
-            y: 'random(-36, 36)',
-            scale: 'random(0.88, 1.14)',
-            duration: gsap.utils.random(9, 14),
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut',
-            delay: i * 0.4,
-          });
+        gsap.to('[data-hero-studio="left"]', {
+          opacity: 0.55,
+          duration: 4,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          delay: 1.5,
         });
-
-        gsap.to('[data-hero-spotlight]', {
-          scale: 1.08,
-          opacity: 0.92,
+        gsap.to('[data-hero-studio="right"]', {
+          opacity: 0.5,
           duration: 5,
           repeat: -1,
           yoyo: true,
           ease: 'sine.inOut',
           delay: 2,
         });
-
-        gsap.to('[data-hero-rays]', {
-          rotate: 360,
-          duration: 90,
-          repeat: -1,
-          ease: 'none',
-        });
-
-        gsap.to('[data-hero-grid]', {
-          backgroundPosition: '0px 48px',
-          duration: 14,
-          repeat: -1,
-          ease: 'none',
-        });
-
-        gsap.to('[data-hero-star]', {
-          opacity: 'random(0.15, 0.9)',
-          scale: 'random(0.6, 1.2)',
-          duration: () => gsap.utils.random(2, 5),
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          stagger: { each: 0.08, from: 'random' },
-          delay: 1.5,
-        });
-
-        gsap.to('[data-hero-horizon]', {
-          opacity: 0.65,
+        gsap.to('[data-hero-studio="center"]', {
+          opacity: 0.35,
           duration: 3.5,
           repeat: -1,
           yoyo: true,
           ease: 'sine.inOut',
-          delay: 2,
+          delay: 1.8,
+        });
+
+        gsap.to('[data-hero-runway]', {
+          y: 5,
+          duration: 3.5,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          delay: 1.2,
+        });
+
+        gsap.to('[data-hero-stripe]', {
+          opacity: 0.4,
+          duration: 1.6,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          stagger: { each: 0.22, from: 'end' },
+          delay: 1,
+        });
+
+        gsap.timeline({ repeat: -1, repeatDelay: 6, delay: 2.5 })
+          .set('[data-hero-sweep]', { y: '-18%', opacity: 0 })
+          .to('[data-hero-sweep]', { opacity: 0.42, duration: 0.35 })
+          .to('[data-hero-sweep]', { y: '115%', duration: 2, ease: 'power1.inOut' })
+          .to('[data-hero-sweep]', { opacity: 0, duration: 0.25 }, '-=0.15');
+
+        gsap.to('[data-hero-sparkle]', {
+          opacity: 'random(0.2, 0.75)',
+          duration: () => gsap.utils.random(2.5, 4.5),
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          stagger: { each: 0.12, from: 'random' },
+          delay: 1.2,
         });
 
         if (!section) return;
 
-        const parallaxAurora = gsap.quickTo('[data-hero-parallax="aurora"]', 'x', { duration: 1.4, ease: 'power3.out' });
-        const parallaxAuroraY = gsap.quickTo('[data-hero-parallax="aurora"]', 'y', { duration: 1.4, ease: 'power3.out' });
-        const parallaxStars = gsap.quickTo('[data-hero-parallax="stars"]', 'x', { duration: 1.8, ease: 'power3.out' });
-        const parallaxStarsY = gsap.quickTo('[data-hero-parallax="stars"]', 'y', { duration: 1.8, ease: 'power3.out' });
-        const parallaxGrid = gsap.quickTo('[data-hero-parallax="grid"]', 'x', { duration: 2, ease: 'power3.out' });
-        const parallaxGridY = gsap.quickTo('[data-hero-parallax="grid"]', 'y', { duration: 2, ease: 'power3.out' });
+        const pxLights = gsap.quickTo('[data-hero-parallax="lights"]', 'x', { duration: 1.6, ease: 'power3.out' });
+        const pyLights = gsap.quickTo('[data-hero-parallax="lights"]', 'y', { duration: 1.6, ease: 'power3.out' });
+        const pxRunway = gsap.quickTo('[data-hero-parallax="runway"]', 'x', { duration: 2, ease: 'power3.out' });
+        const pyRunway = gsap.quickTo('[data-hero-parallax="runway"]', 'y', { duration: 2, ease: 'power3.out' });
 
         const onMove = (e: MouseEvent) => {
           const rect = section.getBoundingClientRect();
           const nx = (e.clientX - rect.left) / rect.width - 0.5;
           const ny = (e.clientY - rect.top) / rect.height - 0.5;
-          parallaxAurora(nx * 52);
-          parallaxAuroraY(ny * 32);
-          parallaxStars(nx * 22);
-          parallaxStarsY(ny * 14);
-          parallaxGrid(nx * 10);
-          parallaxGridY(ny * 6);
+          pxLights(nx * 28);
+          pyLights(ny * 16);
+          pxRunway(nx * 12);
+          pyRunway(ny * 6);
         };
 
         section.addEventListener('mousemove', onMove);
@@ -178,72 +145,102 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
     <div ref={bgRef} className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
       <div data-hero-bg-layer className="absolute inset-0 bg-[#050508]" />
 
+      {/* Editorial top fade — dark, no center blob */}
       <div
-        data-hero-rays
         data-hero-bg-layer
-        className="hero-light-rays absolute inset-[-20%] opacity-0"
+        className="absolute inset-0 bg-[linear-gradient(180deg,#0a0812_0%,#050508_28%,#050508_100%)]"
       />
 
-      <div data-hero-parallax="aurora" className="absolute inset-0">
-        <div
-          data-hero-spotlight
-          data-hero-bg-layer
-          className="hero-spotlight absolute left-1/2 top-[32%] -translate-x-1/2 -translate-y-1/2 w-[min(90vw,720px)] h-[min(70vh,520px)] rounded-full opacity-0"
-        />
-
-        {AURORA.map((blob, i) => (
-          <div
-            key={blob.color + i}
-            data-hero-aurora={i}
-            data-hero-bg-layer
-            className={`hero-aurora-blob absolute rounded-full opacity-0 ${auroraColorClass[blob.color]}`}
-            style={{
-              width: blob.w,
-              height: blob.h,
-              left: blob.left,
-              top: blob.top,
-              filter: `blur(${blob.blur}px)`,
-            }}
-          />
-        ))}
+      <div data-hero-parallax="lights" className="absolute inset-0">
+        <div data-hero-studio="left" data-hero-bg-layer className="hero-studio-light hero-studio-light-left opacity-0" />
+        <div data-hero-studio="right" data-hero-bg-layer className="hero-studio-light hero-studio-light-right opacity-0" />
+        <div data-hero-studio="center" data-hero-bg-layer className="hero-studio-light hero-studio-light-center opacity-0" />
       </div>
 
       <div
-        data-hero-parallax="grid"
         data-hero-grid
         data-hero-bg-layer
-        className="hero-grid-drift section-grid absolute inset-0 opacity-0"
+        className="section-grid absolute inset-0 opacity-0"
+        style={{ maskImage: 'linear-gradient(180deg, black 0%, transparent 55%)' }}
       />
 
-      <div
-        data-hero-horizon
-        data-hero-bg-layer
-        className="hero-horizon-glow absolute left-0 right-0 top-[58%] h-px opacity-0 origin-center"
-      />
+      <div data-hero-parallax="runway" className="absolute inset-x-0 bottom-0 h-[48%]">
+        <svg
+          data-hero-runway
+          data-hero-bg-layer
+          className="hero-runway-svg absolute inset-0 w-full h-full opacity-0"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          aria-hidden
+        >
+          <defs>
+            <linearGradient id="hero-runway-fade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="rgba(255,91,181,0.18)" />
+              <stop offset="45%" stopColor="rgba(168,85,247,0.08)" />
+              <stop offset="100%" stopColor="transparent" />
+            </linearGradient>
+          </defs>
+          <polygon points="50,0 0,100 100,100" fill="url(#hero-runway-fade)" opacity="0.35" />
+          {Array.from({ length: RUNWAY_LANES }, (_, i) => {
+            const t = i / (RUNWAY_LANES - 1);
+            const x = t * 100;
+            return (
+              <line
+                key={`lane-${i}`}
+                x1="50"
+                y1="0"
+                x2={x}
+                y2="100"
+                stroke="rgba(255,255,255,0.06)"
+                strokeWidth="0.15"
+              />
+            );
+          })}
+          {Array.from({ length: RUNWAY_STRIPES }, (_, i) => (
+            <line
+              key={`stripe-${i}`}
+              data-hero-stripe
+              x1="8"
+              y1={22 + i * 11}
+              x2="92"
+              y2={22 + i * 11}
+              stroke="rgba(255,91,181,0.14)"
+              strokeWidth="0.2"
+              opacity="0"
+            />
+          ))}
+        </svg>
+      </div>
 
-      <div data-hero-parallax="stars" className="absolute inset-0">
-        {PARTICLES.map((p) => (
+      <div data-hero-sweep data-hero-bg-layer className="hero-light-sweep absolute inset-x-0 top-0 h-24 opacity-0" />
+
+      <div className="absolute inset-y-0 left-[6%] hidden md:block">
+        <div data-hero-frame data-hero-bg-layer className="hero-editorial-frame origin-top opacity-0" />
+      </div>
+      <div className="absolute inset-y-0 right-[6%] hidden md:block">
+        <div data-hero-frame data-hero-bg-layer className="hero-editorial-frame origin-top opacity-0" />
+      </div>
+
+      <div data-hero-parallax="lights" className="absolute inset-0">
+        {EDGE_SPARKLES.map((s) => (
           <span
-            key={p.id}
-            data-hero-star
+            key={s.id}
+            data-hero-sparkle
             data-hero-bg-layer
-            className={`hero-star absolute rounded-full opacity-0 ${particleSizeClass[p.size]} ${particleToneClass[p.tone]}`}
-            style={{ left: `${p.left}%`, top: `${p.top}%` }}
+            className="hero-edge-sparkle absolute w-px h-px rounded-full bg-white/80 shadow-[0_0_6px_1px_rgba(255,91,181,0.35)] opacity-0"
+            style={{ left: `${s.left}%`, top: `${s.top}%` }}
           />
         ))}
       </div>
 
+      {/* Vignette — keeps center clean for typography */}
       <div
         data-hero-bg-layer
-        className="absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_45%,transparent_35%,rgba(5,5,8,0.55)_75%,#050508_100%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_75%_55%_at_50%_42%,transparent_42%,rgba(5,5,8,0.75)_88%,#050508_100%)]"
       />
       <div
         data-hero-bg-layer
-        className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_100%_0%,rgba(168,85,247,0.12),transparent)]"
-      />
-      <div
-        data-hero-bg-layer
-        className="absolute inset-0 bg-[radial-gradient(ellipse_50%_35%_at_0%_100%,rgba(0,212,255,0.06),transparent)]"
+        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,8,0.5)_0%,transparent_18%,transparent_82%,rgba(5,5,8,0.5)_100%)]"
       />
     </div>
   );
