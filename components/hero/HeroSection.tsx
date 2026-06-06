@@ -88,14 +88,6 @@ export function HeroSection() {
           .to('[data-hero-note]', { opacity: 1, duration: 0.55 }, '-=0.2')
           .to('[data-hero-scroll]', { opacity: 1, y: 0, duration: 0.55 }, '-=0.15');
 
-        gsap.to('[data-hero-line="accent"]', {
-          backgroundPosition: '200% center',
-          duration: 5,
-          repeat: -1,
-          ease: 'none',
-          delay: 1.8,
-        });
-
         gsap.to('[data-hero-cta="primary"]', {
           boxShadow:
             '0 0 36px -4px rgba(255, 91, 181, 0.6), 0 0 72px -14px rgba(168, 85, 247, 0.4)',
@@ -155,7 +147,7 @@ export function HeroSection() {
           data-hero-reveal
           className="badge-bright inline-flex items-center gap-2"
         >
-          <Sparkles className="w-3.5 h-3.5 text-accent-cyan" />
+          <Sparkles className="hero-badge-sparkle w-3.5 h-3.5" />
           {tCreator('badge')}
         </span>
 
@@ -166,7 +158,7 @@ export function HeroSection() {
           <span
             data-hero-line="accent"
             data-hero-reveal
-            className="block text-gradient-brand hero-gradient-shimmer italic"
+            className="block hero-accent-shimmer italic"
           >
             {t('hero.line2')}
           </span>

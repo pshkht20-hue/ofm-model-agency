@@ -127,14 +127,6 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           delay: 1,
         });
 
-        gsap.to('[data-cosmos-core="main"]', {
-          scale: 1.18,
-          filter: 'brightness(1.35)',
-          duration: 4.5,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-        });
         gsap.to('[data-cosmos-core="accent"]', {
           scale: 1.22,
           filter: 'brightness(1.28)',
@@ -181,12 +173,6 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           });
         });
 
-        gsap.to('[data-cosmos-galaxy="main"]', {
-          rotate: 360,
-          duration: 280,
-          repeat: -1,
-          ease: 'none',
-        });
         gsap.to('[data-cosmos-galaxy="accent"]', {
           rotate: -360,
           duration: 320,
@@ -194,15 +180,6 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           ease: 'none',
         });
 
-        gsap.to('[data-cosmos-galaxy="main"]', {
-          scale: 1.06,
-          opacity: 0.85,
-          duration: 7,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          delay: 2,
-        });
         gsap.to('[data-cosmos-galaxy="accent"]', {
           scale: 1.08,
           opacity: 0.7,
@@ -335,20 +312,6 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
 
       {/* Far depth — galaxies & distant nebulae */}
       <div data-cosmos-parallax="far" className="absolute inset-0">
-        <div
-          data-cosmos-galaxy="main"
-          data-cosmos-layer
-          className="cosmos-galaxy cosmos-galaxy-main absolute opacity-0"
-          style={{ right: '-12%', top: '2%', width: 'min(85vw, 680px)', height: 'min(85vw, 680px)' }}
-        >
-          <div className="cosmos-galaxy-halo" />
-          <div className="cosmos-spiral-disk" />
-          {[0, 72, 144, 216, 288].map((deg) => (
-            <div key={deg} className="cosmos-galaxy-arm" style={{ rotate: `${deg}deg` }} />
-          ))}
-          <div data-cosmos-core="main" className="cosmos-galaxy-core" />
-        </div>
-
         <div
           data-cosmos-galaxy="accent"
           data-cosmos-layer

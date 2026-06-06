@@ -52,6 +52,35 @@ body {
   background-position: 0% center;
 }
 
+.hero-accent-shimmer {
+  background: linear-gradient(
+    100deg,
+    #ff5bb5 0%,
+    #c084fc 14%,
+    #a855f7 28%,
+    #00d4ff 50%,
+    #67e8f9 62%,
+    #a855f7 78%,
+    #ff5bb5 100%
+  );
+  background-size: 200% auto;
+  background-position: 0% center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: hero-accent-flow 7s linear infinite;
+  will-change: background-position;
+}
+
+@keyframes hero-accent-flow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
 .hero-scan-beam {
   background: linear-gradient(
     90deg,
@@ -70,6 +99,108 @@ body {
 
 .hero-cta-glow {
   will-change: box-shadow;
+}
+
+@keyframes hero-motif-neon {
+  0%,
+  100% {
+    border-color: rgba(255, 91, 181, 0.7);
+    box-shadow:
+      0 0 16px rgba(255, 91, 181, 0.55),
+      0 0 32px rgba(255, 91, 181, 0.25),
+      0 0 48px rgba(255, 91, 181, 0.1),
+      inset 0 0 16px rgba(255, 91, 181, 0.14);
+    --motif-color: #ff5bb5;
+    --motif-aura: rgba(255, 91, 181, 0.35);
+  }
+  33% {
+    border-color: rgba(0, 212, 255, 0.7);
+    box-shadow:
+      0 0 16px rgba(0, 212, 255, 0.55),
+      0 0 32px rgba(0, 212, 255, 0.25),
+      0 0 48px rgba(0, 212, 255, 0.1),
+      inset 0 0 16px rgba(0, 212, 255, 0.14);
+    --motif-color: #00d4ff;
+    --motif-aura: rgba(0, 212, 255, 0.35);
+  }
+  66% {
+    border-color: rgba(168, 85, 247, 0.7);
+    box-shadow:
+      0 0 16px rgba(168, 85, 247, 0.55),
+      0 0 32px rgba(168, 85, 247, 0.25),
+      0 0 48px rgba(168, 85, 247, 0.1),
+      inset 0 0 16px rgba(168, 85, 247, 0.14);
+    --motif-color: #a855f7;
+    --motif-aura: rgba(168, 85, 247, 0.35);
+  }
+}
+
+.hero-motif-card {
+  --motif-color: var(--accent-pink);
+  --motif-aura: rgba(255, 91, 181, 0.3);
+  position: relative;
+  border: 1px solid rgba(255, 91, 181, 0.5);
+  background: rgba(8, 6, 18, 0.45);
+  backdrop-filter: blur(10px);
+  animation: hero-motif-neon 7s ease-in-out infinite;
+  will-change: border-color, box-shadow;
+}
+
+.hero-motif-aura {
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 50%, var(--motif-aura) 0%, transparent 72%);
+  filter: blur(10px);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-motif-icon {
+  position: relative;
+  z-index: 1;
+  color: var(--motif-color);
+  filter: drop-shadow(0 0 4px var(--motif-color)) drop-shadow(0 0 10px var(--motif-color));
+}
+
+.hero-motif-neon-0 {
+  animation-delay: 0s;
+}
+.hero-motif-neon-1 {
+  animation-delay: -1.2s;
+}
+.hero-motif-neon-2 {
+  animation-delay: -2.4s;
+}
+.hero-motif-neon-3 {
+  animation-delay: -3.6s;
+}
+.hero-motif-neon-4 {
+  animation-delay: -4.8s;
+}
+.hero-motif-neon-5 {
+  animation-delay: -6s;
+}
+
+@keyframes hero-badge-sparkle {
+  0%,
+  100% {
+    color: #00d4ff;
+    filter: drop-shadow(0 0 6px #00d4ff) drop-shadow(0 0 14px rgba(0, 212, 255, 0.6));
+  }
+  33% {
+    color: #ff5bb5;
+    filter: drop-shadow(0 0 6px #ff5bb5) drop-shadow(0 0 14px rgba(255, 91, 181, 0.6));
+  }
+  66% {
+    color: #a855f7;
+    filter: drop-shadow(0 0 6px #a855f7) drop-shadow(0 0 14px rgba(168, 85, 247, 0.6));
+  }
+}
+
+.hero-badge-sparkle {
+  animation: hero-badge-sparkle 5s ease-in-out infinite;
 }
 
 /* Hero — cosmic galaxy background */
@@ -832,6 +963,24 @@ body {
   .hero-gradient-shimmer {
     background-size: 100% auto;
     background-position: 0 center;
+  }
+
+  .hero-accent-shimmer {
+    animation: none;
+    background-size: 100% auto;
+    background-position: 0 center;
+  }
+
+  .hero-motif-card,
+  .hero-badge-sparkle {
+    animation: none;
+    border-color: rgba(255, 91, 181, 0.45);
+    box-shadow: 0 0 14px rgba(255, 91, 181, 0.3);
+    --motif-color: var(--accent-pink);
+  }
+
+  .hero-motif-icon {
+    filter: none;
   }
 
   .animate-marquee,

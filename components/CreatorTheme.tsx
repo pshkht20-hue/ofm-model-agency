@@ -14,36 +14,37 @@ import {
   Sparkles,
 } from 'lucide-react';
 const FLOATING_ICONS = [
-  { Icon: MessageCircle, x: '8%', y: '18%', delay: 0 },
-  { Icon: Heart, x: '88%', y: '22%', delay: 0.4 },
-  { Icon: Users, x: '12%', y: '72%', delay: 0.8 },
-  { Icon: DollarSign, x: '85%', y: '68%', delay: 0.2 },
-  { Icon: Bell, x: '78%', y: '38%', delay: 0.6 },
-  { Icon: Lock, x: '18%', y: '42%', delay: 1 },
+  { Icon: MessageCircle, x: '8%', y: '18%', delay: 0, phase: 0 },
+  { Icon: Heart, x: '88%', y: '22%', delay: 0.4, phase: 1 },
+  { Icon: Users, x: '12%', y: '72%', delay: 0.8, phase: 2 },
+  { Icon: DollarSign, x: '85%', y: '68%', delay: 0.2, phase: 3 },
+  { Icon: Bell, x: '78%', y: '38%', delay: 0.6, phase: 4 },
+  { Icon: Lock, x: '18%', y: '42%', delay: 1, phase: 5 },
 ] as const;
 
 export function CreatorFloatingMotifs() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
-      {FLOATING_ICONS.map(({ Icon, x, y, delay }, i) => (
+      {FLOATING_ICONS.map(({ Icon, x, y, delay, phase }, i) => (
         <motion.div
           key={i}
           className="absolute"
           style={{ left: x, top: y }}
           initial={{ opacity: 0, scale: 0.6 }}
           animate={{
-            opacity: [0.15, 0.35, 0.15],
-            scale: 1,
+            opacity: [0.72, 1, 0.72],
+            scale: [1, 1.04, 1],
             y: [0, -10, 0],
           }}
           transition={{
             opacity: { duration: 3 + i * 0.3, repeat: Infinity, ease: 'easeInOut' },
+            scale: { duration: 3.5 + i * 0.25, repeat: Infinity, ease: 'easeInOut', delay },
             y: { duration: 4 + i * 0.4, repeat: Infinity, ease: 'easeInOut', delay },
-            scale: { duration: 0.6, delay },
           }}
         >
-          <div className="p-3 rounded-2xl bg-white/[0.04] border border-accent-pink/15 backdrop-blur-sm text-accent-pink/40">
-            <Icon className="w-5 h-5 md:w-6 md:h-6" strokeWidth={1.5} />
+          <div className={`hero-motif-card hero-motif-neon-${phase} p-3 rounded-2xl`}>
+            <span className="hero-motif-aura" aria-hidden />
+            <Icon className="hero-motif-icon w-5 h-5 md:w-6 md:h-6" strokeWidth={1.75} />
           </div>
         </motion.div>
       ))}
