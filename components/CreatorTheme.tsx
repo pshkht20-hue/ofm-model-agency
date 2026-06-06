@@ -44,32 +44,65 @@ export function CreatorFloatingMotifs() {
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
       <svg width="0" height="0" className="absolute" aria-hidden>
         <defs>
-          <linearGradient id="hero-motif-grad" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#ff5bb5" />
-            <stop offset="35%" stopColor="#a855f7" />
-            <stop offset="65%" stopColor="#00d4ff" />
-            <stop offset="100%" stopColor="#ff5bb5" />
-            <animate attributeName="x1" values="0;0.8;0" dur="7s" repeatCount="indefinite" />
-            <animate attributeName="y1" values="0;0.2;0" dur="7s" repeatCount="indefinite" />
-            <animate attributeName="x2" values="1;1.8;1" dur="7s" repeatCount="indefinite" />
-            <animate attributeName="y2" values="1;1.2;1" dur="7s" repeatCount="indefinite" />
-          </linearGradient>
+          {FLOATING_ICONS.map(({ phase }) => (
+            <linearGradient
+              key={phase}
+              id={`hero-motif-grad-${phase}`}
+              gradientUnits="objectBoundingBox"
+              x1="0"
+              y1="0"
+              x2="1"
+              y2="1"
+            >
+              <stop offset="0%" stopColor="#ff5bb5" />
+              <stop offset="35%" stopColor="#a855f7" />
+              <stop offset="65%" stopColor="#00d4ff" />
+              <stop offset="100%" stopColor="#ff5bb5" />
+              <animate
+                attributeName="x1"
+                values="0;0.8;0"
+                dur="8s"
+                begin={`${phase * -1.3}s`}
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="y1"
+                values="0;0.2;0"
+                dur="8s"
+                begin={`${phase * -1.3}s`}
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="x2"
+                values="1;1.8;1"
+                dur="8s"
+                begin={`${phase * -1.3}s`}
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="y2"
+                values="1;1.2;1"
+                dur="8s"
+                begin={`${phase * -1.3}s`}
+                repeatCount="indefinite"
+              />
+            </linearGradient>
+          ))}
         </defs>
       </svg>
 
       {FLOATING_ICONS.map(({ Icon, x, y, delay, phase }, i) => (
         <motion.div
           key={i}
-          className="absolute opacity-50"
+          className="absolute"
           style={{ left: x, top: y }}
-          initial={{ opacity: 0, y: isMobile ? 8 : 0, scale: isMobile ? 1 : 0.6 }}
+          initial={{ opacity: 0, y: isMobile ? 6 : 0, scale: isMobile ? 1 : 0.85 }}
           animate={
             isMobile
               ? { opacity: 0.5, y: 0 }
               : {
                   opacity: 0.5,
-                  scale: [1, 1.03, 1],
-                  y: [0, -8, 0],
+                  y: [0, -6, 0],
                 }
           }
           transition={
@@ -79,18 +112,16 @@ export function CreatorFloatingMotifs() {
                   y: { duration: 0.9, delay: 0.9 + i * 0.1, ease: 'easeOut' },
                 }
               : {
-                  opacity: { duration: 0.6, delay, ease: 'easeOut' },
-                  scale: { duration: 4 + i * 0.3, repeat: Infinity, ease: 'easeInOut', delay },
-                  y: { duration: 4.5 + i * 0.35, repeat: Infinity, ease: 'easeInOut', delay },
+                  opacity: { duration: 0.7, delay, ease: 'easeOut' },
+                  y: { duration: 5 + i * 0.4, repeat: Infinity, ease: 'easeInOut', delay },
                 }
           }
         >
-          <div className={`hero-motif-card hero-motif-neon-${phase} p-3 rounded-2xl`}>
-            <span className={`hero-motif-aura hero-motif-neon-${phase}`} aria-hidden />
+          <div className="hero-motif-card p-2.5 md:p-3 rounded-2xl">
             <Icon
               className="hero-motif-icon w-5 h-5 md:w-6 md:h-6"
-              strokeWidth={1.75}
-              stroke="url(#hero-motif-grad)"
+              strokeWidth={1.5}
+              stroke={`url(#hero-motif-grad-${phase})`}
               fill="none"
             />
           </div>
