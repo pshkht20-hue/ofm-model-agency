@@ -18,6 +18,10 @@ const CORNERS = [
   'bottom-24 right-8 border-b border-r',
 ] as const;
 
+function clearHeroPending(section: HTMLElement | null) {
+  section?.classList.remove('hero-pending');
+}
+
 export function HeroSection() {
   const t = useTranslations('home');
   const tCreator = useTranslations('creator');
@@ -25,89 +29,143 @@ export function HeroSection() {
 
   useGSAP(
     () => {
+      const section = sectionRef.current;
       const mm = gsap.matchMedia();
 
-      mm.add('(prefers-reduced-motion: reduce)', () => {
-        gsap.set('[data-hero-reveal]', {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          rotateX: 0,
-          filter: 'none',
-          clearProps: 'transform,filter',
-        });
-      });
+      mm.add(
+        {
+          reduceMotion: '(prefers-reduced-motion: reduce)',
+          mobile: '(max-width: 767px)',
+          desktop: '(min-width: 768px)',
+        },
+        (context) => {
+          const { reduceMotion = false, mobile = false } = context.conditions ?? {};
 
-      mm.add('(prefers-reduced-motion: no-preference)', () => {
-        gsap.set('[data-hero-scan]', { scaleX: 0, opacity: 0.9, transformOrigin: 'left center' });
-        gsap.set('[data-hero-badge]', { opacity: 0, y: -18, scale: 0.9, filter: 'blur(10px)' });
-        gsap.set('[data-hero-line]', {
-          opacity: 0,
-          y: 56,
-          rotateX: 14,
-          filter: 'blur(12px)',
-          transformPerspective: 900,
-        });
-        gsap.set('[data-hero-lead]', { opacity: 0, y: 32, filter: 'blur(8px)' });
-        gsap.set('[data-hero-cta]', { opacity: 0, y: 28, scale: 0.94 });
-        gsap.set('[data-hero-stat]', { opacity: 0, y: 18 });
-        gsap.set('[data-hero-note]', { opacity: 0 });
-        gsap.set('[data-hero-scroll]', { opacity: 0, y: 12 });
-        gsap.set('[data-hero-corner]', { opacity: 0, scale: 0.75 });
-
-        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-        tl.to('[data-hero-scan]', { scaleX: 1, duration: 1.1, ease: 'power2.inOut' }, 0.15)
-          .to('[data-hero-scan]', { opacity: 0, x: '40%', duration: 0.7, ease: 'power2.in' }, 0.85)
-          .to('[data-hero-corner]', { opacity: 0.55, scale: 1, duration: 0.55, stagger: 0.07 }, 0.25)
-          .to(
-            '[data-hero-badge]',
-            { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 0.75, ease: 'back.out(1.5)' },
-            0.4,
-          )
-          .to(
-            '[data-hero-line]',
-            {
+          if (reduceMotion) {
+            gsap.set('[data-hero-reveal]', {
               opacity: 1,
               y: 0,
+              scale: 1,
               rotateX: 0,
-              filter: 'blur(0px)',
-              duration: 0.9,
-              stagger: 0.16,
-              ease: 'power4.out',
-            },
-            0.55,
-          )
-          .to('[data-hero-lead]', { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8 }, '-=0.38')
-          .to(
-            '[data-hero-cta]',
-            { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.12, ease: 'back.out(1.3)' },
-            '-=0.45',
-          )
-          .to('[data-hero-stat]', { opacity: 1, y: 0, duration: 0.5, stagger: 0.09 }, '-=0.3')
-          .to('[data-hero-note]', { opacity: 1, duration: 0.55 }, '-=0.2')
-          .to('[data-hero-scroll]', { opacity: 1, y: 0, duration: 0.55 }, '-=0.15');
+              filter: 'none',
+              clearProps: 'transform,filter',
+            });
+            gsap.set('[data-hero-scan], [data-hero-corner], [data-hero-scroll]', {
+              opacity: 1,
+              clearProps: 'transform,filter',
+            });
+            clearHeroPending(section);
+            return;
+          }
 
-        gsap.to('[data-hero-cta="primary"]', {
-          boxShadow:
-            '0 0 36px -4px rgba(255, 91, 181, 0.6), 0 0 72px -14px rgba(168, 85, 247, 0.4)',
-          duration: 2,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          delay: 2.2,
-        });
+          if (mobile) {
+            gsap.set('[data-hero-scan]', { opacity: 0, scaleX: 0 });
+            gsap.set('[data-hero-corner]', { opacity: 0 });
+            gsap.set('[data-hero-badge]', { opacity: 0, y: 12 });
+            gsap.set('[data-hero-line]', { opacity: 0, y: 20 });
+            gsap.set('[data-hero-lead]', { opacity: 0, y: 14 });
+            gsap.set('[data-hero-cta]', { opacity: 0, y: 12 });
+            gsap.set('[data-hero-stat]', { opacity: 0, y: 10 });
+            gsap.set('[data-hero-note]', { opacity: 0, y: 8 });
+            gsap.set('[data-hero-scroll]', { opacity: 0, y: 8 });
 
-        gsap.to('[data-hero-scroll-line]', {
-          scaleY: 0.35,
-          transformOrigin: 'top center',
-          duration: 1.4,
-          repeat: -1,
-          yoyo: true,
-          ease: 'power1.inOut',
-          delay: 2.4,
-        });
-      });
+            clearHeroPending(section);
+
+            const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
+
+            tl.to('[data-hero-badge]', { opacity: 1, y: 0, duration: 0.85 }, 0.15)
+              .to('[data-hero-line]', { opacity: 1, y: 0, duration: 0.9, stagger: 0.14 }, 0.35)
+              .to('[data-hero-lead]', { opacity: 1, y: 0, duration: 0.85 }, 0.78)
+              .to('[data-hero-cta]', { opacity: 1, y: 0, duration: 0.75, stagger: 0.1 }, 1.02)
+              .to('[data-hero-stat]', { opacity: 1, y: 0, duration: 0.65, stagger: 0.08 }, 1.32)
+              .to('[data-hero-note]', { opacity: 1, y: 0, duration: 0.6 }, 1.58)
+              .to('[data-hero-scroll]', { opacity: 1, y: 0, duration: 0.65 }, 1.78);
+
+            gsap.to('[data-hero-scroll-line]', {
+              scaleY: 0.35,
+              transformOrigin: 'top center',
+              duration: 1.6,
+              repeat: -1,
+              yoyo: true,
+              ease: 'sine.inOut',
+              delay: 2.6,
+            });
+
+            return;
+          }
+
+          gsap.set('[data-hero-scan]', { scaleX: 0, opacity: 0.9, transformOrigin: 'left center' });
+          gsap.set('[data-hero-badge]', { opacity: 0, y: -18, scale: 0.9, filter: 'blur(10px)' });
+          gsap.set('[data-hero-line]', {
+            opacity: 0,
+            y: 56,
+            rotateX: 14,
+            filter: 'blur(12px)',
+            transformPerspective: 900,
+          });
+          gsap.set('[data-hero-lead]', { opacity: 0, y: 32, filter: 'blur(8px)' });
+          gsap.set('[data-hero-cta]', { opacity: 0, y: 28, scale: 0.94 });
+          gsap.set('[data-hero-stat]', { opacity: 0, y: 18 });
+          gsap.set('[data-hero-note]', { opacity: 0 });
+          gsap.set('[data-hero-scroll]', { opacity: 0, y: 12 });
+          gsap.set('[data-hero-corner]', { opacity: 0, scale: 0.75 });
+
+          clearHeroPending(section);
+
+          const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+          tl.to('[data-hero-scan]', { scaleX: 1, duration: 1.1, ease: 'power2.inOut' }, 0.15)
+            .to('[data-hero-scan]', { opacity: 0, x: '40%', duration: 0.7, ease: 'power2.in' }, 0.85)
+            .to('[data-hero-corner]', { opacity: 0.55, scale: 1, duration: 0.55, stagger: 0.07 }, 0.25)
+            .to(
+              '[data-hero-badge]',
+              { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 0.75, ease: 'back.out(1.5)' },
+              0.4,
+            )
+            .to(
+              '[data-hero-line]',
+              {
+                opacity: 1,
+                y: 0,
+                rotateX: 0,
+                filter: 'blur(0px)',
+                duration: 0.9,
+                stagger: 0.16,
+                ease: 'power4.out',
+              },
+              0.55,
+            )
+            .to('[data-hero-lead]', { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8 }, '-=0.38')
+            .to(
+              '[data-hero-cta]',
+              { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.12, ease: 'back.out(1.3)' },
+              '-=0.45',
+            )
+            .to('[data-hero-stat]', { opacity: 1, y: 0, duration: 0.5, stagger: 0.09 }, '-=0.3')
+            .to('[data-hero-note]', { opacity: 1, duration: 0.55 }, '-=0.2')
+            .to('[data-hero-scroll]', { opacity: 1, y: 0, duration: 0.55 }, '-=0.15');
+
+          gsap.to('[data-hero-cta="primary"]', {
+            boxShadow:
+              '0 0 36px -4px rgba(255, 91, 181, 0.6), 0 0 72px -14px rgba(168, 85, 247, 0.4)',
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            delay: 2.2,
+          });
+
+          gsap.to('[data-hero-scroll-line]', {
+            scaleY: 0.35,
+            transformOrigin: 'top center',
+            duration: 1.4,
+            repeat: -1,
+            yoyo: true,
+            ease: 'power1.inOut',
+            delay: 2.4,
+          });
+        },
+      );
 
       return () => mm.revert();
     },
@@ -117,7 +175,7 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden"
+      className="hero-pending min-h-screen flex items-center justify-center relative pt-20 overflow-hidden"
       aria-label={t('hero.srOnly')}
     >
       <HeroBackground sectionRef={sectionRef} />

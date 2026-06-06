@@ -101,58 +101,89 @@ body {
   will-change: box-shadow;
 }
 
-@keyframes hero-motif-neon {
-  0%,
+/* Hide hero content until GSAP sets initial state (prevents mobile flash/jank) */
+.hero-pending [data-hero-reveal],
+.hero-pending [data-hero-scroll] {
+  opacity: 0;
+}
+
+@media (max-width: 767px) {
+  .hero-pending [data-hero-reveal] {
+    transform: translate3d(0, 14px, 0);
+  }
+
+  [data-hero-reveal] {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+@keyframes hero-motif-border-flow {
+  0% {
+    background-position: 0 0, 0% center;
+    box-shadow:
+      0 0 14px rgba(255, 91, 181, 0.22),
+      0 0 28px rgba(168, 85, 247, 0.12);
+  }
+  50% {
+    box-shadow:
+      0 0 14px rgba(0, 212, 255, 0.22),
+      0 0 28px rgba(168, 85, 247, 0.12);
+  }
   100% {
-    border-color: rgba(255, 91, 181, 0.7);
+    background-position: 0 0, 200% center;
     box-shadow:
-      0 0 16px rgba(255, 91, 181, 0.55),
-      0 0 32px rgba(255, 91, 181, 0.25),
-      0 0 48px rgba(255, 91, 181, 0.1),
-      inset 0 0 16px rgba(255, 91, 181, 0.14);
-    --motif-color: #ff5bb5;
-    --motif-aura: rgba(255, 91, 181, 0.35);
+      0 0 14px rgba(255, 91, 181, 0.22),
+      0 0 28px rgba(168, 85, 247, 0.12);
   }
-  33% {
-    border-color: rgba(0, 212, 255, 0.7);
-    box-shadow:
-      0 0 16px rgba(0, 212, 255, 0.55),
-      0 0 32px rgba(0, 212, 255, 0.25),
-      0 0 48px rgba(0, 212, 255, 0.1),
-      inset 0 0 16px rgba(0, 212, 255, 0.14);
-    --motif-color: #00d4ff;
-    --motif-aura: rgba(0, 212, 255, 0.35);
+}
+
+@keyframes hero-motif-aura-flow {
+  0% {
+    background-position: 0% center;
   }
-  66% {
-    border-color: rgba(168, 85, 247, 0.7);
-    box-shadow:
-      0 0 16px rgba(168, 85, 247, 0.55),
-      0 0 32px rgba(168, 85, 247, 0.25),
-      0 0 48px rgba(168, 85, 247, 0.1),
-      inset 0 0 16px rgba(168, 85, 247, 0.14);
-    --motif-color: #a855f7;
-    --motif-aura: rgba(168, 85, 247, 0.35);
+  100% {
+    background-position: 200% center;
   }
 }
 
 .hero-motif-card {
-  --motif-color: var(--accent-pink);
-  --motif-aura: rgba(255, 91, 181, 0.3);
   position: relative;
-  border: 1px solid rgba(255, 91, 181, 0.5);
-  background: rgba(8, 6, 18, 0.45);
+  border: 1px solid transparent;
+  background:
+    linear-gradient(rgba(8, 6, 18, 0.32), rgba(8, 6, 18, 0.32)) padding-box,
+    linear-gradient(
+      100deg,
+      #ff5bb5 0%,
+      #c084fc 14%,
+      #a855f7 28%,
+      #00d4ff 50%,
+      #67e8f9 62%,
+      #a855f7 78%,
+      #ff5bb5 100%
+    ) border-box;
+  background-size: 100% 100%, 200% auto;
+  background-position: 0 0, 0% center;
   backdrop-filter: blur(10px);
-  animation: hero-motif-neon 7s ease-in-out infinite;
-  will-change: border-color, box-shadow;
+  animation: hero-motif-border-flow 7s linear infinite;
+  will-change: background-position, box-shadow;
 }
 
 .hero-motif-aura {
   position: absolute;
   inset: -6px;
   border-radius: inherit;
-  background: radial-gradient(circle at 50% 50%, var(--motif-aura) 0%, transparent 72%);
+  background: linear-gradient(
+    100deg,
+    rgba(255, 91, 181, 0.28) 0%,
+    rgba(168, 85, 247, 0.24) 35%,
+    rgba(0, 212, 255, 0.28) 65%,
+    rgba(255, 91, 181, 0.28) 100%
+  );
+  background-size: 200% auto;
+  background-position: 0% center;
   filter: blur(10px);
-  opacity: 0.85;
+  animation: hero-motif-aura-flow 7s linear infinite;
   pointer-events: none;
   z-index: 0;
 }
@@ -160,8 +191,7 @@ body {
 .hero-motif-icon {
   position: relative;
   z-index: 1;
-  color: var(--motif-color);
-  filter: drop-shadow(0 0 4px var(--motif-color)) drop-shadow(0 0 10px var(--motif-color));
+  filter: drop-shadow(0 0 5px rgba(255, 91, 181, 0.35)) drop-shadow(0 0 10px rgba(0, 212, 255, 0.2));
 }
 
 .hero-motif-neon-0 {
@@ -972,11 +1002,18 @@ body {
   }
 
   .hero-motif-card,
+  .hero-motif-aura,
   .hero-badge-sparkle {
     animation: none;
-    border-color: rgba(255, 91, 181, 0.45);
-    box-shadow: 0 0 14px rgba(255, 91, 181, 0.3);
-    --motif-color: var(--accent-pink);
+  }
+
+  .hero-motif-card {
+    background:
+      linear-gradient(rgba(8, 6, 18, 0.32), rgba(8, 6, 18, 0.32)) padding-box,
+      linear-gradient(100deg, #ff5bb5, #a855f7, #00d4ff) border-box;
+    background-size: 100% 100%, 100% auto;
+    background-position: 0 0, 0 center;
+    box-shadow: 0 0 12px rgba(255, 91, 181, 0.2);
   }
 
   .hero-motif-icon {

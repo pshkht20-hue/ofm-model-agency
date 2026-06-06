@@ -78,42 +78,74 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
       const section = sectionRef.current;
       const mm = gsap.matchMedia();
 
-      mm.add('(prefers-reduced-motion: reduce)', () => {
-        gsap.set('[data-cosmos-layer]', { opacity: 1, clearProps: 'transform,filter' });
-      });
+      mm.add(
+        {
+          reduceMotion: '(prefers-reduced-motion: reduce)',
+          mobile: '(max-width: 767px)',
+          desktop: '(min-width: 768px)',
+        },
+        (context) => {
+          const { reduceMotion = false, mobile = false } = context.conditions ?? {};
 
-      mm.add('(prefers-reduced-motion: no-preference)', () => {
-        gsap.set('[data-cosmos-nebula]', { opacity: 0, scale: 0.85 });
-        gsap.set('[data-cosmos-galaxy]', { opacity: 0, scale: 0.9, rotate: 0 });
-        gsap.set('[data-cosmos-star]', { opacity: 0, scale: 0 });
-        gsap.set('[data-cosmos-dust]', { opacity: 0 });
-        gsap.set('[data-cosmos-shoot]', { opacity: 0 });
-        gsap.set('[data-cosmos-breathe]', { opacity: 0.4, scale: 1 });
-        gsap.set('[data-cosmos-milky]', { opacity: 0, scale: 0.95 });
-        gsap.set('[data-cosmos-cluster]', { opacity: 0, scale: 0.6 });
-        gsap.set('[data-cosmos-core]', { scale: 1, filter: 'brightness(1)' });
+          if (reduceMotion) {
+            gsap.set('[data-cosmos-layer]', { opacity: 1, clearProps: 'transform,filter' });
+            return;
+          }
 
-        const intro = gsap.timeline({ defaults: { ease: 'power2.out' } });
-        intro
-          .to('[data-cosmos-nebula]', { opacity: 1, scale: 1, duration: 2.4, stagger: 0.1 }, 0)
-          .to('[data-cosmos-galaxy]', { opacity: 1, scale: 1, duration: 2.8, stagger: 0.2 }, 0.2)
-          .to(
-            '[data-cosmos-star]',
-            { opacity: 1, scale: 1, duration: 0.7, stagger: { each: 0.008, from: 'random' } },
-            0.4,
-          )
-          .to('[data-cosmos-dust]', { opacity: 1, duration: 2, stagger: 0.06 }, 0.6)
-          .to('[data-cosmos-milky]', { opacity: 1, scale: 1, duration: 3 }, 0.3)
-          .to('[data-cosmos-cluster]', { opacity: 1, scale: 1, duration: 1.4, stagger: 0.15 }, 0.8);
+          gsap.set('[data-cosmos-nebula]', { opacity: 0, scale: mobile ? 0.96 : 0.85 });
+          gsap.set('[data-cosmos-galaxy]', { opacity: 0, scale: mobile ? 0.96 : 0.9, rotate: 0 });
+          gsap.set('[data-cosmos-star]', { opacity: 0, scale: mobile ? 1 : 0 });
+          gsap.set('[data-cosmos-dust]', { opacity: 0 });
+          gsap.set('[data-cosmos-shoot]', { opacity: 0 });
+          gsap.set('[data-cosmos-breathe]', { opacity: mobile ? 0.5 : 0.4, scale: 1 });
+          gsap.set('[data-cosmos-milky]', { opacity: 0, scale: mobile ? 0.98 : 0.95 });
+          gsap.set('[data-cosmos-cluster]', { opacity: 0, scale: mobile ? 0.85 : 0.6 });
+          gsap.set('[data-cosmos-core]', { scale: 1, filter: 'brightness(1)' });
 
-        gsap.to('[data-cosmos-breathe]', {
-          opacity: 0.75,
-          scale: 1.08,
-          duration: 10,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-        });
+          const intro = gsap.timeline({ defaults: { ease: 'power2.out' } });
+
+          if (mobile) {
+            intro
+              .to('[data-cosmos-breathe]', { opacity: 0.6, duration: 1.4 }, 0)
+              .to('[data-cosmos-milky]', { opacity: 1, scale: 1, duration: 1.3 }, 0.05)
+              .to('[data-cosmos-nebula]', { opacity: 1, scale: 1, duration: 1.2, stagger: 0.05 }, 0.1)
+              .to('[data-cosmos-galaxy]', { opacity: 1, scale: 1, duration: 1.2 }, 0.12)
+              .to('[data-cosmos-star]', { opacity: 1, duration: 1.1 }, 0.2)
+              .to('[data-cosmos-cluster]', { opacity: 1, scale: 1, duration: 0.9, stagger: 0.07 }, 0.28)
+              .to('[data-cosmos-dust]', { opacity: 1, duration: 0.8 }, 0.35);
+          } else {
+            intro
+              .to('[data-cosmos-nebula]', { opacity: 1, scale: 1, duration: 2.4, stagger: 0.1 }, 0)
+              .to('[data-cosmos-galaxy]', { opacity: 1, scale: 1, duration: 2.8, stagger: 0.2 }, 0.2)
+              .to(
+                '[data-cosmos-star]',
+                { opacity: 1, scale: 1, duration: 0.7, stagger: { each: 0.008, from: 'random' } },
+                0.4,
+              )
+              .to('[data-cosmos-dust]', { opacity: 1, duration: 2, stagger: 0.06 }, 0.6)
+              .to('[data-cosmos-milky]', { opacity: 1, scale: 1, duration: 3 }, 0.3)
+              .to('[data-cosmos-cluster]', { opacity: 1, scale: 1, duration: 1.4, stagger: 0.15 }, 0.8);
+          }
+
+        if (mobile) {
+          gsap.to('[data-cosmos-breathe]', {
+            opacity: 0.68,
+            duration: 12,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            delay: 1.5,
+          });
+        } else {
+          gsap.to('[data-cosmos-breathe]', {
+            opacity: 0.75,
+            scale: 1.08,
+            duration: 10,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+          });
+        }
 
         gsap.to('[data-cosmos-milky]', {
           x: 24,
@@ -127,15 +159,17 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           delay: 1,
         });
 
-        gsap.to('[data-cosmos-core="accent"]', {
-          scale: 1.22,
-          filter: 'brightness(1.28)',
-          duration: 5.5,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          delay: 1.2,
-        });
+        if (!mobile) {
+          gsap.to('[data-cosmos-core="accent"]', {
+            scale: 1.22,
+            filter: 'brightness(1.28)',
+            duration: 5.5,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            delay: 1.2,
+          });
+        }
 
         gsap.to('[data-cosmos-cluster]', {
           opacity: 'random(0.5, 0.95)',
@@ -190,36 +224,38 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           delay: 3,
         });
 
-        gsap.to('[data-cosmos-star="far"]', {
-          opacity: 'random(0.15, 0.65)',
-          scale: 'random(0.5, 1.1)',
-          duration: () => gsap.utils.random(3, 6),
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          stagger: { each: 0.05, from: 'random' },
-          delay: 1,
-        });
-        gsap.to('[data-cosmos-star="mid"]', {
-          opacity: 'random(0.25, 0.85)',
-          scale: 'random(0.7, 1.3)',
-          duration: () => gsap.utils.random(2, 4.5),
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          stagger: { each: 0.07, from: 'random' },
-          delay: 1.2,
-        });
-        gsap.to('[data-cosmos-star="near"]', {
-          opacity: 'random(0.4, 1)',
-          scale: 'random(0.8, 1.5)',
-          duration: () => gsap.utils.random(1.5, 3.5),
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          stagger: { each: 0.1, from: 'random' },
-          delay: 1.4,
-        });
+        if (!mobile) {
+          gsap.to('[data-cosmos-star="far"]', {
+            opacity: 'random(0.15, 0.65)',
+            scale: 'random(0.5, 1.1)',
+            duration: () => gsap.utils.random(3, 6),
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            stagger: { each: 0.05, from: 'random' },
+            delay: 1,
+          });
+          gsap.to('[data-cosmos-star="mid"]', {
+            opacity: 'random(0.25, 0.85)',
+            scale: 'random(0.7, 1.3)',
+            duration: () => gsap.utils.random(2, 4.5),
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            stagger: { each: 0.07, from: 'random' },
+            delay: 1.2,
+          });
+          gsap.to('[data-cosmos-star="near"]', {
+            opacity: 'random(0.4, 1)',
+            scale: 'random(0.8, 1.5)',
+            duration: () => gsap.utils.random(1.5, 3.5),
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            stagger: { each: 0.1, from: 'random' },
+            delay: 1.4,
+          });
+        }
 
         gsap.to('[data-cosmos-dust]', {
           x: 'random(-20, 20)',
@@ -265,10 +301,12 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
             .to(sel, { x: '115%', duration: () => gsap.utils.random(0.9, 1.5), ease: 'power1.in' })
             .to(sel, { opacity: 0, duration: 0.18 }, '-=0.12');
         };
-        shoot('[data-cosmos-shoot="a"]', 0);
-        shoot('[data-cosmos-shoot="b"]', 4.5);
+        if (!mobile) {
+          shoot('[data-cosmos-shoot="a"]', 0);
+          shoot('[data-cosmos-shoot="b"]', 4.5);
+        }
 
-        if (!section) return;
+        if (!section || mobile) return;
 
         const pFarX = gsap.quickTo('[data-cosmos-parallax="far"]', 'x', { duration: 2.2, ease: 'power3.out' });
         const pFarY = gsap.quickTo('[data-cosmos-parallax="far"]', 'y', { duration: 2.2, ease: 'power3.out' });
@@ -291,7 +329,8 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
 
         section.addEventListener('mousemove', onMove);
         return () => section.removeEventListener('mousemove', onMove);
-      });
+        },
+      );
 
       return () => mm.revert();
     },
