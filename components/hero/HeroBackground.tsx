@@ -6,16 +6,65 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP);
 
-/** Sparkles kept to edges — never clutter the headline */
-const EDGE_SPARKLES = Array.from({ length: 28 }, (_, i) => ({
+type StarLayer = 'far' | 'mid' | 'near';
+
+type Star = {
+  id: number;
+  left: number;
+  top: number;
+  layer: StarLayer;
+  size: number;
+  tone: 'white' | 'pink' | 'cyan' | 'violet';
+};
+
+const STARS: Star[] = Array.from({ length: 140 }, (_, i) => {
+  const layer: StarLayer = i < 70 ? 'far' : i < 110 ? 'mid' : 'near';
+  return {
+    id: i,
+    left: ((i * 41 + 7) % 98) + 1,
+    top: ((i * 67 + 13) % 96) + 2,
+    layer,
+    size: layer === 'far' ? 1 : layer === 'mid' ? 1.5 : 2.5,
+    tone: (['white', 'pink', 'cyan', 'violet'] as const)[i % 4],
+  };
+});
+
+const NEBULAE = [
+  { id: 0, tone: 'pink', w: 58, h: 48, left: -18, top: -12, blur: 100, depth: 'far' },
+  { id: 1, tone: 'violet', w: 52, h: 44, left: 48, top: 58, blur: 110, depth: 'far' },
+  { id: 2, tone: 'cyan', w: 38, h: 32, left: 62, top: -8, blur: 90, depth: 'mid' },
+  { id: 3, tone: 'pink', w: 42, h: 36, left: -8, top: 52, blur: 95, depth: 'mid' },
+  { id: 4, tone: 'violet', w: 34, h: 28, left: 22, top: 18, blur: 80, depth: 'near' },
+  { id: 5, tone: 'cyan', w: 30, h: 26, left: 72, top: 32, blur: 75, depth: 'near' },
+] as const;
+
+const DUST = Array.from({ length: 18 }, (_, i) => ({
   id: i,
-  left: i % 2 === 0 ? ((i * 13) % 14) + 1 : 100 - (((i * 11) % 14) + 1),
-  top: ((i * 29 + 17) % 82) + 8,
-  delay: (i * 0.17) % 3,
+  left: ((i * 53 + 9) % 90) + 5,
+  top: ((i * 37 + 21) % 85) + 7,
+  w: 80 + (i % 4) * 40,
+  rotate: (i * 37) % 180,
 }));
 
-const RUNWAY_LANES = 9;
-const RUNWAY_STRIPES = 7;
+const CLUSTERS = [
+  { id: 0, left: 28, top: 22, size: 48, stars: 6 },
+  { id: 1, left: 68, top: 38, size: 36, stars: 5 },
+  { id: 2, left: 14, top: 62, size: 42, stars: 5 },
+  { id: 3, left: 78, top: 72, size: 32, stars: 4 },
+] as const;
+
+const nebulaToneClass = {
+  pink: 'bg-[radial-gradient(ellipse_at_center,rgba(255,91,181,0.35)_0%,rgba(255,91,181,0.08)_42%,transparent_72%)]',
+  violet: 'bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.32)_0%,rgba(168,85,247,0.07)_44%,transparent_74%)]',
+  cyan: 'bg-[radial-gradient(ellipse_at_center,rgba(0,212,255,0.28)_0%,rgba(0,212,255,0.06)_40%,transparent_70%)]',
+};
+
+const starToneClass = {
+  white: 'bg-white/90 shadow-[0_0_6px_1px_rgba(255,255,255,0.5)]',
+  pink: 'bg-accent-pink/80 shadow-[0_0_8px_2px_rgba(255,91,181,0.45)]',
+  cyan: 'bg-accent-cyan/75 shadow-[0_0_8px_2px_rgba(0,212,255,0.4)]',
+  violet: 'bg-accent-violet/80 shadow-[0_0_8px_2px_rgba(168,85,247,0.4)]',
+};
 
 type HeroBackgroundProps = {
   sectionRef: RefObject<HTMLElement | null>;
@@ -30,106 +79,237 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
       const mm = gsap.matchMedia();
 
       mm.add('(prefers-reduced-motion: reduce)', () => {
-        gsap.set('[data-hero-bg-layer]', { clearProps: 'all' });
+        gsap.set('[data-cosmos-layer]', { opacity: 1, clearProps: 'transform,filter' });
       });
 
       mm.add('(prefers-reduced-motion: no-preference)', () => {
-        gsap.set('[data-hero-studio]', { opacity: 0 });
-        gsap.set('[data-hero-runway]', { opacity: 0, y: 24 });
-        gsap.set('[data-hero-stripe]', { opacity: 0 });
-        gsap.set('[data-hero-sweep]', { y: '-20%', opacity: 0 });
-        gsap.set('[data-hero-frame]', { scaleY: 0, opacity: 0 });
-        gsap.set('[data-hero-sparkle]', { opacity: 0, scale: 0 });
-        gsap.set('[data-hero-grid]', { opacity: 0 });
+        gsap.set('[data-cosmos-nebula]', { opacity: 0, scale: 0.85 });
+        gsap.set('[data-cosmos-galaxy]', { opacity: 0, scale: 0.9, rotate: 0 });
+        gsap.set('[data-cosmos-star]', { opacity: 0, scale: 0 });
+        gsap.set('[data-cosmos-dust]', { opacity: 0 });
+        gsap.set('[data-cosmos-shoot]', { opacity: 0 });
+        gsap.set('[data-cosmos-breathe]', { opacity: 0.4, scale: 1 });
+        gsap.set('[data-cosmos-milky]', { opacity: 0, scale: 0.95 });
+        gsap.set('[data-cosmos-cluster]', { opacity: 0, scale: 0.6 });
+        gsap.set('[data-cosmos-core]', { scale: 1, filter: 'brightness(1)' });
 
-        const intro = gsap.timeline();
+        const intro = gsap.timeline({ defaults: { ease: 'power2.out' } });
         intro
-          .to('[data-hero-studio]', { opacity: 1, duration: 1.8, stagger: 0.1, ease: 'power2.out' }, 0)
-          .to('[data-hero-runway]', { opacity: 1, y: 0, duration: 1.6, ease: 'power3.out' }, 0.15)
-          .to('[data-hero-stripe]', { opacity: 1, duration: 0.8, stagger: 0.06, ease: 'power2.out' }, 0.35)
-          .to('[data-hero-grid]', { opacity: 0.22, duration: 1.4, ease: 'power2.out' }, 0.2)
-          .to('[data-hero-frame]', { scaleY: 1, opacity: 1, duration: 1.2, stagger: 0.08, ease: 'power3.out' }, 0.45)
+          .to('[data-cosmos-nebula]', { opacity: 1, scale: 1, duration: 2.4, stagger: 0.1 }, 0)
+          .to('[data-cosmos-galaxy]', { opacity: 1, scale: 1, duration: 2.8, stagger: 0.2 }, 0.2)
           .to(
-            '[data-hero-sparkle]',
-            { opacity: 1, scale: 1, duration: 0.5, stagger: { each: 0.03, from: 'random' }, ease: 'power2.out' },
-            0.6,
-          );
+            '[data-cosmos-star]',
+            { opacity: 1, scale: 1, duration: 0.7, stagger: { each: 0.008, from: 'random' } },
+            0.4,
+          )
+          .to('[data-cosmos-dust]', { opacity: 1, duration: 2, stagger: 0.06 }, 0.6)
+          .to('[data-cosmos-milky]', { opacity: 1, scale: 1, duration: 3 }, 0.3)
+          .to('[data-cosmos-cluster]', { opacity: 1, scale: 1, duration: 1.4, stagger: 0.15 }, 0.8);
 
-        gsap.to('[data-hero-studio="left"]', {
-          opacity: 0.55,
-          duration: 4,
+        gsap.to('[data-cosmos-breathe]', {
+          opacity: 0.75,
+          scale: 1.08,
+          duration: 10,
           repeat: -1,
           yoyo: true,
           ease: 'sine.inOut',
+        });
+
+        gsap.to('[data-cosmos-milky]', {
+          x: 24,
+          y: -12,
+          opacity: 0.85,
+          scale: 1.03,
+          duration: 22,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          delay: 1,
+        });
+
+        gsap.to('[data-cosmos-core="main"]', {
+          scale: 1.18,
+          filter: 'brightness(1.35)',
+          duration: 4.5,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+        });
+        gsap.to('[data-cosmos-core="accent"]', {
+          scale: 1.22,
+          filter: 'brightness(1.28)',
+          duration: 5.5,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          delay: 1.2,
+        });
+
+        gsap.to('[data-cosmos-cluster]', {
+          opacity: 'random(0.5, 0.95)',
+          scale: 'random(0.92, 1.08)',
+          duration: () => gsap.utils.random(4, 8),
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          stagger: { each: 0.6, from: 'random' },
+          delay: 2,
+        });
+        gsap.to('[data-cosmos-cluster-star]', {
+          opacity: 'random(0.3, 1)',
+          scale: 'random(0.6, 1.4)',
+          duration: () => gsap.utils.random(1.8, 4),
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          stagger: { each: 0.04, from: 'random' },
           delay: 1.5,
         });
-        gsap.to('[data-hero-studio="right"]', {
-          opacity: 0.5,
-          duration: 5,
+
+        NEBULAE.forEach((n) => {
+          const el = `[data-cosmos-nebula="${n.id}"]`;
+          gsap.to(el, {
+            x: 'random(-36, 36)',
+            y: 'random(-28, 28)',
+            scale: 'random(0.92, 1.1)',
+            opacity: 'random(0.55, 0.9)',
+            duration: gsap.utils.random(12, 20),
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            delay: n.id * 0.5,
+          });
+        });
+
+        gsap.to('[data-cosmos-galaxy="main"]', {
+          rotate: 360,
+          duration: 280,
+          repeat: -1,
+          ease: 'none',
+        });
+        gsap.to('[data-cosmos-galaxy="accent"]', {
+          rotate: -360,
+          duration: 320,
+          repeat: -1,
+          ease: 'none',
+        });
+
+        gsap.to('[data-cosmos-galaxy="main"]', {
+          scale: 1.06,
+          opacity: 0.85,
+          duration: 7,
           repeat: -1,
           yoyo: true,
           ease: 'sine.inOut',
           delay: 2,
         });
-        gsap.to('[data-hero-studio="center"]', {
-          opacity: 0.35,
-          duration: 3.5,
+        gsap.to('[data-cosmos-galaxy="accent"]', {
+          scale: 1.08,
+          opacity: 0.7,
+          duration: 9,
           repeat: -1,
           yoyo: true,
           ease: 'sine.inOut',
-          delay: 1.8,
+          delay: 3,
         });
 
-        gsap.to('[data-hero-runway]', {
-          y: 5,
-          duration: 3.5,
+        gsap.to('[data-cosmos-star="far"]', {
+          opacity: 'random(0.15, 0.65)',
+          scale: 'random(0.5, 1.1)',
+          duration: () => gsap.utils.random(3, 6),
           repeat: -1,
           yoyo: true,
           ease: 'sine.inOut',
-          delay: 1.2,
-        });
-
-        gsap.to('[data-hero-stripe]', {
-          opacity: 0.4,
-          duration: 1.6,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          stagger: { each: 0.22, from: 'end' },
+          stagger: { each: 0.05, from: 'random' },
           delay: 1,
         });
-
-        gsap.timeline({ repeat: -1, repeatDelay: 6, delay: 2.5 })
-          .set('[data-hero-sweep]', { y: '-18%', opacity: 0 })
-          .to('[data-hero-sweep]', { opacity: 0.42, duration: 0.35 })
-          .to('[data-hero-sweep]', { y: '115%', duration: 2, ease: 'power1.inOut' })
-          .to('[data-hero-sweep]', { opacity: 0, duration: 0.25 }, '-=0.15');
-
-        gsap.to('[data-hero-sparkle]', {
-          opacity: 'random(0.2, 0.75)',
-          duration: () => gsap.utils.random(2.5, 4.5),
+        gsap.to('[data-cosmos-star="mid"]', {
+          opacity: 'random(0.25, 0.85)',
+          scale: 'random(0.7, 1.3)',
+          duration: () => gsap.utils.random(2, 4.5),
           repeat: -1,
           yoyo: true,
           ease: 'sine.inOut',
-          stagger: { each: 0.12, from: 'random' },
+          stagger: { each: 0.07, from: 'random' },
           delay: 1.2,
         });
+        gsap.to('[data-cosmos-star="near"]', {
+          opacity: 'random(0.4, 1)',
+          scale: 'random(0.8, 1.5)',
+          duration: () => gsap.utils.random(1.5, 3.5),
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          stagger: { each: 0.1, from: 'random' },
+          delay: 1.4,
+        });
+
+        gsap.to('[data-cosmos-dust]', {
+          x: 'random(-20, 20)',
+          y: 'random(-15, 15)',
+          opacity: 'random(0.08, 0.22)',
+          rotate: '+=15',
+          duration: gsap.utils.random(18, 28),
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          stagger: { each: 1.2, from: 'random' },
+          delay: 2,
+        });
+
+        gsap.to('[data-cosmos-parallax="far"]', {
+          y: -8,
+          duration: 14,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+        });
+        gsap.to('[data-cosmos-parallax="mid"]', {
+          y: -14,
+          duration: 11,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          delay: 1,
+        });
+        gsap.to('[data-cosmos-parallax="near"]', {
+          y: -20,
+          duration: 8,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+          delay: 2,
+        });
+
+        const shoot = (sel: string, delay: number) => {
+          gsap.timeline({ repeat: -1, repeatDelay: 7, delay })
+            .set(sel, { x: '-10%', y: 'random(8, 75)%', opacity: 0, scaleX: 0.2, rotate: 'random(-8, 8)' })
+            .to(sel, { opacity: 0.95, scaleX: 1, duration: 0.12 })
+            .to(sel, { x: '115%', duration: () => gsap.utils.random(0.9, 1.5), ease: 'power1.in' })
+            .to(sel, { opacity: 0, duration: 0.18 }, '-=0.12');
+        };
+        shoot('[data-cosmos-shoot="a"]', 0);
+        shoot('[data-cosmos-shoot="b"]', 4.5);
 
         if (!section) return;
 
-        const pxLights = gsap.quickTo('[data-hero-parallax="lights"]', 'x', { duration: 1.6, ease: 'power3.out' });
-        const pyLights = gsap.quickTo('[data-hero-parallax="lights"]', 'y', { duration: 1.6, ease: 'power3.out' });
-        const pxRunway = gsap.quickTo('[data-hero-parallax="runway"]', 'x', { duration: 2, ease: 'power3.out' });
-        const pyRunway = gsap.quickTo('[data-hero-parallax="runway"]', 'y', { duration: 2, ease: 'power3.out' });
+        const pFarX = gsap.quickTo('[data-cosmos-parallax="far"]', 'x', { duration: 2.2, ease: 'power3.out' });
+        const pFarY = gsap.quickTo('[data-cosmos-parallax="far"]', 'y', { duration: 2.2, ease: 'power3.out' });
+        const pMidX = gsap.quickTo('[data-cosmos-parallax="mid"]', 'x', { duration: 1.8, ease: 'power3.out' });
+        const pMidY = gsap.quickTo('[data-cosmos-parallax="mid"]', 'y', { duration: 1.8, ease: 'power3.out' });
+        const pNearX = gsap.quickTo('[data-cosmos-parallax="near"]', 'x', { duration: 1.4, ease: 'power3.out' });
+        const pNearY = gsap.quickTo('[data-cosmos-parallax="near"]', 'y', { duration: 1.4, ease: 'power3.out' });
 
         const onMove = (e: MouseEvent) => {
           const rect = section.getBoundingClientRect();
           const nx = (e.clientX - rect.left) / rect.width - 0.5;
           const ny = (e.clientY - rect.top) / rect.height - 0.5;
-          pxLights(nx * 28);
-          pyLights(ny * 16);
-          pxRunway(nx * 12);
-          pyRunway(ny * 6);
+          pFarX(nx * 18);
+          pFarY(ny * 12);
+          pMidX(nx * 32);
+          pMidY(ny * 22);
+          pNearX(nx * 48);
+          pNearY(ny * 32);
         };
 
         section.addEventListener('mousemove', onMove);
@@ -143,104 +323,202 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
 
   return (
     <div ref={bgRef} className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
-      <div data-hero-bg-layer className="absolute inset-0 bg-[#050508]" />
-
-      {/* Editorial top fade — dark, no center blob */}
-      <div
-        data-hero-bg-layer
-        className="absolute inset-0 bg-[linear-gradient(180deg,#0a0812_0%,#050508_28%,#050508_100%)]"
-      />
-
-      <div data-hero-parallax="lights" className="absolute inset-0">
-        <div data-hero-studio="left" data-hero-bg-layer className="hero-studio-light hero-studio-light-left opacity-0" />
-        <div data-hero-studio="right" data-hero-bg-layer className="hero-studio-light hero-studio-light-right opacity-0" />
-        <div data-hero-studio="center" data-hero-bg-layer className="hero-studio-light hero-studio-light-center opacity-0" />
-      </div>
+      <div data-cosmos-layer className="cosmos-deep-space absolute inset-0" />
+      <div data-cosmos-breathe data-cosmos-layer className="cosmos-deep-breathe absolute inset-0" />
 
       <div
-        data-hero-grid
-        data-hero-bg-layer
-        className="section-grid absolute inset-0 opacity-0"
-        style={{ maskImage: 'linear-gradient(180deg, black 0%, transparent 55%)' }}
+        data-cosmos-milky
+        data-cosmos-layer
+        className="cosmos-milky-band absolute opacity-0"
+        style={{ left: '-15%', top: '18%', width: '130%', height: '38%', rotate: '-12deg' }}
       />
 
-      <div data-hero-parallax="runway" className="absolute inset-x-0 bottom-0 h-[48%]">
-        <svg
-          data-hero-runway
-          data-hero-bg-layer
-          className="hero-runway-svg absolute inset-0 w-full h-full opacity-0"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          aria-hidden
+      {/* Far depth — galaxies & distant nebulae */}
+      <div data-cosmos-parallax="far" className="absolute inset-0">
+        <div
+          data-cosmos-galaxy="main"
+          data-cosmos-layer
+          className="cosmos-galaxy cosmos-galaxy-main absolute opacity-0"
+          style={{ right: '-12%', top: '2%', width: 'min(85vw, 680px)', height: 'min(85vw, 680px)' }}
         >
-          <defs>
-            <linearGradient id="hero-runway-fade" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="rgba(255,91,181,0.18)" />
-              <stop offset="45%" stopColor="rgba(168,85,247,0.08)" />
-              <stop offset="100%" stopColor="transparent" />
-            </linearGradient>
-          </defs>
-          <polygon points="50,0 0,100 100,100" fill="url(#hero-runway-fade)" opacity="0.35" />
-          {Array.from({ length: RUNWAY_LANES }, (_, i) => {
-            const t = i / (RUNWAY_LANES - 1);
-            const x = t * 100;
-            return (
-              <line
-                key={`lane-${i}`}
-                x1="50"
-                y1="0"
-                x2={x}
-                y2="100"
-                stroke="rgba(255,255,255,0.06)"
-                strokeWidth="0.15"
-              />
-            );
-          })}
-          {Array.from({ length: RUNWAY_STRIPES }, (_, i) => (
-            <line
-              key={`stripe-${i}`}
-              data-hero-stripe
-              x1="8"
-              y1={22 + i * 11}
-              x2="92"
-              y2={22 + i * 11}
-              stroke="rgba(255,91,181,0.14)"
-              strokeWidth="0.2"
-              opacity="0"
-            />
+          <div className="cosmos-galaxy-halo" />
+          <div className="cosmos-spiral-disk" />
+          {[0, 72, 144, 216, 288].map((deg) => (
+            <div key={deg} className="cosmos-galaxy-arm" style={{ rotate: `${deg}deg` }} />
           ))}
-        </svg>
-      </div>
+          <div data-cosmos-core="main" className="cosmos-galaxy-core" />
+        </div>
 
-      <div data-hero-sweep data-hero-bg-layer className="hero-light-sweep absolute inset-x-0 top-0 h-24 opacity-0" />
+        <div
+          data-cosmos-galaxy="accent"
+          data-cosmos-layer
+          className="cosmos-galaxy cosmos-galaxy-accent absolute opacity-0"
+          style={{ left: '-18%', bottom: '8%', width: 'min(55vw, 420px)', height: 'min(55vw, 420px)' }}
+        >
+          <div className="cosmos-galaxy-halo cosmos-galaxy-halo-sm" />
+          <div className="cosmos-spiral-disk cosmos-spiral-disk-sm" />
+          {[30, 150, 270].map((deg) => (
+            <div key={deg} className="cosmos-galaxy-arm cosmos-galaxy-arm-sm" style={{ rotate: `${deg}deg` }} />
+          ))}
+          <div data-cosmos-core="accent" className="cosmos-galaxy-core cosmos-galaxy-core-sm" />
+        </div>
 
-      <div className="absolute inset-y-0 left-[6%] hidden md:block">
-        <div data-hero-frame data-hero-bg-layer className="hero-editorial-frame origin-top opacity-0" />
-      </div>
-      <div className="absolute inset-y-0 right-[6%] hidden md:block">
-        <div data-hero-frame data-hero-bg-layer className="hero-editorial-frame origin-top opacity-0" />
-      </div>
+        {CLUSTERS.map((c) => (
+          <div
+            key={c.id}
+            data-cosmos-cluster={c.id}
+            data-cosmos-layer
+            className="cosmos-star-cluster absolute opacity-0"
+            style={{ left: `${c.left}%`, top: `${c.top}%`, width: c.size, height: c.size }}
+          >
+            {Array.from({ length: c.stars }, (_, i) => {
+              const angle = (i / c.stars) * Math.PI * 2 + c.id;
+              const r = 12 + (i % 3) * 10;
+              return (
+                <span
+                  key={i}
+                  data-cosmos-cluster-star
+                  className={`cosmos-cluster-star ${starToneClass[(['white', 'pink', 'cyan', 'violet'] as const)[i % 4]]}`}
+                  style={{
+                    left: `calc(50% + ${Math.cos(angle) * r}px)`,
+                    top: `calc(50% + ${Math.sin(angle) * r}px)`,
+                    width: 1.5 + (i % 2),
+                    height: 1.5 + (i % 2),
+                    transform: 'translate(-50%, -50%)',
+                  }}
+                />
+              );
+            })}
+          </div>
+        ))}
 
-      <div data-hero-parallax="lights" className="absolute inset-0">
-        {EDGE_SPARKLES.map((s) => (
+        {NEBULAE.filter((n) => n.depth === 'far').map((n) => (
+          <div
+            key={n.id}
+            data-cosmos-nebula={n.id}
+            data-cosmos-layer
+            className={`cosmos-nebula absolute rounded-full opacity-0 ${nebulaToneClass[n.tone]}`}
+            style={{
+              width: `${n.w}%`,
+              height: `${n.h}%`,
+              left: `${n.left}%`,
+              top: `${n.top}%`,
+              filter: `blur(${n.blur}px)`,
+            }}
+          />
+        ))}
+
+        {STARS.filter((s) => s.layer === 'far').map((s) => (
           <span
             key={s.id}
-            data-hero-sparkle
-            data-hero-bg-layer
-            className="hero-edge-sparkle absolute w-px h-px rounded-full bg-white/80 shadow-[0_0_6px_1px_rgba(255,91,181,0.35)] opacity-0"
-            style={{ left: `${s.left}%`, top: `${s.top}%` }}
+            data-cosmos-star="far"
+            data-cosmos-layer
+            className={`cosmos-star absolute rounded-full opacity-0 ${starToneClass[s.tone]}`}
+            style={{
+              left: `${s.left}%`,
+              top: `${s.top}%`,
+              width: s.size,
+              height: s.size,
+            }}
           />
         ))}
       </div>
 
-      {/* Vignette — keeps center clean for typography */}
+      {/* Mid depth */}
+      <div data-cosmos-parallax="mid" className="absolute inset-0">
+        {NEBULAE.filter((n) => n.depth === 'mid').map((n) => (
+          <div
+            key={n.id}
+            data-cosmos-nebula={n.id}
+            data-cosmos-layer
+            className={`cosmos-nebula absolute rounded-full opacity-0 ${nebulaToneClass[n.tone]}`}
+            style={{
+              width: `${n.w}%`,
+              height: `${n.h}%`,
+              left: `${n.left}%`,
+              top: `${n.top}%`,
+              filter: `blur(${n.blur}px)`,
+            }}
+          />
+        ))}
+
+        {STARS.filter((s) => s.layer === 'mid').map((s) => (
+          <span
+            key={s.id}
+            data-cosmos-star="mid"
+            data-cosmos-layer
+            className={`cosmos-star absolute rounded-full opacity-0 ${starToneClass[s.tone]}`}
+            style={{
+              left: `${s.left}%`,
+              top: `${s.top}%`,
+              width: s.size,
+              height: s.size,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Near depth */}
+      <div data-cosmos-parallax="near" className="absolute inset-0">
+        {NEBULAE.filter((n) => n.depth === 'near').map((n) => (
+          <div
+            key={n.id}
+            data-cosmos-nebula={n.id}
+            data-cosmos-layer
+            className={`cosmos-nebula absolute rounded-full opacity-0 ${nebulaToneClass[n.tone]}`}
+            style={{
+              width: `${n.w}%`,
+              height: `${n.h}%`,
+              left: `${n.left}%`,
+              top: `${n.top}%`,
+              filter: `blur(${n.blur}px)`,
+            }}
+          />
+        ))}
+
+        {DUST.map((d) => (
+          <div
+            key={d.id}
+            data-cosmos-dust
+            data-cosmos-layer
+            className="cosmos-dust absolute opacity-0"
+            style={{
+              left: `${d.left}%`,
+              top: `${d.top}%`,
+              width: d.w,
+              height: 1,
+              rotate: `${d.rotate}deg`,
+            }}
+          />
+        ))}
+
+        {STARS.filter((s) => s.layer === 'near').map((s) => (
+          <span
+            key={s.id}
+            data-cosmos-star="near"
+            data-cosmos-layer
+            className={`cosmos-star absolute rounded-full opacity-0 ${starToneClass[s.tone]}`}
+            style={{
+              left: `${s.left}%`,
+              top: `${s.top}%`,
+              width: s.size,
+              height: s.size,
+            }}
+          />
+        ))}
+
+        <div data-cosmos-shoot="a" data-cosmos-layer className="cosmos-shooting-star absolute top-1/3 left-0 w-36 h-px opacity-0" />
+        <div data-cosmos-shoot="b" data-cosmos-layer className="cosmos-shooting-star absolute top-2/3 left-0 w-28 h-px opacity-0" />
+      </div>
+
+      {/* Soft vignette — text stays readable */}
       <div
-        data-hero-bg-layer
-        className="absolute inset-0 bg-[radial-gradient(ellipse_75%_55%_at_50%_42%,transparent_42%,rgba(5,5,8,0.75)_88%,#050508_100%)]"
+        data-cosmos-layer
+        className="absolute inset-0 bg-[radial-gradient(ellipse_82%_68%_at_50%_44%,transparent_28%,rgba(3,2,8,0.58)_72%,rgba(2,1,6,0.9)_100%)]"
       />
       <div
-        data-hero-bg-layer
-        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,8,0.5)_0%,transparent_18%,transparent_82%,rgba(5,5,8,0.5)_100%)]"
+        data-cosmos-layer
+        className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_50%_50%,rgba(168,85,247,0.04)_0%,transparent_70%)]"
       />
     </div>
   );

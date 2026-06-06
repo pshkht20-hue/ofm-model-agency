@@ -72,89 +72,219 @@ body {
   will-change: box-shadow;
 }
 
-/* Hero — editorial runway / studio lighting (no center cloud) */
-.hero-studio-light {
-  position: absolute;
-  pointer-events: none;
+/* Hero — cosmic galaxy background */
+.cosmos-deep-space {
+  background:
+    radial-gradient(ellipse 140% 90% at 50% 130%, rgba(88, 28, 135, 0.22) 0%, transparent 58%),
+    radial-gradient(ellipse 100% 70% at 85% 15%, rgba(255, 91, 181, 0.1) 0%, transparent 52%),
+    radial-gradient(ellipse 80% 55% at 8% 75%, rgba(0, 212, 255, 0.08) 0%, transparent 48%),
+    radial-gradient(ellipse 60% 40% at 35% 25%, rgba(168, 85, 247, 0.06) 0%, transparent 55%),
+    linear-gradient(180deg, #020108 0%, #04030c 35%, #07051a 70%, #0a0820 100%);
+}
+
+.cosmos-deep-breathe {
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 50%, rgba(168, 85, 247, 0.12) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 50% at 30% 60%, rgba(255, 91, 181, 0.08) 0%, transparent 60%);
+  mix-blend-mode: screen;
   will-change: opacity, transform;
 }
 
-.hero-studio-light-left {
-  top: -8%;
-  left: -12%;
-  width: 52%;
-  height: 72%;
+.cosmos-milky-band {
   background: linear-gradient(
-    128deg,
-    rgba(255, 91, 181, 0.14) 0%,
-    rgba(255, 91, 181, 0.04) 35%,
+    118deg,
+    transparent 0%,
+    rgba(168, 85, 247, 0.03) 18%,
+    rgba(255, 255, 255, 0.06) 38%,
+    rgba(255, 91, 181, 0.05) 52%,
+    rgba(0, 212, 255, 0.04) 68%,
+    rgba(168, 85, 247, 0.03) 82%,
+    transparent 100%
+  );
+  filter: blur(28px);
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+}
+
+.cosmos-nebula {
+  will-change: transform, opacity;
+  mix-blend-mode: screen;
+  transform-origin: center center;
+}
+
+.cosmos-galaxy {
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+.cosmos-galaxy-halo {
+  position: absolute;
+  inset: -8%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(168, 85, 247, 0.14) 0%,
+    rgba(255, 91, 181, 0.08) 35%,
+    rgba(0, 212, 255, 0.04) 55%,
+    transparent 72%
+  );
+  filter: blur(18px);
+  mix-blend-mode: screen;
+}
+
+.cosmos-galaxy-halo-sm {
+  inset: -6%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.12) 0%,
+    rgba(168, 85, 247, 0.06) 40%,
     transparent 68%
   );
-  clip-path: polygon(0 0, 100% 0, 62% 100%, 0 100%);
 }
 
-.hero-studio-light-right {
-  top: -8%;
-  right: -12%;
-  width: 52%;
-  height: 72%;
-  background: linear-gradient(
-    232deg,
-    rgba(0, 212, 255, 0.12) 0%,
-    rgba(168, 85, 247, 0.05) 38%,
-    transparent 70%
+.cosmos-spiral-disk {
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 18deg at 50% 50%,
+    transparent 0deg,
+    rgba(255, 91, 181, 0.22) 22deg,
+    transparent 48deg,
+    rgba(168, 85, 247, 0.18) 95deg,
+    transparent 128deg,
+    rgba(0, 212, 255, 0.14) 168deg,
+    transparent 198deg,
+    rgba(255, 91, 181, 0.2) 248deg,
+    transparent 278deg,
+    rgba(168, 85, 247, 0.16) 318deg,
+    transparent 360deg
   );
-  clip-path: polygon(38% 0, 100% 0, 100% 100%, 0 100%);
+  filter: blur(10px);
+  mix-blend-mode: screen;
+  mask-image: radial-gradient(ellipse 88% 42% at 50% 50%, black 15%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse 88% 42% at 50% 50%, black 15%, transparent 72%);
 }
 
-.hero-studio-light-center {
-  top: 0;
+.cosmos-spiral-disk-sm {
+  inset: 8%;
+  background: conic-gradient(
+    from 42deg at 50% 50%,
+    transparent 0deg,
+    rgba(0, 212, 255, 0.2) 35deg,
+    transparent 75deg,
+    rgba(255, 91, 181, 0.16) 130deg,
+    transparent 175deg,
+    rgba(168, 85, 247, 0.14) 240deg,
+    transparent 300deg
+  );
+  mask-image: radial-gradient(ellipse 82% 38% at 50% 50%, black 12%, transparent 68%);
+  -webkit-mask-image: radial-gradient(ellipse 82% 38% at 50% 50%, black 12%, transparent 68%);
+}
+
+.cosmos-galaxy-core {
+  position: absolute;
   left: 50%;
-  width: 2px;
-  height: 42%;
-  transform: translateX(-50%);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.22) 0%,
-    rgba(255, 91, 181, 0.12) 40%,
-    transparent 100%
+  top: 50%;
+  width: 22%;
+  height: 22%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 220, 240, 0.65) 12%,
+    rgba(255, 91, 181, 0.5) 28%,
+    rgba(168, 85, 247, 0.28) 48%,
+    transparent 74%
   );
-  box-shadow: 0 0 20px rgba(255, 91, 181, 0.15);
+  box-shadow:
+    0 0 24px rgba(255, 255, 255, 0.45),
+    0 0 50px rgba(255, 91, 181, 0.4),
+    0 0 100px rgba(168, 85, 247, 0.25);
+  will-change: transform, opacity, filter;
 }
 
-.hero-runway-svg {
-  will-change: transform, opacity;
+.cosmos-galaxy-core-sm {
+  width: 18%;
+  height: 18%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(0, 212, 255, 0.45) 28%,
+    rgba(168, 85, 247, 0.22) 52%,
+    transparent 76%
+  );
+  box-shadow:
+    0 0 20px rgba(0, 212, 255, 0.35),
+    0 0 60px rgba(168, 85, 247, 0.18);
 }
 
-.hero-light-sweep {
+.cosmos-galaxy-arm {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 92%;
+  height: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
   background: linear-gradient(
-    180deg,
+    90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.04) 40%,
-    rgba(255, 91, 181, 0.08) 50%,
-    rgba(255, 255, 255, 0.03) 60%,
+    rgba(168, 85, 247, 0.04) 10%,
+    rgba(255, 91, 181, 0.22) 38%,
+    rgba(255, 255, 255, 0.08) 52%,
+    rgba(0, 212, 255, 0.14) 68%,
     transparent 100%
   );
-  will-change: transform, opacity;
-  mix-blend-mode: overlay;
+  filter: blur(8px);
+  mix-blend-mode: screen;
 }
 
-.hero-editorial-frame {
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(255, 91, 181, 0.35) 18%,
-    rgba(255, 255, 255, 0.12) 50%,
-    rgba(0, 212, 255, 0.25) 82%,
-    transparent 100%
-  );
-  box-shadow: 0 0 12px rgba(255, 91, 181, 0.12);
+.cosmos-galaxy-arm-sm {
+  width: 84%;
+  height: 24%;
+  opacity: 0.8;
+}
+
+.cosmos-galaxy-main {
+  opacity: 0.62;
+  mix-blend-mode: screen;
+}
+
+.cosmos-galaxy-accent {
+  opacity: 0.48;
+  mix-blend-mode: screen;
+}
+
+.cosmos-star-cluster {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.35) 0%, transparent 70%);
+  mix-blend-mode: screen;
   will-change: transform, opacity;
 }
 
-.hero-edge-sparkle {
+.cosmos-cluster-star {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform, opacity;
+}
+
+.cosmos-star {
+  will-change: transform, opacity;
+}
+
+.cosmos-dust {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  will-change: transform, opacity;
+  mix-blend-mode: screen;
+}
+
+.cosmos-shooting-star {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), rgba(255, 91, 181, 0.6), transparent);
+  box-shadow: 0 0 12px rgba(255, 91, 181, 0.5);
+  transform-origin: left center;
   will-change: transform, opacity;
 }
 
@@ -686,11 +816,16 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-studio-light,
-  .hero-runway-svg,
-  .hero-light-sweep,
-  .hero-editorial-frame,
-  .hero-edge-sparkle {
+  .cosmos-nebula,
+  .cosmos-galaxy,
+  .cosmos-star,
+  .cosmos-dust,
+  .cosmos-shooting-star,
+  .cosmos-deep-breathe,
+  .cosmos-milky-band,
+  .cosmos-star-cluster,
+  .cosmos-cluster-star,
+  .cosmos-galaxy-core {
     will-change: auto;
   }
 
