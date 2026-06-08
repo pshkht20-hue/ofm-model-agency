@@ -54,7 +54,10 @@ Full manifest: `docs/OFM-SKILL-PLAN.md` · Machine profile: `.cursor/ecc-ofm-pro
 | Framer, page transitions, gestures | `framer-motion-animator` | `.agents/skills/framer-motion-animator/` |
 | Motion design, parallax, micro-UX | `animation-designer` | `.agents/skills/animation-designer/` |
 | Секции ниже hero | `motion-ui` | `.cursor/skills/motion-ui/` |
-| Scroll parallax, pin | `gsap-scrolltrigger` | user-level GSAP |
+| Scroll parallax, pin, scrub recipes | `gsap-framer-scroll-animation`, `scroll-animations` | `.agents/skills/` |
+| GSAP timelines deep | `gsap-greensock` | `.agents/skills/gsap-greensock/` |
+| Disney motion quality | `12-principles-of-animation` | `.agents/skills/` |
+| ScrollTrigger API | `gsap-scrolltrigger` | user-level GSAP |
 | **3D сцена, WebGL, GLTF** | `threejs-fundamentals` → `threejs-animation` | `.agents/skills/threejs-*/` |
 | React Three Fiber | `react-three-fiber` | `.agents/skills/react-three-fiber/` |
 

@@ -16,7 +16,10 @@ description: >-
 | **GSAP official** | `gsap-core`, `gsap-react`, `gsap-scrolltrigger`, `gsap-timeline`, `gsap-plugins`, `gsap-performance` | Hero, pin, scrub, timelines |
 | **Scroll + Framer** | `framer-motion-animator`, `animation-designer`, `motion-ui` | Sections below hero, gestures |
 | **3D / WebGL** | `threejs-*` (10), `react-three-fiber` | Explicit 3D hero, WebGL backgrounds |
-| **Design theory** | Disney 12 principles (install pending) | Easing, staging, appeal |
+| **Scroll GSAP+Framer** | `gsap-framer-scroll-animation` | Production scroll recipes (GitHub 34K★) |
+| **Scroll patterns** | `scroll-animations` | Parallax, reveal, progress |
+| **GSAP deep** | `gsap-greensock` | Timelines, easing, plugins |
+| **Design theory** | `12-principles-of-animation` | Disney principles — staging, appeal |
 
 Paths: project `.agents/skills/` + user `~/.agents/skills/gsap-*`
 
@@ -95,8 +98,6 @@ Need animation?
 
 ---
 
-## Failed / optional installs
+## Full animation stack (installed)
 
-- `github/awesome-copilot@gsap-framer-scroll-animation` — **disk full**; free space then:
-  `npx skills add github/awesome-copilot --skill gsap-framer-scroll-animation`
-- `dylantarre/animation-principles@scroll-animations` — run after disk cleanup
+`.agents/skills/`: `gsap-framer-scroll-animation`, `scroll-animations`, `gsap-greensock`, `12-principles-of-animation`, `framer-motion-animator`, `animation-designer`, `threejs-*`, `react-three-fiber`

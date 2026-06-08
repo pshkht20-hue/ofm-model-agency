@@ -12,6 +12,10 @@
       "ofm-animation-mastery"
     ],
     "animation": [
+      "gsap-framer-scroll-animation",
+      "scroll-animations",
+      "gsap-greensock",
+      "12-principles-of-animation",
       "framer-motion-animator",
       "animation-designer",
       "threejs-fundamentals",
@@ -116,12 +120,6 @@
       "date": "2026-06-08",
       "skills": ["react-three-fiber"]
     }
-  ],
-  "install_pending_disk_space": [
-    "github/awesome-copilot@gsap-framer-scroll-animation",
-    "dylantarre/animation-principles@scroll-animations",
-    "dylantarre/animation-principles@gsap-greensock",
-    "raphaelsalaja/skill@12-principles-of-animation"
   ],
   "rules_active_focus": [
     "ofm-project",

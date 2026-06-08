@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "12-principles-of-animation": {
+      "source": "raphaelsalaja/skill",
+      "sourceType": "github",
+      "skillPath": "skills/12-principles-of-animation/SKILL.md",
+      "computedHash": "028c3bad9e7417460e0d2094fc0c1b9d601e56317d38c4f5d124666b06a9405b"
+    },
     "animation-designer": {
       "source": "daffy0208/ai-dev-standards",
       "sourceType": "github",
@@ -19,11 +25,29 @@
       "skillPath": "frontend/framer-motion-animator/SKILL.md",
       "computedHash": "22a8401fab0cdf32d5c153b98aba5e95435a479810896879535dc7ac3710efbe"
     },
+    "gsap-framer-scroll-animation": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/gsap-framer-scroll-animation/SKILL.md",
+      "computedHash": "e6a4caf23b818ffc5185d51339e941ca783944b6693da877fc1206693b2dff66"
+    },
+    "gsap-greensock": {
+      "source": "dylantarre/animation-principles",
+      "sourceType": "github",
+      "skillPath": "skills/09-by-tool-framework/gsap-greensock/SKILL.md",
+      "computedHash": "5af9f9198109d1e9e582df66c038577c6613612ffa2524c78de63682b615c6f3"
+    },
     "react-three-fiber": {
       "source": "vercel-labs/json-render",
       "sourceType": "github",
       "skillPath": "skills/react-three-fiber/SKILL.md",
       "computedHash": "33cfac131cbe9c89b14c4b49ca01e0b0a4a3f9c23bb6c81ac0514143703283e8"
+    },
+    "scroll-animations": {
+      "source": "dylantarre/animation-principles",
+      "sourceType": "github",
+      "skillPath": "skills/05-by-animation-type/scroll-animations/SKILL.md",
+      "computedHash": "16e1d229291ca23991f26215efd830f1ce942fdca60deb43f9fbe04a1fee43c2"
     },
     "threejs-animation": {
       "source": "cloudai-x/threejs-skills",

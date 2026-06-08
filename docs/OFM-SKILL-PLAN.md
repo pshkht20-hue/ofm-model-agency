@@ -45,12 +45,14 @@ npx skills add vercel-labs/agent-skills
 
 **Уже были (user-level):** официальные GSAP skills (`gsap-core`, `gsap-react`, `gsap-scrolltrigger`…)
 
-**Не установилось (мало места на диске):**
-```bash
-npx skills add github/awesome-copilot --skill gsap-framer-scroll-animation
-npx skills add dylantarre/animation-principles --skill scroll-animations
-```
-Освободите ~500 MB на диске C: и запустите команды выше.
+**Доустановлено после очистки диска (8 июня):**
+
+| Скилл | Installs | Зачем |
+|-------|----------|-------|
+| **gsap-framer-scroll-animation** | 1.2K | GSAP + Framer scroll — production recipes |
+| **scroll-animations** | 403 | Parallax, reveal, scroll progress |
+| **gsap-greensock** | 308 | Deep GSAP timelines, plugins |
+| **12-principles-of-animation** | 229 | Disney principles — easing, staging |
 
 ---
 
