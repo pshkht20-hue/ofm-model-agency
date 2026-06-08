@@ -10,7 +10,7 @@ export function getEnglishBlogOverlay(): Record<
 
 const EN_OVERLAY: BlogLocaleOverlayMap = {
   'kak-vybrat-onlyfans-agentstvo': {
-    title: 'How to Choose an OnlyFans Agency: Complete 2026 Checklist',
+    title: 'How to Choose an OnlyFans Agency: 2026 Checklist (No Scams)',
     description:
       'A practical guide to OnlyFans management: contracts, commission, chat ops, marketing, red flags, and questions to ask on your first call.',
     keywords: ['how to choose onlyfans agency', 'onlyfans management'],
@@ -192,7 +192,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   'onlyfans-agentstvo-moshennichestvo': {
-    title: 'OnlyFans Agency Scams: 10 Red Flags',
+    title: 'OnlyFans Agency Scams: 10 Red Flags to Spot in 2026',
     description:
       'How to tell professional management from scams: upfront fees, account theft, fake income promises.',
     keywords: ['onlyfans agency scam', 'onlyfans management fraud'],
@@ -239,7 +239,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   'onlyfans-agentstvo-ukraina': {
-    title: 'OnlyFans Agency in Ukraine: How to Choose a Team and Avoid Scams',
+    title: 'OnlyFans Agency Ukraine 2026 — How to Choose Without Scams',
     description:
       'Guide for creators in Ukraine and the diaspora: remote work, 24/7 chats, marketing, red flags, case studies, and applying to OFM.',
     keywords: [
@@ -587,7 +587,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   'onlyfans-agentstvo-dlya-nachinayushchih': {
-    title: 'OnlyFans for Beginners: Start With an Agency or Solo',
+    title: 'OnlyFans for Beginners: Agency or Solo in 2026',
     description:
       'Step-by-step OnlyFans launch: verification, niche, first content, marketing, and when to add management.',
     keywords: ['how to start onlyfans', 'onlyfans for beginners'],

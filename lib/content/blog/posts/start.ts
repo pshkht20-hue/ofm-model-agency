@@ -3,7 +3,7 @@ import type { BlogPost } from '@/lib/content/blog/types';
 export const startPosts: BlogPost[] = [
   {
     slug: 'onlyfans-agentstvo-dlya-nachinayushchih',
-    title: 'OnlyFans для начинающих: старт с агентством или solo',
+    title: 'OnlyFans для начинающих: агентство или solo в 2026',
     description:
       'Пошаговый старт на OnlyFans: верификация, ниша, первый контент, маркетинг и когда подключать management.',
     publishedAt: '2026-02-28',

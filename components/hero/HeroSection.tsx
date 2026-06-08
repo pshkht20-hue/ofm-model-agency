@@ -241,6 +241,14 @@ export function HeroSection() {
           <span className="sr-only">{t('hero.srOnly')}</span>
         </h1>
 
+        <p
+          data-hero-subtitle
+          data-hero-reveal
+          className="text-base md:text-lg text-white/65 tracking-wide max-w-2xl mx-auto -mt-4 mb-8"
+        >
+          {t('hero.subtitle')}
+        </p>
+
         <p data-hero-lead data-hero-reveal className="text-lead max-w-2xl mx-auto mb-14">
           {t.rich('hero.lead', {
             income: () => (

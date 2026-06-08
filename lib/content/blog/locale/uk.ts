@@ -10,7 +10,7 @@ export function getUkrainianBlogOverlay(): Record<
 
 const UK_OVERLAY: BlogLocaleOverlayMap = {
   'kak-vybrat-onlyfans-agentstvo': {
-    title: 'Як обрати OnlyFans-агентство: повний чек-лист 2026',
+    title: 'Як обрати OnlyFans агентство: чек-лист 2026 без шахрайства',
     description:
       'Практичний гід з OnlyFans management: договір, комісія, чати, маркетинг, червоні прапорці та питання на першому дзвінку.',
     keywords: ['як обрати onlyfans агентство', 'onlyfans management'],
@@ -192,7 +192,7 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   'onlyfans-agentstvo-moshennichestvo': {
-    title: 'Шахрайство OnlyFans-агентств: 10 червоних прапорців',
+    title: 'OnlyFans агентство шахрайство: 10 ознак скаму 2026',
     description:
       'Як відрізнити професійний management від шахрайства: upfront-платежі, крадіжка акаунта, фальшиві обіцянки доходу.',
     keywords: ['onlyfans агентство шахрайство', 'onlyfans management fraud'],
@@ -239,7 +239,7 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   'onlyfans-agentstvo-ukraina': {
-    title: 'OnlyFans агентство в Україні: як обрати команду і не потрапити на шахрайство',
+    title: 'OnlyFans агентство Україна 2026 — як обрати без скаму',
     description:
       'Гід по OnlyFans-агентствах для моделей з України та діаспори: дистанційна робота, чати 24/7, маркетинг, червоні прапорці, кейси та заявка в OFM.',
     keywords: [
@@ -644,7 +644,7 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   'onlyfans-agentstvo-dlya-nachinayushchih': {
-    title: 'OnlyFans для новачків: старт з агентством чи solo',
+    title: 'OnlyFans для новачків: агентство чи solo у 2026',
     description:
       'OnlyFans-запуск покроково: верифікація, ніша, перший контент, маркетинг і коли додавати management.',
     keywords: ['як почати onlyfans', 'onlyfans для новачків'],

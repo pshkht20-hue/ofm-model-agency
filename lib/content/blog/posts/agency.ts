@@ -3,7 +3,7 @@ import type { BlogPost } from '@/lib/content/blog/types';
 export const agencyPosts: BlogPost[] = [
   {
     slug: 'kak-vybrat-onlyfans-agentstvo',
-    title: 'Как выбрать OnlyFans агентство: полный чек-лист 2026',
+    title: 'Как выбрать OnlyFans агентство: чек-лист 2026 без скама',
     description:
       'Подробный гайд по выбору OnlyFans management: договор, комиссия, чаты, маркетинг, красные флаги и вопросы менеджеру на первом созвоне.',
     publishedAt: '2026-02-10',
@@ -197,7 +197,7 @@ export const agencyPosts: BlogPost[] = [
   },
   {
     slug: 'onlyfans-agentstvo-moshennichestvo',
-    title: 'Мошенничество и OnlyFans агентства: 10 красных флагов',
+    title: 'OnlyFans агентство мошенники: 10 признаков скама 2026',
     description:
       'Как отличить профессиональное management от скама: предоплаты, кража аккаунта, фейковые обещания дохода.',
     publishedAt: '2026-03-05',
@@ -248,7 +248,7 @@ export const agencyPosts: BlogPost[] = [
   },
   {
     slug: 'onlyfans-agentstvo-ukraina',
-    title: 'OnlyFans агентство в Украине: как выбрать команду и не попасть на скам',
+    title: 'OnlyFans агентство Украина 2026 — как выбрать без скама',
     description:
       'Гайд по OnlyFans агентствам для моделей из Украины и диаспоры: удалённая работа, чаты 24/7, маркетинг, красные флаги, кейсы и как подать заявку в OFM.',
     publishedAt: '2026-06-03',

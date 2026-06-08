@@ -10,7 +10,7 @@ export function getSpanishBlogOverlay(): Record<
 
 const ES_OVERLAY: BlogLocaleOverlayMap = {
   'kak-vybrat-onlyfans-agentstvo': {
-    title: 'Cómo elegir una agencia de OnlyFans: checklist completo 2026',
+    title: 'Cómo elegir agencia OnlyFans: checklist 2026 sin estafas',
     description:
       'Guía práctica de OnlyFans management: contrato, comisión, chats, marketing, señales de alerta y preguntas para la primera llamada.',
     keywords: ['cómo elegir agencia onlyfans', 'onlyfans management'],
@@ -171,7 +171,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   'onlyfans-agentstvo-moshennichestvo': {
-    title: 'Estafas y agencias de OnlyFans: 10 señales de alerta',
+    title: 'Agencia OnlyFans estafas: 10 señales de fraude 2026',
     description:
       'Cómo distinguir management profesional de fraude: pagos anticipados, robo de cuenta, promesas falsas de ingresos.',
     keywords: ['estafa agencia onlyfans', 'fraude onlyfans management'],
@@ -212,7 +212,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   'onlyfans-agentstvo-ukraina': {
-    title: 'Agencia OnlyFans en Ucrania: cómo elegir equipo y evitar estafas',
+    title: 'Agencia OnlyFans Ucrania 2026 — elegir sin estafas',
     description:
       'Guía para creadoras en Ucrania y la diáspora: trabajo remoto, chats 24/7, marketing, señales de alerta y solicitud en OFM.',
     keywords: ['agencia onlyfans ucrania', 'onlyfans agency ukraine'],
@@ -539,7 +539,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   'onlyfans-agentstvo-dlya-nachinayushchih': {
-    title: 'OnlyFans para principiantes: empezar con agencia o en solo',
+    title: 'OnlyFans para principiantes: agencia o solo en 2026',
     description:
       'Arranque paso a paso: verificación, nicho, primer contenido, marketing y cuándo sumar management.',
     keywords: ['cómo empezar onlyfans', 'onlyfans para principiantes'],

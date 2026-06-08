@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "OFM's Model Agency",
   shortName: 'OFM',
   tagline: 'LUXURY ONLYFANS MANAGEMENT',
-  title: "OFM Model Agency — OnlyFans агентство для моделей",
+  title: 'OnlyFans агентство для моделей — менеджмент 24/7',
   description:
-    'OnlyFans агентство OFM: менеджмент, чаты 24/7, маркетинг и реальные кейсы total баланса. Заявка на сайте — ответ в Telegram за 24 часа. Украина, Европа, удалённо.',
+    'Чаты, маркетинг, кейсы gross total. Заявка на сайте — ответ в Telegram за 24 ч. Украина, Европа, удалённо. OFM\'s Model Agency.',
   keywords: [
     'OnlyFans агентство',
     'onlyfans агентство для моделей',
@@ -19,6 +19,10 @@ export const siteConfig = {
     'заработок на OnlyFans',
     'OFM Model Agency',
     'ofmmodels',
+    'ofm что это',
+    'onlyfans агентство молдова',
+    'agencia onlyfans argentina',
+    'agencia onlyfans latinoamérica',
   ],
 } as const;
 
