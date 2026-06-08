@@ -24,7 +24,7 @@ function readJson(filePath) {
 function getOAuthClientConfig() {
   if (process.env.GOOGLE_OAUTH_CLIENT_JSON) {
     try {
-      const raw = JSON.parse(process.env.GOOGLE_OAUTH_CLIENT_JSON);
+      const raw = JSON.parse(process.env.GOOGLE_OAUTH_CLIENT_JSON.trim());
       return raw.installed ?? raw.web ?? raw;
     } catch {
       return null;
@@ -39,7 +39,7 @@ function getOAuthClientConfig() {
 
 function getOAuthTokenData() {
   if (process.env.GOOGLE_OAUTH_REFRESH_TOKEN) {
-    return { refresh_token: process.env.GOOGLE_OAUTH_REFRESH_TOKEN };
+    return { refresh_token: process.env.GOOGLE_OAUTH_REFRESH_TOKEN.trim() };
   }
   if (fs.existsSync(OAUTH_TOKEN_PATH)) {
     return readJson(OAUTH_TOKEN_PATH);

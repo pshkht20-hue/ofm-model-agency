@@ -1,3 +1,10 @@
+function escapeTelegramHtml(text) {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
 const GEO_LABELS = {
   ukr: 'Украина',
   mda: 'Молдова',
@@ -110,12 +117,15 @@ export function formatTelegramReport(data, recommendations) {
 
   const topQueries = data.queries
     .slice(0, 5)
-    .map((q) => `• «${q.query}» — поз. ${q.position}, ${q.impressions} показов`)
+    .map(
+      (q) =>
+        `• «${escapeTelegramHtml(q.query)}» — поз. ${q.position}, ${q.impressions} показов`,
+    )
     .join('\n');
 
   const topPages = data.pages
     .slice(0, 4)
-    .map((p) => `• ${shortPage(p.page)} — поз. ${p.position}`)
+    .map((p) => `• ${escapeTelegramHtml(shortPage(p.page))} — поз. ${p.position}`)
     .join('\n');
 
   const geoLines = ['ukr', 'mda', 'arg']
@@ -126,7 +136,9 @@ export function formatTelegramReport(data, recommendations) {
     })
     .join('\n');
 
-  const recBlock = recommendations.map((t, i) => `${i + 1}. ${t}`).join('\n');
+  const recBlock = recommendations
+    .map((t, i) => `${i + 1}. ${escapeTelegramHtml(t)}`)
+    .join('\n');
 
   return [
     `<b>📊 SEO-отчёт — ofmmodels.com</b>`,

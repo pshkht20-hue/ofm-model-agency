@@ -86,33 +86,58 @@ function parseReportMd(md) {
 }
 
 async function sendTelegram(text) {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_CHAT_ID;
+  const token = process.env.TELEGRAM_BOT_TOKEN?.trim();
+  const chatId = process.env.TELEGRAM_CHAT_ID?.trim();
   if (!token || !chatId) {
     throw new Error('TELEGRAM_BOT_TOKEN и TELEGRAM_CHAT_ID не заданы');
   }
 
-  const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text,
-      parse_mode: 'HTML',
-      disable_web_page_preview: true,
-    }),
-  });
+  const payloads = [
+    { parse_mode: 'HTML' },
+    { parse_mode: undefined },
+  ];
 
-  if (!response.ok) {
-    const body = await response.text();
-    throw new Error(`Telegram API ${response.status}: ${body}`);
+  let lastError = '';
+  for (const extra of payloads) {
+    const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text,
+        disable_web_page_preview: true,
+        ...extra,
+      }),
+    });
+
+    if (response.ok) return;
+
+    lastError = await response.text();
+  }
+
+  throw new Error(`Telegram API error: ${lastError}`);
+}
+
+function validateEnv() {
+  const required = [
+    'TELEGRAM_BOT_TOKEN',
+    'TELEGRAM_CHAT_ID',
+    'GA4_PROPERTY_ID',
+    'GOOGLE_OAUTH_CLIENT_JSON',
+    'GOOGLE_OAUTH_REFRESH_TOKEN',
+  ];
+  const missing = required.filter((key) => !process.env[key]?.trim());
+  if (missing.length) {
+    throw new Error(`Не заданы секреты GitHub: ${missing.join(', ')}`);
   }
 }
 
 async function main() {
   loadEnvLocal();
+  validateEnv();
 
-  const report = spawnSync('node', ['scripts/seo-report.mjs'], {
+  const reportScript = path.join(ROOT, 'scripts', 'seo-report.mjs');
+  const report = spawnSync(process.execPath, [reportScript], {
     cwd: ROOT,
     env: process.env,
     stdio: 'inherit',

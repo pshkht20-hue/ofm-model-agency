@@ -1,6 +1,6 @@
 # SEO Analytics Report
 
-**Generated:** 2026-06-08T05:16:21.027Z  
+**Generated:** 2026-06-08T05:41:34.182Z  
 **Period:** last 28 days (2026-05-11 → 2026-06-08)  
 **Site:** sc-domain:ofmmodels.com  
 **GA4 property:** 540360466
