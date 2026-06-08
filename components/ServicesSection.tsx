@@ -62,7 +62,7 @@ function ServiceCard({ icon: Icon, index, featured, item, accent }: ServiceCardP
       onMouseMove={onMove}
       whileHover={hoverLift(reduced)}
       transition={SPRING_CARD}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0a0a10]/90 p-6 md:p-8 md:backdrop-blur-sm ${
+      className={`card-premium group relative flex h-full flex-col overflow-hidden p-6 md:p-8 md:backdrop-blur-sm ${
         featured ? 'md:p-9' : ''
       }`}
     >
@@ -124,6 +124,7 @@ function ServiceCard({ icon: Icon, index, featured, item, accent }: ServiceCardP
 
 export function ServicesSection() {
   const t = useTranslations('home');
+  const reducedMotion = useReducedMotion();
   const items = t.raw('services.items') as ServiceItem[];
 
   return (
@@ -151,14 +152,21 @@ export function ServicesSection() {
         ))}
       </StaggerGrid>
 
-      <motion.p
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mx-auto mt-8 max-w-3xl rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 text-center text-sm leading-relaxed text-white/50"
-      >
-        {t('services.footerNote')}
-      </motion.p>
+      {reducedMotion ? (
+        <p className="mx-auto mt-8 max-w-3xl rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 text-center text-sm leading-relaxed text-white/50">
+          {t('services.footerNote')}
+        </p>
+      ) : (
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto mt-8 max-w-3xl rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 text-center text-sm leading-relaxed text-white/50"
+        >
+          {t('services.footerNote')}
+        </motion.p>
+      )}
     </SectionShell>
   );
 }

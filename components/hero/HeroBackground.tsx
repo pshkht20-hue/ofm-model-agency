@@ -1,10 +1,11 @@
 'use client';
 
 import { type RefObject, useMemo, useRef } from 'react';
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { gsap, registerGsapPlugins } from '@/lib/gsap/register';
 import { useIsMobileViewport } from '@/hooks/useMotionPreferences';
 
+registerGsapPlugins();
 gsap.registerPlugin(useGSAP);
 
 type StarLayer = 'far' | 'mid' | 'near';
@@ -328,6 +329,29 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
         if (!mobile) {
           shoot('[data-cosmos-shoot="a"]', 0);
           shoot('[data-cosmos-shoot="b"]', 4.5);
+        }
+
+        if (section) {
+          const pauseAmbient = () => {
+            gsap.getTweensOf(bgRef.current).forEach((tween) => {
+              if (tween.repeat() === -1) tween.pause();
+            });
+          };
+          const playAmbient = () => {
+            gsap.getTweensOf(bgRef.current).forEach((tween) => {
+              if (tween.repeat() === -1) tween.play();
+            });
+          };
+
+          gsap.timeline({
+            scrollTrigger: {
+              trigger: section,
+              start: 'top top',
+              end: 'bottom top',
+              onLeave: pauseAmbient,
+              onEnterBack: playAmbient,
+            },
+          });
         }
 
         if (!section || mobile) return;

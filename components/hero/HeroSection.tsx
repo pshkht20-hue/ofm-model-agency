@@ -128,6 +128,7 @@ export function HeroSection() {
             y: 48,
             rotateX: 10,
             transformPerspective: 900,
+            filter: 'blur(12px)',
           });
           gsap.set('[data-hero-lead]', { opacity: 0, y: 28 });
           gsap.set('[data-hero-cta]', { opacity: 0, y: 28, scale: 0.94 });
@@ -154,12 +155,14 @@ export function HeroSection() {
                 opacity: 1,
                 y: 0,
                 rotateX: 0,
+                filter: 'blur(0px)',
                 duration: 0.9,
                 stagger: 0.16,
                 ease: 'power4.out',
               },
               0.55,
             )
+            .set('[data-hero-line]', { clearProps: 'filter' }, 1.35)
             .to('[data-hero-lead]', { opacity: 1, y: 0, duration: 0.8 }, '-=0.38')
             .to(
               '[data-hero-cta]',

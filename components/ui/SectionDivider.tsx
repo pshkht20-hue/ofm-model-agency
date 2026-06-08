@@ -11,7 +11,7 @@ export function SectionDivider() {
     <div className="relative py-0.5 md:py-1" aria-hidden>
       <div className="max-w-3xl mx-auto px-8 h-px overflow-hidden">
         {reduced ? (
-          <div className="h-px w-full divider-brand shadow-[0_0_14px_1px_rgba(255,91,181,0.25)]" />
+          <div className="h-px w-full divider-brand divider-brand-glow" />
         ) : (
           <motion.div
             initial="hidden"
@@ -19,7 +19,7 @@ export function SectionDivider() {
             viewport={VIEWPORT_LOOSE}
             variants={lineReveal}
             transition={{ duration: 0.9, ease: EASE_SMOOTH }}
-            className="h-px w-full divider-brand origin-center shadow-[0_0_14px_1px_rgba(255,91,181,0.25)]"
+            className="h-px w-full divider-brand divider-brand-glow origin-center"
           />
         )}
       </div>

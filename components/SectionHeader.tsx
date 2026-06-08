@@ -1,8 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useReducedMotion } from '@/hooks/useMotionPreferences';
-import { EASE_SMOOTH, VIEWPORT_LOOSE, lineReveal, fadeUpStatic } from '@/lib/motion';
+import { useIsMobileViewport, useReducedMotion } from '@/hooks/useMotionPreferences';
+import {
+  EASE_SMOOTH,
+  VIEWPORT_LOOSE,
+  lineReveal,
+  titleReveal,
+  titleRevealMobile,
+  descReveal,
+} from '@/lib/motion';
 
 type SectionHeaderProps = {
   eyebrow: string;
@@ -18,6 +25,8 @@ export function SectionHeader({
   className = '',
 }: SectionHeaderProps) {
   const reduced = useReducedMotion();
+  const isMobile = useIsMobileViewport();
+  const titleVariants = isMobile ? titleRevealMobile : titleReveal;
 
   if (reduced) {
     return (
@@ -35,8 +44,7 @@ export function SectionHeader({
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT_LOOSE}
-      variants={fadeUpStatic}
-      transition={{ duration: 0.55, ease: EASE_SMOOTH }}
+      variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
       className={`text-center mb-10 md:mb-12 ${className}`}
     >
       <motion.p
@@ -48,8 +56,14 @@ export function SectionHeader({
       >
         {eyebrow}
       </motion.p>
-      <h2 className="heading-section">{title}</h2>
-      {description && <p className="text-lead mt-5 max-w-xl mx-auto">{description}</p>}
+      <motion.h2 variants={titleVariants} className="heading-section">
+        {title}
+      </motion.h2>
+      {description && (
+        <motion.p variants={descReveal} className="text-lead mt-5 max-w-xl mx-auto">
+          {description}
+        </motion.p>
+      )}
       <motion.div
         variants={lineReveal}
         transition={{ delay: 0.12, ease: EASE_SMOOTH }}

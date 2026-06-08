@@ -586,7 +586,8 @@ body {
   position: relative;
   background: linear-gradient(
     155deg,
-    rgba(255, 255, 255, 0.05) 0%,
+    rgba(10, 10, 16, 0.92) 0%,
+    rgba(255, 255, 255, 0.03) 48%,
     rgba(255, 255, 255, 0.01) 100%
   );
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -710,7 +711,12 @@ body {
 .btn-secondary:hover {
   border-color: rgba(0, 212, 255, 0.55);
   background: rgba(255, 91, 181, 0.06);
-  box-shadow: 0 0 24px -12px rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 28px -10px rgba(168, 85, 247, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
 }
 
 .badge-bright {
@@ -804,6 +810,12 @@ body {
   box-shadow:
     0 0 10px 2px rgba(255, 91, 181, 0.6),
     0 0 20px 4px rgba(168, 85, 247, 0.25);
+}
+
+.divider-brand-glow {
+  box-shadow:
+    0 0 14px 1px rgba(255, 91, 181, 0.22),
+    0 0 32px -4px rgba(0, 212, 255, 0.12);
 }
 
 .divider-gold {

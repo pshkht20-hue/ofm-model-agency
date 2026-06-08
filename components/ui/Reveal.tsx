@@ -9,6 +9,7 @@ import {
   VIEWPORT_DEFAULT,
   VIEWPORT_TIGHT,
   fadeUpStatic,
+  lineReveal,
   staggerContainer,
   staggerItem,
   staggerItemSlide,
@@ -161,7 +162,7 @@ export function MotionLine({ className = '', delay = 0 }: { className?: string; 
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={INSTANT_VARIANTS}
+      variants={lineReveal}
       transition={{ duration: 0.85, delay, ease: EASE_SMOOTH }}
       className={className}
       style={{ transformOrigin: 'center' }}

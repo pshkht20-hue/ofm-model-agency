@@ -246,26 +246,43 @@ export function ModelShowcase() {
         </div>
       </div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="mx-auto mt-8 max-w-3xl text-center text-[11px] leading-relaxed text-white/35 sm:text-xs"
-      >
-        {t('disclaimer')}
-      </motion.p>
+      {reduced ? (
+        <p className="mx-auto mt-8 max-w-3xl text-center text-[11px] leading-relaxed text-white/35 sm:text-xs">
+          {t('disclaimer')}
+        </p>
+      ) : (
+        <motion.p
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45 }}
+          className="mx-auto mt-8 max-w-3xl text-center text-[11px] leading-relaxed text-white/35 sm:text-xs"
+        >
+          {t('disclaimer')}
+        </motion.p>
+      )}
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="mt-10 text-center"
-      >
-        <a href="#contact" className="btn-secondary !rounded-full">
-          {t('cta')}
-          <ArrowRight className="h-4 w-4" />
-        </a>
-      </motion.div>
+      {reduced ? (
+        <div className="mt-10 text-center">
+          <a href="#contact" className="btn-secondary !rounded-full">
+            {t('cta')}
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
+      ) : (
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.06 }}
+          className="mt-10 text-center"
+        >
+          <a href="#contact" className="btn-secondary !rounded-full">
+            {t('cta')}
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </motion.div>
+      )}
     </SectionShell>
   );
 }

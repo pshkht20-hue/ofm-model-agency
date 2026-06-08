@@ -62,7 +62,7 @@ function BenefitCard({ icon: Icon, index, featured, item, accent }: BenefitCardP
       onMouseMove={onMove}
       whileHover={hoverLift(reduced)}
       transition={SPRING_CARD}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0a0a10]/90 p-6 md:p-8 md:backdrop-blur-sm ${
+      className={`card-premium group relative flex h-full flex-col overflow-hidden p-6 md:p-8 md:backdrop-blur-sm ${
         featured ? 'md:p-9' : ''
       }`}
     >

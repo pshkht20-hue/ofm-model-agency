@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { useTranslations } from 'next-intl';
 import { Logo } from '@/components/Logo';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
@@ -13,6 +14,7 @@ import { NAV_SECTION_MAP } from '@/lib/sections';
 
 export function Navbar() {
   const t = useTranslations('nav');
+  const reduced = useReducedMotion();
   const { activeId } = useSectionContext();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -54,9 +56,9 @@ export function Navbar() {
   return (
     <>
       <motion.nav
-        initial={{ y: -20, opacity: 0 }}
+        initial={reduced ? false : { y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={reduced ? { duration: 0 } : { duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 border-b ${
           scrolled
             ? 'bg-[#050508]/95 backdrop-blur-xl border-accent-pink/20 shadow-[0_8px_32px_-12px_rgba(255,91,181,0.2),0_1px_0_0_rgba(255,91,181,0.15)]'

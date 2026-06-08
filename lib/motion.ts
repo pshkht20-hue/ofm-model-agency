@@ -30,16 +30,42 @@ export const fadeUpStatic: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: EASE_SMOOTH } },
 };
 
+/** Linear-style title reveal — desktop only (skip blur on mobile) */
+export const titleReveal: Variants = {
+  hidden: { opacity: 0, y: 28, filter: 'blur(10px)' },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: { duration: 0.72, ease: EASE_SMOOTH },
+  },
+};
+
+export const titleRevealMobile: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: EASE_SMOOTH } },
+};
+
+export const descReveal: Variants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay: 0.08, ease: EASE_SOFT },
+  },
+};
+
 export const staggerContainer = (stagger = 0.08, delayChildren = 0.04): Variants => ({
   hidden: {},
   visible: { transition: { staggerChildren: stagger, delayChildren } },
 });
 
 export const staggerItem = (distance = 28): Variants => ({
-  hidden: { opacity: 0, y: distance },
+  hidden: { opacity: 0, y: distance, scale: 0.98 },
   visible: {
     opacity: 1,
     y: 0,
+    scale: 1,
     transition: { duration: 0.52, ease: EASE_SMOOTH },
   },
 });
