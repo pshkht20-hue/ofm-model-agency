@@ -46,12 +46,17 @@ Full manifest: `docs/OFM-SKILL-PLAN.md` · Machine profile: `.cursor/ecc-ofm-pro
 | Server/client boundary, i18n | `frontend-patterns` | `.cursor/skills/frontend-patterns/` |
 | Composition, compound components | `vercel-composition-patterns` | `.agents/skills/vercel-composition-patterns/` |
 
-### Анимация
+### Анимация (сложные, адаптивные, 3D)
 | User says / task | Skill | Path |
 |------------------|-------|------|
-| Hero, GSAP, ScrollTrigger | `ofm-premium-motion` + `gsap-react` | `.cursor/skills/ofm-premium-motion/` + user `~/.agents/skills/gsap-*` |
-| Секции ниже hero, Framer | `motion-ui` | `.cursor/skills/motion-ui/` |
-| Scroll parallax, pin | `gsap-scrolltrigger` | user-level GSAP skills |
+| **Любая сложная анимация** | `ofm-animation-mastery` | `.cursor/skills/ofm-animation-mastery/` |
+| Hero, GSAP, ScrollTrigger | `ofm-premium-motion` + `gsap-react` | + user `~/.agents/skills/gsap-*` |
+| Framer, page transitions, gestures | `framer-motion-animator` | `.agents/skills/framer-motion-animator/` |
+| Motion design, parallax, micro-UX | `animation-designer` | `.agents/skills/animation-designer/` |
+| Секции ниже hero | `motion-ui` | `.cursor/skills/motion-ui/` |
+| Scroll parallax, pin | `gsap-scrolltrigger` | user-level GSAP |
+| **3D сцена, WebGL, GLTF** | `threejs-fundamentals` → `threejs-animation` | `.agents/skills/threejs-*/` |
+| React Three Fiber | `react-three-fiber` | `.agents/skills/react-three-fiber/` |
 
 ### Конверсия и API
 | User says / task | Skill | Path |

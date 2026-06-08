@@ -14,8 +14,10 @@ Read `skill-library` skill when task type is unclear. Manifest: `docs/OFM-SKILL-
 | SEO / GA4 / GSC / blog | `ofm-seo-analytics`, `ofm-deep-site-audit`, `article-writing` |
 | UI polish / review | `make-interfaces-feel-better`, `web-design-guidelines` |
 | React / Next.js 16 | `vercel-react-best-practices`, `react-patterns`, `frontend-patterns`, `nextjs-turbopack` |
-| Hero GSAP / scroll | `ofm-premium-motion` + user GSAP skills (`gsap-react`, `gsap-scrolltrigger`) |
-| Framer sections | `motion-ui` |
+| Complex / 3D animation | `ofm-animation-mastery` (router) |
+| Hero GSAP / scroll | `ofm-premium-motion` + user GSAP (`gsap-react`, `gsap-scrolltrigger`) |
+| Framer / gestures / transitions | `framer-motion-animator`, `animation-designer`, `motion-ui` |
+| Three.js / R3F / WebGL | `threejs-*`, `react-three-fiber` (lazy-load; mobile lite) |
 | CTA / form / calculator | `ofm-conversion-audit` |
 | API / secrets | `security-review`, `backend-patterns` |
 

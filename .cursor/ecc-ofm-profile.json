@@ -8,7 +8,17 @@
       "ofm-seo-analytics",
       "ofm-deep-site-audit",
       "ofm-conversion-audit",
-      "ofm-premium-motion"
+      "ofm-premium-motion",
+      "ofm-animation-mastery"
+    ],
+    "animation": [
+      "framer-motion-animator",
+      "animation-designer",
+      "threejs-fundamentals",
+      "threejs-animation",
+      "threejs-postprocessing",
+      "threejs-shaders",
+      "react-three-fiber"
     ],
     "vercel": [
       "vercel-react-best-practices",
@@ -69,22 +79,50 @@
     "market-research",
     "defi-amm-security"
   ],
-  "installed_external": {
-    "source": "vercel-labs/agent-skills",
-    "date": "2026-06-08",
-    "path": ".agents/skills/",
-    "skills": [
-      "vercel-react-best-practices",
-      "vercel-composition-patterns",
-      "vercel-react-view-transitions",
-      "web-design-guidelines",
-      "writing-guidelines",
-      "deploy-to-vercel",
-      "vercel-optimize",
-      "vercel-cli-with-tokens",
-      "vercel-react-native-skills"
-    ]
-  },
+  "installed_external": [
+    {
+      "source": "vercel-labs/agent-skills",
+      "date": "2026-06-08",
+      "path": ".agents/skills/"
+    },
+    {
+      "source": "patricio0312rev/skills",
+      "date": "2026-06-08",
+      "skills": ["framer-motion-animator"]
+    },
+    {
+      "source": "daffy0208/ai-dev-standards",
+      "date": "2026-06-08",
+      "skills": ["animation-designer"]
+    },
+    {
+      "source": "cloudai-x/threejs-skills",
+      "date": "2026-06-08",
+      "skills": [
+        "threejs-fundamentals",
+        "threejs-geometry",
+        "threejs-materials",
+        "threejs-lighting",
+        "threejs-textures",
+        "threejs-animation",
+        "threejs-loaders",
+        "threejs-shaders",
+        "threejs-postprocessing",
+        "threejs-interaction"
+      ]
+    },
+    {
+      "source": "vercel-labs/json-render",
+      "date": "2026-06-08",
+      "skills": ["react-three-fiber"]
+    }
+  ],
+  "install_pending_disk_space": [
+    "github/awesome-copilot@gsap-framer-scroll-animation",
+    "dylantarre/animation-principles@scroll-animations",
+    "dylantarre/animation-principles@gsap-greensock",
+    "raphaelsalaja/skill@12-principles-of-animation"
+  ],
   "rules_active_focus": [
     "ofm-project",
     "ofm-premium",

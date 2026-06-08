@@ -1,6 +1,6 @@
 # OFM Skill Plan — что установлено и когда использовать
 
-> Обновлено: 8 июня 2026 · Сайт: ofmmodels.com · Стек: Next.js 16, React 19, Tailwind 4, GSAP + Framer
+> Обновлено: 8 июня 2026 (анимации) · Сайт: ofmmodels.com · Стек: Next.js 16, React 19, Tailwind 4, GSAP + Framer + Three.js
 
 ## Зачем это
 
@@ -33,7 +33,28 @@ npx skills add vercel-labs/agent-skills
 
 ---
 
-## DAILY — 20 скиллов для ежедневной работы
+## Установлено: анимации и 3D (8 июня 2026)
+
+| Скилл | Installs | Зачем |
+|-------|----------|-------|
+| **framer-motion-animator** | 5.9K | Page transitions, gestures, scroll Framer, orchestration |
+| **animation-designer** | 1.4K | Motion design, parallax, micro-interactions |
+| **threejs-*** (10 шт.) | 3.5K+ | Fundamentals → shaders → postprocessing → animation |
+| **react-three-fiber** | 1.1K | R3F + Three.js в React/Next |
+| **ofm-animation-mastery** | local | Роутер: GSAP + Framer + 3D + mobile rules |
+
+**Уже были (user-level):** официальные GSAP skills (`gsap-core`, `gsap-react`, `gsap-scrolltrigger`…)
+
+**Не установилось (мало места на диске):**
+```bash
+npx skills add github/awesome-copilot --skill gsap-framer-scroll-animation
+npx skills add dylantarre/animation-principles --skill scroll-animations
+```
+Освободите ~500 MB на диске C: и запустите команды выше.
+
+---
+
+## DAILY — скиллы для ежедневной работы
 
 ### 🎯 OFM-специфичные (приоритет №1)
 
@@ -43,6 +64,17 @@ npx skills add vercel-labs/agent-skills
 | `ofm-deep-site-audit` | «Проанализируй сайт», interlinking, schema, Phase 1 |
 | `ofm-conversion-audit` | CTA, форма, калькулятор, воронка заявок |
 | `ofm-premium-motion` | Hero GSAP, ScrollTrigger, mobile lite |
+| `ofm-animation-mastery` | Сложные адаптивные анимации, 3D — главный роутер |
+
+### 🎬 Анимация и 3D (новые)
+
+| Скилл | Когда |
+|-------|-------|
+| `framer-motion-animator` | Transitions, whileInView, gestures, stagger |
+| `animation-designer` | Parallax, micro-UX, motion design |
+| `threejs-fundamentals` … `threejs-postprocessing` | WebGL сцены, GLTF, шейдеры, bloom |
+| `react-three-fiber` | 3D в React (lazy-load, `ssr: false`) |
+| User GSAP pack | Hero timelines, ScrollTrigger pin/scrub |
 
 ### ⚡ Vercel (установлены сегодня)
 
