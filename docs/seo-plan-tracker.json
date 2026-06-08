@@ -1,0 +1,297 @@
+{
+  "version": 1,
+  "site": "https://ofmmodels.com",
+  "planStart": "2026-06-03",
+  "updatedAt": "2026-06-08",
+  "currentPhase": 0,
+  "phases": [
+    {
+      "id": 0,
+      "key": "indexing",
+      "name": "Фаза 0 — Индексация",
+      "period": "3–14 июня 2026",
+      "goal": "Google видит сайт, sitemap обработан, первые URL в индексе",
+      "kpi": "≥5 URL в индексе, первые показы в GSC",
+      "tasks": [
+        {
+          "id": "0.1",
+          "title": "GSC → Sitemap → «Обнаружено URL» > 0",
+          "owner": "user",
+          "due": "2026-06-10",
+          "status": "pending",
+          "link": "https://search.google.com/search-console"
+        },
+        {
+          "id": "0.2",
+          "title": "GSC → Проверка URL → главная / в индексе?",
+          "owner": "user",
+          "due": "2026-06-12",
+          "status": "pending"
+        },
+        {
+          "id": "0.3",
+          "title": "Пост в Telegram + Instagram со ссылкой on ofmmodels.com",
+          "owner": "user",
+          "due": "2026-06-10",
+          "status": "pending"
+        },
+        {
+          "id": "0.4",
+          "title": "Vercel env: SITE_URL, GA4, Telegram",
+          "owner": "user",
+          "due": "2026-06-07",
+          "status": "done"
+        },
+        {
+          "id": "0.5",
+          "title": "Запросить индексацию: /blog, Moldova, LatAm, /es/blog",
+          "owner": "user",
+          "due": "2026-06-12",
+          "status": "pending",
+          "link": "docs/SEO-MASTER-PLAN.md#индексация"
+        },
+        {
+          "id": "0.6",
+          "title": "GSC → hreflang — нет ошибок локалей",
+          "owner": "user",
+          "due": "2026-06-14",
+          "status": "pending"
+        },
+        {
+          "id": "0.7",
+          "title": "Ежедневный SEO-отчёт в Telegram (GitHub Actions)",
+          "owner": "dev",
+          "due": "2026-06-07",
+          "status": "done"
+        },
+        {
+          "id": "0.8",
+          "title": "On-page фаза A+B: meta, гео-статьи, обложки блога",
+          "owner": "dev",
+          "due": "2026-06-08",
+          "status": "done"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "key": "onpage",
+      "name": "Фаза 1 — On-page и быстрые победы",
+      "period": "15–30 июня 2026",
+      "goal": "Сниппеты, перелинковка, контент под НЧ-запросы",
+      "kpi": "20+ URL в индексе, 100+ показов GSC, 10+ кликов",
+      "tasks": [
+        {
+          "id": "1.1",
+          "title": "Title/description RU/UK/EN/ES: главная, FAQ, блог, hero",
+          "owner": "dev",
+          "due": "2026-06-18",
+          "status": "done"
+        },
+        {
+          "id": "1.2",
+          "title": "Гео-статьи: Молдова + LatAm (вся испаноязычная LatAm + Brasil)",
+          "owner": "dev",
+          "due": "2026-06-08",
+          "status": "done"
+        },
+        {
+          "id": "1.3",
+          "title": "Усилить meta description на 12+ статьях блога",
+          "owner": "dev",
+          "due": "2026-06-08",
+          "status": "done"
+        },
+        {
+          "id": "1.4",
+          "title": "Alt-тексты кейсов (case-pro, case-elite, case-prime)",
+          "owner": "dev",
+          "due": "2026-06-18",
+          "status": "pending"
+        },
+        {
+          "id": "1.5",
+          "title": "Перелинковка: в каждой статье 2–3 ссылки (главная, FAQ, гео)",
+          "owner": "dev",
+          "due": "2026-06-22",
+          "status": "pending"
+        },
+        {
+          "id": "1.6",
+          "title": "FAQ: блок «Сколько % берёт агентство» + gross total disclaimer",
+          "owner": "dev",
+          "due": "2026-06-20",
+          "status": "pending"
+        },
+        {
+          "id": "1.7",
+          "title": "Новая статья: OnlyFans агентство vs работа solo",
+          "owner": "dev",
+          "due": "2026-06-22",
+          "status": "pending"
+        },
+        {
+          "id": "1.8",
+          "title": "Новая статья: Сколько процентов берёт OnlyFans агентство",
+          "owner": "dev",
+          "due": "2026-06-25",
+          "status": "pending"
+        },
+        {
+          "id": "1.9",
+          "title": "Новая статья: Старт модели OnlyFans в Украине — пошагово",
+          "owner": "dev",
+          "due": "2026-06-28",
+          "status": "pending"
+        },
+        {
+          "id": "1.10",
+          "title": "3–5 новых отзывов на сайте (реальные, с согласия)",
+          "owner": "user",
+          "due": "2026-06-30",
+          "status": "pending"
+        },
+        {
+          "id": "1.11",
+          "title": "Разбор GSC отчёта #1: запросы, CTR, страницы без кликов",
+          "owner": "user",
+          "due": "2026-06-30",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "key": "content-trust",
+      "name": "Фаза 2 — Контент и доверие",
+      "period": "июль–август 2026",
+      "goal": "1–2 статьи/неделю, лендинг, внешние сигналы",
+      "kpi": "28+ статей, 60+ URL в индексе, 300+ визитов/мес GA4",
+      "tasks": [
+        {
+          "id": "2.1",
+          "title": "Лендинг «Стать моделью OnlyFans» (/stat-modelej-onlyfans или /start)",
+          "owner": "dev",
+          "due": "2026-07-15",
+          "status": "pending"
+        },
+        {
+          "id": "2.2",
+          "title": "Статья: Агентство OnlyFans без предоплаты",
+          "owner": "dev",
+          "due": "2026-07-10",
+          "status": "pending"
+        },
+        {
+          "id": "2.3",
+          "title": "Статья: OnlyFans агентство Telegram — как подать заявку",
+          "owner": "dev",
+          "due": "2026-07-17",
+          "status": "pending"
+        },
+        {
+          "id": "2.4",
+          "title": "2–4 внешние ссылки (каталоги UA/EU, партнёры, профили)",
+          "owner": "user",
+          "due": "2026-07-31",
+          "status": "pending"
+        },
+        {
+          "id": "2.5",
+          "title": "Июль: 4 статьи long-tail (договор, чат-менеджмент, города UA, gross vs net)",
+          "owner": "dev",
+          "due": "2026-07-31",
+          "status": "pending"
+        },
+        {
+          "id": "2.6",
+          "title": "GSC → доработка title страниц с низким CTR",
+          "owner": "dev",
+          "due": "2026-08-15",
+          "status": "pending"
+        },
+        {
+          "id": "2.7",
+          "title": "Август: 4 статьи + кейсы с цифрами (NDA-safe)",
+          "owner": "dev",
+          "due": "2026-08-31",
+          "status": "pending"
+        },
+        {
+          "id": "2.8",
+          "title": "A/B description главной по CTR в GSC",
+          "owner": "dev",
+          "due": "2026-08-31",
+          "status": "pending"
+        },
+        {
+          "id": "2.9",
+          "title": "Опционально: локаль /pt для Brasil",
+          "owner": "dev",
+          "due": "2026-08-31",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "key": "scale",
+      "name": "Фаза 3 — Масштабирование",
+      "period": "сентябрь–ноябрь 2026",
+      "goal": "Стабильный organic, усиление EN/ES, конверсия заявок",
+      "kpi": "500+ кликов GSC/мес, 80+ URL в индексе, 40+ статей",
+      "tasks": [
+        {
+          "id": "3.1",
+          "title": "Сентябрь: 4–6 статей long-tail + мониторинг AI Overviews по FAQ",
+          "owner": "dev",
+          "due": "2026-09-30",
+          "status": "pending"
+        },
+        {
+          "id": "3.2",
+          "title": "Октябрь: 2 EN + 2 ES статьи под onlyfans management agency",
+          "owner": "dev",
+          "due": "2026-10-31",
+          "status": "pending"
+        },
+        {
+          "id": "3.3",
+          "title": "A/B Hero CTA и заголовков по конверсии заявок (GA4)",
+          "owner": "dev",
+          "due": "2026-10-31",
+          "status": "pending"
+        },
+        {
+          "id": "3.4",
+          "title": "Review schema (AggregateRating) после 10+ отзывов",
+          "owner": "dev",
+          "due": "2026-10-15",
+          "status": "pending"
+        },
+        {
+          "id": "3.5",
+          "title": "Полугодовой отчёт GSC + GA4, KPI на Q1 2027",
+          "owner": "user",
+          "due": "2026-11-30",
+          "status": "pending"
+        },
+        {
+          "id": "3.6",
+          "title": "Опционально: YouTube OFM 3–5 гайдов → embed + ссылки на сайт",
+          "owner": "user",
+          "due": "2026-11-30",
+          "status": "pending"
+        }
+      ]
+    }
+  ],
+  "weeklyRitual": [
+    "GSC → Покрытие — новые ошибки индексации?",
+    "GSC → Эффективность — показы / клики / CTR за 7 дней",
+    "GSC → Запросы — новые ключи с показами?",
+    "GA4 → топ-3 страницы и источники",
+    "1 действие: статья ИЛИ пост TG/IG ИЛИ правка title",
+    "Заявки с сайта — сколько за неделю"
+  ]
+}

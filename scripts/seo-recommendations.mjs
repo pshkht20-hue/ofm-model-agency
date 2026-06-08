@@ -1,4 +1,4 @@
-function escapeTelegramHtml(text) {
+export function escapeTelegramHtml(text) {
   return String(text)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -88,10 +88,19 @@ export function buildSeoRecommendations(data) {
     tips.push('Мало трафика из Украины — усильте /uk и статьи на украинском.');
   }
   if (mdaImpr === 0) {
-    tips.push('Молдова: 0 показов — планируйте страницу или пост под MD (ru/ro).');
+    tips.push(
+      'Молдова: 0 показов — запросите индексацию /blog/onlyfans-agentstvo-moldova и пост со ссылкой.',
+    );
   }
-  if (argImpr === 0) {
-    tips.push('LatAm: 0 показов по AR — добавьте es-контент и локальные ключи в /es.');
+  const latamImpr =
+    Number(countries.find((c) => c.country === 'esp')?.impressions ?? 0) +
+    Number(countries.find((c) => c.country === 'mex')?.impressions ?? 0) +
+    Number(countries.find((c) => c.country === 'col')?.impressions ?? 0) +
+    argImpr;
+  if (latamImpr < 3) {
+    tips.push(
+      'LatAm: мало показов — индексация /es/blog/onlyfans-agentstvo-latinskaya-amerika + пост в IG/TG.',
+    );
   }
 
   if (ga4Sessions > 0 && ga4Organic / ga4Sessions < 0.1) {
@@ -107,7 +116,7 @@ export function buildSeoRecommendations(data) {
   return [...new Set(tips)].slice(0, 6);
 }
 
-export function formatTelegramReport(data, recommendations) {
+export function formatTelegramReport(data, recommendations, planSection = '') {
   const date = new Date().toLocaleDateString('ru-RU', {
     timeZone: 'Europe/Kyiv',
     day: 'numeric',
@@ -153,10 +162,11 @@ export function formatTelegramReport(data, recommendations) {
     topPages ? `\n<b>📄 Страницы в поиске</b>\n${topPages}` : '',
     geoLines ? `\n<b>🌍 Гео (GSC)</b>\n${geoLines}` : '',
     '',
-    `<b>💡 Рекомендации</b>`,
+    `<b>💡 Рекомендации по данным</b>`,
     recBlock,
+    planSection ? `\n${planSection}` : '',
     '',
-    `<i>Авто-отчёт. Полный файл: docs/analytics-reports/latest-report.md</i>`,
+    `<i>Авто-отчёт · docs/analytics-reports/latest-report.md</i>`,
   ]
     .filter(Boolean)
     .join('\n');

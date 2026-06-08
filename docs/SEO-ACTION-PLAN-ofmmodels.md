@@ -4,7 +4,7 @@
 **Проект:** OFM's Model Agency  
 **Дата плана:** 3 июня 2026  
 **Статус:** Фаза индексации и органического роста  
-**Связанные документы:** `SEO-ROADMAP-ofmmodels.md`, рабочий стол: `OFM-SEO-инсайты-YouTube-Anton-Sokolovskiy-Marketing.txt`
+**Связанные документы:** `SEO-MASTER-PLAN.md` (полный план + Telegram-напоминания), `seo-plan-tracker.json`, `SEO-ROADMAP-ofmmodels.md`
 
 ---
 

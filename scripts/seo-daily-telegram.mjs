@@ -8,7 +8,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
-import { buildSeoRecommendations, formatTelegramReport } from './seo-recommendations.mjs';
+import { buildSeoRecommendations, formatTelegramReport, escapeTelegramHtml } from './seo-recommendations.mjs';
+import { loadSeoPlan, buildPlanActions, formatPlanTelegramSection } from './seo-plan.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -152,7 +153,10 @@ async function main() {
   const md = fs.readFileSync(reportPath, 'utf8');
   const data = parseReportMd(md);
   const recommendations = buildSeoRecommendations(data);
-  const message = formatTelegramReport(data, recommendations);
+  const plan = loadSeoPlan();
+  const planContext = buildPlanActions(plan);
+  const planSection = formatPlanTelegramSection(planContext, escapeTelegramHtml);
+  const message = formatTelegramReport(data, recommendations, planSection);
 
   await sendTelegram(message);
   console.log('SEO digest sent to Telegram');

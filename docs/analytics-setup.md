@@ -99,7 +99,7 @@ npm run seo:report
 
 ## Ежедневно в Telegram (без команд)
 
-См. **docs/analytics-telegram-daily.md** — один раз настроить GitHub Secrets → каждый день отчёт и рекомендации в Telegram.
+См. **docs/analytics-telegram-daily.md** — один раз настроить GitHub Secrets → каждый день отчёт, рекомендации и **напоминания по SEO-плану** в Telegram. Полный план: **docs/SEO-MASTER-PLAN.md**.
 
 ## Как пользоваться с Cursor
 
