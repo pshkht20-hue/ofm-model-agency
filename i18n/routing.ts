@@ -5,7 +5,11 @@ export const routing = defineRouting({
   locales: ['ru', 'uk', 'en', 'es'],
   defaultLocale: 'ru',
   localePrefix: 'as-needed',
-  /** Автоязык по заголовку Accept-Language браузера / ОС */
+  /**
+   * Автоязык: Accept-Language браузера/ОС → ru | uk | en | es.
+   * После ручного переключения сохраняется cookie NEXT_LOCALE.
+   * pt/ro и др. → см. i18n/browser-locale.ts
+   */
   localeDetection: true,
 });
 
