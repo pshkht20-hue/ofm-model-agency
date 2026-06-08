@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState, type MouseEvent } from 'react';
 import { ArrowRight, Check, ChevronLeft, Clock, RefreshCw, Sparkles } from 'lucide-react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
@@ -112,9 +112,26 @@ function OptionCard({ selected, label, description, onSelect, highlighted = fals
   );
 }
 
+const stepVariants = {
+  enter: (dir: number) => ({
+    opacity: 0,
+    rotateY: dir > 0 ? 14 : -14,
+    x: dir > 0 ? 28 : -28,
+    transformPerspective: 1200,
+  }),
+  center: { opacity: 1, rotateY: 0, x: 0 },
+  exit: (dir: number) => ({
+    opacity: 0,
+    rotateY: dir > 0 ? -12 : 12,
+    x: dir > 0 ? -24 : 24,
+  }),
+};
+
 export function IncomeCalculatorSection() {
   const t = useTranslations('home.calculator');
+  const reduced = useReducedMotion();
   const [step, setStep] = useState(0);
+  const [direction, setDirection] = useState(1);
   const [answers, setAnswers] = useState<Partial<CalculatorAnswers>>(INITIAL_ANSWERS);
   const [showResult, setShowResult] = useState(false);
 
@@ -139,6 +156,7 @@ export function IncomeCalculatorSection() {
 
   function goNext() {
     if (!currentValue) return;
+    setDirection(1);
     if (step < totalSteps - 1) {
       setStep((s) => s + 1);
       return;
@@ -147,6 +165,7 @@ export function IncomeCalculatorSection() {
   }
 
   function goBack() {
+    setDirection(-1);
     if (showResult) {
       setShowResult(false);
       return;
@@ -155,6 +174,7 @@ export function IncomeCalculatorSection() {
   }
 
   function restart() {
+    setDirection(-1);
     setAnswers(INITIAL_ANSWERS);
     setStep(0);
     setShowResult(false);
@@ -198,14 +218,17 @@ export function IncomeCalculatorSection() {
               </div>
             )}
 
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait" custom={direction}>
               {!showResult ? (
                 <motion.div
                   key={questionId}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                  custom={direction}
+                  variants={reduced ? undefined : stepVariants}
+                  initial={reduced ? { opacity: 0, y: 12 } : 'enter'}
+                  animate={reduced ? { opacity: 1, y: 0 } : 'center'}
+                  exit={reduced ? { opacity: 0, y: -8 } : 'exit'}
+                  transition={{ duration: reduced ? 0.25 : 0.42, ease: [0.22, 1, 0.36, 1] }}
+                  style={{ transformStyle: 'preserve-3d' }}
                 >
                   <h3 className="heading-card mb-3 text-xl md:text-2xl">
                     {t(`questions.${questionId}.title`)}
@@ -247,9 +270,13 @@ export function IncomeCalculatorSection() {
                 result && (
                   <motion.div
                     key="result"
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                    initial={
+                      reduced
+                        ? { opacity: 0 }
+                        : { opacity: 0, scale: 0.94, rotateX: 8, transformPerspective: 1200 }
+                    }
+                    animate={{ opacity: 1, scale: 1, rotateX: 0, y: 0 }}
+                    transition={{ duration: reduced ? 0.35 : 0.65, ease: [0.22, 1, 0.36, 1] }}
                     className="space-y-6"
                   >
                     <div className="text-center">

@@ -9,6 +9,7 @@ import { IPhoneFrame } from '@/components/ui/IPhoneFrame';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { UsdDisplay } from '@/components/ui/UsdDisplay';
 import { ResultScreenshot } from '@/components/ui/ResultScreenshot';
+import { FeaturedPhoneParallax } from '@/components/scroll/FeaturedPhoneParallax';
 import { EASE_SOFT, VIEWPORT_DEFAULT, fadeUpStatic, hoverLift } from '@/lib/motion';
 
 const TIER_STYLES: Record<
@@ -59,23 +60,31 @@ function ScreenshotFrame({
 }) {
   const t = useTranslations('models');
 
-  return (
-    <div className={`w-full shrink-0 ${featured ? 'lg:w-[300px]' : ''}`}>
+  const phone = (
+    <div data-phone-frame className={`w-full shrink-0 ${featured ? 'lg:w-[300px]' : ''}`}>
       <IPhoneFrame size={phoneSize}>
-        <ResultScreenshot
-          src={item.image}
-          alt={t('altScreenshot', { tier: t(`tiers.${item.tier}`) })}
-          tier={item.tier}
-          width={item.imageWidth}
-          height={item.imageHeight}
-          priority={priority}
-        />
+        <div data-phone-screen>
+          <ResultScreenshot
+            src={item.image}
+            alt={t('altScreenshot', { tier: t(`tiers.${item.tier}`) })}
+            tier={item.tier}
+            width={item.imageWidth}
+            height={item.imageHeight}
+            priority={priority}
+          />
+        </div>
       </IPhoneFrame>
       <div className={`mt-4 pb-1 ${featured ? 'lg:hidden' : ''}`}>
         <ScreenshotCaption item={item} />
       </div>
     </div>
   );
+
+  if (featured) {
+    return <FeaturedPhoneParallax>{phone}</FeaturedPhoneParallax>;
+  }
+
+  return phone;
 }
 
 function ResultStats({

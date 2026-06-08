@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, Loader2, Sparkles } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowRight, Loader2, Sparkles } from 'lucide-react';
+import { SuccessCheckmark } from '@/components/ui/SuccessCheckmark';
 import { useLocale, useTranslations } from 'next-intl';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
@@ -15,6 +16,7 @@ const hintClass = 'mt-2 text-xs text-white/42 leading-relaxed';
 
 export function ContactForm() {
   const t = useTranslations('contactForm');
+  const reduced = useReducedMotion();
   const locale = useLocale();
   const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -62,31 +64,34 @@ export function ContactForm() {
     return (
       <motion.div
         id="contact-form"
-        initial={{ opacity: 0, scale: 0.96 }}
+        role="status"
+        aria-live="polite"
+        initial={{ opacity: 0, scale: reduced ? 1 : 0.94 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        className="max-w-xl mx-auto text-left card-premium p-8 md:p-10"
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        className="relative max-w-xl mx-auto text-left card-premium p-8 md:p-10 overflow-hidden"
       >
-        <div className="flex flex-col items-center text-center gap-4 py-4">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: 'spring', stiffness: 260, damping: 18, delay: 0.1 }}
-          >
-            <CheckCircle2 className="w-14 h-14 text-emerald-400" />
-          </motion.div>
+        <motion.div
+          className="pointer-events-none absolute inset-0 rounded-[inherit] border border-emerald-400/20"
+          initial={reduced ? false : { opacity: 0 }}
+          animate={{ opacity: [0.2, 0.5, 0.25] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+          aria-hidden
+        />
+        <div className="relative flex flex-col items-center text-center gap-4 py-4">
+          <SuccessCheckmark size={56} />
           <motion.h3
-            initial={{ opacity: 0, y: 8 }}
+            initial={reduced ? false : { opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.25 }}
             className="font-serif text-2xl font-normal"
           >
             {t('successTitle')}
           </motion.h3>
           <motion.p
-            initial={{ opacity: 0, y: 8 }}
+            initial={reduced ? false : { opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.38 }}
             className="text-white/65 leading-relaxed"
           >
             {t('successBody')}

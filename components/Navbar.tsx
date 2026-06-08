@@ -8,9 +8,12 @@ import { Logo } from '@/components/Logo';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { Link } from '@/i18n/navigation';
 import { SocialLinks } from '@/components/social/SocialLinks';
+import { useSectionContext } from '@/context/SectionContext';
+import { NAV_SECTION_MAP } from '@/lib/sections';
 
 export function Navbar() {
   const t = useTranslations('nav');
+  const { activeId } = useSectionContext();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -105,16 +108,27 @@ export function Navbar() {
               className="flex items-center justify-center gap-4 xl:gap-5 min-w-0"
               aria-label={t('navigation')}
             >
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="relative py-1 text-[12px] xl:text-[13px] font-medium text-white/60 hover:text-white transition-colors whitespace-nowrap group"
-                >
-                  {link.label}
-                  <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gradient-to-r from-accent-pink to-accent-cyan transition-all duration-300 group-hover:w-full" />
-                </Link>
-              ))}
+              {NAV_LINKS.map((link) => {
+                const sectionId = NAV_SECTION_MAP[link.href];
+                const isActive = sectionId && activeId === sectionId;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`relative py-1 text-[12px] xl:text-[13px] font-medium transition-colors whitespace-nowrap group ${
+                      isActive ? 'text-white' : 'text-white/60 hover:text-white'
+                    }`}
+                    aria-current={isActive ? 'true' : undefined}
+                  >
+                    {link.label}
+                    <span
+                      className={`absolute -bottom-0.5 left-0 h-px bg-gradient-to-r from-accent-pink to-accent-cyan transition-all duration-300 ${
+                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
             </nav>
 
             <div className="flex shrink-0 items-center gap-2">

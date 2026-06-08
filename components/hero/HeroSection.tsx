@@ -1,8 +1,10 @@
 'use client';
 
 import { useRef } from 'react';
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { gsap, registerGsapPlugins } from '@/lib/gsap/register';
+
+registerGsapPlugins();
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { CreatorFloatingMotifs } from '@/components/CreatorTheme';
@@ -56,6 +58,28 @@ export function HeroSection() {
             });
             clearHeroPending(section);
             return;
+          }
+
+          if (section) {
+            const cosmos = section.querySelector('[data-cosmos-root]');
+            const exitTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: section,
+                start: 'top top',
+                end: 'bottom top',
+                scrub: mobile ? 0.55 : 1,
+              },
+            });
+
+            exitTl.to(
+              section.querySelectorAll('[data-hero-reveal], [data-hero-scroll]'),
+              { y: mobile ? -32 : -88, opacity: 0.08, ease: 'none' },
+              0,
+            );
+
+            if (cosmos) {
+              exitTl.to(cosmos, { opacity: mobile ? 0.35 : 0.18, scale: 1.05, ease: 'none' }, 0);
+            }
           }
 
           if (mobile) {

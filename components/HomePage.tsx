@@ -19,6 +19,7 @@ import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
 import { HomeSeoBlock } from '@/components/seo/HomeSeoBlock';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { EASE_SMOOTH, VIEWPORT_DEFAULT, fadeUpStatic } from '@/lib/motion';
+import { SectionProvider } from '@/context/SectionContext';
 
 const IncomeCalculatorSection = dynamic(
   () =>
@@ -60,6 +61,7 @@ export function HomePage() {
   const reduced = useReducedMotion();
 
   return (
+    <SectionProvider>
     <div className="min-h-screen bg-[#050508] text-[#f4f2ef] overflow-x-hidden premium-grain">
       <a
         href="#main-content"
@@ -183,5 +185,6 @@ export function HomePage() {
 
       <SiteFooter />
     </div>
+    </SectionProvider>
   );
 }

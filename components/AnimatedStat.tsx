@@ -24,6 +24,8 @@ type AnimatedStatProps = {
   decimals?: number;
   index?: number;
   accent?: StatAccent;
+  /** Parent-orchestrated entrance (Stats GSAP timeline) */
+  triggered?: boolean;
 };
 
 const accentGlow: Record<StatAccent, string> = {
@@ -48,10 +50,13 @@ export function AnimatedStat({
   decimals = 0,
   index = 0,
   accent = 'pink',
+  triggered,
 }: AnimatedStatProps) {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
+  const inViewObserver = useInView(ref, { once: true, margin: '-60px' });
+  const orchestrated = triggered !== undefined;
+  const isInView = orchestrated ? triggered : inViewObserver;
   const count = useMotionValue(reduced ? number : 0);
   const displayValue = useTransform(count, (latest) =>
     decimals > 0 ? latest.toFixed(decimals) : String(Math.floor(latest)),
@@ -76,12 +81,13 @@ export function AnimatedStat({
   return (
     <motion.div
       ref={ref}
-      initial={reduced ? false : 'hidden'}
-      whileInView={reduced ? undefined : 'visible'}
+      initial={reduced || orchestrated ? false : 'hidden'}
+      whileInView={reduced || orchestrated ? undefined : 'visible'}
       viewport={VIEWPORT_TIGHT}
       variants={fadeUpStatic}
       transition={{ delay: index * 0.08, duration: 0.55, ease: EASE_SMOOTH }}
       className="group relative h-full"
+      data-stat-card={index}
     >
       <motion.article
         whileHover={reduced ? undefined : { y: -4 }}

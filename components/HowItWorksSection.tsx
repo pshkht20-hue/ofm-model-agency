@@ -5,6 +5,7 @@ import { ArrowRight, Clock } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { EASE_SMOOTH, hoverLift, SPRING_CARD, VIEWPORT_TIGHT, fadeUpStatic } from '@/lib/motion';
+import { HowItWorksPinned, HowItWorksPinnedCta } from '@/components/HowItWorksPinned';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
@@ -129,48 +130,94 @@ export function HowItWorksSection() {
         aria-hidden
       />
 
-      <SectionHeader
-        eyebrow={t('how.eyebrow')}
-        title={t('how.title')}
-        description={t('how.subtitle')}
-      />
+      <div className="lg:hidden">
+        <SectionHeader
+          eyebrow={t('how.eyebrow')}
+          title={t('how.title')}
+          description={t('how.subtitle')}
+        />
 
-      <StaggerGrid variant="slide" stagger={0.1} className="relative grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-5">
-        {steps.map((item, i) => {
-          const step = String(i + 1).padStart(2, '0');
-          return (
-            <StaggerItem key={item.title} variant="slide" className={BENTO_SPAN[i] ?? ''}>
-              <StepCard
-                step={step}
-                index={i}
-                featured={BENTO_SPAN[i] === 'lg:col-span-2'}
-                item={item}
-                accent={ACCENT[i]}
-              />
-            </StaggerItem>
-          );
-        })}
-      </StaggerGrid>
-
-      <motion.div
-        initial={reduced ? false : 'hidden'}
-        whileInView={reduced ? undefined : 'visible'}
-        viewport={VIEWPORT_TIGHT}
-        variants={fadeUpStatic}
-        transition={{ duration: 0.5, delay: 0.2, ease: EASE_SMOOTH }}
-        className="mt-10 md:mt-12 flex flex-col items-center gap-3 text-center"
-      >
-        <p className="text-sm text-white/40 max-w-md">{t('how.footerNote')}</p>
-        <motion.a
-          href="#contact"
-          whileHover={reduced ? undefined : { scale: 1.02 }}
-          whileTap={reduced ? undefined : { scale: 0.98 }}
-          className="btn-primary group inline-flex"
+        <StaggerGrid
+          variant="slide"
+          stagger={0.1}
+          className="relative grid gap-4 md:grid-cols-2 md:gap-5"
         >
-          {t('how.cta')}
-          <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-        </motion.a>
-      </motion.div>
+          {steps.map((item, i) => {
+            const step = String(i + 1).padStart(2, '0');
+            return (
+              <StaggerItem key={item.title} variant="slide">
+                <StepCard
+                  step={step}
+                  index={i}
+                  featured={false}
+                  item={item}
+                  accent={ACCENT[i]}
+                />
+              </StaggerItem>
+            );
+          })}
+        </StaggerGrid>
+
+        <motion.div
+          initial={reduced ? false : 'hidden'}
+          whileInView={reduced ? undefined : 'visible'}
+          viewport={VIEWPORT_TIGHT}
+          variants={fadeUpStatic}
+          transition={{ duration: 0.5, delay: 0.2, ease: EASE_SMOOTH }}
+          className="mt-10 md:mt-12 flex flex-col items-center gap-3 text-center"
+        >
+          <p className="text-sm text-white/40 max-w-md">{t('how.footerNote')}</p>
+          <motion.a
+            href="#contact"
+            whileHover={reduced ? undefined : { scale: 1.02 }}
+            whileTap={reduced ? undefined : { scale: 0.98 }}
+            className="btn-primary group inline-flex"
+          >
+            {t('how.cta')}
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+          </motion.a>
+        </motion.div>
+      </div>
+
+      <div className="hidden lg:block">
+        {reduced ? (
+          <>
+            <SectionHeader
+              eyebrow={t('how.eyebrow')}
+              title={t('how.title')}
+              description={t('how.subtitle')}
+            />
+            <StaggerGrid variant="slide" stagger={0.1} className="relative grid gap-4 lg:grid-cols-3 lg:gap-5">
+              {steps.map((item, i) => {
+                const step = String(i + 1).padStart(2, '0');
+                return (
+                  <StaggerItem key={item.title} variant="slide" className={BENTO_SPAN[i] ?? ''}>
+                    <StepCard
+                      step={step}
+                      index={i}
+                      featured={BENTO_SPAN[i] === 'lg:col-span-2'}
+                      item={item}
+                      accent={ACCENT[i]}
+                    />
+                  </StaggerItem>
+                );
+              })}
+            </StaggerGrid>
+            <div className="mt-10 flex flex-col items-center gap-3 text-center">
+              <p className="text-sm text-white/40 max-w-md">{t('how.footerNote')}</p>
+              <a href="#contact" className="btn-primary group inline-flex">
+                {t('how.cta')}
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+              </a>
+            </div>
+          </>
+        ) : (
+          <>
+            <HowItWorksPinned />
+            <HowItWorksPinnedCta />
+          </>
+        )}
+      </div>
     </SectionShell>
   );
 }

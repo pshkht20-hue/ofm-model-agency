@@ -362,7 +362,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
   );
 
   return (
-    <div ref={bgRef} className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
+    <div ref={bgRef} data-cosmos-root className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
       <div data-cosmos-layer className="cosmos-deep-space absolute inset-0" />
       <div data-cosmos-breathe data-cosmos-layer className="cosmos-deep-breathe absolute inset-0" />
 
