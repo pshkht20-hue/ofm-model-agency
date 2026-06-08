@@ -1,10 +1,15 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Loader2, Sparkles } from 'lucide-react';
 import { SuccessCheckmark } from '@/components/ui/SuccessCheckmark';
 import { useLocale, useTranslations } from 'next-intl';
+import {
+  clearCalcPrefill,
+  formatUsd,
+  readCalcPrefill,
+} from '@/lib/calculator/prefill';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
@@ -16,10 +21,27 @@ const hintClass = 'mt-2 text-xs text-white/42 leading-relaxed';
 
 export function ContactForm() {
   const t = useTranslations('contactForm');
+  const tCalc = useTranslations('home.calculator');
   const reduced = useReducedMotion();
   const locale = useLocale();
   const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [message, setMessage] = useState('');
+  const [hasCalcPrefill, setHasCalcPrefill] = useState(false);
+
+  useEffect(() => {
+    const prefill = readCalcPrefill();
+    if (!prefill) return;
+
+    setMessage(
+      t('calcPrefillMessage', {
+        low: formatUsd(prefill.low),
+        high: formatUsd(prefill.high),
+        tier: tCalc(`result.tiers.${prefill.tier}`),
+      }),
+    );
+    setHasCalcPrefill(true);
+  }, [t, tCalc]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -53,6 +75,9 @@ export function ContactForm() {
       }
 
       setStatus('success');
+      clearCalcPrefill();
+      setMessage('');
+      setHasCalcPrefill(false);
       form.reset();
     } catch {
       setErrorMessage(t('errorNetwork'));
@@ -167,6 +192,11 @@ export function ContactForm() {
         </label>
 
         <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 md:p-5">
+          {hasCalcPrefill && (
+            <p className="mb-3 rounded-xl border border-accent-cyan/20 bg-accent-cyan/[0.06] px-3 py-2 text-xs leading-relaxed text-accent-cyan/90">
+              {t('calcPrefillNotice')}
+            </p>
+          )}
           <label className="block">
             <span className="inline-flex items-center gap-2 text-sm font-medium text-white/80 mb-1">
               <Sparkles className="h-3.5 w-3.5 text-accent-pink/80" aria-hidden />
@@ -177,6 +207,8 @@ export function ContactForm() {
               name="message"
               rows={4}
               maxLength={2000}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               placeholder={t('interestsPlaceholder')}
               className={`${inputClass} resize-y min-h-[112px] bg-[#050508]/60`}
               disabled={status === 'loading'}

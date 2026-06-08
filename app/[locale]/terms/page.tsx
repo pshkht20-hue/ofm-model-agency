@@ -30,6 +30,7 @@ export default async function TermsPage({ params }: Props) {
   return (
     <SeoPageShell breadcrumbs={[{ label: t('termsTitle') }]} showCta={false}>
       <BreadcrumbJsonLd
+        locale={legalLocale}
         items={[
           { name: tCommon('home'), path: '/' },
           { name: t('termsTitle'), path: '/terms' },

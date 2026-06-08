@@ -9,6 +9,7 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { CreatorFloatingMotifs } from '@/components/CreatorTheme';
 import { HeroBackground } from '@/components/hero/HeroBackground';
+import { HeroTrustStrip } from '@/components/hero/HeroTrustStrip';
 import { NeonAccents } from '@/components/ui/NeonAccents';
 
 gsap.registerPlugin(useGSAP);
@@ -247,7 +248,7 @@ export function HeroSection() {
           })}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <a
             href="#contact"
             data-hero-cta="primary"
@@ -261,6 +262,8 @@ export function HeroSection() {
             {t('hero.ctaSecondary')}
           </a>
         </div>
+
+        <HeroTrustStrip />
 
         <div className="flex flex-wrap justify-center gap-x-12 gap-y-3 text-xs tracking-[0.2em] uppercase text-white/40">
           <span data-hero-stat data-hero-reveal>

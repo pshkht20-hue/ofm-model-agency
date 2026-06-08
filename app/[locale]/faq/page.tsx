@@ -40,6 +40,7 @@ export default async function FaqPage({ params }: Props) {
     <SeoPageShell breadcrumbs={[{ label: tCommon('faq') }]}>
       <FaqPageJsonLd items={faqItems} />
       <BreadcrumbJsonLd
+        locale={faqLocale}
         items={[
           { name: tCommon('home'), path: '/' },
           { name: tCommon('faq'), path: '/faq' },

@@ -30,6 +30,7 @@ export default async function PrivacyPage({ params }: Props) {
   return (
     <SeoPageShell breadcrumbs={[{ label: t('privacyTitle') }]} showCta={false}>
       <BreadcrumbJsonLd
+        locale={legalLocale}
         items={[
           { name: tCommon('home'), path: '/' },
           { name: t('privacyTitle'), path: '/privacy' },

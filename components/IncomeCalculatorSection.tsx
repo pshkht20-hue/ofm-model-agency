@@ -17,6 +17,7 @@ import {
   type ResultTier,
   type Social,
 } from '@/lib/calculator/estimate';
+import { saveCalcPrefill } from '@/lib/calculator/prefill';
 
 const TIER_ACCENT: Record<ResultTier, 'prime' | 'pro' | 'elite' | 'brand'> = {
   launch: 'prime',
@@ -147,6 +148,15 @@ export function IncomeCalculatorSection() {
 
   const animatedLow = useCountUp(result?.low ?? 0, showResult);
   const animatedHigh = useCountUp(result?.high ?? 0, showResult, 1100);
+
+  useEffect(() => {
+    if (!showResult || !result) return;
+    saveCalcPrefill({
+      low: result.low,
+      high: result.high,
+      tier: result.tier,
+    });
+  }, [showResult, result]);
 
   const currentValue = answers[questionId as keyof CalculatorAnswers];
 
@@ -360,7 +370,19 @@ export function IncomeCalculatorSection() {
                     </div>
 
                     <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-                      <a href="#contact" className="btn-primary group justify-center">
+                      <a
+                        href="#contact"
+                        className="btn-primary group justify-center"
+                        onClick={() => {
+                          if (result) {
+                            saveCalcPrefill({
+                              low: result.low,
+                              high: result.high,
+                              tier: result.tier,
+                            });
+                          }
+                        }}
+                      >
                         {t('result.cta')}
                         <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
                       </a>

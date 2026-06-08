@@ -61,8 +61,9 @@ export default async function BlogPostPage({ params }: Props) {
         { label: post.title },
       ]}
     >
-      <ArticleJsonLd post={post} />
+      <ArticleJsonLd post={post} locale={blogLocale} />
       <BreadcrumbJsonLd
+        locale={blogLocale}
         items={[
           { name: tCommon('home'), path: '/' },
           { name: tCommon('blog'), path: '/blog' },

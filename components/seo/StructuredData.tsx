@@ -1,6 +1,15 @@
 import { getSiteUrl, siteConfig } from '@/lib/site';
 import type { FaqItem } from '@/lib/content/faq';
 import type { BlogPost } from '@/lib/content/blog';
+import type { Locale } from '@/i18n/routing';
+import { pathForLocale } from '@/lib/i18n/paths';
+
+const HTML_LANG: Record<Locale, string> = {
+  ru: 'ru-RU',
+  uk: 'uk-UA',
+  en: 'en-US',
+  es: 'es-ES',
+};
 
 export function FaqPageJsonLd({ items }: { items: FaqItem[] }) {
   const data = {
@@ -24,8 +33,9 @@ export function FaqPageJsonLd({ items }: { items: FaqItem[] }) {
   );
 }
 
-export function ArticleJsonLd({ post }: { post: BlogPost }) {
+export function ArticleJsonLd({ post, locale }: { post: BlogPost; locale: Locale }) {
   const siteUrl = getSiteUrl();
+  const canonicalPath = pathForLocale(`/blog/${post.slug}`, locale);
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -33,7 +43,7 @@ export function ArticleJsonLd({ post }: { post: BlogPost }) {
     description: post.description,
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
-    inLanguage: 'ru-RU',
+    inLanguage: HTML_LANG[locale],
     author: {
       '@type': 'Organization',
       name: siteConfig.name,
@@ -48,7 +58,7 @@ export function ArticleJsonLd({ post }: { post: BlogPost }) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${siteUrl}/blog/${post.slug}`,
+      '@id': `${siteUrl}${canonicalPath}`,
     },
   };
 
@@ -62,8 +72,10 @@ export function ArticleJsonLd({ post }: { post: BlogPost }) {
 
 export function BreadcrumbJsonLd({
   items,
+  locale,
 }: {
   items: { name: string; path: string }[];
+  locale: Locale;
 }) {
   const siteUrl = getSiteUrl();
   const data = {
@@ -73,7 +85,7 @@ export function BreadcrumbJsonLd({
       '@type': 'ListItem',
       position: i + 1,
       name: item.name,
-      item: `${siteUrl}${item.path}`,
+      item: `${siteUrl}${pathForLocale(item.path, locale)}`,
     })),
   };
 
@@ -85,17 +97,23 @@ export function BreadcrumbJsonLd({
   );
 }
 
-export function ServiceJsonLd() {
+export function ServiceJsonLd({
+  locale,
+  description,
+}: {
+  locale: Locale;
+  description: string;
+}) {
   const siteUrl = getSiteUrl();
   const data = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: siteConfig.name,
-    description: siteConfig.description,
-    url: siteUrl,
+    description,
+    url: `${siteUrl}${pathForLocale('/', locale)}`,
     areaServed: 'Worldwide',
     serviceType: 'OnlyFans management and creator agency services',
-    inLanguage: 'ru-RU',
+    inLanguage: HTML_LANG[locale],
   };
 
   return (

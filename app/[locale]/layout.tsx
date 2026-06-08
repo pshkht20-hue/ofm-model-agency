@@ -64,6 +64,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: siteConfig.name,
       title: t('siteTitle'),
       description: t('siteDescription'),
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: t('siteTitle'),
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('siteTitle'),
+      description: t('siteDescription'),
+      images: ['/opengraph-image'],
     },
     alternates: {
       canonical: canonicalPath,
@@ -81,6 +95,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const tMeta = await getTranslations({ locale, namespace: 'meta' });
 
   return (
     <html
@@ -90,7 +105,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body className="min-h-full font-sans antialiased bg-[#050508] text-[#f4f2ef]">
         <GoogleConsentDefaults />
         <NextIntlClientProvider messages={messages}>
-          <JsonLd locale={locale as Locale} />
+          <JsonLd locale={locale as Locale} description={tMeta('siteDescription')} />
           {children}
           <CookieConsent />
           <AnalyticsLoader />

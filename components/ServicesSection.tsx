@@ -127,7 +127,7 @@ export function ServicesSection() {
   const items = t.raw('services.items') as ServiceItem[];
 
   return (
-    <SectionShell className="relative">
+    <SectionShell id="services" className="relative">
       <div
         className="pointer-events-none absolute -top-20 right-0 h-72 w-[min(100%,560px)] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.1),transparent_70%)]"
         aria-hidden

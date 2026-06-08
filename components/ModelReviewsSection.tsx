@@ -37,9 +37,9 @@ export function ModelReviewsSection() {
         {t('moreLabel')}
       </p>
 
-      <StaggerGrid className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+      <StaggerGrid variant="slide" className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
         {rest.map((review) => (
-          <StaggerItem key={review.id}>
+          <StaggerItem key={review.id} variant="slide">
             <ReviewCard review={review} />
           </StaggerItem>
         ))}

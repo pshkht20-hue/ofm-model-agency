@@ -45,6 +45,7 @@ export default async function BlogIndexPage({ params }: Props) {
   return (
     <SeoPageShell breadcrumbs={[{ label: tCommon('blog') }]} showCta>
       <BreadcrumbJsonLd
+        locale={blogLocale}
         items={[
           { name: tCommon('home'), path: '/' },
           { name: tCommon('blog'), path: '/blog' },

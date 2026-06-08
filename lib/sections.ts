@@ -13,6 +13,7 @@ export const HOME_SECTIONS: HomeSection[] = [
   { id: 'calculator', accent: 'pink' },
   { id: 'models', accent: 'violet' },
   { id: 'reviews', accent: 'cyan' },
+  { id: 'services', accent: 'pink' },
   { id: 'contact', accent: 'pink' },
 ];
 
@@ -27,4 +28,5 @@ export const NAV_SECTION_MAP: Record<string, string> = {
   '/#how': 'how',
   '/#models': 'models',
   '/#results': 'results',
+  '/#services': 'services',
 };

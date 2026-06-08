@@ -2,6 +2,7 @@
   "nav": {
     "about": "Nosotros",
     "how": "Cómo trabajamos",
+    "services": "Servicios",
     "models": "Casos",
     "results": "Resultados",
     "blog": "Blog",
@@ -47,6 +48,9 @@
       "statIncome": "Total medio",
       "balanceNote": "Todas las cifras del sitio son gross total del balance OnlyFans — no el ingreso neto de la modelo tras comisiones.",
       "statTop": "Top 1% agencias",
+      "trustModels": "modelos confían en OFM",
+      "trustBadge": "Agencia verificada",
+      "trustVerified": "Privacidad y datos seguros",
       "scroll": "Desplázate"
     },
     "benefits": {
@@ -397,7 +401,9 @@
     "interestsPlaceholder": "Hobbies, estilo, imagen — todo lo que revele tu tipo (opcional)",
     "ageConfirm": "Tengo 18 años",
     "submitAnother": "Enviar otra solicitud",
-    "consent": "Al enviar, aceptas que usemos tus datos para contactarte."
+    "consent": "Al enviar, aceptas que usemos tus datos para contactarte.",
+    "calcPrefillNotice": "Hemos rellenado tu estimación del calculadora — puedes añadir más detalles.",
+    "calcPrefillMessage": "Completé el calculadora del sitio. Total bruto estimado: {low} — {high} / mes (nivel: {tier}). Quiero hablar de un plan de crecimiento con la agencia."
   },
   "common": {
     "home": "Inicio",

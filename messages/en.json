@@ -2,6 +2,7 @@
   "nav": {
     "about": "About",
     "how": "How we work",
+    "services": "Services",
     "models": "Cases",
     "results": "Results",
     "blog": "Blog",
@@ -47,6 +48,9 @@
       "statIncome": "Avg. page total",
       "balanceNote": "All figures on this site are gross OnlyFans page totals — not the creator's net payout after fees.",
       "statTop": "Top 1% agencies",
+      "trustModels": "models trust OFM",
+      "trustBadge": "Verified agency",
+      "trustVerified": "Privacy-first and secure onboarding",
       "scroll": "Scroll down"
     },
     "benefits": {
@@ -397,7 +401,9 @@
     "interestsPlaceholder": "Hobbies, style, image — anything that reveals your type (optional)",
     "ageConfirm": "I am 18 years old",
     "submitAnother": "Submit another application",
-    "consent": "By submitting, you agree we may use your data to contact you."
+    "consent": "By submitting, you agree we may use your data to contact you.",
+    "calcPrefillNotice": "We prefilled your calculator estimate — feel free to add more details.",
+    "calcPrefillMessage": "I completed the site calculator. Estimated gross total: {low} — {high} / month (tier: {tier}). I'd like to discuss a growth plan with the agency."
   },
   "common": {
     "home": "Home",

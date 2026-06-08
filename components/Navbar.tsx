@@ -20,6 +20,7 @@ export function Navbar() {
   const NAV_LINKS = [
     { href: '/#about' as const, label: t('about') },
     { href: '/#how' as const, label: t('how') },
+    { href: '/#services' as const, label: t('services') },
     { href: '/#models' as const, label: t('models') },
     { href: '/#results' as const, label: t('results') },
     { href: '/blog' as const, label: t('blog') },

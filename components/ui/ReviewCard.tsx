@@ -89,19 +89,27 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
         </div>
       )}
 
-      <p
-        className={`mt-3.5 leading-[1.65] text-white/76 flex-1 ${
-          isFeatured ? 'text-[15px] md:text-base' : 'text-[14px] md:text-[15px]'
-        }`}
-      >
-        {review.text}
-      </p>
+      <div className="mt-3.5 flex-1 space-y-3">
+        <div
+          className={`relative rounded-2xl rounded-tl-sm border border-white/[0.08] bg-white/[0.04] px-4 py-3.5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] ${
+            isFeatured ? 'md:px-5 md:py-4' : ''
+          }`}
+        >
+          <p
+            className={`leading-[1.65] text-white/76 ${
+              isFeatured ? 'text-[15px] md:text-base' : 'text-[14px] md:text-[15px]'
+            }`}
+          >
+            {review.text}
+          </p>
+        </div>
 
-      {review.resultNote && (
-        <p className="mt-3 text-[11px] text-white/38 leading-relaxed border-l-2 border-accent-pink/30 pl-3">
-          {review.resultNote}
-        </p>
-      )}
+        {review.resultNote && (
+          <p className="text-[11px] text-white/38 leading-relaxed border-l-2 border-accent-pink/30 pl-3">
+            {review.resultNote}
+          </p>
+        )}
+      </div>
 
       <div className="mt-4 pt-4 border-t border-white/[0.06] flex justify-start">
         <LikeButton
@@ -113,8 +121,8 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
       </div>
 
       {review.agencyReply && (
-        <div className="mt-4 pt-4 border-t border-white/[0.06]">
-          <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] px-4 py-3">
+        <div className="mt-4 flex justify-end">
+          <div className="max-w-[94%] rounded-2xl rounded-tr-sm border border-accent-pink/20 bg-accent-pink/[0.06] px-4 py-3">
             <p className="text-[10px] font-medium text-accent-pink/80 mb-1.5">{t('agencyReply')}</p>
             <p className="text-[13px] text-white/62 leading-relaxed">{review.agencyReply.text}</p>
             <p className="text-[10px] text-white/28 mt-2">{review.agencyReply.dateLabel}</p>
