@@ -1,0 +1,117 @@
+{
+  "project": "ofm-model-agency",
+  "site": "https://ofmmodels.com",
+  "stack": ["next.js-16", "react-19", "typescript", "tailwind-4", "next-intl", "gsap", "framer-motion"],
+  "generated": "2026-06-08",
+  "daily": {
+    "ofm": [
+      "ofm-seo-analytics",
+      "ofm-deep-site-audit",
+      "ofm-conversion-audit",
+      "ofm-premium-motion"
+    ],
+    "vercel": [
+      "vercel-react-best-practices",
+      "vercel-composition-patterns",
+      "web-design-guidelines",
+      "deploy-to-vercel"
+    ],
+    "frontend": [
+      "react-patterns",
+      "frontend-patterns",
+      "react-performance",
+      "nextjs-turbopack",
+      "motion-ui",
+      "make-interfaces-feel-better",
+      "frontend-design-direction"
+    ],
+    "content": [
+      "article-writing"
+    ],
+    "quality": [
+      "coding-standards",
+      "security-review",
+      "backend-patterns",
+      "documentation-lookup",
+      "error-handling"
+    ],
+    "workflow": [
+      "skill-library",
+      "agent-sort",
+      "tdd-workflow",
+      "verification-loop"
+    ],
+    "gsap_user_level": [
+      "gsap-core",
+      "gsap-react",
+      "gsap-scrolltrigger",
+      "gsap-timeline",
+      "gsap-performance"
+    ]
+  },
+  "agents_on_demand": [
+    "ecc-seo-specialist",
+    "ecc-react-reviewer",
+    "ecc-planner",
+    "ecc-code-reviewer",
+    "ecc-react-build-resolver",
+    "ecc-security-reviewer"
+  ],
+  "library_examples": [
+    "django-patterns",
+    "java-coding-standards",
+    "perl-patterns",
+    "rust-patterns",
+    "laravel-patterns",
+    "kotlin-patterns",
+    "angular-developer",
+    "investor-materials",
+    "market-research",
+    "defi-amm-security"
+  ],
+  "installed_external": {
+    "source": "vercel-labs/agent-skills",
+    "date": "2026-06-08",
+    "path": ".agents/skills/",
+    "skills": [
+      "vercel-react-best-practices",
+      "vercel-composition-patterns",
+      "vercel-react-view-transitions",
+      "web-design-guidelines",
+      "writing-guidelines",
+      "deploy-to-vercel",
+      "vercel-optimize",
+      "vercel-cli-with-tokens",
+      "vercel-react-native-skills"
+    ]
+  },
+  "rules_active_focus": [
+    "ofm-project",
+    "ofm-premium",
+    "ofm-agent-skills",
+    "common-coding-style",
+    "common-security",
+    "common-development-workflow",
+    "typescript-patterns",
+    "react-patterns",
+    "web-patterns",
+    "web-design-quality"
+  ],
+  "rules_deprioritize": [
+    "java-*",
+    "perl-*",
+    "django-*",
+    "rust-*",
+    "php-*",
+    "kotlin-*",
+    "csharp-*",
+    "fsharp-*",
+    "golang-*",
+    "arkts-*",
+    "dart-*",
+    "ruby-*",
+    "swift-*",
+    "cpp-*",
+    "angular-*"
+  ]
+}

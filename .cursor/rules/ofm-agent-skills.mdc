@@ -1,0 +1,30 @@
+---
+description: OFM skill routing — which skills to use for SEO, design, React, motion, conversion
+alwaysApply: true
+---
+
+# OFM Agent Skills (DAILY)
+
+Read `skill-library` skill when task type is unclear. Manifest: `docs/OFM-SKILL-PLAN.md`.
+
+## Always prefer for this repo
+
+| Domain | Skills |
+|--------|--------|
+| SEO / GA4 / GSC / blog | `ofm-seo-analytics`, `ofm-deep-site-audit`, `article-writing` |
+| UI polish / review | `make-interfaces-feel-better`, `web-design-guidelines` |
+| React / Next.js 16 | `vercel-react-best-practices`, `react-patterns`, `frontend-patterns`, `nextjs-turbopack` |
+| Hero GSAP / scroll | `ofm-premium-motion` + user GSAP skills (`gsap-react`, `gsap-scrolltrigger`) |
+| Framer sections | `motion-ui` |
+| CTA / form / calculator | `ofm-conversion-audit` |
+| API / secrets | `security-review`, `backend-patterns` |
+
+## Ignore unless explicitly requested
+
+Off-stack ECC rules (java-*, perl-*, django-*, rust-*, php-*, etc.) — this repo is Next.js + TypeScript only.
+
+## After substantive code changes
+
+- Run `npm run build`
+- Invoke `ecc-react-reviewer` for component changes
+- Invoke `ecc-seo-specialist` for meta/copy/sitemap changes

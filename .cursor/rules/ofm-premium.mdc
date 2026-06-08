@@ -24,3 +24,4 @@ alwaysApply: true
 - Prefer minimal diffs; match existing patterns in `components/`
 - Run `npm run build` after substantive changes
 - Use `ofm-deep-site-audit` skill for full-site analysis requests
+- React perf: `vercel-react-best-practices` · UI audit: `web-design-guidelines` · Router: `skill-library`
