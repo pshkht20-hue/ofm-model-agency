@@ -1,14 +1,15 @@
 'use client';
 
-import Image from 'next/image';
 import { ArrowRight, BadgeCheck, TrendingUp } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { combinedNetTotal, resultCases, type ResultCase } from '@/lib/results/cases';
 import { SectionHeader } from '@/components/SectionHeader';
 import { IPhoneFrame } from '@/components/ui/IPhoneFrame';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { UsdDisplay } from '@/components/ui/UsdDisplay';
+import { ResultScreenshot } from '@/components/ui/ResultScreenshot';
+import { EASE_SOFT, VIEWPORT_DEFAULT, fadeUpStatic, hoverLift } from '@/lib/motion';
 
 const TIER_STYLES: Record<
   ResultCase['tier'],
@@ -61,15 +62,13 @@ function ScreenshotFrame({
   return (
     <div className={`w-full shrink-0 ${featured ? 'lg:w-[300px]' : ''}`}>
       <IPhoneFrame size={phoneSize}>
-        <Image
+        <ResultScreenshot
           src={item.image}
           alt={t('altScreenshot', { tier: t(`tiers.${item.tier}`) })}
+          tier={item.tier}
           width={item.imageWidth}
           height={item.imageHeight}
-          quality={100}
           priority={priority}
-          sizes="(max-width: 768px) 72vw, (max-width: 1200px) 280px, 320px"
-          className="h-auto w-full"
         />
       </IPhoneFrame>
       <div className={`mt-4 pb-1 ${featured ? 'lg:hidden' : ''}`}>
@@ -143,11 +142,12 @@ function ResultCard({
   priority?: boolean;
 }) {
   const t = useTranslations('models');
+  const reduced = useReducedMotion();
   const style = TIER_STYLES[item.tier];
 
   return (
     <motion.article
-      whileHover={{ y: -3 }}
+      whileHover={hoverLift(reduced)}
       transition={{ type: 'spring', stiffness: 320, damping: 28 }}
       className={`group relative overflow-visible rounded-2xl border border-white/[0.09] bg-[#07070e]/80 backdrop-blur-sm transition-[border-color,box-shadow] duration-500 hover:border-accent-pink/30 ${style.glow} ${className}`}
     >
@@ -187,6 +187,7 @@ function ResultCard({
 
 export function ModelShowcase() {
   const t = useTranslations('models');
+  const reduced = useReducedMotion();
   const featured = resultCases.find((c) => c.featured) ?? resultCases[0];
   const rest = resultCases.filter((c) => c.id !== featured.id);
   const aggregate = combinedNetTotal();
@@ -196,10 +197,11 @@ export function ModelShowcase() {
       <SectionHeader eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
 
       <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        initial={reduced ? false : 'hidden'}
+        whileInView={reduced ? undefined : 'visible'}
+        viewport={VIEWPORT_DEFAULT}
+        variants={fadeUpStatic}
+        transition={{ duration: 0.55, ease: EASE_SOFT }}
         className="mb-8 flex flex-wrap items-center justify-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 text-center"
       >
         <span className="text-[11px] uppercase tracking-[0.18em] text-white/40">
@@ -211,10 +213,10 @@ export function ModelShowcase() {
 
       <div className="grid grid-cols-1 gap-4 md:gap-5 lg:grid-cols-12">
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.55 }}
+          initial={reduced ? false : { opacity: 0, y: 32, scale: 0.97 }}
+          whileInView={reduced ? undefined : { opacity: 1, y: 0, scale: 1 }}
+          viewport={VIEWPORT_DEFAULT}
+          transition={{ duration: 0.65, ease: EASE_SOFT }}
           className="lg:col-span-7"
         >
           <ResultCard item={featured} featured priority />
@@ -224,10 +226,10 @@ export function ModelShowcase() {
           {rest.map((item, i) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.08 + i * 0.1, duration: 0.5 }}
+              initial={reduced ? false : { opacity: 0, x: 28 }}
+              whileInView={reduced ? undefined : { opacity: 1, x: 0 }}
+              viewport={VIEWPORT_DEFAULT}
+              transition={{ delay: 0.08 + i * 0.12, duration: 0.55, ease: EASE_SOFT }}
             >
               <ResultCard item={item} priority={i === 0} />
             </motion.div>

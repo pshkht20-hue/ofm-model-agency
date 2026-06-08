@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import {
   MessageCircle,
@@ -39,6 +39,7 @@ function useIsMobileHero() {
 
 export function CreatorFloatingMotifs() {
   const isMobile = useIsMobileHero();
+  const reduced = useReducedMotion();
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
@@ -58,34 +59,38 @@ export function CreatorFloatingMotifs() {
               <stop offset="35%" stopColor="#a855f7" />
               <stop offset="65%" stopColor="#00d4ff" />
               <stop offset="100%" stopColor="#ff5bb5" />
-              <animate
-                attributeName="x1"
-                values="0;0.8;0"
-                dur="8s"
-                begin={`${phase * -1.3}s`}
-                repeatCount="indefinite"
-              />
-              <animate
-                attributeName="y1"
-                values="0;0.2;0"
-                dur="8s"
-                begin={`${phase * -1.3}s`}
-                repeatCount="indefinite"
-              />
-              <animate
-                attributeName="x2"
-                values="1;1.8;1"
-                dur="8s"
-                begin={`${phase * -1.3}s`}
-                repeatCount="indefinite"
-              />
-              <animate
-                attributeName="y2"
-                values="1;1.2;1"
-                dur="8s"
-                begin={`${phase * -1.3}s`}
-                repeatCount="indefinite"
-              />
+              {!reduced && (
+                <>
+                  <animate
+                    attributeName="x1"
+                    values="0;0.8;0"
+                    dur="8s"
+                    begin={`${phase * -1.3}s`}
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="y1"
+                    values="0;0.2;0"
+                    dur="8s"
+                    begin={`${phase * -1.3}s`}
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="x2"
+                    values="1;1.8;1"
+                    dur="8s"
+                    begin={`${phase * -1.3}s`}
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="y2"
+                    values="1;1.2;1"
+                    dur="8s"
+                    begin={`${phase * -1.3}s`}
+                    repeatCount="indefinite"
+                  />
+                </>
+              )}
             </linearGradient>
           ))}
         </defs>
@@ -98,7 +103,7 @@ export function CreatorFloatingMotifs() {
           style={{ left: x, top: y }}
           initial={{ opacity: 0, y: isMobile ? 6 : 0, scale: isMobile ? 1 : 0.85 }}
           animate={
-            isMobile
+            reduced || isMobile
               ? { opacity: 0.5, y: 0 }
               : {
                   opacity: 0.5,
@@ -106,7 +111,7 @@ export function CreatorFloatingMotifs() {
                 }
           }
           transition={
-            isMobile
+            reduced || isMobile
               ? {
                   opacity: { duration: 0.9, delay: 0.9 + i * 0.1, ease: 'easeOut' },
                   y: { duration: 0.9, delay: 0.9 + i * 0.1, ease: 'easeOut' },

@@ -1,0 +1,4 @@
+{
+  "hookProfile": "minimal",
+  "notes": "ECC hooks installed; minimal profile reduces blocking on shell/git. Set ECC_HOOK_PROFILE=minimal in shell if needed."
+}

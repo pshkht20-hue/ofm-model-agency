@@ -33,6 +33,7 @@
     "guideAgency": "Cómo elegir agencia"
   },
   "home": {
+    "skipToContent": "Ir al contenido",
     "hero": {
       "line1": "Tu vida.",
       "line2": "Tus reglas.",

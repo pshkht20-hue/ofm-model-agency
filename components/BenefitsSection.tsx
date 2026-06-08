@@ -10,8 +10,9 @@ import {
   Zap,
   type LucideIcon,
 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { hoverLift, SPRING_CARD } from '@/lib/motion';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
@@ -45,6 +46,7 @@ type BenefitCardProps = {
 };
 
 function BenefitCard({ icon: Icon, index, featured, item, accent }: BenefitCardProps) {
+  const reduced = useReducedMotion();
   const onMove = useCallback((e: MouseEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -58,9 +60,9 @@ function BenefitCard({ icon: Icon, index, featured, item, accent }: BenefitCardP
   return (
     <motion.article
       onMouseMove={onMove}
-      whileHover={{ y: -4 }}
-      transition={{ type: 'spring', stiffness: 420, damping: 30 }}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0a0a10]/90 p-6 md:p-8 backdrop-blur-sm ${
+      whileHover={hoverLift(reduced)}
+      transition={SPRING_CARD}
+      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0a0a10]/90 p-6 md:p-8 md:backdrop-blur-sm ${
         featured ? 'md:p-9' : ''
       }`}
     >
@@ -127,9 +129,9 @@ export function BenefitsSection() {
         title={t('benefits.title')}
         description={t('benefits.subtitle')}
       />
-      <StaggerGrid className="relative grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-5">
+      <StaggerGrid variant="tilt" className="relative grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-5">
         {items.map((item, i) => (
-          <StaggerItem key={item.title} className={BENTO_SPAN[i] ?? ''}>
+          <StaggerItem key={item.title} variant="tilt" className={BENTO_SPAN[i] ?? ''}>
             <BenefitCard
               icon={BENEFIT_ICONS[i]}
               index={i}

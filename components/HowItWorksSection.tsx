@@ -2,8 +2,9 @@
 
 import { useCallback, type MouseEvent } from 'react';
 import { ArrowRight, Clock } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { EASE_SMOOTH, hoverLift, SPRING_CARD, VIEWPORT_TIGHT, fadeUpStatic } from '@/lib/motion';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
@@ -36,6 +37,7 @@ type StepCardProps = {
 };
 
 function StepCard({ step, index, featured, item, accent }: StepCardProps) {
+  const reduced = useReducedMotion();
   const onMove = useCallback((e: MouseEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -49,9 +51,9 @@ function StepCard({ step, index, featured, item, accent }: StepCardProps) {
   return (
     <motion.article
       onMouseMove={onMove}
-      whileHover={{ y: -4 }}
-      transition={{ type: 'spring', stiffness: 420, damping: 30 }}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0c0c14]/95 p-6 md:p-8 backdrop-blur-sm ${
+      whileHover={hoverLift(reduced)}
+      transition={SPRING_CARD}
+      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0c0c14]/95 p-6 md:p-8 md:backdrop-blur-sm ${
         featured ? 'md:p-9' : ''
       }`}
     >
@@ -113,6 +115,7 @@ function StepCard({ step, index, featured, item, accent }: StepCardProps) {
 
 export function HowItWorksSection() {
   const t = useTranslations('home');
+  const reduced = useReducedMotion();
   const steps = t.raw('how.steps') as ProcessStep[];
 
   return (
@@ -132,11 +135,11 @@ export function HowItWorksSection() {
         description={t('how.subtitle')}
       />
 
-      <StaggerGrid className="relative grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-5">
+      <StaggerGrid variant="slide" stagger={0.1} className="relative grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-5">
         {steps.map((item, i) => {
           const step = String(i + 1).padStart(2, '0');
           return (
-            <StaggerItem key={item.title} className={BENTO_SPAN[i] ?? ''}>
+            <StaggerItem key={item.title} variant="slide" className={BENTO_SPAN[i] ?? ''}>
               <StepCard
                 step={step}
                 index={i}
@@ -150,17 +153,18 @@ export function HowItWorksSection() {
       </StaggerGrid>
 
       <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-40px' }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        initial={reduced ? false : 'hidden'}
+        whileInView={reduced ? undefined : 'visible'}
+        viewport={VIEWPORT_TIGHT}
+        variants={fadeUpStatic}
+        transition={{ duration: 0.5, delay: 0.2, ease: EASE_SMOOTH }}
         className="mt-10 md:mt-12 flex flex-col items-center gap-3 text-center"
       >
         <p className="text-sm text-white/40 max-w-md">{t('how.footerNote')}</p>
         <motion.a
           href="#contact"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
+          whileHover={reduced ? undefined : { scale: 1.02 }}
+          whileTap={reduced ? undefined : { scale: 0.98 }}
           className="btn-primary group inline-flex"
         >
           {t('how.cta')}

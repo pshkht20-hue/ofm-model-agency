@@ -1,18 +1,27 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { EASE_SMOOTH, VIEWPORT_LOOSE, lineReveal } from '@/lib/motion';
 
 export function SectionDivider() {
+  const reduced = useReducedMotion();
+
   return (
     <div className="relative py-0.5 md:py-1" aria-hidden>
       <div className="max-w-3xl mx-auto px-8 h-px overflow-hidden">
-        <motion.div
-          initial={{ scaleX: 0, opacity: 0 }}
-          whileInView={{ scaleX: 1, opacity: 1 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="h-px w-full divider-brand origin-center shadow-[0_0_14px_1px_rgba(255,91,181,0.25)]"
-        />
+        {reduced ? (
+          <div className="h-px w-full divider-brand shadow-[0_0_14px_1px_rgba(255,91,181,0.25)]" />
+        ) : (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT_LOOSE}
+            variants={lineReveal}
+            transition={{ duration: 0.9, ease: EASE_SMOOTH }}
+            className="h-px w-full divider-brand origin-center shadow-[0_0_14px_1px_rgba(255,91,181,0.25)]"
+          />
+        )}
       </div>
     </div>
   );

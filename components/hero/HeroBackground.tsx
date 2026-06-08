@@ -1,8 +1,9 @@
 'use client';
 
-import { type RefObject, useRef } from 'react';
+import { type RefObject, useMemo, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { useIsMobileViewport } from '@/hooks/useMotionPreferences';
 
 gsap.registerPlugin(useGSAP);
 
@@ -70,8 +71,31 @@ type HeroBackgroundProps = {
   sectionRef: RefObject<HTMLElement | null>;
 };
 
+const MOBILE_NEBULA_IDS = new Set([0, 2, 4]);
+const MOBILE_CLUSTER_COUNT = 2;
+const MOBILE_STAR_COUNT = 48;
+const MOBILE_DUST_COUNT = 8;
+
 export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
   const bgRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobileViewport();
+
+  const stars = useMemo(
+    () => (isMobile ? STARS.slice(0, MOBILE_STAR_COUNT) : STARS),
+    [isMobile],
+  );
+  const nebulae = useMemo(
+    () => (isMobile ? NEBULAE.filter((n) => MOBILE_NEBULA_IDS.has(n.id)) : NEBULAE),
+    [isMobile],
+  );
+  const clusters = useMemo(
+    () => (isMobile ? CLUSTERS.slice(0, MOBILE_CLUSTER_COUNT) : CLUSTERS),
+    [isMobile],
+  );
+  const dust = useMemo(
+    () => (isMobile ? DUST.slice(0, MOBILE_DUST_COUNT) : DUST),
+    [isMobile],
+  );
 
   useGSAP(
     () => {
@@ -192,7 +216,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           delay: 1.5,
         });
 
-        NEBULAE.forEach((n) => {
+        nebulae.forEach((n) => {
           const el = `[data-cosmos-nebula="${n.id}"]`;
           gsap.to(el, {
             x: 'random(-36, 36)',
@@ -334,7 +358,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
 
       return () => mm.revert();
     },
-    { scope: bgRef, dependencies: [sectionRef] },
+    { scope: bgRef, dependencies: [sectionRef, isMobile, nebulae] },
   );
 
   return (
@@ -365,7 +389,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           <div data-cosmos-core="accent" className="cosmos-galaxy-core cosmos-galaxy-core-sm" />
         </div>
 
-        {CLUSTERS.map((c) => (
+        {clusters.map((c) => (
           <div
             key={c.id}
             data-cosmos-cluster={c.id}
@@ -394,7 +418,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           </div>
         ))}
 
-        {NEBULAE.filter((n) => n.depth === 'far').map((n) => (
+        {nebulae.filter((n) => n.depth === 'far').map((n) => (
           <div
             key={n.id}
             data-cosmos-nebula={n.id}
@@ -410,7 +434,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           />
         ))}
 
-        {STARS.filter((s) => s.layer === 'far').map((s) => (
+        {stars.filter((s) => s.layer === 'far').map((s) => (
           <span
             key={s.id}
             data-cosmos-star="far"
@@ -428,7 +452,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
 
       {/* Mid depth */}
       <div data-cosmos-parallax="mid" className="absolute inset-0">
-        {NEBULAE.filter((n) => n.depth === 'mid').map((n) => (
+        {nebulae.filter((n) => n.depth === 'mid').map((n) => (
           <div
             key={n.id}
             data-cosmos-nebula={n.id}
@@ -444,7 +468,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           />
         ))}
 
-        {STARS.filter((s) => s.layer === 'mid').map((s) => (
+        {stars.filter((s) => s.layer === 'mid').map((s) => (
           <span
             key={s.id}
             data-cosmos-star="mid"
@@ -462,7 +486,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
 
       {/* Near depth */}
       <div data-cosmos-parallax="near" className="absolute inset-0">
-        {NEBULAE.filter((n) => n.depth === 'near').map((n) => (
+        {nebulae.filter((n) => n.depth === 'near').map((n) => (
           <div
             key={n.id}
             data-cosmos-nebula={n.id}
@@ -478,7 +502,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           />
         ))}
 
-        {DUST.map((d) => (
+        {dust.map((d) => (
           <div
             key={d.id}
             data-cosmos-dust
@@ -494,7 +518,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           />
         ))}
 
-        {STARS.filter((s) => s.layer === 'near').map((s) => (
+        {stars.filter((s) => s.layer === 'near').map((s) => (
           <span
             key={s.id}
             data-cosmos-star="near"

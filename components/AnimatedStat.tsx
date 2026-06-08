@@ -6,9 +6,11 @@ import {
   useTransform,
   animate,
   useInView,
+  useReducedMotion,
 } from 'framer-motion';
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 import type { LucideIcon } from 'lucide-react';
+import { EASE_SMOOTH, SPRING_HOVER, VIEWPORT_TIGHT, fadeUpStatic } from '@/lib/motion';
 
 export type StatAccent = 'pink' | 'cyan' | 'violet';
 
@@ -48,40 +50,43 @@ export function AnimatedStat({
   accent = 'pink',
 }: AnimatedStatProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
   const isInView = useInView(ref, { once: true, margin: '-60px' });
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, (latest) =>
-    decimals > 0 ? latest.toFixed(decimals) : String(Math.floor(latest))
+  const count = useMotionValue(reduced ? number : 0);
+  const displayValue = useTransform(count, (latest) =>
+    decimals > 0 ? latest.toFixed(decimals) : String(Math.floor(latest)),
   );
-  const [displayValue, setDisplayValue] = useState(decimals > 0 ? '0.0' : '0');
 
   useEffect(() => {
     if (!isInView) return;
+    if (reduced) {
+      count.set(number);
+      return;
+    }
     const controls = animate(count, number, {
       duration: 2.2,
-      ease: [0.22, 1, 0.36, 1],
+      ease: EASE_SMOOTH,
       delay: index * 0.12,
     });
-    const unsubscribe = rounded.on('change', (v) => setDisplayValue(v));
-    return () => {
-      controls.stop();
-      unsubscribe();
-    };
-  }, [count, number, rounded, isInView, index]);
+    return () => controls.stop();
+  }, [count, number, isInView, index, reduced]);
+
+  const formatted = decimals > 0 ? number.toFixed(decimals) : String(Math.floor(number));
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ delay: index * 0.08, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+      initial={reduced ? false : 'hidden'}
+      whileInView={reduced ? undefined : 'visible'}
+      viewport={VIEWPORT_TIGHT}
+      variants={fadeUpStatic}
+      transition={{ delay: index * 0.08, duration: 0.55, ease: EASE_SMOOTH }}
       className="group relative h-full"
     >
       <motion.article
-        whileHover={{ y: -4 }}
-        transition={{ type: 'spring', stiffness: 380, damping: 26 }}
-        className={`relative flex flex-col items-center text-center h-full px-4 py-8 md:py-10 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm transition-[border-color,box-shadow] duration-400 neon-stat-card ${accentBorder[accent]}`}
+        whileHover={reduced ? undefined : { y: -4 }}
+        transition={SPRING_HOVER}
+        className={`relative flex flex-col items-center text-center h-full px-4 py-8 md:py-10 rounded-2xl border border-white/[0.06] bg-white/[0.02] md:backdrop-blur-sm transition-[border-color,box-shadow] duration-400 neon-stat-card ${accentBorder[accent]}`}
       >
         <div
           className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -92,8 +97,8 @@ export function AnimatedStat({
 
         {Icon && (
           <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
+            initial={reduced ? false : { scale: 0.8, opacity: 0 }}
+            whileInView={reduced ? undefined : { scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 + 0.15, type: 'spring', stiffness: 300 }}
             className="relative mb-5 icon-wrap-bright !w-11 !h-11 group-hover:scale-110 transition-transform duration-300"
@@ -105,19 +110,23 @@ export function AnimatedStat({
         <div className="relative font-serif text-[clamp(2.5rem,6vw,3.75rem)] font-normal tracking-tight leading-none flex items-baseline justify-center flex-wrap gap-0.5">
           {prefix && (
             <motion.span
-              initial={{ opacity: 0, x: -6 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              initial={reduced ? false : { opacity: 0, x: -6 }}
+              animate={isInView && !reduced ? { opacity: 1, x: 0 } : undefined}
               transition={{ delay: index * 0.12 + 0.3 }}
               className="text-white text-[0.85em]"
             >
               {prefix}
             </motion.span>
           )}
-          <span className="text-white tabular-nums">{displayValue}</span>
+          {reduced ? (
+            <span className="text-white tabular-nums">{formatted}</span>
+          ) : (
+            <motion.span className="text-white tabular-nums">{displayValue}</motion.span>
+          )}
           {suffix && (
             <motion.span
-              initial={{ opacity: 0, scale: 0.6 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              initial={reduced ? false : { opacity: 0, scale: 0.6 }}
+              animate={isInView && !reduced ? { opacity: 1, scale: 1 } : undefined}
               transition={{ delay: index * 0.12 + 0.5, type: 'spring', stiffness: 400 }}
               className="text-accent-pink text-[0.92em]"
             >
@@ -127,9 +136,9 @@ export function AnimatedStat({
         </div>
 
         <motion.div
-          initial={{ scaleX: 0 }}
-          animate={isInView ? { scaleX: 1 } : {}}
-          transition={{ delay: index * 0.12 + 0.65, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          initial={reduced ? false : { scaleX: 0 }}
+          animate={isInView && !reduced ? { scaleX: 1 } : reduced ? { scaleX: 1 } : undefined}
+          transition={{ delay: index * 0.12 + 0.65, duration: 0.6, ease: EASE_SMOOTH }}
           className="relative w-12 h-px mt-5 mb-4 bg-gradient-to-r from-transparent via-accent-pink/60 to-transparent origin-center"
         />
 

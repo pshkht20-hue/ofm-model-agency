@@ -95,15 +95,14 @@ export function HeroSection() {
           }
 
           gsap.set('[data-hero-scan]', { scaleX: 0, opacity: 0.9, transformOrigin: 'left center' });
-          gsap.set('[data-hero-badge]', { opacity: 0, y: -18, scale: 0.9, filter: 'blur(10px)' });
+          gsap.set('[data-hero-badge]', { opacity: 0, y: -18, scale: 0.9 });
           gsap.set('[data-hero-line]', {
             opacity: 0,
-            y: 56,
-            rotateX: 14,
-            filter: 'blur(12px)',
+            y: 48,
+            rotateX: 10,
             transformPerspective: 900,
           });
-          gsap.set('[data-hero-lead]', { opacity: 0, y: 32, filter: 'blur(8px)' });
+          gsap.set('[data-hero-lead]', { opacity: 0, y: 28 });
           gsap.set('[data-hero-cta]', { opacity: 0, y: 28, scale: 0.94 });
           gsap.set('[data-hero-stat]', { opacity: 0, y: 18 });
           gsap.set('[data-hero-note]', { opacity: 0 });
@@ -119,7 +118,7 @@ export function HeroSection() {
             .to('[data-hero-corner]', { opacity: 0.55, scale: 1, duration: 0.55, stagger: 0.07 }, 0.25)
             .to(
               '[data-hero-badge]',
-              { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 0.75, ease: 'back.out(1.5)' },
+              { opacity: 1, y: 0, scale: 1, duration: 0.75, ease: 'back.out(1.5)' },
               0.4,
             )
             .to(
@@ -128,14 +127,13 @@ export function HeroSection() {
                 opacity: 1,
                 y: 0,
                 rotateX: 0,
-                filter: 'blur(0px)',
                 duration: 0.9,
                 stagger: 0.16,
                 ease: 'power4.out',
               },
               0.55,
             )
-            .to('[data-hero-lead]', { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8 }, '-=0.38')
+            .to('[data-hero-lead]', { opacity: 1, y: 0, duration: 0.8 }, '-=0.38')
             .to(
               '[data-hero-cta]',
               { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.12, ease: 'back.out(1.3)' },
@@ -144,16 +142,6 @@ export function HeroSection() {
             .to('[data-hero-stat]', { opacity: 1, y: 0, duration: 0.5, stagger: 0.09 }, '-=0.3')
             .to('[data-hero-note]', { opacity: 1, duration: 0.55 }, '-=0.2')
             .to('[data-hero-scroll]', { opacity: 1, y: 0, duration: 0.55 }, '-=0.15');
-
-          gsap.to('[data-hero-cta="primary"]', {
-            boxShadow:
-              '0 0 36px -4px rgba(255, 91, 181, 0.6), 0 0 72px -14px rgba(168, 85, 247, 0.4)',
-            duration: 2,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut',
-            delay: 2.2,
-          });
 
           gsap.to('[data-hero-scroll-line]', {
             scaleY: 0.35,

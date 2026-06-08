@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 type NeonColor = 'pink' | 'cyan' | 'violet';
 type CornerPos = 'tl' | 'tr' | 'br' | 'bl';
@@ -41,13 +41,25 @@ function NeonDot({
   className = '',
   delay = 0,
   size = 'sm',
+  animate = true,
 }: {
   color: NeonColor;
   className?: string;
   delay?: number;
   size?: 'sm' | 'md';
+  animate?: boolean;
 }) {
   const s = size === 'md' ? 'w-1.5 h-1.5' : 'w-1 h-1';
+
+  if (!animate) {
+    return (
+      <span
+        aria-hidden
+        className={`absolute rounded-full pointer-events-none opacity-60 ${s} ${colorMap[color].dot} ${className}`}
+      />
+    );
+  }
+
   return (
     <motion.span
       aria-hidden
@@ -99,10 +111,22 @@ function NeonLine({
 function NeonRing({
   color,
   className = '',
+  animate = true,
 }: {
   color: NeonColor;
   className?: string;
+  animate?: boolean;
 }) {
+  if (!animate) {
+    return (
+      <div
+        aria-hidden
+        className={`absolute rounded-full border pointer-events-none opacity-20 ${colorMap[color].ring} ${className}`}
+        style={{ width: '5rem', height: '5rem' }}
+      />
+    );
+  }
+
   return (
     <motion.div
       aria-hidden
@@ -122,25 +146,27 @@ type NeonAccentsProps = {
 };
 
 export function NeonAccents({ variant = 'section', className = '' }: NeonAccentsProps) {
+  const reduced = useReducedMotion();
+
   return (
     <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`} aria-hidden>
       {variant === 'hero' && (
         <>
-          <NeonDot color="pink" className="top-[18%] left-[12%]" delay={0} />
-          <NeonDot color="cyan" className="top-[28%] right-[14%]" delay={1.2} />
-          <NeonDot color="violet" className="bottom-[32%] left-[8%]" delay={0.6} size="md" />
+          <NeonDot color="pink" className="top-[18%] left-[12%]" animate={!reduced} />
+          <NeonDot color="cyan" className="top-[28%] right-[14%]" delay={1.2} animate={!reduced} />
+          <NeonDot color="violet" className="bottom-[32%] left-[8%]" delay={0.6} size="md" animate={!reduced} />
           <NeonCorner color="cyan" pos="tr" className="top-28 right-6 md:right-16" />
           <NeonCorner color="pink" pos="bl" className="bottom-36 left-6 md:left-14" />
           <NeonLine color="pink" className="top-1/3 left-[5%] hidden md:block" />
           <NeonLine color="cyan" className="bottom-1/3 right-[5%] hidden md:block" vertical />
-          <NeonRing color="violet" className="top-[14%] right-[16%] hidden lg:block !w-24 !h-24 md:!w-28 md:!h-28" />
+          <NeonRing color="violet" className="top-[14%] right-[16%] hidden lg:block !w-24 !h-24 md:!w-28 md:!h-28" animate={!reduced} />
         </>
       )}
 
       {variant === 'section' && (
         <>
-          <NeonDot color="pink" className="top-10 left-[8%]" delay={0.3} />
-          <NeonDot color="cyan" className="bottom-14 right-[10%]" delay={1.5} />
+          <NeonDot color="pink" className="top-10 left-[8%]" delay={0.3} animate={!reduced} />
+          <NeonDot color="cyan" className="bottom-14 right-[10%]" delay={1.5} animate={!reduced} />
           <NeonCorner color="pink" pos="tl" className="top-6 left-3 md:left-8 opacity-40" />
           <NeonCorner color="cyan" pos="br" className="bottom-6 right-3 md:right-8 opacity-40" />
           <NeonLine color="violet" className="top-1/2 right-[3%] hidden lg:block" vertical />
@@ -149,8 +175,8 @@ export function NeonAccents({ variant = 'section', className = '' }: NeonAccents
 
       {variant === 'stats' && (
         <>
-          <NeonDot color="pink" className="top-6 left-[20%]" delay={0} />
-          <NeonDot color="cyan" className="top-6 right-[20%]" delay={0.8} />
+          <NeonDot color="pink" className="top-6 left-[20%]" animate={!reduced} />
+          <NeonDot color="cyan" className="top-6 right-[20%]" delay={0.8} animate={!reduced} />
           <NeonLine color="pink" className="top-1/2 -translate-y-1/2 left-0 w-10 md:w-16 opacity-25" />
           <NeonLine color="cyan" className="top-1/2 -translate-y-1/2 right-0 w-10 md:w-16 opacity-25" />
         </>
@@ -158,9 +184,9 @@ export function NeonAccents({ variant = 'section', className = '' }: NeonAccents
 
       {variant === 'contact' && (
         <>
-          <NeonDot color="pink" className="top-[18%] left-[14%]" delay={0.2} size="md" />
-          <NeonDot color="violet" className="bottom-[22%] right-[10%]" delay={1} />
-          <NeonRing color="pink" className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 !w-32 !h-32 md:!w-40 md:!h-40 opacity-15" />
+          <NeonDot color="pink" className="top-[18%] left-[14%]" delay={0.2} size="md" animate={!reduced} />
+          <NeonDot color="violet" className="bottom-[22%] right-[10%]" delay={1} animate={!reduced} />
+          <NeonRing color="pink" className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 !w-32 !h-32 md:!w-40 md:!h-40 opacity-15" animate={!reduced} />
           <NeonCorner color="cyan" pos="tl" className="top-10 left-6 md:left-12 opacity-40" />
           <NeonCorner color="pink" pos="br" className="bottom-10 right-6 md:right-12 opacity-40" />
         </>
@@ -168,16 +194,16 @@ export function NeonAccents({ variant = 'section', className = '' }: NeonAccents
 
       {variant === 'footer' && (
         <>
-          <NeonDot color="violet" className="top-6 left-1/3" delay={0.5} />
-          <NeonDot color="pink" className="top-10 right-1/4" delay={1.2} />
+          <NeonDot color="violet" className="top-6 left-1/3" delay={0.5} animate={!reduced} />
+          <NeonDot color="pink" className="top-10 right-1/4" delay={1.2} animate={!reduced} />
           <NeonLine color="pink" className="top-0 left-1/4 w-28 md:w-40 opacity-35" />
         </>
       )}
 
       {variant === 'minimal' && (
         <>
-          <NeonDot color="pink" className="top-4 right-[10%]" delay={0} />
-          <NeonDot color="cyan" className="bottom-6 left-[8%]" delay={1} />
+          <NeonDot color="pink" className="top-4 right-[10%]" animate={!reduced} />
+          <NeonDot color="cyan" className="bottom-6 left-[8%]" delay={1} animate={!reduced} />
         </>
       )}
     </div>
@@ -185,20 +211,26 @@ export function NeonAccents({ variant = 'section', className = '' }: NeonAccents
 }
 
 export function NeonAmbience() {
+  const reduced = useReducedMotion();
+
   return (
     <div
       className="fixed inset-0 pointer-events-none z-[1] overflow-hidden hidden md:block"
       aria-hidden
     >
-      <NeonDot color="pink" className="top-[12%] left-[3%]" delay={0} />
-      <NeonDot color="cyan" className="top-[45%] right-[2%]" delay={2} />
-      <NeonDot color="violet" className="bottom-[20%] left-[5%]" delay={1} />
-      <NeonDot color="pink" className="bottom-[35%] right-[4%]" delay={2.5} size="md" />
-      <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-accent-pink/35 to-transparent"
-        animate={{ opacity: [0.15, 0.4, 0.15] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-      />
+      <NeonDot color="pink" className="top-[12%] left-[3%]" animate={!reduced} />
+      <NeonDot color="cyan" className="top-[45%] right-[2%]" delay={2} animate={!reduced} />
+      <NeonDot color="violet" className="bottom-[20%] left-[5%]" delay={1} animate={!reduced} />
+      <NeonDot color="pink" className="bottom-[35%] right-[4%]" delay={2.5} size="md" animate={!reduced} />
+      {reduced ? (
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-accent-pink/25 to-transparent opacity-30" />
+      ) : (
+        <motion.div
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-accent-pink/35 to-transparent"
+          animate={{ opacity: [0.15, 0.4, 0.15] }}
+          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+        />
+      )}
     </div>
   );
 }
