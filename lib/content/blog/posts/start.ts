@@ -66,7 +66,7 @@ export const startPosts: BlogPost[] = [
     slug: 'onlyfans-kontent-plan-i-syomki',
     title: 'Контент-план OnlyFans: съёмки, лента и PPV',
     description:
-      'Как планировать съёмки, сколько контента в месяц нужно и как связать ленту с продажами в DM.',
+      'Контент-план OnlyFans 2026: съёмки, объём ленты в месяц и связка постов с PPV в DM — стратегия от OFM management.',
     publishedAt: '2026-03-06',
     category: 'start',
     keywords: ['onlyfans контент план', 'контент стратегия onlyfans'],
@@ -115,7 +115,7 @@ export const startPosts: BlogPost[] = [
     slug: 'onlyfans-oshibki-novichkov',
     title: '15 ошибок новичков на OnlyFans (и как их исправить)',
     description:
-      'Типичные промахи: цены, чаты, маркетинг, выгорание — чек-лист, который экономит месяцы.',
+      '15 ошибок новичков OnlyFans 2026: цены, чаты, маркетинг, выгорание — чек-лист, который экономит месяцы. Советы от OFM.',
     publishedAt: '2026-03-22',
     category: 'start',
     keywords: ['ошибки onlyfans', 'onlyfans советы новичкам'],

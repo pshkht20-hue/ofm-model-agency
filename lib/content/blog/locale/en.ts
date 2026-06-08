@@ -776,4 +776,103 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
     ],
   },
+  'onlyfans-agentstvo-moldova': {
+    title: 'OnlyFans Agency Moldova 2026 — How to Choose Without Scams',
+    description:
+      'Guide for creators in Moldova and the diaspora: Chișinău, remote work, 24/7 chats, marketing, red flags, and applying to OFM.',
+    keywords: [
+      'onlyfans agency moldova',
+      'onlyfans agenție moldova',
+      'onlyfans agency chisinau',
+    ],
+    blocks: [
+      {
+        type: 'p',
+        text: 'Moldova is a growing OnlyFans market—strong Russian and Romanian, remote-work culture, and creators looking for agencies with clear terms. A search for “OnlyFans agency Moldova” leads to Telegram channels and job boards where professional management and scams look identical. This guide covers full-service expectations and how OFM works with MD-based creators and EU diaspora.',
+      },
+      { type: 'h2', text: 'Why Moldova creators choose agencies' },
+      {
+        type: 'p',
+        text: 'Up to 85% of net revenue often comes from DMs. An agency covers 24/7 chats, traffic, and analytics while you focus on content—from Chișinău or remotely from Romania, Italy, or Germany.',
+      },
+      { type: 'h2', text: 'Red flags' },
+      {
+        type: 'ul',
+        items: [
+          'Upfront payments before launch',
+          'Single OnlyFans password instead of roles',
+          'Fixed income promises without niche analysis',
+          'No contract or NDA',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'OFM works with creators in Moldova, Ukraine, Europe, and Latin America—fully remote. Apply at ofmmodels.com; Telegram reply within 24 h, no entry fee.',
+      },
+    ],
+  },
+  'onlyfans-agentstvo-latinskaya-amerika': {
+    title: 'OnlyFans Agency Latin America 2026 — Mexico, Colombia, Brazil & More',
+    description:
+      'Guide for Mexico, Colombia, Argentina, Chile, Peru, Ecuador, Uruguay, Paraguay, Bolivia, Central America, and Brazil: 24/7 chats, marketing, red flags, and applying to OFM.',
+    keywords: [
+      'onlyfans agency latin america',
+      'onlyfans agency mexico',
+      'onlyfans agency colombia',
+      'onlyfans agency brazil',
+      'onlyfans agency argentina',
+      'agencia onlyfans latinoamerica',
+    ],
+    blocks: [
+      {
+        type: 'p',
+        text: 'Latin America is one of the fastest-growing OnlyFans regions: Mexico, Colombia, Argentina, Chile, Peru, Ecuador, Uruguay, Paraguay, Bolivia, Venezuela, Central America (Costa Rica, Panama, Guatemala), and Brazil. Searches for “OnlyFans agency Latin America,” “OnlyFans agency Mexico,” or “OnlyFans agency Brazil” surface hundreds of listings—from professional studios to scams. This guide covers the whole Spanish-speaking region plus Brazil—not one country.',
+      },
+      { type: 'h2', text: 'Why LatAm and Brazil creators choose agencies' },
+      {
+        type: 'p',
+        text: 'Up to 85% of net revenue often comes from DMs. A solo creator in São Paulo, Bogotá, or Mexico City loses overnight sales when US and EU fans are online. Agencies cover 24/7 chats, traffic, and analytics.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Mexico, Colombia, Argentina, Chile, Peru—fully remote; no studio required',
+          'Brazil: huge Portuguese market; OFM supports PT/ES/EN for Rio, SP, BH creators',
+          'US/EU Hispanic diaspora often runs bilingual EN + ES accounts',
+          'LatAm time zones overlap US East—good for American prime-time chats',
+        ],
+      },
+      { type: 'h2', text: 'Regional overview' },
+      {
+        type: 'ul',
+        items: [
+          'Mexico & Colombia—largest Spanish-language adult traffic flows',
+          'Argentina & Chile—strong EN/ES, often targeting US/EU fans',
+          'Peru, Ecuador, Uruguay, Paraguay, Bolivia—growing sub-niches',
+          'Brazil—separate scale: PT content, local TikTok/Reels trends',
+          'Central America—Costa Rica, Panama: often bilingual ES/EN',
+        ],
+      },
+      { type: 'h2', text: 'Red flags when choosing an agency' },
+      {
+        type: 'ul',
+        items: [
+          'Upfront “advertising” payments before launch',
+          'Single OnlyFans password',
+          'Fixed income promises without niche review',
+          'No contract, NDA, or written service list',
+          '“Sign today” pressure without 30-day exit',
+        ],
+      },
+      { type: 'h2', text: 'Brazil: note for Portuguese-speaking creators' },
+      {
+        type: 'p',
+        text: 'Brazil is South America’s largest market and a separate language pool. OFM works with Brazilian creators remotely: managers in PT/ES/EN, marketing on X and TikTok BR, chats in Portuguese. Site available at /es and /en; apply at ofmmodels.com—Telegram reply within 24 h.',
+      },
+      {
+        type: 'p',
+        text: 'If you need an OnlyFans agency in Latin America—Mexico, Colombia, Argentina, Chile, Peru, Brazil, or any Spanish-speaking country—apply at ofmmodels.com. OFM replies on Telegram with no obligation.',
+      },
+    ],
+  },
 };

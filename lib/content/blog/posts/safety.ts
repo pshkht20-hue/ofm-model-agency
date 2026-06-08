@@ -5,7 +5,7 @@ export const safetyPosts: BlogPost[] = [
     slug: 'onlyfans-anonimnost-i-bezopasnost',
     title: 'Анонимность и безопасность на OnlyFans',
     description:
-      'Деанон, утечки, доступы, 2FA, гео-блоки и DMCA — практический гайд по защите creator’а.',
+      'Анонимность OnlyFans 2026: деанон, утечки, 2FA, гео-блоки и DMCA — практический гайд по безопасности creator’а от OFM.',
     publishedAt: '2026-03-14',
     category: 'safety',
     keywords: ['onlyfans анонимность', 'безопасность onlyfans'],
@@ -59,7 +59,7 @@ export const safetyPosts: BlogPost[] = [
     slug: 'onlyfans-rabota-bez-lica',
     title: 'OnlyFans без лица: стратегия no-face creator',
     description:
-      'Как строить бренд, маркетинг и доверие без показа лица — ниши, ракурсы, голос, анонимность.',
+      'OnlyFans без лица 2026: no-face бренд, маркетинг, ниши, ракурсы и анонимность — стратегия роста от OFM management.',
     publishedAt: '2026-03-24',
     category: 'safety',
     keywords: ['onlyfans без лица', 'no face onlyfans'],

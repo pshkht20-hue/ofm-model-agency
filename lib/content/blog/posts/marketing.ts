@@ -5,7 +5,7 @@ export const marketingPosts: BlogPost[] = [
     slug: 'onlyfans-marketing-strategiya-2026',
     title: 'OnlyFans маркетинг 2026: полная стратегия роста',
     description:
-      'Воронка 2026: ниша, мультиплатформенность, тизеры, удержание и метрики — гайд по OnlyFans marketing от практики management.',
+      'OnlyFans маркетинг 2026: воронка, ниша, X, Reddit, TikTok, удержание и метрики — полная стратегия роста от практики OFM management.',
     publishedAt: '2026-03-01',
     category: 'marketing',
     keywords: ['onlyfans маркетинг', 'onlyfans продвижение 2026'],
@@ -80,7 +80,7 @@ export const marketingPosts: BlogPost[] = [
     slug: 'onlyfans-prodvizhenie-reddit-twitter',
     title: 'Продвижение OnlyFans через Reddit и X (Twitter)',
     description:
-      'Практика 2026: сабреддиты, расписание постов, X без бана, конверсия профиля — OnlyFans promotion без спама.',
+      'OnlyFans продвижение Reddit и X 2026: сабреддиты, расписание, конверсия профиля и трафик без спама — гайд по promotion от OFM.',
     publishedAt: '2026-03-08',
     category: 'marketing',
     keywords: ['onlyfans reddit', 'onlyfans twitter продвижение'],
@@ -130,7 +130,7 @@ export const marketingPosts: BlogPost[] = [
     slug: 'onlyfans-instagram-tiktok-bez-bana',
     title: 'Instagram и TikTok для OnlyFans: рост без бана',
     description:
-      'SFW-воронка, Reels, правила Meta и TikTok, link in bio — как приводить подписчиков на OnlyFans безопасно.',
+      'OnlyFans Instagram и TikTok без бана 2026: SFW-воронка, Reels, правила Meta и link in bio — безопасное продвижение от OFM.',
     publishedAt: '2026-03-12',
     category: 'marketing',
     keywords: ['onlyfans instagram', 'onlyfans tiktok'],
@@ -175,7 +175,7 @@ export const marketingPosts: BlogPost[] = [
     slug: 'onlyfans-uderzhanie-podpischikov',
     title: 'Удержание подписчиков OnlyFans: churn и LTV',
     description:
-      'Почему фаны отписываются, как снизить churn и поднять LTV через чаты, контент и ценообразование.',
+      'Удержание подписчиков OnlyFans 2026: снизить churn, поднять LTV через чаты, контент и цены — практика management от OFM.',
     publishedAt: '2026-03-20',
     category: 'marketing',
     keywords: ['onlyfans удержание подписчиков', 'onlyfans churn'],

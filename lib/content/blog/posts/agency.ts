@@ -78,7 +78,7 @@ export const agencyPosts: BlogPost[] = [
     slug: 'chto-delaet-onlyfans-agentstvo',
     title: 'Что делает OnlyFans агентство: 12 услуг management',
     description:
-      'Разбор OnlyFans management по полочкам: от discovery-чатов до Reddit-маркетинга, аналитики и anti-piracy — что реально даёт рост.',
+      '12 услуг OnlyFans management 2026: discovery-чаты, Reddit, X, TikTok, аналитика и anti-piracy — что даёт рост net и когда подключать OFM.',
     publishedAt: '2026-02-18',
     category: 'agency',
     keywords: ['onlyfans management', 'что делает onlyfans агентство'],
@@ -149,7 +149,7 @@ export const agencyPosts: BlogPost[] = [
     slug: 'kogda-nuzhno-onlyfans-agentstvo',
     title: 'Когда модели пора нанимать OnlyFans агентство',
     description:
-      'Признаки, что пора делегировать: выгорание в DM, потолок дохода, нет времени на маркетинг — и когда агентство пока рано.',
+      'Когда пора нанимать OnlyFans агентство: выгорание в DM, потолок дохода, нет времени на маркетинг — и когда рано. Чек-лист признаков + заявка в OFM.',
     publishedAt: '2026-02-25',
     category: 'agency',
     keywords: ['нужно ли onlyfans агентство', 'onlyfans management когда'],
@@ -362,6 +362,246 @@ export const agencyPosts: BlogPost[] = [
       {
         type: 'p',
         text: 'Сравните минимум два агентства по чек-листу, прочитайте FAQ на сайте и посмотрите кейсы. Если ищете OnlyFans агентство в Украине с чатами 24/7, маркетингом и прозрачными условиями — подайте заявку на главной ofmmodels.com. Менеджер OFM ответит в Telegram без обязательств с вашей стороны.',
+      },
+    ],
+  },
+  {
+    slug: 'onlyfans-agentstvo-moldova',
+    title: 'OnlyFans агентство Молдова 2026 — как выбрать без скама',
+    description:
+      'Гайд по OnlyFans агентствам для моделей из Молдовы и диаспоры: Кишинёв, удалённая работа, чаты 24/7, маркетинг, красные флаги и заявка в OFM.',
+    publishedAt: '2026-06-08',
+    category: 'agency',
+    keywords: [
+      'onlyfans агентство молдова',
+      'onlyfans agenție moldova',
+      'agenție onlyfans moldova',
+      'onlyfans agency moldova',
+      'onlyfans агентство кишинев',
+    ],
+    readMinutes: 11,
+    blocks: [
+      {
+        type: 'p',
+        text: 'Молдова — компактный, но растущий рынок OnlyFans: сильный русский и румынский, привычка к удалённой работе и модели, которые ищут агентство с прозрачными условиями, а не «вакансию с $30k в заголовке». Запросы «OnlyFans агентство Молдова» и «agenție OnlyFans Moldova» ведут на Telegram-каналы и доски объявлений, где профессиональный management и скам выглядят одинаково. Ниже — что должно входить в full-service, как проверить команду и как работает OFM\'s Model Agency с creator\'ами из MD и диаспоры в ЕС.',
+      },
+      {
+        type: 'h2',
+        text: 'Почему модели из Молдовы ищут агентство',
+      },
+      {
+        type: 'p',
+        text: 'На OnlyFans до 85% net-дохода часто приходит из личных сообщений. Соло-модель теряет продажи в ночные часы США и Западной Европы, пока спит. Агентство закрывает чаты 24/7, трафик и аналитику — вы фокусируетесь на контенте.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Кишинёв, Бельцы, Кагул — работа полностью удалённая, студия не нужна',
+          'Модели из диаспоры (Румыния, Италия, Германия) часто ведут аккаунт на RU/EN/RO аудиторию',
+          'Важны анонимность, выплаты и понятный процент — не обещание фиксированного дохода',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Что входит в OnlyFans агентство full-service',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Маркетинг: Reddit, X, TikTok, Instagram — тесты и UTM',
+          'Чаты 24/7 в вашем тоне: PPV, кастомы, продления',
+          'Контент-план на месяц без хаотичных съёмок',
+          'Еженедельная аналитика: net/gross, LTV, churn',
+          'NDA, роли доступа OnlyFans, реакция на утечки',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Красные флаги при выборе агентства в Молдове',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Предоплата «на рекламу» или «вступление» до старта',
+          'Единственный пароль от OnlyFans вместо ролей',
+          'Обещание фиксированного дохода без анализа ниши',
+          'Нет договора, NDA и письменного списка услуг',
+          'Давление «подпиши сегодня» без exit за 30 дней',
+        ],
+      },
+      {
+        type: 'tip',
+        text: 'Чек-лист выбора — в статье «Как выбрать OnlyFans агентство»; про мошенничество — в материале «10 красных флагов».',
+      },
+      {
+        type: 'h2',
+        text: 'Комиссия и договор: ориентиры для MD-рынка',
+      },
+      {
+        type: 'p',
+        text: 'Для full-service management коридор — примерно 25–40% от gross. Ниже 20% часто означает урезанный сервис; выше 45% должно компенсироваться production и PR. Upfront-платежи — red flag. В договоре: владение аккаунтом, срок расторжения, отчётность, конфиденциальность.',
+      },
+      {
+        type: 'h2',
+        text: 'Как устроено сотрудничество в OFM\'s Model Agency',
+      },
+      {
+        type: 'p',
+        text: 'OFM работает с моделями из Молдовы, Украины, Европы и Латинской Америки — полностью удалённо. После заявки на ofmmodels.com менеджер пишет в Telegram в течение 24 часов. Без платы за «вход». На сайте — реальные кейсы со скриншотами статистики (с согласия моделей).',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Заявка: имя, Telegram, 18+, кратко о типаже',
+          'Оценка до 24 часов — честный ответ, подходит ли формат',
+          'Созвон 30–60 мин: условия, границы, чаты, маркетинг',
+          'Запуск 7–14 дней: профиль, контент, первый трафик',
+          'Еженедельные отчёты и корректировка стратегии',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Следующий шаг',
+      },
+      {
+        type: 'p',
+        text: 'Сравните минимум два агентства, прочитайте FAQ и кейсы. Если ищете OnlyFans агентство в Молдове с чатами 24/7 и прозрачными условиями — подайте заявку на ofmmodels.com. Менеджер OFM ответит в Telegram без обязательств.',
+      },
+    ],
+  },
+  {
+    slug: 'onlyfans-agentstvo-latinskaya-amerika',
+    title: 'OnlyFans агентство Латинская Америка 2026 — Мексика, Бразилия, вся LatAm',
+    description:
+      'Гайд по OnlyFans management для México, Colombia, Argentina, Chile, Perú, Brasil и всей испаноязычной Южной Америки: чаты 24/7, маркетинг, red flags и заявка в OFM.',
+    publishedAt: '2026-06-08',
+    category: 'agency',
+    keywords: [
+      'agencia onlyfans latinoamerica',
+      'agencia onlyfans latinoamérica',
+      'agencia onlyfans méxico',
+      'agencia onlyfans colombia',
+      'agencia onlyfans argentina',
+      'agencia onlyfans brasil',
+      'onlyfans agency latin america',
+      'onlyfans agency brazil',
+      'agencia onlyfans chile',
+    ],
+    readMinutes: 13,
+    blocks: [
+      {
+        type: 'p',
+        text: 'Латинская Америка — один из самых быстрорастущих регионов OnlyFans: México, Colombia, Argentina, Chile, Perú, Ecuador, Uruguay, Paraguay, Bolivia, Венесуэла, Центральная Америка (Costa Rica, Panamá, Guatemala) и Бразилия. Запросы «agencia OnlyFans Latinoamérica», «agencia OnlyFans México» и «agencia OnlyFans Brasil» ведут на сотни объявлений — от профессиональных студий до скама. Эта статья — не про одну страну, а про весь регион: как выбрать management, что входит в full-service и как OFM работает с creator\'ами из LatAm удалённо, на испанском, португальском и английском.',
+      },
+      {
+        type: 'h2',
+        text: 'Почему creator\'ы LatAm и Brasil выбирают агентство',
+      },
+      {
+        type: 'p',
+        text: 'До 85% net-дохода на OnlyFans часто приходит из DM. Соло-модель в São Paulo, Bogotá или Ciudad de México теряет продажи ночью — когда фаны из США и Европы онлайн. Агентство закрывает чаты 24/7, трафик и аналитику, пока вы снимаете контент.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'México, Colombia, Argentina, Chile, Perú — полностью удалённо, студия не обязательна',
+          'Brasil: португальский рынок огромен; OFM работает на PT/ES/EN с creator\'ами из Rio, SP, BH',
+          'Испаноязычная диаспора в США и ЕС часто ведёт аккаунт на EN + ES аудиторию',
+          'Часовые пояса LatAm пересекаются с US East — удобно для чатов на американский прайм-тайм',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Регионы: что общего у всей Южной Америки',
+      },
+      {
+        type: 'p',
+        text: 'Страны LatAm разные по экономике и культуре, но запросы к агентству одинаковые: анонимность, выплаты без сюрпризов, маркетинг без бана в Instagram/TikTok, чаты в тоне «novia virtual» / GFE и прозрачный процент. Не важно, вы в Buenos Aires, Medellín, Lima или Santiago — full-service management строится на одних и тех же пяти зонах.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'México и Colombia — крупнейшие испаноязычные потоки трафика в adult',
+          'Argentina и Chile — сильный EN/ES, часто выход на US/EU фанов',
+          'Perú, Ecuador, Uruguay, Paraguay, Bolivia — растущие ниши, меньше конкуренции в sub-niche',
+          'Brasil — отдельный масштаб: PT-контент, локальные тренды TikTok/Reels',
+          'Centroamérica — Costa Rica, Panamá: часто bilingual ES/EN',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Что должно входить в agencia OnlyFans full-service',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Marketing multicanal: X, Reddit, TikTok, Instagram — SFW-воронка без бана',
+          'Chats 24/7: PPV, customs, renovaciones, upsell en DM',
+          'Estrategia de contenido: calendario mensual, sets para feed y exclusivos',
+          'Analytics semanal: net/gross, LTV, churn — decisiones por datos',
+          'NDA, roles de acceso OnlyFans, respuesta a leaks y DMCA',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Red flags al elegir agencia en Latinoamérica',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Pago adelantado «por publicidad» antes del lanzamiento',
+          'Una sola contraseña de OnlyFans en lugar de roles',
+          'Promesa de ingreso fijo ($5k, $10k) sin análisis de nicho',
+          'Sin contrato, NDA ni lista escrita de servicios',
+          'Presión «firma hoy» sin salida clara en 30 días',
+          'Estudios que exigen contenido ilegal o sin límites — salir inmediatamente',
+        ],
+      },
+      {
+        type: 'tip',
+        text: 'Lista completa de verificación — en el artículo «Cómo elegir agencia OnlyFans» (RU/ES/EN en el blog). Sobre estafas — «10 red flags».',
+      },
+      {
+        type: 'h2',
+        text: 'Comisión y contrato: referencias para LatAm',
+      },
+      {
+        type: 'p',
+        text: 'Para full-service el rango habitual es 25–40% del gross. Menos del 20% suele significar servicio recortado; más del 45% debe compensarse con producción y PR. Pagos upfront — red flag. En el contrato: propiedad de la cuenta, plazo de rescisión, reportes, confidencialidad.',
+      },
+      {
+        type: 'h2',
+        text: 'Brasil: nota para creator\'ов на португальском',
+      },
+      {
+        type: 'p',
+        text: 'Бразилия — крупнейший рынок Южной Америки и отдельный языковой пул. OFM работает с моделями из Brasil удалённо: менеджеры на PT/ES/EN, маркетинг на X и TikTok BR, чаты на португальском. Сайт доступен на /es и /en; заявка на ofmmodels.com — ответ в Telegram за 24 часа.',
+      },
+      {
+        type: 'h2',
+        text: 'Cómo trabaja OFM\'s Model Agency con LatAm',
+      },
+      {
+        type: 'p',
+        text: 'OFM — agencia OnlyFans internacional: México, Colombia, Argentina, Chile, Perú, Brasil, Europa y más — 100% remoto. Tras la solicitud en ofmmodels.com un manager escribe por Telegram en 24 h. Sin cuota de entrada. Casos reales publicados en el sitio (con consentimiento).',
+      },
+      {
+        type: 'ul',
+        items: [
+          'Solicitud: nombre, Telegram, 18+, breve sobre tu nicho',
+          'Evaluación en 24 h — respuesta honesta si encaja el formato',
+          'Llamada 30–60 min: condiciones, límites, chats, marketing',
+          'Lanzamiento 7–14 días: perfil, contenido, primer tráfico',
+          'Reportes semanales y ajuste de estrategia',
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Siguiente paso',
+      },
+      {
+        type: 'p',
+        text: 'Compara al menos dos agencias, lee el FAQ y los casos. Si buscas agencia OnlyFans en Latinoamérica — México, Colombia, Argentina, Chile, Perú, Brasil o cualquier país hispanohablante — solicita en ofmmodels.com. Manager OFM responde por Telegram sin compromiso.',
       },
     ],
   },

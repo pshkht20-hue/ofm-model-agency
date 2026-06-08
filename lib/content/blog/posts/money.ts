@@ -5,7 +5,7 @@ export const moneyPosts: BlogPost[] = [
     slug: 'onlyfans-chaty-dm-prodazhi',
     title: 'OnlyFans чаты и DM: где скрывается основной доход',
     description:
-      'Discovery chatting, PPV, кастом, скорость ответа и KPI — гайд по продажам в личных сообщениях OnlyFans.',
+      'OnlyFans чаты и DM-продажи 2026: discovery chatting, PPV, кастом, KPI и скорость ответа — гайд по росту net от OFM.',
     publishedAt: '2026-03-03',
     category: 'money',
     keywords: ['onlyfans чаты', 'onlyfans dm продажи', 'onlyfans chatting'],
@@ -81,7 +81,7 @@ export const moneyPosts: BlogPost[] = [
     slug: 'onlyfans-tseny-podpiska-ppv',
     title: 'Цены на OnlyFans: подписка, PPV и кастом',
     description:
-      'Как ставить цену подписки в 2026, пакеты PPV, free trial и почему гонка за $3 subs проигрывает.',
+      'Цены OnlyFans 2026: подписка, PPV, free trial и пакеты — почему гонка за $3 subs проигрывает и как ставить цены с OFM.',
     publishedAt: '2026-03-10',
     category: 'money',
     keywords: ['onlyfans цены', 'onlyfans ppv', 'цена подписки onlyfans'],
@@ -134,7 +134,7 @@ export const moneyPosts: BlogPost[] = [
     slug: 'onlyfans-skolko-zarabatyvayut-modeli',
     title: 'Сколько зарабатывают на OnlyFans: реалистичные цифры',
     description:
-      'Диапазоны дохода новичков и топ-моделей, от чего зависят $ и почему агентства не могут гарантировать сумму.',
+      'Сколько зарабатывают на OnlyFans в 2026: диапазоны новичков и топ-моделей, gross total disclaimer и роль агентства OFM.',
     publishedAt: '2026-03-18',
     category: 'money',
     keywords: ['сколько зарабатывают на onlyfans', 'доход onlyfans модель'],

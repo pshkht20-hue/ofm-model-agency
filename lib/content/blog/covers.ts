@@ -51,6 +51,24 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@lucabravo',
     unsplashUrl: 'https://unsplash.com/photos/landscape-photography-of-mountains-4V8uMZx8FYA',
   },
+  'onlyfans-agentstvo-moldova': {
+    localSrc: '/blog/covers/onlyfans-agentstvo-moldova.jpg',
+    remoteSrc:
+      'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1400&q=80',
+    alt: 'Городской вид — удалённая работа creator из Молдовы',
+    photographer: 'Pedro Lastra',
+    photographerUrl: 'https://unsplash.com/@peterlastera',
+    unsplashUrl: 'https://unsplash.com/photos/city-buildings-under-white-clouds-during-daytime-Nyvq2JuFK4M',
+  },
+  'onlyfans-agentstvo-latinskaya-amerika': {
+    localSrc: '/blog/covers/onlyfans-agentstvo-latinskaya-amerika.jpg',
+    remoteSrc:
+      'https://images.unsplash.com/photo-1518105777472-f99737774726?auto=format&fit=crop&w=1400&q=80',
+    alt: 'Панорама города — agencia OnlyFans Latinoamérica',
+    photographer: 'Rafael Nir',
+    photographerUrl: 'https://unsplash.com/@rafaelnir',
+    unsplashUrl: 'https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-YOQDokJipFg',
+  },
   'onlyfans-agentstvo-moshennichestvo': {
     localSrc: '/blog/covers/onlyfans-agentstvo-moshennichestvo.jpg',
     remoteSrc:

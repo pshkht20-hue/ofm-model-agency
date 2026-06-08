@@ -833,4 +833,75 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       },
     ],
   },
+  'onlyfans-agentstvo-moldova': {
+    title: 'OnlyFans агентство Молдова 2026 — як обрати без скаму',
+    description:
+      'Гід по OnlyFans-агентствах для моделей з Молдови та діаспори: Кишинів, дистанційна робота, чати 24/7, маркетинг, червоні прапорці та заявка в OFM.',
+    keywords: [
+      'onlyfans агентство молдова',
+      'onlyfans agenție moldova',
+      'agenție onlyfans moldova',
+    ],
+    blocks: [
+      {
+        type: 'p',
+        text: 'Молдова — компактний, але зростаючий ринок OnlyFans: сильна російська та румунська, звичка до віддаленої роботи й моделі, які шукають агентство з прозорими умовами. Запит «OnlyFans агентство Молдова» у Google веде на Telegram і дошки оголошень, де професійний management і шахрайство виглядають однаково. Нижче — що має входити в full-service і як працює OFM з creatorами з MD та діаспори в ЄС.',
+      },
+      { type: 'h2', text: 'Чому моделі з Молдови шукають агентство' },
+      {
+        type: 'p',
+        text: 'До 85% net-доходу часто приходить із DM. Агентство закриває чати 24/7, трафік і аналітику — ви зосереджені на контенті. Кишинів, Бєльці, Кагул — повністю дистанційно; діаспора в Румунії, Італії, Німеччині часто веде акаунт на RU/EN/RO аудиторію.',
+      },
+      { type: 'h2', text: 'Червоні прапорці' },
+      {
+        type: 'ul',
+        items: [
+          'Передоплата «на рекламу» до старту',
+          'Один пароль OnlyFans замість ролей',
+          'Обіцянка фіксованого доходу без аналізу ніші',
+          'Немає договору та NDA',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'OFM працює з моделями з Молдови, України, Європи та Латинської Америки — повністю дистанційно. Заявка на ofmmodels.com — відповідь у Telegram за 24 години, без плати за «вхід».',
+      },
+    ],
+  },
+  'onlyfans-agentstvo-latinskaya-amerika': {
+    title: 'OnlyFans агентство Латинська Америка 2026 — México, Brasil, вся LatAm',
+    description:
+      'Гід для México, Colombia, Argentina, Chile, Perú, Brasil та всієї іспаномовної Південної Америки: чати 24/7, маркетинг, red flags і заявка в OFM.',
+    keywords: [
+      'agencia onlyfans latinoamerica',
+      'agencia onlyfans méxico',
+      'agencia onlyfans brasil',
+      'onlyfans agency latin america',
+    ],
+    blocks: [
+      {
+        type: 'p',
+        text: 'Латинська Америка — один із найшвидше зростаючих регіонів OnlyFans: México, Colombia, Argentina, Chile, Perú, Ecuador, Uruguay, Paraguay, Bolivia, Центральна Америка та Brasil. Ця стаття — про весь регіон, не одну країну: як обрати management і як OFM працює з creatorами з LatAm дистанційно на ES/PT/EN.',
+      },
+      { type: 'h2', text: 'Чому creatorи LatAm і Brasil обирають агентство' },
+      {
+        type: 'p',
+        text: 'До 85% net-доходу — з DM. Соло-модель у São Paulo, Bogotá чи Ciudad de México втрачає продажі вночі, коли фани з США та ЄС онлайн. Агентство закриває чати 24/7, трафік і аналітику.',
+      },
+      { type: 'h2', text: 'Brasil та іспаномовні країни' },
+      {
+        type: 'ul',
+        items: [
+          'México і Colombia — найбільші іспаномовні потоки',
+          'Argentina, Chile — сильний EN/ES, вихід на US/EU',
+          'Brasil — окремий масштаб, PT-контент; OFM працює PT/ES/EN',
+          'Perú, Ecuador, Uruguay, Paraguay, Bolivia — зростаючі ніші',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Шукаєте agencia OnlyFans у Latinoamérica — подайте заявку на ofmmodels.com. Менеджер OFM відповість у Telegram без зобов\'язань.',
+      },
+    ],
+  },
 };

@@ -21,8 +21,16 @@ export const siteConfig = {
     'ofmmodels',
     'ofm что это',
     'onlyfans агентство молдова',
-    'agencia onlyfans argentina',
+    'agencia onlyfans latinoamerica',
     'agencia onlyfans latinoamérica',
+    'agencia onlyfans méxico',
+    'agencia onlyfans colombia',
+    'agencia onlyfans argentina',
+    'agencia onlyfans brasil',
+    'agencia onlyfans chile',
+    'onlyfans agency latin america',
+    'onlyfans agency brazil',
+    'onlyfans agency mexico',
   ],
 } as const;
 

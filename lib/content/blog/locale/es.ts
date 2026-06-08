@@ -81,7 +81,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'chto-delaet-onlyfans-agentstvo': {
     title: 'Qué hace una agencia de OnlyFans: 12 servicios de management',
     description:
-      'OnlyFans management desglosado: desde discovery chats hasta marketing en Reddit, analítica y anti-piratería.',
+      '12 servicios OnlyFans management 2026: discovery chats, Reddit, X, TikTok, analítica y anti-piratería — qué impulsa el net y cuándo conectar OFM.',
     keywords: ['onlyfans management', 'qué hace agencia onlyfans'],
     blocks: [
       {
@@ -136,7 +136,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'kogda-nuzhno-onlyfans-agentstvo': {
     title: 'Cuándo es momento de contratar una agencia de OnlyFans',
     description:
-      'Señales para delegar: burnout en DM, techo de ingresos, sin tiempo para marketing—y cuándo aún es pronto.',
+      'Cuándo contratar agencia OnlyFans: burnout en DM, techo de ingresos, sin tiempo para marketing — y cuándo es pronto. Checklist + solicitud en OFM.',
     keywords: ['necesito agencia onlyfans', 'onlyfans management cuándo'],
     blocks: [
       {
@@ -251,7 +251,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'onlyfans-marketing-strategiya-2026': {
     title: 'Marketing de OnlyFans 2026: estrategia completa de crecimiento',
     description:
-      'Embudo 2026: nicho, multiplataforma, teasers, retención y métricas—guía de marketing OnlyFans desde la práctica de management.',
+      'Marketing OnlyFans 2026: embudo, nicho, X, Reddit, TikTok, retención y métricas — estrategia completa de crecimiento desde OFM management.',
     keywords: ['marketing onlyfans', 'promoción onlyfans 2026'],
     blocks: [
       {
@@ -307,7 +307,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'onlyfans-prodvizhenie-reddit-twitter': {
     title: 'Promocionar OnlyFans en Reddit y X (Twitter)',
     description:
-      'Práctica 2026: subreddits, calendario de posts, X sin baneos, conversión de perfil—promoción OnlyFans sin spam.',
+      'Promoción OnlyFans Reddit y X 2026: subreddits, calendario, conversión de perfil y tráfico sin spam — guía de promotion desde OFM.',
     keywords: ['onlyfans reddit', 'onlyfans twitter promoción'],
     blocks: [
       {
@@ -344,7 +344,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'onlyfans-instagram-tiktok-bez-bana': {
     title: 'Instagram y TikTok para OnlyFans: crecer sin baneos',
     description:
-      'Embudo SFW, Reels, reglas de Meta y TikTok, link in bio—cómo traer suscriptores a OnlyFans con seguridad.',
+      'OnlyFans Instagram y TikTok sin baneos 2026: embudo SFW, Reels, reglas Meta y link in bio — promoción segura desde OFM.',
     keywords: ['onlyfans instagram', 'onlyfans tiktok'],
     blocks: [
       {
@@ -376,7 +376,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'onlyfans-uderzhanie-podpischikov': {
     title: 'Retención de suscriptores en OnlyFans: churn y LTV',
     description:
-      'Por qué se van los fans, cómo bajar el churn y subir LTV con chats, contenido y precios.',
+      'Retención suscriptores OnlyFans 2026: bajar churn, subir LTV con chats, contenido y precios — práctica de management OFM.',
     keywords: ['retención suscriptores onlyfans', 'onlyfans churn'],
     blocks: [
       {
@@ -409,7 +409,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'onlyfans-chaty-dm-prodazhi': {
     title: 'Chats y DM en OnlyFans: dónde está el ingreso principal',
     description:
-      'Discovery chatting, PPV, customs, velocidad de respuesta y KPIs—guía de ventas por mensajes en OnlyFans.',
+      'Chats y DM OnlyFans 2026: discovery chatting, PPV, customs, KPIs y velocidad — guía de ventas y crecimiento net desde OFM.',
     keywords: ['onlyfans chats', 'ventas dm onlyfans', 'onlyfans chatting'],
     blocks: [
       {
@@ -460,7 +460,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'onlyfans-tseny-podpiska-ppv': {
     title: 'Precios en OnlyFans: suscripción, PPV y customs',
     description:
-      'Cómo fijar la suscripción en 2026, packs PPV, prueba gratis y por qué pierde la carrera por subs de $3.',
+      'Precios OnlyFans 2026: suscripción, PPV, prueba gratis y packs — por qué pierde la carrera por $3 subs y cómo fijar precios con OFM.',
     keywords: ['precios onlyfans', 'onlyfans ppv', 'precio suscripción onlyfans'],
     blocks: [
       {
@@ -500,7 +500,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'onlyfans-skolko-zarabatyvayut-modeli': {
     title: '¿Cuánto se gana en OnlyFans? Cifras realistas',
     description:
-      'Rangos de ingreso para principiantes y top creators, de qué depende y por qué las agencias no pueden garantizar una cifra.',
+      '¿Cuánto se gana en OnlyFans 2026? Rangos realistas, disclaimer gross total y rol de agencia — guía honesta desde OFM.',
     keywords: ['cuánto gana onlyfans', 'ingresos modelo onlyfans'],
     blocks: [
       {
@@ -583,7 +583,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'onlyfans-kontent-plan-i-syomki': {
     title: 'Plan de contenido OnlyFans: rodajes, feed y PPV',
     description:
-      'Cómo planificar rodajes, cuánto contenido al mes necesitas y cómo enlazar feed con ventas en DM.',
+      'Plan de contenido OnlyFans 2026: rodajes, volumen mensual y enlace feed-PPV en DM — estrategia de management desde OFM.',
     keywords: ['plan de contenido onlyfans', 'estrategia de contenido onlyfans'],
     blocks: [
       {
@@ -619,7 +619,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'onlyfans-oshibki-novichkov': {
     title: '15 errores de principiante en OnlyFans (y cómo corregirlos)',
     description:
-      'Fallos típicos: precios, chats, marketing, burnout—checklist que ahorra meses.',
+      '15 errores principiante OnlyFans 2026: precios, chats, marketing, burnout — checklist que ahorra meses. Consejos desde OFM.',
     keywords: ['errores onlyfans', 'consejos onlyfans principiantes'],
     blocks: [
       {
@@ -656,7 +656,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'onlyfans-anonimnost-i-bezopasnost': {
     title: 'Anonimato y seguridad en OnlyFans',
     description:
-      'Doxxing, fugas, accesos, 2FA, geo-bloques y DMCA—guía práctica de protección para creadoras.',
+      'Anonimato OnlyFans 2026: doxxing, fugas, 2FA, geo-bloques y DMCA — guía de seguridad para creadoras desde OFM.',
     keywords: ['anonimato onlyfans', 'seguridad onlyfans'],
     blocks: [
       {
@@ -694,7 +694,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   'onlyfans-rabota-bez-lica': {
     title: 'OnlyFans sin mostrar la cara: estrategia no-face',
     description:
-      'Cómo construir marca, marketing y confianza sin cara—nichos, ángulos, voz, anonimato.',
+      'OnlyFans sin cara 2026: marca no-face, marketing, nichos, ángulos y anonimato — estrategia de crecimiento desde OFM.',
     keywords: ['onlyfans sin cara', 'onlyfans no face'],
     blocks: [
       {
@@ -725,6 +725,116 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: 'p',
         text: 'OFM trabaja con modelos no-face—definimos estrategia en la solicitud.',
+      },
+    ],
+  },
+  'onlyfans-agentstvo-moldova': {
+    title: 'Agencia OnlyFans Moldova 2026 — elegir sin estafas',
+    description:
+      'Guía para creadoras en Moldova y la diáspora: Chișinău, trabajo remoto, chats 24/7, marketing, señales de alerta y solicitud en OFM.',
+    keywords: [
+      'agencia onlyfans moldova',
+      'onlyfans agenție moldova',
+      'onlyfans agency moldova',
+    ],
+    blocks: [
+      {
+        type: 'p',
+        text: 'Moldova es un mercado OnlyFans en crecimiento: ruso y rumano fuertes, trabajo remoto habitual y muchas creadoras que buscan agencia con condiciones claras. «Agencia OnlyFans Moldova» en Google lleva a Telegram y tablones donde management profesional y estafa se ven igual. Esta guía explica qué debe incluir full-service y cómo trabaja OFM con creadoras de MD y la diáspora en la UE.',
+      },
+      { type: 'h2', text: 'Por qué las creadoras de Moldova eligen agencia' },
+      {
+        type: 'p',
+        text: 'Hasta el 85% del ingreso neto suele venir de los DM. Una agencia cubre chats 24/7, tráfico y analítica mientras tú te enfocas en contenido—desde Chișinău o en remoto desde Rumanía, Italia o Alemania.',
+      },
+      { type: 'h2', text: 'Señales de alerta' },
+      {
+        type: 'ul',
+        items: [
+          'Pagos anticipados antes del lanzamiento',
+          'Una sola contraseña de OnlyFans',
+          'Promesas de ingreso fijo sin análisis',
+          'Sin contrato ni NDA',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'OFM trabaja con creadoras en Moldova, Ucrania, Europa y Latinoamérica—100% remoto. Solicitud en ofmmodels.com, respuesta en Telegram en 24 h, sin cuota de entrada.',
+      },
+    ],
+  },
+  'onlyfans-agentstvo-latinskaya-amerika': {
+    title: 'Agencia OnlyFans Latinoamérica 2026 — México, Colombia, Brasil y más',
+    description:
+      'Guía para México, Colombia, Argentina, Chile, Perú, Ecuador, Uruguay, Paraguay, Bolivia, Centroamérica y Brasil: chats 24/7, marketing, red flags y solicitud en OFM.',
+    keywords: [
+      'agencia onlyfans latinoamerica',
+      'agencia onlyfans latinoamérica',
+      'agencia onlyfans méxico',
+      'agencia onlyfans colombia',
+      'agencia onlyfans argentina',
+      'agencia onlyfans brasil',
+      'agencia onlyfans chile',
+      'agencia onlyfans peru',
+    ],
+    blocks: [
+      {
+        type: 'p',
+        text: 'Latinoamérica es una de las regiones de mayor crecimiento en OnlyFans: México, Colombia, Argentina, Chile, Perú, Ecuador, Uruguay, Paraguay, Bolivia, Venezuela, Centroamérica (Costa Rica, Panamá, Guatemala) y Brasil. Buscar «agencia OnlyFans Latinoamérica», «agencia OnlyFans México» o «agencia OnlyFans Brasil» lleva a cientos de anuncios—desde estudios profesionales hasta estafas. Esta guía cubre todo el región hispanohablante y Brasil: qué debe incluir management, red flags y cómo OFM trabaja 100% remoto en español, portugués e inglés.',
+      },
+      { type: 'h2', text: 'Por qué las creadoras de LatAm y Brasil eligen agencia' },
+      {
+        type: 'p',
+        text: 'Hasta el 85% del ingreso neto suele venir de los DM. Una creadora en São Paulo, Bogotá o Ciudad de México pierde ventas de noche cuando los fans de EE. UU. y Europa están en línea. La agencia cubre chats 24/7, tráfico y analítica.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'México, Colombia, Argentina, Chile, Perú—totalmente remoto, sin estudio obligatorio',
+          'Brasil: mercado enorme en portugués; OFM trabaja PT/ES/EN con creadoras de Rio, SP, BH',
+          'Diáspora hispana en EE. UU. y UE: cuentas bilingües EN + ES',
+          'Zonas horarias LatAm cruzan con US East—ideal para chats en horario pico americano',
+        ],
+      },
+      { type: 'h2', text: 'Regiones: qué comparten todas las países' },
+      {
+        type: 'p',
+        text: 'Cada país es distinto, pero las expectativas son las mismas: anonimato, pagos claros, marketing sin ban en Instagram/TikTok, chats en tono GFE y comisión transparente. Da igual si estás en Buenos Aires, Medellín, Lima o Santiago—full-service se construye sobre cinco pilares.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'México y Colombia—mayores flujos hispanohablantes en adult',
+          'Argentina y Chile—fuerte EN/ES, salida a fans US/EU',
+          'Perú, Ecuador, Uruguay, Paraguay, Bolivia—nichos en crecimiento',
+          'Brasil—escala propia: contenido PT, tendencias TikTok/Reels locales',
+          'Centroamérica—Costa Rica, Panamá: a menudo bilingüe ES/EN',
+        ],
+      },
+      { type: 'h2', text: 'Red flags al elegir agencia' },
+      {
+        type: 'ul',
+        items: [
+          'Pago adelantado «por publicidad» antes del lanzamiento',
+          'Una sola contraseña de OnlyFans',
+          'Promesa de ingreso fijo sin análisis de nicho',
+          'Sin contrato, NDA ni lista de servicios',
+          'Presión «firma hoy» sin salida en 30 días',
+        ],
+      },
+      { type: 'h2', text: 'Brasil: nota para creadoras en portugués' },
+      {
+        type: 'p',
+        text: 'Brasil es el mayor mercado de Sudamérica y un pool lingüístico aparte. OFM trabaja con creadoras brasileñas en remoto: managers en PT/ES/EN, marketing en X y TikTok BR, chats en portugués. Sitio en /es y /en; solicitud en ofmmodels.com—respuesta en Telegram en 24 h.',
+      },
+      { type: 'h2', text: 'Cómo trabaja OFM con Latinoamérica' },
+      {
+        type: 'p',
+        text: 'OFM es agencia OnlyFans internacional: México, Colombia, Argentina, Chile, Perú, Brasil, Europa y más—100% remoto. Tras la solicitud en ofmmodels.com un manager escribe por Telegram en 24 h. Sin cuota de entrada. Casos reales en el sitio.',
+      },
+      {
+        type: 'p',
+        text: 'Si buscas agencia OnlyFans en Latinoamérica—México, Colombia, Argentina, Chile, Perú, Brasil o cualquier país hispanohablante—solicita en ofmmodels.com. Manager OFM responde sin compromiso.',
       },
     ],
   },

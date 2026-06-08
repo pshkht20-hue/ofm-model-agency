@@ -43,6 +43,15 @@ export function HomeSeoBlock() {
           <Link href="/blog/onlyfans-agentstvo-ukraina" className="btn-secondary !py-2.5 !px-5">
             {t('linkUkraine')}
           </Link>
+          <Link href="/blog/onlyfans-agentstvo-moldova" className="btn-secondary !py-2.5 !px-5">
+            {t('linkMoldova')}
+          </Link>
+          <Link
+            href="/blog/onlyfans-agentstvo-latinskaya-amerika"
+            className="btn-secondary !py-2.5 !px-5"
+          >
+            {t('linkLatAm')}
+          </Link>
           <Link href="/blog/kak-vybrat-onlyfans-agentstvo" className="btn-secondary !py-2.5 !px-5">
             {t('linkAgency')}
           </Link>
