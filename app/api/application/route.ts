@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { formatVisitorGeo, getVisitorGeo } from '@/lib/geo/request';
 import { getApiErrors } from '@/lib/i18n/api-errors';
+import { trackContactSubmitServer } from '@/lib/analytics/server';
 import {
   formatApplicationMessage,
   sendTelegramMessage,
@@ -83,10 +84,17 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true });
     }
 
-    const locale = typeof body.locale === 'string' ? body.locale : undefined;
+    const locale = typeof body.locale === 'string' ? body.locale : 'ru';
     const location = formatVisitorGeo(getVisitorGeo(request));
+    const geo = getVisitorGeo(request);
     const text = formatApplicationMessage({ ...result.data, locale, location: location ?? undefined });
     await sendTelegramMessage(text);
+
+    void trackContactSubmitServer({
+      locale,
+      has_calc_prefill: body.hasCalcPrefill === true,
+      ...(geo?.countryCode ? { country: geo.countryCode } : {}),
+    });
 
     return NextResponse.json({ success: true });
   } catch (error) {

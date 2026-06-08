@@ -10,6 +10,7 @@ import {
   formatUsd,
   readCalcPrefill,
 } from '@/lib/calculator/prefill';
+import { trackContactSubmit } from '@/lib/analytics/gtag';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
@@ -63,6 +64,7 @@ export function ContactForm() {
           message: formData.get('message'),
           ageConfirmed: formData.get('ageConfirmed') === 'on',
           website: formData.get('website'),
+          hasCalcPrefill: hasCalcPrefill || Boolean(readCalcPrefill()),
         }),
       });
 
@@ -73,6 +75,11 @@ export function ContactForm() {
         setStatus('error');
         return;
       }
+
+      trackContactSubmit({
+        locale,
+        has_calc_prefill: hasCalcPrefill || Boolean(readCalcPrefill()),
+      });
 
       setStatus('success');
       clearCalcPrefill();

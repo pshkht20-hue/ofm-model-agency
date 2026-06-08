@@ -3,11 +3,13 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { trackCtaClick } from '@/lib/analytics/gtag';
 import { EASE_SMOOTH } from '@/lib/motion';
 
 export function StickyMobileCta() {
   const t = useTranslations('nav');
+  const locale = useLocale();
   const reduced = useReducedMotion();
   const [visible, setVisible] = useState(false);
 
@@ -32,6 +34,7 @@ export function StickyMobileCta() {
             href="#contact"
             aria-label={t('becomeModel')}
             className="btn-primary w-full pointer-events-auto shadow-[0_-8px_40px_-8px_rgba(255,91,181,0.5)]"
+            onClick={() => trackCtaClick({ location: 'sticky_mobile', locale })}
           >
             {t('becomeModel')}
             <ArrowRight className="w-5 h-5" />

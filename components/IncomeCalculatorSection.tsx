@@ -18,6 +18,8 @@ import {
   type Social,
 } from '@/lib/calculator/estimate';
 import { saveCalcPrefill } from '@/lib/calculator/prefill';
+import { trackCalculatorComplete, trackCtaClick } from '@/lib/analytics/gtag';
+import { useLocale } from 'next-intl';
 
 const TIER_ACCENT: Record<ResultTier, 'prime' | 'pro' | 'elite' | 'brand'> = {
   launch: 'prime',
@@ -130,6 +132,7 @@ const stepVariants = {
 
 export function IncomeCalculatorSection() {
   const t = useTranslations('home.calculator');
+  const locale = useLocale();
   const reduced = useReducedMotion();
   const [step, setStep] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -156,7 +159,13 @@ export function IncomeCalculatorSection() {
       high: result.high,
       tier: result.tier,
     });
-  }, [showResult, result]);
+    trackCalculatorComplete({
+      tier: result.tier,
+      low: result.low,
+      high: result.high,
+      locale,
+    });
+  }, [showResult, result, locale]);
 
   const currentValue = answers[questionId as keyof CalculatorAnswers];
 
@@ -381,12 +390,17 @@ export function IncomeCalculatorSection() {
                               tier: result.tier,
                             });
                           }
+                          trackCtaClick({ location: 'calculator_result', locale });
                         }}
                       >
                         {t('result.cta')}
                         <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
                       </a>
-                      <a href="#models" className="btn-secondary justify-center">
+                      <a
+                        href="#models"
+                        className="btn-secondary justify-center"
+                        onClick={() => trackCtaClick({ location: 'calculator_result_secondary', locale })}
+                      >
                         {t('result.ctaSecondary')}
                       </a>
                     </div>

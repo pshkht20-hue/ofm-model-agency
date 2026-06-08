@@ -6,7 +6,8 @@ import { gsap, registerGsapPlugins } from '@/lib/gsap/register';
 
 registerGsapPlugins();
 import { ArrowRight, Sparkles } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { trackCtaClick } from '@/lib/analytics/gtag';
 import { CreatorFloatingMotifs } from '@/components/CreatorTheme';
 import { HeroBackground } from '@/components/hero/HeroBackground';
 import { HeroTrustStrip } from '@/components/hero/HeroTrustStrip';
@@ -28,6 +29,7 @@ function clearHeroPending(section: HTMLElement | null) {
 export function HeroSection() {
   const t = useTranslations('home');
   const tCreator = useTranslations('creator');
+  const locale = useLocale();
   const sectionRef = useRef<HTMLElement>(null);
 
   useGSAP(
@@ -254,11 +256,18 @@ export function HeroSection() {
             data-hero-cta="primary"
             data-hero-reveal
             className="btn-primary group hero-cta-glow"
+            onClick={() => trackCtaClick({ location: 'hero_primary', locale })}
           >
             {t('hero.ctaPrimary')}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
           </a>
-          <a href="#models" data-hero-cta data-hero-reveal className="btn-secondary">
+          <a
+            href="#models"
+            data-hero-cta
+            data-hero-reveal
+            className="btn-secondary"
+            onClick={() => trackCtaClick({ location: 'hero_secondary', locale })}
+          >
             {t('hero.ctaSecondary')}
           </a>
         </div>
