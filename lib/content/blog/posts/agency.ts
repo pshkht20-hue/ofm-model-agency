@@ -1,4 +1,5 @@
 import type { BlogPost } from '@/lib/content/blog/types';
+import { blogApplyCta, blogNav, LINK } from '@/lib/content/blog/post-footers';
 
 export const agencyPosts: BlogPost[] = [
   {
@@ -161,6 +162,17 @@ export const agencyPosts: BlogPost[] = [
         type: 'p',
         text: 'OFM\'s Model Agency работает в full-service формате: менеджер, маркетинг, чаты и контент-стратегия. Заявка — на главной странице сайта.',
       },
+      blogNav('Дальше по теме management:', [
+        LINK.choose,
+        LINK.chats,
+        LINK.marketing,
+        LINK.faq,
+      ]),
+      blogApplyCta(
+        'Нужен full-service management?',
+        'OFM закрывает маркетинг, чаты 24/7 и контент-стратегию — менеджер ответит в Telegram за 24 часа после заявки.',
+        { note: 'Условия и процент согласуются индивидуально. Без платы за «вход».' },
+      ),
     ],
   },
   {
@@ -211,6 +223,16 @@ export const agencyPosts: BlogPost[] = [
         type: 'p',
         text: 'OFM принимает моделей на разных этапах — от старта до $20k+. Подайте заявку, если узнали себя в признаках выше: разберём план без обязательств.',
       },
+      blogNav('Перед делегированием прочитайте:', [
+        LINK.services,
+        LINK.choose,
+        LINK.income,
+        LINK.beginners,
+      ]),
+      blogApplyCta(
+        'Узнали себя в списке признаков?',
+        'Подайте заявку в OFM — разберём, окупится ли management в вашей нише, без обязательств с вашей стороны.',
+      ),
     ],
   },
   {

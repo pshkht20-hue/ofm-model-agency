@@ -78,9 +78,7 @@ export function getBlogPost(slug: string, locale?: string | Locale): BlogPost | 
   );
 }
 
-export function getAllBlogSlugs(): string[] {
-  return BASE_POSTS.map((p) => p.slug);
-}
+export { getAllBlogSlugs, getBlogPublishedAtMap } from '@/lib/content/blog/slugs';
 
 export function getPostsByCategory(
   category: BlogCategory,

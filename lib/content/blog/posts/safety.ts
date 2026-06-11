@@ -1,4 +1,5 @@
 import type { BlogPost } from '@/lib/content/blog/types';
+import { blogApplyCta, blogNav, LINK } from '@/lib/content/blog/post-footers';
 
 export const safetyPosts: BlogPost[] = [
   {
@@ -53,6 +54,16 @@ export const safetyPosts: BlogPost[] = [
         type: 'p',
         text: 'Границы с фанами, блок-листы, не принимать «реальные» отношения за продажи. Выгорание — риск безопасности так же, как и хак.',
       },
+      blogNav('Безопасность и выбор команды:', [
+        LINK.scam,
+        LINK.choose,
+        LINK.noface,
+        LINK.faq,
+      ]),
+      blogApplyCta(
+        'Важна анонимность и NDA?',
+        'В OFM доступы по принципу минимально необходимого, NDA и реакция на утечки — часть management.',
+      ),
     ],
   },
   {
@@ -103,6 +114,16 @@ export const safetyPosts: BlogPost[] = [
         type: 'p',
         text: 'OFM работает с no-face моделями — обсудим стратегию на заявке.',
       },
+      blogNav('No-face и рост:', [
+        LINK.safety,
+        LINK.marketing,
+        LINK.reddit,
+        LINK.ua,
+      ]),
+      blogApplyCta(
+        'No-face — не потолок дохода',
+        'OFM строит воронку по стилю, а не по лицу: маркетинг, чаты, контент-план. Заявка → Telegram за 24 ч.',
+      ),
     ],
   },
 ];

@@ -1,4 +1,5 @@
 import type { BlogPost } from '@/lib/content/blog/types';
+import { blogApplyCta, blogNav, LINK } from '@/lib/content/blog/post-footers';
 
 export const startPosts: BlogPost[] = [
   {
@@ -60,6 +61,16 @@ export const startPosts: BlogPost[] = [
         type: 'p',
         text: 'Имеет смысл, если вы хотите пройти путь за 7–14 дней с командой, а не учиться на ошибках в DM ночами. OFM берёт новичков: заявка на сайте, менеджер в Telegram за 24 часа.',
       },
+      blogNav('Старт без хаоса — читайте дальше:', [
+        LINK.content,
+        LINK.mistakes,
+        LINK.choose,
+        LINK.scam,
+      ]),
+      blogApplyCta(
+        'Готовы к запуску с командой?',
+        'OFM проводит новичков за 7–14 дней: профиль, контент, чаты, первый трафик. Заявка без платы за «вход».',
+      ),
     ],
   },
   {
@@ -109,6 +120,16 @@ export const startPosts: BlogPost[] = [
         type: 'tip',
         text: 'Храните исходники локально и в облаке — не отдавайте единственную копию агентству.',
       },
+      blogNav('Контент-план в системе OFM:', [
+        LINK.beginners,
+        LINK.chats,
+        LINK.pricing,
+        LINK.services,
+      ]),
+      blogApplyCta(
+        'Нужен календарь съёмок на месяц?',
+        'Контент-стратегия входит в OFM management — обсудим на заявке.',
+      ),
     ],
   },
   {
@@ -153,6 +174,16 @@ export const startPosts: BlogPost[] = [
         type: 'p',
         text: 'Неделя 1: профиль + welcome. Неделя 2: один канал трафика. Неделя 3: скорость DM или чат-менеджер. Неделя 4: тест цены PPV. Или заявка в OFM — пройдёте путь с менеджером.',
       },
+      blogNav('Исправляйте ошибки по гайдам:', [
+        LINK.beginners,
+        LINK.reddit,
+        LINK.chats,
+        LINK.safety,
+      ]),
+      blogApplyCta(
+        'Устали повторять одни и те же ошибки?',
+        'OFM выстраивает систему с нуля: профиль, трафик, чаты. Менеджер в Telegram за 24 часа.',
+      ),
     ],
   },
 ];

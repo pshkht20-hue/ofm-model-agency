@@ -1,4 +1,5 @@
 import type { BlogPost } from '@/lib/content/blog/types';
+import { blogApplyCta, blogNav, LINK } from '@/lib/content/blog/post-footers';
 
 export const marketingPosts: BlogPost[] = [
   {
@@ -74,6 +75,16 @@ export const marketingPosts: BlogPost[] = [
         type: 'p',
         text: 'Если маркетинг съедает больше времени, чем съёмка — это сигнал делегировать. OFM строит воронку под ключ: заявка на сайте, ответ менеджера за 24 часа.',
       },
+      blogNav('Связанные гайды OFM:', [
+        LINK.reddit,
+        LINK.ig,
+        LINK.retention,
+        LINK.chats,
+      ]),
+      blogApplyCta(
+        'Хотите воронку под ключ?',
+        'В OFM маркетинг, чаты и аналитика входят в management — не нужно собирать фрилансеров по кускам.',
+      ),
     ],
   },
   {
@@ -124,6 +135,16 @@ export const marketingPosts: BlogPost[] = [
         type: 'tip',
         text: 'Трафик без чатов — как вода в дырявом ведре: подписчик пришёл и ушёл без покупки.',
       },
+      blogNav('Углубитесь в воронку:', [
+        LINK.chats,
+        LINK.marketing,
+        LINK.retention,
+        LINK.ua,
+      ]),
+      blogApplyCta(
+        'Трафик есть, а DM не конвертируют?',
+        'Чаты 24/7 — часть management в OFM. Заявка на сайте → менеджер в Telegram за 24 часа.',
+      ),
     ],
   },
   {
@@ -169,6 +190,16 @@ export const marketingPosts: BlogPost[] = [
         type: 'p',
         text: 'Reels → профиль → link → landing/message → OnlyFans. Тестируйте разные CTA в био («exclusive content», «VIP club»). Отслеживайте, какая сеть даёт платящих, а не только клики.',
       },
+      blogNav('Параллельные каналы роста:', [
+        LINK.reddit,
+        LINK.marketing,
+        LINK.safety,
+        LINK.faq,
+      ]),
+      blogApplyCta(
+        'Нужна SFW-воронка без бана?',
+        'OFM тестирует креативы и источники трафика под вашу нишу — заявка без обязательств.',
+      ),
     ],
   },
   {
@@ -215,6 +246,16 @@ export const marketingPosts: BlogPost[] = [
         type: 'p',
         text: 'Считайте % отписок к активной базе. Если churn >15–20%/мес без притока «китов» — проблема в продукте (контент + чат), а не только в рекламе.',
       },
+      blogNav('Система удержания в OFM:', [
+        LINK.chats,
+        LINK.content,
+        LINK.pricing,
+        LINK.services,
+      ]),
+      blogApplyCta(
+        'Высокий churn — пора усилить чаты?',
+        'В OFM чат-менеджмент и еженедельная аналитика входят в management. Обсудим на заявке.',
+      ),
     ],
   },
 ];

@@ -1,15 +1,18 @@
 import type { MetadataRoute } from 'next';
-import { getAllBlogSlugs } from '@/lib/content/blog';
+import { getAllBlogSlugs, getBlogPublishedAtMap } from '@/lib/content/blog/slugs';
 import { routing, type Locale } from '@/i18n/routing';
 import { pathForLocale } from '@/lib/i18n/paths';
 import { getSiteUrl } from '@/lib/site';
 
 const STATIC_ROUTES = ['', '/faq', '/blog', '/privacy', '/terms'] as const;
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();
   const now = new Date();
   const slugs = getAllBlogSlugs();
+  const publishedAt = getBlogPublishedAtMap();
 
   const entries: MetadataRoute.Sitemap = [];
 
@@ -26,9 +29,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     for (const slug of slugs) {
       const localized = pathForLocale(`/blog/${slug}`, locale as Locale);
+      const date = publishedAt[slug];
       entries.push({
         url: `${siteUrl}${localized}`,
-        lastModified: now,
+        lastModified: date ? new Date(date) : now,
         changeFrequency: 'monthly',
         priority: 0.8,
       });

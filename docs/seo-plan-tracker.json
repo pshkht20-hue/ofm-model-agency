@@ -2,7 +2,7 @@
   "version": 1,
   "site": "https://ofmmodels.com",
   "planStart": "2026-06-03",
-  "updatedAt": "2026-06-08",
+  "updatedAt": "2026-06-11",
   "currentPhase": 1,
   "phases": [
     {
@@ -15,7 +15,7 @@
       "tasks": [
         {
           "id": "0.1",
-          "title": "GSC → Sitemap → «Обнаружено URL» > 0",
+          "title": "GSC → Sitemap → «Обнаружено URL» > 0 (после деплоя: проверить /sitemap.xml)",
           "owner": "user",
           "due": "2026-06-10",
           "status": "pending",

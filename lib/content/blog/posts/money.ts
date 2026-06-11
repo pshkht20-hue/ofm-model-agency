@@ -1,4 +1,5 @@
 import type { BlogPost } from '@/lib/content/blog/types';
+import { blogApplyCta, blogNav, LINK } from '@/lib/content/blog/post-footers';
 
 export const moneyPosts: BlogPost[] = [
   {
@@ -75,6 +76,16 @@ export const moneyPosts: BlogPost[] = [
         type: 'p',
         text: 'OFM ведёт чаты 24/7 в рамках management — детали процесса обсуждаются при подключении.',
       },
+      blogNav('Доход в DM — не изолированная тема:', [
+        LINK.pricing,
+        LINK.retention,
+        LINK.services,
+        LINK.faq,
+      ]),
+      blogApplyCta(
+        'Нет сил отвечать в DM ночью?',
+        'Чаты 24/7 в вашем тоне — часть OFM management. Менеджер ответит на заявку в Telegram за 24 часа.',
+      ),
     ],
   },
   {
@@ -128,6 +139,16 @@ export const moneyPosts: BlogPost[] = [
         type: 'tip',
         text: 'Тестируйте цену раз в 6–8 недель на новом трафике, не меняя всё одновременно.',
       },
+      blogNav('Цены работают в связке с:', [
+        LINK.chats,
+        LINK.income,
+        LINK.marketing,
+        LINK.choose,
+      ]),
+      blogApplyCta(
+        'Нужна помощь с прайсом и PPV?',
+        'В OFM ценообразование и A/B-тесты — часть еженедельной аналитики management.',
+      ),
     ],
   },
   {
@@ -182,6 +203,17 @@ export const moneyPosts: BlogPost[] = [
         type: 'p',
         text: 'OnlyFans берёт комиссию платформы. Агентство — свой %. Налоги — ваша юрисдикция. Считайте «на руки», а не валовую цифру с лендинга.',
       },
+      blogNav('Реалистичные ожидания — в связке с:', [
+        LINK.home,
+        LINK.faq,
+        LINK.when,
+        LINK.ua,
+      ]),
+      blogApplyCta(
+        'Хотите понять потенциал в вашей нише?',
+        'На ofmmodels.com — кейсы со скриншотами (gross total) и калькулятор. Заявка → Telegram за 24 часа.',
+        { note: 'Кейсы и калькулятор — ориентиры, не гарантия дохода.' },
+      ),
     ],
   },
 ];
