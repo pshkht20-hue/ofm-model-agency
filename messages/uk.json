@@ -468,7 +468,11 @@
     "aggregateHint": "gross total · не net моделі",
     "cta": "Хочу такий самий результат",
     "disclaimer": "Скріншоти статистики OnlyFans за згодою моделей. Суми — gross total балансу сторінки, не чистий дохід і не гарантія результату. OFM не афілійований з OnlyFans.",
-    "altScreenshot": "Total балансу сторінки — кейс {tier}",
+    "altScreenshot": {
+      "elite": "Скріншот статистики OnlyFans — кейс Elite, gross total балансу сторінки, OFM агентство",
+      "pro": "Скріншот статистики OnlyFans — кейс Pro, gross total балансу сторінки, OFM агентство",
+      "prime": "Скріншот статистики OnlyFans — кейс Prime, gross total балансу сторінки, OFM агентство"
+    },
     "tiers": {
       "elite": "Elite",
       "pro": "Pro",
@@ -496,7 +500,7 @@
     "body": "Матеріал базується на загальній практиці creator-management (чати, маркетинг, revenue share). Не знайшли питання — <contact>напишіть менеджеру</contact>.",
     "footer": "Читайте також у <blog>блозі</blog>: гайди з вибору агентства та старту на платформі.",
     "meta": {
-      "title": "Що таке OFM — FAQ OnlyFans агентства: %, чати, безпека",
+      "title": "OFM що це — FAQ OnlyFans агентства: %, чати, заявка",
       "description": "Що таке OFM, як працює OnlyFans management: послуги, комісія, договір, чати 24/7. Заявка — відповідь у Telegram за 24 години."
     }
   },

@@ -5,6 +5,11 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
     title: 'Sobre la agencia y la colaboración',
     items: [
       {
+        question: '¿Qué es OFM (OFM\'s Model Agency)?',
+        answer:
+          'OFM (OFM\'s Model Agency, ofmmodels.com) es una agencia internacional independiente de management OnlyFans para creadoras. No estamos vinculados a la plataforma OnlyFans ni hablamos en su nombre. El equipo asume marketing, chats 24/7, estrategia de contenido, analítica y protección de la cuenta; tú te centras en el contenido. La colaboración empieza con una solicitud gratuita en el sitio — un manager responde por Telegram en 24 horas. Condiciones y porcentaje se acuerdan de forma individual, sin pagos ocultos de «entrada».',
+      },
+      {
         question: '¿Qué es una agencia de OnlyFans y para qué sirve a una modelo?',
         answer:
           'Una agencia de OnlyFans (management) es un equipo que asume el lado empresarial de la cuenta: promoción, mensajes con suscriptores, precios, plan de contenido, analítica y crecimiento de ingresos. La modelo se centra en su imagen y contenido; la agencia en el sistema que convierte el tráfico en suscripciones y ventas por mensajes directos. Sin estructura, muchas creadoras chocan con un techo de unos 2–5 mil dólares al mes aunque su potencial sea mayor.',
@@ -64,6 +69,11 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
   {
     title: 'Dinero, porcentaje y contrato',
     items: [
+      {
+        question: '¿Qué porcentaje cobra una agencia de OnlyFans?',
+        answer:
+          'Lo habitual es un porcentaje de los ingresos brutos de la creadora (revenue share), no un salario fijo. Para servicio completo, el rango de mercado es aproximadamente 25–40 % según el alcance (marketing, chats, contenido, analítica). Los paquetes «solo chats» suelen tener un porcentaje menor, pero el crecimiento es limitado sin marketing. En OFM\'s Model Agency el porcentaje y los servicios se acuerdan por escrito tras la solicitud; no hay pagos upfront ocultos de «entrada». Las cifras del sitio son totales brutos de la página OnlyFans, no el pago neto de la creadora.',
+      },
       {
         question: '¿Cuánto cobra una agencia de OnlyFans? Modelos de pago habituales',
         answer:

@@ -5,6 +5,11 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
     title: 'About the agency and working together',
     items: [
       {
+        question: 'What is OFM (OFM\'s Model Agency)?',
+        answer:
+          'OFM (OFM\'s Model Agency, ofmmodels.com) is an independent international OnlyFans management agency for creators. We are not affiliated with the OnlyFans platform and do not speak on its behalf. Our team handles marketing, 24/7 chats, content strategy, analytics, and account protection; you focus on content. Collaboration starts with a free application on the site — a manager replies on Telegram within 24 hours. Terms and commission are agreed individually, with no hidden upfront “entry” fees.',
+      },
+      {
         question: 'What is an OnlyFans agency, and why would a model need one?',
         answer:
           'An OnlyFans agency (management) is a team that handles the business side of your account: promotion, subscriber messaging, pricing, content planning, analytics, and revenue growth. You focus on your brand and content; the agency runs the system that turns traffic into subscriptions and sales in direct messages. Without structure, many creators hit a ceiling around $2–5k per month even when their potential is higher.',
@@ -64,6 +69,11 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
   {
     title: 'Money, percentage, and contract',
     items: [
+      {
+        question: 'What percentage does an OnlyFans agency take?',
+        answer:
+          'Agencies usually take a percentage of the creator\'s gross revenue (revenue share), not a fixed salary. For full-service management, the market range is roughly 25–40% depending on scope (marketing, chats, content, analytics). “Chats only” packages often have a lower percentage but limited growth without marketing. At OFM\'s Model Agency, commission and services are agreed in writing after you apply; there are no hidden upfront entry fees. Figures on the site are gross OnlyFans page totals, not the creator\'s net payout.',
+      },
       {
         question: 'How much does an OnlyFans agency charge? Typical payment models',
         answer:

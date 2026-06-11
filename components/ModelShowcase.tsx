@@ -66,7 +66,7 @@ function ScreenshotFrame({
         <div data-phone-screen>
           <ResultScreenshot
             src={item.image}
-            alt={t('altScreenshot', { tier: t(`tiers.${item.tier}`) })}
+            alt={t(`altScreenshot.${item.tier}`)}
             tier={item.tier}
             width={item.imageWidth}
             height={item.imageHeight}

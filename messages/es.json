@@ -468,7 +468,11 @@
     "aggregateHint": "gross total · no net de la modelo",
     "cta": "Quiero resultados así",
     "disclaimer": "Capturas de estadísticas OnlyFans con consentimiento de las modelos. Las cifras son gross total del balance, no ingreso neto ni garantía de resultado. OFM no está afiliado a OnlyFans.",
-    "altScreenshot": "Total del balance de página — caso {tier}",
+    "altScreenshot": {
+      "elite": "Captura de estadísticas OnlyFans — caso Elite, gross total de la página, agencia OFM",
+      "pro": "Captura de estadísticas OnlyFans — caso Pro, gross total de la página, agencia OFM",
+      "prime": "Captura de estadísticas OnlyFans — caso Prime, gross total de la página, agencia OFM"
+    },
     "tiers": {
       "elite": "Elite",
       "pro": "Pro",

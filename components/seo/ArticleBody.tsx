@@ -1,4 +1,5 @@
 import type { BlogBlock } from '@/lib/content/blog';
+import { Link } from '@/i18n/navigation';
 
 export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
   return (
@@ -35,6 +36,48 @@ export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
             >
               {block.text}
             </blockquote>
+          );
+        }
+        if (block.type === 'nav') {
+          return (
+            <nav
+              key={i}
+              aria-label={block.intro ?? 'Related pages'}
+              className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-5 py-4"
+            >
+              {block.intro ? (
+                <p className="text-sm text-white/55 mb-3">{block.intro}</p>
+              ) : null}
+              <ul className="flex flex-wrap gap-x-4 gap-y-2">
+                {block.links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-accent-pink hover:text-accent-cyan transition"
+                    >
+                      {link.label} →
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          );
+        }
+        if (block.type === 'cta') {
+          return (
+            <div
+              key={i}
+              className="mt-10 rounded-2xl border border-accent-pink/20 bg-accent-pink/[0.06] px-6 py-8 text-center"
+            >
+              <h2 className="font-serif text-xl text-white mb-3">{block.title}</h2>
+              <p className="text-body text-sm mb-6 max-w-lg mx-auto">{block.body}</p>
+              <Link href={block.buttonHref} className="btn-primary inline-flex">
+                {block.buttonLabel}
+              </Link>
+              {block.note ? (
+                <p className="text-xs text-white/40 mt-4 max-w-md mx-auto">{block.note}</p>
+              ) : null}
+            </div>
           );
         }
         return (

@@ -5,7 +5,16 @@ export type BlogBlock =
   | { type: 'h2'; text: string }
   | { type: 'h3'; text: string }
   | { type: 'ul'; items: string[] }
-  | { type: 'tip'; text: string };
+  | { type: 'tip'; text: string }
+  | { type: 'nav'; intro?: string; links: { href: string; label: string }[] }
+  | {
+      type: 'cta';
+      title: string;
+      body: string;
+      buttonHref: string;
+      buttonLabel: string;
+      note?: string;
+    };
 
 import type { BlogCover } from '@/lib/content/blog/covers';
 

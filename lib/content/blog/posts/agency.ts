@@ -72,6 +72,24 @@ export const agencyPosts: BlogPost[] = [
         type: 'p',
         text: 'В OFM\'s Model Agency менеджер отвечает в Telegram в течение 24 часов после заявки на сайте, условия обсуждаются индивидуально, без платы за «вступление». Используйте этот материал как базу для интервью с любой командой.',
       },
+      {
+        type: 'nav',
+        intro: 'На сайте OFM — связанные материалы:',
+        links: [
+          { href: '/blog/onlyfans-agentstvo-moshennichestvo', label: '10 признаков скама' },
+          { href: '/faq', label: 'FAQ: OFM и процент агентства' },
+          { href: '/blog/onlyfans-agentstvo-ukraina', label: 'OnlyFans агентство Украина' },
+          { href: '/', label: 'Главная и заявка' },
+        ],
+      },
+      {
+        type: 'cta',
+        title: 'Подать заявку в OFM',
+        body: 'Менеджер свяжется в Telegram в течение 24 часов — без обязательств и без платы за «вход».',
+        buttonHref: '/#contact',
+        buttonLabel: 'Подать заявку',
+        note: 'Суммы в кейсах на сайте — gross total баланса страницы OnlyFans, не чистый доход модели.',
+      },
     ],
   },
   {
@@ -244,6 +262,24 @@ export const agencyPosts: BlogPost[] = [
         type: 'p',
         text: 'OFM не берёт предоплату за «запуск». Заявка бесплатна — менеджер объясняет условия в переписке до любых обязательств.',
       },
+      {
+        type: 'nav',
+        intro: 'На сайте OFM — связанные материалы:',
+        links: [
+          { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Как выбрать агентство' },
+          { href: '/faq', label: 'FAQ: процент и договор' },
+          { href: '/blog/onlyfans-agentstvo-ukraina', label: 'Агентство для Украины' },
+          { href: '/', label: 'Главная' },
+        ],
+      },
+      {
+        type: 'cta',
+        title: 'Проверить OFM до подписания',
+        body: 'Подайте заявку — менеджер ответит в Telegram за 24 часа и ответит на вопросы без давления.',
+        buttonHref: '/#contact',
+        buttonLabel: 'Подать заявку',
+        note: 'OFM не берёт предоплату за «вход». Условия согласуются индивидуально.',
+      },
     ],
   },
   {
@@ -264,6 +300,15 @@ export const agencyPosts: BlogPost[] = [
       {
         type: 'p',
         text: 'Украина — один из самых активных рынков OnlyFans в Восточной Европе: сильный английский, привычка к удалённой работе и большой пул моделей, которые ищут агентство не «на удачу», а с понятными условиями. Запрос «OnlyFans агентство Украина» в Google ведёт на десятки вакансий на Layboard и форумах — но отличить профессиональный management от скама по одному объявлению почти невозможно. Ниже — структурированный гайд: что должно входить в работу, как проверить команду и как устроено сотрудничество в OFM\'s Model Agency.',
+      },
+      {
+        type: 'nav',
+        intro: 'Полезно перед чтением:',
+        links: [
+          { href: '/faq', label: 'Что такое OFM — FAQ' },
+          { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Чек-лист выбора агентства' },
+          { href: '/blog/onlyfans-agentstvo-moshennichestvo', label: 'Признаки скама' },
+        ],
       },
       {
         type: 'h2',
@@ -356,12 +401,21 @@ export const agencyPosts: BlogPost[] = [
         text: 'Для OnlyFans management физическая студия не обязательна — важны интернет, свет для съёмок и конфиденциальность. Модели из Киева и Одессы часто снимают дома; агентство даёт контент-план и референсы. Если вы в EU — часовой пояс учитывается при чатах на US/UK прайм-тайм.',
       },
       {
-        type: 'h2',
-        text: 'Следующий шаг',
+        type: 'nav',
+        intro: 'Другие материалы OFM:',
+        links: [
+          { href: '/blog/onlyfans-agentstvo-moldova', label: 'Агентство Молдова' },
+          { href: '/blog/chto-delaet-onlyfans-agentstvo', label: '12 услуг management' },
+          { href: '/', label: 'Кейсы и заявка' },
+        ],
       },
       {
-        type: 'p',
-        text: 'Сравните минимум два агентства по чек-листу, прочитайте FAQ на сайте и посмотрите кейсы. Если ищете OnlyFans агентство в Украине с чатами 24/7, маркетингом и прозрачными условиями — подайте заявку на главной ofmmodels.com. Менеджер OFM ответит в Telegram без обязательств с вашей стороны.',
+        type: 'cta',
+        title: 'OnlyFans агентство для Украины — заявка в OFM',
+        body: 'Сравните минимум два агентства по чек-листу, прочитайте FAQ и кейсы. Если ищете команду с чатами 24/7 и прозрачным процентом — подайте заявку: менеджер ответит в Telegram за 24 часа.',
+        buttonHref: '/#contact',
+        buttonLabel: 'Подать заявку',
+        note: 'Работа полностью удалённая: Киев, Одесса, Львов, диаспора в ЕС. Gross total в кейсах — не net модели.',
       },
     ],
   },
@@ -384,6 +438,15 @@ export const agencyPosts: BlogPost[] = [
       {
         type: 'p',
         text: 'Молдова — компактный, но растущий рынок OnlyFans: сильный русский и румынский, привычка к удалённой работе и модели, которые ищут агентство с прозрачными условиями, а не «вакансию с $30k в заголовке». Запросы «OnlyFans агентство Молдова» и «agenție OnlyFans Moldova» ведут на Telegram-каналы и доски объявлений, где профессиональный management и скам выглядят одинаково. Ниже — что должно входить в full-service, как проверить команду и как работает OFM\'s Model Agency с creator\'ами из MD и диаспоры в ЕС.',
+      },
+      {
+        type: 'nav',
+        intro: 'Полезно перед чтением:',
+        links: [
+          { href: '/faq', label: 'FAQ OFM' },
+          { href: '/blog/onlyfans-agentstvo-ukraina', label: 'Агентство Украина' },
+          { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Как выбрать агентство' },
+        ],
       },
       {
         type: 'h2',
@@ -460,12 +523,12 @@ export const agencyPosts: BlogPost[] = [
         ],
       },
       {
-        type: 'h2',
-        text: 'Следующий шаг',
-      },
-      {
-        type: 'p',
-        text: 'Сравните минимум два агентства, прочитайте FAQ и кейсы. Если ищете OnlyFans агентство в Молдове с чатами 24/7 и прозрачными условиями — подайте заявку на ofmmodels.com. Менеджер OFM ответит в Telegram без обязательств.',
+        type: 'cta',
+        title: 'OnlyFans агентство для Молдовы — заявка в OFM',
+        body: 'Сравните минимум два агентства, прочитайте FAQ и кейсы. Кишинёв, диаспора в ЕС — работа удалённо. Менеджер ответит в Telegram за 24 часа.',
+        buttonHref: '/#contact',
+        buttonLabel: 'Подать заявку',
+        note: 'Без платы за «вход». Условия и процент — индивидуально после созвона.',
       },
     ],
   },
@@ -492,6 +555,16 @@ export const agencyPosts: BlogPost[] = [
       {
         type: 'p',
         text: 'Латинская Америка — один из самых быстрорастущих регионов OnlyFans: México, Colombia, Argentina, Chile, Perú, Ecuador, Uruguay, Paraguay, Bolivia, Венесуэла, Центральная Америка (Costa Rica, Panamá, Guatemala) и Бразилия. Запросы «agencia OnlyFans Latinoamérica», «agencia OnlyFans México» и «agencia OnlyFans Brasil» ведут на сотни объявлений — от профессиональных студий до скама. Эта статья — не про одну страну, а про весь регион: как выбрать management, что входит в full-service и как OFM работает с creator\'ами из LatAm удалённо, на испанском, португальском и английском.',
+      },
+      {
+        type: 'nav',
+        intro: 'Materiales relacionados en OFM:',
+        links: [
+          { href: '/faq', label: 'FAQ OFM' },
+          { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Cómo elegir agencia' },
+          { href: '/blog/onlyfans-agentstvo-moshennichestvo', label: 'Red flags / скам' },
+          { href: '/es/blog', label: 'Blog en español' },
+        ],
       },
       {
         type: 'h2',
@@ -596,12 +669,12 @@ export const agencyPosts: BlogPost[] = [
         ],
       },
       {
-        type: 'h2',
-        text: 'Siguiente paso',
-      },
-      {
-        type: 'p',
-        text: 'Compara al menos dos agencias, lee el FAQ y los casos. Si buscas agencia OnlyFans en Latinoamérica — México, Colombia, Argentina, Chile, Perú, Brasil o cualquier país hispanohablante — solicita en ofmmodels.com. Manager OFM responde por Telegram sin compromiso.',
+        type: 'cta',
+        title: 'Agencia OnlyFans LatAm — solicitud en OFM',
+        body: 'Compara al menos dos agencias, lee el FAQ y los casos. México, Colombia, Argentina, Brasil y toda LatAm — 100% remoto. Manager responde por Telegram en 24 h.',
+        buttonHref: '/#contact',
+        buttonLabel: 'Enviar solicitud',
+        note: 'Sin cuota de entrada. Cifras en el sitio — gross total de la página OnlyFans, no ingreso neto.',
       },
     ],
   },

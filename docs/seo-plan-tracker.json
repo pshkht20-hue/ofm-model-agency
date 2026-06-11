@@ -3,7 +3,7 @@
   "site": "https://ofmmodels.com",
   "planStart": "2026-06-03",
   "updatedAt": "2026-06-08",
-  "currentPhase": 0,
+  "currentPhase": 1,
   "phases": [
     {
       "id": 0,
@@ -47,7 +47,7 @@
           "title": "Запросить индексацию: /blog, Moldova, LatAm, /es/blog",
           "owner": "user",
           "due": "2026-06-12",
-          "status": "pending",
+          "status": "done",
           "link": "docs/SEO-MASTER-PLAN.md#индексация"
         },
         {
@@ -107,21 +107,21 @@
           "title": "Alt-тексты кейсов (case-pro, case-elite, case-prime)",
           "owner": "dev",
           "due": "2026-06-18",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "1.5",
           "title": "Перелинковка: в каждой статье 2–3 ссылки (главная, FAQ, гео)",
           "owner": "dev",
           "due": "2026-06-22",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "1.6",
           "title": "FAQ: блок «Сколько % берёт агентство» + gross total disclaimer",
           "owner": "dev",
           "due": "2026-06-20",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "1.7",

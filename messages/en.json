@@ -468,7 +468,11 @@
     "aggregateHint": "gross total · not creator net",
     "cta": "I want similar results",
     "disclaimer": "OnlyFans statistics screenshots published with creators' consent. Figures are gross page totals, not net payout or guaranteed results. OFM is not affiliated with OnlyFans.",
-    "altScreenshot": "Page balance total — {tier} case",
+    "altScreenshot": {
+      "elite": "OnlyFans statistics screenshot — Elite case, gross page balance total, OFM agency",
+      "pro": "OnlyFans statistics screenshot — Pro case, gross page balance total, OFM agency",
+      "prime": "OnlyFans statistics screenshot — Prime case, gross page balance total, OFM agency"
+    },
     "tiers": {
       "elite": "Elite",
       "pro": "Pro",
