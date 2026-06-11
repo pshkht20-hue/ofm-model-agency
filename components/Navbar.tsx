@@ -7,7 +7,7 @@ import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { useTranslations } from 'next-intl';
 import { Logo } from '@/components/Logo';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { SocialLinks } from '@/components/social/SocialLinks';
 import { useSectionContext } from '@/context/SectionContext';
 import { NAV_SECTION_MAP } from '@/lib/sections';
@@ -15,7 +15,9 @@ import { NAV_SECTION_MAP } from '@/lib/sections';
 export function Navbar() {
   const t = useTranslations('nav');
   const reduced = useReducedMotion();
+  const pathname = usePathname();
   const { activeId } = useSectionContext();
+  const isHome = pathname === '/';
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -113,7 +115,7 @@ export function Navbar() {
             >
               {NAV_LINKS.map((link) => {
                 const sectionId = NAV_SECTION_MAP[link.href];
-                const isActive = sectionId && activeId === sectionId;
+                const isActive = isHome && sectionId && activeId === sectionId;
                 return (
                   <Link
                     key={link.href}

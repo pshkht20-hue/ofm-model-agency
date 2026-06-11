@@ -18,40 +18,39 @@ export function SectionProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const ids = HOME_SECTIONS.map((s) => s.id);
-    const elements = ids
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => el !== null);
+    if (ids.every((id) => !document.getElementById(id))) return;
 
-    if (elements.length === 0) return;
+    let ticking = false;
 
-    const ratios = new Map<string, number>();
+    const update = () => {
+      const trigger = window.innerHeight * 0.38;
+      let current: string | null = null;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const id = entry.target.id;
-          ratios.set(id, entry.intersectionRatio);
-        });
-
-        let bestId: string | null = null;
-        let bestRatio = 0;
-
-        ratios.forEach((ratio, id) => {
-          if (ratio > bestRatio) {
-            bestRatio = ratio;
-            bestId = id;
-          }
-        });
-
-        if (bestId && bestRatio > 0.12) {
-          setActiveId(bestId);
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top <= trigger) {
+          current = id;
         }
-      },
-      { threshold: [0, 0.12, 0.25, 0.4, 0.55, 0.7], rootMargin: '-20% 0px -55% 0px' },
-    );
+      }
 
-    elements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+      setActiveId(current);
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
   }, []);
 
   const activeAccent =
