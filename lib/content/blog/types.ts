@@ -23,6 +23,8 @@ export type BlogPost = {
   title: string;
   description: string;
   publishedAt: string;
+  /** Дата обновления для Article.dateModified (freshness). Если нет — берётся publishedAt. */
+  updatedAt?: string;
   category: BlogCategory;
   keywords: string[];
   readMinutes: number;

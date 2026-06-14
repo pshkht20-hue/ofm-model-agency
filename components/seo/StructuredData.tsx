@@ -42,7 +42,7 @@ export function ArticleJsonLd({ post, locale }: { post: BlogPost; locale: Locale
     headline: post.title,
     description: post.description,
     datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
+    dateModified: post.updatedAt ?? post.publishedAt,
     inLanguage: HTML_LANG[locale],
     author: {
       '@type': 'Organization',

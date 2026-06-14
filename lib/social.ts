@@ -23,7 +23,10 @@ function resolveHref(platform: SocialPlatform): string | null {
   const href = fromEnv || DEFAULT_LINKS[platform];
   if (!href || href === '#') return null;
   try {
-    new URL(href);
+    const url = new URL(href);
+    // Отбрасываем «голые» ссылки на корень домена (напр. https://instagram.com/) —
+    // это не реальный профиль: ломает Organization sameAs и даёт битую иконку в футере.
+    if (url.pathname.replace(/\/+$/, '') === '') return null;
     return href;
   } catch {
     return null;

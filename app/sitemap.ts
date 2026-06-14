@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllBlogSlugs, getBlogPublishedAtMap } from '@/lib/content/blog/slugs';
 import { routing, type Locale } from '@/i18n/routing';
-import { pathForLocale } from '@/lib/i18n/paths';
+import { pathForLocale, hreflangAlternates } from '@/lib/i18n/paths';
 import { getSiteUrl } from '@/lib/site';
 
 const STATIC_ROUTES = ['', '/faq', '/blog', '/privacy', '/terms'] as const;
@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: path === '' ? 'weekly' : path === '/blog' ? 'weekly' : 'monthly',
         priority: path === '' ? 1 : path === '/faq' ? 0.9 : path === '/blog' ? 0.85 : 0.5,
+        alternates: { languages: hreflangAlternates(siteUrl, path) },
       });
     }
 
@@ -35,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: date ? new Date(date) : now,
         changeFrequency: 'monthly',
         priority: 0.8,
+        alternates: { languages: hreflangAlternates(siteUrl, `/blog/${slug}`) },
       });
     }
   }

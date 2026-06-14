@@ -34,7 +34,18 @@ export const siteConfig = {
   ],
 } as const;
 
+/** Канонический прод-домен. Fallback, если NEXT_PUBLIC_SITE_URL не задан. */
+export const CANONICAL_SITE_URL = 'https://ofmmodels.com';
+
 export function getSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '');
-  return fromEnv || 'https://ofm-model-agency.vercel.app';
+  if (!fromEnv && process.env.NODE_ENV === 'production') {
+    // Не молчим: без env легко залить чужие (vercel.app) canonical/sitemap/hreflang в индекс.
+    console.warn(
+      '[seo] NEXT_PUBLIC_SITE_URL не задан — использую канонический',
+      CANONICAL_SITE_URL,
+      '. Задайте переменную в Vercel (Production И Preview).',
+    );
+  }
+  return fromEnv || CANONICAL_SITE_URL;
 }

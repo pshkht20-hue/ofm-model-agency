@@ -28,7 +28,7 @@ export function JsonLd({ locale = 'ru', description }: JsonLdProps) {
     name: siteConfig.name,
     description,
     url: `${siteUrl}${homePath}`,
-    logo: `${siteUrl}/icon`,
+    logo: `${siteUrl}/icon.svg`,
     sameAs,
   };
 
