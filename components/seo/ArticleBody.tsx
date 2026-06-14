@@ -38,6 +38,23 @@ export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
             </blockquote>
           );
         }
+        if (block.type === 'quote') {
+          return (
+            <figure
+              key={i}
+              className="rounded-xl border border-accent-cyan/20 bg-accent-cyan/[0.05] px-5 py-4"
+            >
+              <blockquote className="text-white/80 text-[0.9375rem] leading-relaxed italic">
+                “{block.text}”
+              </blockquote>
+              {block.author ? (
+                <figcaption className="text-xs text-accent-cyan/80 mt-3 not-italic">
+                  — {block.author}
+                </figcaption>
+              ) : null}
+            </figure>
+          );
+        }
         if (block.type === 'nav') {
           return (
             <nav

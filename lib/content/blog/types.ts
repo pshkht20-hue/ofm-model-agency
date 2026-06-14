@@ -6,6 +6,7 @@ export type BlogBlock =
   | { type: 'h3'; text: string }
   | { type: 'ul'; items: string[] }
   | { type: 'tip'; text: string }
+  | { type: 'quote'; text: string; author?: string }
   | { type: 'nav'; intro?: string; links: { href: string; label: string }[] }
   | {
       type: 'cta';
