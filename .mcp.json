@@ -1,0 +1,57 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@playwright/mcp@latest"]
+    },
+    "chrome-devtools": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "chrome-devtools-mcp@latest"]
+    },
+    "magicui": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@magicuidesign/mcp@latest"]
+    },
+    "sequential-thinking": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "exa": {
+      "type": "http",
+      "url": "https://mcp.exa.ai/mcp"
+    },
+    "ga4": {
+      "command": "cmd",
+      "args": ["/c", "python", "-m", "pipx", "run", "analytics-mcp"],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "c:\\Users\\User\\ofm-agency\\ofm-model-agency\\.credentials\\google-service-account.json"
+      }
+    },
+    "gsc": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "mcp-server-gsc"],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "c:\\Users\\User\\ofm-agency\\ofm-model-agency\\.credentials\\google-service-account.json"
+      }
+    },
+    "deepl": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "deepl-mcp-server"],
+      "env": {
+        "DEEPL_API_KEY": "${DEEPL_API_KEY}"
+      }
+    },
+    "dataforseo": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "dataforseo-mcp-server"],
+      "env": {
+        "DATAFORSEO_USERNAME": "${DATAFORSEO_USERNAME}",
+        "DATAFORSEO_PASSWORD": "${DATAFORSEO_PASSWORD}"
+      }
+    }
+  }
+}

@@ -40,9 +40,20 @@ yarn-error.log*
 # Analytics CSV exports (latest-report.md is committed when generated)
 docs/analytics-reports/*.csv
 
+# Google Ads verification — contains passport / PII (local only)
+docs/google-ads-verification/
+
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ECC raw skill sources — keep local, only the curated subset is wired into .claude/skills/
+/.cursor/skills/
+/.cursor/.agents/
+/.agents/skills/
+
+# Claude Code private/local settings (may contain API keys) — committed config is .mcp.json + .claude/skills/
+/.claude/settings.local.json
