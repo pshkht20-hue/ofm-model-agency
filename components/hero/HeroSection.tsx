@@ -91,7 +91,7 @@ export function HeroSection() {
             gsap.set('[data-hero-scan]', { opacity: 0, scaleX: 0 });
             gsap.set('[data-hero-corner]', { opacity: 0 });
             gsap.set('[data-hero-badge]', { opacity: 0, y: 12 });
-            gsap.set('[data-hero-line]', { opacity: 0, y: 20 });
+            gsap.set('[data-hero-line]', { yPercent: 100 });
             gsap.set('[data-hero-lead]', { opacity: 0, y: 14 });
             gsap.set('[data-hero-cta]', { opacity: 0, y: 12 });
             gsap.set('[data-hero-stat]', { opacity: 0, y: 10 });
@@ -103,7 +103,7 @@ export function HeroSection() {
             const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
 
             tl.to('[data-hero-badge]', { opacity: 1, y: 0, duration: 0.85 }, 0.15)
-              .to('[data-hero-line]', { opacity: 1, y: 0, duration: 0.9, stagger: 0.14 }, 0.35)
+              .to('[data-hero-line]', { yPercent: 0, duration: 0.85, stagger: 0.1, ease: 'power3.out' }, 0.35)
               .to('[data-hero-lead]', { opacity: 1, y: 0, duration: 0.85 }, 0.78)
               .to('[data-hero-cta]', { opacity: 1, y: 0, duration: 0.75, stagger: 0.1 }, 1.02)
               .to('[data-hero-stat]', { opacity: 1, y: 0, duration: 0.65, stagger: 0.08 }, 1.32)
@@ -125,13 +125,7 @@ export function HeroSection() {
 
           gsap.set('[data-hero-scan]', { scaleX: 0, opacity: 0.9, transformOrigin: 'left center' });
           gsap.set('[data-hero-badge]', { opacity: 0, y: -18, scale: 0.9 });
-          gsap.set('[data-hero-line]', {
-            opacity: 0,
-            y: 34,
-            rotateX: 8,
-            transformPerspective: 900,
-            filter: 'blur(7px)',
-          });
+          gsap.set('[data-hero-line]', { yPercent: 100 });
           gsap.set('[data-hero-lead]', { opacity: 0, y: 28 });
           gsap.set('[data-hero-cta]', { opacity: 0, y: 28, scale: 0.94 });
           gsap.set('[data-hero-stat]', { opacity: 0, y: 18 });
@@ -154,17 +148,13 @@ export function HeroSection() {
             .to(
               '[data-hero-line]',
               {
-                opacity: 1,
-                y: 0,
-                rotateX: 0,
-                filter: 'blur(0px)',
-                duration: 0.9,
+                yPercent: 0,
+                duration: 1,
                 stagger: 0.1,
                 ease: 'power4.out',
               },
               0.55,
             )
-            .set('[data-hero-line]', { clearProps: 'filter' }, 1.35)
             .to('[data-hero-lead]', { opacity: 1, y: 0, duration: 0.8 }, '-=0.38')
             .to(
               '[data-hero-cta]',
@@ -230,18 +220,16 @@ export function HeroSection() {
         </span>
 
         <h1 className="heading-display text-[clamp(3rem,10vw,5.75rem)] mb-10 mt-12">
-          <span data-hero-line data-hero-reveal className="block">
-            {t('hero.line1')}
+          <span data-hero-reveal className="block overflow-hidden pb-[0.3em] -mb-[0.3em]">
+            <span data-hero-line className="block">{t('hero.line1')}</span>
           </span>
-          <span
-            data-hero-line="accent"
-            data-hero-reveal
-            className="block hero-accent-shimmer italic"
-          >
-            {t('hero.line2')}
+          <span data-hero-reveal className="block overflow-hidden pb-[0.3em] -mb-[0.3em]">
+            <span data-hero-line="accent" className="block hero-accent-shimmer italic">
+              {t('hero.line2')}
+            </span>
           </span>
-          <span data-hero-line data-hero-reveal className="block">
-            {t('hero.line3')}
+          <span data-hero-reveal className="block overflow-hidden pb-[0.3em] -mb-[0.3em]">
+            <span data-hero-line className="block">{t('hero.line3')}</span>
           </span>
           <span className="sr-only">{t('hero.srOnly')}</span>
         </h1>
