@@ -76,11 +76,9 @@ body {
   background: linear-gradient(
     100deg,
     #ff5bb5 0%,
-    #c084fc 14%,
-    #a855f7 28%,
+    #a855f7 35%,
     #00d4ff 50%,
-    #67e8f9 62%,
-    #a855f7 78%,
+    #a855f7 65%,
     #ff5bb5 100%
   );
   background-size: 200% auto;
@@ -88,7 +86,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: hero-accent-flow 7s linear infinite;
+  animation: hero-accent-flow 11s linear infinite;
   will-change: background-position;
 }
 

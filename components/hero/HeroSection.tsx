@@ -12,6 +12,7 @@ import { CreatorFloatingMotifs } from '@/components/CreatorTheme';
 import { HeroBackground } from '@/components/hero/HeroBackground';
 import { HeroTrustStrip } from '@/components/hero/HeroTrustStrip';
 import { NeonAccents } from '@/components/ui/NeonAccents';
+import { useMagnetic } from '@/hooks/useMagnetic';
 
 gsap.registerPlugin(useGSAP);
 
@@ -31,6 +32,7 @@ export function HeroSection() {
   const tCreator = useTranslations('creator');
   const locale = useLocale();
   const sectionRef = useRef<HTMLElement>(null);
+  const ctaMagnetRef = useMagnetic<HTMLSpanElement>(0.3);
 
   useGSAP(
     () => {
@@ -125,10 +127,10 @@ export function HeroSection() {
           gsap.set('[data-hero-badge]', { opacity: 0, y: -18, scale: 0.9 });
           gsap.set('[data-hero-line]', {
             opacity: 0,
-            y: 48,
-            rotateX: 10,
+            y: 34,
+            rotateX: 8,
             transformPerspective: 900,
-            filter: 'blur(12px)',
+            filter: 'blur(7px)',
           });
           gsap.set('[data-hero-lead]', { opacity: 0, y: 28 });
           gsap.set('[data-hero-cta]', { opacity: 0, y: 28, scale: 0.94 });
@@ -157,7 +159,7 @@ export function HeroSection() {
                 rotateX: 0,
                 filter: 'blur(0px)',
                 duration: 0.9,
-                stagger: 0.16,
+                stagger: 0.1,
                 ease: 'power4.out',
               },
               0.55,
@@ -269,8 +271,10 @@ export function HeroSection() {
             className="btn-primary group hero-cta-glow"
             onClick={() => trackCtaClick({ location: 'hero_primary', locale })}
           >
-            {t('hero.ctaPrimary')}
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
+            <span ref={ctaMagnetRef} className="inline-flex items-center gap-3">
+              {t('hero.ctaPrimary')}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
+            </span>
           </a>
           <a
             href="#models"
