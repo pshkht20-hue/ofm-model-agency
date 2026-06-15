@@ -66,24 +66,23 @@ export function HeroSection() {
           }
 
           if (section) {
+            // Scroll-out fades the cosmic background only. The hero CONTENT is not
+            // animated here on purpose — sharing y/opacity with the intro reveal made
+            // a ScrollTrigger refresh (e.g. after font-swap) re-apply the scrub's
+            // progress-0 state and leave the headline stuck hidden.
             const cosmos = section.querySelector('[data-cosmos-root]');
-            const exitTl = gsap.timeline({
-              scrollTrigger: {
-                trigger: section,
-                start: 'top top',
-                end: 'bottom top',
-                scrub: mobile ? 0.55 : 1,
-              },
-            });
-
-            exitTl.to(
-              section.querySelectorAll('[data-hero-reveal], [data-hero-scroll]'),
-              { y: mobile ? -32 : -88, opacity: 0.08, ease: 'none' },
-              0,
-            );
-
             if (cosmos) {
-              exitTl.to(cosmos, { opacity: mobile ? 0.35 : 0.18, scale: 1.05, ease: 'none' }, 0);
+              gsap.to(cosmos, {
+                opacity: mobile ? 0.35 : 0.18,
+                scale: 1.05,
+                ease: 'none',
+                scrollTrigger: {
+                  trigger: section,
+                  start: 'top top',
+                  end: 'bottom top',
+                  scrub: mobile ? 0.55 : 1,
+                },
+              });
             }
           }
 
