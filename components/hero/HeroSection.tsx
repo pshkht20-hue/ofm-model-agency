@@ -237,7 +237,11 @@ export function HeroSection() {
           >
             {t('hero.line2')}
           </span>
-          <span data-hero-line data-hero-reveal className="block">
+          <span
+            data-hero-line
+            data-hero-reveal
+            className="block text-[clamp(1.05rem,3vw,1.9rem)] font-light tracking-[0.05em] text-white/75 mt-3"
+          >
             {t('hero.line3')}
           </span>
           <span className="sr-only">{t('hero.srOnly')}</span>
