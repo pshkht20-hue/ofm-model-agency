@@ -507,236 +507,506 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   "onlyfans-skolko-zarabatyvayut-modeli": {
-    title: "¿Cuánto se gana en OnlyFans? Cifras realistas",
+    title: "Cuánto se gana en OnlyFans: cifras realistas",
     description:
-      "¿Cuánto se gana en OnlyFans 2026? Rangos realistas, disclaimer gross total y rol de agencia — guía honesta desde OFM.",
-    keywords: ["cuánto gana onlyfans", "ingresos modelo onlyfans"],
+      "Cuánto se gana en OnlyFans en 2026: rangos reales de principiantes a top models, de qué depende el ingreso, gross vs neto y el papel de una agencia OFM.",
+    keywords: [
+      "cuánto se gana en onlyfans",
+      "ingresos modelo onlyfans",
+      "ganar dinero en onlyfans",
+      "cuánto gana una modelo de onlyfans",
+      "ingresos onlyfans 2026",
+    ],
     blocks: [
       {
         type: "p",
-        text: "Titulares de “$100k al mes” venden cursos, pero la mediana del mercado es más modesta. Un desglose honesto evita decepciones y ayuda a planificar.",
+        text: "Los titulares de «$100k al mes» venden cursos, pero la mediana real del mercado es mucho más modesta. Un análisis honesto te evita la decepción y te ayuda a trazar un plan que de verdad funcione.",
       },
-      { type: "h2", text: "Referencias por etapa (bruto)" },
+      {
+        type: "h2",
+        text: "Referencias por etapa (facturación bruta)",
+      },
       {
         type: "ul",
         items: [
-          "Primeros 1–3 meses: $500–3 000 con trabajo sistemático",
-          "$3 000–10 000: contenido estable + al menos 1–2 canales de tráfico",
-          "$10 000–30 000+: chats y marketing fuertes, nicho claro",
-          "$30 000+: top de nicho, equipo, marca, a menudo 2+ años de sistema",
+          "Primeros 1–3 meses: $500–3.000 con trabajo sistemático",
+          "$3.000–10.000: contenido constante + al menos 1–2 canales de tráfico",
+          "$10.000–30.000+: chats fuertes, marketing y un nicho definido",
+          "$30.000+: nicho top, equipo y marca; a menudo 2+ años de sistema",
         ],
       },
       {
         type: "p",
-        text: "En OFM, parte de las modelos está en $12 000–35 000+/mes—no es garantía ni mediana de toda solicitud.",
+        text: "En OFM una parte de las modelos se mueve en el rango de $12.000–35.000+/mes. No es una garantía ni la mediana para todas las solicitudes.",
       },
-      { type: "h2", text: "De qué depende el ingreso" },
+      {
+        type: "h2",
+        text: "De qué depende el ingreso",
+      },
       {
         type: "ul",
         items: [
-          "Nicho y competencia",
-          "Horas de contenido y disciplina",
-          "Calidad de marketing y chats",
-          "Límites y sostenibilidad (burnout = caída)",
+          "El nicho y la competencia",
+          "Las horas de contenido y la disciplina",
+          "La calidad del marketing y de los chats",
+          "Tus límites y tu sostenibilidad (el burnout = caída de ingresos)",
         ],
       },
-      { type: "h2", text: "Neto vs bruto" },
+      {
+        type: "h2",
+        text: "Neto vs bruto",
+      },
       {
         type: "p",
-        text: "OnlyFans cobra comisión de plataforma. La agencia, la suya. Impuestos según tu jurisdicción. Cuenta lo que te queda, no el bruto del landing.",
+        text: "OnlyFans cobra la comisión de la plataforma. La agencia, su porcentaje. Los impuestos dependen de tu país. Calcula lo que te queda «en mano», no la cifra bruta del landing.",
+      },
+      {
+        type: "nav",
+        intro: "Unas expectativas realistas van de la mano con:",
+        links: [
+          {
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "Empezar desde cero",
+          },
+          {
+            href: "/faq",
+            label: "FAQ: qué es OFM",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Cómo elegir agencia",
+          },
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Trabajar como modelo de OnlyFans",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Quieres conocer tu potencial en tu nicho?",
+        body: "En ofmmodels.com encontrarás casos con capturas (facturación bruta) y una calculadora. Envía tu solicitud y te escribimos por Telegram (@Azalia_agency) en 24 horas.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Los casos y la calculadora son orientativos, no una garantía de ingresos. Las cifras son la facturación bruta del balance de la página de OnlyFans, no el pago neto de la modelo.",
       },
     ],
   },
   "onlyfans-agentstvo-dlya-nachinayushchih": {
-    title: "OnlyFans para principiantes: agencia o solo en 2026",
+    title: "OnlyFans para principiantes: agencia o sola en 2026",
     description:
-      "Arranque paso a paso: verificación, nicho, primer contenido, marketing y cuándo sumar management.",
-    keywords: ["cómo empezar onlyfans", "onlyfans para principiantes"],
+      "Cómo empezar en OnlyFans paso a paso: verificación, nicho, primer contenido, tráfico y cuándo sumar una agencia que promociona y vende por ti.",
+    keywords: [
+      "cómo empezar en onlyfans",
+      "onlyfans para principiantes",
+      "trabajar en onlyfans sin experiencia",
+      "agencia onlyfans para empezar",
+      "ganar dinero en onlyfans",
+    ],
     blocks: [
       {
         type: "p",
-        text: "Empezar en OnlyFans en 2026 es técnicamente más fácil que hace cinco años—y más duro en competencia. La plataforma está madura; el suscriptor es exigente. Aquí va el orden de pasos que reduce el caos, vayas solo o con agencia.",
+        text: "Empezar en OnlyFans en 2026 es técnicamente más fácil que hace cinco años, y a la vez más competitivo. La plataforma está madura y el suscriptor es exigente. Aquí tienes el orden de pasos que reduce el caos, tanto si arrancas sola como si lo haces con una agencia de OnlyFans.",
       },
-      { type: "h2", text: "Etapa 0: Reglas y límites" },
+      {
+        type: "h2",
+        text: "Etapa 0: Reglas y límites",
+      },
       {
         type: "p",
-        text: "Solo 18+, verificación de identidad según reglas. Decide de antemano: cara / sin cara, formatos, tabúes. Los límites son la base de la marca.",
+        text: "Solo 18+, con verificación de identidad según las reglas de la plataforma. Decide de antemano: con cara o sin cara, qué formatos haces y qué es tabú para ti. Tus límites son la base de tu marca.",
       },
-      { type: "h2", text: "Etapa 1: Nicho y empaque" },
+      {
+        type: "h2",
+        text: "Etapa 1: Nicho y empaque",
+      },
       {
         type: "p",
-        text: "Nombre, estilo visual, tono. Escribe la bio de OnlyFans para un suscriptor frío de Reddit, no “hola, soy nueva”.",
+        text: "Nombre, estilo visual y tono de voz. La bio de OnlyFans se escribe pensando en un suscriptor frío que llega desde Reddit, no en un «hola, soy nueva por aquí».",
       },
-      { type: "h2", text: "Etapa 2: Pack de contenido inicial" },
+      {
+        type: "h2",
+        text: "Etapa 2: Pack de contenido inicial",
+      },
       {
         type: "ul",
         items: [
-          "10–20 posts en feed antes de promo activa",
-          "Fijado + welcome message",
-          "2–3 plantillas PPV para chats",
-          "Un set “hero” para avatar y banners",
+          "10–20 posts en el feed antes de la promo activa",
+          "Post fijado + welcome message",
+          "2–3 plantillas de PPV para los chats",
+          "Un set «hero» para el avatar y los banners",
         ],
       },
-      { type: "h2", text: "Etapa 3: Primer tráfico" },
       {
-        type: "p",
-        text: "Elige 1–2 canales (a menudo X + Reddit). No te disperses en cinco redes la primera semana. Los primeros subs prueban el embudo—no sentencian el ingreso a largo plazo.",
+        type: "h2",
+        text: "Etapa 3: Primer tráfico",
       },
-      { type: "h2", text: "Cuándo conectar agencia al inicio" },
       {
         type: "p",
-        text: "Tiene sentido si quieres el camino en 7–14 días con equipo, no aprender errores de DM de noche. OFM recibe principiantes: solicitud en la web, manager por Telegram en 24 h.",
+        text: "Elige 1–2 canales (a menudo X + Reddit). No te disperses en cinco redes en la primera semana. Tus primeros suscriptores ponen a prueba el embudo; no son una sentencia de ingresos bajos.",
+      },
+      {
+        type: "h2",
+        text: "Cuándo sumar una agencia al empezar",
+      },
+      {
+        type: "p",
+        text: "Tiene sentido si quieres recorrer el camino en 7–14 días con un equipo, en lugar de aprender a base de errores en los DM de madrugada. OFM acepta principiantes: dejas tu solicitud en la web y un manager te escribe por Telegram en 24 horas.",
+      },
+      {
+        type: "nav",
+        intro: "Arranca sin caos y sigue leyendo:",
+        links: [
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Plan de contenido y rodajes",
+          },
+          {
+            href: "/blog/onlyfans-oshibki-novichkov",
+            label: "15 errores de principiante",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Cómo elegir agencia",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "Cuánto se gana",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Lista para lanzarte con un equipo?",
+        body: "OFM acompaña a las principiantes durante 7–14 días: perfil, contenido, chats y primer tráfico. Solicitud sin pago «de entrada» ni costes ocultos.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras son facturación bruta del balance de la página de OnlyFans, no un pago neto garantizado. El ingreso depende del nicho, el volumen de contenido y la implicación: es una orientación, no una garantía.",
       },
     ],
   },
   "onlyfans-kontent-plan-i-syomki": {
-    title: "Plan de contenido OnlyFans: rodajes, feed y PPV",
+    title: "Plan de contenido OnlyFans: sesiones, feed y PPV",
     description:
-      "Plan de contenido OnlyFans 2026: rodajes, volumen mensual y enlace feed-PPV en DM — estrategia de management desde OFM.",
+      "Plan de contenido OnlyFans 2026: cuántas sesiones grabar al mes, batching y cómo unir tu feed con los PPV en DM. La estrategia del management de OFM.",
     keywords: [
       "plan de contenido onlyfans",
       "estrategia de contenido onlyfans",
+      "sesiones de fotos onlyfans",
+      "cuánto contenido onlyfans",
+      "agencia onlyfans modelos",
     ],
     blocks: [
       {
         type: "p",
-        text: "El contenido es combustible del embudo. Sin calendario vives en “urgente, rodar algo”—y los chatters no pueden vender PPV que no existe.",
+        text: "El contenido es el combustible del embudo. Sin un calendario vives en modo «hay que grabar algo ya», y el equipo de chats no puede vender un PPV que todavía no existe.",
       },
-      { type: "h2", text: "Volumen mínimo" },
+      {
+        type: "h2",
+        text: "Volumen mínimo",
+      },
       {
         type: "p",
-        text: "Agencias fuertes apuntan a 10–14 piezas en feed al mes como base, más exclusivos para PPV. Más está bien si no cae la calidad.",
+        text: "La referencia de las agencias fuertes es de 10 a 14 piezas al mes en el feed como base, más material exclusivo para los PPV. Cuanto más, mejor, siempre que la calidad no baje.",
       },
-      { type: "h2", text: "Día de rodaje" },
+      {
+        type: "h2",
+        text: "Día de grabación",
+      },
       {
         type: "ul",
         items: [
-          "Lista de sets con antelación (3–5 looks por sesión)",
-          "Luz, fondo, props—setups repetibles ahorran tiempo",
-          "Clasifica al momento: feed / PPV / promo redes",
-          "Batching: un rodaje = dos semanas de contenido",
+          "Lista de sets preparada de antemano (3–5 looks por sesión)",
+          "Luz, fondo y atrezzo: los setups repetibles ahorran tiempo",
+          "Clasifica al momento: feed / PPV / promo para redes",
+          "Batching: una sola sesión = dos semanas de contenido",
         ],
       },
-      { type: "h2", text: "Enlace feed + DM" },
+      {
+        type: "h2",
+        text: "Conectar el feed con los DM",
+      },
       {
         type: "p",
-        text: "Un post en feed es teaser de la historia; en DM—“continuación solo aquí por $X”. Las series retienen mejor que fotos sueltas.",
+        text: "El post del feed es el teaser de la historia; en el DM va «la continuación, solo aquí por $X». Las series retienen mucho mejor que las fotos sueltas.",
       },
       {
         type: "tip",
-        text: "Guarda masters en local y nube—no entregues la única copia a la agencia.",
+        text: "Guarda los originales en local y en la nube: nunca le des a la agencia la única copia que tienes.",
+      },
+      {
+        type: "nav",
+        intro: "El plan de contenido dentro del sistema de OFM:",
+        links: [
+          {
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "Empezar de cero",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats y ventas por DM",
+          },
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Precios: suscripción y PPV",
+          },
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Trabajar como modelo de OnlyFans",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Necesitas un calendario de sesiones para todo el mes?",
+        body: "La estrategia de contenido está incluida en el management de OFM: lo vemos juntos cuando envíes tu solicitud, sin pagos de «entrada».",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Los ingresos son facturación bruta del balance de la página y dependen del nicho, el volumen de contenido y la constancia: es una referencia, no una cifra garantizada.",
       },
     ],
   },
   "onlyfans-oshibki-novichkov": {
-    title: "15 errores de principiante en OnlyFans (y cómo corregirlos)",
+    title: "15 errores de novata en OnlyFans (y cómo corregirlos)",
     description:
-      "15 errores principiante OnlyFans 2026: precios, chats, marketing, burnout — checklist que ahorra meses. Consejos desde OFM.",
-    keywords: ["errores onlyfans", "consejos onlyfans principiantes"],
+      "15 errores de novata en OnlyFans 2026: precios, chats, marketing y burnout. Un checklist que te ahorra meses de prueba y error. Consejos de OFM.",
+    keywords: [
+      "errores onlyfans",
+      "consejos onlyfans para principiantes",
+      "empezar en onlyfans",
+      "cómo ganar en onlyfans",
+      "onlyfans sin experiencia",
+    ],
     blocks: [
       {
         type: "p",
-        text: "La mayoría de cuentas atascadas en $500–1k repiten los mismos errores. No es “mal contenido”—falta de sistema.",
+        text: "La mayoría de las cuentas que se quedan estancadas en $500–1k repiten los mismos errores una y otra vez. No es «mal contenido»: es la falta de un sistema.",
       },
       {
         type: "ul",
         items: [
-          "Sub de $3 sin estrategia en DM",
-          "Sin welcome message",
-          "Respuesta en DM a las 2–3 horas",
-          "Promo solo en Stories, sin Reddit/X",
-          "Spam de enlace en cada post",
-          "Sin mejor contenido fijado",
-          "Rodar sin plan → burnout",
-          "Contenido nivel PPV gratis en el feed",
-          "Ignorar ballenas en el chat",
-          "Sin seguimiento de churn",
+          "Suscripción de $3 sin estrategia en los DM",
+          "No tener mensaje de bienvenida",
+          "Responder en los DM con 2–3 horas de retraso",
+          "Promocionar solo en Stories, sin Reddit/X",
+          "Spamear tu enlace en cada publicación",
+          "No tener fijado tu mejor contenido",
+          "Grabar sin plan → burnout",
+          "Subir gratis al feed contenido de nivel PPV",
+          "Ignorar a las «ballenas» en los chats",
+          "No llevar el control del churn",
           "Comprar bots y engagement falso",
-          "Mezclar cuenta personal y laboral en redes",
-          "Protección débil de archivos fuente",
+          "Mezclar la cuenta personal y la de trabajo en redes",
+          "Proteger mal tus archivos originales",
           "Trabajar con la primera agencia sin contrato",
-          "Compararse con el top 1% en el primer mes",
+          "Compararte con el top 1% en tu primer mes",
         ],
       },
-      { type: "h2", text: "Por dónde empezar a corregir" },
+      {
+        type: "h2",
+        text: "Por dónde empezar a corregirlos",
+      },
       {
         type: "p",
-        text: "Semana 1: perfil + welcome. Semana 2: un canal de tráfico. Semana 3: velocidad DM o chat manager. Semana 4: prueba de precio PPV. O solicita en OFM y recorre el camino con un manager.",
+        text: "Semana 1: perfil + mensaje de bienvenida. Semana 2: un solo canal de tráfico. Semana 3: velocidad en los DM o chatter. Semana 4: testear el precio del PPV. O envía tu solicitud a OFM y recorre el camino con una manager al lado.",
+      },
+      {
+        type: "nav",
+        intro: "Corrige tus errores con estas guías:",
+        links: [
+          {
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "Empezar desde cero",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing 2026",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats y ventas por DM",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonimato y seguridad",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Cansada de repetir los mismos errores?",
+        body: "OFM construye el sistema desde cero: perfil, tráfico y chats. Una manager te escribe por Telegram en 24 horas.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta del balance de la página de OnlyFans (gross), no el pago neto de la modelo ni un ingreso garantizado.",
       },
     ],
   },
   "onlyfans-anonimnost-i-bezopasnost": {
-    title: "Anonimato y seguridad en OnlyFans",
+    title: "Anonimato y seguridad en OnlyFans: guía 2026",
     description:
-      "Anonimato OnlyFans 2026: doxxing, fugas, 2FA, geo-bloques y DMCA — guía de seguridad para creadoras desde OFM.",
-    keywords: ["anonimato onlyfans", "seguridad onlyfans"],
+      "Anonimato en OnlyFans 2026: cómo evitar el doxxing y las filtraciones con 2FA, bloqueos por zona y DMCA. Guía de seguridad para modelos creadoras de OFM.",
+    keywords: [
+      "anonimato onlyfans",
+      "seguridad onlyfans modelo",
+      "onlyfans sin mostrar cara",
+      "evitar filtraciones onlyfans",
+      "trabajar onlyfans segura",
+    ],
     blocks: [
       {
         type: "p",
-        text: "OnlyFans es un negocio con riesgo elevado de privacidad. No existe anonimato total, pero el proceso reduce probabilidad de doxxing y fugas.",
+        text: "OnlyFans es un negocio con un riesgo de privacidad alto. El anonimato total no existe, pero un proceso bien montado reduce muchísimo las probabilidades de doxxing y de filtraciones de tu contenido.",
       },
-      { type: "h2", text: "Higiene técnica" },
+      {
+        type: "h2",
+        text: "Higiene técnica",
+      },
       {
         type: "ul",
         items: [
-          "2FA en OnlyFans y correo",
-          "SIM/email separados para trabajo",
-          "No usar Instagram personal para promo",
-          "VPN cuando haga falta—no es panacea",
-          "Marcas de agua en previews",
+          "Activa el 2FA en OnlyFans y en tu correo",
+          "Usa un número y un email aparte solo para el trabajo",
+          "No uses tu Instagram personal para promocionarte",
+          "VPN cuando lo necesites: ayuda, pero no es una solución mágica",
+          "Marcas de agua en las vistas previas",
         ],
       },
-      { type: "h2", text: "Trabajar con agencia" },
       {
-        type: "p",
-        text: "Aclara: quién ve la contraseña, roles/VPS de OnlyFans, offboarding si sale personal, NDA, política de fugas. No dejes que la agencia use tu contenido en portfolio sin consentimiento.",
+        type: "h2",
+        text: "Trabajar con una agencia",
       },
-      { type: "h2", text: "Fugas y DMCA" },
       {
         type: "p",
-        text: "Monitorea sitios de piratería, presenta DMCA, reacciona rápido. Agencias como OFM incluyen orientación de protección en el management.",
+        text: "Pregunta siempre: quién ve tu contraseña, si usan roles de OnlyFans o VPS, qué pasa cuando un empleado de la agencia se va, si hay NDA y cuál es la política ante filtraciones. Y nunca dejes que publiquen tu contenido en su portafolio sin tu permiso.",
       },
-      { type: "h2", text: "Seguridad psicológica" },
+      {
+        type: "h2",
+        text: "Filtraciones y DMCA",
+      },
       {
         type: "p",
-        text: "Límites con fans, listas de bloqueo, no confundir relaciones “reales” con ventas. El burnout es riesgo de seguridad como un hackeo.",
+        text: "Monitoreo de webs piratas, avisos DMCA y reacción rápida. Las agencias del nivel de OFM incluyen las recomendaciones de protección como parte del management.",
+      },
+      {
+        type: "h2",
+        text: "Seguridad psicológica",
+      },
+      {
+        type: "p",
+        text: 'Pon límites con los fans, usa listas de bloqueo y no confundas una relación "de verdad" con una venta. El burnout es un riesgo de seguridad tan serio como un hackeo.',
+      },
+      {
+        type: "nav",
+        intro: "Seguridad y cómo elegir bien tu equipo:",
+        links: [
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Cómo elegir agencia",
+          },
+          {
+            href: "/blog/onlyfans-rabota-bez-lica",
+            label: "OnlyFans sin mostrar la cara",
+          },
+          {
+            href: "/blog/onlyfans-oshibki-novichkov",
+            label: "15 errores de principiantes",
+          },
+          {
+            href: "/faq",
+            label: "FAQ: qué es OFM",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Te importan el anonimato y el NDA?",
+        body: "En OFM los accesos se dan según el principio del mínimo necesario; el NDA y la respuesta ante filtraciones forman parte del management.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos en la web son la facturación bruta (gross) del balance de la página de OnlyFans, no el ingreso neto de la modelo.",
       },
     ],
   },
   "onlyfans-rabota-bez-lica": {
     title: "OnlyFans sin mostrar la cara: estrategia no-face",
     description:
-      "OnlyFans sin cara 2026: marca no-face, marketing, nichos, ángulos y anonimato — estrategia de crecimiento desde OFM.",
-    keywords: ["onlyfans sin cara", "onlyfans no face"],
+      "OnlyFans sin mostrar la cara en 2026: construye marca no-face con nichos, marketing, anonimato y crecimiento real junto al management de OFM.",
+    keywords: [
+      "onlyfans sin mostrar la cara",
+      "onlyfans sin cara",
+      "no face onlyfans",
+      "modelo onlyfans anonima",
+      "onlyfans sin rostro",
+    ],
     blocks: [
       {
         type: "p",
-        text: "No-face no es techo de ingresos—es otro branding. Las cuentas exitosas compensan con reconocimiento corporal, voz, estética y series recurrentes.",
+        text: "Trabajar sin cara no es un techo de ingresos, es otra forma de construir marca. Las cuentas que mejor funcionan compensan la ausencia de rostro con un cuerpo reconocible, una voz propia, una estética marcada y secciones de contenido recurrentes.",
       },
-      { type: "h2", text: "Nichos que funcionan" },
+      {
+        type: "h2",
+        text: "Nichos que funcionan",
+      },
       {
         type: "ul",
         items: [
-          "Feet y fetish parcial",
-          "POV y primera persona sin cara",
-          "Máscaras, cosplay, personajes",
+          "Feet y fetiches parciales",
+          "POV y primera persona sin mostrar la cara",
+          "Máscaras, cosplay y personajes",
           "ASMR / voz + contenido de audio",
           "Fitness / lifestyle sin cara",
         ],
       },
-      { type: "h2", text: "Marketing no-face" },
       {
-        type: "p",
-        text: "Reddit y X funcionan bien cuando el foco es contenido, no “personalidad influencer”. Instagram es más difícil—construye código visual (color, ángulo, tatuaje/accesorio como ancla de marca).",
-      },
-      { type: "h2", text: "Riesgos" },
-      {
-        type: "p",
-        text: "Fondo de habitación, tatuajes, voz—todo puede doxxear. Alinea encuadre y reglas de limpieza de metadatos con tu agencia.",
+        type: "h2",
+        text: "Marketing no-face",
       },
       {
         type: "p",
-        text: "OFM trabaja con modelos no-face—definimos estrategia en la solicitud.",
+        text: "Reddit y X funcionan muy bien cuando el foco está en el contenido y no en la «personalidad influencer». Instagram es más difícil: ahí conviene construir un código visual propio (color, ángulo, un tatuaje o un accesorio que actúe como ancla de tu marca).",
+      },
+      {
+        type: "h2",
+        text: "Riesgos",
+      },
+      {
+        type: "p",
+        text: "El fondo de la habitación, un tatuaje o tu voz pueden delatarte. Acuerda con la agencia las reglas de encuadre y la limpieza de metadatos de las fotos para mantener tu anonimato.",
+      },
+      {
+        type: "p",
+        text: "En OFM trabajamos con modelos no-face: definimos tu estrategia cuando envías la solicitud.",
+      },
+      {
+        type: "nav",
+        intro: "No-face y crecimiento:",
+        links: [
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonimato y seguridad",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing 2026",
+          },
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Plan de contenido y rodajes",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "Cuánto ganan las modelos",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "No-face no es un techo de ingresos",
+        body: "OFM construye tu embudo por estilo, no por tu cara: marketing, chats y plan de contenido. Envía tu solicitud y te respondemos por Telegram (@Azalia_agency) en 24 h.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras se refieren a la facturación bruta (gross) del balance de la página, no a un pago garantizado. Solo +18.",
       },
     ],
   },

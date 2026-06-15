@@ -559,233 +559,506 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   "onlyfans-skolko-zarabatyvayut-modeli": {
-    title: "How Much Do OnlyFans Creators Earn? Realistic Numbers",
+    title: "How Much OnlyFans Models Earn: Realistic Numbers",
     description:
-      "Income ranges for beginners and top creators, what drives earnings, and why agencies cannot guarantee a figure.",
-    keywords: ["how much do onlyfans creators make", "onlyfans model income"],
+      "How much OnlyFans models really earn in 2026: beginner and top-model income ranges, gross vs net explained, and how an OFM agency moves the numbers.",
+    keywords: [
+      "how much onlyfans models make",
+      "onlyfans model income",
+      "onlyfans earnings 2026",
+      "become an onlyfans model",
+      "onlyfans income for beginners",
+    ],
     blocks: [
       {
         type: "p",
-        text: "Headlines like “$100k/month” sell courses, but the market median is more modest. An honest breakdown prevents disappointment and helps you plan.",
+        text: '"$100k a month" headlines sell courses, but the real market median is far more modest. An honest breakdown keeps you from burning out on disappointment and helps you build a plan that actually holds.',
       },
-      { type: "h2", text: "Stage benchmarks (gross)" },
+      {
+        type: "h2",
+        text: "Benchmarks by stage (gross turnover)",
+      },
       {
         type: "ul",
         items: [
-          "First 1–3 months: $500–3,000 with systematic work",
-          "$3,000–10,000: steady content + at least 1–2 traffic channels",
-          "$10,000–30,000+: strong chats, marketing, niche",
-          "$30,000+: top niche, team, brand, often 2+ years of systems",
+          "First 1–3 months: $500–3,000 with consistent, systematic work",
+          "$3,000–10,000: steady content plus at least 1–2 traffic channels",
+          "$10,000–30,000+: strong chats, real marketing, a defined niche",
+          "$30,000+: top niche, a team, a brand — usually 2+ years of systems behind it",
         ],
       },
       {
         type: "p",
-        text: "At OFM, some models sit in the $12,000–35,000+/month range—that is not a guarantee or the median for every application.",
+        text: "Some of our models at OFM sit in the $12,000–35,000+/month range — but that's neither a guarantee nor the median for every application we receive.",
       },
-      { type: "h2", text: "What drives income" },
+      {
+        type: "h2",
+        text: "What actually drives your income",
+      },
       {
         type: "ul",
         items: [
-          "Niche and competition",
-          "Hours on content and discipline",
-          "Marketing and chat quality",
-          "Boundaries and sustainability (burnout = drop)",
+          "Your niche and how crowded it is",
+          "The hours you put into content, and your discipline",
+          "The quality of your marketing and your chats",
+          "Boundaries and staying power (burnout means a drop in earnings)",
         ],
       },
-      { type: "h2", text: "Net vs gross" },
+      {
+        type: "h2",
+        text: "Net vs gross",
+      },
       {
         type: "p",
-        text: "OnlyFans takes a platform fee. The agency takes its %. Taxes depend on your jurisdiction. Count take-home, not the gross on a landing page.",
+        text: "OnlyFans takes its platform cut. An agency takes its own percentage. Taxes depend on your jurisdiction. Count your real take-home, not the gross number you see on a landing page.",
+      },
+      {
+        type: "nav",
+        intro: "Realistic expectations work best alongside these reads:",
+        links: [
+          {
+            href: "/faq",
+            label: "FAQ: what OFM is",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "Starting out: an agency for beginners",
+          },
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Pricing: subscription and PPV",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "How to choose an agency",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want to know your real potential in your niche?",
+        body: "At ofmmodels.com you'll find case studies with screenshots (gross turnover) and an income calculator. Apply and a manager reaches out on Telegram (@Azalia_agency) within 24 hours.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Case studies and the calculator are reference points (page balance turnover, gross) — not guaranteed earnings.",
       },
     ],
   },
   "onlyfans-agentstvo-dlya-nachinayushchih": {
     title: "OnlyFans for Beginners: Agency or Solo in 2026",
     description:
-      "Step-by-step OnlyFans launch: verification, niche, first content, marketing, and when to add management.",
-    keywords: ["how to start onlyfans", "onlyfans for beginners"],
+      "How to start OnlyFans step by step in 2026: verification, niche, first content, marketing, and when to bring in agency management. A beginner roadmap.",
+    keywords: [
+      "how to start onlyfans",
+      "onlyfans for beginners",
+      "start onlyfans 2026",
+      "onlyfans agency for beginners",
+      "onlyfans solo vs agency",
+    ],
     blocks: [
       {
         type: "p",
-        text: "Starting on OnlyFans in 2026 is technically easier than five years ago—and competitively harder. The platform is mature; subscribers are selective. Below is an order of steps that reduces chaos, whether you go solo or with an OnlyFans agency.",
+        text: "Starting on OnlyFans in 2026 is easier technically than it was five years ago, and harder competitively. The platform is mature and subscribers are spoiled for choice. Below is a sequence of steps that cuts the chaos, whether you go solo or partner with an OnlyFans agency.",
       },
-      { type: "h2", text: "Stage 0: Rules and boundaries" },
+      {
+        type: "h2",
+        text: "Stage 0: Rules and boundaries",
+      },
       {
         type: "p",
-        text: "18+ only; identity verification per platform rules. Decide upfront: face / no face, formats, hard limits. Boundaries are the base of your brand.",
+        text: "18+ only, with identity verification per the platform's rules. Decide upfront: face or no face, which formats you'll shoot, and what's off-limits. Your boundaries are the foundation of your brand.",
       },
-      { type: "h2", text: "Stage 1: Niche and packaging" },
+      {
+        type: "h2",
+        text: "Stage 1: Niche and packaging",
+      },
       {
         type: "p",
-        text: "Name, visual style, tone of voice. Write the OnlyFans bio for a cold subscriber from Reddit—not “hi, I am new here.”",
+        text: 'Your name, visual style, tone of voice. Write your OnlyFans bio for a cold subscriber coming from Reddit, not a casual "hi, I\'m new here."',
       },
-      { type: "h2", text: "Stage 2: Starter content pack" },
+      {
+        type: "h2",
+        text: "Stage 2: Starter content pack",
+      },
       {
         type: "ul",
         items: [
-          "10–20 feed posts before active promo",
-          "Pin + welcome message",
-          "2–3 PPV templates for chats",
-          "One “hero” set for avatar and banners",
+          "10-20 feed posts ready before you start active promo",
+          "A pinned post plus a welcome message",
+          "2-3 PPV templates for chats",
+          'One "hero" set for your avatar and banners',
         ],
       },
-      { type: "h2", text: "Stage 3: First traffic" },
       {
-        type: "p",
-        text: "Pick 1–2 channels (often X + Reddit). Do not spread across five networks in week one. First subs test the funnel—they are not a verdict on long-term income.",
+        type: "h2",
+        text: "Stage 3: First traffic",
       },
-      { type: "h2", text: "When to add an agency at launch" },
       {
         type: "p",
-        text: "It makes sense if you want the path in 7–14 days with a team, not learning DM mistakes at night. OFM takes beginners: apply on the site, manager on Telegram within 24 hours.",
+        text: "Pick 1-2 channels (often X plus Reddit). Don't spread yourself across five networks in your first week. Your first subscribers are there to test the funnel, not to sentence you to a low income.",
+      },
+      {
+        type: "h2",
+        text: "When to bring in an agency at the start",
+      },
+      {
+        type: "p",
+        text: "It makes sense if you want to cover the whole path in 7-14 days with a team, instead of learning by trial and error in your DMs at night. OFM takes on beginners: apply on the site and a manager reaches out on Telegram (@Azalia_agency) within 24 hours.",
+      },
+      {
+        type: "nav",
+        intro: "Start without the chaos - keep reading:",
+        links: [
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Content plan and shoots",
+          },
+          {
+            href: "/blog/onlyfans-oshibki-novichkov",
+            label: "15 beginner mistakes",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "How to choose an agency",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "How much models earn",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Ready to launch with a team?",
+        body: 'OFM walks beginners through it in 7-14 days: profile, content, chats, first traffic. No "entry" fee to apply, and a manager replies on Telegram within 24 hours.',
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Earnings depend on your niche, content volume, and engagement; figures are page balance turnover (gross), a guideline and not a guarantee.",
       },
     ],
   },
   "onlyfans-kontent-plan-i-syomki": {
-    title: "OnlyFans Content Plan: Shoots, Feed, and PPV",
+    title: "OnlyFans Content Plan: Shoots, Feed & PPV",
     description:
-      "How to plan shoots, how much content per month you need, and how to link the feed to DM sales.",
-    keywords: ["onlyfans content plan", "onlyfans content strategy"],
+      "OnlyFans content plan for 2026: how to batch your shoots, how much feed content you need per month, and how to link posts to PPV in DMs.",
+    keywords: [
+      "onlyfans content plan",
+      "onlyfans content strategy",
+      "onlyfans shoot ideas",
+      "how much content for onlyfans",
+      "onlyfans ppv strategy",
+    ],
     blocks: [
       {
         type: "p",
-        text: "Content is funnel fuel. Without a calendar you live in “urgent shoot something” mode—and chat managers cannot sell PPV that does not exist.",
+        text: "Content is the fuel of your funnel. Without a calendar you live in permanent \"I need to shoot something right now\" mode — and your chat team can't sell PPV that simply doesn't exist.",
       },
-      { type: "h2", text: "Minimum volume" },
+      {
+        type: "h2",
+        text: "The minimum volume",
+      },
       {
         type: "p",
-        text: "Strong agencies target 10–14 feed pieces per month as a base, plus exclusives for PPV. More is better if quality holds.",
+        text: "Strong agencies aim for at least 10–14 pieces of feed content a month as a baseline, plus exclusives held back for PPV. More is better — as long as the quality holds up.",
       },
-      { type: "h2", text: "Shoot day" },
+      {
+        type: "h2",
+        text: "Shoot day",
+      },
       {
         type: "ul",
         items: [
-          "Preset list of sets (3–5 looks per session)",
-          "Light, backdrop, props—repeatable setups save time",
-          "Sort immediately: feed / PPV / social promo",
-          "Batching: one shoot = two weeks of content",
+          "Plan your sets in advance (3–5 looks per session)",
+          "Lighting, backdrop, props — repeatable setups save real time",
+          "Sort on the spot: feed / PPV / promo for social",
+          "Batch it: one shoot = two weeks of content",
         ],
       },
-      { type: "h2", text: "Feed + DM link" },
+      {
+        type: "h2",
+        text: "Linking your feed to DMs",
+      },
       {
         type: "p",
-        text: "A feed post teases the storyline; in DMs—“continuation only here for $X.” Series retain better than random photos.",
+        text: 'A feed post teases the storyline; the DM delivers "the rest is only here for $X." Series keep fans hooked far better than random one-off photos.',
       },
       {
         type: "tip",
-        text: "Store masters locally and in the cloud—do not give the agency the only copy.",
+        text: "Keep your master files locally and in the cloud — never hand your only copy to an agency.",
+      },
+      {
+        type: "nav",
+        intro: "How content fits into the OFM system:",
+        links: [
+          {
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "Getting started for beginners",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats and DM sales",
+          },
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Pricing: subscription and PPV",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Need a month-long shoot calendar?",
+        body: "Content strategy is built into OFM management — we'll map it out together when you apply. Or message us on Telegram @Azalia_agency.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income figures refer to gross page balance turnover, not a guaranteed payout — results depend on your niche, content volume and engagement.",
       },
     ],
   },
   "onlyfans-oshibki-novichkov": {
-    title: "15 OnlyFans Beginner Mistakes (and How to Fix Them)",
+    title: "15 Beginner OnlyFans Mistakes (And How to Fix Them)",
     description:
-      "Common slips: pricing, chats, marketing, burnout—a checklist that saves months.",
-    keywords: ["onlyfans beginner mistakes", "onlyfans tips for new creators"],
+      "15 beginner OnlyFans mistakes in 2026: pricing, DMs, marketing, burnout. A model's checklist that saves you months — plus quick fixes from the OFM team.",
+    keywords: [
+      "onlyfans mistakes",
+      "onlyfans tips for beginners",
+      "onlyfans beginner guide",
+      "how to start onlyfans",
+      "onlyfans pricing mistakes",
+    ],
     blocks: [
       {
         type: "p",
-        text: "Most accounts stuck at $500–1k repeat the same mistakes. Not “bad content”—missing systems.",
+        text: "Most accounts stuck at $500–1k make the exact same mistakes. It's not \"bad content\" — it's the lack of a system.",
       },
       {
         type: "ul",
         items: [
-          "$3 sub with no DM strategy",
+          "A $3 subscription with no DM strategy",
           "No welcome message",
-          "DM replies after 2–3 hours",
-          "Promo only in Stories, no Reddit/X",
-          "Link spam in every post",
+          "Replying to DMs 2–3 hours late",
+          "Promo only in Stories, nothing on Reddit/X",
+          "Spamming your link in every single post",
           "No pinned best content",
-          "Shooting without a plan → burnout",
-          "PPV-level content free on the feed",
-          "Ignoring whales in chat",
+          "Shooting with no plan → burnout",
+          "Giving away PPV-level content free in your feed",
+          "Ignoring your whales in chat",
           "No churn tracking",
           "Buying bots and fake engagement",
-          "Mixing personal and work social accounts",
-          "Weak protection of source files",
-          "Working with the first agency without a contract",
-          "Comparing to top 1% in month one",
+          "Mixing your personal and work social accounts",
+          "Weak protection of your source files",
+          "Signing with your first agency without a contract",
+          "Comparing yourself to the top 1% in month one",
         ],
       },
-      { type: "h2", text: "Where to start fixing" },
+      {
+        type: "h2",
+        text: "Where to start fixing things",
+      },
       {
         type: "p",
-        text: "Week 1: profile + welcome. Week 2: one traffic channel. Week 3: DM speed or a chat manager. Week 4: PPV price test. Or apply to OFM and walk the path with a manager.",
+        text: "Week 1: profile + welcome message. Week 2: one traffic channel. Week 3: DM speed or a chat manager. Week 4: test your PPV pricing. Or apply to OFM and walk the whole path with a manager by your side.",
+      },
+      {
+        type: "nav",
+        intro: "Fix these mistakes with our guides:",
+        links: [
+          {
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "Getting started for beginners",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing & traffic strategy",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats & DM sales",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonymity & safety",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Tired of repeating the same mistakes?",
+        body: "OFM builds your system from scratch: profile, traffic, chats. A manager reaches out on Telegram (@Azalia_agency) within 24 hours.",
+        buttonLabel: "Apply",
+        buttonHref: "/#contact",
+        note: "Income depends on your niche, content volume and engagement. Figures refer to page balance turnover (gross) — a guideline, not a guaranteed payout.",
       },
     ],
   },
   "onlyfans-anonimnost-i-bezopasnost": {
-    title: "Anonymity and Safety on OnlyFans",
+    title: "OnlyFans Anonymity & Safety: A Creator's Guide",
     description:
-      "Doxxing, leaks, access, 2FA, geo-blocks, and DMCA—a practical creator protection guide.",
-    keywords: ["onlyfans anonymity", "onlyfans creator safety"],
+      "OnlyFans anonymity in 2026: protect yourself from doxxing, leaks, geo-blocks and DMCA. A practical creator safety guide from the OFM management team.",
+    keywords: [
+      "onlyfans anonymity",
+      "onlyfans creator safety",
+      "onlyfans doxxing protection",
+      "onlyfans privacy",
+      "onlyfans dmca leaks",
+    ],
     blocks: [
       {
         type: "p",
-        text: "OnlyFans is a business with elevated privacy risk. Full anonymity does not exist, but process reduces doxxing and leak odds.",
+        text: "OnlyFans is a business with heightened privacy risks. Total anonymity doesn't exist, but the right process makes doxxing and leaks far less likely.",
       },
-      { type: "h2", text: "Technical hygiene" },
+      {
+        type: "h2",
+        text: "Technical Hygiene",
+      },
       {
         type: "ul",
         items: [
-          "2FA on OnlyFans and email",
-          "Separate SIM/email for work",
-          "Do not use personal Instagram for promo",
-          "VPN when needed—not a cure-all",
-          "Watermarks on previews",
+          "2FA on both your OnlyFans account and your email",
+          "A separate SIM and email used only for work",
+          "Never use your personal Instagram for promotion",
+          "VPN when needed — helpful, but not a silver bullet",
+          "Watermarks on every preview",
         ],
       },
-      { type: "h2", text: "Working with an agency" },
       {
-        type: "p",
-        text: "Clarify: who sees the password, OnlyFans roles/VPS, offboarding when staff leave, NDA, leak policy. Do not let the agency portfolio your content without consent.",
+        type: "h2",
+        text: "Working With an Agency",
       },
-      { type: "h2", text: "Leaks and DMCA" },
       {
         type: "p",
-        text: "Monitor piracy sites, file DMCA, react fast. Agencies like OFM include protection guidance in management.",
+        text: "Ask the right questions up front: who can see your password, are there shared OnlyFans roles or a VPS, what happens to access when an agency staffer leaves, is there an NDA, and what's the leak-response policy. Never let an agency publish your content in its portfolio without your explicit consent.",
       },
-      { type: "h2", text: "Psychological safety" },
+      {
+        type: "h2",
+        text: "Leaks & DMCA",
+      },
       {
         type: "p",
-        text: "Boundaries with fans, block lists, do not confuse “real” relationships with sales. Burnout is a safety risk like hacking.",
+        text: "Monitor piracy sites, file DMCA takedowns, and react fast. Agencies at OFM's level build protection guidance straight into their management.",
+      },
+      {
+        type: "h2",
+        text: "Psychological Safety",
+      },
+      {
+        type: "p",
+        text: 'Set boundaries with fans, keep block lists, and don\'t mistake "real" relationships for sales. Burnout is a safety risk every bit as real as getting hacked.',
+      },
+      {
+        type: "nav",
+        intro: "Safety and choosing the right team:",
+        links: [
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "How to choose an agency",
+          },
+          {
+            href: "/blog/onlyfans-rabota-bez-lica",
+            label: "OnlyFans without showing your face",
+          },
+          {
+            href: "/blog/onlyfans-oshibki-novichkov",
+            label: "15 beginner mistakes",
+          },
+          {
+            href: "/faq",
+            label: "FAQ: what is OFM",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Is anonymity and an NDA a priority for you?",
+        body: "At OFM, access is granted on a need-to-know basis, with an NDA and a clear leak-response plan baked into your management. Apply and a manager replies on Telegram @Azalia_agency within 24 hours.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Figures in our case studies are gross page balance turnover, not a model's guaranteed payout. Income depends on niche, content volume and engagement — a benchmark, not a guarantee.",
       },
     ],
   },
   "onlyfans-rabota-bez-lica": {
-    title: "OnlyFans Without Showing Your Face: No-Face Strategy",
+    title: "Faceless OnlyFans: No-Face Creator Strategy",
     description:
-      "How to build brand, marketing, and trust without showing your face—niches, angles, voice, anonymity.",
-    keywords: ["onlyfans no face", "faceless onlyfans strategy"],
+      "Faceless OnlyFans in 2026: build a no-face brand, market it, pick a niche, nail your angles, and stay anonymous with OFM management.",
+    keywords: [
+      "faceless onlyfans",
+      "no face onlyfans",
+      "onlyfans without showing face",
+      "anonymous onlyfans creator",
+      "no-face onlyfans niches",
+    ],
     blocks: [
       {
         type: "p",
-        text: "No-face is not an income ceiling—it is different branding. Successful accounts compensate with body recognition, voice, aesthetic, and recurring series.",
+        text: "Going faceless isn't a ceiling on your income — it's just a different kind of brand. The accounts that win without ever showing a face make up for it with a recognizable body, a voice, a signature aesthetic, and series people keep coming back for.",
       },
-      { type: "h2", text: "Working niches" },
+      {
+        type: "h2",
+        text: "Niches that actually work",
+      },
       {
         type: "ul",
         items: [
           "Feet and partial fetish",
-          "POV and first-person without face",
+          "POV and first-person without a face",
           "Masks, cosplay, characters",
           "ASMR / voice + audio content",
-          "Fitness / lifestyle without face",
+          "Fitness / lifestyle without a face",
         ],
       },
-      { type: "h2", text: "No-face marketing" },
       {
-        type: "p",
-        text: "Reddit and X work well when the focus is content, not “influencer personality.” Instagram is harder—build a visual code (color, angle, tattoo/accessory as brand anchor).",
-      },
-      { type: "h2", text: "Risks" },
-      {
-        type: "p",
-        text: "Room background, tattoos, voice—all can dox you. Align framing and metadata scrub rules with your agency.",
+        type: "h2",
+        text: "Marketing a no-face brand",
       },
       {
         type: "p",
-        text: "OFM works with no-face models—we outline strategy on application.",
+        text: 'Reddit and X work well when the focus is on the content, not on an "influencer personality." Instagram is trickier — so build a visual code instead: a color, a signature angle, a tattoo or accessory that becomes the anchor of your brand.',
+      },
+      {
+        type: "h2",
+        text: "The risks",
+      },
+      {
+        type: "p",
+        text: "Your room's background, a tattoo, the sound of your voice — any of it can deanonymize you. Agree on framing rules and photo-metadata scrubbing with your agency before you post a single piece.",
+      },
+      {
+        type: "p",
+        text: "OFM works with no-face models — when you apply, we'll map out a strategy built around your style.",
+      },
+      {
+        type: "nav",
+        intro: "More on staying private and growing faster:",
+        links: [
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonymity and safety",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Content plan and shoots",
+          },
+          {
+            href: "/faq",
+            label: "FAQ: what is OFM",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Going faceless isn't a ceiling on your income",
+        body: "OFM builds your funnel around your style, not your face — marketing, chats, and a full content plan. Apply now and we'll reply on Telegram (@Azalia_agency) within 24 hours.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Figures in the case studies on this site are the gross balance turnover of the OnlyFans page, not the model's guaranteed payout.",
       },
     ],
   },
