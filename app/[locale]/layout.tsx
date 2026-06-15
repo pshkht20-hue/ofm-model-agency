@@ -16,11 +16,16 @@ import '../globals.css';
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
+  display: 'swap',
+  fallback: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
 });
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
+  display: 'swap',
+  fallback: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+  preload: false,
 });
 
 const playfair = Playfair_Display({
@@ -28,6 +33,9 @@ const playfair = Playfair_Display({
   subsets: ['latin'],
   weight: ['400', '700'],
   style: ['normal', 'italic'],
+  display: 'swap',
+  fallback: ['Georgia', 'Times New Roman', 'serif'],
+  preload: false,
 });
 
 type Props = {

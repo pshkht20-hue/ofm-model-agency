@@ -287,11 +287,11 @@ export function HeroSection() {
 
         <div className="flex flex-wrap justify-center gap-x-12 gap-y-3 text-xs tracking-[0.2em] uppercase text-white/40">
           <span data-hero-stat data-hero-reveal>
-            <strong className="text-accent-pink font-semibold">200+</strong> {t('hero.statModels')}
+            <strong className="text-accent-pink font-semibold">220+</strong> {t('hero.statModels')}
           </span>
           <span data-hero-stat data-hero-reveal>
             {t('hero.statIncome')}{' '}
-            <strong className="text-accent-cyan font-semibold">$18,400</strong>
+            <strong className="text-accent-cyan font-semibold">$15K–$100K</strong>
           </span>
           <span data-hero-stat data-hero-reveal>
             {t('hero.statTop')}

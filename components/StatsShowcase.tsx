@@ -13,13 +13,12 @@ import { EASE_SMOOTH, lineReveal } from '@/lib/motion';
 registerGsapPlugins();
 
 const STAT_CONFIG = [
-  { number: 200, suffix: '+', icon: Users, accent: 'pink' as const },
+  { number: 220, suffix: '+', icon: Users, accent: 'pink' as const },
   {
-    number: 18.4,
+    number: 100,
     prefix: '$',
-    suffix: 'M',
+    suffix: 'K',
     icon: DollarSign,
-    decimals: 1,
     accent: 'cyan' as const,
   },
   { number: 94, suffix: '%', icon: TrendingUp, accent: 'violet' as const },

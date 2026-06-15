@@ -7,23 +7,26 @@ type CornerPos = 'tl' | 'tr' | 'br' | 'bl';
 
 const colorMap: Record<
   NeonColor,
-  { dot: string; line: string; corner: string; ring: string }
+  { dot: string; line: string; lineVertical: string; corner: string; ring: string }
 > = {
   pink: {
     dot: 'bg-accent-pink shadow-[0_0_10px_2px_rgba(255,91,181,0.55)]',
     line: 'bg-gradient-to-r from-transparent via-accent-pink/50 to-transparent',
+    lineVertical: 'bg-gradient-to-b from-transparent via-accent-pink/40 to-transparent',
     corner: 'border-accent-pink/30',
     ring: 'border-accent-pink/25 shadow-[0_0_20px_-4px_rgba(255,91,181,0.35)]',
   },
   cyan: {
     dot: 'bg-accent-cyan shadow-[0_0_10px_2px_rgba(0,212,255,0.5)]',
     line: 'bg-gradient-to-r from-transparent via-accent-cyan/45 to-transparent',
+    lineVertical: 'bg-gradient-to-b from-transparent via-accent-cyan/40 to-transparent',
     corner: 'border-accent-cyan/28',
     ring: 'border-accent-cyan/22 shadow-[0_0_20px_-4px_rgba(0,212,255,0.3)]',
   },
   violet: {
     dot: 'bg-accent-violet shadow-[0_0_10px_2px_rgba(168,85,247,0.5)]',
     line: 'bg-gradient-to-r from-transparent via-accent-violet/45 to-transparent',
+    lineVertical: 'bg-gradient-to-b from-transparent via-accent-violet/40 to-transparent',
     corner: 'border-accent-violet/28',
     ring: 'border-accent-violet/22 shadow-[0_0_20px_-4px_rgba(168,85,247,0.3)]',
   },
@@ -101,7 +104,7 @@ function NeonLine({
       aria-hidden
       className={`absolute pointer-events-none opacity-50 ${
         vertical
-          ? `w-px h-16 md:h-24 bg-gradient-to-b from-transparent via-accent-${color === 'pink' ? 'pink' : color === 'cyan' ? 'cyan' : 'violet'}/40 to-transparent`
+          ? `w-px h-16 md:h-24 ${colorMap[color].lineVertical}`
           : `h-px w-16 md:w-24 ${colorMap[color].line}`
       } ${className}`}
     />

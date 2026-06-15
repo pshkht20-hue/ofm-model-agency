@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import { BadgeCheck } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import type { ModelReview } from '@/lib/content/reviews';
-import { getReviewLikeBase } from '@/lib/likes/seed';
-import { LikeButton } from '@/components/ui/LikeButton';
 import { ReviewStars } from '@/components/ui/ReviewStars';
 
 type ReviewCardProps = {
@@ -109,15 +107,6 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
             {review.resultNote}
           </p>
         )}
-      </div>
-
-      <div className="mt-4 pt-4 border-t border-white/[0.06] flex justify-start">
-        <LikeButton
-          kind="review"
-          itemId={review.id}
-          baseCount={getReviewLikeBase(review.id, review.helpfulCount)}
-          variant="helpful"
-        />
       </div>
 
       {review.agencyReply && (

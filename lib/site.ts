@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: 'LUXURY ONLYFANS MANAGEMENT',
   title: 'OnlyFans агентство для моделей — менеджмент 24/7',
   description:
-    'Чаты, маркетинг, кейсы gross total. Заявка на сайте — ответ в Telegram за 24 ч. Украина, Европа, удалённо. OFM\'s Model Agency.',
+    'Чаты, маркетинг, кейсы gross total. Заявка на сайте — ответ в Telegram за 24 ч. Работаем удалённо по всему миру. OFM\'s Model Agency.',
   keywords: [
     'OnlyFans агентство',
     'onlyfans агентство для моделей',

@@ -84,7 +84,7 @@ export function Navbar() {
               <Link
                 href="/#contact"
                 onClick={closeMenu}
-                className="btn-primary !h-8 !py-0 !px-2.5 sm:!px-3 !text-[10px] sm:!text-[11px] !gap-0 !shadow-[0_0_16px_-6px_rgba(255,91,181,0.55)] whitespace-nowrap shrink-0"
+                className="btn-primary !h-9 !py-0 !px-3 sm:!px-3.5 !text-[10px] sm:!text-[11px] !gap-0 !shadow-[0_0_16px_-6px_rgba(255,91,181,0.55)] whitespace-nowrap shrink-0"
               >
                 {t('apply')}
               </Link>

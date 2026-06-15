@@ -74,7 +74,7 @@ type HeroBackgroundProps = {
 
 const MOBILE_NEBULA_IDS = new Set([0, 2, 4]);
 const MOBILE_CLUSTER_COUNT = 2;
-const MOBILE_STAR_COUNT = 48;
+const MOBILE_STAR_COUNT = 32;
 const MOBILE_DUST_COUNT = 8;
 
 export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
@@ -331,52 +331,88 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           shoot('[data-cosmos-shoot="b"]', 4.5);
         }
 
-        if (section) {
-          const pauseAmbient = () => {
-            gsap.getTweensOf(bgRef.current).forEach((tween) => {
-              if (tween.repeat() === -1) tween.pause();
-            });
-          };
-          const playAmbient = () => {
-            gsap.getTweensOf(bgRef.current).forEach((tween) => {
-              if (tween.repeat() === -1) tween.play();
-            });
-          };
+        // Pause every ambient (infinite) tween when the hero is off-screen or the tab is hidden.
+        const AMBIENT_SELECTOR =
+          '[data-cosmos-layer], [data-cosmos-core], [data-cosmos-cluster-star], [data-cosmos-parallax]';
+        const setAmbientPaused = (paused: boolean) => {
+          gsap.getTweensOf(AMBIENT_SELECTOR).forEach((tween) => {
+            if (tween.repeat() === -1) tween.paused(paused);
+          });
+        };
+        let offscreen = false;
+        let tabHidden = false;
+        const syncAmbient = () => setAmbientPaused(offscreen || tabHidden);
+        const onVisibility = () => {
+          tabHidden = document.visibilityState === 'hidden';
+          syncAmbient();
+        };
+        document.addEventListener('visibilitychange', onVisibility);
 
+        const cleanups: Array<() => void> = [
+          () => document.removeEventListener('visibilitychange', onVisibility),
+        ];
+
+        if (section) {
           gsap.timeline({
             scrollTrigger: {
               trigger: section,
               start: 'top top',
               end: 'bottom top',
-              onLeave: pauseAmbient,
-              onEnterBack: playAmbient,
+              onLeave: () => {
+                offscreen = true;
+                syncAmbient();
+              },
+              onEnterBack: () => {
+                offscreen = false;
+                syncAmbient();
+              },
             },
           });
         }
 
-        if (!section || mobile) return;
+        // Pointer parallax — desktop only, rAF-throttled, with a cached rect.
+        if (section && !mobile) {
+          const pFarX = gsap.quickTo('[data-cosmos-parallax="far"]', 'x', { duration: 2.2, ease: 'power3.out' });
+          const pFarY = gsap.quickTo('[data-cosmos-parallax="far"]', 'y', { duration: 2.2, ease: 'power3.out' });
+          const pMidX = gsap.quickTo('[data-cosmos-parallax="mid"]', 'x', { duration: 1.8, ease: 'power3.out' });
+          const pMidY = gsap.quickTo('[data-cosmos-parallax="mid"]', 'y', { duration: 1.8, ease: 'power3.out' });
+          const pNearX = gsap.quickTo('[data-cosmos-parallax="near"]', 'x', { duration: 1.4, ease: 'power3.out' });
+          const pNearY = gsap.quickTo('[data-cosmos-parallax="near"]', 'y', { duration: 1.4, ease: 'power3.out' });
 
-        const pFarX = gsap.quickTo('[data-cosmos-parallax="far"]', 'x', { duration: 2.2, ease: 'power3.out' });
-        const pFarY = gsap.quickTo('[data-cosmos-parallax="far"]', 'y', { duration: 2.2, ease: 'power3.out' });
-        const pMidX = gsap.quickTo('[data-cosmos-parallax="mid"]', 'x', { duration: 1.8, ease: 'power3.out' });
-        const pMidY = gsap.quickTo('[data-cosmos-parallax="mid"]', 'y', { duration: 1.8, ease: 'power3.out' });
-        const pNearX = gsap.quickTo('[data-cosmos-parallax="near"]', 'x', { duration: 1.4, ease: 'power3.out' });
-        const pNearY = gsap.quickTo('[data-cosmos-parallax="near"]', 'y', { duration: 1.4, ease: 'power3.out' });
+          let rect = section.getBoundingClientRect();
+          const updateRect = () => {
+            rect = section.getBoundingClientRect();
+          };
+          window.addEventListener('resize', updateRect);
+          window.addEventListener('scroll', updateRect, { passive: true });
 
-        const onMove = (e: MouseEvent) => {
-          const rect = section.getBoundingClientRect();
-          const nx = (e.clientX - rect.left) / rect.width - 0.5;
-          const ny = (e.clientY - rect.top) / rect.height - 0.5;
-          pFarX(nx * 18);
-          pFarY(ny * 12);
-          pMidX(nx * 32);
-          pMidY(ny * 22);
-          pNearX(nx * 48);
-          pNearY(ny * 32);
-        };
+          let nx = 0;
+          let ny = 0;
+          let rafId = 0;
+          const flush = () => {
+            rafId = 0;
+            pFarX(nx * 18);
+            pFarY(ny * 12);
+            pMidX(nx * 32);
+            pMidY(ny * 22);
+            pNearX(nx * 48);
+            pNearY(ny * 32);
+          };
+          const onMove = (e: MouseEvent) => {
+            nx = (e.clientX - rect.left) / rect.width - 0.5;
+            ny = (e.clientY - rect.top) / rect.height - 0.5;
+            if (!rafId) rafId = requestAnimationFrame(flush);
+          };
+          section.addEventListener('mousemove', onMove);
+          cleanups.push(() => {
+            section.removeEventListener('mousemove', onMove);
+            window.removeEventListener('resize', updateRect);
+            window.removeEventListener('scroll', updateRect);
+            if (rafId) cancelAnimationFrame(rafId);
+          });
+        }
 
-        section.addEventListener('mousemove', onMove);
-        return () => section.removeEventListener('mousemove', onMove);
+        return () => cleanups.forEach((fn) => fn());
         },
       );
 
@@ -453,7 +489,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
               height: `${n.h}%`,
               left: `${n.left}%`,
               top: `${n.top}%`,
-              filter: `blur(${n.blur}px)`,
+              filter: `blur(${isMobile ? Math.min(n.blur, 48) : n.blur}px)`,
             }}
           />
         ))}
@@ -487,7 +523,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
               height: `${n.h}%`,
               left: `${n.left}%`,
               top: `${n.top}%`,
-              filter: `blur(${n.blur}px)`,
+              filter: `blur(${isMobile ? Math.min(n.blur, 48) : n.blur}px)`,
             }}
           />
         ))}
@@ -521,7 +557,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
               height: `${n.h}%`,
               left: `${n.left}%`,
               top: `${n.top}%`,
-              filter: `blur(${n.blur}px)`,
+              filter: `blur(${isMobile ? Math.min(n.blur, 48) : n.blur}px)`,
             }}
           />
         ))}
