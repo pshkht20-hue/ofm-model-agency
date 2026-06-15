@@ -11,6 +11,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 import { SocialLinks } from '@/components/social/SocialLinks';
 import { useSectionContext } from '@/context/SectionContext';
 import { NAV_SECTION_MAP } from '@/lib/sections';
+import { useMagnetic } from '@/hooks/useMagnetic';
 
 export function Navbar() {
   const t = useTranslations('nav');
@@ -20,6 +21,7 @@ export function Navbar() {
   const isHome = pathname === '/';
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const ctaMagnetRef = useMagnetic<HTMLSpanElement>(0.25);
 
   const NAV_LINKS = [
     { href: '/#about' as const, label: t('about') },
@@ -150,13 +152,16 @@ export function Navbar() {
 
               <Link
                 href="/#contact"
+                data-magnetic-area
                 className="btn-primary !h-9 !py-0 !px-4 xl:!px-5 !text-[13px] !shadow-[0_0_18px_-6px_rgba(255,91,181,0.55)] whitespace-nowrap shrink-0"
               >
-                <span className="hidden xl:inline-flex items-center gap-1.5">
-                  {t('becomeModel')}
-                  <ArrowRight className="w-3.5 h-3.5" />
+                <span ref={ctaMagnetRef} className="inline-flex items-center">
+                  <span className="hidden xl:inline-flex items-center gap-1.5">
+                    {t('becomeModel')}
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                  <span className="xl:hidden">{t('apply')}</span>
                 </span>
-                <span className="xl:hidden">{t('apply')}</span>
               </Link>
             </div>
           </div>
