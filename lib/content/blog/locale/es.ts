@@ -14,6 +14,151 @@ export function getSpanishBlogOverlay(): Record<
 }
 
 const ES_OVERLAY: BlogLocaleOverlayMap = {
+  "rabota-modelyu-onlyfans": {
+    title: "Trabajo de modelo OnlyFans: vacante remota y anónima",
+    description:
+      "Cómo ser modelo de OnlyFans con una agencia: trabajo remoto desde cualquier país, sin experiencia y con total privacidad. Facturación de $3000 a $30000/mes.",
+    keywords: [
+      "trabajo de modelo onlyfans",
+      "cómo ser modelo de onlyfans",
+      "vacante de modelo onlyfans",
+      "trabajar en onlyfans desde casa",
+      "cuánto se gana en onlyfans",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "¿Quieres convertir tu creatividad en un ingreso estable, desde casa, a tu propio ritmo y de forma anónima? OFM's Model Agency invita a chicas mayores de 18 años a trabajar como modelo de OnlyFans en remoto. Tú creas el contenido; la promoción, los chats, la publicidad y las ventas los asumimos nosotros y con nuestro propio dinero. No necesitas mucha experiencia ni una audiencia previa: buscamos nuevas estrellas y ayudamos a cada chica a desarrollar todo su potencial.",
+      },
+      {
+        type: "h2",
+        text: "En qué consiste este trabajo",
+      },
+      {
+        type: "p",
+        text: "OnlyFans es una plataforma donde la creadora gana con contenido de pago y con la conversación con sus suscriptores. La mayor parte del ingreso vive en los mensajes privados, y de esos chats se encarga nuestro equipo. De tu parte solo necesitamos contenido de foto y video de calidad para tu página; el tráfico, los chats 24/7, el marketing y la promoción son trabajo nuestro.",
+      },
+      {
+        type: "h2",
+        text: "Qué asumimos nosotros",
+      },
+      {
+        type: "ul",
+        items: [
+          "Promoción y publicidad de tu perfil, totalmente a cargo de la agencia: tú no inviertes ni un dólar",
+          "Equipo de chat 24/7 (2–3 turnos de chatters): los mensajes y las ventas los llevamos nosotros y tu perfil factura las 24 horas",
+          "Tráfico desde redes sociales hacia una audiencia con poder de compra Tier-1: Estados Unidos, Canadá y Australia",
+          "Estrategia de contenido, analítica y tests para que tus ingresos crezcan",
+          "Un equipo con más de 3 años de experiencia: managers, especialistas en marketing y content manager",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cuánto se puede ganar",
+      },
+      {
+        type: "p",
+        text: "Las páginas de nuestras modelos bajo gestión facturan entre $3000 y $30000 al mes: es la facturación total del balance de la página (antes de descontar el porcentaje de la agencia). Cuánto exactamente depende del nicho, del volumen y la calidad del contenido, de la constancia y del nivel de interacción. No hay techo: cuanto más en serio te lo tomes, mayor es el resultado.",
+      },
+      {
+        type: "p",
+        text: "Para comparar: en solitario, sin equipo y sin presupuesto de publicidad, una modelo promedio rara vez pasa de $300 a $700 al mes. Con una agencia que invierte en promoción y lleva las ventas por mensajes 24/7, las cifras son de otro orden por completo.",
+      },
+      {
+        type: "p",
+        text: "Y lo más importante: desde el primer mes la agencia financia por completo tu arranque, la publicidad y la promoción, hasta tu primera ganancia. No inviertes ni un dólar y no arriesgas nada: el equipo solo empieza a ganar cuando ganas tú.",
+      },
+      {
+        type: "p",
+        text: "Tu parte y las condiciones exactas las vemos contigo de forma individual por Telegram: cada modelo tiene su propio plan y sus propias cifras. Sin pago «de entrada» ni cobros ocultos.",
+      },
+      {
+        type: "h2",
+        text: "Condiciones y qué necesitamos de ti",
+      },
+      {
+        type: "ul",
+        items: [
+          "Eres mayor de 18 años: trabajamos únicamente con personas adultas",
+          "En remoto, desde cualquier parte del mundo: solo necesitas teléfono o cámara e internet",
+          "Puedes empezar sin experiencia: te formamos desde cero en 10–14 días",
+          "Enfoque serio con el contenido y el calendario de publicaciones, y organización",
+          "Disposición a comunicarte y a seguir las recomendaciones del equipo",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Confidencialidad y anonimato",
+      },
+      {
+        type: "p",
+        text: "La privacidad es la base de este trabajo. Atraemos suscriptores con poder de compra desde las redes sociales y te promocionamos hacia la audiencia Tier-1: Estados Unidos, Canadá y Australia. Ahí están los fans que más pagan, los que compran contenido, customs, videollamadas y suscripciones; eso significa que la gente de tu país simplemente no te encontrará allí.",
+      },
+      {
+        type: "p",
+        text: "Además, puedes bloquear en la plataforma absolutamente cualquier país que elijas: el tuyo, los vecinos, los que quieras. Tenemos un departamento de tráfico propio que vigila con cuidado para que los datos personales de las modelos nunca se filtren. Puedes trabajar sin mostrar el rostro. Y los temas de impuestos y legalidad te ayudamos a resolverlos, con asesoría completa y el apoyo de un abogado.",
+      },
+      {
+        type: "tip",
+        text: "Todas las pruebas de confianza y los resultados reales de la agencia te los mostramos por mensaje o en una llamada, con calma y sin presión.",
+      },
+      {
+        type: "h2",
+        text: "Para quién es",
+      },
+      {
+        type: "p",
+        text: "Para chicas mayores de 18 años que quieren ganar en remoto y están dispuestas a trabajar en serio su contenido, sin importar su físico ni su experiencia. Para principiantes, para quienes ya probaron en solitario, para estudiantes, para mamás en casa. Si estás lista para brillar en la plataforma, te ayudamos a desarrollar todo tu potencial.",
+      },
+      {
+        type: "h2",
+        text: "Reseña de una modelo",
+      },
+      {
+        type: "quote",
+        text: "Quiero dejar mi reseña sobre trabajar con OFM Model Agency. Las chicas son muy amables: te escuchan y te arman la mejor opción; lo importante es no dar pena y hablar de todos tus tabúes y detalles. Encontraron al equipo rápido, en pocos días ya habíamos arrancado, ¡y la cuenta ya tiene buenos balances! Un consejo: pregunta de más cualquier punto para no quedar después en una situación incómoda. Al principio entrar en el ritmo no fue fácil, pero todo llega con la experiencia 🥺 En resumen, no me arrepiento ni un poquito.",
+        author: "reseña real de una modelo de la agencia",
+      },
+      {
+        type: "h2",
+        text: "Cómo postular",
+      },
+      {
+        type: "p",
+        text: "Deja tu solicitud en el sitio (es anónima y no te compromete a nada) o escríbenos por Telegram a @Azalia_agency. Una especialista te contactará, responderá todas tus preguntas y te explicará los ingresos y las condiciones. Si quieres, primero calcula tu posible ingreso con la calculadora de la página principal.",
+      },
+      {
+        type: "nav",
+        intro: "Antes de postular, lee los detalles:",
+        links: [
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "Cuánto ganan las modelos",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonimato y seguridad",
+          },
+          {
+            href: "/blog/onlyfans-rabota-bez-lica",
+            label: "OnlyFans sin mostrar el rostro",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-latinskaya-amerika",
+            label: "Agencia OnlyFans en Latinoamérica",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Lista para brillar en OnlyFans?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Te contamos los ingresos, las condiciones y la confidencialidad.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "El ingreso depende del nicho, el volumen de contenido y la interacción: es una referencia, no una garantía.",
+      },
+    ],
+  },
   "kak-vybrat-onlyfans-agentstvo": {
     title: "Cómo elegir agencia OnlyFans: checklist 2026 sin estafas",
     description:

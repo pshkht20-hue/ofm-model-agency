@@ -14,6 +14,151 @@ export function getEnglishBlogOverlay(): Record<
 }
 
 const EN_OVERLAY: BlogLocaleOverlayMap = {
+  "rabota-modelyu-onlyfans": {
+    title: "Become an OnlyFans Model: Agency Job (Remote)",
+    description:
+      "Become an OnlyFans model with OFM agency: remote, no experience needed, fully anonymous. Page turnover $3,000–$30,000/mo, we fund promotion. How to apply.",
+    keywords: [
+      "become an onlyfans model",
+      "how to become an onlyfans model",
+      "onlyfans modeling jobs",
+      "onlyfans model job remote",
+      "onlyfans model no experience",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "Want to turn your creativity into steady income — from home, at your own pace, and anonymously? OFM's Model Agency is hiring women 18+ for remote work as OnlyFans models. You create the content; we handle the promotion, the chatting, the advertising, and the sales — all at our own expense. You don't need a big following or years of experience: we're looking for new stars, and we help every one of them unlock her potential.",
+      },
+      {
+        type: "h2",
+        text: "What this job actually is",
+      },
+      {
+        type: "p",
+        text: "OnlyFans is a platform where creators earn from paid content and from talking with their subscribers. Most of the income lives inside private chats — and that's exactly what our team runs for you. All we need from you is quality photo and video content for your page; the traffic, the 24/7 chatting, the marketing, and the promotion are our job.",
+      },
+      {
+        type: "h2",
+        text: "What we take care of",
+      },
+      {
+        type: "ul",
+        items: [
+          "Promotion and advertising of your profile — fully funded by the agency, you don't put in a single dollar",
+          "A 24/7 chat team (2–3 shifts of chatters) — we run the conversations and the sales, so your profile earns around the clock",
+          "Social-media traffic from a high-spending Tier-1 audience: the US, Canada, Australia",
+          "Content strategy, analytics, and testing — so your income keeps growing",
+          "A team with 3+ years of experience: managers, marketers, and a content manager",
+        ],
+      },
+      {
+        type: "h2",
+        text: "How much you can earn",
+      },
+      {
+        type: "p",
+        text: "The model pages we manage do between $3,000 and $30,000 a month — that's the total page balance turnover (gross, before the agency's percentage). How much exactly depends on your niche, the volume and quality of your content, how consistent you are, and how engaged your audience becomes. There's no ceiling: the more seriously you approach it, the bigger the result.",
+      },
+      {
+        type: "p",
+        text: "For comparison: on her own, with no team and no advertising budget, the average model rarely clears even $300–700 a month. With an agency that invests in promotion and runs sales in the chats 24/7, the numbers are on a completely different level.",
+      },
+      {
+        type: "p",
+        text: "And here's the key part — from your very first month, the agency fully funds your launch: the advertising and the promotion, all the way up to your first earnings. You don't invest a single dollar and you risk nothing — the team only starts earning once you do.",
+      },
+      {
+        type: "p",
+        text: 'Your share and the exact terms we go over individually in Telegram — every model has her own plan and her own numbers. No "entry fee," no hidden charges.',
+      },
+      {
+        type: "h2",
+        text: "The terms and what we need from you",
+      },
+      {
+        type: "ul",
+        items: [
+          "You're 18+ — we work with adults only",
+          "Remote, from anywhere in the world — all you need is a phone or camera and internet",
+          "No experience required — we train you from scratch in 10–14 days",
+          "A serious approach to your content and content plan, and good organization",
+          "A willingness to communicate and follow the team's guidance",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Privacy and anonymity",
+      },
+      {
+        type: "p",
+        text: "Privacy is the foundation of how we work. We bring in high-spending subscribers from social media and promote you to a Tier-1 audience — the US, Canada, Australia. That's where the top-paying fans are, the ones who buy content, customs, video calls, and subscriptions — which means people from your own country simply won't run into you there.",
+      },
+      {
+        type: "p",
+        text: "On top of that, you can block absolutely any country you choose on the platform — your home country, neighboring ones, or anywhere else. We have a dedicated traffic department that carefully makes sure a model's personal data never leaks. You can work without ever showing your face. And we'll help you handle the tax and legal side too, with full consultation and a lawyer's support.",
+      },
+      {
+        type: "tip",
+        text: "We'll show you every proof of reliability and the agency's real results in a chat or on a call — calmly and with zero pressure.",
+      },
+      {
+        type: "h2",
+        text: "Who it's for",
+      },
+      {
+        type: "p",
+        text: "Women 18+ who want to earn remotely and are ready to work seriously on their content — regardless of looks or experience. Beginners, anyone who has tried going solo, students, moms on maternity leave. If you're ready to shine on the platform, we'll help you unlock your potential.",
+      },
+      {
+        type: "h2",
+        text: "A model's review",
+      },
+      {
+        type: "quote",
+        text: "I want to leave a review about working with OFM Model Agency. The girls are so kind — they listen and find the option that works best for you; the main thing is not to be shy and to be open about all your limits and preferences. They built my team fast — within a few days we'd already launched, and the account already has good balances! My advice: double-check every detail so you don't end up in an awkward spot later. Getting into the swing of things was tough at first, but it all comes with experience 🥺 Long story short, I don't regret it one bit.",
+        author: "a real review from an agency model",
+      },
+      {
+        type: "h2",
+        text: "How to apply",
+      },
+      {
+        type: "p",
+        text: "Submit an application on the site — it's anonymous and commits you to nothing — or message us on Telegram @Azalia_agency. A specialist will get in touch, answer all your questions, and walk you through the income and the terms. If you like, start by estimating your income with the calculator on the homepage.",
+      },
+      {
+        type: "nav",
+        intro: "Before you apply, read the details:",
+        links: [
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "How much OnlyFans models earn",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonymity and safety",
+          },
+          {
+            href: "/blog/onlyfans-rabota-bez-lica",
+            label: "OnlyFans without showing your face",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-ukraina",
+            label: "OnlyFans agency in Ukraine",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Ready to shine on OnlyFans?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. We'll walk you through the income, the terms, and your privacy.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement — this is a guideline, not a guarantee. Figures are page balance turnover (gross), not a guaranteed payout.",
+      },
+    ],
+  },
   "kak-vybrat-onlyfans-agentstvo": {
     title: "How to Choose an OnlyFans Agency: 2026 Checklist (No Scams)",
     description:
