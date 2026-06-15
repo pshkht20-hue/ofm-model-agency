@@ -12,6 +12,12 @@ const PLATFORM_NEON: Record<SocialPlatform, { surface: string; icon: string; glo
     icon: 'text-[#2AABEE]/90 group-hover:text-[#5bc8f5]',
     glow: 'bg-[#2AABEE]/25',
   },
+  whatsapp: {
+    surface:
+      'border-[#25D366]/30 shadow-[0_0_16px_-4px_rgba(37,211,102,0.45)] hover:border-[#25D366]/70 hover:shadow-[0_0_24px_0px_rgba(37,211,102,0.6),0_0_40px_-8px_rgba(37,211,102,0.3)]',
+    icon: 'text-[#25D366]/90 group-hover:text-[#3ee37a]',
+    glow: 'bg-[#25D366]/25',
+  },
   instagram: {
     surface:
       'border-accent-pink/30 shadow-[0_0_16px_-4px_rgba(255,91,181,0.45)] hover:border-accent-pink/65 hover:shadow-[0_0_24px_0px_rgba(255,91,181,0.6),0_0_40px_-8px_rgba(168,85,247,0.25)]',
