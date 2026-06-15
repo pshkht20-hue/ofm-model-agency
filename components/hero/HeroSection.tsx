@@ -90,7 +90,7 @@ export function HeroSection() {
             gsap.set('[data-hero-scan]', { opacity: 0, scaleX: 0 });
             gsap.set('[data-hero-corner]', { opacity: 0 });
             gsap.set('[data-hero-badge]', { opacity: 0, y: 12 });
-            gsap.set('[data-hero-line]', { opacity: 0, y: 20 });
+            gsap.set('[data-hero-line]', { y: 20 });
             gsap.set('[data-hero-lead]', { opacity: 0, y: 14 });
             gsap.set('[data-hero-cta]', { opacity: 0, y: 12 });
             gsap.set('[data-hero-stat]', { opacity: 0, y: 10 });
@@ -102,7 +102,7 @@ export function HeroSection() {
             const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
 
             tl.to('[data-hero-badge]', { opacity: 1, y: 0, duration: 0.85 }, 0.15)
-              .to('[data-hero-line]', { opacity: 1, y: 0, duration: 0.9, stagger: 0.14 }, 0.35)
+              .to('[data-hero-line]', { y: 0, duration: 0.9, stagger: 0.14 }, 0.35)
               .to('[data-hero-lead]', { opacity: 1, y: 0, duration: 0.85 }, 0.78)
               .to('[data-hero-cta]', { opacity: 1, y: 0, duration: 0.75, stagger: 0.1 }, 1.02)
               .to('[data-hero-stat]', { opacity: 1, y: 0, duration: 0.65, stagger: 0.08 }, 1.32)
@@ -125,7 +125,6 @@ export function HeroSection() {
           gsap.set('[data-hero-scan]', { scaleX: 0, opacity: 0.9, transformOrigin: 'left center' });
           gsap.set('[data-hero-badge]', { opacity: 0, y: -18, scale: 0.9 });
           gsap.set('[data-hero-line]', {
-            opacity: 0,
             y: 34,
             rotateX: 8,
             transformPerspective: 900,
@@ -153,7 +152,6 @@ export function HeroSection() {
             .to(
               '[data-hero-line]',
               {
-                opacity: 1,
                 y: 0,
                 rotateX: 0,
                 filter: 'blur(0px)',
