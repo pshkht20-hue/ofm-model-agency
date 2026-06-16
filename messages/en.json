@@ -55,6 +55,30 @@
       "trustVerified": "Privacy-first and secure onboarding",
       "scroll": "Scroll down"
     },
+    "about": {
+      "eyebrow": "About us",
+      "title": "The team that works for you",
+      "lead": "OFM's Model Agency is an independent OnlyFans management agency. For 3+ years we have built systematic work with models worldwide: traffic, 24/7 chats, content strategy and safety. You create the content — we handle everything else, at our own expense.",
+      "pillars": [
+        {
+          "title": "3+ years, 220+ models",
+          "desc": "A team with 3+ years of experience manages 220+ pages worldwide: personal managers, marketers, a chat team and content managers."
+        },
+        {
+          "title": "Our own traffic team",
+          "desc": "An in-house team drives a high-spending Tier-1 audience — the US, Canada, Australia — and makes sure a model's personal data never leaks."
+        },
+        {
+          "title": "We fund your launch",
+          "desc": "We pay for advertising and promotion up to your first earnings. No entry fee — the team earns only when you do."
+        },
+        {
+          "title": "Anonymity & legality",
+          "desc": "Full privacy: geo-block your country of residence, work without showing your face. We help with taxes and legality, with a lawyer's support."
+        }
+      ],
+      "note": "No easy-money promises: the figures on the site are gross page-balance turnover, not a payout or a guarantee. We discuss your real plan and terms personally on Telegram."
+    },
     "benefits": {
       "eyebrow": "Benefits",
       "title": "Why creators choose us",

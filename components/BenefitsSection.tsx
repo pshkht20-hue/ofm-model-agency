@@ -119,7 +119,7 @@ export function BenefitsSection() {
   const items = t.raw('benefits.items') as BenefitItem[];
 
   return (
-    <SectionShell id="about" className="relative">
+    <SectionShell id="benefits" className="relative">
       <div
         className="pointer-events-none absolute -top-24 left-1/2 h-64 w-[min(100%,720px)] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,91,181,0.12),transparent_70%)]"
         aria-hidden

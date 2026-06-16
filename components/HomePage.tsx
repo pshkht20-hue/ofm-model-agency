@@ -12,6 +12,7 @@ import { StatsShowcase } from '@/components/StatsShowcase';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { StickyMobileCta } from '@/components/StickyMobileCta';
 import { BenefitsSection } from '@/components/BenefitsSection';
+import { AboutSection } from '@/components/AboutSection';
 import { HowItWorksSection } from '@/components/HowItWorksSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { SectionDivider } from '@/components/ui/SectionDivider';
@@ -81,6 +82,8 @@ export function HomePage() {
         <CreatorFeatureMarquee />
         <SectionDivider />
         <StatsShowcase />
+
+        <AboutSection />
 
         <BenefitsSection />
 
