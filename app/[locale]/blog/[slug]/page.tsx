@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { ArticleBody } from '@/components/seo/ArticleBody';
-import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
+import { ArticleJsonLd, BreadcrumbJsonLd, JobPostingJsonLd } from '@/components/seo/StructuredData';
 import { getAllBlogSlugs, getBlogCategoryLabels, getBlogPost } from '@/lib/content/blog';
 import { BlogArticleLikeBar } from '@/components/seo/BlogArticleLikeBar';
 import { RelatedPosts } from '@/components/seo/RelatedPosts';
@@ -26,6 +26,25 @@ const DATE_LOCALE: Record<Locale, string> = {
   en: 'en-US',
   es: 'es-ES',
 };
+
+/** Slug of the genuine remote-vacancy post that gets JobPosting structured data. */
+const JOB_POSTING_SLUG = 'rabota-modelyu-onlyfans';
+const JOB_TITLE: Record<Locale, string> = {
+  ru: 'Модель OnlyFans (удалённо, без опыта)',
+  uk: 'Модель OnlyFans (віддалено, без досвіду)',
+  en: 'OnlyFans Model (remote, no experience)',
+  es: 'Modelo de OnlyFans (remoto, sin experiencia)',
+};
+const JOB_APPLICANT_COUNTRIES = [
+  'Ukraine',
+  'Poland',
+  'Germany',
+  'Czechia',
+  'Italy',
+  'Spain',
+  'United Kingdom',
+  'Canada',
+];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
@@ -62,6 +81,14 @@ export default async function BlogPostPage({ params }: Props) {
       ]}
     >
       <ArticleJsonLd post={post} locale={blogLocale} />
+      {post.slug === JOB_POSTING_SLUG && (
+        <JobPostingJsonLd
+          post={post}
+          locale={blogLocale}
+          title={JOB_TITLE[blogLocale]}
+          applicantCountries={JOB_APPLICANT_COUNTRIES}
+        />
+      )}
       <BreadcrumbJsonLd
         locale={blogLocale}
         items={[

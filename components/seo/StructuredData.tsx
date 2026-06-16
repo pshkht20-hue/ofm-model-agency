@@ -123,3 +123,60 @@ export function ServiceJsonLd({
     />
   );
 }
+
+/**
+ * JobPosting for genuine remote-vacancy pages (the recruitment pillar).
+ * Honest by design: TELECOMMUTE + multi-country applicant requirements, CONTRACTOR,
+ * NO baseSalary (income on the page is gross page-balance turnover, not a salary —
+ * marking it as baseSalary would be misleading and risks a structured-data manual action).
+ */
+export function JobPostingJsonLd({
+  post,
+  locale,
+  title,
+  applicantCountries,
+}: {
+  post: BlogPost;
+  locale: Locale;
+  title: string;
+  applicantCountries: string[];
+}) {
+  const siteUrl = getSiteUrl();
+  const canonicalPath = pathForLocale(`/blog/${post.slug}`, locale);
+  const datePosted = post.updatedAt ?? post.publishedAt;
+  const validThroughDate = new Date(datePosted);
+  validThroughDate.setFullYear(validThroughDate.getFullYear() + 1);
+  const validThrough = validThroughDate.toISOString().slice(0, 10);
+
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'JobPosting',
+    title,
+    description: post.description,
+    datePosted,
+    validThrough,
+    employmentType: 'CONTRACTOR',
+    inLanguage: HTML_LANG[locale],
+    hiringOrganization: {
+      '@type': 'Organization',
+      name: siteConfig.name,
+      sameAs: siteUrl,
+      logo: `${siteUrl}/icon.svg`,
+    },
+    jobLocationType: 'TELECOMMUTE',
+    applicantLocationRequirements: applicantCountries.map((name) => ({
+      '@type': 'Country',
+      name,
+    })),
+    industry: 'Creator economy / online content',
+    occupationalCategory: 'Online content creator',
+    url: `${siteUrl}${canonicalPath}`,
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
