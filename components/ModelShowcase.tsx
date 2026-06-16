@@ -99,25 +99,29 @@ function ResultStats({
 
   return (
     <div
-      className={`flex min-w-0 flex-1 flex-col justify-center ${featured ? 'w-full items-start lg:py-2' : 'w-full items-start'}`}
+      className={`flex min-w-0 flex-1 flex-col items-start ${
+        featured ? 'w-full justify-between gap-6 lg:py-3' : 'w-full justify-center'
+      }`}
     >
       {featured && (
-        <div className="mb-4 hidden lg:block">
+        <div className="hidden lg:block">
           <ScreenshotCaption item={item} />
         </div>
       )}
 
-      <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/40">
-        {t('totalNet')}
-      </p>
-      <UsdDisplay
-        value={item.totalNet}
-        maximumFractionDigits={0}
-        size={featured ? 'hero' : 'lg'}
-        className="mt-1 text-white"
-      />
+      <div>
+        <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/40">
+          {t('totalNet')}
+        </p>
+        <UsdDisplay
+          value={item.totalNet}
+          maximumFractionDigits={0}
+          size={featured ? 'hero' : 'lg'}
+          className="mt-1 text-white"
+        />
+      </div>
 
-      <div className="mt-5 border-t border-white/[0.06] pt-4">
+      <div className={`w-full border-t border-white/[0.06] pt-4 ${featured ? '' : 'mt-5'}`}>
         <p className="text-[10px] uppercase tracking-[0.16em] text-white/38">
           {t('peakMonth')}
         </p>
