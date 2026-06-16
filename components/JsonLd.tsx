@@ -19,16 +19,43 @@ type JsonLdProps = {
 
 export function JsonLd({ locale = 'ru', description }: JsonLdProps) {
   const siteUrl = getSiteUrl();
-  const sameAs = getSocialLinks().map((link) => link.href);
+  const socialLinks = getSocialLinks();
+  const sameAs = socialLinks.map((link) => link.href);
+  const telegram = socialLinks.find((link) => link.platform === 'telegram')?.href;
   const homePath = pathForLocale('/', locale);
 
   const organization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${siteUrl}/#organization`,
     name: siteConfig.name,
+    alternateName: siteConfig.shortName,
     description,
     url: `${siteUrl}${homePath}`,
     logo: `${siteUrl}/icon.svg`,
+    image: `${siteUrl}/icon.svg`,
+    slogan: siteConfig.tagline,
+    foundingDate: '2022',
+    knowsAbout: [
+      'OnlyFans management',
+      'OnlyFans agency',
+      'creator marketing and traffic',
+      'content strategy',
+      '24/7 chat management and DM sales',
+      'creator privacy and anonymity',
+      'OnlyFans model recruitment',
+    ],
+    areaServed: 'Worldwide',
+    ...(telegram
+      ? {
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'customer support',
+            url: telegram,
+            availableLanguage: ['Russian', 'Ukrainian', 'English', 'Spanish'],
+          },
+        }
+      : {}),
     sameAs,
   };
 
