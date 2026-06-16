@@ -11,6 +11,8 @@ type PageMeta = {
   keywords?: string[];
   noIndex?: boolean;
   image?: { url: string; alt?: string };
+  /** If set, hreflang lists only these locales (e.g. blog posts lacking some overlays). */
+  availableLocales?: Locale[];
 };
 
 export function createPageMetadata({
@@ -21,6 +23,7 @@ export function createPageMetadata({
   keywords = [],
   noIndex = false,
   image,
+  availableLocales,
 }: PageMeta): Metadata {
   const siteUrl = getSiteUrl();
   const canonicalPath = pathForLocale(path, locale);
@@ -32,7 +35,7 @@ export function createPageMetadata({
     keywords: [...siteConfig.keywords, ...keywords],
     alternates: {
       canonical: canonicalPath,
-      languages: hreflangAlternates(siteUrl, path),
+      languages: hreflangAlternates(siteUrl, path, availableLocales),
     },
     openGraph: {
       type: path.startsWith('/blog/') ? 'article' : 'website',

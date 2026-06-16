@@ -4,20 +4,29 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { ArticleBody } from '@/components/seo/ArticleBody';
 import { ArticleJsonLd, BreadcrumbJsonLd, JobPostingJsonLd } from '@/components/seo/StructuredData';
-import { getAllBlogSlugs, getBlogCategoryLabels, getBlogPost } from '@/lib/content/blog';
+import {
+  getAllBlogSlugs,
+  getBlogCategoryLabels,
+  getBlogPost,
+  getBlogPostLocales,
+} from '@/lib/content/blog';
 import { BlogArticleLikeBar } from '@/components/seo/BlogArticleLikeBar';
 import { RelatedPosts } from '@/components/seo/RelatedPosts';
 import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
 import { Link } from '@/i18n/navigation';
-import { routing, type Locale } from '@/i18n/routing';
+import type { Locale } from '@/i18n/routing';
 import { getSiteUrl } from '@/lib/site';
 import { createPageMetadata } from '@/lib/seo';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
+/** Only locales a post has real content for get built; others 404 instead of serving ru fallback. */
+export const dynamicParams = false;
+
 export function generateStaticParams() {
-  const slugs = getAllBlogSlugs();
-  return routing.locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+  return getAllBlogSlugs().flatMap((slug) =>
+    getBlogPostLocales(slug).map((locale) => ({ locale, slug })),
+  );
 }
 
 const DATE_LOCALE: Record<Locale, string> = {
@@ -57,6 +66,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/blog/${post.slug}`,
     locale: locale as Locale,
     keywords: post.keywords,
+    availableLocales: getBlogPostLocales(post.slug),
     image: post.cover
       ? { url: `${getSiteUrl()}${post.cover.localSrc}`, alt: post.cover.alt }
       : undefined,

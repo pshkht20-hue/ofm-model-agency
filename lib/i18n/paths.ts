@@ -15,11 +15,13 @@ export function pathForLocale(path: string, locale: Locale): string {
 export function hreflangAlternates(
   siteUrl: string,
   path: string,
+  locales: readonly Locale[] = routing.locales,
 ): Record<string, string> {
   const entries: Record<string, string> = {};
-  for (const locale of routing.locales) {
+  for (const locale of locales) {
     entries[locale] = `${siteUrl}${pathForLocale(path, locale)}`;
   }
+  // x-default → default locale (ru base is always available)
   entries['x-default'] = `${siteUrl}${pathForLocale(path, routing.defaultLocale)}`;
   return entries;
 }

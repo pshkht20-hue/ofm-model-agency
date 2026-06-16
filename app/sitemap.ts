@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getAllBlogSlugs, getBlogPublishedAtMap } from '@/lib/content/blog/slugs';
+import { getBlogPostLocales } from '@/lib/content/blog';
 import { routing, type Locale } from '@/i18n/routing';
 import { pathForLocale, hreflangAlternates } from '@/lib/i18n/paths';
 import { getSiteUrl } from '@/lib/site';
@@ -28,15 +29,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
-    for (const slug of slugs) {
-      const localized = pathForLocale(`/blog/${slug}`, locale as Locale);
-      const date = publishedAt[slug];
+  }
+
+  for (const slug of slugs) {
+    const postLocales = getBlogPostLocales(slug);
+    const date = publishedAt[slug];
+    const blogPath = `/blog/${slug}`;
+    for (const locale of postLocales) {
       entries.push({
-        url: `${siteUrl}${localized}`,
+        url: `${siteUrl}${pathForLocale(blogPath, locale)}`,
         lastModified: date ? new Date(date) : now,
         changeFrequency: 'monthly',
         priority: 0.8,
-        alternates: { languages: hreflangAlternates(siteUrl, `/blog/${slug}`) },
+        alternates: { languages: hreflangAlternates(siteUrl, blogPath, postLocales) },
       });
     }
   }

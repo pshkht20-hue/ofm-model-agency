@@ -1,4 +1,4 @@
-import type { Locale } from '@/i18n/routing';
+import { routing, type Locale } from '@/i18n/routing';
 import type { BlogCategory, BlogPost } from '@/lib/content/blog/types';
 import { getBlogCover } from '@/lib/content/blog/covers';
 import { getEnglishBlogOverlay } from '@/lib/content/blog/locale/en';
@@ -75,6 +75,17 @@ export function getBlogPost(slug: string, locale?: string | Locale): BlogPost | 
   return applyLocale(
     { ...post, cover: post.cover ?? getBlogCover(slug) },
     resolved
+  );
+}
+
+/**
+ * Locales a post actually has real content for: the default (ru base) plus any
+ * locale that has an overlay for this slug. Used to avoid emitting localized
+ * URLs (sitemap/hreflang/static params) that would only serve the ru fallback.
+ */
+export function getBlogPostLocales(slug: string): Locale[] {
+  return routing.locales.filter(
+    (locale) => locale === routing.defaultLocale || Boolean(getOverlay(locale)?.[slug])
   );
 }
 
