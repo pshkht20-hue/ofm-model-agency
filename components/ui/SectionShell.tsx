@@ -32,7 +32,7 @@ export function SectionShell({
     >
       <div className="section-grid absolute inset-0 pointer-events-none opacity-80" aria-hidden />
       <div className="section-glow absolute inset-0 pointer-events-none" aria-hidden />
-      {particles && <ParticleField opacity={0.4} />}
+      {particles && <ParticleField opacity={0.9} />}
       <NeonAccents variant="section" />
       <div
         className={`relative z-10 mx-auto px-5 md:px-8 ${wide ? 'max-w-7xl' : 'max-w-6xl'} ${innerClassName}`}

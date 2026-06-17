@@ -92,7 +92,7 @@ export function StatsShowcase() {
     >
       <div className="section-grid absolute inset-0 opacity-40 pointer-events-none" aria-hidden />
       <div className="section-glow absolute inset-0 pointer-events-none" aria-hidden />
-      <ParticleField opacity={0.4} />
+      <ParticleField opacity={0.9} />
       <NeonAccents variant="stats" />
 
       <div

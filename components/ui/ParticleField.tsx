@@ -44,15 +44,15 @@ export function ParticleField({ className = '', density = 1, opacity = 0.5 }: Pa
     };
     resize();
 
-    const count = Math.round((mobile ? 26 : 60) * density);
+    const count = Math.round((mobile ? 40 : 90) * density);
     const ps = Array.from({ length: count }, () => ({
       x: Math.random() * w,
       y: Math.random() * h,
-      vx: (Math.random() - 0.5) * 0.22,
-      vy: (Math.random() - 0.5) * 0.22,
-      r: Math.random() * 1.4 + 0.5,
+      vx: (Math.random() - 0.5) * 0.26,
+      vy: (Math.random() - 0.5) * 0.26,
+      r: Math.random() * 1.6 + 0.6,
       c: COLORS[(Math.random() * COLORS.length) | 0],
-      a: Math.random() * 0.5 + 0.25,
+      a: Math.random() * 0.5 + 0.3,
     }));
 
     let raf = 0;
