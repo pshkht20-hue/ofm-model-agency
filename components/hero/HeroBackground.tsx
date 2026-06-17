@@ -40,6 +40,27 @@ const NEBULAE = [
   { id: 5, tone: 'cyan', w: 30, h: 26, left: 72, top: 32, blur: 75, depth: 'near' },
 ] as const;
 
+const AURORAS = [
+  {
+    id: 0,
+    left: '-10%',
+    top: '-8%',
+    w: '74%',
+    h: '56%',
+    rotate: -14,
+    grad: 'radial-gradient(ellipse at 42% 42%, rgba(255,91,181,0.26) 0%, rgba(168,85,247,0.13) 46%, transparent 72%)',
+  },
+  {
+    id: 1,
+    left: '44%',
+    top: '38%',
+    w: '68%',
+    h: '52%',
+    rotate: 12,
+    grad: 'radial-gradient(ellipse at 56% 50%, rgba(0,212,255,0.22) 0%, rgba(168,85,247,0.11) 48%, transparent 74%)',
+  },
+] as const;
+
 const DUST = Array.from({ length: 18 }, (_, i) => ({
   id: i,
   left: ((i * 53 + 9) % 90) + 5,
@@ -56,9 +77,9 @@ const CLUSTERS = [
 ] as const;
 
 const nebulaToneClass = {
-  pink: 'bg-[radial-gradient(ellipse_at_center,rgba(255,91,181,0.35)_0%,rgba(255,91,181,0.08)_42%,transparent_72%)]',
-  violet: 'bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.32)_0%,rgba(168,85,247,0.07)_44%,transparent_74%)]',
-  cyan: 'bg-[radial-gradient(ellipse_at_center,rgba(0,212,255,0.28)_0%,rgba(0,212,255,0.06)_40%,transparent_70%)]',
+  pink: 'bg-[radial-gradient(ellipse_at_center,rgba(255,91,181,0.42)_0%,rgba(255,91,181,0.1)_42%,transparent_72%)]',
+  violet: 'bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.38)_0%,rgba(168,85,247,0.09)_44%,transparent_74%)]',
+  cyan: 'bg-[radial-gradient(ellipse_at_center,rgba(0,212,255,0.34)_0%,rgba(0,212,255,0.08)_40%,transparent_70%)]',
 };
 
 const starToneClass = {
@@ -97,6 +118,10 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
     () => (isMobile ? DUST.slice(0, MOBILE_DUST_COUNT) : DUST),
     [isMobile],
   );
+  const auroras = useMemo(
+    () => (isMobile ? AURORAS.slice(0, 1) : AURORAS),
+    [isMobile],
+  );
 
   useGSAP(
     () => {
@@ -124,6 +149,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           gsap.set('[data-cosmos-shoot]', { opacity: 0 });
           gsap.set('[data-cosmos-breathe]', { opacity: mobile ? 0.5 : 0.4, scale: 1 });
           gsap.set('[data-cosmos-milky]', { opacity: 0, scale: mobile ? 0.98 : 0.95 });
+          gsap.set('[data-cosmos-aurora]', { opacity: 0, scale: mobile ? 0.98 : 0.92 });
           gsap.set('[data-cosmos-cluster]', { opacity: 0, scale: mobile ? 0.85 : 0.6 });
           gsap.set('[data-cosmos-core]', { scale: 1, filter: 'brightness(1)' });
 
@@ -133,6 +159,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
             intro
               .to('[data-cosmos-breathe]', { opacity: 0.6, duration: 1.4 }, 0)
               .to('[data-cosmos-milky]', { opacity: 1, scale: 1, duration: 1.3 }, 0.05)
+              .to('[data-cosmos-aurora]', { opacity: 0.7, scale: 1, duration: 1.4 }, 0.05)
               .to('[data-cosmos-nebula]', { opacity: 1, scale: 1, duration: 1.2, stagger: 0.05 }, 0.1)
               .to('[data-cosmos-galaxy]', { opacity: 1, scale: 1, duration: 1.2 }, 0.12)
               .to('[data-cosmos-star]', { opacity: 1, duration: 1.1 }, 0.2)
@@ -149,6 +176,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
               )
               .to('[data-cosmos-dust]', { opacity: 1, duration: 2, stagger: 0.06 }, 0.6)
               .to('[data-cosmos-milky]', { opacity: 1, scale: 1, duration: 3 }, 0.3)
+              .to('[data-cosmos-aurora]', { opacity: 0.7, scale: 1, duration: 2.6, stagger: 0.25 }, 0.15)
               .to('[data-cosmos-cluster]', { opacity: 1, scale: 1, duration: 1.4, stagger: 0.15 }, 0.8);
           }
 
@@ -195,6 +223,31 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
             delay: 1,
           });
         }
+
+        auroras.forEach((a, i) => {
+          if (mobile) {
+            gsap.to(`[data-cosmos-aurora="${a.id}"]`, {
+              opacity: 'random(0.4, 0.68)',
+              duration: gsap.utils.random(14, 20),
+              repeat: -1,
+              yoyo: true,
+              ease: 'sine.inOut',
+              delay: 2 + i * 1.5,
+            });
+          } else {
+            gsap.to(`[data-cosmos-aurora="${a.id}"]`, {
+              x: 'random(-44, 44)',
+              y: 'random(-28, 28)',
+              scale: 'random(1, 1.12)',
+              opacity: 'random(0.42, 0.72)',
+              duration: gsap.utils.random(18, 28),
+              repeat: -1,
+              yoyo: true,
+              ease: 'sine.inOut',
+              delay: 2 + i * 2,
+            });
+          }
+        });
 
         if (!mobile) {
           gsap.to('[data-cosmos-core="accent"]', {
@@ -430,7 +483,7 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
 
       return () => mm.revert();
     },
-    { scope: bgRef, dependencies: [sectionRef, isMobile, nebulae] },
+    { scope: bgRef, dependencies: [sectionRef, isMobile, nebulae, auroras] },
   );
 
   return (
@@ -444,6 +497,23 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
         className="cosmos-milky-band absolute opacity-0"
         style={{ left: '-15%', top: '18%', width: '130%', height: '38%', rotate: '-12deg' }}
       />
+
+      {auroras.map((a) => (
+        <div
+          key={a.id}
+          data-cosmos-aurora={a.id}
+          data-cosmos-layer
+          className="cosmos-aurora absolute opacity-0"
+          style={{
+            left: a.left,
+            top: a.top,
+            width: a.w,
+            height: a.h,
+            rotate: `${a.rotate}deg`,
+            background: a.grad,
+          }}
+        />
+      ))}
 
       {/* Far depth — galaxies & distant nebulae */}
       <div data-cosmos-parallax="far" className="absolute inset-0">

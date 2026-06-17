@@ -228,6 +228,21 @@ input[type="number"] {
   will-change: transform, opacity;
 }
 
+.cosmos-aurora {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(64px);
+  mix-blend-mode: screen;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+@media (max-width: 767px) {
+  .cosmos-aurora {
+    filter: blur(44px);
+  }
+}
+
 .cosmos-nebula {
   will-change: transform, opacity;
   mix-blend-mode: screen;
