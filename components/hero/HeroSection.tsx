@@ -243,15 +243,15 @@ export function HeroSection() {
           <span
             data-hero-line="accent"
             data-hero-reveal
-            className="hero-accent-shimmer mt-1 block text-[clamp(3.9rem,15.5vw,9rem)] italic leading-[0.9]"
-            style={{ textShadow: '0 0 42px rgba(255,91,181,0.35)' }}
+            className="hero-accent-shimmer mt-1 block pb-[0.14em] text-[clamp(3.9rem,15.5vw,9rem)] italic leading-[1.04]"
+            style={{ textShadow: '0 0 42px rgba(255,91,181,0.32)' }}
           >
             {t('hero.line2')}
           </span>
           <span
             data-hero-line
             data-hero-reveal
-            className="mt-7 block font-sans text-[clamp(0.72rem,2.3vw,0.95rem)] font-semibold uppercase tracking-[0.34em] text-white/55"
+            className="mt-4 block font-sans text-[clamp(0.72rem,2.3vw,0.95rem)] font-semibold uppercase tracking-[0.34em] text-white/55"
           >
             {t('hero.line3')}
           </span>
