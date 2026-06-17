@@ -24,6 +24,10 @@ export function SiteFooter() {
     { href: '/faq' as const, label: tNav('faq') },
     { href: '/blog' as const, label: tNav('blog') },
     {
+      href: '/blog/rabota-modelyu-onlyfans' as const,
+      label: t('vacancy'),
+    },
+    {
       href: '/blog/kak-vybrat-onlyfans-agentstvo' as const,
       label: t('guideAgency'),
     },

@@ -40,6 +40,9 @@ export function HomeSeoBlock() {
           <p>{t('p3')}</p>
         </div>
         <div className="mt-8 flex flex-wrap gap-4 text-sm">
+          <Link href="/blog/rabota-modelyu-onlyfans" className="btn-secondary !py-2.5 !px-5">
+            {t('linkVacancy')}
+          </Link>
           <Link href="/blog/onlyfans-agentstvo-ukraina" className="btn-secondary !py-2.5 !px-5">
             {t('linkUkraine')}
           </Link>
