@@ -5,7 +5,6 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { combinedNetTotal, resultCases, type ResultCase } from '@/lib/results/cases';
 import { SectionHeader } from '@/components/SectionHeader';
-import { IPhoneFrame } from '@/components/ui/IPhoneFrame';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { UsdDisplay } from '@/components/ui/UsdDisplay';
 import { ResultScreenshot } from '@/components/ui/ResultScreenshot';
@@ -50,30 +49,37 @@ function ScreenshotCaption({ item }: { item: ResultCase }) {
 function ScreenshotFrame({
   item,
   priority = false,
-  phoneSize = 'md',
   featured = false,
 }: {
   item: ResultCase;
   priority?: boolean;
-  phoneSize?: 'sm' | 'md' | 'lg';
   featured?: boolean;
 }) {
   const t = useTranslations('models');
 
-  const phone = (
-    <div data-phone-frame className={`w-full shrink-0 ${featured ? 'lg:w-[300px]' : ''}`}>
-      <IPhoneFrame size={phoneSize}>
-        <div data-phone-screen>
-          <ResultScreenshot
-            src={item.image}
-            alt={t(`altScreenshot.${item.tier}`)}
-            tier={item.tier}
-            width={item.imageWidth}
-            height={item.imageHeight}
-            priority={priority}
-          />
-        </div>
-      </IPhoneFrame>
+  const shot = (
+    <div
+      data-phone-frame
+      className={`w-full shrink-0 ${featured ? 'lg:w-[340px]' : 'mx-auto max-w-[300px]'}`}
+    >
+      <div className="relative overflow-hidden rounded-[1.35rem] bg-white shadow-[0_30px_70px_-26px_rgba(0,0,0,0.9)] ring-1 ring-white/[0.1]">
+        <ResultScreenshot
+          src={item.image}
+          alt={t(`altScreenshot.${item.tier}`)}
+          tier={item.tier}
+          width={item.imageWidth}
+          height={item.imageHeight}
+          priority={priority}
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#07070e] via-[#07070e]/55 to-transparent"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-0 rounded-[1.35rem] ring-1 ring-inset ring-black/[0.06]"
+          aria-hidden
+        />
+      </div>
       <div className={`mt-4 pb-1 ${featured ? 'lg:hidden' : ''}`}>
         <ScreenshotCaption item={item} />
       </div>
@@ -81,10 +87,10 @@ function ScreenshotFrame({
   );
 
   if (featured) {
-    return <FeaturedPhoneParallax>{phone}</FeaturedPhoneParallax>;
+    return <FeaturedPhoneParallax>{shot}</FeaturedPhoneParallax>;
   }
 
-  return phone;
+  return shot;
 }
 
 function ResultStats({
@@ -186,12 +192,7 @@ function ResultCard({
           featured ? 'lg:flex-row lg:items-start lg:gap-8 lg:pb-7' : 'items-center sm:items-stretch'
         }`}
       >
-        <ScreenshotFrame
-          item={item}
-          priority={priority}
-          phoneSize={featured ? 'lg' : 'sm'}
-          featured={featured}
-        />
+        <ScreenshotFrame item={item} priority={priority} featured={featured} />
         <ResultStats item={item} featured={featured} />
       </div>
     </motion.article>
