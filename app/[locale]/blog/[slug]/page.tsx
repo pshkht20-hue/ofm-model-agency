@@ -15,7 +15,6 @@ import { RelatedPosts } from '@/components/seo/RelatedPosts';
 import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
-import { getSiteUrl } from '@/lib/site';
 import { createPageMetadata } from '@/lib/seo';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -68,7 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: post.keywords,
     availableLocales: getBlogPostLocales(post.slug),
     image: post.cover
-      ? { url: `${getSiteUrl()}${post.cover.localSrc}`, alt: post.cover.alt }
+      ? { url: post.cover.remoteSrc, alt: post.cover.alt }
       : undefined,
   });
 }

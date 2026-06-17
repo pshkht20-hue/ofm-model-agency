@@ -41,6 +41,7 @@ export function ArticleJsonLd({ post, locale }: { post: BlogPost; locale: Locale
     '@type': 'Article',
     headline: post.title,
     description: post.description,
+    ...(post.cover ? { image: [post.cover.remoteSrc] } : {}),
     datePublished: post.publishedAt,
     dateModified: post.updatedAt ?? post.publishedAt,
     inLanguage: HTML_LANG[locale],
