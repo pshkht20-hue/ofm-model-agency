@@ -19,6 +19,8 @@ import { HowItWorksSection } from '@/components/HowItWorksSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { SectionDivider } from '@/components/ui/SectionDivider';
 import { useIsMobileViewport } from '@/hooks/useMotionPreferences';
+import { ParticleField } from '@/components/ui/ParticleField';
+import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
 import { HomeSeoBlock } from '@/components/seo/HomeSeoBlock';
 import { SiteFooter } from '@/components/layout/SiteFooter';
@@ -112,8 +114,14 @@ export function HomePage() {
 
         <section id="contact" ref={contactRef} className="relative py-16 md:py-22 overflow-hidden">
           <div className="absolute inset-0 bg-[#050508]" />
-          <GalaxyShader reduced={!!reduced} mobile={isMobile} sectionRef={contactRef} />
-          <div className="absolute inset-0 bg-[#050508]/25" aria-hidden />
+          {isMobile ? (
+            <ParticleField opacity={0.85} />
+          ) : (
+            <>
+              <GalaxyShader reduced={!!reduced} mobile={isMobile} sectionRef={contactRef} />
+              <div className="absolute inset-0 bg-[#050508]/25" aria-hidden />
+            </>
+          )}
           <div className="section-grid absolute inset-0 opacity-50" aria-hidden />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(168,85,247,0.2),transparent)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_30%_at_50%_0%,rgba(255,91,181,0.1),transparent)]" />
@@ -128,7 +136,7 @@ export function HomePage() {
                 <h2 className="heading-section text-[clamp(2.5rem,6vw,4.25rem)] !leading-[1.2] mb-8">
                   {t('contact.title')}
                   <br />
-                  <span className="text-gradient-brand italic">{t('contact.titleAccent')}</span>
+                  <span className="text-gradient-brand italic inline-block pb-[0.22em]">{t('contact.titleAccent')}</span>
                 </h2>
                 <p className="text-lead max-w-2xl mx-auto mb-12">{t('contact.lead')}</p>
               </>
@@ -144,7 +152,7 @@ export function HomePage() {
                 <h2 className="heading-section text-[clamp(2.5rem,6vw,4.25rem)] !leading-[1.2] mb-8">
                   {t('contact.title')}
                   <br />
-                  <span className="text-gradient-brand italic">{t('contact.titleAccent')}</span>
+                  <span className="text-gradient-brand italic inline-block pb-[0.22em]">{t('contact.titleAccent')}</span>
                 </h2>
                 <p className="text-lead max-w-2xl mx-auto mb-12">{t('contact.lead')}</p>
               </motion.div>
@@ -166,6 +174,7 @@ export function HomePage() {
             <div className="mt-9 flex flex-col items-center gap-3">
               <p className="text-sm text-white/45">{t('contact.telegramAlt')}</p>
               <TelegramCta location="contact_primary" label={t('contact.telegramCta')} />
+              <WhatsAppCta label={t('contact.whatsappCta')} />
             </div>
 
             {reduced ? (

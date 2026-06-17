@@ -393,7 +393,8 @@
       "response": "Відповідь за 24 години",
       "support": "Підтримка 24/7",
       "telegramAlt": "Не хочеш заповнювати форму?",
-      "telegramCta": "Написати в Telegram"
+      "telegramCta": "Написати в Telegram",
+      "whatsappCta": "Написати у WhatsApp"
     }
   },
   "reviews": {

@@ -53,7 +53,7 @@ export function TelegramCta({
       target="_blank"
       rel="noopener noreferrer"
       onClick={onClick}
-      className={`group inline-flex items-center justify-center gap-2.5 rounded-full border border-[#2AABEE]/40 bg-[#2AABEE]/[0.08] px-7 py-3.5 font-semibold text-white transition-[border-color,background-color,box-shadow,transform] duration-300 hover:border-[#2AABEE]/70 hover:bg-[#2AABEE]/[0.16] hover:shadow-[0_0_28px_-6px_rgba(42,171,238,0.6)] active:scale-[0.98] ${className}`}
+      className={`group inline-flex items-center justify-center gap-2.5 rounded-full border border-[#2AABEE]/50 bg-[#2AABEE]/[0.12] px-7 py-3.5 font-semibold text-white shadow-[0_0_22px_-8px_rgba(42,171,238,0.6)] transition-[border-color,background-color,box-shadow,transform] duration-300 hover:border-[#2AABEE]/80 hover:bg-[#2AABEE]/[0.2] hover:shadow-[0_0_42px_-4px_rgba(42,171,238,0.95)] active:scale-[0.98] ${className}`}
     >
       <SocialIcon
         platform="telegram"

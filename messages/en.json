@@ -393,7 +393,8 @@
       "response": "Reply within 24h",
       "support": "24/7 support",
       "telegramAlt": "Prefer not to fill out the form?",
-      "telegramCta": "Message us on Telegram"
+      "telegramCta": "Message us on Telegram",
+      "whatsappCta": "Message us on WhatsApp"
     }
   },
   "reviews": {
