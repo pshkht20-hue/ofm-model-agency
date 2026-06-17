@@ -169,7 +169,7 @@ export function HowItWorksSection() {
             />
             <motion.div
               style={{ top: cometTop, opacity: cometOpacity }}
-              className="pointer-events-none absolute left-6 z-20 -translate-x-1/2 -translate-y-1/2 md:left-7"
+              className="pointer-events-none absolute left-6 z-0 -translate-x-1/2 -translate-y-1/2 md:left-7"
               aria-hidden
             >
               <span className="absolute left-1/2 top-1/2 h-12 w-1 -translate-x-1/2 -translate-y-full rounded-full bg-gradient-to-t from-accent-pink/70 to-transparent blur-[2px]" />
@@ -182,7 +182,7 @@ export function HowItWorksSection() {
           </>
         )}
 
-        <div className="relative space-y-6 md:space-y-8">
+        <div className="relative z-10 space-y-6 md:space-y-8">
           {steps.map((item, i) => (
             <TimelineStep key={item.title} item={item} index={i} reduced={reduced} />
           ))}
