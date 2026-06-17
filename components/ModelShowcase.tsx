@@ -9,6 +9,7 @@ import { SectionShell } from '@/components/ui/SectionShell';
 import { UsdDisplay } from '@/components/ui/UsdDisplay';
 import { ResultScreenshot } from '@/components/ui/ResultScreenshot';
 import { FeaturedPhoneParallax } from '@/components/scroll/FeaturedPhoneParallax';
+import { usePhoneTilt } from '@/hooks/usePhoneTilt';
 import { MotionFade } from '@/components/ui/Reveal';
 import { EASE_SOFT, SPRING_HOVER, VIEWPORT_DEFAULT, fadeUpStatic, hoverLift } from '@/lib/motion';
 
@@ -57,13 +58,15 @@ function ScreenshotFrame({
   featured?: boolean;
 }) {
   const t = useTranslations('models');
+  const tiltRef = usePhoneTilt<HTMLDivElement>();
 
   const shot = (
     <div
       data-phone-frame
+      {...(featured ? { 'data-tilt-area': '' } : {})}
       className={`w-full shrink-0 ${featured ? 'lg:w-[340px]' : 'mx-auto max-w-[300px]'}`}
     >
-      <div className="relative overflow-hidden rounded-[1.35rem] bg-white shadow-[0_30px_70px_-26px_rgba(0,0,0,0.9)] ring-1 ring-white/[0.1]">
+      <div ref={tiltRef} className="relative overflow-hidden rounded-[1.35rem] bg-white shadow-[0_30px_70px_-26px_rgba(0,0,0,0.9)] ring-1 ring-white/[0.1]">
         <ResultScreenshot
           src={item.image}
           alt={t(`altScreenshot.${item.tier}`)}

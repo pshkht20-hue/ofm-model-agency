@@ -933,14 +933,22 @@ input[type="number"] {
   position: absolute;
   left: 0;
   bottom: -2px;
-  width: 0;
+  width: 100%;
   height: 1px;
   background: linear-gradient(90deg, var(--accent-pink), var(--accent-cyan));
-  transition: width 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .link-hover-line:hover::after {
-  width: 100%;
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-hover-line::after {
+    transition: none;
+  }
 }
 
 .animate-float-soft {
