@@ -67,23 +67,28 @@ export function HeroSection() {
           }
 
           if (section) {
-            // Scroll-out fades the cosmic background only. The hero CONTENT is not
-            // animated here on purpose — sharing y/opacity with the intro reveal made
-            // a ScrollTrigger refresh (e.g. after font-swap) re-apply the scrub's
-            // progress-0 state and leave the headline stuck hidden.
+            // Scroll-out darkens the cosmic background as the hero leaves. We fade
+            // in a cheap solid dim layer (GPU opacity on ONE element) plus a subtle
+            // scale, instead of animating opacity on the whole blurred starfield
+            // subtree (group-opacity flatten — the cause of the old scroll lag).
+            // Tight scrub so the darkening tracks the scroll instead of trailing it.
+            // The hero CONTENT is intentionally not animated here (a ScrollTrigger
+            // refresh would otherwise re-apply progress-0 and hide the headline).
             const cosmos = section.querySelector('[data-cosmos-root]');
+            const dim = section.querySelector('[data-cosmos-dim]');
             if (cosmos) {
-              gsap.to(cosmos, {
-                opacity: mobile ? 0.35 : 0.18,
-                scale: 1.05,
-                ease: 'none',
+              const dimTl = gsap.timeline({
                 scrollTrigger: {
                   trigger: section,
                   start: 'top top',
                   end: 'bottom top',
-                  scrub: mobile ? 0.55 : 1,
+                  scrub: 0.3,
                 },
               });
+              dimTl.to(cosmos, { scale: mobile ? 1.03 : 1.05, ease: 'none' }, 0);
+              if (dim) {
+                dimTl.to(dim, { opacity: mobile ? 0.72 : 0.9, ease: 'none' }, 0);
+              }
             }
           }
 

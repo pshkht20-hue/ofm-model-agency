@@ -618,6 +618,11 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
         data-cosmos-layer
         className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_50%_50%,rgba(168,85,247,0.04)_0%,transparent_70%)]"
       />
+
+      {/* Scroll-out dim — a single GPU opacity layer faded in by the scroll
+          trigger in HeroSection, instead of animating opacity on the whole
+          blurred starfield subtree (which caused the scroll lag). */}
+      <div data-cosmos-dim className="absolute inset-0 bg-[#04030c] opacity-0" aria-hidden />
     </div>
   );
 }
