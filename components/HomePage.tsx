@@ -113,7 +113,7 @@ export function HomePage() {
         <section id="contact" ref={contactRef} className="relative py-16 md:py-22 overflow-hidden">
           <div className="absolute inset-0 bg-[#050508]" />
           <GalaxyShader reduced={!!reduced} mobile={isMobile} sectionRef={contactRef} />
-          <div className="absolute inset-0 bg-[#050508]/55" aria-hidden />
+          <div className="absolute inset-0 bg-[#050508]/25" aria-hidden />
           <div className="section-grid absolute inset-0 opacity-50" aria-hidden />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(168,85,247,0.2),transparent)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_30%_at_50%_0%,rgba(255,91,181,0.1),transparent)]" />
@@ -125,7 +125,7 @@ export function HomePage() {
             {reduced ? (
               <>
                 <p className="eyebrow-bright mb-6">{t('contact.eyebrow')}</p>
-                <h2 className="heading-section text-[clamp(2.5rem,6vw,4.25rem)] mb-8">
+                <h2 className="heading-section text-[clamp(2.5rem,6vw,4.25rem)] !leading-[1.2] mb-8">
                   {t('contact.title')}
                   <br />
                   <span className="text-gradient-brand italic">{t('contact.titleAccent')}</span>
@@ -141,7 +141,7 @@ export function HomePage() {
                 transition={{ duration: 0.6, ease: EASE_SMOOTH }}
               >
                 <p className="eyebrow-bright mb-6">{t('contact.eyebrow')}</p>
-                <h2 className="heading-section text-[clamp(2.5rem,6vw,4.25rem)] mb-8">
+                <h2 className="heading-section text-[clamp(2.5rem,6vw,4.25rem)] !leading-[1.2] mb-8">
                   {t('contact.title')}
                   <br />
                   <span className="text-gradient-brand italic">{t('contact.titleAccent')}</span>
