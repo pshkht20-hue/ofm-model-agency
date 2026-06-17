@@ -27,9 +27,12 @@ export function createPageMetadata({
 }: PageMeta): Metadata {
   const siteUrl = getSiteUrl();
   const canonicalPath = pathForLocale(path, locale);
-  const ogImages = image ? [{ url: image.url, alt: image.alt ?? title }] : undefined;
+  const ogImages = image
+    ? [{ url: image.url, alt: image.alt ?? title }]
+    : [{ url: `${siteUrl}/opengraph-image`, width: 1200, height: 630, alt: title }];
 
   return {
+    metadataBase: new URL(siteUrl),
     title,
     description,
     keywords: [...siteConfig.keywords, ...keywords],
@@ -50,7 +53,7 @@ export function createPageMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: image ? [image.url] : undefined,
+      images: image ? [image.url] : [`${siteUrl}/opengraph-image`],
     },
     robots: noIndex
       ? { index: false, follow: false }
