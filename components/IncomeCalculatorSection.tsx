@@ -2,11 +2,22 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react';
 import { ArrowRight, Check, ChevronLeft, Clock, RefreshCw, Sparkles } from 'lucide-react';
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import {
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+  useMotionValue,
+  useTransform,
+  animate,
+  type MotionValue,
+} from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { EASE_SMOOTH } from '@/lib/motion';
+import { useIsMobileViewport } from '@/hooks/useMotionPreferences';
+import { useMagnetic } from '@/hooks/useMagnetic';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
-import { UsdDisplay } from '@/components/ui/UsdDisplay';
+import { usdParts } from '@/lib/results/format';
 import {
   estimateIncome,
   QUESTION_ORDER,
@@ -31,31 +42,85 @@ const TIER_ACCENT: Record<ResultTier, 'prime' | 'pro' | 'elite' | 'brand'> = {
 
 const INITIAL_ANSWERS: Partial<CalculatorAnswers> = {};
 
-function useCountUp(target: number, active: boolean, duration = 900) {
-  const [value, setValue] = useState(0);
+/**
+ * Count-up driven by a framer MotionValue (zero re-renders per frame, like
+ * AnimatedStat). Snaps instantly under reduced motion. Returns a MotionValue
+ * holding the rounded number; render it through <AnimatedUsd /> below.
+ */
+function useCountUp(target: number, active: boolean, reduced: boolean, duration = 900) {
+  const count = useMotionValue(0);
 
   useEffect(() => {
     if (!active) {
-      setValue(0);
+      count.set(0);
       return;
     }
+    if (reduced) {
+      count.set(target);
+      return;
+    }
+    const controls = animate(count, target, {
+      duration: duration / 1000,
+      ease: EASE_SMOOTH,
+    });
+    return () => controls.stop();
+  }, [count, target, active, reduced, duration]);
 
-    const start = performance.now();
-    let frame = 0;
-
-    const tick = (now: number) => {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - (1 - progress) ** 3;
-      setValue(Math.round(target * eased));
-      if (progress < 1) frame = requestAnimationFrame(tick);
-    };
-
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [target, active, duration]);
-
-  return value;
+  return count;
 }
+
+/**
+ * Animated mirror of <UsdDisplay /> (same markup/classes) whose amount portion
+ * is fed by a MotionValue so the count-up updates without React re-renders.
+ */
+function AnimatedUsd({
+  value,
+  size = 'hero',
+  accent,
+}: {
+  value: MotionValue<number>;
+  size?: 'hero' | 'lg' | 'md' | 'sm';
+  accent?: 'elite' | 'pro' | 'prime' | 'brand' | 'shimmer';
+}) {
+  const amount = useTransform(value, (latest) => usdParts(Math.round(latest)).amount);
+  const symbol = usdParts(0).symbol;
+
+  return (
+    <span
+      className={`amount-display inline-flex max-w-full items-baseline gap-[0.06em] leading-none ${USD_SIZE_CLASS[size]}`}
+    >
+      <span
+        className={`amount-display-symbol shrink-0 translate-y-[0.06em] ${accent ? `${USD_ACCENT_CLASS[accent].gradient} ${USD_ACCENT_CLASS[accent].glow} opacity-100` : ''}`}
+        aria-hidden
+      >
+        {symbol}
+      </span>
+      <motion.span
+        className={`amount-display-value min-w-0 ${accent ? `${USD_ACCENT_CLASS[accent].gradient} ${USD_ACCENT_CLASS[accent].glow}` : ''} tabular-nums`}
+      >
+        {amount}
+      </motion.span>
+    </span>
+  );
+}
+
+const USD_SIZE_CLASS: Record<'hero' | 'lg' | 'md' | 'sm', string> = {
+  hero: 'text-[clamp(1.875rem,4.5vw,2.75rem)]',
+  lg: 'text-[clamp(1.625rem,3.5vw,1.875rem)]',
+  md: 'text-xl',
+  sm: 'text-lg',
+};
+
+const USD_ACCENT_CLASS: Record<
+  'elite' | 'pro' | 'prime' | 'brand' | 'shimmer',
+  { gradient: string; glow: string }
+> = {
+  elite: { gradient: 'amount-gradient-elite', glow: 'amount-glow-elite' },
+  pro: { gradient: 'amount-gradient-pro', glow: 'amount-glow-pro' },
+  prime: { gradient: 'amount-gradient-prime', glow: 'amount-glow-prime' },
+  brand: { gradient: 'text-gradient-brand', glow: '' },
+  shimmer: { gradient: 'amount-gradient-shimmer', glow: 'amount-glow-shimmer' },
+};
 
 type OptionCardProps = {
   selected: boolean;
@@ -135,6 +200,11 @@ export function IncomeCalculatorSection() {
   const t = useTranslations('home.calculator');
   const locale = useLocale();
   const reduced = useReducedMotion();
+  const isMobile = useIsMobileViewport();
+  // Keep the 3D step/result tilt to desktop; mobile (and reduced) get the
+  // flat opacity/y fallback to avoid jank on low-power devices.
+  const flat = reduced || isMobile;
+  const resultCtaMagnetRef = useMagnetic<HTMLSpanElement>(0.2);
   const [step, setStep] = useState(0);
   const [direction, setDirection] = useState(1);
   const [answers, setAnswers] = useState<Partial<CalculatorAnswers>>(INITIAL_ANSWERS);
@@ -151,8 +221,8 @@ export function IncomeCalculatorSection() {
     return estimateIncome(answers as CalculatorAnswers);
   }, [answers]);
 
-  const animatedLow = useCountUp(result?.low ?? 0, showResult);
-  const animatedHigh = useCountUp(result?.high ?? 0, showResult, 1100);
+  const animatedLow = useCountUp(result?.low ?? 0, showResult, !!reduced);
+  const animatedHigh = useCountUp(result?.high ?? 0, showResult, !!reduced, 1100);
 
   useEffect(() => {
     if (!showResult || !result) return;
@@ -235,9 +305,13 @@ export function IncomeCalculatorSection() {
                 </div>
                 <div className="h-1 overflow-hidden rounded-full bg-white/[0.06]">
                   <motion.div
-                    className="h-full rounded-full bg-gradient-to-r from-accent-pink via-accent-violet to-accent-cyan"
-                    animate={{ width: `${progress}%` }}
-                    transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                    className="h-full w-full origin-left rounded-full bg-gradient-to-r from-accent-pink via-accent-violet to-accent-cyan"
+                    animate={{ scaleX: progress / 100 }}
+                    transition={
+                      reduced
+                        ? { duration: 0 }
+                        : { duration: 0.45, ease: EASE_SMOOTH }
+                    }
                   />
                 </div>
               </div>
@@ -248,12 +322,12 @@ export function IncomeCalculatorSection() {
                 <motion.div
                   key={questionId}
                   custom={direction}
-                  variants={reduced ? undefined : stepVariants}
-                  initial={reduced ? { opacity: 0, y: 12 } : 'enter'}
-                  animate={reduced ? { opacity: 1, y: 0 } : 'center'}
-                  exit={reduced ? { opacity: 0, y: -8 } : 'exit'}
-                  transition={{ duration: reduced ? 0.25 : 0.42, ease: [0.22, 1, 0.36, 1] }}
-                  style={{ transformStyle: 'preserve-3d' }}
+                  variants={flat ? undefined : stepVariants}
+                  initial={flat ? { opacity: 0, y: 12 } : 'enter'}
+                  animate={flat ? { opacity: 1, y: 0 } : 'center'}
+                  exit={flat ? { opacity: 0, y: -8 } : 'exit'}
+                  transition={{ duration: reduced ? 0.25 : 0.42, ease: EASE_SMOOTH }}
+                  style={flat ? undefined : { transformStyle: 'preserve-3d' }}
                 >
                   <h3 className="heading-card mb-3 text-xl md:text-2xl">
                     {t(`questions.${questionId}.title`)}
@@ -296,12 +370,12 @@ export function IncomeCalculatorSection() {
                   <motion.div
                     key="result"
                     initial={
-                      reduced
+                      flat
                         ? { opacity: 0 }
                         : { opacity: 0, scale: 0.94, rotateX: 8, transformPerspective: 1200 }
                     }
                     animate={{ opacity: 1, scale: 1, rotateX: 0, y: 0 }}
-                    transition={{ duration: reduced ? 0.35 : 0.65, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: reduced ? 0.35 : 0.65, ease: EASE_SMOOTH }}
                     className="space-y-6"
                   >
                     <div className="text-center">
@@ -334,13 +408,13 @@ export function IncomeCalculatorSection() {
                         </p>
 
                         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
-                          <UsdDisplay
+                          <AnimatedUsd
                             value={animatedLow}
                             size="hero"
                             accent={TIER_ACCENT[result.tier]}
                           />
                           <span className="text-2xl text-white/25">—</span>
-                          <UsdDisplay
+                          <AnimatedUsd
                             value={animatedHigh}
                             size="hero"
                             accent={TIER_ACCENT[result.tier]}
@@ -387,7 +461,8 @@ export function IncomeCalculatorSection() {
                     <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
                       <a
                         href="#contact"
-                        className="btn-primary group justify-center"
+                        data-magnetic-area
+                        className={`btn-primary group justify-center ${showResult ? 'btn-ready' : ''}`}
                         onClick={() => {
                           if (result) {
                             saveCalcPrefill({
@@ -399,8 +474,10 @@ export function IncomeCalculatorSection() {
                           trackCtaClick({ location: 'calculator_result', locale });
                         }}
                       >
-                        {t('result.cta')}
-                        <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                        <span ref={resultCtaMagnetRef} className="inline-flex items-center gap-2">
+                          {t('result.cta')}
+                          <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                        </span>
                       </a>
                       <a
                         href="#models"
@@ -429,7 +506,7 @@ export function IncomeCalculatorSection() {
                   type="button"
                   onClick={goBack}
                   disabled={step === 0}
-                  className="inline-flex items-center gap-1.5 text-sm text-white/45 transition hover:text-white/80 disabled:pointer-events-none disabled:opacity-30"
+                  className="-my-2 inline-flex items-center gap-1.5 py-2 text-sm text-white/45 transition-[color,transform] hover:text-white/80 focus-visible:text-white/90 active:scale-[0.97] disabled:pointer-events-none disabled:opacity-30"
                 >
                   <ChevronLeft className="h-4 w-4" />
                   {t('back')}

@@ -6,6 +6,8 @@ import { Check, ChevronDown, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { localeLabels, localeShort, routing, type Locale } from '@/i18n/routing';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { EASE_SMOOTH } from '@/lib/motion';
 
 export function LanguageSwitcher({
   compact = false,
@@ -19,6 +21,7 @@ export function LanguageSwitcher({
   const locale = useLocale() as Locale;
   const pathname = usePathname();
   const router = useRouter();
+  const reduced = useReducedMotion();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -82,10 +85,10 @@ export function LanguageSwitcher({
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: 6, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 6, scale: 0.98 }}
-            transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            initial={reduced ? { opacity: 0 } : { opacity: 0, y: 6, scale: 0.98 }}
+            animate={reduced ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+            exit={reduced ? { opacity: 0 } : { opacity: 0, y: 6, scale: 0.98 }}
+            transition={reduced ? { duration: 0 } : { duration: 0.18, ease: EASE_SMOOTH }}
             className="absolute right-0 top-[calc(100%+8px)] z-[70] min-w-[200px] rounded-2xl border border-white/[0.1] bg-[#0c0c12]/98 backdrop-blur-xl shadow-[0_20px_50px_-16px_rgba(0,0,0,0.85),0_0_0_1px_rgba(255,91,181,0.08)] overflow-hidden"
             role="listbox"
             aria-label={t('ariaLabel')}

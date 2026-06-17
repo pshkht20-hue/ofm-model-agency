@@ -26,12 +26,18 @@ export function HomeSeoBlock() {
           <p>
             {t.rich('p2', {
               faq: (chunks) => (
-                <Link href="/faq" className="text-accent-pink hover:text-accent-cyan transition">
+                <Link
+                  href="/faq"
+                  className="link-hover-line text-accent-pink transition-colors hover:text-accent-cyan"
+                >
                   {chunks}
                 </Link>
               ),
               blog: (chunks) => (
-                <Link href="/blog" className="text-accent-pink hover:text-accent-cyan transition">
+                <Link
+                  href="/blog"
+                  className="link-hover-line text-accent-pink transition-colors hover:text-accent-cyan"
+                >
                   {chunks}
                 </Link>
               ),

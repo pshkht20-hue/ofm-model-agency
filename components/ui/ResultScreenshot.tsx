@@ -2,8 +2,11 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { TrendingUp } from 'lucide-react';
 import type { ResultTier } from '@/lib/results/cases';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { SPRING_HOVER, VIEWPORT_DEFAULT, hoverLift, scaleReveal } from '@/lib/motion';
 
 const TIER_STYLES: Record<
   ResultTier,
@@ -72,12 +75,11 @@ export function ResultScreenshot({
   sizes = '(max-width: 768px) 72vw, (max-width: 1200px) 280px, 320px',
 }: ResultScreenshotProps) {
   const [failed, setFailed] = useState(false);
+  const reduced = useReducedMotion();
 
-  if (failed) {
-    return <ScreenshotPlaceholder tier={tier} />;
-  }
-
-  return (
+  const inner = failed ? (
+    <ScreenshotPlaceholder tier={tier} />
+  ) : (
     <Image
       src={src}
       alt={alt}
@@ -89,5 +91,21 @@ export function ResultScreenshot({
       onError={() => setFailed(true)}
       className="h-auto w-full"
     />
+  );
+
+  if (reduced) {
+    return inner;
+  }
+
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={VIEWPORT_DEFAULT}
+      variants={scaleReveal}
+      whileHover={{ ...hoverLift(reduced), transition: SPRING_HOVER }}
+    >
+      {inner}
+    </motion.div>
   );
 }

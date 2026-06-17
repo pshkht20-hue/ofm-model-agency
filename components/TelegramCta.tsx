@@ -38,7 +38,7 @@ export function TelegramCta({
         target="_blank"
         rel="noopener noreferrer"
         onClick={onClick}
-        className={`group inline-flex items-center gap-1.5 text-sm font-medium text-[#5bc8f5] transition hover:text-[#8ad8f8] ${className}`}
+        className={`group inline-flex items-center gap-1.5 text-sm font-medium text-[#5bc8f5] transition-colors hover:text-[#8ad8f8] ${className}`}
       >
         <SocialIcon platform="telegram" className="h-4 w-4" />
         {label}
@@ -53,7 +53,7 @@ export function TelegramCta({
       target="_blank"
       rel="noopener noreferrer"
       onClick={onClick}
-      className={`group inline-flex items-center justify-center gap-2.5 rounded-full border border-[#2AABEE]/40 bg-[#2AABEE]/[0.08] px-7 py-3.5 font-semibold text-white transition-all duration-300 hover:border-[#2AABEE]/70 hover:bg-[#2AABEE]/[0.16] hover:shadow-[0_0_28px_-6px_rgba(42,171,238,0.6)] ${className}`}
+      className={`group inline-flex items-center justify-center gap-2.5 rounded-full border border-[#2AABEE]/40 bg-[#2AABEE]/[0.08] px-7 py-3.5 font-semibold text-white transition-[border-color,background-color,box-shadow,transform] duration-300 hover:border-[#2AABEE]/70 hover:bg-[#2AABEE]/[0.16] hover:shadow-[0_0_28px_-6px_rgba(42,171,238,0.6)] active:scale-[0.98] ${className}`}
     >
       <SocialIcon
         platform="telegram"

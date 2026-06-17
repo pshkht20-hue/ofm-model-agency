@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { getRelatedPosts } from '@/lib/content/blog';
 import type { Locale } from '@/i18n/routing';
 import { BlogPostCard } from '@/components/seo/BlogPostCard';
+import { RelatedPostsList } from '@/components/seo/RelatedPostsList';
 
 export async function RelatedPosts({
   slug,
@@ -18,11 +19,11 @@ export async function RelatedPosts({
   return (
     <aside className="mt-16 pt-10 border-t border-white/[0.08]">
       <p className="eyebrow-bright mb-5">{t('readAlso')}</p>
-      <ul className="space-y-5">
+      <RelatedPostsList className="space-y-5">
         {related.map((post) => (
           <BlogPostCard key={post.slug} post={post} locale={locale} />
         ))}
-      </ul>
+      </RelatedPostsList>
     </aside>
   );
 }

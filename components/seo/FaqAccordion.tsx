@@ -1,7 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { VIEWPORT_TIGHT, staggerContainer, staggerItem } from '@/lib/motion';
 import type { FaqCategory } from '@/lib/content/faq';
 
 type FaqAccordionProps = {
@@ -10,6 +13,7 @@ type FaqAccordionProps = {
 
 export function FaqAccordion({ categories }: FaqAccordionProps) {
   const [openKey, setOpenKey] = useState<string | null>('0-0');
+  const reduced = useReducedMotion();
 
   return (
     <div className="space-y-12">
@@ -21,14 +25,21 @@ export function FaqAccordion({ categories }: FaqAccordionProps) {
           >
             {category.title}
           </h2>
-          <div className="space-y-3">
+          <motion.div
+            className="space-y-3"
+            initial={reduced ? false : 'hidden'}
+            whileInView={reduced ? undefined : 'visible'}
+            viewport={VIEWPORT_TIGHT}
+            variants={reduced ? undefined : staggerContainer()}
+          >
             {category.items.map((item, itemIndex) => {
               const key = `${catIndex}-${itemIndex}`;
               const isOpen = openKey === key;
               return (
-                <article
+                <motion.article
                   key={item.question}
                   className="card-glass overflow-hidden"
+                  variants={reduced ? undefined : staggerItem(20)}
                   itemScope
                   itemProp="mainEntity"
                   itemType="https://schema.org/Question"
@@ -46,15 +57,15 @@ export function FaqAccordion({ categories }: FaqAccordionProps) {
                       {item.question}
                     </h3>
                     <ChevronDown
-                      className={`w-5 h-5 shrink-0 text-accent-pink transition-transform duration-300 ${
-                        isOpen ? 'rotate-180' : ''
-                      }`}
+                      className={`w-5 h-5 shrink-0 text-accent-pink transition-transform ${
+                        reduced ? 'duration-0' : 'duration-300'
+                      } ${isOpen ? 'rotate-180' : ''}`}
                     />
                   </button>
                   <div
-                    className={`grid transition-[grid-template-rows] duration-300 ease-out ${
-                      isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-                    }`}
+                    className={`grid transition-[grid-template-rows] ease-out ${
+                      reduced ? 'duration-0' : 'duration-300'
+                    } ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
                     itemScope
                     itemProp="acceptedAnswer"
                     itemType="https://schema.org/Answer"
@@ -68,10 +79,10 @@ export function FaqAccordion({ categories }: FaqAccordionProps) {
                       </p>
                     </div>
                   </div>
-                </article>
+                </motion.article>
               );
             })}
-          </div>
+          </motion.div>
         </section>
       ))}
     </div>

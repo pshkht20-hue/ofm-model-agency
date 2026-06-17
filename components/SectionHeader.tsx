@@ -49,8 +49,8 @@ export function SectionHeader({
     >
       <motion.p
         variants={{
-          hidden: { opacity: 0, letterSpacing: '0.15em' },
-          visible: { opacity: 1, letterSpacing: '0.28em', transition: { duration: 0.65 } },
+          hidden: { opacity: 0, y: 8 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: EASE_SMOOTH } },
         }}
         className="eyebrow-bright mb-4"
       >

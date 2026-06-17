@@ -12,6 +12,7 @@ import { SocialLinks } from '@/components/social/SocialLinks';
 import { useSectionContext } from '@/context/SectionContext';
 import { NAV_SECTION_MAP } from '@/lib/sections';
 import { useMagnetic } from '@/hooks/useMagnetic';
+import { EASE_SMOOTH, staggerContainer, staggerItemSlide } from '@/lib/motion';
 
 export function Navbar() {
   const t = useTranslations('nav');
@@ -93,7 +94,7 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => setMenuOpen((open) => !open)}
-                className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-xl border border-white/[0.12] bg-white/[0.04] hover:border-accent-pink/45 hover:bg-white/[0.06] active:scale-[0.97] transition shrink-0 shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset]"
+                className="flex items-center justify-center w-11 h-11 sm:w-11 sm:h-11 rounded-xl border border-white/[0.12] bg-white/[0.04] hover:border-accent-pink/45 hover:bg-white/[0.06] active:scale-[0.97] transition-colors transition-transform shrink-0 shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset]"
                 aria-expanded={menuOpen}
                 aria-controls="mobile-menu"
                 aria-label={menuOpen ? t('closeMenu') : t('openMenu')}
@@ -184,31 +185,35 @@ export function Navbar() {
 
         <motion.div
           initial={false}
-          animate={menuOpen ? { y: 0 } : { y: -16 }}
+          animate={reduced ? { y: 0 } : menuOpen ? { y: 0 } : { y: -16 }}
+          transition={reduced ? { duration: 0 } : { duration: 0.3, ease: EASE_SMOOTH }}
           className={`absolute top-[3.75rem] sm:top-14 left-0 right-0 bottom-0 bg-[#050508] border-t border-white/[0.06] flex flex-col ${
             menuOpen ? '' : 'pointer-events-none'
           }`}
         >
           <div className="flex-1 overflow-y-auto px-5 py-6">
             <p className="eyebrow-bright mb-3">{t('navigation')}</p>
-            <div className="flex flex-col">
-              {NAV_LINKS.map((link, i) => (
+            <motion.div
+              className="flex flex-col"
+              initial={false}
+              animate={menuOpen ? 'visible' : 'hidden'}
+              variants={reduced ? undefined : staggerContainer(0.04)}
+            >
+              {NAV_LINKS.map((link) => (
                 <motion.div
                   key={link.href}
-                  initial={{ opacity: 0, x: -12 }}
-                  animate={menuOpen ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: i * 0.04 }}
+                  variants={reduced ? undefined : staggerItemSlide(-12)}
                 >
                   <Link
                     href={link.href}
                     onClick={closeMenu}
-                    className="font-serif text-xl py-3.5 border-b border-white/[0.06] text-white/90 hover:text-accent-pink transition block"
+                    className="font-serif text-xl py-3.5 border-b border-white/[0.06] text-white/90 hover:text-accent-pink transition-colors block"
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
 
             <div className="mt-8 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4">
               <SocialLinks variant="menu" onLinkClick={closeMenu} />

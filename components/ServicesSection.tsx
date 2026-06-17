@@ -15,7 +15,7 @@ import { useTranslations } from 'next-intl';
 import { hoverLift, SPRING_CARD } from '@/lib/motion';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
-import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
+import { MotionFade, StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
 
 const SERVICE_ICONS = [Users, MessageCircle, TrendingUp, Camera, BarChart3, Shield] as const;
 
@@ -124,7 +124,6 @@ function ServiceCard({ icon: Icon, index, featured, item, accent }: ServiceCardP
 
 export function ServicesSection() {
   const t = useTranslations('home');
-  const reducedMotion = useReducedMotion();
   const items = t.raw('services.items') as ServiceItem[];
 
   return (
@@ -152,21 +151,9 @@ export function ServicesSection() {
         ))}
       </StaggerGrid>
 
-      {reducedMotion ? (
-        <p className="mx-auto mt-8 max-w-3xl rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 text-center text-sm leading-relaxed text-white/50">
-          {t('services.footerNote')}
-        </p>
-      ) : (
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto mt-8 max-w-3xl rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 text-center text-sm leading-relaxed text-white/50"
-        >
-          {t('services.footerNote')}
-        </motion.p>
-      )}
+      <MotionFade className="mx-auto mt-8 max-w-3xl rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 text-center text-sm leading-relaxed text-white/50">
+        {t('services.footerNote')}
+      </MotionFade>
     </SectionShell>
   );
 }

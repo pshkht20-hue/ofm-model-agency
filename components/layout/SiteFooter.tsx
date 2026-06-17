@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Logo } from '@/components/Logo';
 import { LegalDisclaimer } from '@/components/CreatorTheme';
@@ -7,10 +8,13 @@ import { NeonAccents } from '@/components/ui/NeonAccents';
 import { Link } from '@/i18n/navigation';
 import { CookieSettingsButton } from '@/components/consent/CookieSettingsButton';
 import { SocialLinks } from '@/components/social/SocialLinks';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { staggerContainer, staggerItem, VIEWPORT_DEFAULT } from '@/lib/motion';
 
 export function SiteFooter() {
   const t = useTranslations('footer');
   const tNav = useTranslations('nav');
+  const reduced = useReducedMotion();
 
   const NAV = [
     { href: '/#about' as const, label: tNav('about') },
@@ -38,62 +42,74 @@ export function SiteFooter() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_50%_100%,rgba(255,91,181,0.06),transparent)] pointer-events-none" />
       <NeonAccents variant="footer" />
       <div className="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-y-12 gap-x-8">
-          <div className="md:col-span-2 lg:col-span-2">
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-5 gap-y-12 gap-x-8"
+          initial={reduced ? undefined : 'hidden'}
+          whileInView={reduced ? undefined : 'visible'}
+          viewport={reduced ? undefined : VIEWPORT_DEFAULT}
+          variants={reduced ? undefined : staggerContainer(0.1)}
+        >
+          <motion.div
+            className="md:col-span-2 lg:col-span-2"
+            variants={reduced ? undefined : staggerItem(20)}
+          >
             <Logo size="lg" href="/" wordmarkOnMobile className="mb-6" />
             <p className="max-w-md text-body">{t('tagline')}</p>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div variants={reduced ? undefined : staggerItem(20)}>
             <p className="eyebrow-bright mb-6 !text-[10px]">{t('navTitle')}</p>
             <div className="flex flex-col gap-y-3 text-sm text-white/55">
               {NAV.map(({ href, label }) => (
                 <Link
                   key={href}
                   href={href}
-                  className="link-hover-line hover:text-accent-pink transition w-fit"
+                  className="link-hover-line hover:text-accent-pink transition-colors w-fit"
                 >
                   {label}
                 </Link>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div variants={reduced ? undefined : staggerItem(20)}>
             <p className="eyebrow-bright mb-6 !text-[10px]">{t('resourcesTitle')}</p>
             <div className="flex flex-col gap-y-3 text-sm text-white/55">
               {RESOURCES.map(({ href, label }) => (
                 <Link
                   key={href}
                   href={href}
-                  className="link-hover-line hover:text-accent-pink transition w-fit"
+                  className="link-hover-line hover:text-accent-pink transition-colors w-fit"
                 >
                   {label}
                 </Link>
               ))}
               <Link
                 href="/#contact"
-                className="link-hover-line hover:text-accent-pink transition w-fit"
+                className="link-hover-line hover:text-accent-pink transition-colors w-fit"
               >
                 {t('apply')}
               </Link>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="md:col-span-2 lg:col-span-1">
+          <motion.div
+            className="md:col-span-2 lg:col-span-1"
+            variants={reduced ? undefined : staggerItem(20)}
+          >
             <SocialLinks variant="footer" />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <LegalDisclaimer className="mt-12 max-w-3xl" />
 
         <div className="mt-10 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-y-4 text-xs text-white/40">
           <span>© {new Date().getFullYear()} OFM&apos;s Model Agency</span>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <Link href="/privacy" className="link-hover-line hover:text-accent-pink transition">
+            <Link href="/privacy" className="link-hover-line hover:text-accent-pink transition-colors">
               {t('privacy')}
             </Link>
-            <Link href="/terms" className="link-hover-line hover:text-accent-pink transition">
+            <Link href="/terms" className="link-hover-line hover:text-accent-pink transition-colors">
               {t('terms')}
             </Link>
             <CookieSettingsButton />

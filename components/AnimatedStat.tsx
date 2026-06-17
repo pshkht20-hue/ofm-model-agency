@@ -10,7 +10,7 @@ import {
 } from 'framer-motion';
 import { useEffect, useRef, type ReactNode } from 'react';
 import type { LucideIcon } from 'lucide-react';
-import { EASE_SMOOTH, SPRING_HOVER, VIEWPORT_TIGHT, fadeUpStatic } from '@/lib/motion';
+import { EASE_SMOOTH, EASE_SNAPPY, SPRING_HOVER, VIEWPORT_TIGHT, fadeUpStatic } from '@/lib/motion';
 
 export type StatAccent = 'pink' | 'cyan' | 'violet';
 
@@ -70,7 +70,7 @@ export function AnimatedStat({
     }
     const controls = animate(count, number, {
       duration: 2.2,
-      ease: EASE_SMOOTH,
+      ease: EASE_SNAPPY,
       delay: index * 0.12,
     });
     return () => controls.stop();

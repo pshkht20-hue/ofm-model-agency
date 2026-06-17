@@ -172,17 +172,29 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
           });
         }
 
-        gsap.to('[data-cosmos-milky]', {
-          x: 24,
-          y: -12,
-          opacity: 0.85,
-          scale: 1.03,
-          duration: 22,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          delay: 1,
-        });
+        if (mobile) {
+          // Mobile: opacity-only ambient pulse — no transform/scale loop (perf).
+          gsap.to('[data-cosmos-milky]', {
+            opacity: 0.85,
+            duration: 22,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            delay: 1,
+          });
+        } else {
+          gsap.to('[data-cosmos-milky]', {
+            x: 24,
+            y: -12,
+            opacity: 0.85,
+            scale: 1.03,
+            duration: 22,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            delay: 1,
+          });
+        }
 
         if (!mobile) {
           gsap.to('[data-cosmos-core="accent"]', {

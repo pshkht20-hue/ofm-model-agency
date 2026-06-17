@@ -3,6 +3,8 @@
 import { useCallback, type MouseEvent } from 'react';
 import { motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { SPRING_HOVER, hoverLift } from '@/lib/motion';
 
 type FeatureCardProps = {
   icon?: LucideIcon;
@@ -19,6 +21,8 @@ export function FeatureCard({
   step,
   className = '',
 }: FeatureCardProps) {
+  const reduced = useReducedMotion();
+
   const onMove = useCallback((e: MouseEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -29,9 +33,9 @@ export function FeatureCard({
 
   return (
     <motion.article
-      onMouseMove={onMove}
-      whileHover={{ y: -6 }}
-      transition={{ type: 'spring', stiffness: 400, damping: 28 }}
+      onMouseMove={reduced ? undefined : onMove}
+      whileHover={hoverLift(reduced)}
+      transition={SPRING_HOVER}
       className={`group card-glass relative overflow-hidden p-8 md:p-9 flex flex-col ${className}`}
     >
       <div

@@ -1017,4 +1017,12 @@ input[type="number"] {
   .eyebrow-bright::after {
     animation: none;
   }
+
+  .cover-zoom {
+    transition: none;
+  }
+
+  .group:hover .cover-zoom {
+    transform: none;
+  }
 }

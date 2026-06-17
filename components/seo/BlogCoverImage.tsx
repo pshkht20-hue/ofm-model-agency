@@ -26,7 +26,7 @@ export function BlogCoverImage({
         fill
         priority={priority}
         sizes={sizes}
-        className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+        className="cover-zoom object-cover transition-transform duration-700 group-hover:scale-[1.03]"
       />
       <div
         className="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/40 to-transparent pointer-events-none"
@@ -43,7 +43,7 @@ export function BlogCoverImage({
             href={cover.photographerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/60 hover:text-accent-pink transition underline-offset-2 hover:underline"
+            className="text-white/60 hover:text-accent-pink transition-colors underline-offset-2 hover:underline"
           >
             {cover.photographer}
           </a>
@@ -52,7 +52,7 @@ export function BlogCoverImage({
             href={cover.unsplashUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/50 hover:text-accent-cyan transition"
+            className="text-white/50 hover:text-accent-cyan transition-colors"
           >
             Unsplash
           </a>

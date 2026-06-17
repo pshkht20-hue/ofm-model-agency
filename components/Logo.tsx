@@ -86,7 +86,7 @@ export function Logo({
     <>
       <LogoMark
         size={s.mark}
-        className="shrink-0 drop-shadow-[0_0_20px_rgba(255,91,181,0.35)] transition-[filter] duration-300 group-hover:drop-shadow-[0_0_28px_rgba(255,91,181,0.55)]"
+        className="shrink-0 drop-shadow-[0_0_20px_rgba(255,91,181,0.35)] lg:[@media(hover:hover)]:transition-[filter] lg:[@media(hover:hover)]:duration-300 lg:[@media(hover:hover)]:group-hover:drop-shadow-[0_0_28px_rgba(255,91,181,0.55)]"
       />
       {showWordmark && (
         <div

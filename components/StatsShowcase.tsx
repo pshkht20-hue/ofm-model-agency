@@ -120,23 +120,16 @@ export function StatsShowcase() {
       )}
 
       <div className="max-w-6xl mx-auto px-5 md:px-8 relative z-10">
-        {reduced ? (
-          <div className="text-center mb-8 md:mb-10">
-            <p className="eyebrow-bright mb-3">{t('eyebrow')}</p>
-            <h2 className="font-serif text-2xl md:text-3xl text-white/95 tracking-tight">
-              {t('title')}{' '}
-              <span className="text-gradient-brand italic">{t('titleAccent')}</span>
-            </h2>
-          </div>
-        ) : (
-          <div data-stats-header className="text-center mb-8 md:mb-10">
-            <p className="eyebrow-bright mb-3">{t('eyebrow')}</p>
-            <h2 className="font-serif text-2xl md:text-3xl text-white/95 tracking-tight">
-              {t('title')}{' '}
-              <span className="text-gradient-brand italic">{t('titleAccent')}</span>
-            </h2>
-          </div>
-        )}
+        <div
+          {...(reduced ? {} : { 'data-stats-header': '' })}
+          className="text-center mb-8 md:mb-10"
+        >
+          <p className="eyebrow-bright mb-3">{t('eyebrow')}</p>
+          <h2 className="font-serif text-2xl md:text-3xl text-white/95 tracking-tight">
+            {t('title')}{' '}
+            <span className="text-gradient-brand italic">{t('titleAccent')}</span>
+          </h2>
+        </div>
 
         <div className="relative">
           <div

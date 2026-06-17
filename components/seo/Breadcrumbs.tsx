@@ -12,7 +12,7 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
     <nav aria-label={t('breadcrumbs')} className="mb-8 text-xs text-white/40">
       <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
         <li>
-          <Link href="/" className="hover:text-accent-pink transition">
+          <Link href="/" className="link-hover-line hover:text-accent-pink transition-colors">
             {t('home')}
           </Link>
         </li>
@@ -20,7 +20,10 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
           <li key={`${item.label}-${i}`} className="flex items-center gap-x-2">
             <span aria-hidden>/</span>
             {item.href ? (
-              <Link href={item.href} className="hover:text-accent-pink transition">
+              <Link
+                href={item.href}
+                className="link-hover-line hover:text-accent-pink transition-colors"
+              >
                 {item.label}
               </Link>
             ) : (

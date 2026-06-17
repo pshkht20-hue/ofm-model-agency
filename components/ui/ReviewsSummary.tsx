@@ -1,15 +1,19 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
 import { Star } from 'lucide-react';
 import { ReviewStars } from '@/components/ui/ReviewStars';
 import { getReviewStats } from '@/lib/content/reviews';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { EASE_SMOOTH, VIEWPORT_TIGHT } from '@/lib/motion';
 
 export function ReviewsSummary() {
   const t = useTranslations('reviews.summary');
   const locale = useLocale() as Locale;
+  const reduced = useReducedMotion();
   const { total, average, distribution } = getReviewStats(locale);
   const maxCount = Math.max(...distribution.map((d) => d.count), 1);
 
@@ -45,9 +49,13 @@ export function ReviewsSummary() {
                 <span className="w-3 text-white/40 tabular-nums">{star}</span>
                 <Star className="w-3 h-3 fill-[#fbbc04] text-[#fbbc04]" strokeWidth={0} />
                 <div className="flex-1 h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
-                  <div
-                    className="h-full rounded-full bg-[#fbbc04]/70 transition-all duration-700"
-                    style={{ width: count ? `${(count / maxCount) * 100}%` : '0%' }}
+                  <motion.div
+                    className="h-full w-full origin-left rounded-full bg-[#fbbc04]/70"
+                    style={{ transformOrigin: 'left' }}
+                    initial={reduced ? false : { scaleX: 0 }}
+                    whileInView={{ scaleX: count ? count / maxCount : 0 }}
+                    viewport={VIEWPORT_TIGHT}
+                    transition={reduced ? { duration: 0 } : { duration: 0.7, ease: EASE_SMOOTH }}
                   />
                 </div>
                 <span className="w-4 text-right text-white/35 tabular-nums">{count}</span>

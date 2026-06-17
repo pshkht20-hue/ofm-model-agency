@@ -1,6 +1,8 @@
 'use client';
 
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { EASE_SMOOTH } from '@/lib/motion';
 
 type SuccessCheckmarkProps = {
   className?: string;
@@ -21,8 +23,8 @@ export function SuccessCheckmark({ className = '', size = 56 }: SuccessCheckmark
       <motion.div
         className="absolute inset-0 rounded-full bg-emerald-400/15"
         initial={reduced ? false : { scale: 0 }}
-        animate={{ scale: [1, 1.35, 1] }}
-        transition={{ duration: reduced ? 0 : 0.8, delay: 0.15 }}
+        animate={reduced ? { scale: 1, opacity: 1 } : { scale: [1, 1.35, 1] }}
+        transition={{ duration: reduced ? 0 : 0.8, delay: reduced ? 0 : 0.15 }}
       />
       <svg width={size} height={size} viewBox="0 0 56 56" fill="none">
         <motion.circle
@@ -45,7 +47,7 @@ export function SuccessCheckmark({ className = '', size = 56 }: SuccessCheckmark
           fill="none"
           initial={reduced ? false : { pathLength: 0 }}
           animate={{ pathLength: 1 }}
-          transition={{ duration: reduced ? 0 : 0.45, delay: reduced ? 0 : 0.25, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: reduced ? 0 : 0.45, delay: reduced ? 0 : 0.25, ease: EASE_SMOOTH }}
         />
       </svg>
     </motion.div>

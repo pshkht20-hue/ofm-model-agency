@@ -70,7 +70,7 @@ export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-accent-pink hover:text-accent-cyan transition"
+                      className="link-hover-line text-sm text-accent-pink hover:text-accent-cyan transition-colors"
                     >
                       {link.label} →
                     </Link>

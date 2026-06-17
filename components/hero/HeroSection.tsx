@@ -33,6 +33,7 @@ export function HeroSection() {
   const locale = useLocale();
   const sectionRef = useRef<HTMLElement>(null);
   const ctaMagnetRef = useMagnetic<HTMLSpanElement>(0.3);
+  const ctaSecondaryMagnetRef = useMagnetic<HTMLSpanElement>(0.2);
 
   useGSAP(
     () => {
@@ -281,10 +282,13 @@ export function HeroSection() {
             href="#models"
             data-hero-cta
             data-hero-reveal
+            data-magnetic-area
             className="btn-secondary"
             onClick={() => trackCtaClick({ location: 'hero_secondary', locale })}
           >
-            {t('hero.ctaSecondary')}
+            <span ref={ctaSecondaryMagnetRef} className="inline-flex items-center gap-3">
+              {t('hero.ctaSecondary')}
+            </span>
           </a>
         </div>
 

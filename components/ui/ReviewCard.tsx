@@ -5,6 +5,8 @@ import { BadgeCheck } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import type { ModelReview } from '@/lib/content/reviews';
 import { ReviewStars } from '@/components/ui/ReviewStars';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { SPRING_CARD } from '@/lib/motion';
 
 type ReviewCardProps = {
   review: ModelReview;
@@ -13,12 +15,13 @@ type ReviewCardProps = {
 
 export function ReviewCard({ review, featured = false }: ReviewCardProps) {
   const t = useTranslations('reviewCard');
+  const reduced = useReducedMotion();
   const isFeatured = featured || review.featured;
 
   return (
     <motion.article
-      whileHover={{ y: -2 }}
-      transition={{ type: 'spring', stiffness: 420, damping: 32 }}
+      whileHover={reduced ? {} : { y: -2 }}
+      transition={SPRING_CARD}
       className={`group relative flex flex-col h-full rounded-2xl border bg-[#0b0b10] overflow-hidden transition-[border-color,box-shadow] duration-300 ${
         isFeatured
           ? 'border-accent-pink/25 shadow-[0_0_0_1px_rgba(255,91,181,0.08),0_20px_50px_-28px_rgba(255,91,181,0.35)] p-6 md:p-8'

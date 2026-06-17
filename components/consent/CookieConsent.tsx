@@ -5,6 +5,8 @@ import { Cookie, ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { EASE_SMOOTH } from '@/lib/motion';
 import {
   getStoredConsent,
   REOPEN_CONSENT_EVENT,
@@ -14,6 +16,7 @@ import {
 
 export function CookieConsent() {
   const t = useTranslations('cookieConsent');
+  const reduced = useReducedMotion();
   const [visible, setVisible] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false);
 
@@ -41,10 +44,10 @@ export function CookieConsent() {
           role="dialog"
           aria-labelledby="cookie-consent-title"
           aria-describedby="cookie-consent-desc"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 16 }}
-          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          initial={reduced ? { opacity: 0 } : { opacity: 0, y: 16 }}
+          animate={reduced ? { opacity: 1 } : { opacity: 1, y: 0 }}
+          exit={reduced ? { opacity: 0 } : { opacity: 0, y: 16 }}
+          transition={reduced ? { duration: 0 } : { duration: 0.35, ease: EASE_SMOOTH }}
           className="fixed inset-x-0 bottom-0 z-[80] pointer-events-none px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-4"
         >
           <div className="pointer-events-auto mx-auto max-w-4xl overflow-hidden rounded-xl border border-white/[0.09] bg-[#07070d]/94 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.55)] backdrop-blur-md">
@@ -121,10 +124,10 @@ export function CookieConsent() {
               <AnimatePresence initial={false}>
                 {detailsOpen && (
                   <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.22 }}
+                    initial={reduced ? { opacity: 0 } : { opacity: 0, y: -8 }}
+                    animate={reduced ? { opacity: 1 } : { opacity: 1, y: 0 }}
+                    exit={reduced ? { opacity: 0 } : { opacity: 0, y: -8 }}
+                    transition={reduced ? { duration: 0 } : { duration: 0.22, ease: EASE_SMOOTH }}
                     className="overflow-hidden"
                   >
                     <div className="mt-3 border-t border-white/[0.06] pt-3">

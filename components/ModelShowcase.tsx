@@ -9,7 +9,8 @@ import { SectionShell } from '@/components/ui/SectionShell';
 import { UsdDisplay } from '@/components/ui/UsdDisplay';
 import { ResultScreenshot } from '@/components/ui/ResultScreenshot';
 import { FeaturedPhoneParallax } from '@/components/scroll/FeaturedPhoneParallax';
-import { EASE_SOFT, VIEWPORT_DEFAULT, fadeUpStatic, hoverLift } from '@/lib/motion';
+import { MotionFade } from '@/components/ui/Reveal';
+import { EASE_SOFT, SPRING_HOVER, VIEWPORT_DEFAULT, fadeUpStatic, hoverLift } from '@/lib/motion';
 
 const TIER_STYLES: Record<
   ResultCase['tier'],
@@ -167,7 +168,7 @@ function ResultCard({
   return (
     <motion.article
       whileHover={hoverLift(reduced)}
-      transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+      transition={SPRING_HOVER}
       className={`group relative overflow-visible rounded-2xl border border-white/[0.09] bg-[#07070e]/80 backdrop-blur-sm transition-[border-color,box-shadow] duration-500 hover:border-accent-pink/30 ${style.glow} ${className}`}
     >
       <div
@@ -251,43 +252,16 @@ export function ModelShowcase() {
         </div>
       </div>
 
-      {reduced ? (
-        <p className="mx-auto mt-8 max-w-3xl text-center text-[11px] leading-relaxed text-white/35 sm:text-xs">
-          {t('disclaimer')}
-        </p>
-      ) : (
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.45 }}
-          className="mx-auto mt-8 max-w-3xl text-center text-[11px] leading-relaxed text-white/35 sm:text-xs"
-        >
-          {t('disclaimer')}
-        </motion.p>
-      )}
+      <MotionFade className="mx-auto mt-8 max-w-3xl text-center text-[11px] leading-relaxed text-white/35 sm:text-xs">
+        {t('disclaimer')}
+      </MotionFade>
 
-      {reduced ? (
-        <div className="mt-10 text-center">
-          <a href="#contact" className="btn-secondary !rounded-full">
-            {t('cta')}
-            <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
-      ) : (
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.06 }}
-          className="mt-10 text-center"
-        >
-          <a href="#contact" className="btn-secondary !rounded-full">
-            {t('cta')}
-            <ArrowRight className="h-4 w-4" />
-          </a>
-        </motion.div>
-      )}
+      <MotionFade className="mt-10 text-center" delay={0.06}>
+        <a href="#contact" className="btn-secondary !rounded-full">
+          {t('cta')}
+          <ArrowRight className="h-4 w-4" />
+        </a>
+      </MotionFade>
     </SectionShell>
   );
 }

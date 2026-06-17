@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
 import type { BlogPost } from '@/lib/content/blog';
 import { getBlogCategoryLabels } from '@/lib/content/blog';
@@ -8,6 +9,8 @@ import type { Locale } from '@/i18n/routing';
 import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
 import { LikeButton } from '@/components/ui/LikeButton';
 import { getBlogLikeSeed } from '@/lib/likes/seed';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { SPRING_HOVER, hoverLift, staggerItem } from '@/lib/motion';
 
 const DATE_LOCALE: Record<Locale, string> = {
   ru: 'ru-RU',
@@ -20,9 +23,15 @@ export function BlogPostCard({ post, locale }: { post: BlogPost; locale: Locale 
   const t = useTranslations('blogUi');
   const tCommon = useTranslations('common');
   const categoryLabels = getBlogCategoryLabels(locale);
+  const reduced = useReducedMotion();
 
   return (
-    <li className="card-glass overflow-hidden flex flex-col hover:border-accent-pink/30 transition-colors">
+    <motion.li
+      className="card-glass overflow-hidden flex flex-col hover:border-accent-pink/30 transition-colors"
+      variants={reduced ? undefined : staggerItem(24)}
+      whileHover={hoverLift(reduced)}
+      transition={SPRING_HOVER}
+    >
       <Link href={`/blog/${post.slug}`} className="group block flex-1">
         {post.cover && (
           <div className="p-3 pb-0">
@@ -67,6 +76,6 @@ export function BlogPostCard({ post, locale }: { post: BlogPost; locale: Locale 
           variant="card"
         />
       </div>
-    </li>
+    </motion.li>
   );
 }

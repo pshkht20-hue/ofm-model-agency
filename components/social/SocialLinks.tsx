@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
+import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { getSocialLinks, type SocialLink, type SocialPlatform } from '@/lib/social';
 import { SocialIcon } from '@/components/social/SocialIcons';
 import { trackTelegramClick } from '@/lib/analytics/gtag';
@@ -55,6 +56,7 @@ function SocialLinkButton({
 }) {
   const neon = PLATFORM_NEON[link.platform];
   const locale = useLocale();
+  const reduced = useReducedMotion();
   const isFooter = variant === 'footer';
   const isMenu = variant === 'menu';
   const isNav = variant === 'nav';
@@ -72,11 +74,11 @@ function SocialLinkButton({
         }
         onLinkClick?.();
       }}
-      initial={isMenu ? { opacity: 0, y: 8 } : false}
-      animate={isMenu ? { opacity: 1, y: 0 } : undefined}
-      transition={{ delay: index * 0.06, duration: 0.35 }}
-      whileHover={{ y: isNav ? -2 : -3, scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      initial={isMenu ? (reduced ? { opacity: 0 } : { opacity: 0, y: 8 }) : false}
+      animate={isMenu ? (reduced ? { opacity: 1 } : { opacity: 1, y: 0 }) : undefined}
+      transition={reduced ? { duration: 0 } : { delay: index * 0.06, duration: 0.35 }}
+      whileHover={reduced ? undefined : { y: isNav ? -2 : -3, scale: 1.05 }}
+      whileTap={reduced ? undefined : { scale: 0.95 }}
       className={`group relative flex items-center justify-center border bg-[#0a0a10]/90 backdrop-blur-sm transition-all duration-300 ${neon.surface} ${
         isFooter
           ? 'h-12 w-12 md:h-14 md:w-14 rounded-xl'

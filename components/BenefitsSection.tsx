@@ -84,7 +84,7 @@ function BenefitCard({ icon: Icon, index, featured, item, accent }: BenefitCardP
           <div className="icon-wrap-bright shrink-0 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[0_0_28px_-8px_rgba(255,91,181,0.55)]">
             <Icon className="h-6 w-6" strokeWidth={1.5} />
           </div>
-          <span className="font-serif text-3xl leading-none text-white/[0.12] tabular-nums transition-colors duration-300 group-hover:text-accent-pink/25">
+          <span className="font-serif text-3xl leading-none text-white/[0.12] tabular-nums transition-[color,transform] duration-300 group-hover:-translate-y-0.5 group-hover:text-accent-pink/25">
             {num}
           </span>
         </div>
