@@ -232,21 +232,26 @@ export function HeroSection() {
           {tCreator('badge')}
         </span>
 
-        <h1 className="heading-display text-[clamp(3rem,10vw,5.75rem)] mb-10 mt-12">
-          <span data-hero-line data-hero-reveal className="block">
+        <h1 className="heading-display mb-8 mt-12">
+          <span
+            data-hero-line
+            data-hero-reveal
+            className="block text-[clamp(2.75rem,9vw,5.25rem)] leading-[1.02] text-white/95"
+          >
             {t('hero.line1')}
           </span>
           <span
             data-hero-line="accent"
             data-hero-reveal
-            className="block hero-accent-shimmer italic"
+            className="hero-accent-shimmer mt-1 block text-[clamp(3.9rem,15.5vw,9rem)] italic leading-[0.9]"
+            style={{ textShadow: '0 0 42px rgba(255,91,181,0.35)' }}
           >
             {t('hero.line2')}
           </span>
           <span
             data-hero-line
             data-hero-reveal
-            className="block text-[clamp(1.05rem,3vw,1.9rem)] font-light tracking-[0.05em] text-white/75 mt-3"
+            className="mt-7 block font-sans text-[clamp(0.72rem,2.3vw,0.95rem)] font-semibold uppercase tracking-[0.34em] text-white/55"
           >
             {t('hero.line3')}
           </span>
@@ -256,7 +261,7 @@ export function HeroSection() {
         <p
           data-hero-subtitle
           data-hero-reveal
-          className="text-base md:text-lg text-white/65 tracking-wide max-w-2xl mx-auto -mt-4 mb-8"
+          className="mx-auto mb-8 max-w-2xl text-[clamp(1.05rem,3vw,1.4rem)] font-light tracking-[0.01em] text-white/70"
         >
           {t('hero.subtitle')}
         </p>
