@@ -44,5 +44,5 @@ export const LINK = {
   content: { href: '/blog/onlyfans-kontent-plan-i-syomki', label: 'Контент-план и съёмки' },
   mistakes: { href: '/blog/onlyfans-oshibki-novichkov', label: '15 ошибок новичков' },
   safety: { href: '/blog/onlyfans-anonimnost-i-bezopasnost', label: 'Анонимность и безопасность' },
-  noface: { href: '/blog/onlyfans-rabota-bez-lica', label: 'OnlyFans без лица' },
+  noface: { href: '/blog/onlyfans-rabota-bez-lica', label: 'Лицо и анонимность' },
 } as const;

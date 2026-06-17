@@ -167,7 +167,7 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
   'onlyfans-rabota-bez-lica': {
     localSrc: '/blog/covers/onlyfans-rabota-bez-lica.jpg',
     remoteSrc: coverUrl('1507003211169-0a1dd7228f2d'),
-    alt: 'Силуэт creator без показа лица',
+    alt: 'Девушка-creator: лицо как личный бренд и анонимность',
     photographer: 'Aiony Haust',
     photographerUrl: 'https://unsplash.com/@aiony',
     unsplashUrl: 'https://unsplash.com/photos/man-in-black-button-up-shirt-K5dqlqKcF4Q',

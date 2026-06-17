@@ -52,12 +52,12 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Qué canales de marketing usan las agencias?',
         answer:
-          'Lo más habitual: Instagram, TikTok, Twitter/X, Reddit, colaboraciones con otras creadoras y shoutouts de pago cuando conviene y es seguro para la cuenta. La estrategia depende del nicho, con o sin rostro y de la geografía de la audiencia. El objetivo es tráfico cualificado, no visitas vacías.',
+          'Lo más habitual: Instagram, TikTok, Twitter/X, Reddit, colaboraciones con otras creadoras y shoutouts de pago cuando conviene y es seguro para la cuenta. La estrategia depende del nicho, de tu marca personal y de la geografía de la audiencia. El objetivo es tráfico cualificado, no visitas vacías.',
       },
       {
-        question: '¿Se puede trabajar sin mostrar la cara (no-face)?',
+        question: '¿Hay que mostrar la cara? ¿Me verán mis conocidos?',
         answer:
-          'Sí. Muchas cuentas exitosas se basan en el anonimato, el nicho, la voz o la estética corporal sin identificar el rostro. Hace falta un concepto claro y marketing alineado; te ayudamos a definirlo.',
+          'Tu cara es tu mayor activo: los suscriptores pagan por ti, por la conversación y la conexión emocional, no solo por el contenido, por eso trabajamos con la cara. Tu anonimato lo protegemos de otra forma — con el geo-bloqueo de tu país de residencia y los países vecinos: tus paisanos y conocidos no te encontrarán, mientras que la audiencia con poder de compra la traemos de Estados Unidos, Canadá y Australia. Tus datos personales los cuida un departamento de tráfico propio, y te ayudamos con los impuestos y con un abogado.',
       },
       {
         question: '¿Gestionan otras plataformas además de OnlyFans?',

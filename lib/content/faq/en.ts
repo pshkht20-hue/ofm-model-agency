@@ -52,12 +52,12 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'Which marketing channels do agencies use?',
         answer:
-          'Most often: Instagram, TikTok, Twitter/X, Reddit, collaborations with other creators, and paid shoutouts where appropriate and safe for the account. Strategy depends on niche, face or no-face positioning, and audience geography. The goal is targeted traffic, not empty views.',
+          'Most often: Instagram, TikTok, Twitter/X, Reddit, collaborations with other creators, and paid shoutouts where appropriate and safe for the account. Strategy depends on niche, your personal brand, and audience geography. The goal is targeted traffic, not empty views.',
       },
       {
-        question: 'Can I work without showing my face (no-face)?',
+        question: 'Do I have to show my face? Will people I know see me?',
         answer:
-          'Yes. Many successful accounts are built on anonymity, niche positioning, voice, or body aesthetics without facial identification. You need a clear concept and marketing aligned with it — we help you define that.',
+          'Your face is your main asset: subscribers pay for you, for the connection and the emotion, not only for the content — so we work with your face shown. Your anonymity is protected a different way: we geo-block your country of residence and neighboring countries, so people you know and your local community never run into you, while we bring in the paying audience from the US, Canada, and Australia. A dedicated traffic department guards your personal data, and we help with taxes and a lawyer.',
       },
       {
         question: 'Do you manage platforms other than OnlyFans?',

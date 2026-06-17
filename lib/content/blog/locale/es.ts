@@ -96,7 +96,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Además, puedes bloquear en la plataforma absolutamente cualquier país que elijas: el tuyo, los vecinos, los que quieras. Tenemos un departamento de tráfico propio que vigila con cuidado para que los datos personales de las modelos nunca se filtren. Puedes trabajar sin mostrar el rostro. Y los temas de impuestos y legalidad te ayudamos a resolverlos, con asesoría completa y el apoyo de un abogado.",
+        text: "Además, puedes bloquear en la plataforma absolutamente cualquier país que elijas: el tuyo, los vecinos, los que quieras. Tenemos un departamento de tráfico propio que vigila con cuidado para que los datos personales de las modelos nunca se filtren. Tu cara es tu mayor activo: los suscriptores pagan por ti, por la conversación y la conexión, no solo por el contenido, así que trabajamos con la cara y protegemos tu anonimato con el geo-bloqueo, no ocultándote. Y los temas de impuestos y legalidad te ayudamos a resolverlos, con asesoría completa y el apoyo de un abogado.",
       },
       {
         type: "tip",
@@ -141,7 +141,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           },
           {
             href: "/blog/onlyfans-rabota-bez-lica",
-            label: "OnlyFans sin mostrar el rostro",
+            label: "Rostro y anonimato",
           },
           {
             href: "/blog/onlyfans-agentstvo-latinskaya-amerika",
@@ -759,7 +759,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Solo 18+, con verificación de identidad según las reglas de la plataforma. Decide de antemano: con cara o sin cara, qué formatos haces y qué es tabú para ti. Tus límites son la base de tu marca.",
+        text: "Solo 18+, con verificación de identidad según las reglas de la plataforma. Tu cara es tu mayor activo y tu marca personal: los fans pagan por ti, por la conversación y la conexión. Decide de antemano qué formatos haces y qué es tabú para ti; el anonimato se protege con el geo-bloqueo, no ocultando el rostro. Tus límites son la base de tu marca.",
       },
       {
         type: "h2",
@@ -994,7 +994,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
     keywords: [
       "anonimato onlyfans",
       "seguridad onlyfans modelo",
-      "onlyfans sin mostrar cara",
+      "onlyfans geo-bloqueo",
       "evitar filtraciones onlyfans",
       "trabajar onlyfans segura",
     ],
@@ -1051,7 +1051,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           },
           {
             href: "/blog/onlyfans-rabota-bez-lica",
-            label: "OnlyFans sin mostrar la cara",
+            label: "Rostro y anonimato",
           },
           {
             href: "/blog/onlyfans-oshibki-novichkov",
@@ -1074,58 +1074,53 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   "onlyfans-rabota-bez-lica": {
-    title: "OnlyFans sin mostrar la cara: estrategia no-face",
+    title: "Tu rostro en OnlyFans: tu mayor activo y el anonimato de la modelo",
     description:
-      "OnlyFans sin mostrar la cara en 2026: construye marca no-face con nichos, marketing, anonimato y crecimiento real junto al management de OFM.",
+      "¿Mostrar la cara en OnlyFans? Tu rostro es tu individualidad y tu mayor activo. Cómo ganar con la cara y mantener el anonimato mediante geo-bloqueo y protección de datos — guía del management de OFM.",
     keywords: [
-      "onlyfans sin mostrar la cara",
-      "onlyfans sin cara",
-      "no face onlyfans",
-      "modelo onlyfans anonima",
-      "onlyfans sin rostro",
+      "mostrar la cara en onlyfans",
+      "onlyfans anonimato de la modelo",
+      "onlyfans geo-bloqueo",
+      "rostro onlyfans activo",
+      "onlyfans privacidad modelo",
     ],
     blocks: [
       {
         type: "p",
-        text: "Trabajar sin cara no es un techo de ingresos, es otra forma de construir marca. Las cuentas que mejor funcionan compensan la ausencia de rostro con un cuerpo reconocible, una voz propia, una estética marcada y secciones de contenido recurrentes.",
+        text: "Tu rostro es tu individualidad y tu mayor activo. Los suscriptores no pagan solo por el contenido, pagan por TI: por la conversación, las emociones y la conexión. Muchos fans se enamoran y buscan un trato romántico — y es precisamente la cara la que crea ese vínculo y los retiene durante mucho tiempo.",
       },
       {
         type: "h2",
-        text: "Nichos que funcionan",
+        text: "Por qué la cara lo cambia todo",
       },
       {
         type: "ul",
         items: [
-          "Feet y fetiches parciales",
-          "POV y primera persona sin mostrar la cara",
-          "Máscaras, cosplay y personajes",
-          "ASMR / voz + contenido de audio",
-          "Fitness / lifestyle sin cara",
+          "Reconocimiento y marca personal — vuelven por ti",
+          "Conexión emocional y romance → mayor retención y ticket medio",
+          "La confianza de los fans crece cuando ven a una persona real",
+          "La personalidad vende más que el contenido anónimo",
         ],
       },
       {
         type: "h2",
-        text: "Marketing no-face",
+        text: "¿Y el anonimato?",
       },
       {
         type: "p",
-        text: "Reddit y X funcionan muy bien cuando el foco está en el contenido y no en la «personalidad influencer». Instagram es más difícil: ahí conviene construir un código visual propio (color, ángulo, un tatuaje o un accesorio que actúe como ancla de tu marca).",
+        text: "Mostrar la cara a una audiencia con poder de compra y seguir siendo invisible para tu entorno son cosas distintas. Tu privacidad no se sostiene en ocultar el rostro, sino en el geo-bloqueo: bloqueamos tu país, los vecinos y cualquiera que elijas — tus paisanos y conocidos no te encontrarán. La audiencia la traemos de Estados Unidos, Canadá y Australia.",
       },
       {
         type: "h2",
-        text: "Riesgos",
+        text: "Cómo protegemos tus datos",
       },
       {
         type: "p",
-        text: "El fondo de la habitación, un tatuaje o tu voz pueden delatarte. Acuerda con la agencia las reglas de encuadre y la limpieza de metadatos de las fotos para mantener tu anonimato.",
-      },
-      {
-        type: "p",
-        text: "En OFM trabajamos con modelos no-face: definimos tu estrategia cuando envías la solicitud.",
+        text: "Un departamento de tráfico propio vigila que tus datos personales nunca se filtren; en las vistas previas hay marcas de agua. Te ayudamos con los impuestos y la legalidad, con la asesoría de un abogado. Hay modelos con un balance de $10 000–20 000+ al mes, y proteger su anonimato es crítico para nosotros — por eso la protección de datos siempre es prioridad.",
       },
       {
         type: "nav",
-        intro: "No-face y crecimiento:",
+        intro: "Anonimato y arranque:",
         links: [
           {
             href: "/blog/onlyfans-anonimnost-i-bezopasnost",
@@ -1147,8 +1142,8 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "cta",
-        title: "No-face no es un techo de ingresos",
-        body: "OFM construye tu embudo por estilo, no por tu cara: marketing, chats y plan de contenido. Envía tu solicitud y te respondemos por Telegram (@Azalia_agency) en 24 h.",
+        title: "Tu cara es tu mayor activo",
+        body: "OFM revela tu individualidad y protege tu privacidad: geo-bloqueo, protección de datos y abogado. Envía tu solicitud y te respondemos por Telegram (@Azalia_agency) en 24 h.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras se refieren a la facturación bruta (gross) del balance de la página, no a un pago garantizado. Solo +18.",

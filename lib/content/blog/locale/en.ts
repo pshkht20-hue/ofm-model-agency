@@ -96,7 +96,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "On top of that, you can block absolutely any country you choose on the platform — your home country, neighboring ones, or anywhere else. We have a dedicated traffic department that carefully makes sure a model's personal data never leaks. You can work without ever showing your face. And we'll help you handle the tax and legal side too, with full consultation and a lawyer's support.",
+        text: "On top of that, you can block absolutely any country you choose on the platform — your home country, neighboring ones, or anywhere else. We have a dedicated traffic department that carefully makes sure a model's personal data never leaks. Your face stays your personal brand and your main asset — your anonymity rests on geo-blocking, not on hiding your face. And we'll help you handle the tax and legal side too, with full consultation and a lawyer's support.",
       },
       {
         type: "tip",
@@ -141,7 +141,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           },
           {
             href: "/blog/onlyfans-rabota-bez-lica",
-            label: "OnlyFans without showing your face",
+            label: "Your face & anonymity",
           },
           {
             href: "/blog/onlyfans-agentstvo-ukraina",
@@ -811,7 +811,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "18+ only, with identity verification per the platform's rules. Decide upfront: face or no face, which formats you'll shoot, and what's off-limits. Your boundaries are the foundation of your brand.",
+        text: "18+ only, with identity verification per the platform's rules. Decide upfront which formats you'll shoot and what's off-limits. Showing your face is your main asset — your individuality is what fans pay for — and your anonymity is protected by geo-blocking, not by hiding it. Your boundaries are the foundation of your brand.",
       },
       {
         type: "h2",
@@ -1103,7 +1103,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           },
           {
             href: "/blog/onlyfans-rabota-bez-lica",
-            label: "OnlyFans without showing your face",
+            label: "Your face & anonymity",
           },
           {
             href: "/blog/onlyfans-oshibki-novichkov",
@@ -1126,54 +1126,49 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   "onlyfans-rabota-bez-lica": {
-    title: "Faceless OnlyFans: No-Face Creator Strategy",
+    title: "Your Face on OnlyFans: Your Main Asset & a Model's Anonymity",
     description:
-      "Faceless OnlyFans in 2026: build a no-face brand, market it, pick a niche, nail your angles, and stay anonymous with OFM management.",
+      "Should you show your face on OnlyFans? Your face is your individuality and your main asset. How to earn with your face shown and stay anonymous through geo-blocking and data protection — a guide from OFM management.",
     keywords: [
-      "faceless onlyfans",
-      "no face onlyfans",
-      "onlyfans without showing face",
-      "anonymous onlyfans creator",
-      "no-face onlyfans niches",
+      "should you show your face on onlyfans",
+      "onlyfans model anonymity",
+      "onlyfans geo-block",
+      "onlyfans personal brand",
+      "stay anonymous on onlyfans",
     ],
     blocks: [
       {
         type: "p",
-        text: "Going faceless isn't a ceiling on your income — it's just a different kind of brand. The accounts that win without ever showing a face make up for it with a recognizable body, a voice, a signature aesthetic, and series people keep coming back for.",
+        text: "Your face is your individuality and your main asset. Subscribers don't pay only for the content — they pay for YOU: for the connection, the emotion, the conversation. Many fans fall in love and want romantic chatting, and it's your face that creates that bond and keeps them around for the long run.",
       },
       {
         type: "h2",
-        text: "Niches that actually work",
+        text: "Why your face is what wins",
       },
       {
         type: "ul",
         items: [
-          "Feet and partial fetish",
-          "POV and first-person without a face",
-          "Masks, cosplay, characters",
-          "ASMR / voice + audio content",
-          "Fitness / lifestyle without a face",
+          "Recognition and a personal brand — fans come back for you",
+          "Emotional connection and romance → higher retention and a higher average spend",
+          "Fans trust you more when they see a real person",
+          "Personality sells harder than anonymous content",
         ],
       },
       {
         type: "h2",
-        text: "Marketing a no-face brand",
+        text: "But what about anonymity?",
       },
       {
         type: "p",
-        text: 'Reddit and X work well when the focus is on the content, not on an "influencer personality." Instagram is trickier — so build a visual code instead: a color, a signature angle, a tattoo or accessory that becomes the anchor of your brand.',
+        text: "Showing your face to a paying audience and staying invisible to the people around you are two different things. Your privacy doesn't rest on hiding your face — it rests on geo-blocking: we block your country, neighboring ones, and any others you choose, so people you know and your local community simply won't find you. We bring the audience in from the US, Canada, and Australia.",
       },
       {
         type: "h2",
-        text: "The risks",
+        text: "How we protect your data",
       },
       {
         type: "p",
-        text: "Your room's background, a tattoo, the sound of your voice — any of it can deanonymize you. Agree on framing rules and photo-metadata scrubbing with your agency before you post a single piece.",
-      },
-      {
-        type: "p",
-        text: "OFM works with no-face models — when you apply, we'll map out a strategy built around your style.",
+        text: "A dedicated traffic department makes sure your personal data never leaks, and every preview carries a watermark. We help with taxes and legality, with a lawyer's consultation. Some of our models run a page balance of $10,000–20,000+ a month, and protecting their anonymity is critical to us — so data protection is always a priority.",
       },
       {
         type: "nav",
@@ -1199,8 +1194,8 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "cta",
-        title: "Going faceless isn't a ceiling on your income",
-        body: "OFM builds your funnel around your style, not your face — marketing, chats, and a full content plan. Apply now and we'll reply on Telegram (@Azalia_agency) within 24 hours.",
+        title: "Your face is your main asset",
+        body: "OFM brings out your individuality and protects your privacy: geo-blocking, data protection, and a lawyer. Apply now and we'll reply on Telegram (@Azalia_agency) within 24 hours.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Figures in the case studies on this site are the gross balance turnover of the OnlyFans page, not the model's guaranteed payout.",
