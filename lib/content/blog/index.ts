@@ -65,7 +65,12 @@ function applyLocale(post: BlogPost, locale: Locale): BlogPost {
 
 export function getBlogPosts(locale?: string | Locale): BlogPost[] {
   const resolved = resolveLocale(locale);
-  return BASE_POSTS.map((post) => applyLocale(post, resolved));
+  // Only list/relate posts that actually have a generated page in this locale.
+  // dynamicParams=false means linking a locale that fell back to ru would 404,
+  // so ru/uk-only posts (e.g. the diaspora geo-series) must not surface on en/es.
+  return BASE_POSTS.filter((post) =>
+    getBlogPostLocales(post.slug).includes(resolved)
+  ).map((post) => applyLocale(post, resolved));
 }
 
 export function getBlogPost(slug: string, locale?: string | Locale): BlogPost | undefined {
