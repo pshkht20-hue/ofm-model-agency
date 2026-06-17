@@ -747,6 +747,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "В OFM's Model Agency менеджер відповідає в Telegram протягом 24 годин після заявки на сайті; умови обговорюються індивідуально, без плати «за вхід». Використовуйте цю статтю як базу для інтерв'ю з будь-якою командою.",
       },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Ознаки скаму",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "Що робить агентство",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-ukraina",
+            label: "OnlyFans агентство Україна",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Готова обрати агентство з прозорими умовами?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Менеджер відповість у Telegram за 24 години й пояснить умови без плати «за вхід».",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
+      },
     ],
   },
   "chto-delaet-onlyfans-agentstvo": {
@@ -814,6 +844,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "OFM's Model Agency працює full-service: менеджер, маркетинг, чати та контент-стратегія. Подайте заявку на головній.",
       },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Як обрати агентство",
+          },
+          {
+            href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
+            label: "Коли потрібне агентство",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Стратегія маркетингу 2026",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Хочеш full-service під ключ?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Закриємо маркетинг, чати 24/7 і контент-стратегію, поки ти зосереджена на зйомках.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
+      },
     ],
   },
   "kogda-nuzhno-onlyfans-agentstvo": {
@@ -859,6 +919,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "OFM працює з creator'ами на різних етапах — від запуску до $20k+. Подайте заявку, якщо впізнали себе вище; ми окреслимо план без зобов'язань.",
+      },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "Що робить агентство",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Як обрати агентство",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Чати та DM-продажі",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Впізнала себе? Час делегувати рутину",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Окреслимо план під твій етап — від запуску до масштабування.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
       },
     ],
   },
@@ -906,6 +996,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "OFM не бере upfront-плату «за запуск». Заявка безкоштовна — менеджер пояснює умови в чаті до будь-яких зобов'язань.",
+      },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Як обрати агентство",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "Що робить агентство",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-ukraina",
+            label: "OnlyFans агентство Україна",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Хочеш агентство без скаму та прихованих платежів?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Без плати «за вхід»: менеджер пояснить умови в чаті до будь-яких зобов'язань.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
       },
     ],
   },
@@ -1126,6 +1246,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "Якщо маркетинг займає більше часу, ніж зйомки — це сигнал делегувати. OFM будує воронку end-to-end: заявка на сайті, відповідь менеджера протягом 24 годин.",
       },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
+            label: "Reddit і X (Twitter)",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram і TikTok",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Чати та DM-продажі",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Хочеш воронку зростання end-to-end?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Збудуємо маркетинг, трафік і чати під твою нішу — коштом агентства.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
+      },
     ],
   },
   "onlyfans-prodvizhenie-reddit-twitter": {
@@ -1163,6 +1313,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
         type: "tip",
         text: "Трафік без чатів — вода в дірявому відрі: підписники приходять і йдуть без покупок.",
       },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram і TikTok",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Чати та DM-продажі",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Стратегія маркетингу 2026",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Хочеш системний трафік з Reddit і X?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Візьмемо просування на себе й під'єднаємо чати 24/7, щоб трафік конвертувався в дохід.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
+      },
     ],
   },
   "onlyfans-instagram-tiktok-bez-bana": {
@@ -1194,6 +1374,32 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "Reels → профіль → посилання → landing/message → OnlyFans. Тестуйте CTA в bio («exclusive content», «VIP club»). Відстежуйте, яка мережа приносить платних фанів, а не лише кліки.",
+      },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
+            label: "Reddit і X (Twitter)",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Стратегія маркетингу 2026",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Хочеш трафік з Instagram і TikTok без банів?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Збудуємо SFW-воронку й приведемо платоспроможних фанів саме у твоєму випадку.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
       },
     ],
   },
@@ -1227,6 +1433,32 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "Відстежуйте % відписок vs активна база. Якщо churn >15–20%/міс без нових whales — проблема в продукті (контент + чат), а не лише в рекламі.",
+      },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Чати та DM-продажі",
+          },
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Ціноутворення",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Хочеш знизити churn і підняти LTV?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Вибудуємо систему утримання через чати, контент і ціни саме у твоєму випадку.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
       },
     ],
   },
@@ -1283,6 +1515,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "OFM веде чати 24/7 як частину management — деталі процесу обговорюються на онбордингу.",
       },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Ціноутворення",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Утримання підписників",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "Що робить агентство",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Хочеш чати 24/7, які продають за тебе?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Наша чат-команда веде листування і продажі цілодобово, поки ти зосереджена на контенті.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
+      },
     ],
   },
   "onlyfans-tseny-podpiska-ppv": {
@@ -1327,6 +1589,32 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
         type: "tip",
         text: "Тестуйте ціну кожні 6–8 тижнів на новому трафіку; не змінюйте все одразу.",
       },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Чати та DM-продажі",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Утримання підписників",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Хочеш вибудувати ціни, що приносять маржу?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Допоможемо з прайсингом підписки, PPV і кастомів саме у твоєму випадку.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
+      },
     ],
   },
   "onlyfans-skolko-zarabatyvayut-modeli": {
@@ -1367,6 +1655,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "OnlyFans бере комісію платформи. Агентство — свій %. Податки залежать від вашої юрисдикції. Рахуйте take-home, а не gross на лендингу.",
+      },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Стратегія маркетингу 2026",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Чати та DM-продажі",
+          },
+          {
+            href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
+            label: "Коли потрібне агентство",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Хочеш дізнатися свій реалістичний дохід?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Розповімо про дохід та умови саме у твоєму випадку — без обіцянок «зі стелі».",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
       },
     ],
   },
@@ -1410,6 +1728,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "Має сенс, якщо хочете пройти шлях за 7–14 днів із командою, а не вчитися на помилках DM вночі. OFM бере новачків: заявка на сайті, менеджер у Telegram протягом 24 годин.",
       },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-oshibki-novichkov",
+            label: "15 помилок новачків",
+          },
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Контент-план і зйомки",
+          },
+          {
+            href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
+            label: "Коли потрібне агентство",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Готова стартувати на OnlyFans з командою?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Беремо новачків і ведемо за руку: навчання з нуля за 10–14 днів.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
+      },
     ],
   },
   "onlyfans-kontent-plan-i-syomki": {
@@ -1445,6 +1793,32 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "tip",
         text: "Зберігайте мастери локально і в хмарі — не віддавайте агентству єдину копію.",
+      },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Чати та DM-продажі",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Стратегія маркетингу 2026",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Хочеш контент-план без вигорання?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Допоможемо побудувати календар зйомок і зв'язку стрічка → DM саме у твоєму випадку.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
       },
     ],
   },
@@ -1486,6 +1860,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "Тиждень 1: профіль + welcome. Тиждень 2: один канал трафіку. Тиждень 3: швидкість DM або чат-менеджер. Тиждень 4: тест ціни PPV. Або подайте заявку в OFM і пройдіть шлях з менеджером.",
       },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "OnlyFans для новачків",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Чати та DM-продажі",
+          },
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Ціноутворення",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Хочеш пройти шлях без типових помилок?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Менеджер проведе тебе за руку від старту, щоб ти не вчилася на помилках.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
+      },
     ],
   },
   "onlyfans-anonimnost-i-bezopasnost": {
@@ -1524,6 +1928,32 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "Межі з фанами, block lists, не плутайте «справжні» стосунки з продажами. Вигорання — ризик безпеки на рівні з хакінгом.",
       },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-rabota-bez-lica",
+            label: "Обличчя та анонімність",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Ознаки скаму",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Готова працювати безпечно й анонімно?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Розповімо про захист даних, геоблок і умови саме у твоєму випадку.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
+      },
     ],
   },
   "onlyfans-rabota-bez-lica": {
@@ -1560,6 +1990,32 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "Окремий відділ трафіку стежить, щоб особисті дані не витікали; на прев'ю — водяні знаки. Допомагаємо з податками й легальністю з консультацією юриста. Є моделі з балансом $10 000–20 000+ на місяць, і збереження їхньої анонімності для нас критично важливе — тому захист даних завжди в пріоритеті.",
       },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Анонімність і безпека",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "Скільки заробляють моделі",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Готова заробляти й лишатися анонімною?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Розповімо про дохід, геоблок і захист даних саме у твоєму випадку.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
+      },
     ],
   },
   "onlyfans-agentstvo-moldova": {
@@ -1594,6 +2050,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "OFM працює з моделями з Молдови, України, Європи та Латинської Америки — повністю дистанційно. Заявка на ofmmodels.com — відповідь у Telegram за 24 години, без плати за «вхід».",
+      },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-ukraina",
+            label: "OnlyFans агентство Україна",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Ознаки скаму",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Як обрати агентство",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Готова почати з агентством у Молдові?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Розповімо про дохід, умови та конфіденційність саме у твоєму випадку.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
       },
     ],
   },
@@ -1631,6 +2117,36 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "Шукаєте agencia OnlyFans у Latinoamérica — подайте заявку на ofmmodels.com. Менеджер OFM відповість у Telegram без зобов'язань.",
+      },
+      {
+        type: "nav",
+        intro: "Читати далі:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Робота моделлю OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-ukraina",
+            label: "OnlyFans агентство Україна",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moldova",
+            label: "Агентство Молдова",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Як обрати агентство",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Готова почати з OnlyFans-агентством?",
+        body: "Залиш заявку — анонімно і без зобов'язань, або напиши в Telegram @Azalia_agency. Розповімо про дохід, умови та конфіденційність саме у твоєму випадку.",
+        buttonHref: "/#contact",
+        buttonLabel: "Подати заявку",
+        note: "Дохід $3000–30000 на місяць — це загальний оборот балансу сторінки (gross), а не виплата і не гарантія; залежить від ніші, обсягу контенту та залученості. Тільки 18+.",
       },
     ],
   },

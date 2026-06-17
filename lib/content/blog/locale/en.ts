@@ -226,6 +226,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "At OFM's Model Agency, a manager replies on Telegram within 24 hours after you apply on the site; terms are discussed individually, with no “entry” fee. Use this article as a base for interviewing any team.",
       },
+      {
+        type: "nav",
+        intro: "Before you sign with anyone, read next:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "What an agency actually does",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Agency scams: 10 red flags",
+          },
+          {
+            href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
+            label: "When to hire an agency",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want to compare us against your checklist?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. A manager will walk you through commission, the contract, and your privacy.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
+      },
     ],
   },
   "chto-delaet-onlyfans-agentstvo": {
@@ -293,6 +323,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "OFM's Model Agency works full-service: manager, marketing, chats, and content strategy. Apply on the homepage.",
       },
+      {
+        type: "nav",
+        intro: "Read next to understand the full cycle:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats and DM sales",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "How to choose an agency",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want a team that runs all 12 for you?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. A manager explains marketing, chats, and content strategy before any commitment.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
+      },
     ],
   },
   "kogda-nuzhno-onlyfans-agentstvo": {
@@ -338,6 +398,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "OFM works with creators at different stages—from launch to $20k+. Apply if you recognized yourself above; we will outline a plan with no obligation.",
+      },
+      {
+        type: "nav",
+        intro: "Read next before you delegate:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "How to choose an agency",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "What an agency actually does",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "How much models earn",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Recognized yourself? Let's map a plan.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. We'll outline ROI for your niche, with no entry fee.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
       },
     ],
   },
@@ -385,6 +475,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "OFM does not charge an upfront “launch” fee. The application is free—a manager explains terms in chat before any commitment.",
+      },
+      {
+        type: "nav",
+        intro: "Stay safe — read next:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "How to choose an agency",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonymity and safety",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "What an agency actually does",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want a team that earns from your growth, not your fee?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. A manager explains the terms in chat before any commitment, with no upfront fee.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
       },
     ],
   },
@@ -444,6 +564,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "Compare at least two agencies using our checklist articles, read the FAQ, and review case studies. If you want an OnlyFans agency in Ukraine with 24/7 chats and transparent terms—apply on the homepage. No obligation until you agree on terms.",
       },
+      {
+        type: "nav",
+        intro: "Read next for UA-based creators:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "How to choose an agency",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Agency scams: 10 red flags",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonymity and safety",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Looking for an OnlyFans agency in Ukraine?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. A manager replies within 24 hours, with no entry fee.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
+      },
     ],
   },
   "onlyfans-marketing-strategiya-2026": {
@@ -500,6 +650,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "If marketing takes more time than shooting, that is a signal to delegate. OFM builds the funnel end-to-end: apply on the site, manager reply within 24 hours.",
       },
+      {
+        type: "nav",
+        intro: "Build the funnel — read next:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
+            label: "Promotion on Reddit and X",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram and TikTok without bans",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Subscriber retention and LTV",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want the funnel built end-to-end?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM builds your marketing funnel from niche to DMs; manager reply within 24 hours.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
+      },
     ],
   },
   "onlyfans-prodvizhenie-reddit-twitter": {
@@ -537,6 +717,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "tip",
         text: "Traffic without chats is water in a leaky bucket: subscribers arrive and leave without buying.",
       },
+      {
+        type: "nav",
+        intro: "Turn traffic into sales — read next:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats and DM sales",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram and TikTok without bans",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want traffic and chats handled for you?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM runs Reddit, X, and the 24/7 chats so subscribers actually convert.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
+      },
     ],
   },
   "onlyfans-instagram-tiktok-bez-bana": {
@@ -568,6 +778,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "Reels → profile → link → landing/message → OnlyFans. Test CTAs in bio (“exclusive content”, “VIP club”). Track which network brings paying fans, not just clicks.",
+      },
+      {
+        type: "nav",
+        intro: "Keep the funnel safe — read next:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
+            label: "Promotion on Reddit and X",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats and DM sales",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want an SFW funnel that doesn't get banned?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM runs your Instagram and TikTok funnel into OnlyFans, safely.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
       },
     ],
   },
@@ -601,6 +841,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "Track unsubscribe % vs active base. If churn is >15–20%/month without new whales, the issue is product (content + chat), not ads alone.",
+      },
+      {
+        type: "nav",
+        intro: "Lower churn, raise LTV — read next:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats and DM sales",
+          },
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Pricing: subscription and PPV",
+          },
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Content plan and shoots",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want fans who stay and spend more?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM runs retention through chats, content, and pricing so churn drops.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
       },
     ],
   },
@@ -657,6 +927,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "OFM runs chats 24/7 as part of management—process details are discussed on onboarding.",
       },
+      {
+        type: "nav",
+        intro: "Sell smarter in DMs — read next:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Pricing: subscription and PPV",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Subscriber retention and LTV",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want chats that sell 24/7 in your voice?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM runs the chat shifts and the PPV sales so you never burn ad spend overnight.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
+      },
     ],
   },
   "onlyfans-tseny-podpiska-ppv": {
@@ -700,6 +1000,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "tip",
         text: "Test price every 6–8 weeks on new traffic; do not change everything at once.",
+      },
+      {
+        type: "nav",
+        intro: "Price for profit — read next:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats and DM sales",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Subscriber retention and LTV",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "How much models earn",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want your pricing tested and tuned for you?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM builds your subscription, PPV, and customs pricing around real data.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
       },
     ],
   },
@@ -1259,6 +1589,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "OFM works with creators in Moldova, Ukraine, Europe, and Latin America—fully remote. Apply at ofmmodels.com; Telegram reply within 24 h, no entry fee.",
       },
+      {
+        type: "nav",
+        intro: "Read next for MD-based creators:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "How to choose an agency",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Agency scams: 10 red flags",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-ukraina",
+            label: "OnlyFans agency in Ukraine",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Looking for an OnlyFans agency in Moldova?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. A manager replies within 24 hours, with no entry fee.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
+      },
     ],
   },
   "onlyfans-agentstvo-latinskaya-amerika": {
@@ -1323,6 +1683,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "If you need an OnlyFans agency in Latin America—Mexico, Colombia, Argentina, Chile, Peru, Brazil, or any Spanish-speaking country—apply at ofmmodels.com. OFM replies on Telegram with no obligation.",
+      },
+      {
+        type: "nav",
+        intro: "Read next for LatAm and Brazil creators:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "How to choose an agency",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Agency scams: 10 red flags",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Looking for an OnlyFans agency in Latin America?",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. Managers in PT/ES/EN reply within 24 hours, with no entry fee.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
       },
     ],
   },

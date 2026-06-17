@@ -226,6 +226,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "En OFM's Model Agency, un manager responde por Telegram en 24 horas tras solicitar en la web; las condiciones se discuten de forma individual, sin cuota de “entrada”. Usa este artículo como base para entrevistar a cualquier equipo.",
       },
+      {
+        type: "nav",
+        intro: "Antes de firmar, lee también:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "Qué hace una agencia OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Estafas: señales de fraude",
+          },
+          {
+            href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
+            label: "Cuándo contratar agencia",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Lista para hablar con una agencia seria?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Un manager te explica comisión, contrato y condiciones en 24 horas.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
+      },
     ],
   },
   "chto-delaet-onlyfans-agentstvo": {
@@ -281,6 +308,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "OFM's Model Agency trabaja en formato full-service: manager, marketing, chats y estrategia de contenido. Solicitud en la página principal.",
       },
+      {
+        type: "nav",
+        intro: "Profundiza en cada servicio:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats y ventas por DM",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing 2026",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Cómo elegir agencia",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Quieres un management de ciclo completo?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Te contamos qué incluye el full-service y cómo se reparte la comisión.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
+      },
     ],
   },
   "kogda-nuzhno-onlyfans-agentstvo": {
@@ -317,6 +371,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "OFM trabaja con creadoras en distintas etapas—desde el inicio hasta $20k+. Solicita si te reconoces arriba: veremos un plan sin compromiso.",
+      },
+      {
+        type: "nav",
+        intro: "Decide con calma con estas guías:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Cómo elegir agencia",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "Qué hace una agencia OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Retención y churn",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Te reconoces en estas señales?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Vemos juntas si delegar tiene sentido en tu etapa.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
       },
     ],
   },
@@ -359,6 +440,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "OFM no cobra anticipo por “lanzamiento”. La solicitud es gratis: el manager explica condiciones en chat antes de cualquier compromiso.",
       },
+      {
+        type: "nav",
+        intro: "Elige equipo sin caer en estafas:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Cómo elegir agencia",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonimato y seguridad",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "Qué hace una agencia OnlyFans",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Buscas una agencia que no cobre por adelantado?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. El manager explica condiciones antes de cualquier acuerdo.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
+      },
     ],
   },
   "onlyfans-agentstvo-ukraina": {
@@ -395,6 +503,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "OFM trabaja con creadoras en Ucrania y Europa de forma remota. Solicitud en ofmmodels.com—respuesta en Telegram en 24 h, sin cuota de entrada. Casos reales publicados en el sitio.",
+      },
+      {
+        type: "nav",
+        intro: "Sigue leyendo antes de decidir:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Cómo elegir agencia",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Estafas: señales de fraude",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonimato y seguridad",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Creadora en Ucrania o la diáspora?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Trabajamos 100% remoto con chicas de UA y la UE.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
       },
     ],
   },
@@ -452,6 +587,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "Si el marketing consume más tiempo que rodar, es señal de delegar. OFM construye el embudo llave en mano: solicitud en la web, respuesta del manager en 24 h.",
       },
+      {
+        type: "nav",
+        intro: "Pasa de la estrategia a la práctica:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
+            label: "Promoción en Reddit y X",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram y TikTok sin baneos",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Retención y churn",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Quieres un embudo llave en mano?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM monta el marketing multiplataforma por ti.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
+      },
     ],
   },
   "onlyfans-prodvizhenie-reddit-twitter": {
@@ -489,6 +651,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "tip",
         text: "Tráfico sin chats es agua en un cubo con fugas: el suscriptor llega y se va sin comprar.",
       },
+      {
+        type: "nav",
+        intro: "Conecta tráfico con ventas:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats y ventas por DM",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram y TikTok sin baneos",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing 2026",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Quieres tráfico que sí convierte?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM lleva el marketing y los chats 24/7 por ti.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
+      },
     ],
   },
   "onlyfans-instagram-tiktok-bez-bana": {
@@ -520,6 +709,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "Reels → perfil → enlace → landing/mensaje → OnlyFans. Prueba CTAs en bio (“contenido exclusivo”, “club VIP”). Mide qué red trae fans de pago, no solo clics.",
+      },
+      {
+        type: "nav",
+        intro: "Más canales y conversión:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
+            label: "Promoción en Reddit y X",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing 2026",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats y ventas por DM",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Crecer en redes sin arriesgar baneos?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM construye el embudo SFW y el tráfico por ti.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
       },
     ],
   },
@@ -553,6 +769,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "Cuenta el % de bajas sobre la base activa. Si el churn supera 15–20%/mes sin nuevas ballenas, el problema es producto (contenido + chat), no solo anuncios.",
+      },
+      {
+        type: "nav",
+        intro: "Baja el churn y sube el LTV:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats y ventas por DM",
+          },
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Precios: suscripción y PPV",
+          },
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Plan de contenido y rodajes",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Tus suscriptores se van demasiado pronto?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM monta el sistema de retención: contenido, chats y precios.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
       },
     ],
   },
@@ -605,6 +848,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "OFM gestiona chats 24/7 dentro del management—los detalles se discuten al conectar.",
       },
+      {
+        type: "nav",
+        intro: "Donde nacen las ventas, sigue leyendo:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Precios: suscripción y PPV",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Retención y churn",
+          },
+          {
+            href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
+            label: "Promoción en Reddit y X",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Quieres chats 24/7 que vendan por ti?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM cubre los DM por turnos y lleva las ventas.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
+      },
     ],
   },
   "onlyfans-tseny-podpiska-ppv": {
@@ -648,6 +918,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "tip",
         text: "Prueba precio cada 6–8 semanas con tráfico nuevo; no cambies todo a la vez.",
+      },
+      {
+        type: "nav",
+        intro: "Pon precio con cabeza, sigue leyendo:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats y ventas por DM",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Retención y churn",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "Cuánto se gana",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Quieres una estrategia de precios que rinda?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM ajusta suscripción, PPV y customs contigo.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
       },
     ],
   },
@@ -1187,6 +1484,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "OFM trabaja con creadoras en Moldova, Ucrania, Europa y Latinoamérica—100% remoto. Solicitud en ofmmodels.com, respuesta en Telegram en 24 h, sin cuota de entrada.",
       },
+      {
+        type: "nav",
+        intro: "Sigue leyendo antes de decidir:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Cómo elegir agencia",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-ukraina",
+            label: "Agencia OnlyFans Ucrania",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Estafas: señales de fraude",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Creadora en Moldova o la diáspora?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Trabajamos 100% remoto desde Chișinău o la UE.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
+      },
     ],
   },
   "onlyfans-agentstvo-latinskaya-amerika": {
@@ -1265,6 +1589,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "Si buscas agencia OnlyFans en Latinoamérica—México, Colombia, Argentina, Chile, Perú, Brasil o cualquier país hispanohablante—solicita en ofmmodels.com. Manager OFM responde sin compromiso.",
+      },
+      {
+        type: "nav",
+        intro: "Sigue leyendo antes de postular:",
+        links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Cómo elegir agencia",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Estafas: señales de fraude",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "Cuánto se gana",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Creadora en Latinoamérica o Brasil?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Trabajamos 100% remoto en español, portugués e inglés.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
       },
     ],
   },
