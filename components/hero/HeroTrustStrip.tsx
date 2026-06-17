@@ -8,6 +8,7 @@ import {
   useMotionValue,
   useTransform,
 } from 'framer-motion';
+import Image from 'next/image';
 import { BadgeCheck, Shield } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
@@ -19,7 +20,13 @@ import {
   staggerItem,
 } from '@/lib/motion';
 
-const AVATAR_HUES = [320, 270, 195, 160, 45] as const;
+const AVATARS = [
+  '/avatars/avatar-1.jpg',
+  '/avatars/avatar-2.jpg',
+  '/avatars/avatar-3.jpg',
+  '/avatars/avatar-4.jpg',
+  '/avatars/avatar-5.jpg',
+] as const;
 const TRUST_COUNT = 200;
 
 export function HeroTrustStrip() {
@@ -46,13 +53,15 @@ export function HeroTrustStrip() {
 
   const avatars = (
     <div className="flex -space-x-2.5" aria-hidden>
-      {AVATAR_HUES.map((hue) => (
-        <div
-          key={hue}
-          className="h-8 w-8 rounded-full border-2 border-[#050508] ring-1 ring-white/10"
-          style={{
-            background: `linear-gradient(145deg, hsl(${hue} 70% 48%), hsl(${(hue + 40) % 360} 60% 36%))`,
-          }}
+      {AVATARS.map((src, i) => (
+        <Image
+          key={src}
+          src={src}
+          alt=""
+          width={32}
+          height={32}
+          className="h-8 w-8 rounded-full border-2 border-[#050508] object-cover ring-1 ring-white/10"
+          style={{ zIndex: AVATARS.length - i }}
         />
       ))}
     </div>
