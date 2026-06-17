@@ -52,6 +52,20 @@ export function hasOAuthToken() {
 }
 
 export async function getAuthClient(google) {
+  // Prefer the service account when its key is explicitly provided — SA keys
+  // don't expire, whereas OAuth refresh tokens from a "testing"-status app
+  // expire after ~7 days and silently break the report + daily cron with
+  // `invalid_grant`. When GOOGLE_APPLICATION_CREDENTIALS is unset we still
+  // fall back to OAuth, so the interactive/local flow is unchanged.
+  const keyFile = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+  if (keyFile && fs.existsSync(keyFile)) {
+    const auth = new google.auth.GoogleAuth({
+      keyFile,
+      scopes: SEO_SCOPES,
+    });
+    return auth.getClient();
+  }
+
   const oauthConfig = getOAuthClientConfig();
   const tokenData = getOAuthTokenData();
   if (oauthConfig && tokenData) {
@@ -62,15 +76,6 @@ export async function getAuthClient(google) {
     );
     oauth2Client.setCredentials(tokenData);
     return oauth2Client;
-  }
-
-  const keyFile = process.env.GOOGLE_APPLICATION_CREDENTIALS;
-  if (keyFile && fs.existsSync(keyFile)) {
-    const auth = new google.auth.GoogleAuth({
-      keyFile,
-      scopes: SEO_SCOPES,
-    });
-    return auth.getClient();
   }
 
   return null;
