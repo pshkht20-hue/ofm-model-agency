@@ -76,6 +76,7 @@ export const marketingPosts: BlogPost[] = [
         text: 'Если маркетинг съедает больше времени, чем съёмка — это сигнал делегировать. OFM строит воронку под ключ: заявка на сайте, ответ менеджера за 24 часа.',
       },
       blogNav('Связанные гайды OFM:', [
+        LINK.pillar,
         LINK.reddit,
         LINK.ig,
         LINK.retention,
@@ -136,6 +137,7 @@ export const marketingPosts: BlogPost[] = [
         text: 'Трафик без чатов — как вода в дырявом ведре: подписчик пришёл и ушёл без покупки.',
       },
       blogNav('Углубитесь в воронку:', [
+        LINK.pillar,
         LINK.chats,
         LINK.marketing,
         LINK.retention,
@@ -191,6 +193,7 @@ export const marketingPosts: BlogPost[] = [
         text: 'Reels → профиль → link → landing/message → OnlyFans. Тестируйте разные CTA в био («exclusive content», «VIP club»). Отслеживайте, какая сеть даёт платящих, а не только клики.',
       },
       blogNav('Параллельные каналы роста:', [
+        LINK.pillar,
         LINK.reddit,
         LINK.marketing,
         LINK.safety,
@@ -247,6 +250,7 @@ export const marketingPosts: BlogPost[] = [
         text: 'Считайте % отписок к активной базе. Если churn >15–20%/мес без притока «китов» — проблема в продукте (контент + чат), а не только в рекламе.',
       },
       blogNav('Система удержания в OFM:', [
+        LINK.pillar,
         LINK.chats,
         LINK.content,
         LINK.pricing,

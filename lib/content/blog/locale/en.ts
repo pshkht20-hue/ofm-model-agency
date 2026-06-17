@@ -762,6 +762,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         intro: "Realistic expectations work best alongside these reads:",
         links: [
           {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
             href: "/faq",
             label: "FAQ: what OFM is",
           },
@@ -855,6 +859,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         intro: "Start without the chaos - keep reading:",
         links: [
           {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
             href: "/blog/onlyfans-kontent-plan-i-syomki",
             label: "Content plan and shoots",
           },
@@ -936,6 +944,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         intro: "How content fits into the OFM system:",
         links: [
           {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
             href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
             label: "Getting started for beginners",
           },
@@ -1011,6 +1023,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "nav",
         intro: "Fix these mistakes with our guides:",
         links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
           {
             href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
             label: "Getting started for beginners",
@@ -1098,6 +1114,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         intro: "Safety and choosing the right team:",
         links: [
           {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
             href: "/blog/kak-vybrat-onlyfans-agentstvo",
             label: "How to choose an agency",
           },
@@ -1174,6 +1194,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "nav",
         intro: "More on staying private and growing faster:",
         links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
           {
             href: "/blog/onlyfans-anonimnost-i-bezopasnost",
             label: "Anonymity and safety",

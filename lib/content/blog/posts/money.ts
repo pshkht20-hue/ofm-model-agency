@@ -77,6 +77,7 @@ export const moneyPosts: BlogPost[] = [
         text: 'OFM ведёт чаты 24/7 в рамках management — детали процесса обсуждаются при подключении.',
       },
       blogNav('Доход в DM — не изолированная тема:', [
+        LINK.pillar,
         LINK.pricing,
         LINK.retention,
         LINK.services,
@@ -140,6 +141,7 @@ export const moneyPosts: BlogPost[] = [
         text: 'Тестируйте цену раз в 6–8 недель на новом трафике, не меняя всё одновременно.',
       },
       blogNav('Цены работают в связке с:', [
+        LINK.pillar,
         LINK.chats,
         LINK.income,
         LINK.marketing,
@@ -204,6 +206,7 @@ export const moneyPosts: BlogPost[] = [
         text: 'OnlyFans берёт комиссию платформы. Агентство — свой %. Налоги — ваша юрисдикция. Считайте «на руки», а не валовую цифру с лендинга.',
       },
       blogNav('Реалистичные ожидания — в связке с:', [
+        LINK.pillar,
         LINK.home,
         LINK.faq,
         LINK.when,

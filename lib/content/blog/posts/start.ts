@@ -620,6 +620,7 @@ export const startPosts: BlogPost[] = [
         text: "Имеет смысл, если вы хотите пройти путь за 7–14 дней с командой, а не учиться на ошибках в DM ночами. OFM берёт новичков: заявка на сайте, менеджер в Telegram за 24 часа.",
       },
       blogNav("Старт без хаоса — читайте дальше:", [
+        LINK.pillar,
         LINK.content,
         LINK.mistakes,
         LINK.choose,
@@ -679,6 +680,7 @@ export const startPosts: BlogPost[] = [
         text: "Храните исходники локально и в облаке — не отдавайте единственную копию агентству.",
       },
       blogNav("Контент-план в системе OFM:", [
+        LINK.pillar,
         LINK.beginners,
         LINK.chats,
         LINK.pricing,
@@ -733,6 +735,7 @@ export const startPosts: BlogPost[] = [
         text: "Неделя 1: профиль + welcome. Неделя 2: один канал трафика. Неделя 3: скорость DM или чат-менеджер. Неделя 4: тест цены PPV. Или заявка в OFM — пройдёте путь с менеджером.",
       },
       blogNav("Исправляйте ошибки по гайдам:", [
+        LINK.pillar,
         LINK.beginners,
         LINK.reddit,
         LINK.chats,

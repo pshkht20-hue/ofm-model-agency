@@ -163,6 +163,7 @@ export const agencyPosts: BlogPost[] = [
         text: 'OFM\'s Model Agency работает в full-service формате: менеджер, маркетинг, чаты и контент-стратегия. Заявка — на главной странице сайта.',
       },
       blogNav('Дальше по теме management:', [
+        LINK.pillar,
         LINK.choose,
         LINK.chats,
         LINK.marketing,
@@ -224,6 +225,7 @@ export const agencyPosts: BlogPost[] = [
         text: 'OFM принимает моделей на разных этапах — от старта до $20k+. Подайте заявку, если узнали себя в признаках выше: разберём план без обязательств.',
       },
       blogNav('Перед делегированием прочитайте:', [
+        LINK.pillar,
         LINK.services,
         LINK.choose,
         LINK.income,

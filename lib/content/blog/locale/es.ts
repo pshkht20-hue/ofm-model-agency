@@ -802,6 +802,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "nav",
         intro: "Arranca sin caos y sigue leyendo:",
         links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
           {
             href: "/blog/onlyfans-kontent-plan-i-syomki",
             label: "Plan de contenido y rodajes",
@@ -959,6 +960,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "nav",
         intro: "Corrige tus errores con estas guías:",
         links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
           {
             href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
             label: "Empezar desde cero",
@@ -1045,6 +1047,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "nav",
         intro: "Seguridad y cómo elegir bien tu equipo:",
         links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
           {
             href: "/blog/kak-vybrat-onlyfans-agentstvo",
             label: "Cómo elegir agencia",
@@ -1122,6 +1125,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "nav",
         intro: "Anonimato y arranque:",
         links: [
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
           {
             href: "/blog/onlyfans-anonimnost-i-bezopasnost",
             label: "Anonimato y seguridad",
