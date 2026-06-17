@@ -59,6 +59,17 @@ body {
   outline: none;
 }
 
+/* Hide native number-input spinners — cleaner fields; range validation is in JS */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
 /* ——— Brand utilities ——— */
 .text-gradient-brand {
   background: linear-gradient(135deg, #ff5bb5 0%, #c084fc 45%, #00d4ff 100%);
@@ -713,6 +724,23 @@ body {
   transform: scale(0.98);
 }
 
+/* Gentle "ready to send" pulse — applied when all required fields are valid */
+.btn-ready {
+  animation: btn-ready-pulse 2.1s ease-in-out infinite;
+}
+
+@keyframes btn-ready-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 36px -10px rgba(255, 91, 181, 0.7);
+  }
+  50% {
+    box-shadow:
+      0 0 50px -6px rgba(255, 91, 181, 0.92),
+      0 0 80px -18px rgba(168, 85, 247, 0.5);
+  }
+}
+
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -976,7 +1004,8 @@ body {
   .animate-marquee,
   .animate-scroll-hint,
   .animate-glow-pulse,
-  .animate-float-soft {
+  .animate-float-soft,
+  .btn-ready {
     animation: none;
   }
 

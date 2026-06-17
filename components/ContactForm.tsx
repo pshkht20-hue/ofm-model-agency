@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState, type FormEvent } from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, Loader2, Sparkles } from 'lucide-react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { ArrowRight, Check, Loader2, Send, Sparkles } from 'lucide-react';
 import { SuccessCheckmark } from '@/components/ui/SuccessCheckmark';
 import { useLocale, useTranslations } from 'next-intl';
 import {
@@ -13,12 +13,42 @@ import {
 import { trackContactSubmit, trackFormStart } from '@/lib/analytics/gtag';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
+type FieldState = 'idle' | 'valid' | 'invalid';
+type FieldName = 'name' | 'telegram' | 'age';
 
-const inputClass =
-  'w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder:text-white/30 focus:outline-none focus:border-accent-pink/50 focus:ring-1 focus:ring-accent-pink/25 transition';
+const labelClass =
+  'block text-sm font-medium text-white/75 mb-2 transition-colors duration-300 group-focus-within:text-accent-pink/90';
 
-const labelClass = 'block text-sm font-medium text-white/75 mb-2';
-const hintClass = 'mt-2 text-xs text-white/42 leading-relaxed';
+/** Input class with a state-driven border/ring tone, sharing the base style. */
+function fieldClass(state: FieldState, extra = '') {
+  const tone =
+    state === 'valid'
+      ? 'border-accent-cyan/45 focus:border-accent-cyan/65 focus:ring-accent-cyan/25'
+      : state === 'invalid'
+        ? 'border-red-400/50 focus:border-red-400/70 focus:ring-red-400/25'
+        : 'border-white/10 focus:border-accent-pink/50 focus:ring-accent-pink/25';
+  return `w-full bg-white/[0.03] border rounded-xl px-4 py-3.5 text-[16px] text-white placeholder:text-white/30 focus:outline-none focus:ring-1 transition-[border-color,box-shadow,color] duration-300 ${tone} ${extra}`;
+}
+
+/** Springy cyan check that confirms a field is valid — positive, never punishing. */
+function ValidMark({ show, reduced }: { show: boolean; reduced: boolean | null }) {
+  return (
+    <AnimatePresence>
+      {show && (
+        <motion.span
+          initial={reduced ? false : { opacity: 0, scale: 0.4 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={reduced ? { opacity: 0 } : { opacity: 0, scale: 0.4 }}
+          transition={{ type: 'spring', stiffness: 520, damping: 24 }}
+          className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-accent-cyan"
+          aria-hidden
+        >
+          <Check className="h-4 w-4" strokeWidth={3} />
+        </motion.span>
+      )}
+    </AnimatePresence>
+  );
+}
 
 export function ContactForm() {
   const t = useTranslations('contactForm');
@@ -27,9 +57,38 @@ export function ContactForm() {
   const locale = useLocale();
   const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [name, setName] = useState('');
+  const [telegram, setTelegram] = useState('');
+  const [age, setAge] = useState('');
   const [message, setMessage] = useState('');
+  const [ageConfirmed, setAgeConfirmed] = useState(false);
+  const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>({});
   const [hasCalcPrefill, setHasCalcPrefill] = useState(false);
   const startedRef = useRef(false);
+
+  const valid: Record<FieldName, boolean> = {
+    name: name.trim().length >= 2,
+    telegram: telegram.trim().length >= 3,
+    age: age.trim() === '' || (/^\d{1,3}$/.test(age.trim()) && +age >= 18 && +age <= 99),
+  };
+
+  function stateOf(field: FieldName, value: string): FieldState {
+    if (valid[field] && value.trim() !== '') return 'valid';
+    if (touched[field] && !valid[field]) return 'invalid';
+    return 'idle';
+  }
+
+  const allReady =
+    valid.name &&
+    name.trim() !== '' &&
+    valid.telegram &&
+    telegram.trim() !== '' &&
+    valid.age &&
+    ageConfirmed;
+
+  function markTouched(field: FieldName) {
+    setTouched((prev) => (prev[field] ? prev : { ...prev, [field]: true }));
+  }
 
   function handleFormStart() {
     if (startedRef.current) return;
@@ -90,7 +149,12 @@ export function ContactForm() {
 
       setStatus('success');
       clearCalcPrefill();
+      setName('');
+      setTelegram('');
+      setAge('');
       setMessage('');
+      setAgeConfirmed(false);
+      setTouched({});
       setHasCalcPrefill(false);
       startedRef.current = false;
       form.reset();
@@ -166,45 +230,68 @@ export function ContactForm() {
 
       <div className="relative grid gap-5">
         <div className="grid sm:grid-cols-2 gap-5">
-          <label className="block">
+          <label className="group block">
             <span className={labelClass}>{t('name')} *</span>
-            <input
-              type="text"
-              name="name"
-              required
-              minLength={2}
-              maxLength={100}
-              autoComplete="name"
-              className={inputClass}
-              disabled={status === 'loading'}
-            />
+            <div className="relative">
+              <input
+                type="text"
+                name="name"
+                required
+                minLength={2}
+                maxLength={100}
+                autoComplete="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                onBlur={() => markTouched('name')}
+                className={fieldClass(stateOf('name', name), 'pr-10')}
+                disabled={status === 'loading'}
+              />
+              <ValidMark show={stateOf('name', name) === 'valid'} reduced={reduced} />
+            </div>
           </label>
-          <label className="block">
+          <label className="group block">
             <span className={labelClass}>{t('age')}</span>
-            <input
-              type="number"
-              name="age"
-              min={18}
-              max={99}
-              placeholder="18+"
-              className={inputClass}
-              disabled={status === 'loading'}
-            />
+            <div className="relative">
+              <input
+                type="number"
+                name="age"
+                min={18}
+                max={99}
+                inputMode="numeric"
+                placeholder="18+"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
+                onBlur={() => markTouched('age')}
+                className={fieldClass(stateOf('age', age), 'pr-10')}
+                disabled={status === 'loading'}
+              />
+              <ValidMark show={stateOf('age', age) === 'valid'} reduced={reduced} />
+            </div>
           </label>
         </div>
 
-        <label className="block">
+        <label className="group block">
           <span className={labelClass}>{t('telegram')} *</span>
-          <input
-            type="text"
-            name="telegram"
-            required
-            minLength={3}
-            maxLength={64}
-            placeholder={t('telegramPlaceholder')}
-            className={inputClass}
-            disabled={status === 'loading'}
-          />
+          <div className="relative">
+            <Send
+              className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-white/30 transition-colors duration-300 group-focus-within:text-accent-pink/70"
+              aria-hidden
+            />
+            <input
+              type="text"
+              name="telegram"
+              required
+              minLength={3}
+              maxLength={64}
+              placeholder={t('telegramPlaceholder')}
+              value={telegram}
+              onChange={(e) => setTelegram(e.target.value)}
+              onBlur={() => markTouched('telegram')}
+              className={fieldClass(stateOf('telegram', telegram), 'pl-10 pr-10')}
+              disabled={status === 'loading'}
+            />
+            <ValidMark show={stateOf('telegram', telegram) === 'valid'} reduced={reduced} />
+          </div>
         </label>
 
         <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 md:p-5">
@@ -213,7 +300,7 @@ export function ContactForm() {
               {t('calcPrefillNotice')}
             </p>
           )}
-          <label className="block">
+          <label className="group block">
             <span className="inline-flex items-center gap-2 text-sm font-medium text-white/80 mb-1">
               <Sparkles className="h-3.5 w-3.5 text-accent-pink/80" aria-hidden />
               {t('interests')}
@@ -226,7 +313,7 @@ export function ContactForm() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder={t('interestsPlaceholder')}
-              className={`${inputClass} resize-y min-h-[112px] bg-[#050508]/60`}
+              className={fieldClass('idle', 'resize-y min-h-[112px] bg-[#050508]/60')}
               disabled={status === 'loading'}
             />
           </label>
@@ -237,6 +324,8 @@ export function ContactForm() {
             type="checkbox"
             name="ageConfirmed"
             required
+            checked={ageConfirmed}
+            onChange={(e) => setAgeConfirmed(e.target.checked)}
             disabled={status === 'loading'}
             className="mt-0.5 h-4 w-4 shrink-0 appearance-none rounded border border-white/25 bg-white/[0.04] checked:border-accent-pink checked:bg-accent-pink checked:bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22white%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M16.707%205.293a1%201%200%20010%201.414l-8%208a1%201%200%2001-1.414%200l-4-4a1%201%200%20011.414-1.414L8%2012.586l7.293-7.293a1%201%200%20011.414%200z%22%20clip-rule%3D%22evenodd%22/%3E%3C/svg%3E')] checked:bg-center checked:bg-no-repeat transition focus-visible:outline-none"
           />
@@ -255,16 +344,26 @@ export function ContactForm() {
         />
       </div>
 
-      {status === 'error' && errorMessage && (
-        <p className="mt-4 text-sm text-red-400 text-center" role="alert">
-          {errorMessage}
-        </p>
-      )}
+      <AnimatePresence>
+        {status === 'error' && errorMessage && (
+          <motion.p
+            initial={reduced ? false : { opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            className="mt-4 text-sm text-red-400 text-center"
+            role="alert"
+          >
+            {errorMessage}
+          </motion.p>
+        )}
+      </AnimatePresence>
 
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="mt-8 w-full btn-primary disabled:opacity-70 disabled:pointer-events-none"
+        className={`group mt-8 w-full btn-primary disabled:opacity-70 disabled:pointer-events-none ${
+          allReady && status === 'idle' ? 'btn-ready' : ''
+        }`}
       >
         {status === 'loading' ? (
           <>
@@ -274,7 +373,7 @@ export function ContactForm() {
         ) : (
           <>
             {t('submit')}
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5" />
           </>
         )}
       </button>
