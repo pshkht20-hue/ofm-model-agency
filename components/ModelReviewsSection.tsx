@@ -46,9 +46,9 @@ export function ModelReviewsSection() {
       </StaggerGrid>
 
       <div className="md:hidden -mx-5 px-5 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide flex gap-4">
-        {reviews.map((review) => (
+        {rest.map((review) => (
           <div key={review.id} className="snap-center shrink-0 w-[min(88vw,340px)]">
-            <ReviewCard review={review} featured={review.featured} />
+            <ReviewCard review={review} />
           </div>
         ))}
       </div>

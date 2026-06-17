@@ -7,6 +7,7 @@ import { Clock, DollarSign, TrendingUp, Users } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { AnimatedStat } from '@/components/AnimatedStat';
 import { NeonAccents } from '@/components/ui/NeonAccents';
+import { ParticleField } from '@/components/ui/ParticleField';
 import { gsap, registerGsapPlugins } from '@/lib/gsap/register';
 import { EASE_SMOOTH, lineReveal } from '@/lib/motion';
 
@@ -91,6 +92,7 @@ export function StatsShowcase() {
     >
       <div className="section-grid absolute inset-0 opacity-40 pointer-events-none" aria-hidden />
       <div className="section-glow absolute inset-0 pointer-events-none" aria-hidden />
+      <ParticleField opacity={0.4} />
       <NeonAccents variant="stats" />
 
       <div

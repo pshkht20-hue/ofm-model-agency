@@ -17,6 +17,7 @@ import { AboutSection } from '@/components/AboutSection';
 import { HowItWorksSection } from '@/components/HowItWorksSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { SectionDivider } from '@/components/ui/SectionDivider';
+import { ParticleField } from '@/components/ui/ParticleField';
 import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
 import { HomeSeoBlock } from '@/components/seo/HomeSeoBlock';
 import { SiteFooter } from '@/components/layout/SiteFooter';
@@ -106,6 +107,7 @@ export function HomePage() {
           <div className="section-grid absolute inset-0 opacity-50" aria-hidden />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(168,85,247,0.2),transparent)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_30%_at_50%_0%,rgba(255,91,181,0.1),transparent)]" />
+          <ParticleField opacity={0.4} />
           <NeonAccents variant="contact" />
 
           <div className="max-w-4xl mx-auto px-5 md:px-8 text-center relative z-10">
