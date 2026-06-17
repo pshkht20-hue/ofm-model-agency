@@ -19,7 +19,7 @@ export function ModelReviewsSection() {
   const rest = reviews.filter((r) => !r.featured);
 
   return (
-    <SectionShell id="reviews" variant="elevated" wide innerClassName="max-w-6xl">
+    <SectionShell id="reviews" variant="elevated" wide innerClassName="max-w-6xl" particles>
       <SectionHeader eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
 
       <ReviewsSummary />

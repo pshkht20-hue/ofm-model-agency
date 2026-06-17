@@ -756,6 +756,85 @@ input[type="number"] {
   }
 }
 
+/* ——— StarBorder: animated neon gradient ring around a filled button ——— */
+@property --star-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.star-ring {
+  position: relative;
+  display: inline-flex;
+  border-radius: 9999px;
+}
+
+.star-ring::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 9999px;
+  padding: 2px;
+  background: conic-gradient(
+    from var(--star-angle),
+    transparent 0 60%,
+    #00d4ff 76%,
+    #ff5bb5 88%,
+    transparent 100%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: star-ring-spin 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes star-ring-spin {
+  to {
+    --star-angle: 360deg;
+  }
+}
+
+/* ——— SpotlightCard: cursor-following neon glow over a card ——— */
+.spotlight-card {
+  position: relative;
+}
+
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: radial-gradient(
+    260px circle at var(--sx, 50%) var(--sy, 50%),
+    var(--spot-color, rgba(255, 91, 181, 0.22)),
+    transparent 60%
+  );
+  mix-blend-mode: screen;
+  z-index: 2;
+}
+
+.spotlight-card:hover::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star-ring::before {
+    animation: none;
+  }
+  .spotlight-card::after {
+    display: none;
+  }
+}
+
 .btn-secondary {
   display: inline-flex;
   align-items: center;

@@ -172,7 +172,16 @@ function ResultCard({
     <motion.article
       whileHover={hoverLift(reduced)}
       transition={SPRING_HOVER}
-      className={`group relative overflow-visible rounded-2xl border border-white/[0.09] bg-[#07070e]/80 backdrop-blur-sm transition-[border-color,box-shadow] duration-500 hover:border-accent-pink/30 ${style.glow} ${className}`}
+      onMouseMove={
+        reduced
+          ? undefined
+          : (e) => {
+              const r = e.currentTarget.getBoundingClientRect();
+              e.currentTarget.style.setProperty('--sx', `${e.clientX - r.left}px`);
+              e.currentTarget.style.setProperty('--sy', `${e.clientY - r.top}px`);
+            }
+      }
+      className={`spotlight-card group relative overflow-visible rounded-2xl border border-white/[0.09] bg-[#07070e]/80 backdrop-blur-sm transition-[border-color,box-shadow] duration-500 hover:border-accent-pink/30 ${style.glow} ${className}`}
     >
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-pink/40 to-transparent opacity-60"

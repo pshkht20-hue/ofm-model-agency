@@ -282,7 +282,7 @@ export function IncomeCalculatorSection() {
   );
 
   return (
-    <SectionShell id="calculator" variant="elevated" wide>
+    <SectionShell id="calculator" variant="elevated" wide particles>
       <SectionHeader eyebrow={t('eyebrow')} title={t('title')} description={t('subtitle')} />
 
       <div className="mx-auto max-w-3xl">

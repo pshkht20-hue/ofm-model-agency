@@ -13,6 +13,8 @@ import { HeroBackground } from '@/components/hero/HeroBackground';
 import { HeroTrustStrip } from '@/components/hero/HeroTrustStrip';
 import { NeonAccents } from '@/components/ui/NeonAccents';
 import { useMagnetic } from '@/hooks/useMagnetic';
+import { ClickSpark } from '@/components/ui/ClickSpark';
+import { StarBorder } from '@/components/ui/StarBorder';
 
 gsap.registerPlugin(useGSAP);
 
@@ -276,18 +278,22 @@ export function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <a
-            href="#contact"
-            data-hero-cta="primary"
-            data-hero-reveal
-            className="btn-primary group hero-cta-glow"
-            onClick={() => trackCtaClick({ location: 'hero_primary', locale })}
-          >
-            <span ref={ctaMagnetRef} className="inline-flex items-center gap-3">
-              {t('hero.ctaPrimary')}
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
-            </span>
-          </a>
+          <ClickSpark color="#ff5bb5">
+            <StarBorder>
+              <a
+                href="#contact"
+                data-hero-cta="primary"
+                data-hero-reveal
+                className="btn-primary group"
+                onClick={() => trackCtaClick({ location: 'hero_primary', locale })}
+              >
+                <span ref={ctaMagnetRef} className="inline-flex items-center gap-3">
+                  {t('hero.ctaPrimary')}
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
+                </span>
+              </a>
+            </StarBorder>
+          </ClickSpark>
           <a
             href="#models"
             data-hero-cta

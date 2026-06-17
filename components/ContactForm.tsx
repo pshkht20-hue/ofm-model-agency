@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Check, Loader2, Send, Sparkles } from 'lucide-react';
 import { SuccessCheckmark } from '@/components/ui/SuccessCheckmark';
+import { ClickSpark } from '@/components/ui/ClickSpark';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   clearCalcPrefill,
@@ -358,25 +359,27 @@ export function ContactForm() {
         )}
       </AnimatePresence>
 
-      <button
-        type="submit"
-        disabled={status === 'loading'}
-        className={`group mt-8 w-full btn-primary disabled:opacity-70 disabled:pointer-events-none ${
-          allReady && status === 'idle' ? 'btn-ready' : ''
-        }`}
-      >
-        {status === 'loading' ? (
-          <>
-            <Loader2 className="w-5 h-5 animate-spin" />
-            {t('sending')}
-          </>
-        ) : (
-          <>
-            {t('submit')}
-            <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5" />
-          </>
-        )}
-      </button>
+      <ClickSpark color="#ff5bb5" className="mt-8 block">
+        <button
+          type="submit"
+          disabled={status === 'loading'}
+          className={`group w-full btn-primary disabled:opacity-70 disabled:pointer-events-none ${
+            allReady && status === 'idle' ? 'btn-ready' : ''
+          }`}
+        >
+          {status === 'loading' ? (
+            <>
+              <Loader2 className="w-5 h-5 animate-spin" />
+              {t('sending')}
+            </>
+          ) : (
+            <>
+              {t('submit')}
+              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5" />
+            </>
+          )}
+        </button>
+      </ClickSpark>
 
       <p className="mt-4 text-xs text-white/40 text-center leading-relaxed">{t('consent')}</p>
     </form>
