@@ -5,6 +5,8 @@ import {
   type CalculatorCompleteParams,
   type ContactSubmitParams,
   type CtaClickParams,
+  type FunnelStartParams,
+  type TelegramClickParams,
 } from '@/lib/analytics/events';
 
 function gtagSafe(...args: unknown[]) {
@@ -14,6 +16,24 @@ function gtagSafe(...args: unknown[]) {
 
 export function trackCtaClick(params: CtaClickParams) {
   gtagSafe('event', ANALYTICS_EVENTS.CTA_CLICK, {
+    location: params.location,
+    ...(params.locale ? { locale: params.locale } : {}),
+  });
+}
+
+/** Пользователь начал проходить калькулятор (первый выбор). */
+export function trackCalculatorStart(params: FunnelStartParams) {
+  gtagSafe('event', ANALYTICS_EVENTS.CALCULATOR_START, { locale: params.locale });
+}
+
+/** Пользователь начал заполнять форму заявки (первый фокус в поле). */
+export function trackFormStart(params: FunnelStartParams) {
+  gtagSafe('event', ANALYTICS_EVENTS.FORM_START, { locale: params.locale });
+}
+
+/** Клик по контакту в Telegram — низкофрикционный путь конверсии. */
+export function trackTelegramClick(params: TelegramClickParams) {
+  gtagSafe('event', ANALYTICS_EVENTS.TELEGRAM_CLICK, {
     location: params.location,
     ...(params.locale ? { locale: params.locale } : {}),
   });

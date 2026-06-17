@@ -1,9 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { getSocialLinks, type SocialLink, type SocialPlatform } from '@/lib/social';
 import { SocialIcon } from '@/components/social/SocialIcons';
+import { trackTelegramClick } from '@/lib/analytics/gtag';
+import type { TelegramClickLocation } from '@/lib/analytics/events';
+
+const TELEGRAM_LOCATION: Record<'nav' | 'menu' | 'footer', TelegramClickLocation> = {
+  nav: 'navbar_social',
+  menu: 'menu_social',
+  footer: 'footer_social',
+};
 
 const PLATFORM_NEON: Record<SocialPlatform, { surface: string; icon: string; glow: string }> = {
   telegram: {
@@ -46,6 +54,7 @@ function SocialLinkButton({
   onLinkClick?: () => void;
 }) {
   const neon = PLATFORM_NEON[link.platform];
+  const locale = useLocale();
   const isFooter = variant === 'footer';
   const isMenu = variant === 'menu';
   const isNav = variant === 'nav';
@@ -57,7 +66,12 @@ function SocialLinkButton({
       rel="noopener noreferrer"
       aria-label={label}
       title={label}
-      onClick={onLinkClick}
+      onClick={() => {
+        if (link.platform === 'telegram') {
+          trackTelegramClick({ location: TELEGRAM_LOCATION[variant], locale });
+        }
+        onLinkClick?.();
+      }}
       initial={isMenu ? { opacity: 0, y: 8 } : false}
       animate={isMenu ? { opacity: 1, y: 0 } : undefined}
       transition={{ delay: index * 0.06, duration: 0.35 }}

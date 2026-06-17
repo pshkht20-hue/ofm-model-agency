@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState, type MouseEvent } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react';
 import { ArrowRight, Check, ChevronLeft, Clock, RefreshCw, Sparkles } from 'lucide-react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
@@ -18,7 +18,8 @@ import {
   type Social,
 } from '@/lib/calculator/estimate';
 import { saveCalcPrefill } from '@/lib/calculator/prefill';
-import { trackCalculatorComplete, trackCtaClick } from '@/lib/analytics/gtag';
+import { TelegramCta } from '@/components/TelegramCta';
+import { trackCalculatorComplete, trackCalculatorStart, trackCtaClick } from '@/lib/analytics/gtag';
 import { useLocale } from 'next-intl';
 
 const TIER_ACCENT: Record<ResultTier, 'prime' | 'pro' | 'elite' | 'brand'> = {
@@ -138,6 +139,7 @@ export function IncomeCalculatorSection() {
   const [direction, setDirection] = useState(1);
   const [answers, setAnswers] = useState<Partial<CalculatorAnswers>>(INITIAL_ANSWERS);
   const [showResult, setShowResult] = useState(false);
+  const startedRef = useRef(false);
 
   const questionId = QUESTION_ORDER[step];
   const totalSteps = QUESTION_ORDER.length;
@@ -170,6 +172,10 @@ export function IncomeCalculatorSection() {
   const currentValue = answers[questionId as keyof CalculatorAnswers];
 
   function selectOption(value: Experience | Archetype | Social | Hours) {
+    if (!startedRef.current) {
+      startedRef.current = true;
+      trackCalculatorStart({ locale });
+    }
     setAnswers((prev) => ({ ...prev, [questionId]: value }));
   }
 
@@ -403,6 +409,14 @@ export function IncomeCalculatorSection() {
                       >
                         {t('result.ctaSecondary')}
                       </a>
+                    </div>
+
+                    <div className="flex justify-center">
+                      <TelegramCta
+                        location="calculator_result"
+                        variant="inline"
+                        label={t('result.telegramAsk')}
+                      />
                     </div>
                   </motion.div>
                 )

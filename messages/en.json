@@ -362,7 +362,8 @@
           "babyface": "Babyface"
         },
         "cta": "Get your plan on Telegram",
-        "ctaSecondary": "View case studies"
+        "ctaSecondary": "View case studies",
+        "telegramAsk": "Got a question? Message us on Telegram"
       },
       "insights": {
         "launchSupport": "We recommend a full launch: profile, first posts, and traffic in parallel — so you don't lose weeks on prep.",
@@ -389,7 +390,9 @@
       "lead": "Submit your application — a manager will contact you on Telegram within 24 hours.",
       "privacy": "Confidential",
       "response": "Reply within 24h",
-      "support": "24/7 support"
+      "support": "24/7 support",
+      "telegramAlt": "Prefer not to fill out the form?",
+      "telegramCta": "Message us on Telegram"
     }
   },
   "reviews": {

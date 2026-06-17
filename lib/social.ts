@@ -41,3 +41,8 @@ export function getSocialLinks(): SocialLink[] {
     return href ? { platform, href } : null;
   }).filter((item): item is SocialLink => item !== null);
 }
+
+/** Прямая ссылка на один канал (или null, если отключён/невалиден) — для CTA-кнопок. */
+export function getSocialHref(platform: SocialPlatform): string | null {
+  return resolveHref(platform);
+}

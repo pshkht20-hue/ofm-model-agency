@@ -362,7 +362,8 @@
           "babyface": "Babyface"
         },
         "cta": "Obtener plan en Telegram",
-        "ctaSecondary": "Ver casos de éxito"
+        "ctaSecondary": "Ver casos de éxito",
+        "telegramAsk": "¿Tienes una pregunta? Escríbenos por Telegram"
       },
       "insights": {
         "launchSupport": "Recomendamos lanzamiento completo: perfil, primeras publicaciones y tráfico en paralelo — sin perder semanas en preparación.",
@@ -389,7 +390,9 @@
       "lead": "Envía tu solicitud — un manager te escribirá por Telegram en 24 horas.",
       "privacy": "Confidencial",
       "response": "Respuesta en 24 h",
-      "support": "Soporte 24/7"
+      "support": "Soporte 24/7",
+      "telegramAlt": "¿Prefieres no rellenar el formulario?",
+      "telegramCta": "Escríbenos por Telegram"
     }
   },
   "reviews": {

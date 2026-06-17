@@ -5,6 +5,7 @@ import { Shield, Heart, Zap } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { ContactForm } from '@/components/ContactForm';
+import { TelegramCta } from '@/components/TelegramCta';
 import { Navbar } from '@/components/Navbar';
 import { CreatorFeatureMarquee } from '@/components/CreatorTheme';
 import { HeroSection } from '@/components/hero/HeroSection';
@@ -150,6 +151,11 @@ export function HomePage() {
                 <ContactForm />
               </motion.div>
             )}
+
+            <div className="mt-9 flex flex-col items-center gap-3">
+              <p className="text-sm text-white/45">{t('contact.telegramAlt')}</p>
+              <TelegramCta location="contact_primary" label={t('contact.telegramCta')} />
+            </div>
 
             {reduced ? (
               <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-10 text-xs tracking-[0.15em] uppercase text-white/40">

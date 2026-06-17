@@ -2,9 +2,12 @@
 
 export const ANALYTICS_EVENTS = {
   CTA_CLICK: 'cta_click',
+  CALCULATOR_START: 'calculator_start',
   CALCULATOR_COMPLETE: 'calculator_complete',
+  FORM_START: 'form_start',
   CONTACT_SUBMIT: 'contact_submit',
   CONTACT_SUBMIT_SERVER: 'contact_submit_server',
+  TELEGRAM_CLICK: 'telegram_click',
 } as const;
 
 export type CtaLocation =
@@ -33,5 +36,22 @@ export type ContactSubmitParams = {
 
 export type CtaClickParams = {
   location: CtaLocation;
+  locale?: string;
+};
+
+/** Где пользователь начал воронку — для замера брошенных шагов. */
+export type FunnelStartParams = {
+  locale: string;
+};
+
+export type TelegramClickLocation =
+  | 'contact_primary'
+  | 'calculator_result'
+  | 'navbar_social'
+  | 'menu_social'
+  | 'footer_social';
+
+export type TelegramClickParams = {
+  location: TelegramClickLocation;
   locale?: string;
 };

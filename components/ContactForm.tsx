@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Loader2, Sparkles } from 'lucide-react';
 import { SuccessCheckmark } from '@/components/ui/SuccessCheckmark';
@@ -10,7 +10,7 @@ import {
   formatUsd,
   readCalcPrefill,
 } from '@/lib/calculator/prefill';
-import { trackContactSubmit } from '@/lib/analytics/gtag';
+import { trackContactSubmit, trackFormStart } from '@/lib/analytics/gtag';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
@@ -29,6 +29,13 @@ export function ContactForm() {
   const [errorMessage, setErrorMessage] = useState('');
   const [message, setMessage] = useState('');
   const [hasCalcPrefill, setHasCalcPrefill] = useState(false);
+  const startedRef = useRef(false);
+
+  function handleFormStart() {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackFormStart({ locale });
+  }
 
   useEffect(() => {
     const prefill = readCalcPrefill();
@@ -85,6 +92,7 @@ export function ContactForm() {
       clearCalcPrefill();
       setMessage('');
       setHasCalcPrefill(false);
+      startedRef.current = false;
       form.reset();
     } catch {
       setErrorMessage(t('errorNetwork'));
@@ -144,6 +152,7 @@ export function ContactForm() {
     <form
       id="contact-form"
       onSubmit={handleSubmit}
+      onFocus={handleFormStart}
       className="relative max-w-xl mx-auto text-left card-premium p-6 md:p-10 overflow-hidden"
     >
       <div
