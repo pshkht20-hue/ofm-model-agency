@@ -13,7 +13,6 @@ import { HeroSection } from '@/components/hero/HeroSection';
 import { StatsShowcase } from '@/components/StatsShowcase';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { StickyMobileCta } from '@/components/StickyMobileCta';
-import { BenefitsSection } from '@/components/BenefitsSection';
 import { AboutSection } from '@/components/AboutSection';
 import { HowItWorksSection } from '@/components/HowItWorksSection';
 import { ServicesSection } from '@/components/ServicesSection';
@@ -96,8 +95,6 @@ export function HomePage() {
         <StatsShowcase />
 
         <AboutSection />
-
-        <BenefitsSection />
 
         <HowItWorksSection />
 

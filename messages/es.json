@@ -80,68 +80,7 @@
         }
       ],
       "note": "Sin promesas de «dinero fácil»: las cifras del sitio son la facturación bruta del balance de la página, no un pago ni una garantía. Tu plan real y las condiciones los hablamos en persona por Telegram."
-    },
-    "benefits": {
-      "eyebrow": "Ventajas",
-      "title": "Por qué nos eligen",
-      "subtitle": "Gestión estructurada de cuenta, tráfico y chats — sin caos ni promesas de «dinero fácil». Esto es lo que recibe cada creadora en OFM.",
-      "items": [
-        {
-          "title": "Manager personal",
-          "desc": "Tienes un manager personal: un único contacto para estrategia, contenido y pagos. Conoce tu cuenta y la lleva hacia tus objetivos, sin pasar tareas entre departamentos.",
-          "highlights": [
-            "Contacto diario por Telegram, siete días a la semana",
-            "Alineación de plan de contenido, precios y promos",
-            "Apoyo en disputas con fans y la plataforma"
-          ]
-        },
-        {
-          "title": "Marketing potente",
-          "desc": "El equipo construye el embudo desde el primer clic hasta la suscripción y la compra de PPV. Probamos creatividades, audiencias y fuentes para escalar lo que convierte.",
-          "highlights": [
-            "Reddit, Twitter/X, TikTok, partners y tráfico de pago",
-            "Tests A/B de portadas, bio y ofertas",
-            "Analítica semanal por fuente de suscripciones"
-          ]
-        },
-        {
-          "title": "Resultados reales",
-          "desc": "Con trabajo constante, el total medio de página es de $12,000 a $35,000+ al mes (gross). El crecimiento es por etapas: base estable, luego escala de PPV y retención de top fans.",
-          "highlights": [
-            "Informes claros de suscripciones, chats y PPV",
-            "Enfoque en LTV del fan, no ventas puntuales",
-            "Casos de crecimiento de cero a ingreso estable"
-          ]
-        },
-        {
-          "title": "Confidencialidad total",
-          "desc": "El anonimato y la seguridad son la base del negocio en OnlyFans. Ayudamos a separar identidad y marca, organizar procesos y reaccionar rápido ante filtraciones y doxxing.",
-          "highlights": [
-            "Guía sobre VPN, geo y datos de pago",
-            "Apoyo legal en DMCA y derechos de autor",
-            "Monitorización de filtraciones y retiradas rápidas"
-          ]
-        },
-        {
-          "title": "Enfoque individual",
-          "desc": "Sin plantilla genérica: la estrategia encaja con tu imagen, nicho, idioma de audiencia y horario. GFE, fetiche, fitness — posicionamiento y contenido a tu medida.",
-          "highlights": [
-            "Auditoría de perfil y competencia antes del lanzamiento",
-            "Precios y menú de servicios personalizados",
-            "Revisión de estrategia cada 2–4 semanas"
-          ]
-        },
-        {
-          "title": "Inicio rápido",
-          "desc": "De solicitud aprobada a primeros pagos suele ser 7–14 días. Perfil, contenido y tráfico se configuran en paralelo para no perder semanas sin ingresos.",
-          "highlights": [
-            "Checklist de lanzamiento y plantillas de bio y posts fijados",
-            "El equipo prepara primeras publicaciones y mensajes masivos",
-            "Onboarding en chats y reglas con fans"
-          ]
-        }
-      ]
-    },
+    },
     "how": {
       "eyebrow": "Proceso",
       "title": "Cómo trabajamos",
@@ -224,7 +163,8 @@
           "highlights": [
             "Control diario de perfil, precios y posts fijados",
             "Cada cambio se aprueba contigo — sin sorpresas",
-            "Un manager de proyecto en Telegram de principio a fin"
+            "Un manager de proyecto en Telegram de principio a fin",
+            "Onboarding rápido llave en mano: checklist de lanzamiento y plantillas de perfil"
           ]
         },
         {
@@ -240,7 +180,7 @@
         {
           "title": "Marketing",
           "badge": "ROI primero",
-          "desc": "Tráfico de TikTok, Instagram, Reddit y funnels de pago — con pruebas y números, no «tiramos presupuesto y rezamos». Solo escalamos canales que pagan por LTV y coste por suscriptor.",
+          "desc": "Tráfico de TikTok, Instagram, Reddit, Twitter/X y funnels de pago — con pruebas y números, no «tiramos presupuesto y rezamos». Solo escalamos canales que pagan por LTV y coste por suscriptor.",
           "highlights": [
             "UTM y funnels — ves de dónde viene el fan que paga",
             "Partnerships, shoutouts y colabs para tu nicho",
@@ -250,8 +190,9 @@
         {
           "title": "Estrategia de contenido",
           "badge": "plan mensual",
-          "desc": "Plan adelantado: qué grabar, cómo empaquetar PPV y masivos para que la suscripción no caduque a las dos semanas. Ideas según tu agenda, look y límites — sin burnout por shoots al azar.",
+          "desc": "Plan adelantado: qué grabar, cómo empaquetar PPV y masivos para que la suscripción no caduque a las dos semanas. Ideas según tu agenda, look y límites — GFE, fetiche, fitness y otros nichos — sin burnout por shoots al azar.",
           "highlights": [
+            "Auditoría de perfil y competencia antes de empezar",
             "Conceptos de grabación y referencias para tu nicho",
             "Estilo visual coherente: portadas, previews, stories",
             "Calendario de posts y recordatorios en Telegram"
@@ -272,7 +213,7 @@
           "badge": "NDA",
           "desc": "Anonimato, DMCA y monitorización de filtraciones para que el contenido no se propague y tu identidad quede bajo control. Políticas internas de acceso y checklists legales para trabajar tranquila.",
           "highlights": [
-            "Bloqueos geo y ajustes de privacidad del perfil",
+            "Bloqueos geo, VPN y ajustes de privacidad del perfil",
             "Solicitudes rápidas de eliminación de leaks y reposts",
             "Plantillas NDA y reglas de datos personales"
           ]

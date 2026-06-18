@@ -80,68 +80,7 @@
         }
       ],
       "note": "No easy-money promises: the figures on the site are gross page-balance turnover, not a payout or a guarantee. We discuss your real plan and terms personally on Telegram."
-    },
-    "benefits": {
-      "eyebrow": "Benefits",
-      "title": "Why creators choose us",
-      "subtitle": "Structured account, traffic, and chat management — no chaos and no “easy money” hype. Here is what every creator gets at OFM.",
-      "items": [
-        {
-          "title": "Dedicated manager",
-          "desc": "You get one personal manager — a single point of contact for strategy, content, and payouts. They know your account and drive it toward goals instead of bouncing tasks between departments.",
-          "highlights": [
-            "Daily Telegram contact, seven days a week",
-            "Content plan, pricing, and promo alignment",
-            "Support with fan disputes and platform issues"
-          ]
-        },
-        {
-          "title": "Strong marketing",
-          "desc": "Our team builds the funnel from first click to subscription and PPV purchase. We test creatives, audiences, and sources to scale what actually converts.",
-          "highlights": [
-            "Reddit, Twitter/X, TikTok, partners, and paid traffic",
-            "A/B tests for covers, bio, and offers",
-            "Weekly analytics by subscription source"
-          ]
-        },
-        {
-          "title": "Real results",
-          "desc": "With consistent work, average page total is $12,000 to $35,000+ per month (gross). Growth is staged: stable base first, then PPV scale and top-fan retention.",
-          "highlights": [
-            "Clear reports on subs, chats, and PPV",
-            "Focus on fan LTV, not one-off sales",
-            "Case studies from zero to stable income"
-          ]
-        },
-        {
-          "title": "Full confidentiality",
-          "desc": "Anonymity and safety are the foundation of an OnlyFans business. We help separate identity from brand, set up processes, and respond fast to leaks and doxxing.",
-          "highlights": [
-            "Guidance on VPN, geo, and payment data",
-            "Legal support for DMCA and copyright",
-            "Leak monitoring and rapid takedowns"
-          ]
-        },
-        {
-          "title": "Tailored approach",
-          "desc": "No copy-paste playbook: strategy fits your look, niche, audience language, and schedule. GFE, fetish, fitness — positioning and content adapt to you.",
-          "highlights": [
-            "Profile and competitor audit before launch",
-            "Custom pricing and service menu",
-            "Strategy reviews every 2–4 weeks"
-          ]
-        },
-        {
-          "title": "Fast launch",
-          "desc": "From approved application to first payouts is usually 7–14 days. Profile, content, and traffic are set up in parallel so prep weeks do not mean zero revenue.",
-          "highlights": [
-            "Launch checklist and bio / pinned post templates",
-            "Team prepares first posts and mass messages",
-            "Chat onboarding and fan communication rules"
-          ]
-        }
-      ]
-    },
+    },
     "how": {
       "eyebrow": "Process",
       "title": "How we work",
@@ -224,7 +163,8 @@
           "highlights": [
             "Daily checks on profile, pricing, and pinned posts",
             "Every change approved with you — no silent edits",
-            "One project manager on Telegram for the full journey"
+            "One project manager on Telegram for the full journey",
+            "Fast turnkey onboarding: launch checklist and profile templates"
           ]
         },
         {
@@ -240,7 +180,7 @@
         {
           "title": "Marketing",
           "badge": "ROI-first",
-          "desc": "Traffic from TikTok, Instagram, Reddit, and paid funnels — tested with numbers, not “spray budget and hope.” We only scale channels that pay back on LTV and subscriber cost.",
+          "desc": "Traffic from TikTok, Instagram, Reddit, Twitter/X, and paid funnels — tested with numbers, not “spray budget and hope.” We only scale channels that pay back on LTV and subscriber cost.",
           "highlights": [
             "UTMs and funnels — see which source brings paying fans",
             "Partnerships, shoutout networks, and collabs for your niche",
@@ -250,8 +190,9 @@
         {
           "title": "Content strategy",
           "badge": "monthly plan",
-          "desc": "A forward plan: what to shoot, how to package PPV and mass messages so subs don’t churn after two weeks. Ideas fit your schedule, look, and boundaries — no burnout from random shoots.",
+          "desc": "A forward plan: what to shoot, how to package PPV and mass messages so subs don’t churn after two weeks. Ideas fit your schedule, look, and boundaries — GFE, fetish, fitness, and other niches — no burnout from random shoots.",
           "highlights": [
+            "Profile and competitor audit before launch",
             "Shoot concepts and references for your niche",
             "Consistent visual style: covers, previews, stories",
             "Post calendar and Telegram reminders"
@@ -272,7 +213,7 @@
           "badge": "NDA",
           "desc": "Anonymity, DMCA, and leak monitoring so content doesn’t spread and your identity stays controlled. Internal access policies and legal checklists for peace of mind.",
           "highlights": [
-            "Geo blocks and profile privacy settings",
+            "Geo blocks, VPN, and profile privacy settings",
             "Fast takedown requests for leaks and reposts",
             "NDA templates and personal data handling rules"
           ]
