@@ -800,6 +800,7 @@ export const startPosts: BlogPost[] = [
       blogNav("Перед заявкой почитай детали:", [
         LINK.income,
         LINK.safety,
+        LINK.legal,
         LINK.noface,
         LINK.ua,
       ]),
