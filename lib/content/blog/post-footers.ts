@@ -35,6 +35,10 @@ export const LINK = {
   md: { href: '/blog/onlyfans-agentstvo-moldova', label: 'OnlyFans агентство Молдова' },
   latam: { href: '/blog/onlyfans-agentstvo-latinskaya-amerika', label: 'Agencia LatAm' },
   beginners: { href: '/blog/onlyfans-agentstvo-dlya-nachinayushchih', label: 'Старт для начинающих' },
+  howstart: {
+    href: '/blog/kak-stat-onlyfans-modelyu-s-nulya',
+    label: 'Как стать моделью с нуля',
+  },
   chats: { href: '/blog/onlyfans-chaty-dm-prodazhi', label: 'Чаты и DM-продажи' },
   pricing: { href: '/blog/onlyfans-tseny-podpiska-ppv', label: 'Цены: подписка и PPV' },
   income: { href: '/blog/onlyfans-skolko-zarabatyvayut-modeli', label: 'Сколько зарабатывают' },
