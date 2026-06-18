@@ -14,7 +14,7 @@ type Props = { onReady?: () => void; spin?: boolean; speed?: number; rotX?: numb
  * off-screen or the tab is hidden, renders a single static frame under
  * prefers-reduced-motion. Mounted client-only (ssr:false) with a 2D SVG fallback.
  */
-export default function LogoMark3DInner({ onReady, spin = false, speed = 0.5, rotX = 0.16, rotY = -0.5 }: Props) {
+export default function LogoMark3DInner({ onReady, spin = true, speed = 0.45, rotX = 0.2, rotY = -0.35 }: Props) {
   const mountRef = useRef<HTMLDivElement>(null);
   const onReadyRef = useRef(onReady);
   onReadyRef.current = onReady;
