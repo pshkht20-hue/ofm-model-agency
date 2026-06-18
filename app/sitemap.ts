@@ -5,7 +5,9 @@ import { routing, type Locale } from '@/i18n/routing';
 import { pathForLocale, hreflangAlternates } from '@/lib/i18n/paths';
 import { getSiteUrl } from '@/lib/site';
 
-const STATIC_ROUTES = ['', '/faq', '/blog', '/privacy', '/terms'] as const;
+// privacy/terms are intentionally excluded: thin legal pages, noindex'd in their
+// generateMetadata — keeping them out of the sitemap concentrates crawl budget.
+const STATIC_ROUTES = ['', '/faq', '/blog'] as const;
 
 export const dynamic = 'force-static';
 
