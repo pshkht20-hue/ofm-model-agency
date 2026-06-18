@@ -761,27 +761,44 @@ input[type="number"] {
   }
 }
 
-/* ——— Throb: a brand-gradient glow that blooms once per cycle around a CTA.
-   Adapted from simeydotme's "throb" (CodePen BaeZJqd): peak at 20%, fade by 90%.
-   Implemented as box-shadow so it isn't clipped by .btn-primary's overflow:hidden. */
+/* ——— Throb: a refined, thin "line of light" that hugs the CTA and gently pulses.
+   A blurred clone of the pill sits BEHIND the button on its own wrapper (.throb) — so it is
+   NOT clipped by .btn-primary's overflow:hidden and never fights z-index on hover. Thin blur =
+   a crisp neon edge (not a halo), low opacity = subtle & premium.
+   (Ref: simeydotme "throb" BaeZJqd, toned down ~40%.) */
 .throb {
-  animation: throb-glow 3s ease infinite both;
+  position: relative;
+  display: inline-flex;
+}
+
+.throb > .btn-primary {
+  position: relative;
+  z-index: 1; /* button sits above its own glow */
+}
+
+.throb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #ff5bb5 0%, #a855f7 55%, #00d4ff 115%);
+  filter: blur(6px);
+  opacity: 0.16; /* static base — also the prefers-reduced-motion state */
+  pointer-events: none;
+  animation: throb-glow 2.8s ease-in-out infinite both;
 }
 
 @keyframes throb-glow {
   0%,
-  90%,
+  88%,
   100% {
-    box-shadow:
-      0 0 26px -8px rgba(255, 91, 181, 0.55),
-      0 0 0 0 rgba(168, 85, 247, 0),
-      0 0 0 0 rgba(0, 212, 255, 0);
+    opacity: 0.13; /* rest: barely-there neon edge */
+    filter: blur(5px);
   }
-  20% {
-    box-shadow:
-      0 0 20px 0 rgba(255, 91, 181, 0.9),
-      0 0 38px 8px rgba(168, 85, 247, 0.6),
-      0 0 66px 20px rgba(0, 212, 255, 0.42);
+  18% {
+    opacity: 0.5; /* peak: soft, thin, ~40% dimmer than before */
+    filter: blur(9px);
   }
 }
 
@@ -1244,7 +1261,7 @@ input[type="number"] {
   .animate-glow-pulse,
   .animate-float-soft,
   .btn-ready,
-  .throb {
+  .throb::before {
     animation: none;
   }
 
