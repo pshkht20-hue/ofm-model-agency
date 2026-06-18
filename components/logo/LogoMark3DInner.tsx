@@ -80,7 +80,7 @@ export default function LogoMark3DInner({ onReady, spin = true, speed = 0.45, ro
     }));
     plaqueGeo.center();
     const faceMat = track(new THREE.MeshStandardMaterial({ color: 0x111118, metalness: 0.0, roughness: 1.0 }));
-    const rimMat = track(new THREE.MeshStandardMaterial({ color: 0xf6f6f7, metalness: 0.0, roughness: 1.0 }));
+    const rimMat = track(new THREE.MeshStandardMaterial({ color: 0x111118, metalness: 0.0, roughness: 1.0 }));
     group.add(new THREE.Mesh(plaqueGeo, [faceMat, rimMat]));
 
     const gradTex = (c1: string, c2: string) => {
