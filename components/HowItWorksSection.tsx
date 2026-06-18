@@ -59,13 +59,13 @@ function TimelineStep({
       transition={{ duration: 0.6, ease: EASE_SMOOTH }}
       className="relative grid grid-cols-[3rem_1fr] gap-4 md:grid-cols-[3.5rem_1fr] md:gap-7"
     >
-      <div className="flex justify-center md:hidden">
+      <div className="flex justify-center">
         <motion.span
           initial={reduced ? false : { scale: 0.4, opacity: 0 }}
           whileInView={reduced ? undefined : { scale: 1, opacity: 1 }}
           viewport={{ once: true, margin: '-90px' }}
           transition={{ type: 'spring', stiffness: 240, damping: 16 }}
-          className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-accent-pink/30 bg-[#0b0b12] font-serif text-base text-gradient-brand shadow-[0_0_26px_-4px_rgba(255,91,181,0.6)] md:h-14 md:w-14 md:text-lg"
+          className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-accent-pink/30 bg-[#0b0b12] font-serif text-base text-gradient-brand shadow-[0_0_26px_-4px_rgba(255,91,181,0.6)] md:hidden md:h-14 md:w-14 md:text-lg"
         >
           {step}
           {!reduced && (
