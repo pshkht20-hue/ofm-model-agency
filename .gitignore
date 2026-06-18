@@ -42,6 +42,8 @@ docs/analytics-reports/*.csv
 
 # Google Ads verification — contains passport / PII (local only)
 docs/google-ads-verification/
+# Helper that builds the Google Ads verification PDFs (belongs to HypeZone, not OFM)
+scripts/build-google-ads-verification-pdf.py
 
 # vercel
 .vercel
