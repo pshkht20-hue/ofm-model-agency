@@ -59,7 +59,7 @@ function TimelineStep({
       transition={{ duration: 0.6, ease: EASE_SMOOTH }}
       className="relative grid grid-cols-[3rem_1fr] gap-4 md:grid-cols-[3.5rem_1fr] md:gap-7"
     >
-      <div className="flex justify-center">
+      <div className="flex justify-center md:hidden">
         <motion.span
           initial={reduced ? false : { scale: 0.4, opacity: 0 }}
           whileInView={reduced ? undefined : { scale: 1, opacity: 1 }}
