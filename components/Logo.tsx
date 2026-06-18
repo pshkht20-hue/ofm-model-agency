@@ -1,4 +1,5 @@
 import { Link } from '@/i18n/navigation';
+import { LogoMark3D } from '@/components/logo/LogoMark3D';
 
 const SIZES = {
   nav: { mark: 40, gap: 8, title: 'text-[13px] sm:text-[15px]', tag: 'text-[6px] sm:text-[7px] lg:text-[8px]' },
@@ -13,6 +14,8 @@ type LogoProps = {
   wordmarkOnMobile?: boolean;
   /** Скрыть подпись Creator Management до lg (для компактной шапки) */
   hideTaglineBelowLg?: boolean;
+  /** Render the mark as the live rotating 3D logo (falls back to 2D SVG). */
+  mark3d?: boolean;
   href?: string;
   className?: string;
   onClick?: () => void;
@@ -75,6 +78,7 @@ export function Logo({
   showWordmark = true,
   wordmarkOnMobile = false,
   hideTaglineBelowLg = false,
+  mark3d = false,
   href = '#',
   className = '',
   onClick,
@@ -84,10 +88,17 @@ export function Logo({
 
   const content = (
     <>
-      <LogoMark
-        size={s.mark}
-        className="shrink-0 drop-shadow-[0_0_20px_rgba(255,91,181,0.35)] lg:[@media(hover:hover)]:transition-[filter] lg:[@media(hover:hover)]:duration-300 lg:[@media(hover:hover)]:group-hover:drop-shadow-[0_0_28px_rgba(255,91,181,0.55)]"
-      />
+      {mark3d ? (
+        <LogoMark3D
+          size={s.mark}
+          className="drop-shadow-[0_0_20px_rgba(255,91,181,0.35)] lg:[@media(hover:hover)]:transition-[filter] lg:[@media(hover:hover)]:duration-300 lg:[@media(hover:hover)]:group-hover:drop-shadow-[0_0_28px_rgba(255,91,181,0.55)]"
+        />
+      ) : (
+        <LogoMark
+          size={s.mark}
+          className="shrink-0 drop-shadow-[0_0_20px_rgba(255,91,181,0.35)] lg:[@media(hover:hover)]:transition-[filter] lg:[@media(hover:hover)]:duration-300 lg:[@media(hover:hover)]:group-hover:drop-shadow-[0_0_28px_rgba(255,91,181,0.55)]"
+        />
+      )}
       {showWordmark && (
         <div
           className={`shrink-0 text-left ${wordmarkVisibility}`}

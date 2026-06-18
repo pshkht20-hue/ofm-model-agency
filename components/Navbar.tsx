@@ -110,7 +110,7 @@ export function Navbar() {
 
           {/* Десктопная шапка */}
           <div className="hidden lg:grid h-full grid-cols-[auto_1fr_auto] items-center gap-6">
-            <Logo size="md" showWordmark href="/" onClick={closeMenu} />
+            <Logo size="md" showWordmark href="/" onClick={closeMenu} mark3d />
 
             <nav
               className="flex items-center justify-center gap-4 xl:gap-5 min-w-0"
