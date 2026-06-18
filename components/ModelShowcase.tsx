@@ -4,14 +4,13 @@ import { useState } from 'react';
 import { ArrowRight, BadgeCheck } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { combinedNetTotal, resultCases, type ResultCase } from '@/lib/results/cases';
+import { resultCases, type ResultCase } from '@/lib/results/cases';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
-import { UsdDisplay } from '@/components/ui/UsdDisplay';
 import { EarningProof } from '@/components/results/EarningProof';
 import { ElectricBorder } from '@/components/ui/ElectricBorder';
 import { MotionFade } from '@/components/ui/Reveal';
-import { EASE_SOFT, VIEWPORT_DEFAULT, fadeUpStatic } from '@/lib/motion';
+import { EASE_SOFT } from '@/lib/motion';
 
 const TIER_BADGE: Record<ResultCase['tier'], string> = {
   elite: 'from-accent-pink to-accent-violet',
@@ -29,27 +28,11 @@ export function ModelShowcase() {
     resultCases.findIndex((c) => c.featured),
   );
   const [active, setActive] = useState(featuredIdx);
-  const aggregate = combinedNetTotal();
   const current = resultCases[active];
 
   return (
     <SectionShell id="models" wide>
       <SectionHeader eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
-
-      <motion.div
-        initial={reduced ? false : 'hidden'}
-        whileInView={reduced ? undefined : 'visible'}
-        viewport={VIEWPORT_DEFAULT}
-        variants={fadeUpStatic}
-        transition={{ duration: 0.55, ease: EASE_SOFT }}
-        className="mb-7 hidden flex-wrap items-center justify-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 text-center sm:flex"
-      >
-        <span className="text-[11px] uppercase tracking-[0.18em] text-white/40">
-          {t('aggregateLabel')}
-        </span>
-        <UsdDisplay value={aggregate} compact size="hero" accent="shimmer" />
-        <span className="text-xs text-white/45">{t('aggregateHint')}</span>
-      </motion.div>
 
       {/* model tabs */}
       <div className="mb-6 flex flex-wrap justify-center gap-2.5">
