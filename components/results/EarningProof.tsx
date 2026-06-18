@@ -135,7 +135,7 @@ export function EarningProof({ statement }: { statement: EarningStatement }) {
           <span className="text-[11px] font-semibold uppercase tracking-wider text-white/45">
             Total
           </span>
-          <span className="text-gradient-brand text-right tabular-nums">
+          <span className="text-right tabular-nums text-white">
             GROSS&nbsp;{fmtUsd(statement.grossTotal)}
           </span>
           <span className="hidden text-right tabular-nums text-white sm:block">
