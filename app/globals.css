@@ -25,6 +25,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* Lock horizontal scroll/wobble on mobile. clip (not hidden) keeps
+     position: sticky and smooth anchor-scroll working. */
+  overflow-x: clip;
 }
 
 body {
@@ -36,6 +39,8 @@ body {
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   font-kerning: normal;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 ::selection {
