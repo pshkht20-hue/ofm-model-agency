@@ -47,7 +47,7 @@ export function ModelShowcase() {
         viewport={VIEWPORT_DEFAULT}
         variants={fadeUpStatic}
         transition={{ duration: 0.55, ease: EASE_SOFT }}
-        className="mb-7 flex flex-wrap items-center justify-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 text-center"
+        className="mb-7 hidden flex-wrap items-center justify-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 text-center sm:flex"
       >
         <span className="text-[11px] uppercase tracking-[0.18em] text-white/40">
           {t('aggregateLabel')}
@@ -66,10 +66,10 @@ export function ModelShowcase() {
               type="button"
               onClick={() => setActive(i)}
               aria-pressed={on}
-              className={`inline-flex items-center gap-2.5 rounded-full border px-4 py-2 text-sm transition-all duration-300 ${
+              className={`inline-flex items-center gap-2.5 rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300 ${
                 on
-                  ? 'border-accent-pink/40 bg-white/[0.05] shadow-[0_0_24px_-10px_rgba(255,91,181,0.6)]'
-                  : 'border-white/[0.1] bg-white/[0.02] hover:border-white/25'
+                  ? 'border-accent-pink/60 bg-accent-pink/[0.1] text-white shadow-[0_0_34px_-3px_rgba(255,91,181,0.9)] ring-1 ring-accent-pink/40'
+                  : 'border-white/15 bg-white/[0.03] text-white/60 hover:border-accent-pink/45 hover:text-white hover:shadow-[0_0_24px_-8px_rgba(255,91,181,0.55)]'
               }`}
             >
               <span
