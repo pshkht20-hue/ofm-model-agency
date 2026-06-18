@@ -118,7 +118,7 @@ export function ElectricBorder({
       canvas.style.height = `${height}px`;
     };
 
-    const trace = () => {
+    const trace = (disp: number) => {
       const L = BORDER_OFFSET;
       const T = BORDER_OFFSET;
       const bw = width - 2 * BORDER_OFFSET;
@@ -130,8 +130,8 @@ export function ElectricBorder({
       for (let i = 0; i <= n; i++) {
         const pr = i / n;
         const pt = rr(pr, L, T, bw, bh, r);
-        const x = pt.x + oct(pr * 8, time, 0) * DISPLACEMENT;
-        const y = pt.y + oct(pr * 8, time, 1) * DISPLACEMENT;
+        const x = pt.x + (disp ? oct(pr * 8, time, 0) * disp : 0);
+        const y = pt.y + (disp ? oct(pr * 8, time, 1) * disp : 0);
         if (i === 0) ctx.moveTo(x, y);
         else ctx.lineTo(x, y);
       }
@@ -150,26 +150,39 @@ export function ElectricBorder({
       g.addColorStop(0.5, '#a855f7');
       g.addColorStop(1, '#00d4ff');
 
+      // 1) steady neon line tracing the actual border (the bolt runs along it)
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.globalAlpha = 1;
+      ctx.strokeStyle = g;
+      ctx.shadowColor = '#a855f7';
+      ctx.shadowBlur = 7;
+      ctx.lineWidth = 1.5;
+      trace(0);
+      ctx.stroke();
+
+      // 2) thin lightning crawling around it (additive)
       ctx.globalCompositeOperation = 'lighter';
-      // wide neon spread
       ctx.strokeStyle = g;
       ctx.globalAlpha = 0.4;
-      ctx.lineWidth = 3.4;
-      trace();
+      ctx.lineWidth = 1.8;
+      ctx.shadowColor = '#ff5bb5';
+      ctx.shadowBlur = 8;
+      trace(DISPLACEMENT);
       ctx.stroke();
-      // glowing colored line
+
       ctx.globalAlpha = 0.95;
-      ctx.lineWidth = 1.7;
+      ctx.lineWidth = 1.0;
       ctx.shadowColor = '#a855f7';
-      ctx.shadowBlur = 9;
-      trace();
+      ctx.shadowBlur = 5;
+      trace(DISPLACEMENT);
       ctx.stroke();
-      // hot white core — reads as a real lightning bolt
+
+      // hot white core — thin, reads as a real bolt
       ctx.shadowColor = '#ffffff';
-      ctx.shadowBlur = 4;
-      ctx.strokeStyle = 'rgba(255,255,255,0.92)';
-      ctx.lineWidth = 0.9;
-      trace();
+      ctx.shadowBlur = 3;
+      ctx.strokeStyle = 'rgba(255,255,255,0.9)';
+      ctx.lineWidth = 0.55;
+      trace(DISPLACEMENT);
       ctx.stroke();
 
       ctx.shadowBlur = 0;

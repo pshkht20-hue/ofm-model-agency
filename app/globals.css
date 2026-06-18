@@ -1000,13 +1000,13 @@ input[type="number"] {
   box-sizing: border-box;
 }
 .electric-border .eb-glow-1 {
-  border: 2px solid rgba(168, 85, 247, 0.5);
-  filter: blur(1px);
+  border: 2px solid rgba(168, 85, 247, 0.35);
+  filter: blur(3px);
 }
 .electric-border .eb-glow-2 {
   border: 2px solid #a855f7;
-  filter: blur(5px);
-  opacity: 0.5;
+  filter: blur(6px);
+  opacity: 0.4;
 }
 .electric-border .eb-bg-glow {
   z-index: -1;
