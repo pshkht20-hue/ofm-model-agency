@@ -168,13 +168,16 @@ export function EarningProof({ statement }: { statement: EarningStatement }) {
             type="button"
             onClick={() => setShowAll((v) => !v)}
             aria-expanded={showAll}
-            className="inline-flex flex-col items-center gap-0.5 text-xs font-medium lowercase tracking-wide text-white/50 transition-colors hover:text-accent-pink"
+            className="inline-flex flex-col items-center gap-0.5 text-xs font-medium lowercase tracking-wide text-accent-pink/85 [text-shadow:0_0_10px_rgba(255,91,181,0.5)] transition-all duration-300 hover:text-accent-pink hover:[text-shadow:0_0_16px_rgba(255,91,181,0.85)]"
           >
             <span>{showAll ? 'less' : 'more'}</span>
             {showAll ? (
-              <ChevronUp className="h-4 w-4" aria-hidden />
+              <ChevronUp className="h-4 w-4 [filter:drop-shadow(0_0_6px_rgba(255,91,181,0.7))]" aria-hidden />
             ) : (
-              <ChevronDown className="h-4 w-4 motion-safe:animate-bounce" aria-hidden />
+              <ChevronDown
+                className="h-4 w-4 [filter:drop-shadow(0_0_6px_rgba(255,91,181,0.7))] motion-safe:animate-bounce"
+                aria-hidden
+              />
             )}
           </button>
         </div>
