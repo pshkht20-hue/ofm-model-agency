@@ -85,7 +85,7 @@ function ServiceCard({ icon: Icon, index, featured, item, accent }: ServiceCardP
 
       <div className="relative z-10 flex flex-1 flex-col">
         <div className="mb-5 flex items-start justify-between gap-4">
-          <div className="icon-wrap-bright shrink-0 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[0_0_28px_-8px_rgba(255,91,181,0.55)]">
+          <div className="icon-shine icon-wrap-bright shrink-0 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[0_0_28px_-8px_rgba(255,91,181,0.55)]">
             <Icon className="h-6 w-6" strokeWidth={1.5} />
           </div>
           <span className="font-serif text-3xl leading-none text-white/[0.12] tabular-nums transition-colors duration-300 group-hover:text-accent-pink/25">

@@ -41,7 +41,7 @@ export function AboutSection() {
                   aria-hidden
                 />
                 <div className="relative z-10 flex flex-1 flex-col">
-                  <div className="icon-wrap-bright mb-4 shrink-0 transition-transform duration-300 group-hover:scale-105">
+                  <div className="icon-shine icon-wrap-bright mb-4 shrink-0 transition-transform duration-300 group-hover:scale-105">
                     <Icon className="h-6 w-6" strokeWidth={1.5} />
                   </div>
                   <h3 className="heading-card mb-2.5 text-base md:text-lg">{p.title}</h3>
