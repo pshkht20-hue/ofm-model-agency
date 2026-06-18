@@ -163,13 +163,21 @@ export function EarningProof({ statement }: { statement: EarningStatement }) {
         ))}
       </div>
       {statement.months.length > MONTHS_PREVIEW && (
-        <button
-          type="button"
-          onClick={() => setShowAll((v) => !v)}
-          className="link-hover-line mt-3 text-xs font-medium text-accent-pink transition-colors hover:text-accent-cyan"
-        >
-          {showAll ? 'Collapse' : `Show all ${statement.months.length} months`}
-        </button>
+        <div className="mt-3 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setShowAll((v) => !v)}
+            aria-expanded={showAll}
+            className="inline-flex items-center gap-1 text-xs font-medium lowercase tracking-wide text-white/45 transition-colors hover:text-accent-pink"
+          >
+            {showAll ? 'less' : 'more'}
+            {showAll ? (
+              <ChevronUp className="h-3.5 w-3.5" aria-hidden />
+            ) : (
+              <ChevronDown className="h-3.5 w-3.5" aria-hidden />
+            )}
+          </button>
+        </div>
       )}
     </div>
   );
