@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Logo } from '@/components/Logo';
 import { LegalDisclaimer } from '@/components/CreatorTheme';
 import { NeonAccents } from '@/components/ui/NeonAccents';
@@ -14,6 +14,7 @@ import { staggerContainer, staggerItem, VIEWPORT_DEFAULT } from '@/lib/motion';
 export function SiteFooter() {
   const t = useTranslations('footer');
   const tNav = useTranslations('nav');
+  const locale = useLocale();
   const reduced = useReducedMotion();
 
   const NAV = [
@@ -31,6 +32,14 @@ export function SiteFooter() {
       href: '/blog/rabota-modelyu-onlyfans' as const,
       label: t('vacancy'),
     },
+    ...(locale === 'ru' || locale === 'uk'
+      ? [
+          {
+            href: '/blog/robota-dlya-ukrainok-za-kordonom' as const,
+            label: t('diaspora'),
+          },
+        ]
+      : []),
     {
       href: '/blog/kak-vybrat-onlyfans-agentstvo' as const,
       label: t('guideAgency'),

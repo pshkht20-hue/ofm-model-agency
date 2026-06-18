@@ -46,4 +46,11 @@ export const LINK = {
   mistakes: { href: '/blog/onlyfans-oshibki-novichkov', label: '15 ошибок новичков' },
   safety: { href: '/blog/onlyfans-anonimnost-i-bezopasnost', label: 'Анонимность и безопасность' },
   noface: { href: '/blog/onlyfans-rabota-bez-lica', label: 'Лицо и анонимность' },
+  diaspora: {
+    href: '/blog/robota-dlya-ukrainok-za-kordonom',
+    label: 'Работа для украинок за границей',
+  },
+  polsha: { href: '/blog/onlyfans-rabota-polsha', label: 'OnlyFans в Польше' },
+  germaniya: { href: '/blog/onlyfans-rabota-germaniya', label: 'OnlyFans в Германии' },
+  chehiya: { href: '/blog/onlyfans-rabota-chehiya', label: 'OnlyFans в Чехии' },
 } as const;

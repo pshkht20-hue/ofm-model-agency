@@ -1,11 +1,12 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { ParticleField } from '@/components/ui/ParticleField';
 
 export function HomeSeoBlock() {
   const t = useTranslations('seoHome');
+  const locale = useLocale();
 
   return (
     <section
@@ -51,6 +52,14 @@ export function HomeSeoBlock() {
           <Link href="/blog/rabota-modelyu-onlyfans" className="btn-secondary !py-2.5 !px-5">
             {t('linkVacancy')}
           </Link>
+          {(locale === 'ru' || locale === 'uk') && (
+            <Link
+              href="/blog/robota-dlya-ukrainok-za-kordonom"
+              className="btn-secondary !py-2.5 !px-5"
+            >
+              {t('linkDiaspora')}
+            </Link>
+          )}
           <Link href="/blog/onlyfans-agentstvo-ukraina" className="btn-secondary !py-2.5 !px-5">
             {t('linkUkraine')}
           </Link>

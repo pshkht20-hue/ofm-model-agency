@@ -109,8 +109,10 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "nav",
-        intro: "Перед заявкою почитай деталі:",
+        intro: "Дізнайся більше — сусідні країни та деталі:",
         links: [
+          { href: "/blog/onlyfans-rabota-germaniya", label: "OnlyFans у Німеччині" },
+          { href: "/blog/onlyfans-rabota-chehiya", label: "OnlyFans у Чехії" },
           {
             href: "/blog/robota-dlya-ukrainok-za-kordonom",
             label: "робота для українок за кордоном",
@@ -121,11 +123,7 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
           },
           {
             href: "/blog/onlyfans-anonimnost-i-bezopasnost",
-            label: "Анонімність і безпека",
-          },
-          {
-            href: "/blog/onlyfans-agentstvo-ukraina",
-            label: "OnlyFans агентство Україна",
+            label: "анонімність і безпека",
           },
         ],
       },
@@ -238,8 +236,10 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "nav",
-        intro: "Перед заявкою почитай деталі:",
+        intro: "Детальніше — сусідні країни та матеріали:",
         links: [
+          { href: "/blog/onlyfans-rabota-polsha", label: "OnlyFans у Польщі" },
+          { href: "/blog/onlyfans-rabota-chehiya", label: "OnlyFans у Чехії" },
           {
             href: "/blog/robota-dlya-ukrainok-za-kordonom",
             label: "робота для українок за кордоном",
@@ -251,10 +251,6 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-anonimnost-i-bezopasnost",
             label: "анонімність і безпека",
-          },
-          {
-            href: "/blog/onlyfans-agentstvo-ukraina",
-            label: "OnlyFans агентство Україна",
           },
         ],
       },
@@ -363,23 +359,21 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "nav",
-        intro: "Перед заявкою почитай деталі:",
+        intro: "Детальніше — сусідні країни та матеріали:",
         links: [
-          {
-            href: "/blog/rabota-modelyu-onlyfans",
-            label: "вакансія моделлю OnlyFans",
-          },
+          { href: "/blog/onlyfans-rabota-polsha", label: "OnlyFans у Польщі" },
+          { href: "/blog/onlyfans-rabota-germaniya", label: "OnlyFans у Німеччині" },
           {
             href: "/blog/robota-dlya-ukrainok-za-kordonom",
             label: "робота для українок за кордоном",
           },
           {
-            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
-            label: "Анонімність і безпека",
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "вакансія моделлю OnlyFans",
           },
           {
-            href: "/blog/onlyfans-agentstvo-ukraina",
-            label: "OnlyFans агентство Україна",
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "анонімність і безпека",
           },
         ],
       },
@@ -512,23 +506,22 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "nav",
-        intro: "Перед заявкою почитай деталі:",
+        intro: "Обери свою країну — або дізнайся деталі:",
         links: [
+          { href: "/blog/onlyfans-rabota-polsha", label: "OnlyFans у Польщі" },
+          { href: "/blog/onlyfans-rabota-germaniya", label: "OnlyFans у Німеччині" },
+          { href: "/blog/onlyfans-rabota-chehiya", label: "OnlyFans у Чехії" },
           {
             href: "/blog/rabota-modelyu-onlyfans",
             label: "вакансія моделлю OnlyFans",
           },
           {
-            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
-            label: "Анонімність і безпека",
-          },
-          {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
-            label: "Скільки заробляють моделі",
+            label: "скільки заробляють моделі",
           },
           {
-            href: "/blog/onlyfans-agentstvo-ukraina",
-            label: "OnlyFans агентство Україна",
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "анонімність і безпека",
           },
         ],
       },

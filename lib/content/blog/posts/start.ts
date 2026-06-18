@@ -103,29 +103,13 @@ export const startPosts: BlogPost[] = [
         type: "p",
         text: "Начать можно анонимно и без обязательств. Оставь заявку на сайте — это ни к чему не обязывает, мы просто отвечаем на вопросы и рассказываем условия. Или напиши напрямую в Telegram @Azalia_agency. А чтобы прикинуть потенциальный доход под себя, открой калькулятор на главной странице — пара кликов, и виден ориентир.",
       },
-      {
-        type: "nav",
-        intro:
-          "Если хочешь разобраться глубже, начни с этих материалов — они отвечают на самые частые вопросы украинок за границей:",
-        links: [
-          {
-            href: "/blog/robota-dlya-ukrainok-za-kordonom",
-            label: "робота для українок за кордоном",
-          },
-          {
-            href: "/blog/rabota-modelyu-onlyfans",
-            label: "вакансия: работа моделью OnlyFans",
-          },
-          {
-            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
-            label: "анонимность и безопасность на OnlyFans",
-          },
-          {
-            href: "/blog/onlyfans-agentstvo-ukraina",
-            label: "как работает агентство OnlyFans",
-          },
-        ],
-      },
+      blogNav("Узнай больше — соседние страны и детали:", [
+        LINK.germaniya,
+        LINK.chehiya,
+        LINK.diaspora,
+        LINK.pillar,
+        LINK.safety,
+      ]),
       {
         type: "cta",
         title: "Готова попробовать удалённый онлайн-заработок в Польше?",
@@ -237,28 +221,13 @@ export const startPosts: BlogPost[] = [
         type: "p",
         text: "Первый шаг ни к чему не обязывает и остаётся приватным. Можешь оставить анонимную заявку прямо на сайте — мы свяжемся и спокойно ответим на все вопросы, без давления. Или напиши напрямую в Telegram: @Azalia_agency. А чтобы прикинуть цифры под себя, на главной странице есть калькулятор дохода — посмотри, как меняется оборот в зависимости от вовлечённости, прежде чем что-то решать.",
       },
-      {
-        type: "nav",
-        intro: "Если хочешь разобраться глубже, почитай ещё:",
-        links: [
-          {
-            href: "/blog/robota-dlya-ukrainok-za-kordonom",
-            label: "робота для українок за кордоном",
-          },
-          {
-            href: "/blog/rabota-modelyu-onlyfans",
-            label: "вакансия: работа моделью OnlyFans",
-          },
-          {
-            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
-            label: "анонимность и безопасность на OnlyFans",
-          },
-          {
-            href: "/blog/onlyfans-agentstvo-ukraina",
-            label: "как работает агентство OnlyFans",
-          },
-        ],
-      },
+      blogNav("Подробнее — соседние страны и детали:", [
+        LINK.polsha,
+        LINK.chehiya,
+        LINK.diaspora,
+        LINK.pillar,
+        LINK.safety,
+      ]),
       {
         type: "cta",
         title: "Готова попробовать без риска?",
@@ -372,28 +341,13 @@ export const startPosts: BlogPost[] = [
         type: "p",
         text: "Оставь заявку на сайте — это анонимно и ни к чему не обязывает — или напиши нам в Telegram @Azalia_agency. Специалист спокойно ответит на все вопросы и расскажет про доход, анонимность от громады и условия именно для твоей ситуации в Чехии. Хочешь сначала прикинуть цифры — на главной есть калькулятор дохода.",
       },
-      {
-        type: "nav",
-        intro: "Перед заявкой почитай детали:",
-        links: [
-          {
-            href: "/blog/rabota-modelyu-onlyfans",
-            label: "вакансия моделью OnlyFans",
-          },
-          {
-            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
-            label: "анонимность и безопасность",
-          },
-          {
-            href: "/blog/robota-dlya-ukrainok-za-kordonom",
-            label: "робота для українок за кордоном",
-          },
-          {
-            href: "/blog/onlyfans-agentstvo-ukraina",
-            label: "OnlyFans агентство Украина",
-          },
-        ],
-      },
+      blogNav("Подробнее — соседние страны и материалы:", [
+        LINK.polsha,
+        LINK.germaniya,
+        LINK.diaspora,
+        LINK.pillar,
+        LINK.safety,
+      ]),
       {
         type: "cta",
         title: "Готова начать зарабатывать онлайн в Чехии?",
@@ -528,28 +482,14 @@ export const startPosts: BlogPost[] = [
         type: "p",
         text: "Оставь заявку на сайте — это анонимно и ни к чему не обязывает — или напиши нам в Telegram @Azalia_agency. Специалист свяжется, спокойно ответит на все вопросы и расскажет про доход, анонимность и условия именно для твоей ситуации за границей. Хочешь сначала прикинуть цифры — на главной есть калькулятор дохода.",
       },
-      {
-        type: "nav",
-        intro: "Перед заявкой почитай детали:",
-        links: [
-          {
-            href: "/blog/rabota-modelyu-onlyfans",
-            label: "вакансия моделью OnlyFans",
-          },
-          {
-            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
-            label: "Анонимность и безопасность",
-          },
-          {
-            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
-            label: "Сколько зарабатывают модели",
-          },
-          {
-            href: "/blog/onlyfans-agentstvo-ukraina",
-            label: "OnlyFans агентство Украина",
-          },
-        ],
-      },
+      blogNav("Выбери свою страну — или узнай детали:", [
+        LINK.polsha,
+        LINK.germaniya,
+        LINK.chehiya,
+        LINK.pillar,
+        LINK.income,
+        LINK.safety,
+      ]),
       {
         type: "cta",
         title: "Готова начать зарабатывать онлайн за границей?",
