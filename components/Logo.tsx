@@ -101,11 +101,11 @@ export function Logo({
       )}
       {showWordmark && (
         <div
-          className={`shrink-0 text-left ${wordmarkVisibility}`}
+          className={`min-w-0 text-left ${wordmarkVisibility}`}
           style={{ marginLeft: s.gap }}
         >
-          <div className={`font-semibold tracking-tight leading-[1.1] text-white whitespace-nowrap ${s.title}`}>
-            OFM&apos;s Agency
+          <div className={`font-semibold tracking-tight leading-[1.1] text-white lg:whitespace-nowrap ${s.title}`}>
+            OFM&apos;s Model Agency
           </div>
           <div
             className={`font-medium tracking-[0.18em] sm:tracking-[0.22em] uppercase text-white/45 mt-0.5 sm:mt-1 leading-none ${s.tag} ${
@@ -119,7 +119,7 @@ export function Logo({
     </>
   );
 
-  const wrapClass = `group inline-flex items-center shrink-0 transition-transform duration-300 lg:hover:scale-[1.02] lg:active:scale-[0.98] ${className}`;
+  const wrapClass = `group inline-flex items-center min-w-0 transition-transform duration-300 lg:hover:scale-[1.02] lg:active:scale-[0.98] ${className}`;
 
   if (href) {
     return (
