@@ -71,6 +71,62 @@ export function ArticleJsonLd({ post, locale }: { post: BlogPost; locale: Locale
   );
 }
 
+/** Matches visible step headings across locales: "Шаг 1."/"Этап 0:" (ru),
+ * "Крок 1."/"Етап 0" (uk), "Stage 0:" (en), "Etapa 0:" (es). */
+const STEP_HEADING_RE = /^(Шаг|Этап|Крок|Етап|Stage|Etapa)\s/;
+
+/**
+ * HowTo structured data for genuine step-by-step posts. Steps are derived from the
+ * post's OWN visible step headings + the following paragraph/list, so the schema
+ * always matches the rendered (localized) content — a Google structured-data
+ * requirement. Honest: no totalTime / estimatedCost / guarantees. Renders nothing
+ * if fewer than 2 steps are found.
+ */
+export function HowToJsonLd({ post, locale }: { post: BlogPost; locale: Locale }) {
+  const steps: { name: string; text: string }[] = [];
+  const blocks = post.blocks;
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i];
+    if (b.type !== 'h2' || !STEP_HEADING_RE.test(b.text.trim())) continue;
+    let text = '';
+    for (let j = i + 1; j < blocks.length; j++) {
+      const nb = blocks[j];
+      if (nb.type === 'h2') break;
+      if (nb.type === 'p') {
+        text = nb.text;
+        break;
+      }
+      if (nb.type === 'ul') {
+        text = nb.items.join('. ');
+        break;
+      }
+    }
+    if (text) steps.push({ name: b.text, text });
+  }
+  if (steps.length < 2) return null;
+
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: post.title,
+    description: post.description,
+    inLanguage: HTML_LANG[locale],
+    step: steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export function BreadcrumbJsonLd({
   items,
   locale,

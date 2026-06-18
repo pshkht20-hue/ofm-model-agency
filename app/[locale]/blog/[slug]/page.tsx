@@ -3,7 +3,12 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { ArticleBody } from '@/components/seo/ArticleBody';
-import { ArticleJsonLd, BreadcrumbJsonLd, JobPostingJsonLd } from '@/components/seo/StructuredData';
+import {
+  ArticleJsonLd,
+  BreadcrumbJsonLd,
+  HowToJsonLd,
+  JobPostingJsonLd,
+} from '@/components/seo/StructuredData';
 import {
   getAllBlogSlugs,
   getBlogCategoryLabels,
@@ -54,6 +59,12 @@ const JOB_APPLICANT_COUNTRIES = [
   'Canada',
 ];
 
+/** Step-by-step posts that get HowTo structured data (steps derived from visible headings). */
+const HOW_TO_SLUGS = new Set([
+  'kak-stat-onlyfans-modelyu-s-nulya',
+  'onlyfans-agentstvo-dlya-nachinayushchih',
+]);
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const post = getBlogPost(slug, locale as Locale);
@@ -98,6 +109,7 @@ export default async function BlogPostPage({ params }: Props) {
           applicantCountries={JOB_APPLICANT_COUNTRIES}
         />
       )}
+      {HOW_TO_SLUGS.has(post.slug) && <HowToJsonLd post={post} locale={blogLocale} />}
       <BreadcrumbJsonLd
         locale={blogLocale}
         items={[
