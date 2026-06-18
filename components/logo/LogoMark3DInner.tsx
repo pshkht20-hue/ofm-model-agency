@@ -6,7 +6,7 @@ import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment
 import { FontLoader, type Font } from 'three/examples/jsm/loaders/FontLoader.js';
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js';
 
-type Props = { onReady?: () => void; speed?: number };
+type Props = { onReady?: () => void; spin?: boolean; speed?: number; rotX?: number; rotY?: number };
 
 /**
  * Live 3D version of the OFM logo mark (the approved glossy + silver-rim build).
@@ -14,7 +14,7 @@ type Props = { onReady?: () => void; speed?: number };
  * off-screen or the tab is hidden, renders a single static frame under
  * prefers-reduced-motion. Mounted client-only (ssr:false) with a 2D SVG fallback.
  */
-export default function LogoMark3DInner({ onReady, speed = 0.5 }: Props) {
+export default function LogoMark3DInner({ onReady, spin = false, speed = 0.5, rotX = 0.16, rotY = -0.5 }: Props) {
   const mountRef = useRef<HTMLDivElement>(null);
   const onReadyRef = useRef(onReady);
   onReadyRef.current = onReady;
@@ -61,8 +61,8 @@ export default function LogoMark3DInner({ onReady, speed = 0.5 }: Props) {
     const rimCyan = new THREE.PointLight(0x00d4ff, 90, 40); rimCyan.position.set(6, -2.5, -1); scene.add(rimCyan);
 
     const group = new THREE.Group();
-    group.rotation.x = 0.12;
-    group.rotation.y = -0.55;
+    group.rotation.x = rotX;
+    group.rotation.y = rotY;
     scene.add(group);
 
     const disposables: { dispose: () => void }[] = [];
@@ -154,11 +154,11 @@ export default function LogoMark3DInner({ onReady, speed = 0.5 }: Props) {
       renderFrame();
       raf = requestAnimationFrame(loop);
     };
-    const start = () => { if (reduced || raf || disposed || !onScreen || document.hidden) return; last = performance.now(); raf = requestAnimationFrame(loop); };
+    const start = () => { if (!spin || reduced || raf || disposed || !onScreen || document.hidden) return; last = performance.now(); raf = requestAnimationFrame(loop); };
     const stop = () => { if (raf) { cancelAnimationFrame(raf); raf = 0; } };
 
     renderFrame();
-    if (reduced) markReady(); else start();
+    start();
 
     const ro = new ResizeObserver(() => {
       const w = W(), h = Hh();

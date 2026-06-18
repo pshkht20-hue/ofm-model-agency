@@ -62,7 +62,7 @@ export function SiteFooter() {
             className="md:col-span-2 lg:col-span-2"
             variants={reduced ? undefined : staggerItem(20)}
           >
-            <Logo size="lg" href="/" wordmarkOnMobile className="mb-6" />
+            <Logo size="lg" href="/" wordmarkOnMobile className="mb-6" mark3d />
             <p className="max-w-md text-body">{t('tagline')}</p>
           </motion.div>
 

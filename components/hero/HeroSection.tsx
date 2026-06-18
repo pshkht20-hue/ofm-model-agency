@@ -14,7 +14,6 @@ import { HeroTrustStrip } from '@/components/hero/HeroTrustStrip';
 import { NeonAccents } from '@/components/ui/NeonAccents';
 import { useMagnetic } from '@/hooks/useMagnetic';
 import { ClickSpark } from '@/components/ui/ClickSpark';
-import { LogoMark3D } from '@/components/logo/LogoMark3D';
 
 gsap.registerPlugin(useGSAP);
 
@@ -225,10 +224,6 @@ export function HeroSection() {
       <NeonAccents variant="hero" />
 
       <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-        <div data-hero-reveal className="mb-7 flex justify-center">
-          <LogoMark3D size={200} speed={0.5} />
-        </div>
-
         <span
           data-hero-badge
           data-hero-reveal
