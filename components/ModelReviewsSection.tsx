@@ -55,7 +55,7 @@ export function ModelReviewsSection() {
 
       <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
         <p className="text-center text-sm text-white/50 max-w-lg">{t('ctaText')}</p>
-        <Link href="/#contact" className="btn-primary shrink-0 !py-2.5 !px-6 !text-sm">
+        <Link href="/#contact" className="btn-primary throb shrink-0 !py-2.5 !px-6 !text-sm">
           {t('ctaButton')}
         </Link>
       </div>

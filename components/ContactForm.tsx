@@ -364,7 +364,7 @@ export function ContactForm() {
           type="submit"
           disabled={status === 'loading'}
           className={`group w-full btn-primary disabled:opacity-70 disabled:pointer-events-none ${
-            allReady && status === 'idle' ? 'btn-ready' : ''
+            allReady && status === 'idle' ? 'btn-ready' : 'throb'
           }`}
         >
           {status === 'loading' ? (

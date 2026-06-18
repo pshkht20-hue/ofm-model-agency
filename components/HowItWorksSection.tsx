@@ -197,7 +197,7 @@ export function HowItWorksSection() {
         className="mt-12 flex flex-col items-center gap-3 text-center"
       >
         <p className="max-w-md text-sm text-white/40">{t('how.footerNote')}</p>
-        <a href="#contact" className="btn-primary group inline-flex">
+        <a href="#contact" className="btn-primary throb group inline-flex">
           {t('how.cta')}
           <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
         </a>
