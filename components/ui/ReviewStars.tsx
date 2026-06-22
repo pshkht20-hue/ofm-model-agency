@@ -32,6 +32,7 @@ export function ReviewStars({
     return (
       <motion.span
         className="inline-flex items-center gap-0.5"
+        role="img"
         aria-label={t('starsLabel', { rating, max })}
         initial="hidden"
         whileInView="visible"
@@ -58,6 +59,7 @@ export function ReviewStars({
   return (
     <span
       className="inline-flex items-center gap-0.5"
+      role="img"
       aria-label={t('starsLabel', { rating, max })}
     >
       {Array.from({ length: max }).map((_, i) => (

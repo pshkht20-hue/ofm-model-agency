@@ -120,7 +120,7 @@ export function SocialLinks({
 
   if (variant === 'nav') {
     return (
-      <div className={`flex items-center gap-1 ${className}`} role="list">
+      <div className={`flex items-center gap-1 ${className}`}>
         {links.map((link, i) => (
           <SocialLinkButton
             key={link.platform}
@@ -141,7 +141,7 @@ export function SocialLinks({
         <p className="text-[10px] uppercase tracking-[0.22em] text-white/35 mb-3">
           {t('menuEyebrow')}
         </p>
-        <div className="flex flex-wrap gap-2.5" role="list">
+        <div className="flex flex-wrap gap-2.5">
           {links.map((link, i) => (
             <SocialLinkButton
               key={link.platform}
@@ -161,7 +161,7 @@ export function SocialLinks({
     <div className={className}>
       <p className="eyebrow-bright mb-3 !text-[10px]">{t('footerTitle')}</p>
       <p className="text-sm text-white/50 mb-5 max-w-xs leading-relaxed">{t('footerLead')}</p>
-      <div className="flex flex-wrap gap-3" role="list">
+      <div className="flex flex-wrap gap-3">
         {links.map((link, i) => (
           <div key={link.platform} className="flex flex-col items-center gap-2">
             <SocialLinkButton
