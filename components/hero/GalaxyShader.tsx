@@ -188,6 +188,10 @@ export default function GalaxyShader({ reduced, mobile, sectionRef }: GalaxyShad
     const rotationSpeed = 0.04;
     const repulsionStrength = 1.6;
     const mouseEnabled = !mobile && !reduced;
+    // Animate (continuous rAF) ONLY on desktop with motion allowed. Mobile and
+    // reduced-motion get a single static frame — no render loop. The continuous
+    // shader was the dominant mobile main-thread/TBT + battery cost.
+    const animate = !mobile && !reduced;
 
     let renderer: Renderer;
     try {
@@ -273,18 +277,18 @@ export default function GalaxyShader({ reduced, mobile, sectionRef }: GalaxyShad
       cancelAnimationFrame(rafId);
     }
 
-    if (reduced) {
-      // One static, motionless frame.
+    if (animate) {
+      start();
+    } else {
+      // Mobile / reduced-motion: one static, motionless frame (no rAF loop).
       program.uniforms.uTime.value = 6.0;
       renderer.render({ scene: mesh });
-    } else {
-      start();
     }
 
     // Pause the loop when off-screen / tab hidden (battery + GPU).
     let onScreen = true;
     const sync = () => {
-      if (reduced) return;
+      if (!animate) return;
       if (onScreen && document.visibilityState !== 'hidden') start();
       else stop();
     };

@@ -25,7 +25,7 @@ export function ParticleField({ className = '', density = 1, opacity = 0.5 }: Pa
   const mobile = useIsMobileViewport();
 
   useEffect(() => {
-    if (reduced) return;
+    if (reduced || mobile) return;
     const canvas = ref.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -115,7 +115,7 @@ export function ParticleField({ className = '', density = 1, opacity = 0.5 }: Pa
     };
   }, [reduced, mobile, density, opacity]);
 
-  if (reduced) return null;
+  if (reduced || mobile) return null;
   return (
     <canvas
       ref={ref}
