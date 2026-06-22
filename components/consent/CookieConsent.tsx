@@ -91,7 +91,7 @@ export function CookieConsent() {
                     <button
                       type="button"
                       onClick={() => setDetailsOpen((open) => !open)}
-                      className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-medium text-white/38 transition hover:text-white/62"
+                      className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-medium text-white/60 transition hover:text-white/85"
                       aria-expanded={detailsOpen}
                     >
                       {t('detailsToggle')}

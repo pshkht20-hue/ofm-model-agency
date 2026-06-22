@@ -35,7 +35,9 @@ const playfair = Playfair_Display({
   style: ['normal', 'italic'],
   display: 'swap',
   fallback: ['Georgia', 'Times New Roman', 'serif'],
-  preload: false,
+  // Preloaded: the giant italic hero headline ("OnlyFans") is the LCP element —
+  // preloading the serif lets it reach its final paint sooner.
+  preload: true,
 });
 
 type Props = {

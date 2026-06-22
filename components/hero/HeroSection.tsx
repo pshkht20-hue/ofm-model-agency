@@ -275,7 +275,7 @@ export function HeroSection() {
 
         <HeroTrustStrip />
 
-        <div className="flex flex-wrap justify-center gap-x-12 gap-y-3 text-xs tracking-[0.2em] uppercase text-white/40">
+        <div className="flex flex-wrap justify-center gap-x-12 gap-y-3 text-xs tracking-[0.2em] uppercase text-white/55">
           <span data-hero-stat data-hero-reveal>
             <strong className="text-accent-pink font-semibold">220+</strong> {t('hero.statModels')}
           </span>
