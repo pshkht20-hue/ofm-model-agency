@@ -19,7 +19,7 @@
   --color-accent-violet: var(--accent-violet);
   --color-surface: var(--surface);
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
-  --font-serif: var(--font-playfair), "Times New Roman", serif;
+  --font-serif: var(--font-playfair-rest), "Times New Roman", serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
@@ -89,6 +89,8 @@ input[type="number"] {
 }
 
 .hero-accent-shimmer {
+  /* LCP headline — the only consumer of the preloaded 400-italic instance. */
+  font-family: var(--font-playfair), serif;
   background: linear-gradient(
     100deg,
     #ff5bb5 0%,
@@ -434,7 +436,7 @@ input[type="number"] {
 }
 
 .font-serif {
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-playfair-rest), serif;
 }
 
 .amount-display {
@@ -540,7 +542,7 @@ input[type="number"] {
 }
 
 .heading-display {
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-playfair-rest), serif;
   font-weight: 400;
   letter-spacing: clamp(-0.035em, -0.02em - 0.4vw, -0.01em);
   line-height: clamp(0.94, 1.1 - 0.6vw, 1.04);
@@ -548,7 +550,7 @@ input[type="number"] {
 }
 
 .heading-section {
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-playfair-rest), serif;
   font-size: clamp(2.25rem, 5vw, 3.75rem);
   font-weight: 400;
   letter-spacing: clamp(-0.025em, -0.012em - 0.28vw, -0.004em);

@@ -23,6 +23,11 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  // Build-time only: rewrites barrel imports to direct per-export imports so dead
+  // modules pulled through the barrels are tree-shaken out of the client bundle.
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+  },
   images: {
     remotePatterns: [
       {

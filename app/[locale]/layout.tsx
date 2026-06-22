@@ -28,16 +28,30 @@ const geistMono = Geist_Mono({
   preload: false,
 });
 
-const playfair = Playfair_Display({
+// The giant italic hero headline ("OnlyFans") is the mobile LCP element. It is
+// the ONLY thing that uses --font-playfair, so we scope a dedicated instance to
+// exactly the 400-italic glyph file and preload ONLY that one woff2. (Preloading
+// all 4 Playfair variants previously regressed LCP by stealing 4G bandwidth — a
+// single-file preload is the surgical fix.) adjustFontFallback stays on (no
+// custom `fallback` array) so the metric-matched serif fallback keeps the LCP
+// box from resizing on swap.
+const playfairHeadline = Playfair_Display({
   variable: '--font-playfair',
+  subsets: ['latin'],
+  weight: ['400'],
+  style: ['italic'],
+  display: 'swap',
+  preload: true,
+});
+
+// All other serif text (heading-display, section titles, font-serif) — normal +
+// italic, 400/700, NOT preloaded (not in the LCP path).
+const playfairRest = Playfair_Display({
+  variable: '--font-playfair-rest',
   subsets: ['latin'],
   weight: ['400', '700'],
   style: ['normal', 'italic'],
   display: 'swap',
-  fallback: ['Georgia', 'Times New Roman', 'serif'],
-  // NOT preloaded: on slow mobile (4G), preloading the 4 serif variants stole
-  // bandwidth from critical resources and regressed render-blocking / LCP. The
-  // headline shows in the serif fallback first (display:swap), which is fine.
   preload: false,
 });
 
@@ -111,7 +125,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${playfairHeadline.variable} ${playfairRest.variable}`}
     >
       <body className="min-h-full font-sans antialiased bg-[#050508] text-[#f4f2ef]">
         <GoogleConsentDefaults />

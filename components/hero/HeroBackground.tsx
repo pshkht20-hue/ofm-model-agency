@@ -30,8 +30,15 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
       <div className="cosmos-deep-space absolute inset-0" />
       <div className="cosmos-deep-breathe animate-glow-pulse absolute inset-0 opacity-60" />
 
-      {/* WOW — GPU galaxy (twinkling stars, glow, depth, cursor reactivity) */}
-      <GalaxyShader reduced={!!reduced} mobile={isMobile} sectionRef={sectionRef} />
+      {/* WOW — GPU galaxy (twinkling stars, glow, depth, cursor reactivity).
+          Desktop-only: gating the dynamic import means OGL is never downloaded
+          and no WebGL context is ever created on mobile (≤767px). The gradient
+          cosmos layers around it are the complete mobile background. On mobile
+          the galaxy was already a single static frame, so the visual delta is
+          negligible while TBT/LCP/battery all improve. */}
+      {!isMobile && (
+        <GalaxyShader reduced={!!reduced} mobile={isMobile} sectionRef={sectionRef} />
+      )}
 
       {/* Brand-color nebula glows over the galaxy — palette cohesion + depth */}
       <div
