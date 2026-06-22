@@ -50,7 +50,11 @@ export function HeroSection() {
         (context) => {
           const { reduceMotion = false, mobile = false } = context.conditions ?? {};
 
-          if (reduceMotion) {
+          // Mobile + reduced-motion: show the hero instantly, no JS-gated reveal.
+          // The headline is the LCP element — keeping it visible from first paint
+          // (instead of opacity:0 until GSAP) is the biggest mobile LCP win. The
+          // rich entrance timeline stays desktop-only.
+          if (reduceMotion || mobile) {
             gsap.set('[data-hero-reveal]', {
               opacity: 1,
               y: 0,
@@ -91,42 +95,6 @@ export function HeroSection() {
                 dimTl.to(dim, { opacity: mobile ? 0.72 : 0.9, ease: 'none' }, 0);
               }
             }
-          }
-
-          if (mobile) {
-            gsap.set('[data-hero-scan]', { opacity: 0, scaleX: 0 });
-            gsap.set('[data-hero-corner]', { opacity: 0 });
-            gsap.set('[data-hero-badge]', { opacity: 0, y: 12 });
-            gsap.set('[data-hero-line]', { y: 20 });
-            gsap.set('[data-hero-lead]', { opacity: 0, y: 14 });
-            gsap.set('[data-hero-cta]', { opacity: 0, y: 12 });
-            gsap.set('[data-hero-stat]', { opacity: 0, y: 10 });
-            gsap.set('[data-hero-note]', { opacity: 0, y: 8 });
-            gsap.set('[data-hero-scroll]', { opacity: 0, y: 8 });
-
-            clearHeroPending(section);
-
-            const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
-
-            tl.to('[data-hero-badge]', { opacity: 1, y: 0, duration: 0.85 }, 0.15)
-              .to('[data-hero-line]', { y: 0, duration: 0.9, stagger: 0.14 }, 0.35)
-              .to('[data-hero-lead]', { opacity: 1, y: 0, duration: 0.85 }, 0.78)
-              .to('[data-hero-cta]', { opacity: 1, y: 0, duration: 0.75, stagger: 0.1 }, 1.02)
-              .to('[data-hero-stat]', { opacity: 1, y: 0, duration: 0.65, stagger: 0.08 }, 1.32)
-              .to('[data-hero-note]', { opacity: 1, y: 0, duration: 0.6 }, 1.58)
-              .to('[data-hero-scroll]', { opacity: 1, y: 0, duration: 0.65 }, 1.78);
-
-            gsap.to('[data-hero-scroll-line]', {
-              scaleY: 0.35,
-              transformOrigin: 'top center',
-              duration: 1.6,
-              repeat: -1,
-              yoyo: true,
-              ease: 'sine.inOut',
-              delay: 2.6,
-            });
-
-            return;
           }
 
           gsap.set('[data-hero-scan]', { scaleX: 0, opacity: 0.9, transformOrigin: 'left center' });

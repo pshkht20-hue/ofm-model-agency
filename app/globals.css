@@ -150,20 +150,14 @@ input[type="number"] {
   }
 }
 
-/* Hide hero content until GSAP sets initial state (prevents mobile flash/jank) */
-.hero-pending [data-hero-reveal],
-.hero-pending [data-hero-scroll] {
-  opacity: 0;
-}
-
-@media (max-width: 767px) {
-  .hero-pending [data-hero-reveal] {
-    transform: translate3d(0, 14px, 0);
-  }
-
-  [data-hero-reveal] {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+/* Desktop: hide hero content until GSAP sets its initial state (prevents flash).
+   Mobile shows it immediately — the headline (LCP element) paints at first paint
+   instead of waiting for GSAP, which was the main mobile LCP cost. Also more
+   robust: if JS never runs, mobile content is still visible. */
+@media (min-width: 768px) {
+  .hero-pending [data-hero-reveal],
+  .hero-pending [data-hero-scroll] {
+    opacity: 0;
   }
 }
 
