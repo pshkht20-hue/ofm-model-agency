@@ -67,7 +67,11 @@ export function ReportJsonLd({ report, locale }: { report: ResearchReport; local
         publisher,
         mainEntityOfPage: { '@type': 'WebPage', '@id': url },
         about: 'Creator safety, image-based abuse, and exploitative agencies',
-        citation: report.sources.map((s) => s.label),
+        citation: report.sources.map((s) => ({
+          '@type': 'CreativeWork',
+          name: s.label,
+          url: s.url,
+        })),
       },
     ],
   };

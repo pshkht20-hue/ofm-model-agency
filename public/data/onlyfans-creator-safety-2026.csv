@@ -1,18 +1,24 @@
-# Creator Safety Survey 2026 — OFM Model Agency — https://ofmmodels.com/research/onlyfans-creator-safety-2026
-# License: CC BY 4.0 (attribution required). DEMO/SAMPLE DATA — placeholder figures pending real survey results.
-section,metric,percent,n
-red_flags,Asked for money/commission upfront,41,[N]
-red_flags,Demanded passwords / full account access,38,[N]
-red_flags,Refused a written contract,33,[N]
-red_flags,Promised guaranteed earnings,29,[N]
-red_flags,Wanted control of payouts/bank account,24,[N]
-red_flags,Wouldn't let me leave / took 50%+ cut,19,[N]
-experienced,Paid content leaked/reposted,58,[N]
-experienced,Sextortion,21,[N]
-experienced,Deepfake of their face,14,[N]
-experienced,Doxxing,17,[N]
-protections,Blur/hide face,46,[N]
-protections,Geo-block country/region,39,[N]
-protections,Watermark content,34,[N]
-protections,Separate work accounts/phone,31,[N]
-protections,DMCA/takedown service,22,[N]
+# Creator Safety Data Roundup 2026 — OFM Model Agency — https://ofmmodels.com/research/onlyfans-creator-safety-2026
+# Curated from public sources, CC BY 4.0. Every figure is cited to its source — see "Источники" on the page.
+chart,label,value,unit,source
+ibsa_by_type,Threatened with sharing intimate images,14.5,percent,Umbach et al. CHI 2025 (n=16693)
+ibsa_by_type,Filmed/photographed without consent,14.2,percent,Umbach et al. CHI 2025 (n=16693)
+ibsa_by_type,Shown/shared without permission,12.3,percent,Umbach et al. CHI 2025 (n=16693)
+ibsa_by_type,Content stolen,9.7,percent,Umbach et al. CHI 2025 (n=16693)
+ibsa_by_type,Deepfake/altered image created,8.0,percent,Umbach et al. CHI 2025 (n=16693)
+creator_hate_harassment,Impersonation,54,percent,Thomas et al. (Google) CHI 2022 (N=135)
+creator_hate_harassment,Account hijacking,32,percent,Thomas et al. (Google) CHI 2022 (N=135)
+creator_hate_harassment,Stalking/surveillance,31,percent,Thomas et al. (Google) CHI 2022 (N=135)
+creator_hate_harassment,False reporting,31,percent,Thomas et al. (Google) CHI 2022 (N=135)
+creator_hate_harassment,Doxxing,26,percent,Thomas et al. (Google) CHI 2022 (N=135)
+creator_hate_harassment,Deepfakes/manipulation,24,percent,Thomas et al. (Google) CHI 2022 (N=135)
+ic3_age_sextortion,Under 20,3806,count,FBI IC3 2024 Internet Crime Report p.36
+ic3_age_sextortion,20-29,13302,count,FBI IC3 2024 Internet Crime Report p.36
+ic3_age_sextortion,30-39,9204,count,FBI IC3 2024 Internet Crime Report p.36
+ic3_age_sextortion,40-49,6794,count,FBI IC3 2024 Internet Crime Report p.36
+ic3_age_sextortion,50-59,4940,count,FBI IC3 2024 Internet Crime Report p.36
+ic3_age_sextortion,60+,5903,count,FBI IC3 2024 Internet Crime Report p.36
+rph_2024,Reports in 2024,22275,count,SWGfL Revenge Porn Helpline 2024 Annual Report
+rph_2024,Removal rate,90.9,percent,SWGfL Revenge Porn Helpline 2024 Annual Report
+rph_2024,Cases involving sextortion,22.7,percent,SWGfL Revenge Porn Helpline 2024 Annual Report
+rph_2024,Male perpetrators,81,percent,SWGfL Revenge Porn Helpline 2024 Annual Report

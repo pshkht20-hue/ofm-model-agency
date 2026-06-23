@@ -4,7 +4,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { Download } from 'lucide-react';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { BreadcrumbJsonLd } from '@/components/seo/StructuredData';
-import { BarChart, StatCards } from '@/components/research/BarChart';
+import { BarChart, StatCards, fmtNum } from '@/components/research/BarChart';
 import { CiteEmbed } from '@/components/research/CiteEmbed';
 import { ReportJsonLd } from '@/components/research/ReportJsonLd';
 import {
@@ -18,7 +18,7 @@ import type { Locale } from '@/i18n/routing';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
-// Scaffold: Russian only until the report content is localized with real data.
+// Scaffold: Russian only until localized to uk/en/es.
 export const dynamicParams = false;
 export function generateStaticParams() {
   return getResearchReportSlugs().map((slug) => ({ locale: 'ru', slug }));
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const report = getResearchReport(slug);
   if (!report) return {};
   return createPageMetadata({
-    title: report.title,
+    title: report.seoTitle,
     description: report.dek,
     path: `/research/${slug}`,
     locale: locale as Locale,
@@ -47,13 +47,11 @@ export default async function ResearchReportPage({ params }: Props) {
   const loc = locale as Locale;
   const url = `${getSiteUrl()}${pathForLocale(`/research/${slug}`, loc)}`;
   const year = report.publishedAt.slice(0, 4);
-  const experienced = report.charts.find((c) => c.id === 'experienced');
-  const otherCharts = report.charts.filter((c) => c.id !== 'experienced');
 
   return (
     <SeoPageShell
       showCta={false}
-      breadcrumbs={[{ label: 'Исследования', href: '/research' }, { label: report.title }]}
+      breadcrumbs={[{ label: 'Исследования', href: '/research' }, { label: report.seoTitle }]}
     >
       <ReportJsonLd report={report} locale={loc} />
       <BreadcrumbJsonLd
@@ -61,45 +59,50 @@ export default async function ResearchReportPage({ params }: Props) {
         items={[
           { name: 'Главная', path: '/' },
           { name: 'Исследования', path: '/research' },
-          { name: report.title, path: `/research/${slug}` },
+          { name: report.seoTitle, path: `/research/${slug}` },
         ]}
       />
 
-      <p className="eyebrow-bright mb-4">Оригинальное исследование</p>
-      <h1 className="heading-section text-[clamp(1.9rem,4.6vw,2.9rem)] mb-4">{report.title}</h1>
+      <p className="eyebrow-bright mb-4">Кураторский обзор данных · 2026</p>
+      <h1 className="heading-section text-[clamp(1.7rem,4.2vw,2.6rem)] mb-4">{report.title}</h1>
       <p className="text-sm text-white/45 mb-6">
         Опубликовано: {report.publishedAt} · Обновлено: {report.updatedAt} · Лицензия CC BY 4.0
       </p>
 
-      {report.demo && (
-        <div className="mb-8 rounded-xl border border-amber-400/25 bg-amber-400/[0.06] px-4 py-3 text-[13px] text-amber-200/80">
-          ⚠️ Демо-данные для просмотра структуры. Цифры — заглушки; заменим реальными
-          результатами анонимного опроса перед публикацией.
-        </div>
-      )}
-
-      <p className="text-lead mb-2">
-        <span className="text-accent-pink font-semibold">{report.heroStat.value}</span>{' '}
-        {report.heroStat.label}.
-      </p>
+      <div className="mb-8 rounded-2xl border border-accent-pink/20 bg-accent-pink/[0.05] p-6">
+        <div className="font-serif text-4xl md:text-5xl text-white mb-2">{report.heroStat.value}</div>
+        <p className="text-body">{report.heroStat.label}.</p>
+        <p className="text-xs text-white/40 mt-2">Источник: {report.heroStat.source}</p>
+      </div>
       <p className="text-body mb-10">{report.dek}</p>
 
+      <h2 className="heading-section text-xl md:text-2xl mb-3">Почему этого нет ни у кого</h2>
+      <div className="rounded-2xl border border-accent-cyan/20 bg-accent-cyan/[0.04] p-5 md:p-6 text-body text-sm leading-relaxed mb-12">
+        {report.uniqueAngle}
+      </div>
+
       <h2 className="heading-section text-xl md:text-2xl mb-4">Ключевые выводы</h2>
-      <ul className="space-y-3 mb-6">
+      <ul className="space-y-4 mb-10">
         {report.keyFindings.map((f) => (
           <li key={f.stat} className="text-body">
-            <span className="text-accent-pink font-semibold">{f.stat}</span> — {f.text}
+            <span className="text-accent-pink font-semibold">{f.stat}</span> — {f.text}{' '}
+            <span className="text-white/40 text-sm">({f.source})</span>
           </li>
         ))}
       </ul>
 
-      {experienced && (
-        <StatCards items={experienced.data.map((d) => ({ value: `${d.value}%`, label: d.label }))} />
+      {report.charts.map((chart) =>
+        chart.display === 'cards' ? (
+          <figure key={chart.id} className="my-8">
+            <h3 className="font-serif text-lg md:text-xl text-white mb-2">{chart.title}</h3>
+            <p className="text-sm text-white/55 mb-1">{chart.caption}</p>
+            <StatCards items={chart.data.map((d) => ({ value: fmtNum(d.value), label: d.label }))} />
+            <p className="text-[11px] uppercase tracking-wide text-white/35">{chart.sourceNote}</p>
+          </figure>
+        ) : (
+          <BarChart key={chart.id} chart={chart} />
+        ),
       )}
-
-      {otherCharts.map((chart) => (
-        <BarChart key={chart.id} chart={chart} />
-      ))}
 
       <div className="flex flex-wrap gap-3 mt-2 mb-12">
         {[
@@ -127,25 +130,24 @@ export default async function ResearchReportPage({ params }: Props) {
         ))}
       </ul>
 
-      <h2 id="standards" className="heading-section text-xl md:text-2xl mb-4">
-        Что считать безопасным агентством
+      <h2 id="checklist" className="heading-section text-xl md:text-2xl mb-4">
+        Чек-лист безопасности креатора
       </h2>
       <ul className="list-disc pl-5 space-y-2 text-body mb-4">
-        {report.goodStandards.map((s) => (
+        {report.safetyChecklist.map((s) => (
           <li key={s}>{s}</li>
         ))}
       </ul>
       <p className="text-sm text-white/50 mb-12">
-        Это базовые стандарты, которым следует OFM Models — их подсказывают сами данные.
+        Этим стандартам безопасности следует и OFM Models — их подсказывают сами данные.
       </p>
 
       <h2 id="methodology" className="heading-section text-xl md:text-2xl mb-4">
-        Методология
+        Как мы собрали этот обзор
       </h2>
-      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 md:p-6 text-body text-sm leading-relaxed mb-4">
-        {report.methodology}
+      <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 md:p-6 text-body text-sm leading-relaxed mb-12">
+        {report.curationNote}
       </div>
-      <p className="text-sm text-white/50 mb-12">{report.survey.note}</p>
 
       <CiteEmbed title={report.title} url={url} publishedYear={year} />
 
@@ -165,12 +167,14 @@ export default async function ResearchReportPage({ params }: Props) {
         ))}
       </ul>
 
-      <h2 className="heading-section text-xl md:text-2xl mb-4">Источники (контекст)</h2>
+      <h2 className="heading-section text-xl md:text-2xl mb-4">
+        Источники ({report.sources.length})
+      </h2>
       <ul className="space-y-2 text-sm text-white/55">
         {report.sources.map((s) => (
-          <li key={s.href}>
+          <li key={s.url}>
             <a
-              href={s.href}
+              href={s.url}
               className="text-white/70 hover:text-accent-pink transition-colors underline decoration-white/20 underline-offset-2"
               rel="noopener noreferrer"
               target="_blank"

@@ -1,32 +1,54 @@
 {
-  "report": "Creator Safety Survey 2026",
+  "report": "Creator Safety Data Roundup 2026",
   "publisher": "OFM Model Agency",
   "url": "https://ofmmodels.com/research/onlyfans-creator-safety-2026",
   "license": "https://creativecommons.org/licenses/by/4.0/",
-  "note": "DEMO/SAMPLE DATA — placeholder figures pending real survey results.",
-  "unit": "percent",
-  "n": "[N]",
+  "note": "Curated from public sources. Every figure is cited to its source — see the page 'Источники'. Not an original survey.",
   "charts": {
-    "agency_red_flags": [
-      { "label": "Asked for money/commission upfront", "percent": 41 },
-      { "label": "Demanded passwords / full account access", "percent": 38 },
-      { "label": "Refused a written contract", "percent": 33 },
-      { "label": "Promised guaranteed earnings", "percent": 29 },
-      { "label": "Wanted control of payouts/bank account", "percent": 24 },
-      { "label": "Wouldn't let me leave / took 50%+ cut", "percent": 19 }
-    ],
-    "experienced": [
-      { "label": "Paid content leaked/reposted", "percent": 58 },
-      { "label": "Sextortion", "percent": 21 },
-      { "label": "Deepfake of their face", "percent": 14 },
-      { "label": "Doxxing", "percent": 17 }
-    ],
-    "protections": [
-      { "label": "Blur/hide face", "percent": 46 },
-      { "label": "Geo-block country/region", "percent": 39 },
-      { "label": "Watermark content", "percent": 34 },
-      { "label": "Separate work accounts/phone", "percent": 31 },
-      { "label": "DMCA/takedown service", "percent": 22 }
-    ]
+    "ibsa_by_type": {
+      "source": "Umbach, Henry & Beard, CHI 2025, n=16693",
+      "unit": "percent",
+      "data": [
+        { "label": "Threatened with sharing intimate images", "value": 14.5 },
+        { "label": "Filmed/photographed without consent", "value": 14.2 },
+        { "label": "Shown/shared without permission", "value": 12.3 },
+        { "label": "Content stolen", "value": 9.7 },
+        { "label": "Deepfake/altered image created", "value": 8.0 }
+      ]
+    },
+    "creator_hate_harassment": {
+      "source": "Thomas et al. (Google), CHI 2022, N=135",
+      "unit": "percent",
+      "data": [
+        { "label": "Impersonation", "value": 54 },
+        { "label": "Account hijacking", "value": 32 },
+        { "label": "Stalking/surveillance", "value": 31 },
+        { "label": "False reporting", "value": 31 },
+        { "label": "Doxxing", "value": 26 },
+        { "label": "Deepfakes/manipulation", "value": 24 }
+      ]
+    },
+    "ic3_age_sextortion": {
+      "source": "FBI IC3, 2024 Internet Crime Report, p.36",
+      "unit": "count",
+      "data": [
+        { "label": "Under 20", "value": 3806 },
+        { "label": "20-29", "value": 13302 },
+        { "label": "30-39", "value": 9204 },
+        { "label": "40-49", "value": 6794 },
+        { "label": "50-59", "value": 4940 },
+        { "label": "60+", "value": 5903 }
+      ]
+    },
+    "rph_2024": {
+      "source": "SWGfL, Revenge Porn Helpline 2024 Annual Report",
+      "unit": "mixed",
+      "data": [
+        { "label": "Reports in 2024", "value": 22275, "unit": "count" },
+        { "label": "Removal rate", "value": 90.9, "unit": "percent" },
+        { "label": "Cases involving sextortion", "value": 22.7, "unit": "percent" },
+        { "label": "Male perpetrators", "value": 81, "unit": "percent" }
+      ]
+    }
   }
 }
