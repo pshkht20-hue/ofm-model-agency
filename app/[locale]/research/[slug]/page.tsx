@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const report = getResearchReport(slug, locale);
   if (!report) return {};
-  return createPageMetadata({
+  const meta = createPageMetadata({
     title: report.seoTitle,
     description: report.dek,
     path: `/research/${slug}`,
@@ -38,6 +38,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: report.keywords,
     availableLocales: getResearchReportLocales(slug),
   });
+  // Let this route's opengraph-image.tsx (the 22.6% card) take over og/twitter.
+  if (meta.openGraph) meta.openGraph.images = undefined;
+  if (meta.twitter) meta.twitter.images = undefined;
+  return meta;
 }
 
 export default async function ResearchReportPage({ params }: Props) {
