@@ -1,0 +1,18 @@
+# Creator Safety Survey 2026 — OFM Model Agency — https://ofmmodels.com/research/onlyfans-creator-safety-2026
+# License: CC BY 4.0 (attribution required). DEMO/SAMPLE DATA — placeholder figures pending real survey results.
+section,metric,percent,n
+red_flags,Asked for money/commission upfront,41,[N]
+red_flags,Demanded passwords / full account access,38,[N]
+red_flags,Refused a written contract,33,[N]
+red_flags,Promised guaranteed earnings,29,[N]
+red_flags,Wanted control of payouts/bank account,24,[N]
+red_flags,Wouldn't let me leave / took 50%+ cut,19,[N]
+experienced,Paid content leaked/reposted,58,[N]
+experienced,Sextortion,21,[N]
+experienced,Deepfake of their face,14,[N]
+experienced,Doxxing,17,[N]
+protections,Blur/hide face,46,[N]
+protections,Geo-block country/region,39,[N]
+protections,Watermark content,34,[N]
+protections,Separate work accounts/phone,31,[N]
+protections,DMCA/takedown service,22,[N]

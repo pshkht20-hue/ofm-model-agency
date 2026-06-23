@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllBlogSlugs, getBlogPublishedAtMap } from '@/lib/content/blog/slugs';
 import { getBlogPostLocales } from '@/lib/content/blog';
+import { getResearchReportSlugs } from '@/lib/content/research/reports';
 import { routing, type Locale } from '@/i18n/routing';
 import { pathForLocale, hreflangAlternates } from '@/lib/i18n/paths';
 import { getSiteUrl } from '@/lib/site';
@@ -46,6 +47,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: { languages: hreflangAlternates(siteUrl, blogPath, postLocales) },
       });
     }
+  }
+
+  // /research — original-data hub. Russian only for now (localized later);
+  // listed under ru so the linkable assets get discovered + crawled.
+  const researchPaths = ['/research', ...getResearchReportSlugs().map((s) => `/research/${s}`)];
+  for (const path of researchPaths) {
+    entries.push({
+      url: `${siteUrl}${pathForLocale(path, 'ru' as Locale)}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: path === '/research' ? 0.7 : 0.65,
+      alternates: { languages: hreflangAlternates(siteUrl, path, ['ru'] as Locale[]) },
+    });
   }
 
   return entries;
