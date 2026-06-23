@@ -711,6 +711,69 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         text: "Reels → perfil → enlace → landing/mensaje → OnlyFans. Prueba CTAs en bio (“contenido exclusivo”, “club VIP”). Mide qué red trae fans de pago, no solo clics.",
       },
       {
+        type: "h2",
+        text: "Calentar la cuenta: las primeras 2–3 semanas",
+      },
+      {
+        type: "p",
+        text: "Una cuenta nueva sin historial es la principal candidata a un shadowban. Las primeras semanas Meta y TikTok observan tu comportamiento, así que no pongas el enlace en bio ni la palabra «OnlyFans» el primer día. Deja que el perfil madure.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Días 1–3: completa el perfil, sigue a 10–20 cuentas relevantes, da likes y desplázate como una persona normal",
+          "Días 4–10: una publicación al día, actividad en Stories, responde comentarios — sin enlaces externos",
+          "Días 11–14: añade un hub de enlaces en bio e inicia CTAs suaves («enlace en el perfil»)",
+          "Entra desde un solo dispositivo y una sola IP; evita VPN dudosas",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cómo detectar un shadowban",
+      },
+      {
+        type: "p",
+        text: "El shadowban casi nunca llega con un aviso. Señales: el alcance de los Reels cae de golpe al nivel «solo seguidores», los hashtags no traen nuevos espectadores y tu perfil no aparece en búsqueda desde una cuenta sin sesión. Revisa la analítica: si la proporción de «no seguidores» en las vistas baja casi a cero, esa es la pista.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Quita los hashtags dudosos y espera 48–72 horas",
+          "No publiques uno o dos días y vuelve con contenido SFW limpio",
+          "Comprueba si alguien marcó una publicación como «sensible»",
+          "No borres la cuenta en pánico — el límite suele ser temporal",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Teasers SFW que funcionan",
+      },
+      {
+        type: "p",
+        text: "Un teaser existe para intrigar sin romper las guidelines. La insinuación vende más que lo explícito que te banea. Prueba formatos y observa cuáles generan clics al enlace, no solo likes.",
+      },
+      {
+        type: "ul",
+        items: [
+          "«Get ready with me», try-on, fitness y lifestyle de playa dentro de las reglas",
+          "Humor y reacciones sobre un sonido en tendencia — alto alcance orgánico",
+          "El corte-insinuación: «la continuación está donde se puede todo» con CTA al perfil",
+          "Dúos, respuestas en video a comentarios, detrás de cámaras de los rodajes",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cadencia y hub de enlaces",
+      },
+      {
+        type: "p",
+        text: "La constancia gana al volumen. Una base que funciona: 1–2 Reels/TikToks al día y 3–5 Stories, probando siempre los horarios según tu audiencia. En bio dirige a un hub de enlaces (Beacons, Linktree en tu propio dominio) o a una mini-landing con confirmación de edad en lugar de ir directo a OnlyFans: baja el riesgo de baneo y te da analítica de clics.",
+      },
+      {
+        type: "tip",
+        text: "Republica los Reels en TikTok sin la marca de agua de TikTok — el cross-posting con el logo visible de otra plataforma reduce el alcance. Mantén un embudo por red y mide cuál trae fans de pago.",
+      },
+      {
         type: "nav",
         intro: "Más canales y conversión:",
         links: [
@@ -769,6 +832,45 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "Cuenta el % de bajas sobre la base activa. Si el churn supera 15–20%/mes sin nuevas ballenas, el problema es producto (contenido + chat), no solo anuncios.",
+      },
+      { type: "h2", text: "Rebill: la palanca que casi todos olvidan" },
+      {
+        type: "p",
+        text: "La suscripción de OnlyFans se renueva automáticamente por defecto (rebill). Gran parte de la «retención» consiste simplemente en evitar que el fan toque «desactivar renovación automática». Vigila la cuota de suscripciones activas con rebill activado: si cae al acercarse la fecha de cobro, el fan ya decidió irse, y es una señal 3–7 días antes de la baja real.",
+      },
+      {
+        type: "ul",
+        items: [
+          "5–7 días antes del cobro, da un «motivo para quedarse»: adelanta un drop que saldrá justo tras la renovación",
+          "No lances PPV agresivo dentro de la ventana de cobro—provoca cancelaciones de rebill",
+          "Reserva los descuentos de renovación para el segmento «a punto de irse», no para todos",
+        ],
+      },
+      { type: "h2", text: "Win-back: recuperar a los que se fueron" },
+      {
+        type: "p",
+        text: "Un fan que se fue no es un fan perdido. Una base tibia que ya pagó una vez convierte más barato que el tráfico frío. Mediante un mensaje a expirados (si conservan acceso a mensajes) o un enlace promo, ofrece una reactivación limitada: 1–2 contactos, sin spam. Una meta realista de win-back es recuperar parte de la base, no toda; las cifras exactas dependen del nicho.",
+      },
+      { type: "h2", text: "Fidelidad y la matemática de la retención" },
+      {
+        type: "p",
+        text: "Captar un suscriptor nuevo suele costar más que mantener uno actual. Si el fan medio dura 2 meses y gasta $40, mientras reactivar a uno que se fue cuesta céntimos frente al precio de un clic, el foco pasa al LTV. Los perks VIP para fans activos y ballenas (acceso anticipado, series personales, una insignia de «fan veterano») alargan la vida de la suscripción sin comprar más anuncios.",
+      },
+      {
+        type: "tip",
+        text: "Calcula LTV / CAC por segmento, no como media de la página. Un solo segmento de ballenas puede sostener toda la economía mientras los nuevos se van en el primer cobro.",
+      },
+      { type: "h2", text: "Checklist de retención" },
+      {
+        type: "ul",
+        items: [
+          "Se mide la cuota de rebill activo y su caída antes del cobro",
+          "Existe una jugada de 5–7 días antes de la renovación (ancla de contenido, no spam de PPV)",
+          "Hay win-back configurado para fans dados de baja hace 30–60 días",
+          "Ballenas y fans activos reciben perks que los nuevos no tienen",
+          "Churn y LTV se miden por segmento cada semana",
+          "Cada ola de promo coincide con la promesa del DM—sin sensación de «engaño»",
+        ],
       },
       {
         type: "nav",
@@ -848,6 +950,74 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "OFM gestiona chats 24/7 dentro del management—los detalles se discuten al conectar.",
       },
+      { type: "h2", text: "Cómo se ve un flujo de chat real" },
+      {
+        type: "p",
+        text: "Para que las fases se entiendan, aquí va un ejemplo de conversación resumido — sin guiones de «compra-compra», solo la lógica de cada paso. El fan llegó de un anuncio en Reddit y abrió la página gratis.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Welcome: «Hola, gracias por pasarte — ¿vienes de aquel post sobre las mañanas en Lisboa? :)» — un gancho ligado a la fuente de tráfico.",
+          "Discovery: «¿Eres más de videos o de charlar en vivo?» — averiguar el formato en el que el fan realmente gasta.",
+          "Connection: un día después, retomar un detalle de sus respuestas — «¿qué tal ese viaje que mencionaste?».",
+          "Offer: un PPV personalizado según el interés dicho, con precio claro y un recordatorio suave — sin presión.",
+        ],
+      },
+      { type: "h2", text: "Ballenas y VIP: de dónde sale la mayor parte del net" },
+      {
+        type: "p",
+        text: "Una «ballena» no es quien compró un PPV caro una vez, sino un fan con disposición estable a gastar. Por observación de la industria, una parte notable del ingreso de una página viene del 5–10% superior de suscriptores. Conviene detectarlos pronto y atenderlos aparte.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Señales de ballena: respuestas rápidas, iniciativa en el diálogo, desbloqueo del primer PPV de pago sin regatear.",
+          "Gestión VIP: una nota por fan (nombre, zona horaria, temas, compras previas) para que cualquier turno continúe el hilo sin saltos.",
+          "Ritmo más suave para la ballena: menos ofertas, más atención — saturar a un fan valioso cuesta más que ganar de menos esta semana.",
+        ],
+      },
+      { type: "h2", text: "Métricas de DM que de verdad se miden" },
+      {
+        type: "p",
+        text: "La velocidad de respuesta es solo un número. Para ver dónde se fuga el dinero, los equipos miran el embudo completo y lo comparan por turnos y por fuente de tráfico.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Conversión al primer pago: qué porcentaje de fans nuevos compró al menos una vez en las primeras 72 horas.",
+          "Unlock rate de PPV: cuántos PPV enviados se abrieron — un porcentaje bajo suele indicar mal calentamiento, no el precio.",
+          "Revenue per fan (RPF): ingreso medio por suscriptor — más honesto que la facturación bruta, porque no esconde diálogos flojos.",
+          "Porcentaje de recompra: si el vínculo aguanta tras el primer desbloqueo.",
+        ],
+      },
+      {
+        type: "tip",
+        text: "Mide las métricas por fuente de tráfico: un fan de anuncios y uno de orgánico se comportan distinto, y un promedio único lo esconde todo.",
+      },
+      { type: "h2", text: "Etiqueta del chat: lo que sí y lo que no" },
+      {
+        type: "ul",
+        items: [
+          "Sí: recordar el contexto de mensajes anteriores, mantener una sola voz y decir con honestidad qué hay dentro de un PPV.",
+          "Sí: permitir una pausa — no toda conversación tiene que terminar en venta hoy.",
+          "No: inventar «deadlines» ni descuentos falsos de «solo ahora» — los fans lo notan y se van.",
+          "No: prometer contenido que no se entregará, ni ignorar las palabras de stop o la incomodidad del fan.",
+        ],
+      },
+      { type: "h2", text: "Cómo funcionan los turnos 24/7 por zonas horarias" },
+      {
+        type: "p",
+        text: "El dolor principal de una modelo en solitario es la ventana de silencio de madrugada, cuando un fan de otra zona está listo para pagar y no hay quién responda. El enfoque de agencia cubre el día por turnos manteniendo una sola voz.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Cobertura por zonas: los turnos se arman alrededor de la actividad de la audiencia (a menudo la tarde-noche de EE. UU.), no del reloj de la modelo.",
+          "Traspaso de turno: una nota breve por cada hilo activo para que el siguiente gestor no empiece de cero.",
+          "Una guía de tono única: mismas reglas de voz y precios para todo el equipo — el fan no debe notar a «otra persona».",
+        ],
+      },
       {
         type: "nav",
         intro: "Donde nacen las ventas, sigue leyendo:",
@@ -918,6 +1088,72 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "tip",
         text: "Prueba precio cada 6–8 semanas con tráfico nuevo; no cambies todo a la vez.",
+      },
+      {
+        type: "h2",
+        text: "Precios de referencia por nicho y etapa",
+      },
+      {
+        type: "p",
+        text: "Son rangos para testear, no tarifas fijas. El precio real depende del nicho, el volumen de contenido y la fuerza del DM, así que valídalos con tu propio tráfico.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Inicio sin marca: sub de pago $5–9, o página gratis con PPV $8–15",
+          "Nicho consolidado: sub $10–18, con el grueso del margen en PPV $15–40",
+          "Premium o nicho estrecho: sub $20–30+, customs desde $50–150 por slot",
+          "Segmento ballena: PPV a medida $100–300 y metas de tips en el chat",
+        ],
+      },
+      {
+        type: "h2",
+        text: "La matemática: página gratis + PPV frente a sub de pago",
+      },
+      {
+        type: "p",
+        text: "La página gratis quita la barrera de entrada y llena el embudo, pero la monetización recae por completo en los chats. La sub de pago da un MRR predecible, aunque estrecha la parte alta del embudo. Mide por ingreso por suscriptor, no por número de seguidores.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Free + PPV: 1.000 subs × 4% compradores × ticket medio $20 ≈ $800/mes más tips",
+          "De pago $12: 200 subs × $12 ≈ $2.400 MRR, pero el tráfico crece más lento",
+          "Híbrido: la de pago como círculo cerrado, la gratis como imán de leads para upsell",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Packs, menú de tips y prueba gratis",
+      },
+      {
+        type: "p",
+        text: "Un pack (tres meses con 10–20% de descuento) sube el LTV y recorta el churn del primer mes. El menú de tips convierte el chat en una lista de precios clara, y una prueba gratis de 3–7 días calienta el tráfico frío — pero solo con un flujo de bienvenida listo, o el acceso gratis se queda en nada.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Pack de tres meses: fija ingresos y suaviza la caída tras el primer mes",
+          "Menú de tips: set de fotos, nota de voz, rating, custom — cada uno con su precio",
+          "Prueba gratis: límite de tiempo firme más un upsell obligatorio en las primeras 24 horas",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cuándo y cómo subir precios: FAQ breve",
+      },
+      {
+        type: "p",
+        text: "Sube el precio para los nuevos suscriptores y deja a los antiguos en la tarifa anterior (grandfathering) — así crece el ticket medio sin una ola de bajas. La señal para subir: entrada estable, lista de espera para customs y slots llenos.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Cuándo: slots casi al 100% y tráfico estable durante 4–6 semanas",
+          "Cuánto: un paso del 15–25%, no duplicar",
+          "Suscriptores antiguos: mantenles el precio, sube solo para los nuevos",
+          "Qué medir: ingreso por suscriptor y churn, no solo la cifra de la sub",
+        ],
       },
       {
         type: "nav",
@@ -1001,6 +1237,63 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "OnlyFans cobra la comisión de la plataforma. La agencia, su porcentaje. Los impuestos dependen de tu país. Calcula lo que te queda «en mano», no la cifra bruta del landing.",
+      },
+      {
+        type: "h2",
+        text: "Cómo se calcula realmente el pago",
+      },
+      {
+        type: "p",
+        text: "Tomemos una página que facturó $10.000 brutos en un mes. La plataforma retiene el 20%, quedan $8.000. Después viene la comisión de la agencia (normalmente un porcentaje del bruto, no de lo que te queda) y los impuestos de tu país. Por eso la cifra de la captura y el dinero en tu cuenta son números distintos, y la diferencia crece cuanto más alta es tu tasa impositiva.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Bruto: todo lo que pasó por el balance de la página",
+          "Menos el 20% de la plataforma: fijo para todas",
+          "Menos el % de la agencia: déjalo claro antes de firmar",
+          "Menos impuestos: dependen de tu país y de tu condición de autónoma",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cómo crece el ingreso mes a mes",
+      },
+      {
+        type: "p",
+        text: "El crecimiento casi nunca es lineal. Los meses 1–2 son pruebas del embudo y los primeros suscriptores, a menudo $500–2.000. Los meses 3–4 construyen una base de contenido y ventas repetidas en los chats. En los meses 5–8, si el tráfico se mantiene, te asientas en una meseta más alta; de ahí en adelante crece el gasto medio por suscriptor, no el alcance.",
+      },
+      {
+        type: "h2",
+        text: "Qué separa a una modelo de $3.000 de una de $30.000",
+      },
+      {
+        type: "ul",
+        items: [
+          "Chats: los $30k se hacen en ventas individuales y upsells, no solo con la suscripción",
+          "Tráfico: un solo canal te pone techo; crecer es tener 2–3 fuentes a la vez",
+          "Nicho y precio: un nicho estrecho te deja subir precios sin perder conversión",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Matices regionales y un FAQ breve",
+      },
+      {
+        type: "p",
+        text: "Tu audiencia y su poder adquisitivo siguen el geo de tu tráfico, no el país donde vives. El resultado fiscal es lo contrario: depende de tu jurisdicción, ya sea por alta de autónoma o por declaración de ingresos. Confirma los detalles con un contador local.",
+      },
+      {
+        type: "ul",
+        items: [
+          "¿Cuánto en el primer mes, de verdad? Suele ser $500–2.000, a veces menos — es un arranque normal",
+          "¿Se puede sin chats? Se puede, pero el techo baja mucho",
+          "¿La agencia garantiza una cifra? No — acelera el sistema, no promete un número",
+        ],
+      },
+      {
+        type: "tip",
+        text: "El ingreso no está garantizado: las cifras de arriba son rangos para un trabajo sistemático, no una promesa. Planifica con lo que te queda en mano tras comisiones e impuestos.",
       },
       {
         type: "nav",
@@ -1174,6 +1467,67 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         text: "El post del feed es el teaser de la historia; en el DM va «la continuación, solo aquí por $X». Las series retienen mucho mejor que las fotos sueltas.",
       },
       {
+        type: "h2",
+        text: "Pilares de contenido: sobre qué grabas en realidad",
+      },
+      {
+        type: "p",
+        text: "Las ideas sueltas de contenido para OnlyFans se agotan rápido. Fija 4–5 pilares (categorías fijas) y cada sesión simplemente los va cubriendo por turnos, sin quedarte en blanco pensando qué publicar hoy.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Lifestyle: mañanas, gimnasio, café — la cara de la marca y la confianza",
+          "Sets teaser: erótica suave apta para el feed que lleva al DM",
+          "Exclusivos PPV: material que se vende aparte y nunca va al feed",
+          "Interactivo: encuestas, «elige el look», respuestas a preguntas",
+          "Behind the scenes: la grabación, el probador, la realidad",
+        ],
+      },
+      {
+        type: "h2",
+        text: "El equipo mínimo que de verdad funciona",
+      },
+      {
+        type: "p",
+        text: "No necesitas una cámara de $2000 para empezar. Un teléfono actual, una sola fuente de luz suave y un fondo limpio cubren cerca del 90% del trabajo. Invierte en luz y en variar localizaciones, no en el cuerpo de cámara.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Un teléfono con modo retrato y exposición manual",
+          "Un softbox o aro de luz de $30–60: el mayor salto de calidad",
+          "Trípode y mando para grabar sin nadie detrás",
+          "2–3 fondos en rotación: pared lisa, cama, baño",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Convertir una sesión en decenas de posts",
+      },
+      {
+        type: "p",
+        text: "Reutilizar el material es economía, no pereza. Un solo set da una foto para el feed, un vídeo vertical teaser para redes, un GIF para los DM y un fotograma para tu post fijado. Graba en horizontal y vertical en la misma sesión.",
+      },
+      {
+        type: "h3",
+        text: "Una semana de ejemplo",
+      },
+      {
+        type: "ul",
+        items: [
+          "Lun: sesión en bloque de 3–4 sets (2–3 horas), clasificación rápida",
+          "Mar: edición, selección de PPV, cortes verticales para Reddit/X",
+          "Mié–Jue: 2 posts en el feed + teasers en redes",
+          "Vie: lanzas una serie PPV en DM sobre tu base caliente",
+          "Sáb–Dom: lifestyle ligero con el móvil, interacción, descanso",
+        ],
+      },
+      {
+        type: "tip",
+        text: "La calidad gana al volumen: 8 piezas fuertes con una historia clara convierten mejor que 20 de relleno. Antes de publicar pregúntate — ¿esto teasea una continuación en el DM o solo llena el feed…",
+      },
+      {
         type: "tip",
         text: "Guarda los originales en local y en la nube: nunca le des a la agencia la única copia que tienes.",
       },
@@ -1252,6 +1606,65 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "Semana 1: perfil + mensaje de bienvenida. Semana 2: un solo canal de tráfico. Semana 3: velocidad en los DM o chatter. Semana 4: testear el precio del PPV. O envía tu solicitud a OFM y recorre el camino con una manager al lado.",
+      },
+      { type: "h2", text: "7 errores de novata en OnlyFans con su corrección exacta" },
+      {
+        type: "p",
+        text: "La lista de arriba son los síntomas. Abajo está el tratamiento: qué cambiar para que la cuenta avance de verdad. Esta es la respuesta real a cómo empezar en OnlyFans bien, y no «como todas».",
+      },
+      { type: "h3", text: "Precio demasiado bajo" },
+      {
+        type: "p",
+        text: "Una suscripción de $3 «para que entren» abarata la página y atrae a cazadores de gratis. Corrección: pon $7–10, construye el ingreso sobre PPV y chats, y ofrece descuentos solo por el embudo de bienvenida o para recuperar a quienes se fueron.",
+      },
+      { type: "h3", text: "Sin plan de tráfico" },
+      {
+        type: "p",
+        text: "Sin un flujo externo de suscriptores, OnlyFans no te encuentra solo. Corrección: elige un canal (Reddit o X), publica con calendario durante 30 días, mide los clics y escala solo lo que de verdad trae gente que paga.",
+      },
+      { type: "h3", text: "Ignorar los DM" },
+      {
+        type: "p",
+        text: "El dinero de OnlyFans vive en los mensajes, no en el feed. Corrección: responde en 10–15 minutos en horario fuerte, inicia tú la conversación y lleva hacia el PPV — o suma un chatter si no puedes cubrir 24/7.",
+      },
+      { type: "h3", text: "Publicación inconstante" },
+      {
+        type: "p",
+        text: "Diez posts en un día y luego desaparecer una semana: el algoritmo y tus fans se enfrían. Corrección: 1–2 posts al día desde un plan de contenido a dos semanas vista, grabados en una o dos sesiones.",
+      },
+      { type: "h3", text: "Sin nicho" },
+      {
+        type: "p",
+        text: "El «contenido para todos» no engancha a nadie. Corrección: elige un personaje o tema concreto, fácil de promocionar, y mantenlo en el perfil, los posts y los chats.",
+      },
+      { type: "h3", text: "Burnout" },
+      {
+        type: "p",
+        text: "Un ritmo caótico y sin días libres mata la motivación en un mes. Corrección: graba por lotes, toma un día libre a la semana y delega chats y edición.",
+      },
+      { type: "h3", text: "Exponer tu identidad" },
+      {
+        type: "p",
+        text: "Tu nombre real, tu ubicación y tus redes personales en cámara son la vía rápida al doxxing. Corrección: una cuenta de trabajo aparte, bloqueo geográfico de tu país y nada reconocible en el fondo.",
+      },
+      { type: "h2", text: "Tus primeros 30 días en OnlyFans: checklist" },
+      {
+        type: "p",
+        text: "OnlyFans para principiantes no va de «grabarlo perfecto», sino de tener un sistema desde el primer día. Un plan mínimo para el mes:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Días 1–3: nicho, nombre de trabajo, bloqueo geográfico, perfil básico y banner",
+          "Días 4–7: mensaje de bienvenida y un primer lote de 10–15 posts",
+          "Días 8–14: lanzar un canal de tráfico y medir los clics",
+          "Días 15–21: DM diarios, tus primeros PPV y detectar a tus «ballenas»",
+          "Días 22–30: revisar los números, testear precios y soltar lo que no funcionó",
+        ],
+      },
+      {
+        type: "tip",
+        text: "No persigas todos los puntos a la vez: un paso terminado por semana vale más que cinco a medio hacer.",
       },
       {
         type: "nav",
@@ -1339,6 +1752,56 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: 'Pon límites con los fans, usa listas de bloqueo y no confundas una relación "de verdad" con una venta. El burnout es un riesgo de seguridad tan serio como un hackeo.',
+      },
+      {
+        type: "h2",
+        text: "Geo-bloqueo: cierra tu país y tu región",
+      },
+      {
+        type: "p",
+        text: "El geo-bloqueo es la herramienta de anonimato más útil si lo que de verdad te preocupa es que te reconozcan en tu entorno. En el perfil, dentro de Privacy & safety, tienes Geographic blocking: añades tu país, los vecinos y cualquiera que elijas — desde esas regiones no podrán abrir tu página ni encontrarla en búsquedas. Funciona por IP, así que un fan de un país bloqueado todavía puede colarse con una VPN. El geo-bloqueo reduce el riesgo, no lo elimina del todo.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Bloquea no solo tu país, sino también los destinos de tu diáspora donde tienes conocidos",
+          "Las regiones bloqueadas no ven la página ni con el enlace directo",
+          "Lleva el tráfico de pago desde EE. UU., Canadá, Reino Unido y Australia, donde está el dinero",
+          "El geo-bloqueo no sustituye a las marcas de agua: una captura se hace desde cualquier lugar",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Separa tu identidad: nombre, correo y pagos",
+      },
+      {
+        type: "p",
+        text: "El doxxing no suele venir de un hackeo, sino del cruce de datos. Mantén tu identidad de trabajo totalmente separada de la personal: un nombre artístico en lugar del real en lo público, un correo de trabajo sin apellidos, un número aparte para el 2FA y una tarjeta o cuenta distinta para los cobros. Comprueba que tu nombre real no aparezca en los pagos ni en los metadatos de los archivos — el EXIF de una foto puede llevar tu ubicación GPS y el modelo de tu móvil.",
+      },
+      {
+        type: "tip",
+        text: "Limpia los metadatos (EXIF) antes de subir y revisa el fondo de cada toma — reflejos, documentos y vistas reconocibles desde la ventana delatan tu ubicación mejor que tu propia cara.",
+      },
+      {
+        type: "h2",
+        text: "Marcas de agua y DMCA: qué hacer ante una filtración",
+      },
+      {
+        type: "p",
+        text: "Una marca de agua con tu nombre de usuario en las vistas previas y en parte del PPV no impide que te copien, pero te ayuda a demostrar la autoría y a retirar copias piratas más rápido por DMCA. Si tu contenido se filtra, guarda el enlace, envía un aviso DMCA al hosting y a Google y, si la difusión es amplia, contrata un servicio de monitoreo automático. Cuanto antes reacciones, menos se difunde.",
+      },
+      {
+        type: "h2",
+        text: "De qué se encarga una buena agencia",
+      },
+      {
+        type: "ul",
+        items: [
+          "Configurar el geo-bloqueo y la privacidad según tu caso concreto",
+          "Un perímetro de datos aparte: accesos mínimos, NDA y metadatos limpios",
+          "Vigilar las filtraciones y presentar los avisos DMCA por ti",
+          "Tráfico de países con poder de compra, no de tu propia región",
+        ],
       },
       {
         type: "nav",
