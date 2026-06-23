@@ -49,6 +49,10 @@ export const LINK = {
   content: { href: '/blog/onlyfans-kontent-plan-i-syomki', label: 'Контент-план и съёмки' },
   mistakes: { href: '/blog/onlyfans-oshibki-novichkov', label: '15 ошибок новичков' },
   safety: { href: '/blog/onlyfans-anonimnost-i-bezopasnost', label: 'Анонимность и безопасность' },
+  safetyResearch: {
+    href: '/research/onlyfans-creator-safety-2026',
+    label: 'Исследование: безопасность креаторов',
+  },
   noface: { href: '/blog/onlyfans-rabota-bez-lica', label: 'Лицо и анонимность' },
   legal: {
     href: '/blog/onlyfans-rabota-legalno-i-bezopasno',

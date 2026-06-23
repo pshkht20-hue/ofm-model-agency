@@ -49,6 +49,11 @@ export function ReportJsonLd({ report, locale }: { report: ResearchReport; local
             encodingFormat: 'text/csv',
             contentUrl: csvUrl,
           },
+          {
+            '@type': 'DataDownload',
+            encodingFormat: 'application/json',
+            contentUrl: csvUrl.replace('.csv', '.json'),
+          },
         ],
       },
       {

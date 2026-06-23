@@ -96,6 +96,12 @@ export function HomeSeoBlock() {
           <Link href="/faq" className="btn-secondary !py-2.5 !px-5">
             {t('linkFaq')}
           </Link>
+          {/* /research is ru-only for now — only link it on ru to avoid a 404. */}
+          {locale === 'ru' && (
+            <Link href="/research" className="btn-secondary !py-2.5 !px-5">
+              Исследования
+            </Link>
+          )}
         </div>
       </div>
     </section>

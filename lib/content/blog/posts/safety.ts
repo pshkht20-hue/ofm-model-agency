@@ -105,6 +105,7 @@ export const safetyPosts: BlogPost[] = [
         ],
       },
       blogNav('Безопасность, легальность и выбор команды:', [
+        LINK.safetyResearch,
         LINK.legal,
         LINK.pillar,
         LINK.scam,

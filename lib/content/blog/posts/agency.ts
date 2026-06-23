@@ -290,6 +290,10 @@ export const agencyPosts: BlogPost[] = [
         type: 'nav',
         intro: 'На сайте OFM — связанные материалы:',
         links: [
+          {
+            href: '/research/onlyfans-creator-safety-2026',
+            label: 'Исследование: red flags агентств',
+          },
           { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Как выбрать агентство' },
           { href: '/faq', label: 'FAQ: процент и договор' },
           { href: '/blog/onlyfans-agentstvo-ukraina', label: 'Агентство для Украины' },

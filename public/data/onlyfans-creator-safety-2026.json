@@ -1,0 +1,32 @@
+{
+  "report": "Creator Safety Survey 2026",
+  "publisher": "OFM Model Agency",
+  "url": "https://ofmmodels.com/research/onlyfans-creator-safety-2026",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "note": "DEMO/SAMPLE DATA — placeholder figures pending real survey results.",
+  "unit": "percent",
+  "n": "[N]",
+  "charts": {
+    "agency_red_flags": [
+      { "label": "Asked for money/commission upfront", "percent": 41 },
+      { "label": "Demanded passwords / full account access", "percent": 38 },
+      { "label": "Refused a written contract", "percent": 33 },
+      { "label": "Promised guaranteed earnings", "percent": 29 },
+      { "label": "Wanted control of payouts/bank account", "percent": 24 },
+      { "label": "Wouldn't let me leave / took 50%+ cut", "percent": 19 }
+    ],
+    "experienced": [
+      { "label": "Paid content leaked/reposted", "percent": 58 },
+      { "label": "Sextortion", "percent": 21 },
+      { "label": "Deepfake of their face", "percent": 14 },
+      { "label": "Doxxing", "percent": 17 }
+    ],
+    "protections": [
+      { "label": "Blur/hide face", "percent": 46 },
+      { "label": "Geo-block country/region", "percent": 39 },
+      { "label": "Watermark content", "percent": 34 },
+      { "label": "Separate work accounts/phone", "percent": 31 },
+      { "label": "DMCA/takedown service", "percent": 22 }
+    ]
+  }
+}

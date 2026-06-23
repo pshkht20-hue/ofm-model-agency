@@ -101,14 +101,22 @@ export default async function ResearchReportPage({ params }: Props) {
         <BarChart key={chart.id} chart={chart} />
       ))}
 
-      <a
-        href={report.csv}
-        download
-        className="inline-flex items-center gap-2 mt-2 mb-12 rounded-xl border border-white/[0.12] bg-white/[0.03] px-4 py-2.5 text-sm text-white/80 hover:border-white/[0.22] hover:text-white transition-colors"
-      >
-        <Download className="w-4 h-4" />
-        Скачать данные (CSV)
-      </a>
+      <div className="flex flex-wrap gap-3 mt-2 mb-12">
+        {[
+          { href: report.csv, label: 'Скачать данные (CSV)' },
+          { href: report.csv.replace('.csv', '.json'), label: 'JSON' },
+        ].map((d) => (
+          <a
+            key={d.href}
+            href={d.href}
+            download
+            className="inline-flex items-center gap-2 rounded-xl border border-white/[0.12] bg-white/[0.03] px-4 py-2.5 text-sm text-white/80 hover:border-white/[0.22] hover:text-white transition-colors"
+          >
+            <Download className="w-4 h-4" />
+            {d.label}
+          </a>
+        ))}
+      </div>
 
       <h2 id="red-flags" className="heading-section text-xl md:text-2xl mb-4">
         Red flags недобросовестного агентства
