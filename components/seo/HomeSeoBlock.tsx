@@ -75,6 +75,24 @@ export function HomeSeoBlock() {
           <Link href="/blog/kak-vybrat-onlyfans-agentstvo" className="btn-secondary !py-2.5 !px-5">
             {t('linkAgency')}
           </Link>
+          <Link
+            href="/blog/onlyfans-marketing-strategiya-2026"
+            className="btn-secondary !py-2.5 !px-5"
+          >
+            {t('linkMarketing')}
+          </Link>
+          <Link
+            href="/blog/onlyfans-skolko-zarabatyvayut-modeli"
+            className="btn-secondary !py-2.5 !px-5"
+          >
+            {t('linkEarnings')}
+          </Link>
+          <Link
+            href="/blog/onlyfans-anonimnost-i-bezopasnost"
+            className="btn-secondary !py-2.5 !px-5"
+          >
+            {t('linkSafety')}
+          </Link>
           <Link href="/faq" className="btn-secondary !py-2.5 !px-5">
             {t('linkFaq')}
           </Link>

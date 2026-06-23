@@ -114,12 +114,19 @@ export function getRelatedPosts(
 ): BlogPost[] {
   const current = getBlogPost(slug, locale);
   if (!current) return [];
-  return getBlogPosts(locale)
-    .filter((p) => p.slug !== slug && p.category === current.category)
+  const pool = getBlogPosts(locale)
+    .filter((p) => p.slug !== slug)
     .sort(
       (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-    )
-    .slice(0, limit);
+    );
+  // Same-category first (most relevant), then backfill from other categories so
+  // every post ALWAYS surfaces a full set of related links. The old same-category
+  // filter left small clusters (money/safety, 3 posts) with only 1-2 related
+  // links and created category "islands" — exactly the under-linked topology that
+  // keeps long-tail posts stuck in GSC "Discovered – currently not indexed".
+  const sameCategory = pool.filter((p) => p.category === current.category);
+  const otherCategory = pool.filter((p) => p.category !== current.category);
+  return [...sameCategory, ...otherCategory].slice(0, limit);
 }
 
 export const BLOG_CATEGORIES_ORDER: BlogCategory[] = [

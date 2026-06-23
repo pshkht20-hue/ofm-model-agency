@@ -34,7 +34,10 @@
     "cookieSettings": "Настройки cookies",
     "guideAgency": "Как выбрать агентство",
     "vacancy": "Стать моделью",
-    "diaspora": "Работа за границей"
+    "diaspora": "Работа за границей",
+    "clusterMarketing": "Маркетинг и продвижение",
+    "clusterEarnings": "Сколько зарабатывают модели",
+    "clusterSafety": "Анонимность и безопасность"
   },
   "home": {
     "skipToContent": "Перейти к содержимому",
@@ -405,7 +408,10 @@
     "linkUkraine": "Агентство в Украине",
     "linkMoldova": "Агентство в Молдове",
     "linkLatAm": "LatAm и Brasil",
-    "linkFaq": "Все вопросы FAQ"
+    "linkFaq": "Все вопросы FAQ",
+    "linkMarketing": "Маркетинг и продвижение",
+    "linkEarnings": "Сколько зарабатывают модели",
+    "linkSafety": "Анонимность и безопасность"
   },
   "creator": {
     "badge": "Агентство для creator-платформ",

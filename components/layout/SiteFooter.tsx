@@ -44,6 +44,22 @@ export function SiteFooter() {
       href: '/blog/kak-vybrat-onlyfans-agentstvo' as const,
       label: t('guideAgency'),
     },
+    // Sitewide equity to the previously link-starved clusters (marketing / money
+    // / safety) — these pillars had zero homepage/footer inbound links, which is
+    // a driver of GSC "Discovered – currently not indexed". All three exist in
+    // every locale, so no locale gating is needed.
+    {
+      href: '/blog/onlyfans-marketing-strategiya-2026' as const,
+      label: t('clusterMarketing'),
+    },
+    {
+      href: '/blog/onlyfans-skolko-zarabatyvayut-modeli' as const,
+      label: t('clusterEarnings'),
+    },
+    {
+      href: '/blog/onlyfans-anonimnost-i-bezopasnost' as const,
+      label: t('clusterSafety'),
+    },
   ];
 
   return (

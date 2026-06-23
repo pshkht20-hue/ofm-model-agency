@@ -34,7 +34,10 @@
     "cookieSettings": "Configuración de cookies",
     "guideAgency": "Cómo elegir agencia",
     "vacancy": "Ser modelo",
-    "diaspora": "Trabajo en el extranjero"
+    "diaspora": "Trabajo en el extranjero",
+    "clusterMarketing": "Marketing y promoción",
+    "clusterEarnings": "Cuánto ganan las modelos",
+    "clusterSafety": "Anonimato y seguridad"
   },
   "home": {
     "skipToContent": "Ir al contenido",
@@ -405,7 +408,10 @@
     "linkUkraine": "Agencia en Ucrania",
     "linkMoldova": "Agencia en Moldova",
     "linkLatAm": "Latinoamérica y Brasil",
-    "linkFaq": "Todas las preguntas FAQ"
+    "linkFaq": "Todas las preguntas FAQ",
+    "linkMarketing": "Marketing y promoción",
+    "linkEarnings": "Cuánto ganan las modelos",
+    "linkSafety": "Anonimato y seguridad"
   },
   "creator": {
     "badge": "Agencia para plataformas creator",
