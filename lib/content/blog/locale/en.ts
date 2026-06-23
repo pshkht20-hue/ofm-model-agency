@@ -2052,6 +2052,41 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "OFM works with creators in Moldova, Ukraine, Europe, and Latin America—fully remote. Apply at ofmmodels.com; Telegram reply within 24 h, no entry fee.",
       },
+      { type: "h2", text: "What full-service OnlyFans management includes" },
+      {
+        type: "ul",
+        items: [
+          "Marketing across Reddit, X, TikTok and Instagram, with proper testing and UTM tracking",
+          "24/7 chats written in your own voice — PPV, customs and rebill renewals",
+          "A month-long content plan instead of chaotic, last-minute shoots",
+          "Weekly analytics: net and gross, lifetime value and churn",
+          "An NDA, role-based OnlyFans access and a clear plan for leaks",
+        ],
+      },
+      { type: "h2", text: "Commission and contract: benchmarks for Moldova" },
+      {
+        type: "p",
+        text: "For genuine full-service management, commission usually lands somewhere around 25–40% of gross. Anything under 20% often means a stripped-down service, while a cut above 45% should be justified by real production and PR work. Any upfront fee is a red flag. Before you sign, make sure the contract spells out account ownership, the notice period to leave, reporting cadence and confidentiality — and read it the same way you would any other remote-work agreement.",
+      },
+      { type: "h2", text: "How working with OFM looks" },
+      {
+        type: "p",
+        text: "OFM works with creators from Moldova, Ukraine, Europe and Latin America, fully remotely. There is no „entry fee“ to start. After you apply on ofmmodels.com, a manager replies on Telegram within 24 hours, and the site shows real case studies with stats screenshots shared with the creators’ consent — your earnings still depend on your niche, content volume and engagement, never a fixed promise.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Apply with your name, Telegram, 18+ confirmation and a short note on your style",
+          "An honest assessment within 24 hours on whether the format fits you",
+          "A 30–60 minute call covering terms, boundaries, chats and marketing",
+          "Launch in 7–14 days: profile, first content and the first traffic",
+          "Weekly reports and ongoing strategy adjustments",
+        ],
+      },
+      {
+        type: "tip",
+        text: "For a full selection checklist see „How to choose an OnlyFans agency“, and for the warning signs read „Agency scams: 10 red flags“ — comparing at least two teams side by side is the simplest way to avoid a bad fit.",
+      },
       {
         type: "nav",
         intro: "Read next for MD-based creators:",

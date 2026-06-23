@@ -501,6 +501,57 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         ],
       },
       {
+        type: "h2",
+        text: "Qué debe incluir una agencia full-service",
+      },
+      {
+        type: "p",
+        text: "Un equipo sólido en 2026 cubre cinco frentes: marketing (Reddit, X, TikTok, Instagram), chats 24/7, estrategia de contenido, analítica semanal y protección de la cuenta. Una agencia «solo de SMM», sin ventas en los DM, rara vez lleva el neto por encima de los 5.000–8.000 $ al mes—y ninguna cifra está garantizada.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Marketing con UTM y tests: se ve de dónde llega cada fan que paga",
+          "Chats en tu tono: PPV, customs, renovaciones y ticket medio",
+          "Plan de contenido con un mes de margen, sin quemarte en rodajes caóticos",
+          "Informes de neto/bruto, LTV y churn: decisiones por datos, no «a ojo»",
+          "NDA, roles de acceso de OnlyFans y reacción ante filtraciones",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Comisión y contrato: referencias del mercado",
+      },
+      {
+        type: "p",
+        text: "Para un management full-service, el rango habitual del sector ronda el 25–40% del bruto. Por debajo del 20% suele significar un servicio recortado; por encima del 45% debería compensarse con producción y PR. Cualquier pago por adelantado es una señal de alerta. En el contrato no pueden faltar: titularidad de la cuenta, plazo de rescisión, informes y confidencialidad.",
+      },
+      {
+        type: "h2",
+        text: "Kyiv, Odesa y otras ciudades: ¿hace falta «estudio»?",
+      },
+      {
+        type: "p",
+        text: "Para el management de OnlyFans no necesitas un estudio físico—bastan buena conexión, luz para grabar y privacidad. Muchas creadoras de Kyiv u Odesa graban desde casa con un plan de contenido y referencias del equipo. Si ya estás en la UE, el huso horario se tiene en cuenta para cubrir el prime time de EE. UU. y Reino Unido.",
+      },
+      {
+        type: "h2",
+        text: "Si ya estás fuera: diáspora en España y la UE",
+      },
+      {
+        type: "p",
+        text: "¿Te fuiste de Ucrania a España, Polonia, Alemania o Chequia? El formato remoto encaja perfecto: puedes trabajar como modelo de OnlyFans desde cualquier país, sin atarte a una ciudad, y no necesitas hablar el idioma local—la conversación con los suscriptores la lleva nuestro equipo de chat en inglés. La audiencia que paga está en EE. UU., Canadá y Australia, no en tu barrio.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Anonimato para la diáspora: bloqueamos en la plataforma tu país de residencia y la región de origen, así la comunidad ucraniana en España o la UE no te encuentra",
+          "Tu cara sigue siendo tu marca personal; un equipo de tráfico vigila que tus datos no se filtren",
+          "Impuestos y legalidad dependen del país donde seas residente fiscal—te orientamos para consultarlo con un abogado",
+          "Apto para recién llegadas: ingreso online sin atarte a un lugar y arranque sin experiencia previa",
+        ],
+      },
+      {
         type: "p",
         text: "OFM trabaja con creadoras en Ucrania y Europa de forma remota. Solicitud en ofmmodels.com—respuesta en Telegram en 24 h, sin cuota de entrada. Casos reales publicados en el sitio.",
       },
@@ -1946,6 +1997,49 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "OFM trabaja con creadoras en Moldova, Ucrania, Europa y Latinoamérica—100% remoto. Solicitud en ofmmodels.com, respuesta en Telegram en 24 h, sin cuota de entrada.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Chișinău, Bălți, Cahul o cualquier ciudad: el trabajo es 100% remoto, no hace falta estudio",
+          "Creadoras de la diáspora en Rumanía, Italia o Alemania suelen llevar la cuenta para público en ruso, inglés o rumano",
+          "Lo que de verdad importa: anonimato, pagos puntuales y un porcentaje claro, no la promesa de un ingreso fijo",
+        ],
+      },
+      { type: "h2", text: "Qué incluye una agencia OnlyFans full-service" },
+      {
+        type: "ul",
+        items: [
+          "Marketing en Reddit, X, TikTok e Instagram, con pruebas A/B y seguimiento por UTM",
+          "Chats 24/7 con tu tono de voz: PPV, contenidos personalizados y renovaciones",
+          "Plan de contenido mensual, sin sesiones improvisadas ni semanas en blanco",
+          "Analítica semanal: neto y bruto, valor de vida del fan (LTV) y abandono (churn)",
+          "NDA, roles de acceso de OnlyFans y un protocolo claro ante filtraciones",
+        ],
+      },
+      {
+        type: "tip",
+        text: "Antes de firmar, compara al menos dos agencias con la lista de control del artículo «Cómo elegir agencia OnlyFans» y repasa las señales de fraude en «Estafas: señales de fraude».",
+      },
+      { type: "h2", text: "Comisión y contrato: referencias para el mercado moldavo" },
+      {
+        type: "p",
+        text: "Para un management full-service el rango habitual va de un 25 a un 40% del bruto. Por debajo del 20% suele significar un servicio recortado; por encima del 45% debería compensarse con producción y relaciones públicas reales. Cualquier pago por adelantado es una señal de alerta. El contrato debe dejar por escrito quién es la propietaria de la cuenta, el plazo de salida, la frecuencia de los informes y la confidencialidad. Las cifras no son un sueldo garantizado: dependen de tu nicho, tu constancia y el trabajo conjunto.",
+      },
+      { type: "h2", text: "Cómo es la colaboración con OFM" },
+      {
+        type: "p",
+        text: "Trabajamos en remoto con creadoras de Moldova, Ucrania, Europa y Latinoamérica. Tras tu solicitud en ofmmodels.com, un manager te escribe por Telegram en menos de 24 horas, sin cuota de entrada. En la web hay casos reales con capturas de estadísticas, publicados siempre con el consentimiento de la creadora.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Solicitud: nombre, Telegram, confirmación de +18 y una breve descripción de tu perfil",
+          "Valoración en menos de 24 horas, con una respuesta honesta sobre si el formato encaja",
+          "Videollamada de 30 a 60 minutos: condiciones, límites personales, chats y marketing",
+          "Lanzamiento en 7 a 14 días: perfil, primer contenido y primeras campañas de tráfico",
+          "Informes semanales y ajuste continuo de la estrategia",
+        ],
       },
       {
         type: "nav",
