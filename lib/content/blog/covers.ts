@@ -20,6 +20,62 @@ function coverUrl(photoId: string): string {
 }
 
 export const BLOG_COVERS: Record<string, BlogCover> = {
+  'rabota-modelyu-onlyfans': {
+    localSrc: '/blog/covers/rabota-modelyu-onlyfans.jpg',
+    remoteSrc: coverUrl('1515378791036-0648a3ef77b2'),
+    alt: 'Уверенная молодая женщина работает с ноутбуком в светлом современном пространстве — удалённая работа моделью OnlyFans',
+    photographer: 'Christin Hume',
+    photographerUrl: 'https://unsplash.com/@christinhumephoto',
+    unsplashUrl: 'https://unsplash.com/photos/person-using-laptop-computer-Hcfwew744z4',
+  },
+  'kak-stat-onlyfans-modelyu-s-nulya': {
+    localSrc: '/blog/covers/kak-stat-onlyfans-modelyu-s-nulya.jpg',
+    remoteSrc: coverUrl('1738566495642-5911b1ed08b6'),
+    alt: 'Молодая женщина пишет в блокноте за столом — начало пути модели OnlyFans с нуля',
+    photographer: 'Vitaly Gariev',
+    photographerUrl: 'https://unsplash.com/@silverkblack',
+    unsplashUrl: 'https://unsplash.com/photos/a-woman-sitting-at-a-desk-writing-on-a-notebook-0utix0NILr4',
+  },
+  'onlyfans-rabota-polsha': {
+    localSrc: '/blog/covers/onlyfans-rabota-polsha.jpg',
+    remoteSrc: coverUrl('1607078486875-a697a8a38e87'),
+    alt: 'Панорама Варшавы днём — работа моделью OnlyFans в Польше',
+    photographer: "Iwona Castiello d'Antonio",
+    photographerUrl: 'https://unsplash.com/@aquadrata',
+    unsplashUrl: 'https://unsplash.com/photos/KWcQ6_dk_OM',
+  },
+  'onlyfans-rabota-germaniya': {
+    localSrc: '/blog/covers/onlyfans-rabota-germaniya.jpg',
+    remoteSrc: coverUrl('1618754087664-96688bcf29a3'),
+    alt: 'Силуэт Берлина на закате — работа моделью OnlyFans в Германии',
+    photographer: 'Leon Seibert',
+    photographerUrl: 'https://unsplash.com/@yapics',
+    unsplashUrl: 'https://unsplash.com/photos/SOi6EEE_RAw',
+  },
+  'onlyfans-rabota-chehiya': {
+    localSrc: '/blog/covers/onlyfans-rabota-chehiya.jpg',
+    remoteSrc: coverUrl('1763305102178-4448e7a5a7a0'),
+    alt: 'Карлов мост над Влтавой и Старый город Праги на рассвете — работа моделью OnlyFans в Чехии',
+    photographer: 'Mushvig Niftaliyev',
+    photographerUrl: 'https://unsplash.com/@mushvig95',
+    unsplashUrl: 'https://unsplash.com/photos/charles-bridge-spans-vltava-river-in-prague-at-dawn-3Ovurn490hw',
+  },
+  'onlyfans-rabota-legalno-i-bezopasno': {
+    localSrc: '/blog/covers/onlyfans-rabota-legalno-i-bezopasno.jpg',
+    remoteSrc: coverUrl('1758874384232-cfa79a5babf1'),
+    alt: 'Спокойная девушка работает за ноутбуком — легальная и безопасная удалённая работа моделью OnlyFans',
+    photographer: 'Vitaly Gariev',
+    photographerUrl: 'https://unsplash.com/@silverkblack',
+    unsplashUrl: 'https://unsplash.com/photos/a-smiling-woman-works-on-a-laptop-at-a-desk-s3hlZ-gdfdQ',
+  },
+  'robota-dlya-ukrainok-za-kordonom': {
+    localSrc: '/blog/covers/robota-dlya-ukrainok-za-kordonom.jpg',
+    remoteSrc: coverUrl('1494508201555-625bb4e88b96'),
+    alt: 'Девушка смотрит в окно аэропорта на самолёт — работа за границей для украинок',
+    photographer: 'Kelly Sikkema',
+    photographerUrl: 'https://unsplash.com/@kellysikkema',
+    unsplashUrl: 'https://unsplash.com/photos/a-person-looking-out-a-window-at-an-airport-bn8XJJ115Fo',
+  },
   'kak-vybrat-onlyfans-agentstvo': {
     localSrc: '/blog/covers/kak-vybrat-onlyfans-agentstvo.jpg',
     remoteSrc: coverUrl('1521737711867-e3b97375f902'),

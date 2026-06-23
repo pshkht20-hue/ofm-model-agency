@@ -31,6 +31,13 @@ const COVERS = {
   'onlyfans-oshibki-novichkov': '1454165804606-c3d57bc86b40',
   'onlyfans-anonimnost-i-bezopasnost': '1633265486064-086b219458ec',
   'onlyfans-rabota-bez-lica': '1507003211169-0a1dd7228f2d',
+  'rabota-modelyu-onlyfans': '1515378791036-0648a3ef77b2',
+  'kak-stat-onlyfans-modelyu-s-nulya': '1738566495642-5911b1ed08b6',
+  'onlyfans-rabota-polsha': '1607078486875-a697a8a38e87',
+  'onlyfans-rabota-germaniya': '1618754087664-96688bcf29a3',
+  'onlyfans-rabota-chehiya': '1763305102178-4448e7a5a7a0',
+  'onlyfans-rabota-legalno-i-bezopasno': '1758874384232-cfa79a5babf1',
+  'robota-dlya-ukrainok-za-kordonom': '1494508201555-625bb4e88b96',
 };
 
 function coverUrl(photoId) {
