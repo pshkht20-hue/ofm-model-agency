@@ -1,0 +1,29 @@
+Priority,Outlet,Type,Beat,Language,Template,Contact route (public),Personalization hook,Date sent,Follow-up due,Follow-up sent,Status,Link earned,Notes
+P1,dev.ua,UA tech/society,Digital rights / Article 301,UA,2,TG @stasdevua / tip bot @devuafeedbackbot,"Build on their Article 301 / decriminalization coverage; you are the intl data spine",,,,Not sent,,WARM — best ROI
+P1,NV (New Voice) Business,UA business,Legal precarity / tax,UA (EN appendix),2,news@nv.ua,"Ran 'courts void 1/3 of OnlyFans tax fines'",,,,Not sent,,WARM
+P1,Kyiv Independent (Business),UA-origin English,Economy / creators,EN,2,news@kyivindependent.com / press@kyivindependent.com,"Ran 'Ukrainians declared $7M+'",,,,Not sent,,WARM — Western secondary links
+P1,404 Media,Tech / online-safety,IBSA / sex-work tech,EN,1,tips@404media.co,"Already reports 'sex workers left out of NCII law'",,,,Not sent,,Founders = decision-makers
+P1,TechCrunch (Amanda Silberling),Tech / creator-economy,Sex-tech / creators,EN,1,Find reporter email via Muck Rack,"Covers sex-work tech without stigma",,,,Not sent,,Verify email first
+P1,#MyImageMyChoice,IBSA campaign,Survivor-centered data,EN,1,Contact form myimagemychoice.org,"Data org journalists source from",,,,Not sent,,Amplifier + network
+P1,Cyber Civil Rights Initiative (CCRI),Digital-rights research,NCII / IBSA,EN,1,Contact form cybercivilrights.org,"Led TAKE IT DOWN Act; includes sex workers",,,,Not sent,,Lead with methodology
+P1,CHI 2025 authors (Henry/Umbach/Beard),Academic,IBSA research,EN,3,Academic email / X,"Your n=16,693 source; frame as responsible aggregation",,,,Not sent,,Near-zero conflict
+P2,SWGfL / Revenge Porn Helpline,UK safety charity,NCII takedown,EN,1,Press via swgfl.org.uk,"RPH is the verbatim source of your gap thesis",,,,Not sent,,Never say 'agency'
+P2,BIRN / Balkan Insight,CEE digital-rights,Digital Rights Review,EN,2,balkaninsight.com/contact-us,"Monthly Digital Rights Review across CEE",,,,Not sent,,Best durable CEE link
+P2,Ukrainska Pravda (UP.Life / EP),UA flagship,Women safety / economy,UA,2,life@pravda.com.ua / ep@pravda.com.ua,"UP.Life = women safety; EP = tax/economic rights",,,,Not sent,,Strongest domestic link
+P2,WIRED (Security/Platforms),Tech platform-harms,IBSA / platforms,EN,1,Tips / SecureDrop,"Keep OnlyFans out of the subject line",,,,Not sent,,Firewall risk
+P2,MIT Technology Review,AI-harms / policy,Deepfakes / NCII law,EN,1,Pitch AI-policy editor (Muck Rack),"Both US+UK laws exclude commercial content",,,,Not sent,,
+P2,The 19th,Gender + tech,Deepfakes / women,EN,1,19thnews.org,"Offer as stat source for an existing story",,,,Not sent,,Will strip OF context
+P2,ITC.ua,UA tech (EN edition),Data transparency,UA,2,itc.ua/en contact form,"Ran 'only 152 of 5,000 declare'",,,,Not sent,,
+P2,Komersant.ua,UA long-form,Legal reform,UA,2,Editorial,"Did model interview + BEB analysis",,,,Not sent,,
+P2,LIGA.net (Tech/Business),UA tech-policy,Legal gap,UA,2,about.liga.net/contacts,"Legal sister-brand Liga:Zakon",,,,Not sent,,
+P2,Hromadske,UA public broadcaster,Gender / women rights,UA (EN avail),2,druzi@hromadske.ua,"Gender/women-rights core",,,,Not sent,,
+P2,Euromaidan Press,EN diaspora,Op-ed,EN,2,"Op-ed <=1000 wds, subject 'Opinion submission'","Bylined data explainer + link-back",,,,Not sent,,Easiest bylined link
+P2,Povaha / Women in Media,UA gender,Online violence,UA,2,wim.org.ua editorial,"Co-citer of IBSA data",,,,Not sent,,Data lane only
+P2,Detector Media,UA media-criticism,Media accountability,UA,2,detector.media editorial,"'No consolidated safety-data resource exists'",,,,Not sent,,
+P2,Rest of World,Global-south tech,Regional creators,EN,1,Pitch form restofworld.org,"Ukraine/EE cut + Eurostat",,,,Not sent,,Values non-US data
+P3,EFF (Deeplinks),Digital-rights org,NCII / takedown harm,EN,1,press@eff.org,"Cares about both NCII gaps + over-broad takedown",,,,Not sent,,Authority/amplifier
+P3,Bellingcat,OSINT investigative,Deepfakes,EN,1,Contact form bellingcat.com,"Did MrDeepFakes investigation",,,,Not sent,,Wants original leads
+P3,Notes from Poland,EN diaspora corridor,UA women in PL,EN,2,notesfrompoland.com/contact,"Safety + legal status of UA women in PL",,,,Not sent,,#1 refugee destination
+P3,Visegrad Insight,V4 policy,Regulatory gap CEE,EN,2,contact@visegradinsight.eu,"Policy-framed regulatory-gap op-ed",,,,Not sent,,
+P3,Sifted,Pan-EU tech,Platform governance,EN,1,news@sifted.eu,"Reframe as governance/NCII data, NOT adult",,,,Not sent,,
+P3,The Local (DE/ES),EN diaspora press,UA women abroad,EN,2,thelocal.de/contact,"Online safety + legal status of UA women",,,,Not sent,,Next corridors after PL
