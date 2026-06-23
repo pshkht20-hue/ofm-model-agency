@@ -60,10 +60,10 @@ export function SiteFooter() {
       href: '/blog/onlyfans-anonimnost-i-bezopasnost' as const,
       label: t('clusterSafety'),
     },
-    // /research is ru-only for now → only surface the link on ru to avoid a 404
-    // on other locales. Localize + broaden once real data ships.
-    ...(locale === 'ru'
-      ? [{ href: '/research' as const, label: 'Исследования' }]
+    // /research is published in ru + uk → surface the link on those locales only
+    // (en/es not localized yet) to avoid a 404.
+    ...(locale === 'ru' || locale === 'uk'
+      ? [{ href: '/research' as const, label: locale === 'uk' ? 'Дослідження' : 'Исследования' }]
       : []),
   ];
 

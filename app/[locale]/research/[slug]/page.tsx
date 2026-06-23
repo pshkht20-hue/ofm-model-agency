@@ -9,6 +9,7 @@ import { CiteEmbed } from '@/components/research/CiteEmbed';
 import { ReportJsonLd } from '@/components/research/ReportJsonLd';
 import {
   getResearchReport,
+  getResearchReportLocales,
   getResearchReportSlugs,
 } from '@/lib/content/research/reports';
 import { createPageMetadata } from '@/lib/seo';
@@ -18,15 +19,16 @@ import type { Locale } from '@/i18n/routing';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
-// Scaffold: Russian only until localized to uk/en/es.
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return getResearchReportSlugs().map((slug) => ({ locale: 'ru', slug }));
+  return getResearchReportSlugs().flatMap((slug) =>
+    getResearchReportLocales(slug).map((locale) => ({ locale, slug })),
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
-  const report = getResearchReport(slug);
+  const report = getResearchReport(slug, locale);
   if (!report) return {};
   return createPageMetadata({
     title: report.seoTitle,
@@ -34,54 +36,58 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/research/${slug}`,
     locale: locale as Locale,
     keywords: report.keywords,
-    availableLocales: ['ru'],
+    availableLocales: getResearchReportLocales(slug),
   });
 }
 
 export default async function ResearchReportPage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
-  const report = getResearchReport(slug);
+  const report = getResearchReport(slug, locale);
   if (!report) notFound();
 
   const loc = locale as Locale;
+  const ui = report.ui;
   const url = `${getSiteUrl()}${pathForLocale(`/research/${slug}`, loc)}`;
   const year = report.publishedAt.slice(0, 4);
 
   return (
     <SeoPageShell
       showCta={false}
-      breadcrumbs={[{ label: 'Исследования', href: '/research' }, { label: report.seoTitle }]}
+      breadcrumbs={[{ label: ui.breadcrumbHub, href: '/research' }, { label: report.seoTitle }]}
     >
       <ReportJsonLd report={report} locale={loc} />
       <BreadcrumbJsonLd
         locale={loc}
         items={[
-          { name: 'Главная', path: '/' },
-          { name: 'Исследования', path: '/research' },
+          { name: ui.breadcrumbHome, path: '/' },
+          { name: ui.breadcrumbHub, path: '/research' },
           { name: report.seoTitle, path: `/research/${slug}` },
         ]}
       />
 
-      <p className="eyebrow-bright mb-4">Кураторский обзор данных · 2026</p>
+      <p className="eyebrow-bright mb-4">{ui.eyebrow}</p>
       <h1 className="heading-section text-[clamp(1.7rem,4.2vw,2.6rem)] mb-4">{report.title}</h1>
       <p className="text-sm text-white/45 mb-6">
-        Опубликовано: {report.publishedAt} · Обновлено: {report.updatedAt} · Лицензия CC BY 4.0
+        {ui.publishedLabel}: {report.publishedAt} · {ui.updatedLabel}: {report.updatedAt} ·{' '}
+        {ui.licenseLabel}
       </p>
 
       <div className="mb-8 rounded-2xl border border-accent-pink/20 bg-accent-pink/[0.05] p-6">
         <div className="font-serif text-4xl md:text-5xl text-white mb-2">{report.heroStat.value}</div>
         <p className="text-body">{report.heroStat.label}.</p>
-        <p className="text-xs text-white/40 mt-2">Источник: {report.heroStat.source}</p>
+        <p className="text-xs text-white/40 mt-2">
+          {ui.sourceLabel}: {report.heroStat.source}
+        </p>
       </div>
       <p className="text-body mb-10">{report.dek}</p>
 
-      <h2 className="heading-section text-xl md:text-2xl mb-3">Почему этого нет ни у кого</h2>
+      <h2 className="heading-section text-xl md:text-2xl mb-3">{ui.uniqueHeading}</h2>
       <div className="rounded-2xl border border-accent-cyan/20 bg-accent-cyan/[0.04] p-5 md:p-6 text-body text-sm leading-relaxed mb-12">
         {report.uniqueAngle}
       </div>
 
-      <h2 className="heading-section text-xl md:text-2xl mb-4">Ключевые выводы</h2>
+      <h2 className="heading-section text-xl md:text-2xl mb-4">{ui.keyFindingsHeading}</h2>
       <ul className="space-y-4 mb-10">
         {report.keyFindings.map((f) => (
           <li key={f.stat} className="text-body">
@@ -106,7 +112,7 @@ export default async function ResearchReportPage({ params }: Props) {
 
       <div className="flex flex-wrap gap-3 mt-2 mb-12">
         {[
-          { href: report.csv, label: 'Скачать данные (CSV)' },
+          { href: report.csv, label: ui.downloadCsv },
           { href: report.csv.replace('.csv', '.json'), label: 'JSON' },
         ].map((d) => (
           <a
@@ -122,7 +128,7 @@ export default async function ResearchReportPage({ params }: Props) {
       </div>
 
       <h2 id="red-flags" className="heading-section text-xl md:text-2xl mb-4">
-        Red flags недобросовестного агентства
+        {ui.redFlagsHeading}
       </h2>
       <ul className="list-disc pl-5 space-y-2 text-body mb-12">
         {report.redFlags.map((r) => (
@@ -131,27 +137,38 @@ export default async function ResearchReportPage({ params }: Props) {
       </ul>
 
       <h2 id="checklist" className="heading-section text-xl md:text-2xl mb-4">
-        Чек-лист безопасности креатора
+        {ui.checklistHeading}
       </h2>
       <ul className="list-disc pl-5 space-y-2 text-body mb-4">
         {report.safetyChecklist.map((s) => (
           <li key={s}>{s}</li>
         ))}
       </ul>
-      <p className="text-sm text-white/50 mb-12">
-        Этим стандартам безопасности следует и OFM Models — их подсказывают сами данные.
-      </p>
+      <p className="text-sm text-white/50 mb-12">{ui.ofmLine}</p>
 
       <h2 id="methodology" className="heading-section text-xl md:text-2xl mb-4">
-        Как мы собрали этот обзор
+        {ui.curationHeading}
       </h2>
       <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 md:p-6 text-body text-sm leading-relaxed mb-12">
         {report.curationNote}
       </div>
 
-      <CiteEmbed title={report.title} url={url} publishedYear={year} />
+      <CiteEmbed
+        title={report.title}
+        url={url}
+        publishedYear={year}
+        labels={{
+          heading: ui.citeHeading,
+          licenseLine: ui.citeLicenseLine,
+          htmlLabel: ui.citeHtmlLabel,
+          embedLabel: ui.citeEmbedLabel,
+          copy: ui.citeCopy,
+          copied: ui.citeCopied,
+          kind: ui.citeKind,
+        }}
+      />
 
-      <h2 className="heading-section text-xl md:text-2xl mt-12 mb-4">Куда обратиться за помощью</h2>
+      <h2 className="heading-section text-xl md:text-2xl mt-12 mb-4">{ui.helpHeading}</h2>
       <ul className="list-disc pl-5 space-y-2 text-body mb-12">
         {report.helpResources.map((h) => (
           <li key={h.href}>
@@ -168,7 +185,7 @@ export default async function ResearchReportPage({ params }: Props) {
       </ul>
 
       <h2 className="heading-section text-xl md:text-2xl mb-4">
-        Источники ({report.sources.length})
+        {ui.sourcesHeading} ({report.sources.length})
       </h2>
       <ul className="space-y-2 text-sm text-white/55">
         {report.sources.map((s) => (

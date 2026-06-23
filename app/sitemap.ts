@@ -1,7 +1,11 @@
 import type { MetadataRoute } from 'next';
 import { getAllBlogSlugs, getBlogPublishedAtMap } from '@/lib/content/blog/slugs';
 import { getBlogPostLocales } from '@/lib/content/blog';
-import { getResearchReportSlugs } from '@/lib/content/research/reports';
+import {
+  getResearchReportSlugs,
+  getResearchReportLocales,
+  getResearchLocales,
+} from '@/lib/content/research/reports';
 import { routing, type Locale } from '@/i18n/routing';
 import { pathForLocale, hreflangAlternates } from '@/lib/i18n/paths';
 import { getSiteUrl } from '@/lib/site';
@@ -49,17 +53,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // /research — original-data hub. Russian only for now (localized later);
-  // listed under ru so the linkable assets get discovered + crawled.
-  const researchPaths = ['/research', ...getResearchReportSlugs().map((s) => `/research/${s}`)];
-  for (const path of researchPaths) {
+  // /research — original-data hub + reports, in the locales each is published in.
+  const researchLocales = getResearchLocales();
+  for (const locale of researchLocales) {
     entries.push({
-      url: `${siteUrl}${pathForLocale(path, 'ru' as Locale)}`,
+      url: `${siteUrl}${pathForLocale('/research', locale)}`,
       lastModified: now,
       changeFrequency: 'monthly',
-      priority: path === '/research' ? 0.7 : 0.65,
-      alternates: { languages: hreflangAlternates(siteUrl, path, ['ru'] as Locale[]) },
+      priority: 0.7,
+      alternates: { languages: hreflangAlternates(siteUrl, '/research', researchLocales) },
     });
+  }
+  for (const slug of getResearchReportSlugs()) {
+    const locales = getResearchReportLocales(slug);
+    const path = `/research/${slug}`;
+    for (const locale of locales) {
+      entries.push({
+        url: `${siteUrl}${pathForLocale(path, locale)}`,
+        lastModified: now,
+        changeFrequency: 'monthly',
+        priority: 0.65,
+        alternates: { languages: hreflangAlternates(siteUrl, path, locales) },
+      });
+    }
   }
 
   return entries;
