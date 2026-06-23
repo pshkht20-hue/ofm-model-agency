@@ -148,6 +148,58 @@ const UI_UK: ResearchUi = {
   citeKind: '[Огляд даних]',
 };
 
+const UI_EN: ResearchUi = {
+  eyebrow: 'Curated data roundup · 2026',
+  publishedLabel: 'Published',
+  updatedLabel: 'Updated',
+  licenseLabel: 'CC BY 4.0 license',
+  sourceLabel: 'Source',
+  uniqueHeading: 'Why no one else has this',
+  keyFindingsHeading: 'Key findings',
+  downloadCsv: 'Download the data (CSV)',
+  redFlagsHeading: 'Red flags of an exploitative agency',
+  checklistHeading: 'Creator safety checklist',
+  ofmLine: 'These are the safety standards OFM Models holds itself to — the data points to them.',
+  curationHeading: 'How we compiled this roundup',
+  helpHeading: 'Where to get help',
+  sourcesHeading: 'Sources',
+  breadcrumbHome: 'Home',
+  breadcrumbHub: 'Research',
+  citeHeading: 'Cite this research',
+  citeLicenseLine: 'The data is open under CC BY 4.0 — reuse with attribution and a link.',
+  citeHtmlLabel: 'Link (HTML)',
+  citeEmbedLabel: 'Embed',
+  citeCopy: 'Copy',
+  citeCopied: 'Copied',
+  citeKind: '[Data report]',
+};
+
+const UI_ES: ResearchUi = {
+  eyebrow: 'Recopilación de datos · 2026',
+  publishedLabel: 'Publicado',
+  updatedLabel: 'Actualizado',
+  licenseLabel: 'Licencia CC BY 4.0',
+  sourceLabel: 'Fuente',
+  uniqueHeading: 'Por qué nadie más tiene esto',
+  keyFindingsHeading: 'Hallazgos clave',
+  downloadCsv: 'Descargar los datos (CSV)',
+  redFlagsHeading: 'Señales de alerta de una agencia abusiva',
+  checklistHeading: 'Checklist de seguridad para creadoras',
+  ofmLine: 'OFM Models se rige por estos estándares de seguridad — los datos los respaldan.',
+  curationHeading: 'Cómo elaboramos esta recopilación',
+  helpHeading: 'Dónde pedir ayuda',
+  sourcesHeading: 'Fuentes',
+  breadcrumbHome: 'Inicio',
+  breadcrumbHub: 'Investigación',
+  citeHeading: 'Cómo citar esta investigación',
+  citeLicenseLine: 'Los datos son abiertos bajo CC BY 4.0 — reutilízalos con atribución y enlace.',
+  citeHtmlLabel: 'Enlace (HTML)',
+  citeEmbedLabel: 'Insertar (embed)',
+  citeCopy: 'Copiar',
+  citeCopied: 'Copiado',
+  citeKind: '[Informe de datos]',
+};
+
 const safetyRu: ResearchReport = {
   slug: 'onlyfans-creator-safety-2026',
   title:
@@ -289,10 +341,136 @@ const safetyUk: ResearchReport = {
   ui: UI_UK,
 };
 
+const safetyEn: ResearchReport = {
+  slug: 'onlyfans-creator-safety-2026',
+  title:
+    'Adult creator safety in 2026: 22.6% of adults have faced image-based abuse — yet no one has the data on paid creators',
+  seoTitle: 'OnlyFans creator safety 2026: statistics & data',
+  dek: 'A curated roundup of verified institutional data on the safety of adult content creators: what is measured, what concerns only minors, and where the “commercial content” gap lies.',
+  heroStat: {
+    value: '22.6%',
+    label: 'of adults across 10 countries have experienced at least one form of image-based sexual abuse (IBSA)',
+    source: 'Umbach, Henry & Beard, CHI 2025, n=16,693',
+  },
+  publishedAt: '2026-06-23',
+  updatedAt: '2026-06-23',
+  keywords: ['onlyfans safety statistics', 'creator safety statistics', 'image based sexual abuse statistics', 'deepfake porn statistics', 'sextortion statistics 2026', 'NCII commercial content gap'],
+  keyFindings: [
+    { stat: '22.6%', text: 'One in five adults has encountered image-based sexual abuse: threatened with the release of intimate images — 14.5%, filmed without consent — 14.2%, shared without permission — 12.3%. This peer-reviewed multinational study of 16,693 adults across 10 countries is the cleanest primary measure for adults.', source: 'Umbach et al., CHI 2025 (arXiv 2503.04988)' },
+    { stat: '8.0%', text: 'Exactly 8.0% of adults reported that a deepfake or digitally altered sexual image was made of them. Don’t confuse this with “1.2%” — that comes from a different study (CHI 2024); this paper’s deepfake figure is 8.0%.', source: 'Umbach et al., CHI 2025' },
+    { stat: '99%', text: 'Of deepfake videos online, 98% are pornographic, and 99% of victims in deepfake porn are women. These figures are vendor-sourced (Home Security Heroes), widely cited but not peer-reviewed — flagged accordingly. An honest tension: Umbach’s aggregate IBSA is near gender parity (22.7% men vs 22.3% women).', source: 'Security Hero, 2023 State of Deepfakes (vendor)' },
+    { stat: '50–70%', text: 'Ceartas DMCA’s CTO estimates “50 to 70% of paid OnlyFans content is stolen.” This is a vendor expert estimate via journalism, not measured prevalence — no representative study of paid-content theft exists. In an academic sample (USENIX 2024, n=43), leaks were the 2nd most common threat.', source: 'Foreign Policy 2025; Soneji et al., USENIX Security 2024' },
+    { stat: '54%', text: 'For content creators, the most common attack is impersonation: 54%; account hijacking — 32%; stalking/surveillance — 31%; false reporting — 31%; doxxing — 26%. 95% recalled at least one hate & harassment incident. General sample (N=135 US creators), not only 18+.', source: 'Thomas et al. (Google), CHI 2022, N=135' },
+    { stat: '65.2%', text: 'Among commercial content creators, 65.2% reported crimes by strangers, and only 40.7% could report to platforms. Key takeaway: once content is sold or published, it falls outside NCII protection — that is the commercial-content gap.', source: 'Sanders et al., New Media & Society 2025' },
+    { stat: '40,143', text: 'In FBI IC3’s 2024 age breakdown for extortion/sextortion, adults (20+) are the majority of complainants (~40,143) vs 3,806 under 20. Institutional data shows extortion victims are mostly adults, yet nearly all dedicated research (NCMEC, Thorn) is about minors.', source: 'FBI IC3, 2024 Internet Crime Report, p. 36' },
+  ],
+  charts: [
+    { id: 'ibsa_by_type', title: 'IBSA among adults by type (10 countries, n=16,693)', caption: 'Share of adults who experienced each form of image-based sexual abuse at least once. Deepfake images — 8.0%.', sourceNote: 'Source: Umbach, Henry & Beard, CHI 2025, n=16,693 · ofmmodels.com/research', unit: '%', display: 'bars', data: [{ label: 'Threatened with sharing intimate photos', value: 14.5 }, { label: 'Filmed/recorded without consent', value: 14.2 }, { label: 'Shown/shared without permission', value: 12.3 }, { label: 'Content stolen', value: 9.7 }, { label: 'Deepfake/altered image created', value: 8 }] },
+    { id: 'creator_hate_harassment', title: 'Attacks on content creators (share affected, %)', caption: 'Impersonation is the most common attack; deepfakes/manipulated content — 24%. General sample (N=135 US creators), not only adult content.', sourceNote: 'Source: Thomas et al. (Google), CHI 2022, N=135 · ofmmodels.com/research', unit: '%', display: 'bars', data: [{ label: 'Impersonation', value: 54 }, { label: 'Account hijacking', value: 32 }, { label: 'Stalking/surveillance', value: 31 }, { label: 'False reporting', value: 31 }, { label: 'Doxxing', value: 26 }, { label: 'Deepfakes/manipulation', value: 24 }] },
+    { id: 'ic3_age_sextortion', title: 'Extortion/sextortion: FBI IC3 complainants by age (2024)', caption: 'Adults are the majority of registered extortion victims, despite dedicated research focusing on minors. All ages, sexual and non-sexual extortion combined.', sourceNote: 'Source: FBI IC3, 2024 Internet Crime Report, p. 36 · ofmmodels.com/research', unit: 'count', display: 'bars', data: [{ label: 'Under 20', value: 3806 }, { label: '20–29', value: 13302 }, { label: '30–39', value: 9204 }, { label: '40–49', value: 6794 }, { label: '50–59', value: 4940 }, { label: '60+', value: 5903 }] },
+    { id: 'rph_2024', title: 'Revenge Porn Helpline (UK), 2024', caption: 'A record year: 22,275 reports (+20.9% YoY), 90.9% removal rate. Institutional NGO data on adults.', sourceNote: 'Source: SWGfL, Revenge Porn Helpline 2024 Annual Report · ofmmodels.com/research', display: 'cards', data: [{ label: 'Reports in 2024', value: 22275 }, { label: 'Removal rate, %', value: 90.9 }, { label: 'Cases involving sextortion, %', value: 22.7 }, { label: 'Male perpetrators, %', value: 81 }] },
+  ],
+  uniqueAngle: 'Adult professional content creators sit in a documented “blind spot.” Search results split in two: data on minors (NCMEC, Thorn, Europol) and corporate fraud figures from cybersecurity vendors. The middle — adult creators — is empty: no one aggregates the institutional and peer-reviewed data specifically about them. The core of this roundup is the “commercial-content gap,” confirmed verbatim: the UK Revenge Porn Helpline (SWGfL), on its page for sex workers, explicitly names AdultWork and OnlyFans and states that images uploaded to a public forum “are not covered by the current intimate-image-abuse law as they are considered commercially created,” and that “we are unable to report commercially created images on your behalf.” The same logic in the US: the federal TAKE IT DOWN Act (in force since 19 May 2025, FTC enforcement from 19 May 2026) explicitly excludes “commercial pornographic content,” except in cases of coercion or deception. The result: the dedicated NCII removal mechanism cannot act on behalf of paid creators — and no consolidated data resource on their safety exists. This roundup is that resource. Regional layer: ~350 Ukrainian OnlyFans creators declared UAH 305.4M (~$7.3M), while in three years Ukraine has handed down only 6 sentences for OnlyFans work.',
+  redFlags: [
+    'The agency/manager demands access to your bank or documents, or asks you to “hand over” your personal phone number to log in — loss of account control (32% of creators experience hijacking).',
+    'A platform or “partner” cannot name an institutional source for its figures (“deepfake attacks +1300%”, “$2.1B in losses”) — that is vendor marketing, not research.',
+    'A contract promises “100% leak protection” — no representative measure of paid-content theft exists; it cannot be guaranteed. The real practice is DMCA takedowns after the fact.',
+    'You are told your leaked paid content is “protected by revenge-porn law” — in the UK and US, commercial content is explicitly excluded from NCII protection.',
+    '“Chatters” reply to subscribers in your name without your knowledge or consent — the subject of lawsuits; transparency is mandatory.',
+    'A request for intimate content “to verify you” from a stranger, or a new contact that quickly turns to blackmail — the classic sextortion playbook.',
+    'A lawyer/firm cites “precedents” you cannot verify — this field has already seen a sanction for fabricated AI citations (ABA Journal, 2025).',
+  ],
+  safetyChecklist: [
+    'Use a separate email and phone for work accounts only; never hand your personal number to an agency — register accounts under your own details.',
+    'Enable two-factor authentication and a unique password on every platform; impersonation (54%) and hijacking (32%) are the most common attacks.',
+    'Keep proof of content ownership (originals, metadata, dates) — the basis for DMCA takedowns and reports.',
+    'Know your removal mechanism: in the US, TakeItDown.ftc.gov and the platform’s 48-hour removal duty; in the UK, the Revenge Porn Helpline (but not for commercial content — check your status in advance).',
+    'Track leaks: set search alerts for your name/handle and check stolen-content aggregators; respond quickly.',
+    'Minimise doxxing: remove geotags, addresses in the background, reused usernames and photos from public profiles — deepfakes are built from social-media images.',
+    'Vet agencies: transparent chatter terms, no demands for full access to finances/documents, a written contract.',
+    'In a sextortion attempt, do not pay and do not delete the conversation — preserve evidence and contact law enforcement and helplines.',
+    'Separate verifiable institutional data from vendor marketing when assessing any “safety guarantee.”',
+  ],
+  curationNote: 'This is a curated roundup, not an original survey: OFM Model Agency did not collect these figures but selected and aggregated already-published data from primary and institutional sources. Every figure traces to a source in the list below. Priority is given to peer-reviewed and institutional data (CHI 2025, USENIX 2024, FBI IC3, FTC, Eurostat, SWGfL); vendor figures (Home Security Heroes) are shown with an explicit “vendor” flag and are not used as evidence of prevalence. Adult and minor data are kept strictly separate: NCMEC/Thorn statistics concern minors and are not transferred to adult creators. Acknowledged limitations: no representative study of paid-content theft exists (“50–70%” is an expert estimate); IC3 does not separate sexual from general extortion. OFM acts only as curator; this material is educational and not legal advice.',
+  sources: SOURCES,
+  helpResources: [
+    { label: 'FTC TakeItDown — file NCII reports (US, 48-hour removal)', href: 'https://takeitdown.ftc.gov/' },
+    { label: 'Revenge Porn Helpline (UK, SWGfL)', href: 'https://revengepornhelpline.org.uk/' },
+    { label: 'StopNCII.org — hash-blocking of intimate images', href: 'https://stopncii.org/' },
+    { label: 'Cyber Civil Rights Initiative — NCII helpline', href: 'https://cybercivilrights.org/ccri-crisis-helpline/' },
+    { label: 'FBI IC3 — report extortion/sextortion', href: 'https://www.ic3.gov/' },
+  ],
+  csv: '/data/onlyfans-creator-safety-2026.csv',
+  ui: UI_EN,
+};
+
+const safetyEs: ResearchReport = {
+  slug: 'onlyfans-creator-safety-2026',
+  title:
+    'Seguridad de creadoras adultas en 2026: el 22,6% de los adultos sufrió abuso basado en imágenes, pero nadie tiene datos sobre las creadoras de pago',
+  seoTitle: 'Seguridad de creadoras OnlyFans 2026: estadísticas y datos',
+  dek: 'Una recopilación curada de datos institucionales verificados sobre la seguridad de las creadoras de contenido adulto: qué se mide, qué solo trata sobre menores y dónde se abre la brecha del “contenido comercial”.',
+  heroStat: {
+    value: '22,6%',
+    label: 'de los adultos en 10 países sufrió al menos una forma de abuso sexual basado en imágenes (IBSA)',
+    source: 'Umbach, Henry & Beard, CHI 2025, n=16 693',
+  },
+  publishedAt: '2026-06-23',
+  updatedAt: '2026-06-23',
+  keywords: ['onlyfans estadísticas seguridad', 'estadísticas abuso basado en imágenes', 'estadísticas deepfake porno', 'sextorsión estadísticas 2026', 'agencia onlyfans seguridad', 'creator safety statistics'],
+  keyFindings: [
+    { stat: '22,6%', text: 'Uno de cada cinco adultos ha sufrido abuso sexual basado en imágenes: amenazas de publicar imágenes íntimas — 14,5%, grabación sin consentimiento — 14,2%, difusión sin permiso — 12,3%. Este estudio multinacional revisado por pares de 16 693 adultos en 10 países es la medida primaria más limpia para adultos.', source: 'Umbach et al., CHI 2025 (arXiv 2503.04988)' },
+    { stat: '8,0%', text: 'Exactamente el 8,0% de los adultos declaró que se creó un deepfake o una imagen sexual alterada digitalmente de ellos. No confundir con el “1,2%” — proviene de otro estudio (CHI 2024); en este trabajo la cifra de deepfake es 8,0%.', source: 'Umbach et al., CHI 2025' },
+    { stat: '99%', text: 'De los vídeos deepfake en la red, el 98% son pornográficos y el 99% de las víctimas en deepfake porno son mujeres. Cifras de proveedor (Home Security Heroes), muy citadas pero no revisadas por pares — señaladas como tales. Una tensión honesta: el agregado de IBSA de Umbach está cerca de la paridad de género (22,7% hombres frente a 22,3% mujeres).', source: 'Security Hero, 2023 State of Deepfakes (proveedor)' },
+    { stat: '50–70%', text: 'El director técnico de Ceartas DMCA estima que “entre el 50 y el 70% del contenido de pago de OnlyFans se roba”. Es una estimación experta de proveedor vía periodismo, no una prevalencia medida — no existe un estudio representativo del robo de contenido de pago. En una muestra académica (USENIX 2024, n=43) las filtraciones fueron la 2.ª amenaza más frecuente.', source: 'Foreign Policy 2025; Soneji et al., USENIX Security 2024' },
+    { stat: '54%', text: 'Para las creadoras de contenido, el ataque más común es la suplantación: 54%; secuestro de cuenta — 32%; acoso/vigilancia — 31%; denuncias falsas — 31%; doxxing — 26%. El 95% recordó al menos un episodio de hate & harassment. Muestra general (N=135 creadores de EE. UU.), no solo +18.', source: 'Thomas et al. (Google), CHI 2022, N=135' },
+    { stat: '65,2%', text: 'Entre las creadoras de contenido comercial, el 65,2% reportó delitos por parte de extraños, y solo el 40,7% pudo denunciar a las plataformas. Conclusión clave: una vez que el contenido se vende o se publica, queda fuera de la protección NCII — esa es la brecha del contenido comercial.', source: 'Sanders et al., New Media & Society 2025' },
+    { stat: '40 143', text: 'En el desglose por edad de FBI IC3 de 2024 para extorsión/sextorsión, los adultos (20+) son la mayoría de los denunciantes (~40 143) frente a 3 806 menores de 20. Los datos institucionales muestran que las víctimas de extorsión son mayoritariamente adultas, pero casi toda la investigación específica (NCMEC, Thorn) trata sobre menores.', source: 'FBI IC3, 2024 Internet Crime Report, p. 36' },
+  ],
+  charts: [
+    { id: 'ibsa_by_type', title: 'IBSA entre adultos por tipo (10 países, n=16 693)', caption: 'Proporción de adultos que sufrió cada forma de abuso sexual basado en imágenes al menos una vez. Imágenes deepfake — 8,0%.', sourceNote: 'Fuente: Umbach, Henry & Beard, CHI 2025, n=16 693 · ofmmodels.com/research', unit: '%', display: 'bars', data: [{ label: 'Amenaza de publicar fotos íntimas', value: 14.5 }, { label: 'Grabación/registro sin consentimiento', value: 14.2 }, { label: 'Mostrar/difundir sin permiso', value: 12.3 }, { label: 'Robo de contenido', value: 9.7 }, { label: 'Deepfake/imagen alterada creada', value: 8 }] },
+    { id: 'creator_hate_harassment', title: 'Ataques a creadoras de contenido (proporción afectada, %)', caption: 'La suplantación es el ataque más común; deepfakes/contenido manipulado — 24%. Muestra general (N=135 creadores de EE. UU.), no solo contenido adulto.', sourceNote: 'Fuente: Thomas et al. (Google), CHI 2022, N=135 · ofmmodels.com/research', unit: '%', display: 'bars', data: [{ label: 'Suplantación', value: 54 }, { label: 'Secuestro de cuenta', value: 32 }, { label: 'Acoso/vigilancia', value: 31 }, { label: 'Denuncias falsas', value: 31 }, { label: 'Doxxing', value: 26 }, { label: 'Deepfakes/manipulación', value: 24 }] },
+    { id: 'ic3_age_sextortion', title: 'Extorsión/sextorsión: denunciantes de FBI IC3 por edad (2024)', caption: 'Los adultos son la mayoría de las víctimas registradas de extorsión, pese a que la investigación específica se centra en menores. Todas las edades, extorsión sexual y no sexual combinadas.', sourceNote: 'Fuente: FBI IC3, 2024 Internet Crime Report, p. 36 · ofmmodels.com/research', unit: 'count', display: 'bars', data: [{ label: 'Menos de 20', value: 3806 }, { label: '20–29', value: 13302 }, { label: '30–39', value: 9204 }, { label: '40–49', value: 6794 }, { label: '50–59', value: 4940 }, { label: '60+', value: 5903 }] },
+    { id: 'rph_2024', title: 'Revenge Porn Helpline (Reino Unido), 2024', caption: 'Un año récord: 22 275 solicitudes (+20,9% interanual), tasa de eliminación del 90,9%. Datos institucionales de ONG sobre adultos.', sourceNote: 'Fuente: SWGfL, Revenge Porn Helpline 2024 Annual Report · ofmmodels.com/research', display: 'cards', data: [{ label: 'Solicitudes en 2024', value: 22275 }, { label: 'Tasa de eliminación, %', value: 90.9 }, { label: 'Casos con sextorsión, %', value: 22.7 }, { label: 'Agresores hombres, %', value: 81 }] },
+  ],
+  uniqueAngle: 'Las creadoras adultas profesionales están en un “punto ciego” documentado. Los resultados de búsqueda se dividen en dos: datos sobre menores (NCMEC, Thorn, Europol) y cifras corporativas de fraude de proveedores de ciberseguridad. El medio — las creadoras adultas — está vacío: nadie agrega los datos institucionales y revisados por pares específicamente sobre ellas. El núcleo de esta recopilación es la “brecha del contenido comercial”, confirmada literalmente: la Revenge Porn Helpline del Reino Unido (SWGfL), en su página para trabajadoras sexuales, nombra explícitamente AdultWork y OnlyFans y afirma que las imágenes subidas a un foro público “no están cubiertas por la ley actual de abuso de imágenes íntimas porque se consideran creadas comercialmente”, y que “no podemos denunciar imágenes creadas comercialmente en su nombre”. La misma lógica en EE. UU.: la federal TAKE IT DOWN Act (en vigor desde el 19 de mayo de 2025, aplicación de la FTC desde el 19 de mayo de 2026) excluye explícitamente el “contenido pornográfico comercial”, salvo casos de coacción o engaño. Resultado: el mecanismo específico de eliminación de NCII no puede actuar en nombre de las creadoras de pago — y no existe un recurso de datos consolidado sobre su seguridad. Esta recopilación es ese recurso. Capa regional: ~350 modelos ucranianas de OnlyFans declararon UAH 305,4 millones (~$7,3 millones), mientras que en tres años Ucrania solo ha dictado 6 condenas por trabajar en OnlyFans.',
+  redFlags: [
+    'La agencia/manager exige acceso a tu banco o documentos, o te pide “entregar” tu número de teléfono personal para iniciar sesión — pérdida de control de la cuenta (el 32% de las creadoras sufre secuestro).',
+    'Una plataforma o “socio” no puede nombrar una fuente institucional de sus cifras (“ataques deepfake +1300%”, “$2,1 mil millones en pérdidas”) — eso es marketing de proveedor, no investigación.',
+    'Un contrato promete “protección antifiltraciones 100%” — no existe una medida representativa del robo de contenido de pago; no se puede garantizar. La práctica real es la retirada DMCA a posteriori.',
+    'Te dicen que tu contenido de pago filtrado está “protegido por la ley de revenge porn” — en el Reino Unido y EE. UU., el contenido comercial está explícitamente excluido de la protección NCII.',
+    'Los “chatters” responden a los suscriptores en tu nombre sin tu conocimiento ni consentimiento — objeto de demandas; la transparencia es obligatoria.',
+    'Una solicitud de contenido íntimo “para verificarte” de un desconocido, o un contacto nuevo que pasa rápido al chantaje — el guion clásico de la sextorsión.',
+    'Un abogado/bufete cita “precedentes” que no puedes verificar — este campo ya vio una sanción por citas de IA inventadas (ABA Journal, 2025).',
+  ],
+  safetyChecklist: [
+    'Usa un correo y un teléfono separados solo para las cuentas de trabajo; nunca entregues tu número personal a una agencia — registra las cuentas con tus propios datos.',
+    'Activa la autenticación de dos factores y una contraseña única en cada plataforma; la suplantación (54%) y el secuestro (32%) son los ataques más comunes.',
+    'Conserva pruebas de propiedad del contenido (originales, metadatos, fechas) — la base para las retiradas DMCA y las denuncias.',
+    'Conoce tu mecanismo de eliminación: en EE. UU., TakeItDown.ftc.gov y el deber de la plataforma de retirar en 48 horas; en el Reino Unido, la Revenge Porn Helpline (pero no para contenido comercial — verifica tu estado de antemano).',
+    'Rastrea las filtraciones: configura alertas de búsqueda con tu nombre/usuario y revisa los agregadores de contenido robado; reacciona rápido.',
+    'Minimiza el doxxing: elimina geoetiquetas, direcciones de fondo, nombres de usuario reutilizados y fotos de perfiles públicos — los deepfakes se construyen con imágenes de redes sociales.',
+    'Evalúa a las agencias: condiciones transparentes sobre los chatters, sin exigencias de acceso total a finanzas/documentos, contrato por escrito.',
+    'Ante un intento de sextorsión, no pagues ni borres la conversación — conserva las pruebas y contacta con las autoridades y las líneas de ayuda.',
+    'Separa los datos institucionales verificables del marketing de proveedor al evaluar cualquier “garantía de seguridad”.',
+  ],
+  curationNote: 'Esta es una recopilación curada, no una encuesta propia: OFM Model Agency no recopiló estas cifras, sino que seleccionó y agregó datos ya publicados de fuentes primarias e institucionales. Cada cifra se remonta a una fuente de la lista de abajo. Se prioriza la información revisada por pares e institucional (CHI 2025, USENIX 2024, FBI IC3, FTC, Eurostat, SWGfL); las cifras de proveedor (Home Security Heroes) se muestran con una marca explícita de “proveedor” y no se usan como evidencia de prevalencia. Los datos de adultos y menores se mantienen estrictamente separados: las estadísticas de NCMEC/Thorn se refieren a menores y no se trasladan a las creadoras adultas. Limitaciones reconocidas: no existe un estudio representativo del robo de contenido de pago (“50–70%” es una estimación experta); IC3 no separa la extorsión sexual de la general. OFM actúa solo como curador; este material es educativo y no constituye asesoramiento legal.',
+  sources: SOURCES,
+  helpResources: [
+    { label: 'FTC TakeItDown — denunciar NCII (EE. UU., eliminación en 48 horas)', href: 'https://takeitdown.ftc.gov/' },
+    { label: 'Revenge Porn Helpline (Reino Unido, SWGfL)', href: 'https://revengepornhelpline.org.uk/' },
+    { label: 'StopNCII.org — bloqueo por hash de imágenes íntimas', href: 'https://stopncii.org/' },
+    { label: 'Cyber Civil Rights Initiative — línea de ayuda NCII', href: 'https://cybercivilrights.org/ccri-crisis-helpline/' },
+    { label: 'FBI IC3 — denunciar extorsión/sextorsión', href: 'https://www.ic3.gov/' },
+  ],
+  csv: '/data/onlyfans-creator-safety-2026.csv',
+  ui: UI_ES,
+};
+
 type LocaleReports = Partial<Record<Locale, ResearchReport>>;
 
 const REPORTS: Record<string, LocaleReports> = {
-  'onlyfans-creator-safety-2026': { ru: safetyRu, uk: safetyUk },
+  'onlyfans-creator-safety-2026': { ru: safetyRu, uk: safetyUk, en: safetyEn, es: safetyEs },
 };
 
 export function getResearchReport(slug: string, locale?: string | Locale): ResearchReport | undefined {
@@ -363,6 +541,28 @@ const HUB_UI: Record<string, ResearchHubUi> = {
     pressHeading: 'Для преси та дослідників',
     pressBody: 'Можна вільно цитувати наші дані з посиланням. Запити та коментарі — через',
     contactLabel: 'форму зв’язку',
+  },
+  en: {
+    eyebrow: 'OFM Research',
+    title: 'Data on the creator economy and safety',
+    lead: 'Original data roundups from OFM Model Agency — open sources, transparent methodology and charts ready to cite.',
+    intro: 'We aggregate public data in the public interest: creator safety, exploitative practices and the real economics of the industry. All datasets are available under the',
+    licenseLabel: 'CC BY 4.0',
+    reportBadge: 'Roundup',
+    pressHeading: 'For press and researchers',
+    pressBody: 'You are free to cite our data with a link. Requests and comments via the',
+    contactLabel: 'contact form',
+  },
+  es: {
+    eyebrow: 'OFM Research',
+    title: 'Datos sobre la creator-economía y la seguridad',
+    lead: 'Recopilaciones de datos originales de OFM Model Agency — fuentes abiertas, metodología transparente y gráficos listos para citar.',
+    intro: 'Agregamos datos públicos en interés público: seguridad de las creadoras, prácticas abusivas y la economía real del sector. Todos los datasets están disponibles bajo la licencia',
+    licenseLabel: 'CC BY 4.0',
+    reportBadge: 'Recopilación',
+    pressHeading: 'Para prensa e investigadores',
+    pressBody: 'Puedes citar nuestros datos con un enlace. Consultas y comentarios a través del',
+    contactLabel: 'formulario de contacto',
   },
 };
 

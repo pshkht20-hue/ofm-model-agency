@@ -96,12 +96,16 @@ export function HomeSeoBlock() {
           <Link href="/faq" className="btn-secondary !py-2.5 !px-5">
             {t('linkFaq')}
           </Link>
-          {/* /research is published in ru + uk only (en/es not localized yet). */}
-          {(locale === 'ru' || locale === 'uk') && (
-            <Link href="/research" className="btn-secondary !py-2.5 !px-5">
-              {locale === 'uk' ? 'Дослідження' : 'Исследования'}
-            </Link>
-          )}
+          {/* /research is published in all four locales. */}
+          <Link href="/research" className="btn-secondary !py-2.5 !px-5">
+            {locale === 'uk'
+              ? 'Дослідження'
+              : locale === 'en'
+                ? 'Research'
+                : locale === 'es'
+                  ? 'Investigación'
+                  : 'Исследования'}
+          </Link>
         </div>
       </div>
     </section>
