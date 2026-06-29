@@ -27,6 +27,7 @@ export const LINK = {
   faq: { href: '/faq', label: 'FAQ: что такое OFM' },
   home: { href: '/', label: 'Главная — кейсы и заявка' },
   pillar: { href: '/blog/rabota-modelyu-onlyfans', label: 'Работа моделью OnlyFans' },
+  whatis: { href: '/blog/chto-takoe-onlyfans', label: 'Что такое OnlyFans' },
   choose: { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Как выбрать агентство' },
   scam: { href: '/blog/onlyfans-agentstvo-moshennichestvo', label: '10 признаков скама' },
   services: { href: '/blog/chto-delaet-onlyfans-agentstvo', label: '12 услуг management' },

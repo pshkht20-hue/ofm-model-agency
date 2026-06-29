@@ -53,6 +53,11 @@ export function HomeSeoBlock() {
             {t('linkVacancy')}
           </Link>
           {(locale === 'ru' || locale === 'uk') && (
+            <Link href="/blog/chto-takoe-onlyfans" className="btn-secondary !py-2.5 !px-5">
+              {locale === 'uk' ? 'Що таке OnlyFans' : 'Что такое OnlyFans'}
+            </Link>
+          )}
+          {(locale === 'ru' || locale === 'uk') && (
             <Link
               href="/blog/robota-dlya-ukrainok-za-kordonom"
               className="btn-secondary !py-2.5 !px-5"
