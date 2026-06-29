@@ -48,7 +48,7 @@
       "subtitle": "Tu vida. Tus reglas. Tu éxito.",
       "srOnly": "— agencia OFM's Model Agency, buscamos modelos en todo el mundo",
       "lead": "¡Agencia exclusiva para creadoras ambiciosas!<br></br>Balances de páginas <income></income><br></br>y apoyo completo en cada etapa.",
-      "incomeHighlight": "$15,000–$100,000",
+      "incomeHighlight": "$15,000–$50,000",
       "ctaPrimary": "Ser modelo",
       "ctaSecondary": "Historias de éxito",
       "statModels": "modelos",
@@ -367,6 +367,7 @@
     "telegramPlaceholder": "@username o número de teléfono",
     "message": "Mensaje",
     "submit": "Enviar solicitud",
+    "privacy": "100% confidencial · anónimo · sin compromiso",
     "sending": "Enviando…",
     "successTitle": "Solicitud enviada",
     "successBody": "Un manager te contactará por Telegram en 24 horas.",
@@ -432,7 +433,7 @@
     "footnote": "Gross total del balance OnlyFans · no ingreso neto de la modelo · datos actualizados trimestralmente",
     "items": [
       { "label": "Modelos en la agencia", "hint": "Plantilla activa" },
-      { "label": "Balances de páginas", "hint": "de $15K a $100K · gross" },
+      { "label": "Balances de páginas", "hint": "de $15K a $50K · gross" },
       { "label": "Crecimiento del total", "hint": "Primeros 6 meses" },
       { "label": "Soporte y chats", "hint": "Sin días libres" }
     ]

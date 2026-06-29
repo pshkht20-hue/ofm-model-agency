@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, Check, Loader2, Send, Sparkles } from 'lucide-react';
+import { ArrowRight, Check, Loader2, Send, ShieldCheck, Sparkles } from 'lucide-react';
 import { SuccessCheckmark } from '@/components/ui/SuccessCheckmark';
 import { ClickSpark } from '@/components/ui/ClickSpark';
 import { useLocale, useTranslations } from 'next-intl';
@@ -359,7 +359,12 @@ export function ContactForm() {
         )}
       </AnimatePresence>
 
-      <ClickSpark color="#ff5bb5" className="mt-8 block">
+      <p className="mt-8 flex items-center justify-center gap-1.5 text-center text-xs text-white/55">
+        <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-accent-cyan/80" aria-hidden />
+        {t('privacy')}
+      </p>
+
+      <ClickSpark color="#ff5bb5" className="mt-3 block">
         <button
           type="submit"
           disabled={status === 'loading'}

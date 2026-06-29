@@ -48,7 +48,7 @@
       "subtitle": "Your life. Your rules. Your success.",
       "srOnly": "— OFM's Model Agency, recruiting women worldwide",
       "lead": "Exclusive agency for ambitious creators!<br></br>Page balances <income></income><br></br>and full support at every step.",
-      "incomeHighlight": "$15,000–$100,000",
+      "incomeHighlight": "$15,000–$50,000",
       "ctaPrimary": "Become a model",
       "ctaSecondary": "Success stories",
       "statModels": "creators",
@@ -367,6 +367,7 @@
     "telegramPlaceholder": "@username or phone number",
     "message": "Message",
     "submit": "Submit application",
+    "privacy": "100% confidential · anonymous · no obligation",
     "sending": "Sending…",
     "successTitle": "Application sent",
     "successBody": "A manager will contact you on Telegram within 24 hours.",
@@ -432,7 +433,7 @@
     "footnote": "Gross OnlyFans page totals · not creators' net payout · data updated quarterly",
     "items": [
       { "label": "Creators in the agency", "hint": "Active roster" },
-      { "label": "Page balances", "hint": "$15K to $100K · gross" },
+      { "label": "Page balances", "hint": "$15K to $50K · gross" },
       { "label": "Total growth", "hint": "First 6 months" },
       { "label": "Support & chats", "hint": "No days off" }
     ]

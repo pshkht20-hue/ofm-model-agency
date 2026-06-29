@@ -27,7 +27,7 @@ const AVATARS = [
   '/avatars/avatar-4.jpg',
   '/avatars/avatar-5.jpg',
 ] as const;
-const TRUST_COUNT = 200;
+const TRUST_COUNT = 220;
 
 export function HeroTrustStrip() {
   const t = useTranslations('home');

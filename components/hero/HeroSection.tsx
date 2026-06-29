@@ -281,7 +281,7 @@ export function HeroSection() {
           </span>
           <span data-hero-stat data-hero-reveal>
             {t('hero.statIncome')}{' '}
-            <strong className="text-accent-cyan font-semibold">$15K–$100K</strong>
+            <strong className="text-accent-cyan font-semibold">$15K–$50K</strong>
           </span>
           <span data-hero-stat data-hero-reveal>
             {t('hero.statTop')}
@@ -291,7 +291,7 @@ export function HeroSection() {
         <p
           data-hero-note
           data-hero-reveal
-          className="mx-auto mt-4 max-w-lg text-center text-[10px] leading-relaxed tracking-wide text-white/30"
+          className="mx-auto mt-4 max-w-lg text-center text-[11px] leading-relaxed tracking-wide text-white/45"
         >
           {t('hero.balanceNote')}
         </p>

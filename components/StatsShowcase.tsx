@@ -16,7 +16,7 @@ registerGsapPlugins();
 const STAT_CONFIG = [
   { number: 220, suffix: '+', icon: Users, accent: 'pink' as const },
   {
-    number: 100,
+    number: 50,
     prefix: '$',
     suffix: 'K',
     icon: DollarSign,
