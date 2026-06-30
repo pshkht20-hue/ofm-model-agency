@@ -3,80 +3,133 @@
 import { useEffect, useRef } from 'react';
 import { useIsMobileViewport, useReducedMotion } from '@/hooks/useMotionPreferences';
 
-const COLORS = ['#ff5bb5', '#00d4ff', '#a855f7'];
+// White-hot core + brand-tinted glow → a real, premium starry sky.
+// Mostly white (reads as "stars") with brand-color accents.
+const STAR_RGB = [
+  '255,255,255',
+  '255,255,255',
+  '255,255,255',
+  '255,91,181', // brand pink
+  '0,212,255', // brand cyan
+  '168,85,247', // brand violet
+  '255,200,235', // soft pink
+] as const;
+
+/** Pre-render a soft radial glow sprite once per colour (drawImage is far
+ *  cheaper than per-particle shadowBlur, so we can afford many bright stars). */
+function makeStarSprite(rgb: string): HTMLCanvasElement {
+  const s = 48;
+  const cv = document.createElement('canvas');
+  cv.width = s;
+  cv.height = s;
+  const g = cv.getContext('2d')!;
+  const c = s / 2;
+  const grd = g.createRadialGradient(c, c, 0, c, c, c);
+  grd.addColorStop(0, 'rgba(255,255,255,1)');
+  grd.addColorStop(0.16, `rgba(${rgb},0.95)`);
+  grd.addColorStop(0.45, `rgba(${rgb},0.32)`);
+  grd.addColorStop(1, `rgba(${rgb},0)`);
+  g.fillStyle = grd;
+  g.beginPath();
+  g.arc(c, c, c, 0, Math.PI * 2);
+  g.fill();
+  return cv;
+}
 
 type ParticleFieldProps = {
   className?: string;
-  /** Multiplier on the particle count (1 = ~60 desktop / ~26 mobile). */
+  /** Multiplier on the star count (1 = ~160 desktop / ~100 mobile). */
   density?: number;
-  /** Global opacity of the field (0–1). */
+  /** Global brightness of the field (0–1). */
   opacity?: number;
 };
 
 /**
- * Subtle drifting neon dust — a lightweight Canvas2D field that extends the hero
- * galaxy's cosmic feel into a section. GPU-friendly (small particle count, soft
- * glow), paused when off-screen or the tab is hidden, skipped entirely under
- * prefers-reduced-motion. Sits behind content (pointer-events-none, absolute).
+ * Premium starry sky — a lightweight Canvas2D field that replaces the heavy
+ * WebGL galaxy across the whole site. Pre-rendered glow sprites + additive
+ * blending give bright, twinkling stars with no shadowBlur cost. On desktop the
+ * stars drift and twinkle; on mobile / reduced-motion they render as a single
+ * static frame (zero rAF cost — stars everywhere, no perf hit). Paused when
+ * off-screen or the tab is hidden. Sits behind content (pointer-events-none).
  */
-export function ParticleField({ className = '', density = 1, opacity = 0.5 }: ParticleFieldProps) {
+export function ParticleField({ className = '', density = 1, opacity = 0.7 }: ParticleFieldProps) {
   const ref = useRef<HTMLCanvasElement>(null);
   const reduced = useReducedMotion();
   const mobile = useIsMobileViewport();
 
   useEffect(() => {
-    if (reduced || mobile) return;
     const canvas = ref.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const dpr = Math.min(window.devicePixelRatio || 1, mobile ? 1.5 : 2);
+    const sprites = STAR_RGB.map((c) => makeStarSprite(c));
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
     let w = 0;
     let h = 0;
     const resize = () => {
       const r = canvas.getBoundingClientRect();
       w = r.width;
       h = r.height;
-      canvas.width = Math.max(1, w * dpr);
-      canvas.height = Math.max(1, h * dpr);
+      canvas.width = Math.max(1, Math.round(w * dpr));
+      canvas.height = Math.max(1, Math.round(h * dpr));
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
     resize();
 
-    const count = Math.round((mobile ? 40 : 90) * density);
-    const ps = Array.from({ length: count }, () => ({
-      x: Math.random() * w,
-      y: Math.random() * h,
-      vx: (Math.random() - 0.5) * 0.26,
-      vy: (Math.random() - 0.5) * 0.26,
-      r: Math.random() * 1.6 + 0.6,
-      c: COLORS[(Math.random() * COLORS.length) | 0],
-      a: Math.random() * 0.5 + 0.3,
-    }));
+    const count = Math.round((mobile ? 100 : 160) * density);
+    const ps = Array.from({ length: count }, () => {
+      const bright = Math.random() < 0.16; // ~16% bigger "hero" stars
+      return {
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.2,
+        vy: (Math.random() - 0.5) * 0.2,
+        size: bright ? Math.random() * 15 + 14 : Math.random() * 8 + 5, // rendered glow px
+        sprite: sprites[(Math.random() * sprites.length) | 0],
+        base: bright ? Math.random() * 0.25 + 0.7 : Math.random() * 0.4 + 0.32,
+        twPhase: Math.random() * Math.PI * 2,
+        twSpeed: Math.random() * 0.0016 + 0.0006,
+      };
+    });
+
+    const render = (time: number) => {
+      ctx.clearRect(0, 0, w, h);
+      ctx.globalCompositeOperation = 'lighter'; // additive → glowy, bright overlaps
+      for (const p of ps) {
+        const tw = 0.62 + 0.38 * Math.sin(time * p.twSpeed + p.twPhase);
+        ctx.globalAlpha = Math.min(1, p.base * tw * opacity);
+        ctx.drawImage(p.sprite, p.x - p.size / 2, p.y - p.size / 2, p.size, p.size);
+      }
+      ctx.globalAlpha = 1;
+      ctx.globalCompositeOperation = 'source-over';
+    };
+
+    // Mobile / reduced-motion → one static frame, no rAF, no drift.
+    // Stars are visible everywhere at zero runtime cost.
+    if (reduced || mobile) {
+      render(0);
+      const onResizeStatic = () => {
+        resize();
+        render(0);
+      };
+      window.addEventListener('resize', onResizeStatic);
+      return () => window.removeEventListener('resize', onResizeStatic);
+    }
 
     let raf = 0;
     let running = false;
-    const draw = () => {
+    const draw = (time: number) => {
       raf = requestAnimationFrame(draw);
-      ctx.clearRect(0, 0, w, h);
       for (const p of ps) {
         p.x += p.vx;
         p.y += p.vy;
-        if (p.x < 0) p.x = w;
-        else if (p.x > w) p.x = 0;
-        if (p.y < 0) p.y = h;
-        else if (p.y > h) p.y = 0;
-        ctx.globalAlpha = p.a * opacity;
-        ctx.fillStyle = p.c;
-        ctx.shadowColor = p.c;
-        ctx.shadowBlur = 6;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fill();
+        if (p.x < -24) p.x = w + 24;
+        else if (p.x > w + 24) p.x = -24;
+        if (p.y < -24) p.y = h + 24;
+        else if (p.y > h + 24) p.y = -24;
       }
-      ctx.globalAlpha = 1;
-      ctx.shadowBlur = 0;
+      render(time);
     };
     const start = () => {
       if (running) return;
@@ -115,7 +168,6 @@ export function ParticleField({ className = '', density = 1, opacity = 0.5 }: Pa
     };
   }, [reduced, mobile, density, opacity]);
 
-  if (reduced || mobile) return null;
   return (
     <canvas
       ref={ref}

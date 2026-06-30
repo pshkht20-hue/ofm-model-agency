@@ -1,46 +1,24 @@
 'use client';
 
-import dynamic from 'next/dynamic';
-import { type RefObject } from 'react';
-import { useIsMobileViewport, useReducedMotion } from '@/hooks/useMotionPreferences';
+import { ParticleField } from '@/components/ui/ParticleField';
 
-// Client-only WebGL galaxy. ssr:false keeps it out of the server bundle and
-// defers the shader/ogl load; the gradient layers below render immediately and
-// remain as a graceful fallback if WebGL is unavailable.
-const GalaxyShader = dynamic(() => import('@/components/hero/GalaxyShader'), {
-  ssr: false,
-  loading: () => null,
-});
-
-type HeroBackgroundProps = {
-  sectionRef: RefObject<HTMLElement | null>;
-};
-
-export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
-  const isMobile = useIsMobileViewport();
-  const reduced = useReducedMotion();
-
+export function HeroBackground() {
   return (
     <div
       data-cosmos-root
       className="absolute inset-0 overflow-hidden pointer-events-none"
       aria-hidden
     >
-      {/* Deep-space base — instant paint, depth under the galaxy, WebGL fallback */}
+      {/* Deep-space base — instant paint, depth under the stars */}
       <div className="cosmos-deep-space absolute inset-0" />
       <div className="cosmos-deep-breathe animate-glow-pulse absolute inset-0 opacity-60" />
 
-      {/* WOW — GPU galaxy (twinkling stars, glow, depth, cursor reactivity).
-          Desktop-only: gating the dynamic import means OGL is never downloaded
-          and no WebGL context is ever created on mobile (≤767px). The gradient
-          cosmos layers around it are the complete mobile background. On mobile
-          the galaxy was already a single static frame, so the visual delta is
-          negligible while TBT/LCP/battery all improve. */}
-      {!isMobile && (
-        <GalaxyShader reduced={!!reduced} mobile={isMobile} sectionRef={sectionRef} />
-      )}
+      {/* Premium starfield (replaces the heavy WebGL galaxy). Lightweight
+          Canvas2D: drifts + twinkles on desktop, one static frame on
+          mobile/reduced-motion. No OGL, no WebGL context. */}
+      <ParticleField opacity={0.9} density={1.25} />
 
-      {/* Brand-color nebula glows over the galaxy — palette cohesion + depth */}
+      {/* Brand-color nebula glows — palette cohesion + depth */}
       <div
         className="animate-glow-pulse absolute mix-blend-screen blur-[64px]"
         style={{
@@ -69,10 +47,10 @@ export function HeroBackground({ sectionRef }: HeroBackgroundProps) {
         }}
       />
 
-      {/* Soft vignette — keeps the headline readable over the bright galaxy */}
+      {/* Soft vignette — keeps the headline readable over the stars */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_82%_68%_at_50%_44%,transparent_30%,rgba(3,2,8,0.5)_72%,rgba(2,1,6,0.88)_100%)]" />
 
-      {/* Scroll-out dim — faded in by HeroSection's scroll trigger (fixes scroll lag) */}
+      {/* Scroll-out dim — faded in by HeroSection's scroll trigger */}
       <div data-cosmos-dim className="absolute inset-0 bg-[#04030c] opacity-0" />
     </div>
   );

@@ -17,7 +17,6 @@ import { AboutSection } from '@/components/AboutSection';
 import { HowItWorksSection } from '@/components/HowItWorksSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { SectionDivider } from '@/components/ui/SectionDivider';
-import { useIsMobileViewport } from '@/hooks/useMotionPreferences';
 import { ParticleField } from '@/components/ui/ParticleField';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
@@ -47,11 +46,6 @@ const ModelReviewsSection = dynamic(
   { loading: () => <div className="min-h-[520px]" aria-hidden /> },
 );
 
-const GalaxyShader = dynamic(() => import('@/components/hero/GalaxyShader'), {
-  ssr: false,
-  loading: () => null,
-});
-
 function ContactGlow({ reduced }: { reduced: boolean | null }) {
   if (reduced) return null;
 
@@ -69,7 +63,6 @@ function ContactGlow({ reduced }: { reduced: boolean | null }) {
 export function HomePage() {
   const t = useTranslations('home');
   const reduced = useReducedMotion();
-  const isMobile = useIsMobileViewport();
   const contactRef = useRef<HTMLElement>(null);
 
   return (
@@ -111,14 +104,7 @@ export function HomePage() {
 
         <section id="contact" ref={contactRef} className="relative py-16 md:py-22 overflow-hidden">
           <div className="absolute inset-0 bg-[#050508]" />
-          {isMobile ? (
-            <ParticleField opacity={0.85} />
-          ) : (
-            <>
-              <GalaxyShader reduced={!!reduced} mobile={isMobile} sectionRef={contactRef} />
-              <div className="absolute inset-0 bg-[#050508]/25" aria-hidden />
-            </>
-          )}
+          <ParticleField opacity={0.9} density={1.1} />
           <div className="section-grid absolute inset-0 opacity-50" aria-hidden />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(168,85,247,0.2),transparent)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_30%_at_50%_0%,rgba(255,91,181,0.1),transparent)]" />

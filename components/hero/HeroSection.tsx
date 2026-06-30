@@ -170,7 +170,7 @@ export function HeroSection() {
       className="hero-pending min-h-screen flex items-center justify-center relative pt-20 overflow-hidden"
       aria-label={t('hero.srOnly')}
     >
-      <HeroBackground sectionRef={sectionRef} />
+      <HeroBackground />
 
       <div
         data-hero-scan
