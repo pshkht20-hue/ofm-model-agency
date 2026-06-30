@@ -196,7 +196,7 @@ const stepVariants = {
   }),
 };
 
-export function IncomeCalculatorSection() {
+export function IncomeCalculator({ id }: { id?: string }) {
   const t = useTranslations('home.calculator');
   const locale = useLocale();
   const reduced = useReducedMotion();
@@ -282,10 +282,7 @@ export function IncomeCalculatorSection() {
   );
 
   return (
-    <SectionShell id="calculator" variant="elevated" wide particles>
-      <SectionHeader eyebrow={t('eyebrow')} title={t('title')} description={t('subtitle')} />
-
-      <div className="mx-auto max-w-3xl">
+    <div id={id} className="mx-auto max-w-3xl">
         <div className="relative overflow-hidden rounded-3xl border border-white/[0.09] bg-[#08080e]/95 p-6 shadow-[0_24px_80px_-32px_rgba(168,85,247,0.35)] backdrop-blur-md md:p-8 lg:p-10">
           <div
             className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(255,91,181,0.1),transparent)]"
@@ -546,6 +543,19 @@ export function IncomeCalculatorSection() {
           </div>
         </div>
       </div>
+  );
+}
+
+/**
+ * Standalone section wrapper (SectionShell + header + the widget). Kept for
+ * reuse; the homepage now renders <IncomeCalculator /> inside the cases section.
+ */
+export function IncomeCalculatorSection() {
+  const t = useTranslations('home.calculator');
+  return (
+    <SectionShell id="calculator" variant="elevated" wide particles>
+      <SectionHeader eyebrow={t('eyebrow')} title={t('title')} description={t('subtitle')} />
+      <IncomeCalculator />
     </SectionShell>
   );
 }

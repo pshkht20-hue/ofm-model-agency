@@ -25,14 +25,6 @@ import { SiteFooter } from '@/components/layout/SiteFooter';
 import { EASE_SMOOTH, VIEWPORT_DEFAULT, fadeUpStatic } from '@/lib/motion';
 import { SectionProvider } from '@/context/SectionContext';
 
-const IncomeCalculatorSection = dynamic(
-  () =>
-    import('@/components/IncomeCalculatorSection').then((m) => ({
-      default: m.IncomeCalculatorSection,
-    })),
-  { loading: () => <div className="min-h-[480px]" aria-hidden /> },
-);
-
 const ModelShowcase = dynamic(
   () => import('@/components/ModelShowcase').then((m) => ({ default: m.ModelShowcase })),
   { loading: () => <div className="min-h-[640px]" aria-hidden /> },
@@ -91,8 +83,6 @@ export function HomePage() {
 
         <HowItWorksSection />
 
-        <SectionDivider />
-        <IncomeCalculatorSection />
         <SectionDivider />
         <ModelShowcase />
         <SectionDivider />

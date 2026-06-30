@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { resultCases, type ResultCase } from '@/lib/results/cases';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
+import { IncomeCalculator } from '@/components/IncomeCalculatorSection';
 import { EarningProof } from '@/components/results/EarningProof';
 import { ElectricBorder } from '@/components/ui/ElectricBorder';
 import { MotionFade } from '@/components/ui/Reveal';
@@ -22,6 +23,7 @@ const fmtNet = (n: number) =>
 
 export function ModelShowcase() {
   const t = useTranslations('models');
+  const tCalc = useTranslations('home.calculator');
   const reduced = useReducedMotion();
   const featuredIdx = Math.max(
     0,
@@ -84,7 +86,19 @@ export function ModelShowcase() {
         </motion.div>
       </ElectricBorder>
 
-      <MotionFade className="mx-auto mt-8 max-w-3xl text-center text-[11px] leading-relaxed text-white/35 sm:text-xs">
+      {/* Income calculator — right under the real balances. Its forecast is
+          "на основе реальных кейсов OFM", so this is its natural, organic home:
+          the visitor sees real page balances above, then estimates her own. */}
+      <div className="mt-16 border-t border-white/[0.06] pt-14 md:mt-20 md:pt-16">
+        <SectionHeader
+          eyebrow={tCalc('eyebrow')}
+          title={tCalc('title')}
+          description={tCalc('subtitle')}
+        />
+        <IncomeCalculator id="calculator" />
+      </div>
+
+      <MotionFade className="mx-auto mt-12 max-w-3xl text-center text-[11px] leading-relaxed text-white/35 sm:text-xs">
         {t('disclaimer')}
       </MotionFade>
 
