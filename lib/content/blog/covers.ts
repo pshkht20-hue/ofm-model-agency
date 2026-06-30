@@ -228,6 +228,38 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@aiony',
     unsplashUrl: 'https://unsplash.com/photos/man-in-black-button-up-shirt-K5dqlqKcF4Q',
   },
+  'chto-takoe-onlyfans': {
+    localSrc: '/blog/covers/chto-takoe-onlyfans.jpg',
+    remoteSrc: coverUrl('1561577724-507645521eaa'),
+    alt: 'Уверенная стильная девушка в очках со смартфоном — создатель контента на OnlyFans',
+    photographer: 'M M',
+    photographerUrl: 'https://unsplash.com/@minusculemarie',
+    unsplashUrl: 'https://unsplash.com/photos/woman-in-sunglasses-and-pink-top-holding-phone--W2PJu9-iZI',
+  },
+  'onlyfans-rabota-kiev': {
+    localSrc: '/blog/covers/onlyfans-rabota-kiev.jpg',
+    remoteSrc: coverUrl('1659256018440-32664db70cb7'),
+    alt: 'Панорама Киева с мостом над Днепром — удалённая работа моделью OnlyFans в Киеве',
+    photographer: 'Olia Bondarenko',
+    photographerUrl: 'https://unsplash.com/@thdrmdrctr',
+    unsplashUrl: 'https://unsplash.com/photos/a-river-with-a-bridge-and-buildings-eCzCL1Y4JKQ',
+  },
+  'onlyfans-rabota-odessa': {
+    localSrc: '/blog/covers/onlyfans-rabota-odessa.jpg',
+    remoteSrc: coverUrl('1662144013461-8b7090292d0e'),
+    alt: 'Одесский оперный театр — удалённая работа моделью OnlyFans в Одессе',
+    photographer: 'Yana Hurska',
+    photographerUrl: 'https://unsplash.com/@yana_hurska',
+    unsplashUrl: 'https://unsplash.com/photos/a-large-white-building-with-columns-rORA_7imH9I',
+  },
+  'onlyfans-rabota-harkov': {
+    localSrc: '/blog/covers/onlyfans-rabota-harkov.jpg',
+    remoteSrc: coverUrl('1666520030546-7fbaa2549bf7'),
+    alt: 'Благовещенский собор и река в Харькове — удалённая работа моделью OnlyFans в Харькове',
+    photographer: 'Lina',
+    photographerUrl: 'https://unsplash.com/@fujisideofthe_lin',
+    unsplashUrl: 'https://unsplash.com/photos/a-bridge-over-a-river-leading-to-a-large-building-with-towers-GcfNtUck07E',
+  },
 };
 
 export function getBlogCover(slug: string): BlogCover | undefined {
