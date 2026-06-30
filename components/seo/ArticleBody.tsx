@@ -97,6 +97,50 @@ export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
             </div>
           );
         }
+        if (block.type === 'table') {
+          return (
+            <figure
+              key={i}
+              className="my-7 overflow-x-auto rounded-xl border border-white/[0.08]"
+            >
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="bg-white/[0.03]">
+                    {block.headers.map((h, hi) => (
+                      <th
+                        key={hi}
+                        className="border-b border-white/[0.1] px-4 py-3 text-left font-semibold text-white/90"
+                      >
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {block.rows.map((row, r) => (
+                    <tr key={r}>
+                      {row.map((cell, c) => (
+                        <td
+                          key={c}
+                          className={`border-b border-white/[0.06] px-4 py-3 align-top ${
+                            c === 0 ? 'font-medium text-white/85' : 'text-white/65'
+                          }`}
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              {block.caption ? (
+                <figcaption className="px-4 py-2.5 text-[11px] leading-relaxed text-white/40">
+                  {block.caption}
+                </figcaption>
+              ) : null}
+            </figure>
+          );
+        }
         return (
           <p key={i} className="text-body leading-relaxed">
             {block.text}

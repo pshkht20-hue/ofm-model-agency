@@ -6,6 +6,7 @@ import { ArticleBody } from '@/components/seo/ArticleBody';
 import {
   ArticleJsonLd,
   BreadcrumbJsonLd,
+  FaqPageJsonLd,
   HowToJsonLd,
   JobPostingJsonLd,
 } from '@/components/seo/StructuredData';
@@ -14,6 +15,7 @@ import {
   getBlogCategoryLabels,
   getBlogPost,
   getBlogPostLocales,
+  type BlogPost,
 } from '@/lib/content/blog';
 import { BlogArticleLikeBar } from '@/components/seo/BlogArticleLikeBar';
 import { RelatedPosts } from '@/components/seo/RelatedPosts';
@@ -59,6 +61,52 @@ const JOB_APPLICANT_COUNTRIES = [
   'Canada',
 ];
 
+/** City pages also get a city-scoped remote JobPosting — the same honest single
+ *  vacancy, geo-titled. Earns the Google "job listing" rich result for
+ *  "онлифанс работа [город]" and gives an AI a structured hiring fact to cite. */
+const CITY_JOB_TITLE: Record<string, Partial<Record<Locale, string>>> = {
+  'onlyfans-rabota-kiev': {
+    ru: 'Модель OnlyFans — работа в Киеве (удалённо, без опыта)',
+    uk: 'Модель OnlyFans — робота в Києві (віддалено, без досвіду)',
+  },
+  'onlyfans-rabota-odessa': {
+    ru: 'Модель OnlyFans — работа в Одессе (удалённо, без опыта)',
+    uk: 'Модель OnlyFans — робота в Одесі (віддалено, без досвіду)',
+  },
+  'onlyfans-rabota-harkov': {
+    ru: 'Модель OnlyFans — работа в Харькове (удалённо, без опыта)',
+    uk: 'Модель OnlyFans — робота в Харкові (віддалено, без досвіду)',
+  },
+};
+
+function jobPostingProps(
+  slug: string,
+  locale: Locale,
+): { title: string; applicantCountries: string[] } | null {
+  if (slug === JOB_POSTING_SLUG) {
+    return { title: JOB_TITLE[locale], applicantCountries: JOB_APPLICANT_COUNTRIES };
+  }
+  const cityTitle = CITY_JOB_TITLE[slug]?.[locale];
+  if (cityTitle) return { title: cityTitle, applicantCountries: ['Ukraine'] };
+  return null;
+}
+
+/** Pull a visible FAQ (h3 question ending in "?" + the next paragraph) into
+ *  FAQPage items. Matches on-page content; strengthens AI Q&A extraction. */
+function extractFaqItems(blocks: BlogPost['blocks']): { question: string; answer: string }[] {
+  const items: { question: string; answer: string }[] = [];
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i];
+    if (b.type === 'h3' && b.text.trim().endsWith('?')) {
+      const next = blocks[i + 1];
+      if (next && next.type === 'p') {
+        items.push({ question: b.text.trim(), answer: next.text.trim() });
+      }
+    }
+  }
+  return items;
+}
+
 /** Step-by-step posts that get HowTo structured data (steps derived from visible headings). */
 const HOW_TO_SLUGS = new Set([
   'kak-stat-onlyfans-modelyu-s-nulya',
@@ -92,6 +140,8 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPost(slug, blogLocale);
   if (!post) notFound();
   const categoryLabels = getBlogCategoryLabels(blogLocale);
+  const jobPosting = jobPostingProps(post.slug, blogLocale);
+  const faqItems = extractFaqItems(post.blocks);
 
   return (
     <SeoPageShell
@@ -101,14 +151,15 @@ export default async function BlogPostPage({ params }: Props) {
       ]}
     >
       <ArticleJsonLd post={post} locale={blogLocale} />
-      {post.slug === JOB_POSTING_SLUG && (
+      {jobPosting && (
         <JobPostingJsonLd
           post={post}
           locale={blogLocale}
-          title={JOB_TITLE[blogLocale]}
-          applicantCountries={JOB_APPLICANT_COUNTRIES}
+          title={jobPosting.title}
+          applicantCountries={jobPosting.applicantCountries}
         />
       )}
+      {faqItems.length >= 2 && <FaqPageJsonLd items={faqItems} />}
       {HOW_TO_SLUGS.has(post.slug) && <HowToJsonLd post={post} locale={blogLocale} />}
       <BreadcrumbJsonLd
         locale={blogLocale}
