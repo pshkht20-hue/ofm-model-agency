@@ -645,11 +645,9 @@ input[type="number"] {
     mix-blend-mode: normal !important;
     will-change: auto !important;
   }
-  .hero-accent-shimmer {
-    animation: none !important;
-    will-change: auto !important;
-    background-position: 0% center !important;
-  }
+  /* hero-accent-shimmer (the OnlyFans headline flow) is KEPT on mobile — it's
+     one light text-clip animation, and the heavy GPU cost was the nebula
+     blur+blend layers above, which stay frozen. */
   .premium-grain::before {
     display: none !important;
   }
