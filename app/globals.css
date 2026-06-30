@@ -828,27 +828,29 @@ input[type="number"] {
   }
 }
 
-/* ——— Neon frame: bright animated brand-colour neon around the application form ——— */
+/* ——— Neon frame: soft animated brand-colour neon around the application form ——— */
 @property --frame-angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
 
+/* Calmer, smaller glow — small blur radii rasterise cheaply (the old 84–108px
+   shadows were expensive to repaint on scroll). */
 .neon-frame {
   box-shadow:
-    0 0 24px -2px rgba(255, 91, 181, 0.42),
-    0 0 52px 2px rgba(168, 85, 247, 0.28),
-    0 0 84px 12px rgba(0, 212, 255, 0.18);
+    0 0 14px -3px rgba(255, 91, 181, 0.28),
+    0 0 32px 0 rgba(168, 85, 247, 0.16);
 }
 
-/* Child <div> — a thin masked conic ring that glows the full perimeter.
-   Sits at the card edge (inset:0); card-premium already uses ::before/::after. */
+/* Desktop only: a thin masked conic ring glowing the full perimeter.
+   conic-gradient + mask is paint-heavy, so it is disabled on phones below
+   (where its repaint-on-scroll was the main source of jank). */
 .neon-frame-ring {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1.6px;
+  padding: 1.4px;
   background: conic-gradient(
     from var(--frame-angle),
     #ff5bb5,
@@ -869,16 +871,31 @@ input[type="number"] {
   mask-composite: exclude;
   pointer-events: none;
   z-index: 4;
+  opacity: 0.8;
 }
 
-/* Animate only on desktop with motion allowed — keeps mobile/reduced static
-   (still a bright neon ring + glow) at zero animation cost. */
-@media (prefers-reduced-motion: no-preference) and (min-width: 768px) {
+/* Phones: drop the conic ring + mask entirely (its scroll repaint was the
+   jank). A cheap brand-tinted border + a small soft glow keeps it neon but
+   smooth — no conic, no mask, tiny box-shadow. */
+@media (max-width: 767px) {
   .neon-frame-ring {
-    animation: neon-frame-spin 7s linear infinite;
+    display: none;
   }
   .neon-frame {
-    animation: neon-frame-pulse 4.5s ease-in-out infinite;
+    border-color: rgba(255, 91, 181, 0.38);
+    box-shadow:
+      0 0 12px -3px rgba(255, 91, 181, 0.22),
+      0 0 24px 0 rgba(0, 212, 255, 0.12);
+  }
+}
+
+/* Animate only on desktop with motion allowed; slower = calmer. */
+@media (prefers-reduced-motion: no-preference) and (min-width: 768px) {
+  .neon-frame-ring {
+    animation: neon-frame-spin 9s linear infinite;
+  }
+  .neon-frame {
+    animation: neon-frame-pulse 6s ease-in-out infinite;
   }
 }
 
@@ -892,15 +909,13 @@ input[type="number"] {
   0%,
   100% {
     box-shadow:
-      0 0 24px -2px rgba(255, 91, 181, 0.42),
-      0 0 52px 2px rgba(168, 85, 247, 0.28),
-      0 0 84px 12px rgba(0, 212, 255, 0.18);
+      0 0 14px -3px rgba(255, 91, 181, 0.28),
+      0 0 32px 0 rgba(168, 85, 247, 0.16);
   }
   50% {
     box-shadow:
-      0 0 34px 0 rgba(255, 91, 181, 0.6),
-      0 0 68px 6px rgba(168, 85, 247, 0.4),
-      0 0 108px 18px rgba(0, 212, 255, 0.26);
+      0 0 20px -2px rgba(255, 91, 181, 0.4),
+      0 0 42px 2px rgba(168, 85, 247, 0.22);
   }
 }
 
