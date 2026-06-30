@@ -174,7 +174,7 @@ export function HeroSection() {
 
       <div
         data-hero-scan
-        className="hero-scan-beam absolute left-0 right-0 top-[38%] h-px z-[5] pointer-events-none"
+        className="hero-scan-beam absolute left-0 right-0 top-[38%] h-px z-[5] pointer-events-none hidden md:block"
         aria-hidden
       />
 
@@ -245,12 +245,12 @@ export function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <ClickSpark color="#ff5bb5">
+          <ClickSpark color="#ff5bb5" className="w-full sm:w-auto">
             <a
               href="#contact"
               data-hero-cta="primary"
               data-hero-reveal
-              className="btn-primary throb group"
+              className="btn-primary throb group w-full sm:w-auto"
               onClick={() => trackCtaClick({ location: 'hero_primary', locale })}
             >
               <span ref={ctaMagnetRef} className="inline-flex items-center gap-3">
@@ -264,7 +264,7 @@ export function HeroSection() {
             data-hero-cta
             data-hero-reveal
             data-magnetic-area
-            className="btn-secondary"
+            className="btn-secondary w-full sm:w-auto"
             onClick={() => trackCtaClick({ location: 'hero_secondary', locale })}
           >
             <span ref={ctaSecondaryMagnetRef} className="inline-flex items-center gap-3">

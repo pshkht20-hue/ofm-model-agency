@@ -627,6 +627,34 @@ input[type="number"] {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+/* ——— Mobile hero perf: freeze the expensive blurred/blended full-screen
+   layers on phones. Animating opacity on big blur()+mix-blend surfaces
+   re-rasterises them every frame (the real hero mobile jank). Frozen static
+   they look ~identical, and the freed GPU budget lets the one animated layer
+   — the Canvas2D starfield — drift + pulse buttery-smooth. Desktop untouched. */
+@media (max-width: 767px) {
+  .animate-glow-pulse {
+    animation: none !important;
+  }
+  .cosmos-nebula-glow {
+    filter: blur(36px) !important;
+    mix-blend-mode: normal !important;
+    opacity: 0.5 !important;
+  }
+  .cosmos-deep-breathe {
+    mix-blend-mode: normal !important;
+    will-change: auto !important;
+  }
+  .hero-accent-shimmer {
+    animation: none !important;
+    will-change: auto !important;
+    background-position: 0% center !important;
+  }
+  .premium-grain::before {
+    display: none !important;
+  }
+}
+
 /* ——— Cards ——— */
 .card-glass,
 .card-premium {

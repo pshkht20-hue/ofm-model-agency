@@ -360,8 +360,8 @@ export function ContactForm() {
         )}
       </AnimatePresence>
 
-      <p className="mt-8 flex items-center justify-center gap-1.5 text-center text-xs text-white/55">
-        <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-accent-cyan/80" aria-hidden />
+      <p className="mt-8 flex items-start justify-center gap-1.5 text-center text-xs text-white/55">
+        <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent-cyan/80" aria-hidden />
         {t('privacy')}
       </p>
 

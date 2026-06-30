@@ -20,7 +20,7 @@ export function HeroBackground() {
 
       {/* Brand-color nebula glows — palette cohesion + depth */}
       <div
-        className="animate-glow-pulse absolute mix-blend-screen blur-[64px]"
+        className="cosmos-nebula-glow animate-glow-pulse absolute mix-blend-screen blur-[64px]"
         style={{
           left: '-12%',
           top: '-12%',
@@ -33,7 +33,7 @@ export function HeroBackground() {
         }}
       />
       <div
-        className="animate-glow-pulse absolute mix-blend-screen blur-[64px]"
+        className="cosmos-nebula-glow animate-glow-pulse absolute mix-blend-screen blur-[64px]"
         style={{
           right: '-12%',
           bottom: '-2%',
