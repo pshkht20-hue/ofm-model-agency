@@ -218,8 +218,9 @@ export function ContactForm() {
       id="contact-form"
       onSubmit={handleSubmit}
       onFocus={handleFormStart}
-      className="relative max-w-xl mx-auto text-left card-premium p-6 md:p-10 overflow-hidden"
+      className="relative max-w-xl mx-auto text-left card-premium neon-frame p-6 md:p-10 overflow-hidden"
     >
+      <div className="neon-frame-ring" aria-hidden />
       <div
         className="pointer-events-none absolute -top-24 right-0 h-48 w-48 rounded-full bg-accent-pink/10 blur-[80px]"
         aria-hidden

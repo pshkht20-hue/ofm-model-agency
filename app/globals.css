@@ -828,6 +828,82 @@ input[type="number"] {
   }
 }
 
+/* ——— Neon frame: bright animated brand-colour neon around the application form ——— */
+@property --frame-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.neon-frame {
+  box-shadow:
+    0 0 24px -2px rgba(255, 91, 181, 0.42),
+    0 0 52px 2px rgba(168, 85, 247, 0.28),
+    0 0 84px 12px rgba(0, 212, 255, 0.18);
+}
+
+/* Child <div> — a thin masked conic ring that glows the full perimeter.
+   Sits at the card edge (inset:0); card-premium already uses ::before/::after. */
+.neon-frame-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.6px;
+  background: conic-gradient(
+    from var(--frame-angle),
+    #ff5bb5,
+    #a855f7,
+    #00d4ff,
+    #ff5bb5,
+    #a855f7,
+    #00d4ff,
+    #ff5bb5
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Animate only on desktop with motion allowed — keeps mobile/reduced static
+   (still a bright neon ring + glow) at zero animation cost. */
+@media (prefers-reduced-motion: no-preference) and (min-width: 768px) {
+  .neon-frame-ring {
+    animation: neon-frame-spin 7s linear infinite;
+  }
+  .neon-frame {
+    animation: neon-frame-pulse 4.5s ease-in-out infinite;
+  }
+}
+
+@keyframes neon-frame-spin {
+  to {
+    --frame-angle: 360deg;
+  }
+}
+
+@keyframes neon-frame-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 24px -2px rgba(255, 91, 181, 0.42),
+      0 0 52px 2px rgba(168, 85, 247, 0.28),
+      0 0 84px 12px rgba(0, 212, 255, 0.18);
+  }
+  50% {
+    box-shadow:
+      0 0 34px 0 rgba(255, 91, 181, 0.6),
+      0 0 68px 6px rgba(168, 85, 247, 0.4),
+      0 0 108px 18px rgba(0, 212, 255, 0.26);
+  }
+}
+
 /* ——— SpotlightCard: cursor-following neon glow over a card ——— */
 .spotlight-card {
   position: relative;
