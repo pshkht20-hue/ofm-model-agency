@@ -57,4 +57,5 @@ export function getSocialHref(platform: SocialPlatform): string | null {
 export const ENTITY_SAME_AS: string[] = [
   'https://www.wikidata.org/wiki/Q140391425', // Wikidata — OFM's Model Agency
   'https://www.crunchbase.com/organization/ofm-s-model-agency', // Crunchbase
+  'https://www.trustpilot.com/review/ofmmodels.com', // Trustpilot
 ];
