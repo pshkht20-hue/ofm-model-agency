@@ -46,3 +46,14 @@ export function getSocialLinks(): SocialLink[] {
 export function getSocialHref(platform: SocialPlatform): string | null {
   return resolveHref(platform);
 }
+
+/**
+ * Авторитетные entity-профили для Organization.sameAs. Это НЕ соц-CTA
+ * (иконок в футере не дают) — а узлы графа сущности, которые помогают Google
+ * Knowledge Graph и ИИ понять, что «OFM's Model Agency» — реальная компания.
+ * Добавляй по одному по мере создания: Wikidata → LinkedIn → Crunchbase →
+ * Trustpilot → X. Каждый должен ссылаться в ответ на ofmmodels.com.
+ */
+export const ENTITY_SAME_AS: string[] = [
+  'https://www.wikidata.org/wiki/Q140391425', // Wikidata — OFM's Model Agency
+];

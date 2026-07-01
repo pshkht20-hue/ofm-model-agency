@@ -2,7 +2,7 @@ import type { Locale } from '@/i18n/routing';
 import { openGraphLocale } from '@/i18n/routing';
 import { getSiteUrl, siteConfig } from '@/lib/site';
 import { pathForLocale } from '@/lib/i18n/paths';
-import { getSocialLinks } from '@/lib/social';
+import { getSocialLinks, ENTITY_SAME_AS } from '@/lib/social';
 import { ServiceJsonLd } from '@/components/seo/StructuredData';
 
 const htmlLang: Record<Locale, string> = {
@@ -20,7 +20,7 @@ type JsonLdProps = {
 export function JsonLd({ locale = 'ru', description }: JsonLdProps) {
   const siteUrl = getSiteUrl();
   const socialLinks = getSocialLinks();
-  const sameAs = socialLinks.map((link) => link.href);
+  const sameAs = [...socialLinks.map((link) => link.href), ...ENTITY_SAME_AS];
   const telegram = socialLinks.find((link) => link.platform === 'telegram')?.href;
   const homePath = pathForLocale('/', locale);
 
