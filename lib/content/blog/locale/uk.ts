@@ -1006,6 +1006,15 @@ const UK_OVERLAY: BlogLocaleOverlayMap = {
           "Анонімно: геоблок країни проживання плюс захист особистих даних",
         ],
       },
+      {
+        type: "nav",
+        intro: "Онліфанс робота по містах України:",
+        links: [
+          { href: "/blog/onlyfans-rabota-kiev", label: "Робота на OnlyFans у Києві" },
+          { href: "/blog/onlyfans-rabota-odessa", label: "Робота на OnlyFans в Одесі" },
+          { href: "/blog/onlyfans-rabota-harkov", label: "Робота на OnlyFans у Харкові" },
+        ],
+      },
       { type: "h2", text: "Часті питання" },
       { type: "h3", text: "Чи можна без досвіду?" },
       { type: "p", text: "Так — можна без досвіду й без аудиторії. Навчаємо з нуля за 10–14 днів. Працюємо лише з повнолітніми (18+)." },

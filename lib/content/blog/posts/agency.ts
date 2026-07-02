@@ -452,6 +452,15 @@ export const agencyPosts: BlogPost[] = [
         ],
       },
       {
+        type: 'nav',
+        intro: 'Онлифанс работа по городам Украины:',
+        links: [
+          { href: '/blog/onlyfans-rabota-kiev', label: 'Работа на OnlyFans в Киеве' },
+          { href: '/blog/onlyfans-rabota-odessa', label: 'Работа на OnlyFans в Одессе' },
+          { href: '/blog/onlyfans-rabota-harkov', label: 'Работа на OnlyFans в Харькове' },
+        ],
+      },
+      {
         type: 'h2',
         text: 'Что должно входить в OnlyFans агентство full-service',
       },
