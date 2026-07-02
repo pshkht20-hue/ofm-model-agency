@@ -111,6 +111,7 @@ function extractFaqItems(blocks: BlogPost['blocks']): { question: string; answer
 const HOW_TO_SLUGS = new Set([
   'kak-stat-onlyfans-modelyu-s-nulya',
   'onlyfans-agentstvo-dlya-nachinayushchih',
+  'kak-zaregistrirovatsya-na-onlyfans',
 ]);
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

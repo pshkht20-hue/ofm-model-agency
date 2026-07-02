@@ -59,6 +59,16 @@ export function HomeSeoBlock() {
           )}
           {(locale === 'ru' || locale === 'uk') && (
             <Link
+              href="/blog/kak-zaregistrirovatsya-na-onlyfans"
+              className="btn-secondary !py-2.5 !px-5"
+            >
+              {locale === 'uk'
+                ? 'Як зареєструватися на OnlyFans'
+                : 'Как зарегистрироваться на OnlyFans'}
+            </Link>
+          )}
+          {(locale === 'ru' || locale === 'uk') && (
+            <Link
               href="/blog/robota-dlya-ukrainok-za-kordonom"
               className="btn-secondary !py-2.5 !px-5"
             >
