@@ -260,6 +260,14 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@fujisideofthe_lin',
     unsplashUrl: 'https://unsplash.com/photos/a-bridge-over-a-river-leading-to-a-large-building-with-towers-GcfNtUck07E',
   },
+  'kak-zaregistrirovatsya-na-onlyfans': {
+    localSrc: '/blog/covers/kak-zaregistrirovatsya-na-onlyfans.jpg',
+    remoteSrc: coverUrl('1665686308827-eb62e4f6604d'),
+    alt: 'Молодая женщина работает за ноутбуком дома — пошаговая регистрация на OnlyFans',
+    photographer: 'Microsoft Edge',
+    photographerUrl: 'https://unsplash.com/@microsoftedge',
+    unsplashUrl: 'https://unsplash.com/photos/a-woman-using-a-laptop-1N49Cn7P0Fg',
+  },
 };
 
 export function getBlogCover(slug: string): BlogCover | undefined {
