@@ -125,7 +125,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Deja tu solicitud en el sitio (es anónima y no te compromete a nada) o escríbenos por Telegram a @Azalia_agency. Una especialista te contactará, responderá todas tus preguntas y te explicará los ingresos y las condiciones. Si quieres, primero calcula tu posible ingreso con la calculadora de la página principal.",
+        text: "Deja tu solicitud en el sitio (es anónima y no te compromete a nada) o escríbenos por Telegram a @ofmm_agency. Una especialista te contactará, responderá todas tus preguntas y te explicará los ingresos y las condiciones. Si quieres, primero calcula tu posible ingreso con la calculadora de la página principal.",
       },
       {
         type: "nav",
@@ -152,7 +152,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Lista para brillar en OnlyFans?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Te contamos los ingresos, las condiciones y la confidencialidad.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. Te contamos los ingresos, las condiciones y la confidencialidad.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "El ingreso depende del nicho, el volumen de contenido y la interacción: es una referencia, no una garantía.",
@@ -248,7 +248,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Lista para hablar con una agencia seria?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Un manager te explica comisión, contrato y condiciones en 24 horas.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. Un manager te explica comisión, contrato y condiciones en 24 horas.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -330,7 +330,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Quieres un management de ciclo completo?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Te contamos qué incluye el full-service y cómo se reparte la comisión.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. Te contamos qué incluye el full-service y cómo se reparte la comisión.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -394,7 +394,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Te reconoces en estas señales?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Vemos juntas si delegar tiene sentido en tu etapa.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. Vemos juntas si delegar tiene sentido en tu etapa.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -462,7 +462,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Buscas una agencia que no cobre por adelantado?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. El manager explica condiciones antes de cualquier acuerdo.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. El manager explica condiciones antes de cualquier acuerdo.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -577,7 +577,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Creadora en Ucrania o la diáspora?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Trabajamos 100% remoto con chicas de UA y la UE.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. Trabajamos 100% remoto con chicas de UA y la UE.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -660,7 +660,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Quieres un embudo llave en mano?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM monta el marketing multiplataforma por ti.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. OFM monta el marketing multiplataforma por ti.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -724,7 +724,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Quieres tráfico que sí convierte?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM lleva el marketing y los chats 24/7 por ti.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. OFM lleva el marketing y los chats 24/7 por ti.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -846,7 +846,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Crecer en redes sin arriesgar baneos?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM construye el embudo SFW y el tráfico por ti.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. OFM construye el embudo SFW y el tráfico por ti.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -945,7 +945,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Tus suscriptores se van demasiado pronto?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM monta el sistema de retención: contenido, chats y precios.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. OFM monta el sistema de retención: contenido, chats y precios.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -1091,7 +1091,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Quieres chats 24/7 que vendan por ti?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM cubre los DM por turnos y lleva las ventas.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. OFM cubre los DM por turnos y lleva las ventas.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -1228,7 +1228,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Quieres una estrategia de precios que rinda?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. OFM ajusta suscripción, PPV y customs contigo.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. OFM ajusta suscripción, PPV y customs contigo.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -1371,7 +1371,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Quieres conocer tu potencial en tu nicho?",
-        body: "En ofmmodels.com encontrarás casos con capturas (facturación bruta) y una calculadora. Envía tu solicitud y te escribimos por Telegram (@Azalia_agency) en 24 horas.",
+        body: "En ofmmodels.com encontrarás casos con capturas (facturación bruta) y una calculadora. Envía tu solicitud y te escribimos por Telegram (@ofmm_agency) en 24 horas.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Los casos y la calculadora son orientativos, no una garantía de ingresos. Las cifras son la facturación bruta del balance de la página de OnlyFans, no el pago neto de la modelo.",
@@ -1958,7 +1958,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Tu cara es tu mayor activo",
-        body: "OFM revela tu individualidad y protege tu privacidad: geo-bloqueo, protección de datos y abogado. Envía tu solicitud y te respondemos por Telegram (@Azalia_agency) en 24 h.",
+        body: "OFM revela tu individualidad y protege tu privacidad: geo-bloqueo, protección de datos y abogado. Envía tu solicitud y te respondemos por Telegram (@ofmm_agency) en 24 h.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras se refieren a la facturación bruta (gross) del balance de la página, no a un pago garantizado. Solo +18.",
@@ -2063,7 +2063,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Creadora en Moldova o la diáspora?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Trabajamos 100% remoto desde Chișinău o la UE.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. Trabajamos 100% remoto desde Chișinău o la UE.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -2169,7 +2169,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Creadora en Latinoamérica o Brasil?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @Azalia_agency. Trabajamos 100% remoto en español, portugués e inglés.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. Trabajamos 100% remoto en español, portugués e inglés.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",

@@ -125,7 +125,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Submit an application on the site — it's anonymous and commits you to nothing — or message us on Telegram @Azalia_agency. A specialist will get in touch, answer all your questions, and walk you through the income and the terms. If you like, start by estimating your income with the calculator on the homepage.",
+        text: "Submit an application on the site — it's anonymous and commits you to nothing — or message us on Telegram @ofmm_agency. A specialist will get in touch, answer all your questions, and walk you through the income and the terms. If you like, start by estimating your income with the calculator on the homepage.",
       },
       {
         type: "nav",
@@ -152,7 +152,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Ready to shine on OnlyFans?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. We'll walk you through the income, the terms, and your privacy.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. We'll walk you through the income, the terms, and your privacy.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement — this is a guideline, not a guarantee. Figures are page balance turnover (gross), not a guaranteed payout.",
@@ -251,7 +251,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Want to compare us against your checklist?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. A manager will walk you through commission, the contract, and your privacy.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. A manager will walk you through commission, the contract, and your privacy.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -348,7 +348,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Want a team that runs all 12 for you?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. A manager explains marketing, chats, and content strategy before any commitment.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. A manager explains marketing, chats, and content strategy before any commitment.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -424,7 +424,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Recognized yourself? Let's map a plan.",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. We'll outline ROI for your niche, with no entry fee.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. We'll outline ROI for your niche, with no entry fee.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -501,7 +501,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Want a team that earns from your growth, not your fee?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. A manager explains the terms in chat before any commitment, with no upfront fee.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. A manager explains the terms in chat before any commitment, with no upfront fee.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -589,7 +589,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Looking for an OnlyFans agency in Ukraine?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. A manager replies within 24 hours, with no entry fee.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. A manager replies within 24 hours, with no entry fee.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -675,7 +675,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Want the funnel built end-to-end?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM builds your marketing funnel from niche to DMs; manager reply within 24 hours.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. OFM builds your marketing funnel from niche to DMs; manager reply within 24 hours.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -742,7 +742,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Want traffic and chats handled for you?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM runs Reddit, X, and the 24/7 chats so subscribers actually convert.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. OFM runs Reddit, X, and the 24/7 chats so subscribers actually convert.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -867,7 +867,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Want an SFW funnel that doesn't get banned?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM runs your Instagram and TikTok funnel into OnlyFans, safely.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. OFM runs your Instagram and TikTok funnel into OnlyFans, safely.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -969,7 +969,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Want fans who stay and spend more?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM runs retention through chats, content, and pricing so churn drops.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. OFM runs retention through chats, content, and pricing so churn drops.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -1122,7 +1122,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Want chats that sell 24/7 in your voice?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM runs the chat shifts and the PPV sales so you never burn ad spend overnight.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. OFM runs the chat shifts and the PPV sales so you never burn ad spend overnight.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -1262,7 +1262,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Want your pricing tested and tuned for you?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. OFM builds your subscription, PPV, and customs pricing around real data.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. OFM builds your subscription, PPV, and customs pricing around real data.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -1409,7 +1409,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Want to know your real potential in your niche?",
-        body: "At ofmmodels.com you'll find case studies with screenshots (gross turnover) and an income calculator. Apply and a manager reaches out on Telegram (@Azalia_agency) within 24 hours.",
+        body: "At ofmmodels.com you'll find case studies with screenshots (gross turnover) and an income calculator. Apply and a manager reaches out on Telegram (@ofmm_agency) within 24 hours.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Case studies and the calculator are reference points (page balance turnover, gross) — not guaranteed earnings.",
@@ -1475,7 +1475,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "It makes sense if you want to cover the whole path in 7-14 days with a team, instead of learning by trial and error in your DMs at night. OFM takes on beginners: apply on the site and a manager reaches out on Telegram (@Azalia_agency) within 24 hours.",
+        text: "It makes sense if you want to cover the whole path in 7-14 days with a team, instead of learning by trial and error in your DMs at night. OFM takes on beginners: apply on the site and a manager reaches out on Telegram (@ofmm_agency) within 24 hours.",
       },
       {
         type: "nav",
@@ -1652,7 +1652,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Need a month-long shoot calendar?",
-        body: "Content strategy is built into OFM management — we'll map it out together when you apply. Or message us on Telegram @Azalia_agency.",
+        body: "Content strategy is built into OFM management — we'll map it out together when you apply. Or message us on Telegram @ofmm_agency.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income figures refer to gross page balance turnover, not a guaranteed payout — results depend on your niche, content volume and engagement.",
@@ -1791,7 +1791,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Tired of repeating the same mistakes?",
-        body: "OFM builds your system from scratch: profile, traffic, chats. A manager reaches out on Telegram (@Azalia_agency) within 24 hours.",
+        body: "OFM builds your system from scratch: profile, traffic, chats. A manager reaches out on Telegram (@ofmm_agency) within 24 hours.",
         buttonLabel: "Apply",
         buttonHref: "/#contact",
         note: "Income depends on your niche, content volume and engagement. Figures refer to page balance turnover (gross) — a guideline, not a guaranteed payout.",
@@ -1931,7 +1931,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Is anonymity and an NDA a priority for you?",
-        body: "At OFM, access is granted on a need-to-know basis, with an NDA and a clear leak-response plan baked into your management. Apply and a manager replies on Telegram @Azalia_agency within 24 hours.",
+        body: "At OFM, access is granted on a need-to-know basis, with an NDA and a clear leak-response plan baked into your management. Apply and a manager replies on Telegram @ofmm_agency within 24 hours.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Figures in our case studies are gross page balance turnover, not a model's guaranteed payout. Income depends on niche, content volume and engagement — a benchmark, not a guarantee.",
@@ -2012,7 +2012,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Your face is your main asset",
-        body: "OFM brings out your individuality and protects your privacy: geo-blocking, data protection, and a lawyer. Apply now and we'll reply on Telegram (@Azalia_agency) within 24 hours.",
+        body: "OFM brings out your individuality and protects your privacy: geo-blocking, data protection, and a lawyer. Apply now and we'll reply on Telegram (@ofmm_agency) within 24 hours.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Figures in the case studies on this site are the gross balance turnover of the OnlyFans page, not the model's guaranteed payout.",
@@ -2112,7 +2112,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Looking for an OnlyFans agency in Moldova?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. A manager replies within 24 hours, with no entry fee.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. A manager replies within 24 hours, with no entry fee.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -2207,7 +2207,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Looking for an OnlyFans agency in Latin America?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @Azalia_agency. Managers in PT/ES/EN reply within 24 hours, with no entry fee.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. Managers in PT/ES/EN reply within 24 hours, with no entry fee.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",

@@ -19,7 +19,7 @@
 | HQ country | **[подтверди — напр. Ukraine]** ← заполни |
 | Category | Creator management & marketing agency |
 | Languages | Ukrainian, Russian, English, Spanish |
-| Contact | Telegram https://t.me/Azalia_agency |
+| Contact | Telegram https://t.me/ofmm_agency |
 
 ## ОПИСАНИЯ (копировать точно)
 **Short (≤150 знаков):**
@@ -35,7 +35,7 @@
 ```
 https://ofmmodels.com
 https://www.instagram.com/ofmmodel.agency
-https://t.me/Azalia_agency
+https://t.me/ofmm_agency
 LinkedIn:    ____________________
 Crunchbase:  ____________________
 X/Twitter:   ____________________

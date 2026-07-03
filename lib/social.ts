@@ -7,7 +7,7 @@ export type SocialLink = {
 
 /** Можно переопределить через NEXT_PUBLIC_SOCIAL_* в Vercel / .env (иначе дефолты ниже) */
 const DEFAULT_LINKS: Record<SocialPlatform, string> = {
-  telegram: 'https://t.me/Azalia_agency',
+  telegram: 'https://t.me/ofmm_agency',
   whatsapp: 'https://wa.me/380939747588',
   instagram: 'https://www.instagram.com/ofmmodel.agency',
 };

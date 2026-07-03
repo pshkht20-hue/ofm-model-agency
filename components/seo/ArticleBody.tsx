@@ -1,6 +1,33 @@
 import type { BlogBlock } from '@/lib/content/blog';
 import { Link } from '@/i18n/navigation';
 
+const TELEGRAM_URL = 'https://t.me/ofmm_agency';
+const TELEGRAM_RE = /(https?:\/\/t\.me\/ofmm_agency|t\.me\/ofmm_agency|@ofmm_agency)/g;
+
+/**
+ * Превращает упоминания Telegram-ника (@ofmm_agency / t.me/ofmm_agency) в
+ * кликабельную ссылку прямо в тексте статьи — чтобы читатель мог сразу перейти
+ * в чат, а не искать вручную. Точечный матч по нашему нику, без ложных срабатываний.
+ */
+function linkifyTelegram(text: string) {
+  if (!text.includes('ofmm_agency')) return text;
+  return text.split(TELEGRAM_RE).map((part, i) =>
+    part === '@ofmm_agency' || part.includes('t.me/ofmm_agency') ? (
+      <a
+        key={i}
+        href={TELEGRAM_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="link-hover-line text-accent-pink hover:text-accent-cyan transition-colors"
+      >
+        {part}
+      </a>
+    ) : (
+      part
+    ),
+  );
+}
+
 export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
   return (
     <article className="prose-seo space-y-5">
@@ -23,7 +50,7 @@ export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
           return (
             <ul key={i} className="list-disc pl-5 space-y-2 text-body">
               {block.items.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>{linkifyTelegram(item)}</li>
               ))}
             </ul>
           );
@@ -34,7 +61,7 @@ export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
               key={i}
               className="border-l-2 border-accent-pink/60 bg-accent-pink/[0.06] rounded-r-xl px-5 py-4 text-white/75 text-[0.9375rem] leading-relaxed not-italic"
             >
-              {block.text}
+              {linkifyTelegram(block.text)}
             </blockquote>
           );
         }
@@ -87,12 +114,12 @@ export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
               className="mt-10 rounded-2xl border border-accent-pink/20 bg-accent-pink/[0.06] px-6 py-8 text-center"
             >
               <h2 className="font-serif text-xl text-white mb-3">{block.title}</h2>
-              <p className="text-body text-sm mb-6 max-w-lg mx-auto">{block.body}</p>
+              <p className="text-body text-sm mb-6 max-w-lg mx-auto">{linkifyTelegram(block.body)}</p>
               <Link href={block.buttonHref} className="btn-primary inline-flex">
                 {block.buttonLabel}
               </Link>
               {block.note ? (
-                <p className="text-xs text-white/40 mt-4 max-w-md mx-auto">{block.note}</p>
+                <p className="text-xs text-white/40 mt-4 max-w-md mx-auto">{linkifyTelegram(block.note)}</p>
               ) : null}
             </div>
           );
@@ -143,7 +170,7 @@ export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
         }
         return (
           <p key={i} className="text-body leading-relaxed">
-            {block.text}
+            {linkifyTelegram(block.text)}
           </p>
         );
       })}
