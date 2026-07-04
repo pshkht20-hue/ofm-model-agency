@@ -3,13 +3,16 @@
 import type { ReactNode } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Navbar } from '@/components/Navbar';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { SiteFooter } from '@/components/layout/SiteFooter';
+import { StickyMobileCta } from '@/components/StickyMobileCta';
+import { TelegramCta } from '@/components/TelegramCta';
 import { NeonAmbience } from '@/components/ui/NeonAccents';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { Link } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/routing';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import {
   descReveal,
@@ -20,6 +23,21 @@ import {
 } from '@/lib/motion';
 
 type Crumb = { label: string; href?: string };
+
+/** Локальные строки конверсионного слоя — messages/* не трогаем, слой аддитивный. */
+const TRUST_LINE: Record<Locale, string> = {
+  ru: '220+ моделей · Отвечаем за 24 часа',
+  uk: '220+ моделей · Відповідаємо протягом 24 годин',
+  en: '220+ models · We reply within 24 hours',
+  es: '220+ modelos · Respondemos en 24 horas',
+};
+
+const TELEGRAM_LABEL: Record<Locale, string> = {
+  ru: 'Или напишите сразу в Telegram',
+  uk: 'Або напишіть одразу в Telegram',
+  en: 'Or message us on Telegram',
+  es: 'O escríbenos por Telegram',
+};
 
 type SeoPageShellProps = {
   children: ReactNode;
@@ -33,6 +51,7 @@ export function SeoPageShell({
   showCta = true,
 }: SeoPageShellProps) {
   const t = useTranslations('seoShell');
+  const locale = useLocale() as Locale;
   const reduced = useReducedMotion();
 
   return (
@@ -40,6 +59,7 @@ export function SeoPageShell({
       <NeonAmbience />
       <ScrollProgress />
       <Navbar />
+      {showCta && <StickyMobileCta href="/#contact" />}
 
       <main className="pt-24 md:pt-28 pb-16 md:pb-20">
         <div className="max-w-3xl mx-auto px-5 md:px-8 w-full">
@@ -76,6 +96,22 @@ export function SeoPageShell({
                   {t('ctaButton')}
                   <ArrowRight className="w-5 h-5" />
                 </Link>
+              </motion.div>
+              <motion.p
+                className="mt-4 text-xs text-white/45"
+                variants={reduced ? undefined : staggerItem(12)}
+              >
+                {TRUST_LINE[locale]}
+              </motion.p>
+              <motion.div
+                className="mt-3"
+                variants={reduced ? undefined : staggerItem(12)}
+              >
+                <TelegramCta
+                  location="contact_primary"
+                  label={TELEGRAM_LABEL[locale]}
+                  variant="inline"
+                />
               </motion.div>
             </motion.div>
           )}

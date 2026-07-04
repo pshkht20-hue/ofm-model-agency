@@ -4,14 +4,21 @@ import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { trackCtaClick } from '@/lib/analytics/gtag';
 import { EASE_SMOOTH } from '@/lib/motion';
 
-export function StickyMobileCta() {
+type StickyMobileCtaProps = {
+  /** Якорь на текущей странице ('#contact') или внутренний путь ('/#contact' на SEO-страницах, локализуется через i18n Link). */
+  href?: string;
+};
+
+export function StickyMobileCta({ href = '#contact' }: StickyMobileCtaProps) {
   const t = useTranslations('nav');
   const locale = useLocale();
   const reduced = useReducedMotion();
   const [visible, setVisible] = useState(false);
+  const isRoute = href.startsWith('/');
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 480);
@@ -30,15 +37,27 @@ export function StickyMobileCta() {
           transition={{ duration: reduced ? 0.15 : 0.45, ease: EASE_SMOOTH }}
           className="fixed bottom-0 left-0 right-0 z-[55] p-4 md:hidden pointer-events-none"
         >
-          <a
-            href="#contact"
-            aria-label={t('becomeModel')}
-            className="btn-primary w-full pointer-events-auto shadow-[0_-8px_40px_-8px_rgba(255,91,181,0.5)]"
-            onClick={() => trackCtaClick({ location: 'sticky_mobile', locale })}
-          >
-            {t('becomeModel')}
-            <ArrowRight className="w-5 h-5" />
-          </a>
+          {isRoute ? (
+            <Link
+              href={href}
+              aria-label={t('becomeModel')}
+              className="btn-primary w-full pointer-events-auto shadow-[0_-8px_40px_-8px_rgba(255,91,181,0.5)]"
+              onClick={() => trackCtaClick({ location: 'sticky_mobile', locale })}
+            >
+              {t('becomeModel')}
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          ) : (
+            <a
+              href={href}
+              aria-label={t('becomeModel')}
+              className="btn-primary w-full pointer-events-auto shadow-[0_-8px_40px_-8px_rgba(255,91,181,0.5)]"
+              onClick={() => trackCtaClick({ location: 'sticky_mobile', locale })}
+            >
+              {t('becomeModel')}
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          )}
         </motion.div>
       )}
     </AnimatePresence>

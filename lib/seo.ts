@@ -29,13 +29,15 @@ export function createPageMetadata({
   const canonicalPath = pathForLocale(path, locale);
   const ogImages = image
     ? [{ url: image.url, alt: image.alt ?? title }]
-    : [{ url: `${siteUrl}/opengraph-image`, width: 1200, height: 630, alt: title }];
+    : [{ url: `${siteUrl}/og-default.png`, width: 1200, height: 630, alt: title }];
 
   return {
     metadataBase: new URL(siteUrl),
     title,
     description,
-    keywords: [...siteConfig.keywords, ...keywords],
+    // Только точечные keywords страницы: сайтвайд-массив убран (Google игнорирует
+    // meta keywords, Bing расценивает раздутый список как спам-сигнал).
+    ...(keywords.length > 0 ? { keywords } : {}),
     alternates: {
       canonical: canonicalPath,
       languages: hreflangAlternates(siteUrl, path, availableLocales),
@@ -53,10 +55,12 @@ export function createPageMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: image ? [image.url] : [`${siteUrl}/opengraph-image`],
+      images: image ? [image.url] : [`${siteUrl}/og-default.png`],
     },
     robots: noIndex
-      ? { index: false, follow: false }
+      // follow: true — noindex-страницы (privacy/terms) не должны рвать ссылочный
+      // граф: они слинкованы из футера каждой страницы.
+      ? { index: false, follow: true }
       : {
           index: true,
           follow: true,

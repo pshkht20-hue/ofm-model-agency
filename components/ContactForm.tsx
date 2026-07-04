@@ -7,6 +7,7 @@ import { SuccessCheckmark } from '@/components/ui/SuccessCheckmark';
 import { ClickSpark } from '@/components/ui/ClickSpark';
 import { useLocale, useTranslations } from 'next-intl';
 import {
+  CALC_PREFILL_EVENT,
   clearCalcPrefill,
   formatUsd,
   readCalcPrefill,
@@ -66,6 +67,8 @@ export function ContactForm() {
   const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>({});
   const [hasCalcPrefill, setHasCalcPrefill] = useState(false);
   const startedRef = useRef(false);
+  const messageRef = useRef('');
+  const lastPrefillRef = useRef('');
 
   const valid: Record<FieldName, boolean> = {
     name: name.trim().length >= 2,
@@ -98,17 +101,35 @@ export function ContactForm() {
   }
 
   useEffect(() => {
-    const prefill = readCalcPrefill();
-    if (!prefill) return;
+    messageRef.current = message;
+  }, [message]);
 
-    setMessage(
-      t('calcPrefillMessage', {
+  // Префилл применяется и на маунте, и по событию калькулятора: форма смонтирована
+  // раньше, чем девушка проходит квиз, поэтому одного чтения на маунте мало.
+  useEffect(() => {
+    function applyPrefill() {
+      const prefill = readCalcPrefill();
+      if (!prefill) return;
+
+      const text = t('calcPrefillMessage', {
         low: formatUsd(prefill.low),
         high: formatUsd(prefill.high),
         tier: tCalc(`result.tiers.${prefill.tier}`),
-      }),
-    );
-    setHasCalcPrefill(true);
+      });
+
+      // Не перезатираем сообщение, которое пользователь уже начал писать сам.
+      const current = messageRef.current;
+      if (current.trim() !== '' && current !== lastPrefillRef.current) return;
+
+      lastPrefillRef.current = text;
+      messageRef.current = text;
+      setMessage(text);
+      setHasCalcPrefill(true);
+    }
+
+    applyPrefill();
+    window.addEventListener(CALC_PREFILL_EVENT, applyPrefill);
+    return () => window.removeEventListener(CALC_PREFILL_EVENT, applyPrefill);
   }, [t, tCalc]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {

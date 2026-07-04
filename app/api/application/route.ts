@@ -15,6 +15,74 @@ const MAX_LENGTH = {
   message: 2000,
 };
 
+const ALLOWED_LOCALES = ['ru', 'uk', 'en', 'es'] as const;
+type AllowedLocale = (typeof ALLOWED_LOCALES)[number];
+
+function sanitizeLocale(value: unknown): AllowedLocale {
+  return typeof value === 'string' &&
+    (ALLOWED_LOCALES as readonly string[]).includes(value)
+    ? (value as AllowedLocale)
+    : 'ru';
+}
+
+// --- Rate limit: sliding window по IP, in-memory ---
+// На serverless (Vercel) каждый инстанс держит свою Map, так что это
+// per-instance барьер от спама. Полноценный глобальный лимит — Vercel WAF.
+const RATE_WINDOWS = [
+  { windowMs: 10 * 60 * 1000, max: 3 },
+  { windowMs: 60 * 60 * 1000, max: 10 },
+] as const;
+const MAX_WINDOW_MS = Math.max(...RATE_WINDOWS.map((w) => w.windowMs));
+const CLEANUP_INTERVAL_MS = 10 * 60 * 1000;
+
+const submissionsByIp = new Map<string, number[]>();
+let lastCleanupAt = 0;
+
+const RATE_LIMIT_ERRORS: Record<AllowedLocale, string> = {
+  ru: 'Слишком много заявок с вашего адреса. Попробуйте снова через 10–15 минут.',
+  uk: 'Забагато заявок з вашої адреси. Спробуйте ще раз за 10–15 хвилин.',
+  en: 'Too many applications from your address. Please try again in 10–15 minutes.',
+  es: 'Demasiadas solicitudes desde tu dirección. Inténtalo de nuevo en 10–15 minutos.',
+};
+
+function getClientIp(request: Request): string {
+  const forwarded = request.headers.get('x-forwarded-for');
+  const first = forwarded?.split(',')[0]?.trim();
+  return first || 'unknown';
+}
+
+function cleanupSubmissions(now: number): void {
+  if (now - lastCleanupAt < CLEANUP_INTERVAL_MS) return;
+  lastCleanupAt = now;
+  for (const [ip, timestamps] of submissionsByIp) {
+    const fresh = timestamps.filter((t) => now - t < MAX_WINDOW_MS);
+    if (fresh.length === 0) {
+      submissionsByIp.delete(ip);
+    } else {
+      submissionsByIp.set(ip, fresh);
+    }
+  }
+}
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  cleanupSubmissions(now);
+  const timestamps = submissionsByIp.get(ip) ?? [];
+  return RATE_WINDOWS.some(
+    ({ windowMs, max }) =>
+      timestamps.filter((t) => now - t < windowMs).length >= max,
+  );
+}
+
+function recordSubmission(ip: string): void {
+  const now = Date.now();
+  const timestamps = (submissionsByIp.get(ip) ?? []).filter(
+    (t) => now - t < MAX_WINDOW_MS,
+  );
+  timestamps.push(now);
+  submissionsByIp.set(ip, timestamps);
+}
+
 function trim(value: unknown): string {
   return typeof value === 'string' ? value.trim() : '';
 }
@@ -26,7 +94,7 @@ function validate(
   ok: true;
   data: ApplicationPayload;
 } | { ok: false; error: string } {
-  const e = getApiErrors(typeof body.locale === 'string' ? body.locale : locale);
+  const e = getApiErrors(locale);
   if (trim(body.website)) {
     return { ok: true, data: { name: '', telegram: '' } };
   }
@@ -74,7 +142,17 @@ function validate(
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as Record<string, unknown>;
-    const result = validate(body, typeof body.locale === 'string' ? body.locale : undefined);
+    const locale = sanitizeLocale(body.locale);
+    const ip = getClientIp(request);
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: RATE_LIMIT_ERRORS[locale] },
+        { status: 429 },
+      );
+    }
+
+    const result = validate(body, locale);
 
     if (!result.ok) {
       return NextResponse.json({ error: result.error }, { status: 400 });
@@ -84,10 +162,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true });
     }
 
-    const locale = typeof body.locale === 'string' ? body.locale : 'ru';
     const location = formatVisitorGeo(getVisitorGeo(request));
     const geo = getVisitorGeo(request);
     const text = formatApplicationMessage({ ...result.data, locale, location: location ?? undefined });
+    recordSubmission(ip);
     await sendTelegramMessage(text);
 
     void trackContactSubmitServer({

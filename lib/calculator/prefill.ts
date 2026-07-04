@@ -2,6 +2,9 @@ import type { ResultTier } from '@/lib/calculator/estimate';
 
 const STORAGE_KEY = 'ofm_calc_prefill';
 
+/** Событие «калькулятор сохранил прогноз» — форма ловит его и применяет префилл без ремаунта. */
+export const CALC_PREFILL_EVENT = 'ofm:calc-prefill';
+
 export type CalcPrefill = {
   low: number;
   high: number;
@@ -13,6 +16,7 @@ export function saveCalcPrefill(data: Omit<CalcPrefill, 'savedAt'>): void {
   if (typeof window === 'undefined') return;
   const payload: CalcPrefill = { ...data, savedAt: Date.now() };
   sessionStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+  window.dispatchEvent(new CustomEvent(CALC_PREFILL_EVENT));
 }
 
 export function readCalcPrefill(): CalcPrefill | null {

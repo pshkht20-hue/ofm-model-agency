@@ -147,6 +147,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-agentstvo-ukraina",
             label: "OnlyFans agency in Ukraine",
           },
+          {
+            href: "/#calculator",
+            label: "Income calculator on the homepage",
+          },
         ],
       },
       {

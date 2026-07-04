@@ -4,7 +4,9 @@ export function escapeTelegramHtml(text: string): string {
   return text
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 const LOCALE_LABELS: Record<string, string> = {
@@ -38,11 +40,8 @@ function formatTelegramContact(raw: string): string {
     return `<a href="https://t.me/+${escapeTelegramHtml(digits)}">${safe}</a>`;
   }
 
-  if (/^t\.me\//i.test(value) || /^https?:\/\//i.test(value)) {
-    const href = value.startsWith('http') ? value : `https://${value}`;
-    return `<a href="${escapeTelegramHtml(href)}">${safe}</a>`;
-  }
-
+  // Линкуем только @username и телефон. Произвольные URL из формы
+  // не превращаем в ссылки — это фишинг-вектор, оставляем плоским текстом.
   return safe;
 }
 

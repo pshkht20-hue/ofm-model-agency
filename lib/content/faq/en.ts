@@ -5,9 +5,9 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
     title: 'About the agency and working together',
     items: [
       {
-        question: 'What is OFM (OFM\'s Model Agency)?',
+        question: 'What is OFM?',
         answer:
-          'OFM (OFM\'s Model Agency, ofmmodels.com) is an independent international OnlyFans management agency for creators. We are not affiliated with the OnlyFans platform and do not speak on its behalf. Our team handles marketing, 24/7 chats, content strategy, analytics, and account protection; you focus on content. Collaboration starts with a free application on the site — a manager replies on Telegram within 24 hours. Terms and commission are agreed individually, with no hidden upfront “entry” fees.',
+          'OFM (OnlyFans Management) is the business of running OnlyFans creator accounts: marketing, 24/7 subscriber chats, content strategy, analytics, and account protection, so the model can focus on content. That is exactly what our team does — OFM\'s Model Agency (ofmmodels.com), an independent international agency: we are not affiliated with the OnlyFans platform and do not speak on its behalf. Collaboration starts with a free application on the site — a manager replies on Telegram within 24 hours. Terms and commission are agreed individually, with no hidden upfront “entry” fees.',
       },
       {
         question: 'What is an OnlyFans agency, and why would a model need one?',

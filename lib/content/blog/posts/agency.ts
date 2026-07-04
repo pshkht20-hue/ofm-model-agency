@@ -134,7 +134,7 @@ export const agencyPosts: BlogPost[] = [
           { href: '/blog/onlyfans-agentstvo-moshennichestvo', label: '10 признаков скама' },
           { href: '/faq', label: 'FAQ: OFM и процент агентства' },
           { href: '/blog/onlyfans-agentstvo-ukraina', label: 'OnlyFans агентство Украина' },
-          { href: '/', label: 'Главная и заявка' },
+          { href: '/', label: 'OFM агентство — главная и заявка' },
         ],
       },
       {
@@ -222,6 +222,7 @@ export const agencyPosts: BlogPost[] = [
         LINK.chats,
         LINK.marketing,
         LINK.faq,
+        LINK.ofm,
       ]),
       blogApplyCta(
         'Нужен full-service management?',
@@ -284,6 +285,7 @@ export const agencyPosts: BlogPost[] = [
         LINK.choose,
         LINK.income,
         LINK.beginners,
+        LINK.ofm,
       ]),
       blogApplyCta(
         'Узнали себя в списке признаков?',
@@ -387,7 +389,7 @@ export const agencyPosts: BlogPost[] = [
           { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Как выбрать агентство' },
           { href: '/faq', label: 'FAQ: процент и договор' },
           { href: '/blog/onlyfans-agentstvo-ukraina', label: 'Агентство для Украины' },
-          { href: '/', label: 'Главная' },
+          { href: '/', label: 'OFM агентство — главная' },
         ],
       },
       {
@@ -594,7 +596,7 @@ export const agencyPosts: BlogPost[] = [
         links: [
           { href: '/blog/onlyfans-agentstvo-moldova', label: 'Агентство Молдова' },
           { href: '/blog/chto-delaet-onlyfans-agentstvo', label: '12 услуг management' },
-          { href: '/', label: 'Кейсы и заявка' },
+          { href: '/', label: 'OFM агентство — кейсы и заявка' },
         ],
       },
       {
@@ -637,6 +639,7 @@ export const agencyPosts: BlogPost[] = [
           { href: '/faq', label: 'FAQ OFM' },
           { href: '/blog/onlyfans-agentstvo-ukraina', label: 'Агентство Украина' },
           { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Как выбрать агентство' },
+          { href: '/', label: 'OFM агентство — кейсы и заявка' },
         ],
       },
       {
@@ -791,6 +794,7 @@ export const agencyPosts: BlogPost[] = [
           { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Cómo elegir agencia' },
           { href: '/blog/onlyfans-agentstvo-moshennichestvo', label: 'Red flags / скам' },
           { href: '/es/blog', label: 'Blog en español' },
+          { href: '/', label: 'OFM агентство — главная' },
         ],
       },
       {
@@ -950,7 +954,7 @@ export const agencyPosts: BlogPost[] = [
       { type: "h3", text: "Что с английским?" },
       { type: "p", text: "Всю переписку ведёт чат-команда — самой общаться с подписчиками не нужно." },
       { type: "tip", text: "Сравни минимум два агентства перед стартом и насторожись, если просят предоплату «на вступление», требуют единственный пароль вместо ролей доступа или обещают фиксированный доход без анализа ниши. Прозрачные условия и возможность выйти — норма, давление «подпиши сегодня» — нет." },
-      { type: "nav", intro: "Ещё про удалённую работу на OnlyFans:", links: [{ href: "/blog/onlyfans-rabota-odessa", label: "Работа онлифанс в Одессе" }, { href: "/blog/onlyfans-rabota-harkov", label: "Онлифанс работа в Харькове" }, { href: "/blog/rabota-modelyu-onlyfans", label: "Работа моделью OnlyFans" }, { href: "/blog/onlyfans-agentstvo-ukraina", label: "OnlyFans агентство Украина" }] },
+      { type: "nav", intro: "Ещё про удалённую работу на OnlyFans:", links: [{ href: "/blog/onlyfans-rabota-odessa", label: "Работа онлифанс в Одессе" }, { href: "/blog/onlyfans-rabota-harkov", label: "Онлифанс работа в Харькове" }, { href: "/blog/rabota-modelyu-onlyfans", label: "Работа моделью OnlyFans" }, { href: "/blog/onlyfans-agentstvo-ukraina", label: "OnlyFans агентство Украина" }, { href: "/", label: "OFM агентство — главная и заявка" }] },
       { type: "cta", title: "Оставить заявку в OFM", body: "Менеджер свяжется в Telegram в течение 24 часов — анонимно, без обязательств и без платы за «вход».", buttonHref: "/#contact", buttonLabel: "Подать заявку", note: "Суммы в кейсах на сайте — gross total баланса страницы OnlyFans, не чистый доход модели." },
     ],
   },
@@ -1001,7 +1005,7 @@ export const agencyPosts: BlogPost[] = [
       { type: "h3", text: "С какого возраста?" },
       { type: "p", text: "Только 18+." },
       { type: "tip", text: "Указанные суммы — это gross-оборот баланса аккаунта, а не гарантированная выплата и не обещание дохода. Результат зависит от тебя. Только 18+." },
-      { type: "nav", intro: "Ещё про удалённую работу на OnlyFans:", links: [{ href: "/blog/onlyfans-rabota-kiev", label: "Онлифанс работа в Киеве" }, { href: "/blog/onlyfans-rabota-harkov", label: "Онлифанс работа в Харькове" }, { href: "/blog/rabota-modelyu-onlyfans", label: "Работа моделью OnlyFans" }, { href: "/blog/onlyfans-agentstvo-ukraina", label: "OnlyFans агентство Украина" }] },
+      { type: "nav", intro: "Ещё про удалённую работу на OnlyFans:", links: [{ href: "/blog/onlyfans-rabota-kiev", label: "Онлифанс работа в Киеве" }, { href: "/blog/onlyfans-rabota-harkov", label: "Онлифанс работа в Харькове" }, { href: "/blog/rabota-modelyu-onlyfans", label: "Работа моделью OnlyFans" }, { href: "/blog/onlyfans-agentstvo-ukraina", label: "OnlyFans агентство Украина" }, { href: "/", label: "OFM агентство — главная и заявка" }] },
       { type: "cta", title: "Оставить заявку в OFM", body: "Менеджер свяжется в Telegram в течение 24 часов — анонимно, без обязательств и без платы за «вход».", buttonHref: "/#contact", buttonLabel: "Подать заявку", note: "Суммы в кейсах на сайте — gross total баланса страницы OnlyFans, не чистый доход модели." },
     ],
   },
@@ -1053,7 +1057,7 @@ export const agencyPosts: BlogPost[] = [
       { type: "p", text: "Оборот баланса с агентством обычно $3000–30000/мес (gross-оборот, не выплата и не гарантия). Реальная цифра зависит от тебя." },
       { type: "h3", text: "С какого возраста?" },
       { type: "p", text: "Только 18+, без исключений." },
-      { type: "nav", intro: "Ещё про удалённую работу на OnlyFans:", links: [{ href: "/blog/onlyfans-rabota-kiev", label: "Онлифанс работа в Киеве" }, { href: "/blog/onlyfans-rabota-odessa", label: "Работа онлифанс в Одессе" }, { href: "/blog/rabota-modelyu-onlyfans", label: "Работа моделью OnlyFans" }, { href: "/blog/onlyfans-agentstvo-ukraina", label: "OnlyFans агентство Украина" }] },
+      { type: "nav", intro: "Ещё про удалённую работу на OnlyFans:", links: [{ href: "/blog/onlyfans-rabota-kiev", label: "Онлифанс работа в Киеве" }, { href: "/blog/onlyfans-rabota-odessa", label: "Работа онлифанс в Одессе" }, { href: "/blog/rabota-modelyu-onlyfans", label: "Работа моделью OnlyFans" }, { href: "/blog/onlyfans-agentstvo-ukraina", label: "OnlyFans агентство Украина" }, { href: "/", label: "OFM агентство — главная и заявка" }, { href: "/#calculator", label: "Калькулятор дохода на главной" }] },
       { type: "cta", title: "Оставить заявку в OFM", body: "Менеджер свяжется в Telegram в течение 24 часов — анонимно, без обязательств и без платы за «вход».", buttonHref: "/#contact", buttonLabel: "Подать заявку", note: "Суммы в кейсах на сайте — gross total баланса страницы OnlyFans, не чистый доход модели." },
     ],
   },

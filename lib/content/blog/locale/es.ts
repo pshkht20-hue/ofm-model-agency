@@ -147,6 +147,14 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-agentstvo-latinskaya-amerika",
             label: "Agencia OnlyFans en Latinoamérica",
           },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
+          },
+          {
+            href: "/#calculator",
+            label: "Calculadora de ingresos",
+          },
         ],
       },
       {
@@ -243,6 +251,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
             label: "Cuándo contratar agencia",
           },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
+          },
         ],
       },
       {
@@ -325,6 +337,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/kak-vybrat-onlyfans-agentstvo",
             label: "Cómo elegir agencia",
           },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
+          },
         ],
       },
       {
@@ -388,6 +404,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-uderzhanie-podpischikov",
             label: "Retención y churn",
+          },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
           },
         ],
       },
@@ -456,6 +476,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/chto-delaet-onlyfans-agentstvo",
             label: "Qué hace una agencia OnlyFans",
+          },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
           },
         ],
       },
@@ -572,6 +596,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-anonimnost-i-bezopasnost",
             label: "Anonimato y seguridad",
           },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
+          },
         ],
       },
       {
@@ -655,6 +683,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-uderzhanie-podpischikov",
             label: "Retención y churn",
           },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
+          },
         ],
       },
       {
@@ -718,6 +750,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-marketing-strategiya-2026",
             label: "Marketing 2026",
+          },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
           },
         ],
       },
@@ -841,6 +877,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-chaty-dm-prodazhi",
             label: "Chats y ventas por DM",
           },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
+          },
         ],
       },
       {
@@ -939,6 +979,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-kontent-plan-i-syomki",
             label: "Plan de contenido y rodajes",
+          },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
           },
         ],
       },
@@ -1086,6 +1130,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
             label: "Promoción en Reddit y X",
           },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
+          },
         ],
       },
       {
@@ -1222,6 +1270,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
             label: "Cuánto se gana",
+          },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
           },
         ],
       },
@@ -1366,6 +1418,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/rabota-modelyu-onlyfans",
             label: "Trabajar como modelo de OnlyFans",
           },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
+          },
         ],
       },
       {
@@ -1459,6 +1515,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
             label: "Cuánto se gana",
+          },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
           },
         ],
       },
@@ -1602,6 +1662,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/rabota-modelyu-onlyfans",
             label: "Trabajar como modelo de OnlyFans",
           },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
+          },
         ],
       },
       {
@@ -1737,6 +1801,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-anonimnost-i-bezopasnost",
             label: "Anonimato y seguridad",
+          },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
           },
         ],
       },
@@ -1875,6 +1943,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/faq",
             label: "FAQ: qué es OFM",
           },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
+          },
         ],
       },
       {
@@ -1952,6 +2024,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
             label: "Cuánto ganan las modelos",
+          },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
           },
         ],
       },
@@ -2058,6 +2134,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-agentstvo-moshennichestvo",
             label: "Estafas: señales de fraude",
           },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
+          },
         ],
       },
       {
@@ -2163,6 +2243,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
             label: "Cuánto se gana",
+          },
+          {
+            href: "/",
+            label: "Agencia OnlyFans OFM — página principal",
           },
         ],
       },

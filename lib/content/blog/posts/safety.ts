@@ -336,6 +336,7 @@ export const safetyPosts: BlogPost[] = [
         LINK.diaspora,
         LINK.pillar,
         LINK.income,
+        LINK.calc,
       ]),
       blogApplyCta(
         'Остались вопросы про легальность и безопасность?',

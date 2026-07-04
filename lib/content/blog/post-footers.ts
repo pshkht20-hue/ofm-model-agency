@@ -26,6 +26,10 @@ export function blogApplyCta(
 export const LINK = {
   faq: { href: '/faq', label: 'FAQ: что такое OFM' },
   home: { href: '/', label: 'Главная — кейсы и заявка' },
+  /** Keyword-анкор «OFM агентство» на главную для agency-кластера */
+  ofm: { href: '/', label: 'OFM агентство — главная и заявка' },
+  /** Якорь калькулятора дохода на главной */
+  calc: { href: '/#calculator', label: 'Калькулятор дохода на главной' },
   pillar: { href: '/blog/rabota-modelyu-onlyfans', label: 'Работа моделью OnlyFans' },
   whatis: { href: '/blog/chto-takoe-onlyfans', label: 'Что такое OnlyFans' },
   choose: { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Как выбрать агентство' },
@@ -33,12 +37,19 @@ export const LINK = {
   services: { href: '/blog/chto-delaet-onlyfans-agentstvo', label: '12 услуг management' },
   when: { href: '/blog/kogda-nuzhno-onlyfans-agentstvo', label: 'Когда пора нанимать агентство' },
   ua: { href: '/blog/onlyfans-agentstvo-ukraina', label: 'OnlyFans агентство Украина' },
+  kiev: { href: '/blog/onlyfans-rabota-kiev', label: 'Онлифанс работа в Киеве' },
+  odessa: { href: '/blog/onlyfans-rabota-odessa', label: 'Онлифанс работа в Одессе' },
+  harkov: { href: '/blog/onlyfans-rabota-harkov', label: 'Онлифанс работа в Харькове' },
   md: { href: '/blog/onlyfans-agentstvo-moldova', label: 'OnlyFans агентство Молдова' },
   latam: { href: '/blog/onlyfans-agentstvo-latinskaya-amerika', label: 'Agencia LatAm' },
   beginners: { href: '/blog/onlyfans-agentstvo-dlya-nachinayushchih', label: 'Старт для начинающих' },
   howstart: {
     href: '/blog/kak-stat-onlyfans-modelyu-s-nulya',
     label: 'Как стать моделью с нуля',
+  },
+  register: {
+    href: '/blog/kak-zaregistrirovatsya-na-onlyfans',
+    label: 'Как зарегистрироваться на OnlyFans',
   },
   chats: { href: '/blog/onlyfans-chaty-dm-prodazhi', label: 'Чаты и DM-продажи' },
   pricing: { href: '/blog/onlyfans-tseny-podpiska-ppv', label: 'Цены: подписка и PPV' },

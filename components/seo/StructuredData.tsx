@@ -127,6 +127,15 @@ export function HowToJsonLd({ post, locale }: { post: BlogPost; locale: Locale }
   );
 }
 
+/** Имя главной в крошках (= common.home из messages). Нормализуем здесь, потому
+ * что часть вызовов передаёт eyebrow раздела («OFM Research») вместо имени сайта. */
+const HOME_CRUMB_NAME: Record<Locale, string> = {
+  ru: 'Главная',
+  uk: 'Головна',
+  en: 'Home',
+  es: 'Inicio',
+};
+
 export function BreadcrumbJsonLd({
   items,
   locale,
@@ -141,7 +150,7 @@ export function BreadcrumbJsonLd({
     itemListElement: items.map((item, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      name: item.name,
+      name: item.path === '/' ? HOME_CRUMB_NAME[locale] : item.name,
       item: `${siteUrl}${pathForLocale(item.path, locale)}`,
     })),
   };

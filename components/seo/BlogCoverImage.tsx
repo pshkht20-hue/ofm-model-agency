@@ -25,6 +25,7 @@ export function BlogCoverImage({
         alt={cover.alt}
         fill
         priority={priority}
+        fetchPriority={priority ? 'high' : undefined}
         sizes={sizes}
         className="cover-zoom object-cover transition-transform duration-700 group-hover:scale-[1.03]"
       />

@@ -81,7 +81,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       template: `%s | ${siteConfig.shortName}`,
     },
     description: t('siteDescription'),
-    keywords: [...siteConfig.keywords],
     openGraph: {
       type: 'website',
       locale: openGraphLocale[locale as Locale],
@@ -91,7 +90,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('siteDescription'),
       images: [
         {
-          url: '/opengraph-image',
+          url: '/og-default.png',
           width: 1200,
           height: 630,
           alt: t('siteTitle'),
@@ -102,11 +101,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: t('siteTitle'),
       description: t('siteDescription'),
-      images: ['/opengraph-image'],
+      images: ['/og-default.png'],
     },
     alternates: {
       canonical: canonicalPath,
       languages: hreflangAlternates(siteUrl, '/'),
+    },
+    // Как в createPageMetadata: без явного блока у главной не было
+    // max-image-preview:large / max-snippet — единственного типа страниц без него.
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }
