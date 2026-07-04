@@ -81,6 +81,7 @@ export function CookieConsent() {
                       {t('description')}{' '}
                       <Link
                         href="/privacy"
+                        prefetch={false}
                         className="text-white/72 underline decoration-white/25 underline-offset-2 transition hover:text-white hover:decoration-accent-pink/50"
                       >
                         {t('privacyLink')}

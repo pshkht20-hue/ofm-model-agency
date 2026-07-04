@@ -29,7 +29,7 @@ export function HomeSeoBlock() {
           <p>
             {t.rich('p2', {
               faq: (chunks) => (
-                <Link
+                <Link prefetch={false}
                   href="/faq"
                   className="link-hover-line text-accent-pink transition-colors hover:text-accent-cyan"
                 >
@@ -37,7 +37,7 @@ export function HomeSeoBlock() {
                 </Link>
               ),
               blog: (chunks) => (
-                <Link
+                <Link prefetch={false}
                   href="/blog"
                   className="link-hover-line text-accent-pink transition-colors hover:text-accent-cyan"
                 >
@@ -49,16 +49,16 @@ export function HomeSeoBlock() {
           <p>{t('p3')}</p>
         </div>
         <div className="mt-8 flex flex-wrap gap-4 text-sm">
-          <Link href="/blog/rabota-modelyu-onlyfans" className="btn-secondary !py-2.5 !px-5">
+          <Link prefetch={false} href="/blog/rabota-modelyu-onlyfans" className="btn-secondary !py-2.5 !px-5">
             {t('linkVacancy')}
           </Link>
           {(locale === 'ru' || locale === 'uk') && (
-            <Link href="/blog/chto-takoe-onlyfans" className="btn-secondary !py-2.5 !px-5">
+            <Link prefetch={false} href="/blog/chto-takoe-onlyfans" className="btn-secondary !py-2.5 !px-5">
               {locale === 'uk' ? 'Що таке OnlyFans' : 'Что такое OnlyFans'}
             </Link>
           )}
           {(locale === 'ru' || locale === 'uk') && (
-            <Link
+            <Link prefetch={false}
               href="/blog/kak-zaregistrirovatsya-na-onlyfans"
               className="btn-secondary !py-2.5 !px-5"
             >
@@ -68,51 +68,51 @@ export function HomeSeoBlock() {
             </Link>
           )}
           {(locale === 'ru' || locale === 'uk') && (
-            <Link
+            <Link prefetch={false}
               href="/blog/robota-dlya-ukrainok-za-kordonom"
               className="btn-secondary !py-2.5 !px-5"
             >
               {t('linkDiaspora')}
             </Link>
           )}
-          <Link href="/blog/onlyfans-agentstvo-ukraina" className="btn-secondary !py-2.5 !px-5">
+          <Link prefetch={false} href="/blog/onlyfans-agentstvo-ukraina" className="btn-secondary !py-2.5 !px-5">
             {t('linkUkraine')}
           </Link>
-          <Link href="/blog/onlyfans-agentstvo-moldova" className="btn-secondary !py-2.5 !px-5">
+          <Link prefetch={false} href="/blog/onlyfans-agentstvo-moldova" className="btn-secondary !py-2.5 !px-5">
             {t('linkMoldova')}
           </Link>
-          <Link
+          <Link prefetch={false}
             href="/blog/onlyfans-agentstvo-latinskaya-amerika"
             className="btn-secondary !py-2.5 !px-5"
           >
             {t('linkLatAm')}
           </Link>
-          <Link href="/blog/kak-vybrat-onlyfans-agentstvo" className="btn-secondary !py-2.5 !px-5">
+          <Link prefetch={false} href="/blog/kak-vybrat-onlyfans-agentstvo" className="btn-secondary !py-2.5 !px-5">
             {t('linkAgency')}
           </Link>
-          <Link
+          <Link prefetch={false}
             href="/blog/onlyfans-marketing-strategiya-2026"
             className="btn-secondary !py-2.5 !px-5"
           >
             {t('linkMarketing')}
           </Link>
-          <Link
+          <Link prefetch={false}
             href="/blog/onlyfans-skolko-zarabatyvayut-modeli"
             className="btn-secondary !py-2.5 !px-5"
           >
             {t('linkEarnings')}
           </Link>
-          <Link
+          <Link prefetch={false}
             href="/blog/onlyfans-anonimnost-i-bezopasnost"
             className="btn-secondary !py-2.5 !px-5"
           >
             {t('linkSafety')}
           </Link>
-          <Link href="/faq" className="btn-secondary !py-2.5 !px-5">
+          <Link prefetch={false} href="/faq" className="btn-secondary !py-2.5 !px-5">
             {t('linkFaq')}
           </Link>
           {/* /research is published in all four locales. */}
-          <Link href="/research" className="btn-secondary !py-2.5 !px-5">
+          <Link prefetch={false} href="/research" className="btn-secondary !py-2.5 !px-5">
             {locale === 'uk'
               ? 'Дослідження'
               : locale === 'en'

@@ -24,14 +24,17 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const ctaMagnetRef = useMagnetic<HTMLSpanElement>(0.25);
 
-  const NAV_LINKS = [
+  // prefetch: false на /blog и /faq — иначе Next префетчит их RSC-payload
+  // (~88KB только для /blog) сразу при загрузке главной, прямо в LCP-окне.
+  // Якорные ссылки (/#...) префетчат текущую страницу — их не трогаем.
+  const NAV_LINKS: { href: string; label: string; prefetch?: false }[] = [
     { href: '/#about' as const, label: t('about') },
     { href: '/#how' as const, label: t('how') },
     { href: '/#services' as const, label: t('services') },
     { href: '/#models' as const, label: t('models') },
     { href: '/#results' as const, label: t('results') },
-    { href: '/blog' as const, label: t('blog') },
-    { href: '/faq' as const, label: t('faq') },
+    { href: '/blog' as const, label: t('blog'), prefetch: false },
+    { href: '/faq' as const, label: t('faq'), prefetch: false },
   ];
 
   useEffect(() => {
@@ -123,6 +126,7 @@ export function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    prefetch={link.prefetch}
                     className={`relative py-1 text-[12px] xl:text-[13px] font-medium transition-colors whitespace-nowrap group ${
                       isActive ? 'text-white' : 'text-white/60 hover:text-white'
                     }`}

@@ -72,7 +72,7 @@ export function ReviewsSummary() {
           </li>
           <li className="flex md:justify-end gap-2">
             <span className="text-accent-violet">●</span>
-            <Link href="/faq" className="hover:text-white transition underline-offset-2 hover:underline">
+            <Link href="/faq" prefetch={false} className="hover:text-white transition underline-offset-2 hover:underline">
               {t('faqLink')}
             </Link>
           </li>

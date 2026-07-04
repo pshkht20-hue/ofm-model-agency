@@ -92,6 +92,9 @@ export function AnimatedStat({
       <motion.article
         whileHover={reduced ? undefined : { y: -4 }}
         transition={SPRING_HOVER}
+        // contain: layout style — покадровая смена цифры (0 → 220) не заставляет
+        // браузер пересчитывать layout соседних карточек/секции на каждом кадре.
+        style={{ contain: 'layout style' }}
         className={`relative flex flex-col items-center text-center h-full px-4 py-8 md:py-10 rounded-2xl border border-white/[0.06] bg-white/[0.02] md:backdrop-blur-sm transition-[border-color,box-shadow] duration-400 neon-stat-card ${accentBorder[accent]}`}
       >
         <div
@@ -127,7 +130,15 @@ export function AnimatedStat({
           {reduced ? (
             <span className="text-white tabular-nums">{formatted}</span>
           ) : (
-            <motion.span className="text-white tabular-nums">{displayValue}</motion.span>
+            // min-width под финальное число знаков (tabular-nums = все цифры по
+            // 1ch): ширина зарезервирована с первого кадра, счётчик 0 → 220 не
+            // двигает префикс/суффикс и не дёргает layout карточки.
+            <motion.span
+              className="inline-block text-center text-white tabular-nums"
+              style={{ minWidth: `${formatted.length}ch` }}
+            >
+              {displayValue}
+            </motion.span>
           )}
           {suffix && (
             <motion.span

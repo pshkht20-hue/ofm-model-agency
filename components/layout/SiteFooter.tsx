@@ -75,7 +75,7 @@ export function SiteFooter() {
   ];
 
   return (
-    <footer className="bg-[#030306] border-t border-white/[0.06] py-12 md:py-16 relative overflow-hidden">
+    <footer className="cv-below-fold bg-[#030306] border-t border-white/[0.06] py-12 md:py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_30%_at_50%_100%,rgba(255,91,181,0.06),transparent)] pointer-events-none" />
       <NeonAccents variant="footer" />
       <div className="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
@@ -112,10 +112,13 @@ export function SiteFooter() {
           <motion.div variants={reduced ? undefined : staggerItem(20)}>
             <p className="eyebrow-bright mb-6 !text-[10px]">{t('resourcesTitle')}</p>
             <div className="flex flex-col gap-y-3 text-sm text-white/55">
+              {/* prefetch: false — иначе Next при появлении футера в viewport
+                  префетчит RSC-payload всех статей/blog/faq/research разом */}
               {RESOURCES.map(({ href, label }) => (
                 <Link
                   key={href}
                   href={href}
+                  prefetch={false}
                   className="link-hover-line hover:text-accent-pink transition-colors w-fit"
                 >
                   {label}
@@ -143,10 +146,10 @@ export function SiteFooter() {
         <div className="mt-10 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-y-4 text-xs text-white/40">
           <span>© {new Date().getFullYear()} OFM&apos;s Model Agency</span>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <Link href="/privacy" className="link-hover-line hover:text-accent-pink transition-colors">
+            <Link href="/privacy" prefetch={false} className="link-hover-line hover:text-accent-pink transition-colors">
               {t('privacy')}
             </Link>
-            <Link href="/terms" className="link-hover-line hover:text-accent-pink transition-colors">
+            <Link href="/terms" prefetch={false} className="link-hover-line hover:text-accent-pink transition-colors">
               {t('terms')}
             </Link>
             <CookieSettingsButton />

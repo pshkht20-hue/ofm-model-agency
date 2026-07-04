@@ -5,26 +5,23 @@ import dynamic from 'next/dynamic';
 import { Shield, Heart, Zap } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { ContactForm } from '@/components/ContactForm';
 import { TelegramCta } from '@/components/TelegramCta';
 import { Navbar } from '@/components/Navbar';
 import { CreatorFeatureMarquee } from '@/components/CreatorTheme';
 import { HeroSection } from '@/components/hero/HeroSection';
-import { StatsShowcase } from '@/components/StatsShowcase';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { StickyMobileCta } from '@/components/StickyMobileCta';
-import { AboutSection } from '@/components/AboutSection';
-import { HowItWorksSection } from '@/components/HowItWorksSection';
-import { ServicesSection } from '@/components/ServicesSection';
 import { SectionDivider } from '@/components/ui/SectionDivider';
 import { ParticleField } from '@/components/ui/ParticleField';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
-import { HomeSeoBlock } from '@/components/seo/HomeSeoBlock';
-import { SiteFooter } from '@/components/layout/SiteFooter';
 import { EASE_SMOOTH, VIEWPORT_DEFAULT, fadeUpStatic } from '@/lib/motion';
 import { SectionProvider } from '@/context/SectionContext';
 
+// Below-fold sections are code-split out of the initial bundle (SSR HTML is
+// still rendered in full, so SEO/H2s/CLS are untouched — the placeholders only
+// show during client-side navigations). Placeholder min-heights mirror the
+// real section heights to keep CLS at ~0.
 const ModelShowcase = dynamic(
   () => import('@/components/ModelShowcase').then((m) => ({ default: m.ModelShowcase })),
   { loading: () => <div className="min-h-[640px]" aria-hidden /> },
@@ -36,6 +33,42 @@ const ModelReviewsSection = dynamic(
       default: m.ModelReviewsSection,
     })),
   { loading: () => <div className="min-h-[520px]" aria-hidden /> },
+);
+
+const StatsShowcase = dynamic(
+  () => import('@/components/StatsShowcase').then((m) => ({ default: m.StatsShowcase })),
+  { loading: () => <div className="min-h-[480px]" aria-hidden /> },
+);
+
+const AboutSection = dynamic(
+  () => import('@/components/AboutSection').then((m) => ({ default: m.AboutSection })),
+  { loading: () => <div className="min-h-[520px]" aria-hidden /> },
+);
+
+const HowItWorksSection = dynamic(
+  () =>
+    import('@/components/HowItWorksSection').then((m) => ({ default: m.HowItWorksSection })),
+  { loading: () => <div className="min-h-[720px]" aria-hidden /> },
+);
+
+const ServicesSection = dynamic(
+  () => import('@/components/ServicesSection').then((m) => ({ default: m.ServicesSection })),
+  { loading: () => <div className="min-h-[760px]" aria-hidden /> },
+);
+
+const HomeSeoBlock = dynamic(
+  () => import('@/components/seo/HomeSeoBlock').then((m) => ({ default: m.HomeSeoBlock })),
+  { loading: () => <div className="min-h-[640px]" aria-hidden /> },
+);
+
+const ContactForm = dynamic(
+  () => import('@/components/ContactForm').then((m) => ({ default: m.ContactForm })),
+  { loading: () => <div className="min-h-[520px]" aria-hidden /> },
+);
+
+const SiteFooter = dynamic(
+  () => import('@/components/layout/SiteFooter').then((m) => ({ default: m.SiteFooter })),
+  { loading: () => <div className="min-h-[420px]" aria-hidden /> },
 );
 
 function ContactGlow({ reduced }: { reduced: boolean | null }) {

@@ -79,4 +79,16 @@ export const LINK = {
   polsha: { href: '/blog/onlyfans-rabota-polsha', label: 'OnlyFans в Польше' },
   germaniya: { href: '/blog/onlyfans-rabota-germaniya', label: 'OnlyFans в Германии' },
   chehiya: { href: '/blog/onlyfans-rabota-chehiya', label: 'OnlyFans в Чехии' },
+  legalTax: {
+    href: '/blog/onlyfans-zakon-nalogi-ukraina',
+    label: 'OnlyFans в Украине: закон, налоги, ФОП',
+  },
+  payout: {
+    href: '/blog/onlyfans-kak-vyvesti-dengi-ukraina',
+    label: 'Как вывести деньги с OnlyFans',
+  },
+  worth: {
+    href: '/blog/stoit-li-nachinat-onlyfans',
+    label: 'Стоит ли начинать OnlyFans',
+  },
 } as const;

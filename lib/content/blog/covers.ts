@@ -260,6 +260,33 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@fujisideofthe_lin',
     unsplashUrl: 'https://unsplash.com/photos/a-bridge-over-a-river-leading-to-a-large-building-with-towers-GcfNtUck07E',
   },
+  // Переиспользуем фото из onlyfans-rabota-legalno-i-bezopasno (та же юридическая тема)
+  'onlyfans-zakon-nalogi-ukraina': {
+    localSrc: '/blog/covers/onlyfans-zakon-nalogi-ukraina.jpg',
+    remoteSrc: coverUrl('1758874384232-cfa79a5babf1'),
+    alt: 'Спокойная девушка работает за ноутбуком — законная работа на OnlyFans в Украине: налоги и ФОП',
+    photographer: 'Vitaly Gariev',
+    photographerUrl: 'https://unsplash.com/@silverkblack',
+    unsplashUrl: 'https://unsplash.com/photos/a-smiling-woman-works-on-a-laptop-at-a-desk-s3hlZ-gdfdQ',
+  },
+  // Переиспользуем фото из onlyfans-skolko-zarabatyvayut-modeli (деньги и расчёты)
+  'onlyfans-kak-vyvesti-dengi-ukraina': {
+    localSrc: '/blog/covers/onlyfans-kak-vyvesti-dengi-ukraina.jpg',
+    remoteSrc: coverUrl('1504384308090-c894fdcc538d'),
+    alt: 'Калькулятор и планирование финансов — вывод денег с OnlyFans в Украине: способы, сроки, комиссии',
+    photographer: 'Kelly Sikkema',
+    photographerUrl: 'https://unsplash.com/@kellysikkema',
+    unsplashUrl: 'https://unsplash.com/photos/white-and-black-casio-calculator-3-tcBU6Y2OQ',
+  },
+  // Переиспользуем фото из kak-stat-onlyfans-modelyu-s-nulya (момент принятия решения)
+  'stoit-li-nachinat-onlyfans': {
+    localSrc: '/blog/covers/stoit-li-nachinat-onlyfans.jpg',
+    remoteSrc: coverUrl('1738566495642-5911b1ed08b6'),
+    alt: 'Девушка обдумывает решение с блокнотом за столом — стоит ли начинать OnlyFans: честный разбор',
+    photographer: 'Vitaly Gariev',
+    photographerUrl: 'https://unsplash.com/@silverkblack',
+    unsplashUrl: 'https://unsplash.com/photos/a-woman-sitting-at-a-desk-writing-on-a-notebook-0utix0NILr4',
+  },
   'kak-zaregistrirovatsya-na-onlyfans': {
     localSrc: '/blog/covers/kak-zaregistrirovatsya-na-onlyfans.jpg',
     remoteSrc: coverUrl('1665686308827-eb62e4f6604d'),
