@@ -50,7 +50,26 @@
       "args": ["/c", "npx", "-y", "dataforseo-mcp-server"],
       "env": {
         "DATAFORSEO_USERNAME": "${DATAFORSEO_USERNAME}",
-        "DATAFORSEO_PASSWORD": "${DATAFORSEO_PASSWORD}"
+        "DATAFORSEO_PASSWORD": "${DATAFORSEO_PASSWORD}",
+        "ENABLED_MODULES": "SERP,KEYWORDS_DATA,DATAFORSEO_LABS,ONPAGE,BACKLINKS"
+      }
+    },
+    "pagespeed": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "pagespeed-insights-mcp"],
+      "env": {
+        "GOOGLE_API_KEY": "${GOOGLE_PSI_API_KEY}"
+      }
+    },
+    "seo-crawler": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@houtini/seo-crawler-mcp"]
+    },
+    "serper": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "serper-search-scrape-mcp-server"],
+      "env": {
+        "SERPER_API_KEY": "${SERPER_API_KEY}"
       }
     }
   }

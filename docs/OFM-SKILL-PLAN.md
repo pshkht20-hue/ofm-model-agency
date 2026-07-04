@@ -13,7 +13,37 @@
 
 ---
 
-## Установлено сегодня (внешние, Vercel)
+## Установлено 4 июля 2026 (SEO-усиление, отбор из 40+ кандидатов)
+
+**Скиллы `.claude/skills/` (теперь 62):**
+
+| Скилл | Категория | Зачем |
+|-------|-----------|-------|
+| `seo` (ECC) | SEO | Имплементация: crawlability, canonicals, keyword mapping, перелинковка — пара к ofm-seo-analytics |
+| `programmatic-seo` (marketingskills 36k★) | SEO | Программатик-страницы «город/вопрос» через generateStaticParams — длинный хвост |
+| `schema` (marketingskills) | SEO | Structured data для rich snippets и AI-поиска |
+| `site-architecture` (marketingskills) | SEO | Иерархия URL и кластеры ДО масштабирования страниц |
+| `humanizer` (blader, 27k★) | Контент | Снятие 33 паттернов ИИ-стиля с текстов — финальный gate перед публикацией (E-E-A-T) |
+| `copywriting` (marketingskills) | Контент | Конверсионные тексты лендингов: value prop, заголовки, CTA |
+| `marketing-campaign` (ECC) | Контент | Оркестратор кампаний: позиционирование → копи → контент-календарь по 4 локалям |
+| `frontend-a11y` (ECC) | Дизайн | A11y для React/Next: ARIA, формы, keyboard nav — конверсия + SEO-сигнал |
+| `design-system` (ECC) | Дизайн | Извлечение токенов из Tailwind 4, поиск визуальной несогласованности |
+| `browser-qa` (ECC) | Качество | Смоук живого прода через Playwright MCP после каждого деплоя (4 локали) |
+
+**Субагент `.claude/agents/`:** `seo-specialist` — фоновые SEO-аудиты страниц без съедания контекста.
+
+**MCP добавлены в `.mcp.json` (теперь 13):**
+
+| MCP | Ключ | Зачем |
+|-----|------|-------|
+| `pagespeed` | GOOGLE_PSI_API_KEY (бесплатный) | Core Web Vitals + полевые CrUX из чата |
+| `seo-crawler` | не нужен | Локальный Screaming Frog: hreflang-связки, canonical, битые ссылки, orphan pages |
+| `serper` | SERPER_API_KEY (2500 бесплатно) | Живые позиции в Google с gl=ua, People Also Ask |
+| `dataforseo` (был) | ⏳ ждёт депозит ~$50 | Объёмы ключей UA, difficulty, конкуренты, бэклинки |
+
+Ключи вписывать в `.claude/settings.local.json` (env). Отсеяны как дубли/хлам: claude-seo (25 скиллов — контекстное болото), seo-audit, cro, content-strategy, accessibility (WCAG-дубль frontend-a11y), IndexNow, Google Trends MCP, Lighthouse MCP и др.
+
+
 
 ```bash
 npx skills add vercel-labs/agent-skills
