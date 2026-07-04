@@ -20,7 +20,9 @@ export type CtaLocation =
   | 'calculator_result_secondary'
   | 'reviews'
   | 'seo_shell'
-  | 'footer';
+  | 'footer'
+  | 'join_hero'
+  | 'join_income';
 
 export type CalculatorCompleteParams = {
   tier: string;

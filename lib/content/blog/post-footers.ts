@@ -25,6 +25,8 @@ export function blogApplyCta(
 /** Shared money/agency paths for internal SEO clusters */
 export const LINK = {
   faq: { href: '/faq', label: 'FAQ: что такое OFM' },
+  /** Анкета кандидатки — мостик на /join из контент-кластера */
+  join: { href: '/join', label: 'Заполнить анкету в агентство OFM' },
   home: { href: '/', label: 'Главная — кейсы и заявка' },
   /** Keyword-анкор «OFM агентство» на главную для agency-кластера */
   ofm: { href: '/', label: 'OFM агентство — главная и заявка' },

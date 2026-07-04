@@ -132,6 +132,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         intro: "Antes de postular, lee los detalles:",
         links: [
           {
+            href: "/join",
+            label: "Enviar tu solicitud a la agencia OFM",
+          },
+          {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
             label: "Cuánto ganan las modelos",
           },

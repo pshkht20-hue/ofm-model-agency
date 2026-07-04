@@ -12,7 +12,7 @@ import { getSiteUrl } from '@/lib/site';
 
 // privacy/terms are intentionally excluded: thin legal pages, noindex'd in their
 // generateMetadata — keeping them out of the sitemap concentrates crawl budget.
-const STATIC_ROUTES = ['', '/faq', '/blog'] as const;
+const STATIC_ROUTES = ['', '/faq', '/blog', '/join'] as const;
 
 export const dynamic = 'force-static';
 
@@ -31,7 +31,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${siteUrl}${localized}`,
         lastModified: now,
         changeFrequency: path === '' ? 'weekly' : path === '/blog' ? 'weekly' : 'monthly',
-        priority: path === '' ? 1 : path === '/faq' ? 0.9 : path === '/blog' ? 0.85 : 0.5,
+        priority:
+          path === '' ? 1 : path === '/join' ? 0.9 : path === '/faq' ? 0.9 : path === '/blog' ? 0.85 : 0.5,
         alternates: { languages: hreflangAlternates(siteUrl, path) },
       });
     }
