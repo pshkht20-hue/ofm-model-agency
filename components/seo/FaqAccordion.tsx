@@ -5,11 +5,35 @@ import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { VIEWPORT_TIGHT, staggerContainer, staggerItem } from '@/lib/motion';
+import { Link } from '@/i18n/navigation';
+import { parseAnswerLinks } from '@/lib/content/faq/answer-links';
 import type { FaqCategory } from '@/lib/content/faq';
 
 type FaqAccordionProps = {
   categories: FaqCategory[];
 };
+
+/**
+ * Превращает [текст](/путь) в ответе в кликабельную внутреннюю ссылку —
+ * чтобы из FAQ можно было вести читателя на главную и другие страницы.
+ * Для FAQ JSON-LD тот же ответ очищается stripAnswerLinks в StructuredData.
+ */
+function renderAnswer(text: string) {
+  if (!text.includes('](')) return text;
+  return parseAnswerLinks(text).map((part, i) =>
+    part.type === 'link' ? (
+      <Link
+        key={i}
+        href={part.href}
+        className="link-hover-line text-accent-pink hover:text-accent-cyan transition-colors"
+      >
+        {part.label}
+      </Link>
+    ) : (
+      part.value
+    ),
+  );
+}
 
 export function FaqAccordion({ categories }: FaqAccordionProps) {
   const [openKey, setOpenKey] = useState<string | null>('0-0');
@@ -75,7 +99,7 @@ export function FaqAccordion({ categories }: FaqAccordionProps) {
                         className="px-5 md:px-6 pb-5 md:pb-6 text-body border-t border-white/[0.06] pt-4 leading-relaxed"
                         itemProp="text"
                       >
-                        {item.answer}
+                        {renderAnswer(item.answer)}
                       </p>
                     </div>
                   </div>

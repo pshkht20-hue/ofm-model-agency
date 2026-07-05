@@ -32,6 +32,8 @@ export const LINK = {
   ofm: { href: '/', label: 'Онлифанс агентство OFM — главная и заявка' },
   /** Якорь калькулятора дохода на главной */
   calc: { href: '/#calculator', label: 'Калькулятор дохода на главной' },
+  /** Отдельная страница-инструмент /calculator */
+  calcPage: { href: '/calculator', label: 'Калькулятор дохода OnlyFans' },
   pillar: { href: '/blog/rabota-modelyu-onlyfans', label: 'Работа моделью OnlyFans' },
   whatis: { href: '/blog/chto-takoe-onlyfans', label: 'Что такое OnlyFans' },
   choose: { href: '/blog/kak-vybrat-onlyfans-agentstvo', label: 'Как выбрать агентство' },
@@ -42,6 +44,8 @@ export const LINK = {
   kiev: { href: '/blog/onlyfans-rabota-kiev', label: 'Онлифанс работа в Киеве' },
   odessa: { href: '/blog/onlyfans-rabota-odessa', label: 'Онлифанс работа в Одессе' },
   harkov: { href: '/blog/onlyfans-rabota-harkov', label: 'Онлифанс работа в Харькове' },
+  dnepr: { href: '/blog/onlyfans-rabota-dnepr', label: 'Онлифанс работа в Днепре' },
+  lvov: { href: '/blog/onlyfans-rabota-lvov', label: 'Онлифанс работа во Львове' },
   md: { href: '/blog/onlyfans-agentstvo-moldova', label: 'OnlyFans агентство Молдова' },
   latam: { href: '/blog/onlyfans-agentstvo-latinskaya-amerika', label: 'Agencia LatAm' },
   beginners: { href: '/blog/onlyfans-agentstvo-dlya-nachinayushchih', label: 'Старт для начинающих' },
@@ -95,5 +99,13 @@ export const LINK = {
   worth: {
     href: '/blog/stoit-li-nachinat-onlyfans',
     label: 'Стоит ли начинать OnlyFans',
+  },
+  vsFansly: {
+    href: '/blog/onlyfans-vs-fansly-loyalfans',
+    label: 'Fansly и LoyalFans vs OnlyFans',
+  },
+  vebkam: {
+    href: '/blog/vebkam-ili-onlyfans',
+    label: 'Вебкам или OnlyFans: что выбрать',
   },
 } as const;

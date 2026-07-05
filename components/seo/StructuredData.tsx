@@ -1,4 +1,5 @@
 import { getSiteUrl, siteConfig } from '@/lib/site';
+import { stripAnswerLinks } from '@/lib/content/faq/answer-links';
 import type { FaqItem } from '@/lib/content/faq';
 import type { BlogPost } from '@/lib/content/blog';
 import type { Locale } from '@/i18n/routing';
@@ -20,7 +21,9 @@ export function FaqPageJsonLd({ items }: { items: FaqItem[] }) {
       name: item.question,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: item.answer,
+        // Ответы могут содержать [текст](/путь) для видимых ссылок —
+        // в schema.org уходит чистый текст без разметки.
+        text: stripAnswerLinks(item.answer),
       },
     })),
   };

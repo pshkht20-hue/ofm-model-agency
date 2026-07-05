@@ -22,7 +22,8 @@ export type CtaLocation =
   | 'seo_shell'
   | 'footer'
   | 'join_hero'
-  | 'join_income';
+  | 'join_income'
+  | 'calculator_page_cta';
 
 export type CalculatorCompleteParams = {
   tier: string;

@@ -157,7 +157,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How do I apply to OFM\'s Model Agency?',
         answer:
-          'On the homepage, fill out the form: name, Telegram (required), Instagram optional, and a short intro. A manager will message you on Telegram within 24 hours, run an initial review, and suggest next steps. Applying does not obligate you to sign immediately.',
+          'On the [OFM agency](/) homepage, fill out the form: name, Telegram (required), Instagram optional, and a short intro. A manager will message you on Telegram within 24 hours, run an initial review, and suggest next steps. Applying does not obligate you to sign immediately.',
       },
       {
         question: 'How long from launch to first payouts?',
@@ -197,7 +197,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How is OFM\'s Model Agency different from other teams?',
         answer:
-          'Personal manager, marketing and 24/7 chats, content strategy, transparent reporting, and a focus on confidentiality. We are independent from OnlyFans, do not charge an “entry” fee, and respond to applications within 24 hours. Terms and percentage are agreed individually after we get to know you.',
+          'The [OFM agency](/) combines a personal manager, marketing and 24/7 chats, content strategy, transparent reporting, and a focus on confidentiality. We are independent from OnlyFans, do not charge an “entry” fee, and respond to applications within 24 hours. Terms and percentage are agreed individually after we get to know you.',
       },
     ],
   },

@@ -77,6 +77,14 @@ const CITY_JOB_TITLE: Record<string, Partial<Record<Locale, string>>> = {
     ru: 'Модель OnlyFans — работа в Харькове (удалённо, без опыта)',
     uk: 'Модель OnlyFans — робота в Харкові (віддалено, без досвіду)',
   },
+  'onlyfans-rabota-dnepr': {
+    ru: 'Модель OnlyFans — работа в Днепре (удалённо, без опыта)',
+    uk: 'Модель OnlyFans — робота у Дніпрі (віддалено, без досвіду)',
+  },
+  'onlyfans-rabota-lvov': {
+    ru: 'Модель OnlyFans — работа во Львове (удалённо, без опыта)',
+    uk: 'Модель OnlyFans — робота у Львові (віддалено, без досвіду)',
+  },
 };
 
 function jobPostingProps(

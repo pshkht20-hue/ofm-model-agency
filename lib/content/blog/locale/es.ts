@@ -1344,7 +1344,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   "onlyfans-skolko-zarabatyvayut-modeli": {
-    title: "Cuánto se gana en OnlyFans: cifras realistas",
+    title: "Cuánto se gana en OnlyFans en 2026: cifras realistas",
     description:
       "Cuánto se gana en OnlyFans en 2026: rangos reales de principiantes a top models, de qué depende el ingreso, gross vs neto y el papel de una agencia OFM.",
     keywords: [
@@ -1366,7 +1366,8 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "ul",
         items: [
-          "Primeros 1–3 meses: $500–3.000 con trabajo sistemático",
+          "Arranque sola y sin promoción: normalmente $100–200 el primer mes",
+          "Primeros 1–3 meses de trabajo sistemático: $500–3.000",
           "$3.000–10.000: contenido constante + al menos 1–2 canales de tráfico",
           "$10.000–30.000+: chats fuertes, marketing y un nicho definido",
           "$30.000+: nicho top, equipo y marca; a menudo 2+ años de sistema",
@@ -1375,6 +1376,29 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "En OFM una parte de las modelos se mueve en el rango de $12.000–35.000+/mes. No es una garantía ni la mediana para todas las solicitudes.",
+      },
+      {
+        type: "table",
+        caption:
+          "Niveles de ingreso en OnlyFans en 2026 (bruto, antes de comisiones e impuestos) — rangos orientativos con trabajo sistemático, no una garantía",
+        headers: ["Nivel", "Bruto / mes", "Qué hay detrás"],
+        rows: [
+          [
+            "Principiante sola, sin promoción",
+            "$100–200",
+            "La página existe pero no hay tráfico: alcance orgánico y publicaciones sueltas en redes",
+          ],
+          [
+            "Trabajo sistemático con equipo",
+            "$500–3.000 en 1–3 meses",
+            "Plan de contenido, 1–2 canales de tráfico, chats y ventas repetidas en los DM",
+          ],
+          [
+            "Top models",
+            "$15.000–50.000",
+            "Balances de página (bruto): nicho, marca, equipo y años de sistema",
+          ],
+        ],
       },
       {
         type: "h2",
@@ -1436,19 +1460,39 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h2",
-        text: "Matices regionales y un FAQ breve",
+        text: "Matices regionales",
       },
       {
         type: "p",
         text: "Tu audiencia y su poder adquisitivo siguen el geo de tu tráfico, no el país donde vives. El resultado fiscal es lo contrario: depende de tu jurisdicción, ya sea por alta de autónoma o por declaración de ingresos. Confirma los detalles con un contador local.",
       },
       {
-        type: "ul",
-        items: [
-          "¿Cuánto en el primer mes, de verdad? Suele ser $500–2.000, a veces menos — es un arranque normal",
-          "¿Se puede sin chats? Se puede, pero el techo baja mucho",
-          "¿La agencia garantiza una cifra? No — acelera el sistema, no promete un número",
-        ],
+        type: "h2",
+        text: "Preguntas frecuentes",
+      },
+      {
+        type: "h3",
+        text: "¿Cuánto gana una OnlyFans en su primer mes?",
+      },
+      {
+        type: "p",
+        text: "Sola y sin promoción — normalmente $100–200: la página existe, pero todavía no hay tráfico. Con trabajo sistemático y un equipo detrás, el corredor realista es de $500–3.000 en los primeros 1–3 meses. El crecimiento casi nunca es lineal, y ese arranque es normal.",
+      },
+      {
+        type: "h3",
+        text: "¿Es realista llegar a $10.000 al mes?",
+      },
+      {
+        type: "p",
+        text: "Lo es, pero no en el primer mes: ese nivel suele apoyarse en chats fuertes, 2–3 fuentes de tráfico y un nicho bien definido, y tarda seis meses o más de trabajo sistemático. Los balances de las páginas top llegan a $15.000–50.000/mes brutos — pero son cifras de facturación antes de comisiones e impuestos, no la mediana del mercado.",
+      },
+      {
+        type: "h3",
+        text: "¿La agencia garantiza una cifra de ingresos?",
+      },
+      {
+        type: "p",
+        text: "No — la agencia acelera el sistema, no promete un número. El rango de $12.000–35.000+/mes en el que se mueve una parte de las modelos de OFM no es una garantía ni la mediana para todas las solicitudes.",
       },
       {
         type: "tip",
@@ -1458,6 +1502,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "nav",
         intro: "Unas expectativas realistas van de la mano con:",
         links: [
+          {
+            href: "/join",
+            label: "Enviar solicitud a la agencia OFM",
+          },
           {
             href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
             label: "Empezar desde cero",
