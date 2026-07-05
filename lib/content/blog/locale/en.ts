@@ -152,6 +152,18 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "OnlyFans agency in Ukraine",
           },
           {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "OnlyFans marketing strategy 2026",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram & TikTok promo without bans",
+          },
+          {
+            href: "/",
+            label: "OFM agency — home and application",
+          },
+          {
             href: "/#calculator",
             label: "Income calculator on the homepage",
           },
@@ -254,6 +266,18 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
             label: "When to hire an agency",
           },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Subscriber retention: churn & LTV",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "OnlyFans marketing strategy 2026",
+          },
+          {
+            href: "/",
+            label: "OFM agency — cases and application",
+          },
         ],
       },
       {
@@ -348,8 +372,20 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Marketing strategy 2026",
           },
           {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram & TikTok without bans",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Retention: churn & LTV",
+          },
+          {
             href: "/blog/kak-vybrat-onlyfans-agentstvo",
             label: "How to choose an agency",
+          },
+          {
+            href: "/",
+            label: "OFM agency — full-service management, home",
           },
         ],
       },
@@ -427,6 +463,14 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
             label: "How much models earn",
           },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Subscriber retention: churn & LTV",
+          },
         ],
       },
       {
@@ -489,6 +533,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         intro: "Stay safe — read next:",
         links: [
           {
+            href: "/research/onlyfans-creator-safety-2026",
+            label: "Creator Safety 2026 research (24 sources)",
+          },
+          {
             href: "/blog/rabota-modelyu-onlyfans",
             label: "Become an OnlyFans model",
           },
@@ -503,6 +551,14 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/chto-delaet-onlyfans-agentstvo",
             label: "What an agency actually does",
+          },
+          {
+            href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
+            label: "How legit promo works: Reddit & X",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
           },
         ],
       },
@@ -591,6 +647,14 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-anonimnost-i-bezopasnost",
             label: "Anonymity and safety",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram & TikTok without bans",
           },
         ],
       },
@@ -1262,6 +1326,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Subscriber retention and LTV",
           },
           {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
+          {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
             label: "How much models earn",
           },
@@ -1412,6 +1480,18 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/kak-vybrat-onlyfans-agentstvo",
             label: "How to choose an agency",
           },
+          {
+            href: "/research/onlyfans-creator-safety-2026",
+            label: "Creator Safety 2026 research (24 sources)",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Retention: churn & LTV",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
         ],
       },
       {
@@ -1508,6 +1588,14 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
             label: "How much models earn",
+          },
+          {
+            href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
+            label: "First traffic: Reddit & X",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram & TikTok without bans",
           },
         ],
       },
@@ -1655,6 +1743,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-marketing-strategiya-2026",
             label: "Marketing strategy 2026",
           },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Retention: churn & LTV",
+          },
         ],
       },
       {
@@ -1787,6 +1879,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Marketing & traffic strategy",
           },
           {
+            href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
+            label: "Reddit & X promotion",
+          },
+          {
             href: "/blog/onlyfans-chaty-dm-prodazhi",
             label: "Chats & DM sales",
           },
@@ -1915,6 +2011,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         intro: "Safety and choosing the right team:",
         links: [
           {
+            href: "/research/onlyfans-creator-safety-2026",
+            label: "Creator Safety 2026 research (24 sources)",
+          },
+          {
             href: "/blog/rabota-modelyu-onlyfans",
             label: "Become an OnlyFans model",
           },
@@ -1929,6 +2029,14 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-oshibki-novichkov",
             label: "15 beginner mistakes",
+          },
+          {
+            href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
+            label: "Promo without doxxing: Reddit & X",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram & TikTok without bans",
           },
           {
             href: "/faq",
@@ -2006,6 +2114,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-marketing-strategiya-2026",
             label: "Marketing strategy 2026",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "SFW promo: Instagram & TikTok",
           },
           {
             href: "/blog/onlyfans-kontent-plan-i-syomki",
@@ -2115,6 +2227,14 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-agentstvo-ukraina",
             label: "OnlyFans agency in Ukraine",
           },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Marketing strategy 2026",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram & TikTok without bans",
+          },
         ],
       },
       {
@@ -2209,6 +2329,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-marketing-strategiya-2026",
             label: "Marketing strategy 2026",
+          },
+          {
+            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
+            label: "Instagram & TikTok without bans (TikTok BR)",
           },
         ],
       },

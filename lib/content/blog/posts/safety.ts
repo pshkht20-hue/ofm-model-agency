@@ -396,6 +396,7 @@ export const safetyPosts: BlogPost[] = [
       },
       blogNav('Разберись в деталях перед заявкой:', [
         LINK.safety,
+        LINK.research2026,
         LINK.noface,
         LINK.diaspora,
         LINK.pillar,

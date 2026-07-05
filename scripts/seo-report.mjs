@@ -19,6 +19,24 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'docs', 'analytics-reports');
 
+// npm run seo:report не подхватывает .env.local сам по себе (Node не читает
+// dotenv-файлы автоматически) — без этого лоадера скрипт молча деградировал
+// в заглушку "setup required". Тот же паттерн, что в seo-daily-telegram.mjs.
+function loadEnvLocal() {
+  const envPath = path.join(ROOT, '.env.local');
+  if (!fs.existsSync(envPath)) return;
+  for (const line of fs.readFileSync(envPath, 'utf8').split('\n')) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+    const idx = trimmed.indexOf('=');
+    if (idx === -1) continue;
+    const key = trimmed.slice(0, idx).trim();
+    const value = trimmed.slice(idx + 1).trim();
+    if (!process.env[key]) process.env[key] = value;
+  }
+}
+loadEnvLocal();
+
 const CREDENTIALS = process.env.GOOGLE_APPLICATION_CREDENTIALS;
 const GSC_SITE = process.env.GSC_SITE_URL ?? 'sc-domain:ofmmodels.com';
 const GA4_PROPERTY = process.env.GA4_PROPERTY_ID;
@@ -75,6 +93,9 @@ async function main() {
   const hasOAuth = hasOAuthToken();
 
   if (!hasServiceAccount && !hasOAuth) {
+    console.error(
+      'ОТЧЁТ НЕ СОБРАН: нет доступа к Google API — GOOGLE_APPLICATION_CREDENTIALS не задан/файл не найден и OAuth-токен отсутствует. Проверь .env.local и docs/analytics-setup.md.',
+    );
     writeSetupRequired(
       'No auth configured. Use OAuth (recommended): `.credentials/oauth-client.json` + `npm run seo:auth`, or service account in `.env.local`. See docs/analytics-setup.md.',
     );
@@ -82,6 +103,9 @@ async function main() {
   }
 
   if (!GA4_PROPERTY) {
+    console.error(
+      'GA4 отключён: нет GA4_PROPERTY_ID (проверь .env.local — GA4 → Admin → Property settings, числовой ID). Отчёт заменён заглушкой.',
+    );
     writeSetupRequired(
       'Missing `GA4_PROPERTY_ID`. Find it in GA4 → Admin → Property settings (numeric ID).',
     );

@@ -1,7 +1,7 @@
 # SEO Analytics Report
 
-**Generated:** 2026-07-04T03:59:50.593Z  
-**Period:** last 28 days (2026-06-06 → 2026-07-04)  
+**Generated:** 2026-07-05T04:38:50.745Z  
+**Period:** last 28 days (2026-06-07 → 2026-07-05)  
 **Site:** sc-domain:ofmmodels.com  
 **GA4 property:** 540360466
 
@@ -11,10 +11,10 @@
 
 | Metric | Value |
 |--------|-------|
-| GSC impressions (top queries sum) | 726 |
-| GSC clicks (top queries sum) | 18 |
-| GA4 sessions | 245 |
-| GA4 organic sessions | 39 |
+| GSC impressions (top queries sum) | 1018 |
+| GSC clicks (top queries sum) | 26 |
+| GA4 sessions | 253 |
+| GA4 organic sessions | 44 |
 
 
 
@@ -24,21 +24,21 @@
 
 | Query | Clicks | Impressions | CTR % | Position |
 |-------|--------|-------------|-------|----------|
-| ofm agency | 8 | 67 | 11.94 | 17.5 |
-| of models | 2 | 58 | 3.45 | 28.2 |
-| of management agency | 1 | 2 | 50.00 | 65.0 |
-| of model | 1 | 345 | 0.29 | 11.6 |
-| ofm model | 1 | 7 | 14.29 | 7.0 |
-| ofm models | 1 | 14 | 7.14 | 4.5 |
-| ofm onlyfans | 1 | 12 | 8.33 | 5.8 |
+| ofm agency | 9 | 69 | 13.04 | 17.3 |
+| of model | 2 | 416 | 0.48 | 11.6 |
+| of models | 2 | 60 | 3.33 | 28.8 |
+| ofm models | 2 | 16 | 12.50 | 4.6 |
+| onlyfans | 2 | 231 | 0.87 | 18.6 |
+| of management agency | 1 | 3 | 33.33 | 59.7 |
+| ofm model | 1 | 9 | 11.11 | 6.2 |
 | ofm onlyfans management | 1 | 3 | 33.33 | 8.0 |
-| ofm это | 1 | 101 | 0.99 | 5.4 |
-| onlyfans | 1 | 22 | 4.55 | 16.4 |
+| ofm это | 1 | 107 | 0.93 | 5.4 |
+| onlyfans moldova | 1 | 8 | 12.50 | 12.1 |
+| onlyfans вход | 1 | 3 | 33.33 | 10.0 |
+| onlyfans регистрация | 1 | 6 | 16.67 | 9.5 |
+| ucrania onlyfans | 1 | 2 | 50.00 | 10.0 |
+| онліфанс | 1 | 6 | 16.67 | 53.7 |
 | 6 figure ofm 6 figure ofm | 0 | 6 | 0.00 | 22.2 |
-| agencia de ofm | 0 | 3 | 0.00 | 8.7 |
-| agencia of | 0 | 9 | 0.00 | 55.0 |
-| agencia ofm | 0 | 3 | 0.00 | 9.7 |
-| agencia onlyfans confiable | 0 | 3 | 0.00 | 23.3 |
 
 ---
 
@@ -46,16 +46,16 @@
 
 | Page | Clicks | Impressions | CTR % | Position |
 |------|--------|-------------|-------|----------|
-| https://ofmmodels.com/ | 30 | 494 | 6.07 | 14.8 |
-| https://ofmmodels.com/en/faq | 7 | 364 | 1.92 | 15.7 |
-| https://ofmmodels.com/en/ | 6 | 290 | 2.07 | 9.1 |
-| https://ofmmodels.com/es/blog/rabota-modelyu-onlyfans | 5 | 38 | 13.16 | 11.1 |
-| https://ofmmodels.com/es/faq | 5 | 157 | 3.18 | 8.6 |
-| https://ofmmodels.com/en/blog/rabota-modelyu-onlyfans | 4 | 57 | 7.02 | 10.1 |
-| https://ofmmodels.com/blog/onlyfans-agentstvo-ukraina | 3 | 54 | 5.56 | 14.1 |
-| https://ofmmodels.com/blog/kak-stat-onlyfans-modelyu-s-nulya | 2 | 21 | 9.52 | 8.6 |
-| https://ofmmodels.com/blog/kak-vybrat-onlyfans-agentstvo | 2 | 14 | 14.29 | 22.6 |
-| https://ofmmodels.com/blog/onlyfans-agentstvo-latinskaya-amerika | 2 | 17 | 11.76 | 7.6 |
+| https://ofmmodels.com/ | 31 | 501 | 6.19 | 15.0 |
+| https://ofmmodels.com/en/faq | 9 | 410 | 2.20 | 15.6 |
+| https://ofmmodels.com/en/ | 8 | 375 | 2.13 | 9.2 |
+| https://ofmmodels.com/es/blog/rabota-modelyu-onlyfans | 6 | 50 | 12.00 | 10.3 |
+| https://ofmmodels.com/en/blog/rabota-modelyu-onlyfans | 5 | 85 | 5.88 | 11.8 |
+| https://ofmmodels.com/es/faq | 5 | 166 | 3.01 | 8.9 |
+| https://ofmmodels.com/blog/onlyfans-agentstvo-moldova | 4 | 48 | 8.33 | 8.7 |
+| https://ofmmodels.com/blog/kak-vybrat-onlyfans-agentstvo | 3 | 16 | 18.75 | 20.6 |
+| https://ofmmodels.com/blog/kak-zaregistrirovatsya-na-onlyfans | 3 | 118 | 2.54 | 9.3 |
+| https://ofmmodels.com/blog/onlyfans-agentstvo-ukraina | 3 | 59 | 5.08 | 15.6 |
 
 ---
 
@@ -63,16 +63,16 @@
 
 | Country | Clicks | Impressions |
 |---------|--------|-------------|
-| rus | 19 | 389 |
-| ukr | 14 | 333 |
-| usa | 7 | 537 |
-| esp | 6 | 97 |
-| blr | 4 | 40 |
-| ven | 4 | 37 |
-| hrv | 3 | 8 |
-| nld | 3 | 65 |
-| deu | 2 | 69 |
-| geo | 2 | 17 |
+| rus | 23 | 685 |
+| ukr | 21 | 638 |
+| usa | 11 | 648 |
+| esp | 6 | 105 |
+| col | 4 | 42 |
+| ven | 4 | 43 |
+| blr | 3 | 46 |
+| hrv | 3 | 9 |
+| mda | 3 | 43 |
+| nld | 3 | 77 |
 
 ---
 
@@ -81,20 +81,20 @@
 | Page | Sessions |
 |------|----------|
 | / | 147 |
-| (not set) | 33 |
+| (not set) | 30 |
 | /uk | 13 |
-| /en | 11 |
-|  | 7 |
+| /en | 12 |
+|  | 8 |
+| /blog/kak-vybrat-onlyfans-agentstvo | 7 |
 | /en/blog/onlyfans-agentstvo-latinskaya-amerika | 5 |
+| /blog | 4 |
+| /blog/rabota-modelyu-onlyfans | 4 |
 | /en/blog/rabota-modelyu-onlyfans | 4 |
-| /blog | 3 |
-| /blog/kak-zaregistrirovatsya-na-onlyfans | 3 |
-| /blog/rabota-modelyu-onlyfans | 3 |
-| /blog/kak-vybrat-onlyfans-agentstvo | 2 |
-| /blog/onlyfans-skolko-zarabatyvayut-modeli | 2 |
+| /faq | 3 |
+| /blog/kak-zaregistrirovatsya-na-onlyfans | 2 |
 | /es | 2 |
 | /es/blog/rabota-modelyu-onlyfans | 2 |
-| /faq | 2 |
+| /uk/blog/onlyfans-agentstvo-ukraina | 2 |
 
 ---
 
@@ -102,10 +102,10 @@
 
 | Country | Sessions |
 |---------|----------|
-| Georgia | 171 |
-| Ukraine | 17 |
-| Russia | 8 |
-| Germany | 6 |
+| Georgia | 169 |
+| Ukraine | 19 |
+| Russia | 13 |
+| Germany | 7 |
 | Poland | 6 |
 | United States | 5 |
 | Brazil | 3 |
@@ -114,38 +114,35 @@
 | Kenya | 3 |
 | Netherlands | 3 |
 | Czechia | 2 |
+| Spain | 2 |
 | Australia | 1 |
 | Bangladesh | 1 |
-| Colombia | 1 |
 
 ---
 
 ## Auto-detected actions (for agent)
 
 ### Low CTR pages (impressions ≥ 20, CTR < 2%)
-- `https://ofmmodels.com/en/faq` — CTR 1.92%, pos 15.7
-- `https://ofmmodels.com/faq` — CTR 0.86%, pos 6.8
-- `https://ofmmodels.com/blog/chto-takoe-onlyfans` — CTR 0.46%, pos 19.3
-- `https://ofmmodels.com/es/blog/onlyfans-agentstvo-latinskaya-amerika` — CTR 1.85%, pos 12.4
+- `https://ofmmodels.com/blog/chto-takoe-onlyfans` — CTR 0.41%, pos 18.9
+- `https://ofmmodels.com/faq` — CTR 0.80%, pos 6.7
+- `https://ofmmodels.com/es/blog/onlyfans-agentstvo-latinskaya-amerika` — CTR 1.75%, pos 12.9
 
 ### Quick-win queries (pos ≤ 15, impressions ≥ 10, clicks < 3)
-- «of model» — pos 11.6, 345 impr.
-- «ofm models» — pos 4.5, 14 impr.
-- «ofm onlyfans» — pos 5.8, 12 impr.
-- «ofm это» — pos 5.4, 101 impr.
-- «o f model» — pos 12.2, 10 impr.
+- «of model» — pos 11.6, 416 impr.
+- «ofm models» — pos 4.6, 16 impr.
+- «ofm это» — pos 5.4, 107 impr.
 
 ### Geo focus (target: UA, MD, AR, LatAm)
-- Ukraine in GSC: 333 impressions
-- Moldova: 37 impressions
+- Ukraine in GSC: 638 impressions
+- Moldova: 43 impressions
 - Argentina: 0 impressions
 
 ---
 
 ## Raw exports
 
-- `gsc-queries-2026-07-04.csv`
-- `gsc-pages-2026-07-04.csv`
-- `gsc-countries-2026-07-04.csv`
+- `gsc-queries-2026-07-05.csv`
+- `gsc-pages-2026-07-05.csv`
+- `gsc-countries-2026-07-05.csv`
 
 > Cursor agent: read this file and propose a 2-week SEO backlog (code + content).

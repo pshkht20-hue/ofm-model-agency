@@ -610,6 +610,7 @@ export const startPosts: BlogPost[] = [
         LINK.content,
         LINK.mistakes,
         LINK.choose,
+        LINK.ofm,
       ]),
       blogApplyCta(
         "Готовы к запуску с командой?",
@@ -1036,6 +1037,8 @@ export const startPosts: BlogPost[] = [
         LINK.noface,
         LINK.ua,
         LINK.register,
+        LINK.marketing,
+        LINK.ig,
         LINK.calc,
       ]),
       blogApplyCta(
@@ -1174,6 +1177,8 @@ export const startPosts: BlogPost[] = [
         LINK.income,
         LINK.legal,
         LINK.safety,
+        LINK.marketing,
+        LINK.reddit,
         LINK.calc,
       ]),
       blogApplyCta(
@@ -1435,6 +1440,7 @@ export const startPosts: BlogPost[] = [
         LINK.legalTax,
         LINK.payout,
         LINK.scam,
+        LINK.research2026,
         LINK.safety,
         LINK.noface,
         LINK.howstart,

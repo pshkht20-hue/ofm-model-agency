@@ -28,8 +28,8 @@ export const LINK = {
   /** Анкета кандидатки — мостик на /join из контент-кластера */
   join: { href: '/join', label: 'Заполнить анкету в агентство OFM' },
   home: { href: '/', label: 'Главная — кейсы и заявка' },
-  /** Keyword-анкор «OFM агентство» на главную для agency-кластера */
-  ofm: { href: '/', label: 'OFM агентство — главная и заявка' },
+  /** Keyword-анкор «онлифанс агентство» на главную для agency-кластера */
+  ofm: { href: '/', label: 'Онлифанс агентство OFM — главная и заявка' },
   /** Якорь калькулятора дохода на главной */
   calc: { href: '/#calculator', label: 'Калькулятор дохода на главной' },
   pillar: { href: '/blog/rabota-modelyu-onlyfans', label: 'Работа моделью OnlyFans' },
@@ -66,6 +66,11 @@ export const LINK = {
   safetyResearch: {
     href: '/research/onlyfans-creator-safety-2026',
     label: 'Исследование: безопасность креаторов',
+  },
+  /** Дистрибуция /research: полный анкор с числом источников */
+  research2026: {
+    href: '/research/onlyfans-creator-safety-2026',
+    label: 'Исследование Creator Safety 2026 (24 источника)',
   },
   noface: { href: '/blog/onlyfans-rabota-bez-lica', label: 'Лицо и анонимность' },
   legal: {

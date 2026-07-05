@@ -548,6 +548,7 @@ export const moneyPosts: BlogPost[] = [
       blogNav('Реалистичные ожидания — в связке с:', [
         LINK.pillar,
         LINK.home,
+        LINK.research2026,
         LINK.faq,
         LINK.when,
         LINK.ua,
