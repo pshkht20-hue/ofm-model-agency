@@ -2263,7 +2263,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     blocks: [
       {
         type: "p",
-        text: "Latin America is one of the fastest-growing OnlyFans regions: Mexico, Colombia, Argentina, Chile, Peru, Ecuador, Uruguay, Paraguay, Bolivia, Venezuela, Central America (Costa Rica, Panama, Guatemala), and Brazil. Searches for “OnlyFans agency Latin America,” “OnlyFans agency Mexico,” or “OnlyFans agency Brazil” surface hundreds of listings—from professional studios to scams. This guide covers the whole Spanish-speaking region plus Brazil—not one country.",
+        text: "Latin America is one of the fastest-growing OnlyFans regions: Mexico, Colombia, Argentina, Chile, Peru, Ecuador, Uruguay, Paraguay, Bolivia, Central America (Costa Rica, Panama, Guatemala), and Brazil. Searches for “OnlyFans agency Latin America,” “OnlyFans agency Mexico,” or “OnlyFans agency Brazil” surface hundreds of listings—from professional studios to scams. This guide covers the whole Spanish-speaking region plus Brazil—not one country.",
       },
       { type: "h2", text: "Why LatAm and Brazil creators choose agencies" },
       {
