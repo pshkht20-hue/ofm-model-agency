@@ -59,3 +59,6 @@ next-env.d.ts
 
 # Claude Code private/local settings (may contain API keys) — committed config is .mcp.json + .claude/skills/
 /.claude/settings.local.json
+
+# rank-трекер: история позиций (локальная, не деплоится)
+/docs/analytics-reports/rank-history/

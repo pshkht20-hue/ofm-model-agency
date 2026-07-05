@@ -35,3 +35,29 @@ jobs:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Restore rank history
+        uses: actions/cache@v4
+        with:
+          path: docs/analytics-reports/rank-history
+          key: rank-history-${{ github.run_id }}
+          restore-keys: rank-history-
+
+      - name: Track positions (DataForSEO)
+        continue-on-error: true
+        run: npm run seo:positions -- --notify
+        env:
+          DATAFORSEO_USERNAME: ${{ secrets.DATAFORSEO_USERNAME }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: SEO alerts
+        continue-on-error: true
+        run: npm run seo:alerts -- --notify
+        env:
+          GOOGLE_OAUTH_CLIENT_JSON: ${{ secrets.GOOGLE_OAUTH_CLIENT_JSON }}
+          GOOGLE_OAUTH_REFRESH_TOKEN: ${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}
+          GSC_SITE_URL: sc-domain:ofmmodels.com
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
