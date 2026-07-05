@@ -303,11 +303,11 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
   },
   'onlyfans-vs-fansly-loyalfans': {
     localSrc: '/blog/covers/onlyfans-vs-fansly-loyalfans.jpg',
-    remoteSrc: coverUrl('1611926653458-09294b3142bf'),
-    alt: 'Смартфон с иконками социальных платформ в руке — сравнение OnlyFans, Fansly и LoyalFans',
-    photographer: 'Adem AY',
-    photographerUrl: 'https://unsplash.com/@ademay',
-    unsplashUrl: 'https://unsplash.com/photos/white-and-pink-digital-device-Tk9m_HP4rgQ',
+    remoteSrc: coverUrl('1562746075-3901c010c09d'),
+    alt: 'Два смартфона бок о бок в руках — сравнение платформ OnlyFans, Fansly и LoyalFans',
+    photographer: 'Artem Beliaikin',
+    photographerUrl: 'https://unsplash.com/@belart84',
+    unsplashUrl: 'https://unsplash.com/photos/two-iphones-04WIXPgAmls',
   },
   'vebkam-ili-onlyfans': {
     localSrc: '/blog/covers/vebkam-ili-onlyfans.jpg',
