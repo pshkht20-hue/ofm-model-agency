@@ -1,0 +1,221 @@
+# Keyword volumes — DataForSEO, Google Ukraine, 2026-07-05
+# формат: объём <tab> ключ <tab> конкуренция <tab> difficulty(0-100)
+
+## RU (объём>=40):
+40500	онлифанс	comp=LOW	diff=20
+6600	онлифанс это	comp=LOW	diff=0
+1600	онлифанс работа	comp=MEDIUM	diff=8
+1300	что такое онлифанс	comp=LOW	diff=0
+480	чатер онлифанс	comp=MEDIUM	diff=0
+480	онлифанс что это	comp=LOW	diff=0
+320	работа онлифанс	comp=MEDIUM	diff=0
+320	онлифанс приложение	comp=LOW	diff=21
+320	алина муронец онлифанс	comp=LOW	diff=0
+260	онлифанс вакансии	comp=MEDIUM	diff=2
+260	онлифанс в украине	comp=LOW	diff=0
+210	онлифанс официальный сайт	comp=LOW	diff=66
+210	онлифанс оф сайт	comp=LOW	diff=66
+210	как заработать на онлифанс	comp=LOW	diff=0
+210	как зарабатывают на онлифанс	comp=LOW	diff=0
+210	как зарабатывать на онлифанс	comp=LOW	diff=0
+170	онлифанс агентство	comp=LOW	diff=0
+140	онлифанс регистрация	comp=LOW	diff=0
+140	онлифанс регистрации	comp=LOW	diff=0
+140	мария ковальчук онлифанс	comp=LOW	diff=0
+140	как зарегистрироваться на онлифанс	comp=LOW	diff=8
+110	чатинг онлифанс	comp=MEDIUM	diff=0
+110	оператор чату онлифанс	comp=MEDIUM	diff=0
+110	оператор чата онлифанс	comp=MEDIUM	diff=0
+110	онлифанс чатер	comp=MEDIUM	diff=0
+110	онлифанс киев	comp=LOW	diff=0
+110	менеджер онлифанс	comp=MEDIUM	diff=0
+110	джесси кейв онлифанс	comp=LOW	diff=0
+90	скачать онлифанс	comp=LOW	diff=0
+90	работа на онлифанс	comp=LOW	diff=0
+90	онлифанс чатинг	comp=LOW	diff=0
+90	онлифанс чат	comp=LOW	diff=0
+90	онлифанс харьков	comp=LOW	diff=0
+90	онлифанс скачать приложение	comp=LOW	diff=0
+90	дреа де маттео онлифанс	comp=LOW	diff=0
+90	агентство онлифанс	comp=MEDIUM	diff=0
+70	что такое онлифанс простыми словами	comp=LOW	diff=None
+70	чатер онлифанс отзывы	comp=LOW	diff=0
+70	чатер онлифанс вакансии	comp=MEDIUM	diff=0
+70	чат менеджер онлифанс	comp=HIGH	diff=0
+70	сколько зарабатывают на онлифанс	comp=LOW	diff=0
+70	онлифанс работа чат	comp=MEDIUM	diff=0
+70	онлифанс песня	comp=LOW	diff=0
+70	онлифанс лого	comp=LOW	diff=0
+70	луиза карапетян онлифанс	comp=LOW	diff=None
+70	белла торн онлифанс	comp=LOW	diff=0
+50	шугар онлифанс песня	comp=LOW	diff=0
+50	основатель онлифанс	comp=LOW	diff=None
+50	онлифанс сайт как пользоваться	comp=LOW	diff=0
+50	онлифанс модель это	comp=LOW	diff=25
+50	муронец алина онлифанс	comp=LOW	diff=0
+50	менеджер онлифанс вакансии	comp=MEDIUM	diff=0
+50	мария ковальчук инстаграм онлифанс	comp=None	diff=0
+50	как работает онлифанс	comp=LOW	diff=0
+50	вакансии онлифанс	comp=LOW	diff=0
+50	алина муронец онлифанс фото	comp=LOW	diff=None
+40	сколько можно заработать на онлифанс новичку	comp=LOW	diff=0
+40	сайт онлифанс это	comp=LOW	diff=None
+40	работа онлифанс оператор	comp=MEDIUM	diff=0
+40	оператор онлифанс	comp=MEDIUM	diff=0
+40	онлифанс что такое	comp=LOW	diff=0
+40	онлифанс форум	comp=LOW	diff=0
+40	онлифанс платформа	comp=LOW	diff=23
+40	онлифанс перевод	comp=LOW	diff=5
+40	модель онлифанс вакансии	comp=MEDIUM	diff=0
+40	как найти человека на онлифанс	comp=LOW	diff=0
+40	заработок на онлифанс	comp=LOW	diff=0
+
+## UK (объём>=30):
+22200	онліфанс	comp=LOW	diff=11
+6600	онліфанс це	comp=LOW	diff=0
+1900	що таке онліфанс	comp=LOW	diff=0
+1300	онліфанс що це	comp=LOW	diff=0
+880	твій останній шанс онліфанс	comp=LOW	diff=0
+590	онліфанс шугар	comp=LOW	diff=0
+480	шугар онліфанс	comp=LOW	diff=0
+480	онліфанс україна	comp=LOW	diff=3
+320	онліфанс робота	comp=MEDIUM	diff=0
+320	влада соловйова онліфанс	comp=LOW	diff=0
+260	шугар онліфанс пісня	comp=LOW	diff=0
+260	шугар #онліфанс пісня	comp=LOW	diff=0
+260	онліфанс моделі	comp=LOW	diff=0
+260	онліфанс в україні	comp=LOW	diff=0
+260	модель онліфанс	comp=LOW	diff=0
+210	онліфанс пісня	comp=LOW	diff=0
+210	власник онліфанс	comp=LOW	diff=0
+170	онліфанс скачати	comp=LOW	diff=0
+140	робота онліфанс	comp=MEDIUM	diff=0
+140	онліфанс модель	comp=LOW	diff=0
+140	марія ковальчук онліфанс	comp=LOW	diff=0
+110	як заробляти на онліфанс	comp=LOW	diff=0
+110	онліфанс шугар текст	comp=LOW	diff=0
+110	онліфанс регистрация україна	comp=LOW	diff=0
+110	анна малігон онліфанс	comp=LOW	diff=0
+90	ірина ольховська онліфанс	comp=LOW	diff=0
+90	софі рейн онліфанс	comp=LOW	diff=0
+90	онліфанс додаток	comp=LOW	diff=25
+90	засновник онліфанс	comp=LOW	diff=6
+70	як зареєструватися на онліфанс	comp=LOW	diff=0
+70	онліфанс як заробляти	comp=LOW	diff=0
+70	онліфанс як заробити	comp=LOW	diff=0
+70	онліфанс українки	comp=LOW	diff=0
+70	онліфанс заробіток	comp=LOW	diff=0
+70	ліза вовк онліфанс	comp=LOW	diff=0
+50	як працює онліфанс	comp=LOW	diff=0
+50	юля-цибуля на онліфанс	comp=None	diff=0
+50	що таке онліфанс модель	comp=LOW	diff=0
+50	твій останній шанс онліфанс пісня	comp=LOW	diff=0
+50	скільки заробляють на онліфанс	comp=LOW	diff=0
+50	скачати онліфанс	comp=LOW	diff=0
+50	робота на онліфанс	comp=MEDIUM	diff=0
+50	оператор чату онліфанс	comp=LOW	diff=0
+50	онліфанс робота для чоловіків	comp=LOW	diff=0
+50	онліфанс реєстрація	comp=LOW	diff=5
+50	онліфанс пісня шугар	comp=LOW	diff=0
+50	онліфанс львів	comp=LOW	diff=1
+50	онліфанс агенції	comp=LOW	diff=0
+50	онліфанс агенція	comp=LOW	diff=0
+50	модель онліфанс що це	comp=LOW	diff=0
+50	леся нікітюк онліфанс	comp=LOW	diff=0
+50	джессі кейв онліфанс	comp=LOW	diff=0
+50	анастасія ковальчук онліфанс	comp=LOW	diff=0
+50	аліна миронець онліфанс	comp=LOW	diff=0
+40	як зареєструватись на онліфанс	comp=LOW	diff=0
+40	що таке онліфанс в україні	comp=LOW	diff=None
+40	хто створив онліфанс	comp=LOW	diff=None
+40	український онліфанс	comp=LOW	diff=0
+40	твій останній шанс онліфанс текст	comp=LOW	diff=0
+40	онліфанс як зареєструватись	comp=LOW	diff=0
+40	онліфанс моделі з україни	comp=LOW	diff=0
+40	онліфанс модель це	comp=LOW	diff=0
+40	менеджер чату онліфанс	comp=LOW	diff=0
+30	як працювати на онліфанс	comp=LOW	diff=0
+30	як заробляти на онліфанс в україні	comp=LOW	diff=0
+30	шугар онліфанс текст	comp=LOW	diff=0
+30	трінчер онліфанс	comp=LOW	diff=None
+30	робота онліфанс чатер	comp=MEDIUM	diff=0
+30	пісня про онліфанс	comp=LOW	diff=0
+30	помер власник онліфанс	comp=LOW	diff=0
+30	онліфанс як зареєструватися	comp=LOW	diff=0
+30	онліфанс шугар слухати	comp=LOW	diff=0
+30	онліфанс скільки заробляють	comp=LOW	diff=0
+30	онліфанс скачать	comp=LOW	diff=0
+30	онліфанс скачати на айфон	comp=LOW	diff=0
+30	онліфанс моделі україна	comp=LOW	diff=0
+30	онліфанс дівчата	comp=LOW	diff=0
+30	онліфанс безкоштовний	comp=LOW	diff=0
+30	марія ковальчук онліфанс інстаграм	comp=LOW	diff=0
+30	агенція онліфанс	comp=LOW	diff=0
+
+## girlswork.com.ua ранжируется по (топ):
+40500	онлифанс	поз=10	/onlyfans-agenstva/
+18100	fansly	поз=11	/fansly-%D0%B2-%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%96-%D
+2900	loyalfans	поз=5	/loyalfans/
+1600	онлифанс работа	поз=2	/
+880	ии девушка	поз=16	/virtualnaya-web-model-kak-sozdat-ai-devushku/
+480	чатер онлифанс	поз=5	/
+480	онліфанс україна	поз=14	/
+480	онлифанс что это	поз=19	/%D1%87%D0%B0%D1%82%D0%B5%D1%80-%D0%BE%D0%BD%D0%BB%D0%B8%D1%
+480	брачка работа	поз=30	/vacancy/%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-%D
+390	onlyfans работа	поз=1	/
+390	onlyfans вакансии	поз=2	/
+320	робота оператор чату віддалено	поз=9	/job-category/chats/
+320	работа онлифанс	поз=1	/
+320	онліфанс робота	поз=1	/
+320	веб модель	поз=8	/robota-web-model/
+260	онлифанс вакансии	поз=3	/
+210	менеджер чата	поз=16	/job-category/chats/
+210	как заработать на онлифанс	поз=43	/kak-zarabatyvat-na-onlyfans/
+170	чаттер	поз=1	/job-category/chatss/
+170	онлифанс агентство	поз=3	/onlyfans-agenstva/
+140	чатинг работа	поз=2	/job-category/chatss/
+140	онлифанс регистрация	поз=26	/zaregistrirovatsya-na-onlyfans/
+140	онлик тг	поз=13	/
+140	как зарегистрироваться на онлифанс	поз=15	/zaregistrirovatsya-na-onlyfans/
+110	чатинг онлифанс	поз=1	/
+110	работа оператор чата	поз=10	/job-category/chats/
+110	работа вебкам	поз=3	/robota-web-model/
+110	оператор чата онлифанс	поз=1	/
+110	онлифанс чатер	поз=2	/
+110	менеджер онлифанс	поз=1	/job-category/manager/
+90	чат работа телеграм	поз=19	/telegram-chaty-rabota-ukraina/
+90	сколько зарабатывают модели	поз=31	/skolko-zarabatyvayut-vebkam-modeli-i-operatori-onlyfans/
+90	работа на онлифанс	поз=1	/
+90	онлифанс чатинг	поз=1	/
+90	агентство онлифанс	поз=1	/onlyfans-agenstva/
+90	onlyfans как зарабатывать	поз=18	/kak-zarabatyvat-na-onlyfans/
+70	чаттер это	поз=10	/chatter-onlyfans/
+70	создать девушку	поз=10	/virtualnaya-web-model-kak-sozdat-ai-devushku/
+70	сколько зарабатывают на онлифанс	поз=11	/skolko-zarabatyvayut-vebkam-modeli-i-operatori-onlyfans/
+70	робота оператор чату відгуки	поз=23	/job-category/chats/
+
+## royalmodelagency.com ранжируется по (топ):
+40500	онлифанс	поз=15	/
+2900	loyalfans	поз=40	/
+480	чатер онлифанс	поз=19	/khto-taki-chattery-v-onlyfans/
+480	онліфанс україна	поз=11	/
+390	onlyfans работа	поз=22	/
+390	onlyfans вакансии	поз=20	/
+320	онліфанс робота	поз=3	/
+260	онлифанс в украине	поз=30	/
+170	онлифанс агентство	поз=4	/
+140	онлифанс регистрация	поз=20	/reiestratsiia-na-onlyfans-v-ukraine/
+140	как зарегистрироваться на онлифанс	поз=27	/reiestratsiia-na-onlyfans-v-ukraine/
+110	шлюбне агентство робота	поз=24	/operator-chatu-dlya-shlyubnoyi-ahentsiyi/
+110	чатинг онлифанс	поз=28	/khto-taki-chattery-v-onlyfans/
+110	оператор чата онлифанс	поз=36	/khto-taki-chattery-v-onlyfans/
+110	онлифанс чатер	поз=14	/khto-taki-chattery-v-onlyfans/
+110	менеджер онлифанс	поз=37	/
+90	работа на онлифанс	поз=14	/
+90	онлифанс чатинг	поз=34	/khto-taki-chattery-v-onlyfans/
+90	агентство онлифанс	поз=3	/
+70	чаттер это	поз=5	/khto-taki-chattery-v-onlyfans/
+70	онлифанс работа чат	поз=40	/khto-taki-chattery-v-onlyfans/
+70	diamond models	поз=31	/pro-nas/
+50	онліфанс агенція	поз=3	/
+50	onlyfans модель это	поз=36	/

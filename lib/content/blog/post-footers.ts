@@ -108,4 +108,16 @@ export const LINK = {
     href: '/blog/vebkam-ili-onlyfans',
     label: 'Вебкам или OnlyFans: что выбрать',
   },
+  modeli: {
+    href: '/blog/onlyfans-modeli-kto-eto',
+    label: 'OnlyFans-модели: кто это и сколько получают',
+  },
+  chatter: {
+    href: '/blog/chatter-onlyfans-kto-eto',
+    label: 'Чаттер OnlyFans: кто ведёт переписку',
+  },
+  founder: {
+    href: '/blog/kto-sozdal-onlyfans',
+    label: 'Кто создал OnlyFans: история платформы',
+  },
 } as const;

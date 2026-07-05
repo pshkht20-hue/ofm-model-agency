@@ -325,6 +325,30 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@microsoftedge',
     unsplashUrl: 'https://unsplash.com/photos/a-woman-using-a-laptop-1N49Cn7P0Fg',
   },
+  'onlyfans-modeli-kto-eto': {
+    localSrc: '/blog/covers/onlyfans-modeli-kto-eto.jpg',
+    remoteSrc: coverUrl('1486403184395-fc4990866136'),
+    alt: 'Уверенная улыбающаяся девушка со смартфоном в руках — кто такие OnlyFans-модели и чем они занимаются',
+    photographer: 'Luke Porter',
+    photographerUrl: 'https://unsplash.com/@lukeporter',
+    unsplashUrl: 'https://unsplash.com/photos/woman-holding-phone-smiling-UGX2qdjdKkw',
+  },
+  'chatter-onlyfans-kto-eto': {
+    localSrc: '/blog/covers/chatter-onlyfans-kto-eto.jpg',
+    remoteSrc: coverUrl('1760349748488-bd2a7ef25ea0'),
+    alt: 'Руки набирают сообщение на смартфоне с открытой перепиской — чаттер OnlyFans ведёт чаты с подписчиками',
+    photographer: 'Faustina Okeke',
+    photographerUrl: 'https://unsplash.com/@thefourthwxll',
+    unsplashUrl: 'https://unsplash.com/photos/hands-typing-on-a-smartphone-with-a-message-on-screen-SrgMu4Fvk7E',
+  },
+  'kto-sozdal-onlyfans': {
+    localSrc: '/blog/covers/kto-sozdal-onlyfans.jpg',
+    remoteSrc: coverUrl('1543832923-44667a44c804'),
+    alt: 'Тауэрский мост в Лондоне — город, где Тим Стокли создал OnlyFans в 2016 году',
+    photographer: 'David Monaghan',
+    photographerUrl: 'https://unsplash.com/@rubicon99',
+    unsplashUrl: 'https://unsplash.com/photos/tower-bridge-london-J-wEJwSiAbQ',
+  },
 };
 
 export function getBlogCover(slug: string): BlogCover | undefined {
