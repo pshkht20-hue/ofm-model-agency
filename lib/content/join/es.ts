@@ -116,7 +116,12 @@ export const JOIN_ES: JoinContent = {
       {
         question: '¿Cuánto se lleva la agencia?',
         answer:
-          'Las condiciones y el porcentaje se acuerdan en el casting y se fijan por escrito antes del lanzamiento. Tú no pagas nada: ni cuota de entrada, ni formación, ni promoción. La agencia solo gana un porcentaje de lo que genera la página, así que solo ganamos si tú ganas.',
+          'La modelo recibe el 20–30 % del balance total de la página — según el plan de trabajo, tu perfil y el equipo asignado. Por qué ese reparto: la agencia financia toda la promoción — tráfico, chatters 24/7, gestión; tú no inviertes nada, y parte de los ingresos de la página se reinvierte en su crecimiento. Sin reinversión el balance no crece — por eso el 25 % de un balance en crecimiento a los seis meses vale más que el 100 % de una página sola parada en cero. Tú no pagas nada: la agencia solo gana cuando tú ganas.',
+      },
+      {
+        question: '¿Quién se encarga de los pagos?',
+        answer:
+          'La agencia: registro y configuración de los sistemas de pago (Paxum, Skrill y otros), control de los ingresos y pagos según un calendario fijo — no tienes que pelearte con comisiones ni verificaciones de monederos. La página está registrada con tus documentos y tú conoces todos los datos de tu cuenta. El calendario de pagos se acuerda en el casting, y puedes dejar la colaboración en cualquier momento.',
       },
     ],
   },

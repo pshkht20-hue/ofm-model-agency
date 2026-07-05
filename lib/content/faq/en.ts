@@ -7,7 +7,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'What is OFM?',
         answer:
-          'OFM (OnlyFans Management) is the business of running OnlyFans creator accounts: marketing, 24/7 subscriber chats, content strategy, analytics, and account protection, so the model can focus on content. That is exactly what our team does — OFM\'s Model Agency (ofmmodels.com), an independent international agency: we are not affiliated with the OnlyFans platform and do not speak on its behalf. Collaboration starts with a free application on the site — a manager replies on Telegram within 24 hours. Terms and commission are agreed individually, with no hidden upfront “entry” fees.',
+          'OFM (OnlyFans Management) is the business of running OnlyFans creator accounts: marketing, 24/7 subscriber chats, content strategy, analytics, and account protection, so the model can focus on content. That is exactly what our team does — OFM\'s Model Agency (ofmmodels.com), an independent international agency: we are not affiliated with the OnlyFans platform and do not speak on its behalf. Collaboration starts with a free application on the site — a manager replies on Telegram within 24 hours. The model receives 20–30% of the page\'s total balance, while the agency funds the entire launch and promotion itself — there are no upfront “entry” fees.',
       },
       {
         question: 'What is an OnlyFans agency, and why would a model need one?',
@@ -67,17 +67,17 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
     ],
   },
   {
-    title: 'Money, percentage, and contract',
+    title: 'Money, percentage, and terms',
     items: [
       {
         question: 'What percentage does an OnlyFans agency take?',
         answer:
-          'Agencies usually take a percentage of the creator\'s gross revenue (revenue share), not a fixed salary. For full-service management, the market range is roughly 25–40% depending on scope (marketing, chats, content, analytics). “Chats only” packages often have a lower percentage but limited growth without marketing. At OFM\'s Model Agency, commission and services are agreed in writing after you apply; there are no hidden upfront entry fees. Figures on the site are gross OnlyFans page totals, not the creator\'s net payout.',
+          'A straight answer, no “we\'ll discuss it individually”: at OFM the model receives 20–30% of the page\'s total gross balance — depending on the work plan, your type, and the team involved. Why that split: the agency funds everything — promotion, traffic, 24/7 chatters, management — so you invest nothing. The key part is reinvestment: a share of page income goes back into its growth, because without reinvestment the balance simply doesn\'t grow, and 25% of a growing balance six months in beats 100% of a solo page stuck at zero. For context: CIS agencies pay models 20–30% and Western ones up to 40%, so this is a fair market rate. Figures on the site are gross OnlyFans page totals, not the creator\'s net payout.',
       },
       {
         question: 'How much does an OnlyFans agency charge? Typical payment models',
         answer:
-          'Industry standard is usually a percentage of the creator\'s gross revenue (revenue share). Market range for full service is roughly 25–40%, depending on scope. Hybrids (percentage plus fixed fee) or “chats only” packages with a lower percentage also exist. At OFM, terms are agreed transparently after you apply; we do not charge hidden upfront “entry” fees.',
+          'The industry standard is revenue share: the agency earns a percentage of page income, and only when you earn. In the CIS, models typically receive 20–30% of the gross balance; some Western teams pay up to 40% — while Western full-management agencies keep 50–60% for themselves. At OFM the model receives 20–30%: promotion, traffic, and 24/7 chatters are funded by the agency, and part of the income is reinvested into page growth. Compare take-home money six months in, not percentages. We charge no upfront “entry” fees.',
       },
       {
         question: 'Which fees are normal, and which are red flags?',
@@ -90,19 +90,19 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
           'The range is wide: from a few hundred dollars for beginners to five-figure months for top accounts. At OFM, some models have reached roughly $12,000 to $35,000+ per month, but that is not a guarantee or a minimum. Results depend on niche, discipline, content, and traffic volume.',
       },
       {
-        question: 'What is the contract term, and can I leave?',
+        question: 'Can I stop working with the agency, and how fast?',
         answer:
-          'Many reputable agencies use month-to-month terms with 30 days\' notice. Avoid rigid 6–12 month contracts without a clear exit clause. At OFM, exit terms and duration are discussed before launch and confirmed in writing.',
+          'Any time — and that is a deliberate policy. We don\'t lock models into long contracts with early-exit penalties: you start without paperwork hassle, and everything — percentage, work plan, content boundaries — is agreed transparently at the casting call. What keeps an honest team honest is results, not a signature: if we didn\'t grow balances, models would leave. Your freedom to walk away at any moment is your built-in guarantee.',
       },
       {
         question: 'Who owns the OnlyFans account?',
         answer:
-          'The account should always remain yours as the creator. The agency helps operate and grow it but does not “own” your page. The contract should clearly state content rights, access, and what happens when the partnership ends.',
+          'The page is registered with the model\'s own documents: you pass platform verification yourself and know all your account details — the handle, the email, what is registered where. Running the account and its finances is the agency\'s job: registration, sales, payment systems, and payouts on a fixed schedule. You access the page by arrangement — for example, on payout day. If you end the partnership — which you can do at any moment — the page registered with your documents stays with you.',
       },
       {
         question: 'How do payouts from the platform work?',
         answer:
-          'OnlyFans pays the creator according to platform rules (cycles, minimum thresholds, verification). The agency usually receives its share under the agreed structure after revenue is recorded — details depend on the contract. Discuss payout methods and taxes with your manager and, if needed, a tax advisor in your jurisdiction.',
+          'The agency runs the entire payment side: registering and setting up payment systems (Paxum, Skrill, and others), tracking income, and paying the model on a fixed schedule. You don\'t have to figure out SWIFT, fees, or wallet verifications — your share arrives in dollars on agreed dates, and the schedule is set at the casting call. This protects both sides: page balances have been targeted by scammers more than once, so the team keeps the financial loop closed. Discuss taxes with your manager and, if needed, an advisor in your jurisdiction.',
       },
     ],
   },
@@ -110,9 +110,9 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
     title: 'Security and confidentiality',
     items: [
       {
-        question: 'How does an agency get account access, and how safe is it?',
+        question: 'Who runs the account, and how is my data protected?',
         answer:
-          'Practices vary: from separate roles inside OnlyFans to secured work environments (VPS, limited logins, without sharing one password with the whole team). Ask who sees access, how passwords change when someone leaves, and whether there is an activity log. At OFM, access follows the principle of least privilege.',
+          'The agency team runs the account in full — that is what full-service means: marketing, chats, sales, and payment systems are on our side, while the page itself is registered with the model\'s documents and you know all your account details. Inside the team, NDAs and internal policies apply: personal data and content are visible only to the people who need them for the job. You access the page by arrangement — for example, on payout day.',
       },
       {
         question: 'How are identity and content protected from leaks?',
@@ -157,7 +157,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How do I apply to OFM\'s Model Agency?',
         answer:
-          'On the [OFM agency](/) homepage, fill out the form: name, Telegram (required), Instagram optional, and a short intro. A manager will message you on Telegram within 24 hours, run an initial review, and suggest next steps. Applying does not obligate you to sign immediately.',
+          'On the [OFM agency](/) homepage, fill out the form: name, Telegram (required), Instagram optional, and a short intro. A manager will message you on Telegram within 24 hours, run an initial review, and suggest next steps. Applying commits you to nothing.',
       },
       {
         question: 'How long from launch to first payouts?',
@@ -177,27 +177,27 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How to choose a good OnlyFans agency: checklist',
         answer:
-          'Check: (1) transparent percentage and service list; (2) contract with an exit clause; (3) account stays yours; (4) real case studies or a chance to speak with a current model; (5) response time to applications; (6) no large upfront fees; (7) clear privacy policy. Compare 2–3 agencies before deciding.',
+          'Check: (1) a transparent percentage and a clear service list; (2) verifiable case studies and real payouts — or a chance to speak with a current model; (3) a real casting call with a manager, not “sign today” in DMs; (4) the agency funds the launch itself and never asks you for money; (5) response speed and tone; (6) a clear privacy policy; (7) freedom to end the partnership at any moment. Compare 2–3 agencies before deciding.',
       },
       {
         question: 'What questions should I ask a manager on the first call?',
         answer:
-          'Ask: percentage and what is included; who runs chats and for how many hours per day; how marketing works; reporting frequency; who owns content; contract exit term; how access is stored; hidden fees; what happens if revenue does not grow for 60 days. A solid agency answers calmly and in writing.',
+          'Ask: what percentage the model receives and what the agency does for its share; who runs chats and how many shifts per day; how marketing works and who funds it; reporting frequency and the payout schedule; growth case studies in your niche; what happens if revenue does not grow for 60 days; how quickly you can end the partnership. A solid agency answers calmly and specifically, with no “decide right now” pressure.',
       },
       {
         question: 'Signs of fraud and toxic agencies',
         answer:
-          'Warning signs: upfront payment “for promotion”; a fixed $X promise without niche analysis; pressure to sign today; request to hand over full control of the account and payouts; no contract; threats when you try to leave; publishing your materials without consent.',
+          'Warning signs: they ask you for money — “for promotion”, training, or entry; they promise a fixed $10–100K right away with no niche analysis; there are no verifiable case studies or real payouts; there is no live casting call or manager — just “decide today” pressure; threats when you try to leave; publishing your materials without consent. An honest team earns a share of results and calmly gives you time to think.',
       },
       {
         question: 'Can I combine an agency and self-managing the account?',
         answer:
-          'Technically possible, but strategies often clash: different pricing, chat tone, and marketing. Most top models with an agency hand over management entirely for one funnel. Agree the format in the contract before you start.',
+          'Technically possible, but strategies often clash: different pricing, chat tone, and marketing. Most top models with an agency hand over management entirely for one funnel. Agree on the format at the casting call before you start.',
       },
       {
         question: 'How is OFM\'s Model Agency different from other teams?',
         answer:
-          'The [OFM agency](/) combines a personal manager, marketing and 24/7 chats, content strategy, transparent reporting, and a focus on confidentiality. We are independent from OnlyFans, do not charge an “entry” fee, and respond to applications within 24 hours. Terms and percentage are agreed individually after we get to know you.',
+          'The [OFM agency](/) combines a personal manager, marketing and 24/7 chats, content strategy, transparent reporting, and a focus on confidentiality. We are independent from OnlyFans, do not charge an “entry” fee, and respond to applications within 24 hours. The model receives 20–30% of the page\'s total balance, while promotion, traffic, and chatters are funded by the agency — the work plan is discussed at the casting call.',
       },
     ],
   },

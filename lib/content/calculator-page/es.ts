@@ -74,7 +74,7 @@ export const CALCULATOR_PAGE_ES: CalculatorPageContent = {
       {
         question: '¿Cómo aumentar los ingresos en OnlyFans?',
         answer:
-          'Tres palancas: más tráfico (TikTok, Instagram, shoutouts), venta bien hecha en los chats y una estrategia de PPV en vez de esperar que la suscripción lo pague todo. Llevar todo eso sola es durísimo; justo por eso las creadoras se unen a agencias. El equipo de OFM se encarga del marketing, los chats 24/7 y la analítica mientras tú te centras en el contenido. El primer paso es un formulario de 2 minutos en la página de casting — gratis y sin compromiso.',
+          'Tres palancas: más tráfico (TikTok, Instagram, shoutouts), venta bien hecha en los chats y una estrategia de PPV en vez de esperar que la suscripción lo pague todo. Hay una cuarta de la que los cursos no hablan — la reinversión: parte de los ingresos de la página tiene que volver a la promoción, o el balance toca techo. Así trabaja OFM: el equipo financia el marketing, los chats 24/7 y la analítica y reinvierte en el crecimiento de la página mientras tú te centras en el contenido. El primer paso es un formulario de 2 minutos en la página de casting — gratis y sin compromiso.',
       },
     ],
   },

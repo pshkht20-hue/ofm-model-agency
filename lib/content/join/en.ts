@@ -116,7 +116,12 @@ export const JOIN_EN: JoinContent = {
       {
         question: 'How much does the agency take?',
         answer:
-          'Terms and the percentage are discussed at the casting call and fixed in writing before launch. You never pay us anything — no entry fees, no training fees, no promotion fees. The agency only earns a share of what the page makes, so we only win when you do.',
+          "The model receives 20–30% of the page's total balance — depending on the work plan, your type and the team involved. Why that split: the agency funds all promotion — traffic, 24/7 chatters, management; you invest nothing, and a share of page income is reinvested into its growth. Without reinvestment a balance doesn't grow — which is why 25% of a growing balance six months in beats 100% of a solo page stuck at zero. You never pay us anything: the agency only earns when you do.",
+      },
+      {
+        question: 'Who handles the payouts?',
+        answer:
+          "The agency does: registering and setting up payment systems (Paxum, Skrill and others), tracking income and paying you on a fixed schedule — you don't have to figure out fees or wallet verifications. The page itself is registered with your documents, and you know all your account details. The payout schedule is agreed at the casting call, and you can end the partnership at any moment.",
       },
     ],
   },

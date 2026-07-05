@@ -70,7 +70,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Tu parte y las condiciones exactas las vemos contigo de forma individual por Telegram: cada modelo tiene su propio plan y sus propias cifras. Sin pago «de entrada» ni cobros ocultos.",
+        text: "Tu parte es el 20–30% del balance bruto total de la página; la cifra exacta depende de tu plan de trabajo, tu perfil y el equipo que te acompaña. ¿Por qué es un reparto justo? Porque la agencia lo financia todo: promoción, tráfico de pago, chatters 24/7 y management — tú no pones ni un dólar, y una parte del ingreso de la página se reinvierte en su crecimiento. Sin esa reinversión el balance simplemente no crece, y el 25% de un balance que crece vale más a los seis meses que el 100% de una página en solitario estancada en cero. El plan exacto lo acordamos en el casting, con números claros y sin burocracia de papeles. Sin pago «de entrada», sin cobros ocultos, y puedes dejar la colaboración en cualquier momento.",
       },
       {
         type: "h2",
@@ -182,7 +182,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   "kak-vybrat-onlyfans-agentstvo": {
     title: "Cómo elegir agencia OnlyFans: checklist 2026 sin estafas",
     description:
-      "Guía práctica de OnlyFans management: contrato, comisión, chats, marketing, señales de alerta y preguntas para la primera llamada.",
+      "Guía práctica de OnlyFans management: comisión, chats, marketing, señales de alerta y preguntas para la primera llamada.",
     keywords: ["cómo elegir agencia onlyfans", "onlyfans management"],
     blocks: [
       {
@@ -204,7 +204,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           "Chats: velocidad de respuesta, PPV, customs, retención de “ballenas”",
           "Contenido: calendario, teasers, alineación feed + exclusivo",
           "Finanzas: informes, LTV, churn, pruebas de precio",
-          "Legal y privacidad: accesos, NDA, fugas",
+          "Legal y privacidad: NDA, protección de datos, reacción ante fugas",
         ],
       },
       {
@@ -213,7 +213,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "El referente del sector para full-service es aproximadamente 25–40% del ingreso bruto. Por debajo del 20% suele significar servicio recortado; por encima del 45% debe haber producción y PR excepcionales. Cualquier pago anticipado por “entrada” o “configuración” es una señal de alerta clásica.",
+        text: "La matemática honesta del mercado: las agencias del este de Europa suelen pagar a la modelo el 20–30% del balance bruto de la página; algunos equipos occidentales anuncian hasta un 40%, pero normalmente solo cubren el chat. En el full management europeo la agencia se queda el 50–60%, y la modelo muchas veces aún paga su propia promoción. En OFM la modelo se queda con el 20–30% del bruto sin invertir nada: la promoción, el tráfico de pago, los chatters 24/7 y el management los financia por completo la agencia, y parte del ingreso de la página se reinvierte en su crecimiento — esa reinversión es lo que hace subir el balance. Cualquier pago anticipado por “entrada” o “configuración” es una señal de alerta clásica: una agencia real solo gana cuando ganas tú.",
       },
       {
         type: "tip",
@@ -221,22 +221,26 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h2",
-        text: "Contrato: 6 cláusulas imprescindibles",
+        text: "Condiciones: qué te protege de verdad (pista: no es el papel)",
+      },
+      {
+        type: "p",
+        text: "Los juicios por contratos de creadoras casi no existen en este mercado; para la mayoría de las chicas un «contrato» firmado es un ritual tranquilizador, no una protección. Los abogados que revisaron contratos de agencias en el Reino Unido concluyeron que sobre todo quitan poder de negociación a la creadora. La protección real es otra: historial de pagos verificable, casos vivos y la libertad de irte en el momento en que algo no te cuadre. Las agencias que exigen permanencias de 12–36 meses con penalizaciones por salida te están cobrando, literalmente, por despedirlas. Esto es lo que conviene dejar claro en el casting:",
       },
       {
         type: "ul",
         items: [
-          "La cuenta de OnlyFans sigue siendo tuya; accesos por roles",
-          "Plazo: mes a mes o periodo corto + salida de 30 días",
-          "Porcentaje, reporting y frecuencia de pago a la agencia",
-          "Quién posee el contenido y qué pasa al rescindir",
-          "Confidencialidad y prohibición de publicar sin consentimiento",
-          "KPI o al menos formato de informes semanales",
+          "Tu porcentaje y el calendario de pagos, con números claros y ejemplos",
+          "Qué financia exactamente la agencia: promoción, tráfico, equipo de chat, management",
+          "Cómo se protege tu privacidad: NDA, geo-bloqueo, higiene de datos",
+          "Reglas de consentimiento: nada se publica en un portafolio sin tu OK por escrito",
+          "Informes: cada cuánto ves los números de tu página",
+          "Tu salida: puedes dejar la colaboración en cualquier momento — un equipo seguro de sus resultados no necesita atarte",
         ],
       },
       {
         type: "h2",
-        text: "Cómo verificar la agencia antes de firmar",
+        text: "Cómo verificar la agencia antes de decir que sí",
       },
       {
         type: "p",
@@ -248,7 +252,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "nav",
-        intro: "Antes de firmar, lee también:",
+        intro: "Antes de decidir, lee también:",
         links: [
           { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans" },
           {
@@ -280,7 +284,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Lista para hablar con una agencia seria?",
-        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. Un manager te explica comisión, contrato y condiciones en 24 horas.",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. Un manager te explica tu porcentaje, las condiciones y la privacidad en 24 horas — todo transparente en el casting, sin burocracia de papeles.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
@@ -410,7 +414,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "Cómo calcular el retorno" },
       {
         type: "p",
-        text: "En simple: si el equipo sube el ingreso bruto 30–50%+, una comisión del 30% aún te deja más neto que en solo. Pide a la agencia un rango de casos en tu nicho, no un promedio “de todos”.",
+        text: "Cuenta el dinero que llega a tu tarjeta, no el porcentaje. El 25% de una página que se duplica vale más que el 100% de una página estancada — y en solitario las fugas son constantes: un DM a las 2 de la madrugada se enfría en ocho horas, los fans de otras zonas horarias gastan mientras duermes, los precios se ponen «a ojo». Ese 20–40% de ingresos perdidos no aparece en ninguna cuenta de comisiones. Y lo contrario también es cierto: si una agencia no hace crecer tu balance, su porcentaje no compensa — por eso júzgala por casos de crecimiento y dinámica de pagos, no por promesas. Pide un rango de casos en tu nicho, no un promedio “de todos”.",
       },
       {
         type: "p",
@@ -456,33 +460,33 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   "onlyfans-agentstvo-moshennichestvo": {
     title: "Agencia OnlyFans estafas: 10 señales de fraude 2026",
     description:
-      "Cómo distinguir management profesional de fraude: pagos anticipados, robo de cuenta, promesas falsas de ingresos.",
+      "Cómo distinguir management profesional de fraude: pagos anticipados, promesas de ingresos garantizados, sin casos reales ni casting.",
     keywords: ["estafa agencia onlyfans", "fraude onlyfans management"],
     blocks: [
       {
         type: "p",
-        text: "Con el crecimiento de OnlyFans aparecieron “agencias” de un día. La víctima pierde dinero, acceso a la cuenta y contenido. Estas señales indican que conviene cortar la conversación.",
+        text: "Con el crecimiento de OnlyFans aparecieron “agencias” de un día. La víctima pierde dinero, meses de trabajo y contenido. Estas señales indican que conviene cortar la conversación.",
       },
       { type: "h2", text: "Señales de alerta" },
       {
         type: "ul",
         items: [
-          "Pidieron pago por “promoción” antes del arranque ($500–2000+)",
-          "Prometen $20k/mes fijos sin analizar tu nicho",
-          "Exigen una sola contraseña de OnlyFans “por comodidad”",
-          "Sin contrato o no muestran plantilla antes del pago",
-          "Presión: “firma hoy o perdemos tu plaza”",
+          "Piden pago por “promoción” antes del arranque ($500–2000+) — una agencia real invierte su propio dinero",
+          "Prometen $20k/mes fijos sin analizar tu nicho — nadie honesto garantiza ingresos",
+          "Sin casting real: nadie te llama ni pregunta por tus límites o tu contenido",
+          "Sin casos de crecimiento ni pruebas de pagos verificables — solo un vago «nuestras chicas ganan mucho»",
+          "Presión: “decide hoy o perdemos tu plaza”",
           "Publican tus fotos en portfolio sin consentimiento escrito",
           "Solo hablan desde cuenta personal, sin marca de empresa",
           "Reseñas solo en capturas, sin forma de verificar",
-          "Comisión “hasta 60%” sin lista transparente de servicios",
-          "Amenazas al intentar rescindir el acuerdo",
+          "No saben explicar qué financia su porcentaje: sin equipo de chat ni presupuesto de anuncios detrás",
+          "Permanencia forzada: penalizaciones o amenazas en cuanto dices que quieres parar",
         ],
       },
       { type: "h2", text: "Cómo protegerte" },
       {
         type: "p",
-        text: "Activa 2FA en OnlyFans; usa roles, no tu contraseña. Guarda los masters del contenido. Lee la cláusula de salida. No envíes cripto por “anuncios” a intermediarios desconocidos.",
+        text: "Activa el 2FA en OnlyFans y en tu correo. Guarda copias de los masters de tu contenido. Antes de empezar, pide pruebas de pagos y casos reales, y asegúrate de poder irte en cualquier momento: un equipo seguro de sus resultados nunca necesita atarte. No envíes cripto por “anuncios” a intermediarios desconocidos.",
       },
       {
         type: "tip",
@@ -562,10 +566,11 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "ul",
         items: [
-          "Pagos anticipados antes del lanzamiento",
-          "Una sola contraseña de OnlyFans",
-          "Promesas de ingreso fijo sin análisis",
-          "Sin contrato ni NDA",
+          "Pagos anticipados antes del lanzamiento — una agencia real invierte su propio dinero",
+          "Promesas de ingreso fijo sin análisis — nadie honesto garantiza una cifra",
+          "Sin casos de crecimiento ni pruebas de pagos verificables",
+          "Sin casting real: nadie pregunta por tus límites antes de «ficharte»",
+          "Permanencia forzada y penalizaciones por salida en lugar de libertad para irte",
         ],
       },
       {
@@ -583,16 +588,16 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           "Chats en tu tono: PPV, customs, renovaciones y ticket medio",
           "Plan de contenido con un mes de margen, sin quemarte en rodajes caóticos",
           "Informes de neto/bruto, LTV y churn: decisiones por datos, no «a ojo»",
-          "NDA, roles de acceso de OnlyFans y reacción ante filtraciones",
+          "NDA, protección cuidadosa de tus datos y reacción ante filtraciones",
         ],
       },
       {
         type: "h2",
-        text: "Comisión y contrato: referencias del mercado",
+        text: "El porcentaje de la modelo: referencias del mercado",
       },
       {
         type: "p",
-        text: "Para un management full-service, el rango habitual del sector ronda el 25–40% del bruto. Por debajo del 20% suele significar un servicio recortado; por encima del 45% debería compensarse con producción y PR. Cualquier pago por adelantado es una señal de alerta. En el contrato no pueden faltar: titularidad de la cuenta, plazo de rescisión, informes y confidencialidad.",
+        text: "El panorama honesto: en el mercado del este de Europa la modelo recibe el 20–30% del balance bruto de la página; algunos equipos occidentales anuncian hasta un 40% pero suelen cubrir solo el chat, y en el full management europeo a la modelo le queda el 40–50% sin tráfico financiado. En OFM la modelo se queda con el 20–30% y la agencia lo financia todo: promoción, tráfico de pago, chatters 24/7, management y la reinversión en el crecimiento de la página. Cualquier pago por adelantado es una señal de alerta. Y en lugar de papeles, exige lo que protege de verdad: condiciones transparentes acordadas en el casting, pagos verificables y la libertad de dejar la colaboración en cualquier momento.",
       },
       {
         type: "h2",
@@ -1419,7 +1424,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "OnlyFans cobra la comisión de la plataforma. La agencia, su porcentaje. Los impuestos dependen de tu país. Calcula lo que te queda «en mano», no la cifra bruta del landing.",
+        text: "OnlyFans cobra la comisión de la plataforma. Después viene el reparto con tu agencia, y los impuestos dependen de tu país. Calcula lo que te queda «en mano», no la cifra bruta del landing.",
       },
       {
         type: "h2",
@@ -1427,16 +1432,28 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Tomemos una página que facturó $10.000 brutos en un mes. La plataforma retiene el 20%, quedan $8.000. Después viene la comisión de la agencia (normalmente un porcentaje del bruto, no de lo que te queda) y los impuestos de tu país. Por eso la cifra de la captura y el dinero en tu cuenta son números distintos, y la diferencia crece cuanto más alta es tu tasa impositiva.",
+        text: "Tomemos una página que facturó $10.000 brutos en un mes. La plataforma retiene el 20%, quedan $8.000. Después viene el reparto con la agencia y los impuestos de tu país. Por eso la cifra de la captura y el dinero en tu cuenta son números distintos, y la diferencia crece cuanto más alta es tu tasa impositiva.",
       },
       {
         type: "ul",
         items: [
           "Bruto: todo lo que pasó por el balance de la página",
           "Menos el 20% de la plataforma: fijo para todas",
-          "Menos el % de la agencia: déjalo claro antes de firmar",
+          "Menos el reparto con la agencia: en OFM la modelo se queda con el 20–30% del balance bruto, según el plan de trabajo, su perfil y el equipo",
           "Menos impuestos: dependen de tu país y de tu condición de autónoma",
         ],
+      },
+      {
+        type: "h2",
+        text: "A dónde va el otro 70–75% en realidad",
+      },
+      {
+        type: "p",
+        text: "Si el 20–30% te suena a poco, mira el lado de la agencia: turnos de chatters 24/7, tráfico de pago, gestión del contenido y reinversión constante en el crecimiento de la página. Una vez pagados los chatters y el presupuesto de anuncios, el margen propio de la agencia suele quedar parecido al de la modelo — a veces menor. La modelo, mientras tanto, no invierte nada y no arriesga nada. Y la reinversión es justamente la clave: sin ella el balance no crece, y el 25% de un balance que crece vale más a los seis meses que el 100% de una página en solitario estancada en cero.",
+      },
+      {
+        type: "p",
+        text: "Con números: supón que la página factura $5.000 en un mes. La plataforma retiene su 20% y quedan $4.000 — la parte de la modelo es de $800–1.200, sin haber gastado ni un dólar propio en anuncios o chatters. Si el balance sube a $15.000 hacia el sexto mes, el mismo reparto pone $2.400–3.600 en su tarjeta. Ese es el número a vigilar: no el porcentaje, sino cómo se mueve el pago absoluto mes a mes.",
       },
       {
         type: "h2",
@@ -1493,6 +1510,14 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "No — la agencia acelera el sistema, no promete un número. El rango de $12.000–35.000+/mes en el que se mueve una parte de las modelos de OFM no es una garantía ni la mediana para todas las solicitudes.",
+      },
+      {
+        type: "h3",
+        text: "¿Qué parte se queda la modelo con una agencia?",
+      },
+      {
+        type: "p",
+        text: "El rango del mercado: en el este de Europa las agencias pagan a la modelo el 20–30% del balance bruto; algunos equipos occidentales llegan al 40% con una lista de servicios más corta, y en el full management europeo a la modelo le queda el 40–50% — sin tráfico financiado ni equipo de chat 24/7. En OFM la modelo se queda con el 20–30%, la agencia lo financia todo, y lo que importa no es el porcentaje sino cómo crece tu pago mensual.",
       },
       {
         type: "tip",
@@ -1764,7 +1789,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "tip",
-        text: "Guarda los originales en local y en la nube: nunca le des a la agencia la única copia que tienes.",
+        text: "Guarda los originales en local y en la nube: una copia de seguridad te protege de un móvil perdido, un disco muerto o una cuenta baneada.",
       },
       {
         type: "nav",
@@ -1842,7 +1867,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           "Comprar bots y engagement falso",
           "Mezclar la cuenta personal y la de trabajo en redes",
           "Proteger mal tus archivos originales",
-          "Trabajar con la primera agencia sin contrato",
+          "Decir que sí a la primera agencia sin ver casos reales ni pruebas de pagos",
           "Compararte con el top 1% en tu primer mes",
         ],
       },
@@ -1990,7 +2015,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Pregunta siempre: quién ve tu contraseña, si usan roles de OnlyFans o VPS, qué pasa cuando un empleado de la agencia se va, si hay NDA y cuál es la política ante filtraciones. Y nunca dejes que publiquen tu contenido en su portafolio sin tu permiso.",
+        text: "Juzga al equipo por lo que puedes verificar: casos de crecimiento reales, pruebas de pagos, un casting de verdad con un manager que pregunta por tus límites, un NDA y una política clara ante filtraciones. Una agencia legítima te explica en el casting, antes que nada, cómo se protegen tus datos personales. Y nunca dejes que publiquen tu contenido en un portafolio sin tu permiso por escrito.",
       },
       {
         type: "h2",
@@ -2053,7 +2078,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         type: "ul",
         items: [
           "Configurar el geo-bloqueo y la privacidad según tu caso concreto",
-          "Un perímetro de datos aparte: accesos mínimos, NDA y metadatos limpios",
+          "Un perímetro de datos aparte: NDA, datos personales protegidos y metadatos limpios",
           "Vigilar las filtraciones y presentar los avisos DMCA por ti",
           "Tráfico de países con poder de compra, no de tu propia región",
         ],
@@ -2100,7 +2125,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "¿Te importan el anonimato y el NDA?",
-        body: "En OFM los accesos se dan según el principio del mínimo necesario; el NDA y la respuesta ante filtraciones forman parte del management.",
+        body: "En OFM el NDA, la protección cuidadosa de tus datos y un plan claro ante filtraciones forman parte del management.",
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos en la web son la facturación bruta (gross) del balance de la página de OnlyFans, no el ingreso neto de la modelo.",
@@ -2216,10 +2241,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "ul",
         items: [
-          "Pagos anticipados antes del lanzamiento",
-          "Una sola contraseña de OnlyFans",
+          "Pagos anticipados antes del lanzamiento — una agencia real invierte su propio dinero",
           "Promesas de ingreso fijo sin análisis",
-          "Sin contrato ni NDA",
+          "Sin casos ni pruebas de pagos verificables",
+          "Sin casting real ni llamada con un manager antes de «ficharte»",
         ],
       },
       {
@@ -2242,17 +2267,17 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           "Chats 24/7 con tu tono de voz: PPV, contenidos personalizados y renovaciones",
           "Plan de contenido mensual, sin sesiones improvisadas ni semanas en blanco",
           "Analítica semanal: neto y bruto, valor de vida del fan (LTV) y abandono (churn)",
-          "NDA, roles de acceso de OnlyFans y un protocolo claro ante filtraciones",
+          "NDA, protección cuidadosa de tus datos y un protocolo claro ante filtraciones",
         ],
       },
       {
         type: "tip",
-        text: "Antes de firmar, compara al menos dos agencias con la lista de control del artículo «Cómo elegir agencia OnlyFans» y repasa las señales de fraude en «Estafas: señales de fraude».",
+        text: "Antes de decidir, compara al menos dos agencias con la lista de control del artículo «Cómo elegir agencia OnlyFans» y repasa las señales de fraude en «Estafas: señales de fraude».",
       },
-      { type: "h2", text: "Comisión y contrato: referencias para el mercado moldavo" },
+      { type: "h2", text: "El porcentaje de la modelo: referencias para el mercado moldavo" },
       {
         type: "p",
-        text: "Para un management full-service el rango habitual va de un 25 a un 40% del bruto. Por debajo del 20% suele significar un servicio recortado; por encima del 45% debería compensarse con producción y relaciones públicas reales. Cualquier pago por adelantado es una señal de alerta. El contrato debe dejar por escrito quién es la propietaria de la cuenta, el plazo de salida, la frecuencia de los informes y la confidencialidad. Las cifras no son un sueldo garantizado: dependen de tu nicho, tu constancia y el trabajo conjunto.",
+        text: "El panorama honesto del mercado: en el este de Europa la modelo recibe el 20–30% del balance bruto de la página; algunos equipos occidentales anuncian hasta un 40% pero suelen cubrir solo el chat, y en el full management europeo a la modelo le queda el 40–50% sin tráfico financiado. En OFM la modelo se queda con el 20–30% y la agencia lo financia todo: promoción, tráfico de pago, chatters 24/7, management y la reinversión en el crecimiento de la página. Cualquier pago por adelantado es una señal de alerta. Y en lugar de papeles, fíjate en lo que protege de verdad: condiciones transparentes acordadas en el casting, pagos verificables y la libertad de irte en cualquier momento. Las cifras no son un sueldo garantizado: dependen de tu nicho, tu constancia y el trabajo conjunto.",
       },
       { type: "h2", text: "Cómo es la colaboración con OFM" },
       {
@@ -2366,11 +2391,11 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "ul",
         items: [
-          "Pago adelantado «por publicidad» antes del lanzamiento",
-          "Una sola contraseña de OnlyFans",
+          "Pago adelantado «por publicidad» antes del lanzamiento — una agencia real invierte su propio dinero",
           "Promesa de ingreso fijo sin análisis de nicho",
-          "Sin contrato, NDA ni lista de servicios",
-          "Presión «firma hoy» sin salida en 30 días",
+          "Sin casos ni pruebas de pagos verificables",
+          "Sin casting real ni llamada con un manager antes de «ficharte»",
+          "Presión «decide hoy» y permanencia forzada en lugar de libertad para irte",
         ],
       },
       { type: "h2", text: "Brasil: nota para creadoras en portugués" },

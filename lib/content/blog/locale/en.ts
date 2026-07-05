@@ -70,7 +70,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: 'Your share and the exact terms we go over individually in Telegram — every model has her own plan and her own numbers. No "entry fee," no hidden charges.',
+        text: "Your share is 20–30% of the page's total gross balance — the exact figure depends on your work plan, your type, and the team on your page. Why that number is fair: the agency pays for everything — promo, paid traffic, 24/7 chatter shifts, management — you don't put in a cent, and part of the page's income goes straight back into growing it. Without that reinvestment a balance simply doesn't grow, and 25% of a growing balance six months in is more money than 100% of a solo page stuck near zero. The exact plan we agree on at the casting — openly, in plain numbers, with no paperwork drama. No \"entry fee,\" no hidden charges, and you can stop the partnership at any moment.",
       },
       {
         type: "h2",
@@ -182,7 +182,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
   "kak-vybrat-onlyfans-agentstvo": {
     title: "How to Choose an OnlyFans Agency: 2026 Checklist (No Scams)",
     description:
-      "A practical guide to OnlyFans management: contracts, commission, chat ops, marketing, red flags, and questions to ask on your first call.",
+      "A practical guide to OnlyFans management: commission, chat ops, marketing, red flags, and the questions to ask on your first call.",
     keywords: ["how to choose onlyfans agency", "onlyfans management"],
     blocks: [
       {
@@ -204,7 +204,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           "Chats: response speed, PPV, customs, whale retention",
           "Content: calendar, teasers, feed + exclusive alignment",
           "Finance: reporting, LTV, churn, price tests",
-          "Legal & privacy: access controls, NDAs, leak response",
+          "Legal & privacy: NDAs, data protection, leak response",
         ],
       },
       {
@@ -213,7 +213,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "The industry benchmark for full-service is roughly 25–40% of gross revenue. Below 20% often means cut corners; above 45% should come with exceptional production and PR. Any upfront fee to “join” or “set up” is a classic red flag.",
+        text: "Here is the honest market math. CIS agencies typically pay the model 20–30% of the page's gross balance; some Western teams advertise up to 40% — but usually cover chatting only. For genuine full management, European agencies keep 50–60% for themselves, and the model often still funds her own promo. At OFM the model keeps 20–30% of gross with zero investment: promo, paid traffic, 24/7 chatters and management are funded entirely by the agency, and part of the page's income is reinvested into its growth — that reinvestment is what makes the balance climb. Any upfront fee to “join” or “set up” is a classic red flag: a real agency earns only when you do.",
       },
       {
         type: "tip",
@@ -221,22 +221,26 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h2",
-        text: "Contract: 6 clauses you should not sign without",
+        text: "Terms: what actually protects you (hint — not paperwork)",
+      },
+      {
+        type: "p",
+        text: "Court battles over creator contracts are practically unheard of in this market; for most girls a signed “contract” is a comfort ritual, not protection. Lawyers who reviewed agency contracts in the UK found they mostly strip creators of negotiating power. Real protection looks different: verifiable payout history, live cases, and the freedom to walk away the moment something feels off. Agencies that demand 12–36-month lock-ins with exit penalties are literally making you pay to fire them. Here is what to pin down at the casting instead:",
       },
       {
         type: "ul",
         items: [
-          "The OnlyFans account stays yours; access is role-based",
-          "Term: month-to-month or short period + 30-day exit",
-          "Percentage, reporting, and payout frequency to the agency",
-          "Who owns content and what happens on termination",
-          "Confidentiality and no publishing without consent",
-          "KPIs or at least a weekly reporting format",
+          "Your share and the payout schedule — in plain numbers, with examples",
+          "What exactly the agency funds: promo, traffic, chat team, management",
+          "How your privacy is protected: NDA, geo-blocking, data hygiene",
+          "Consent rules: nothing published in a portfolio without your written OK",
+          "Reporting: how often you see your page's numbers",
+          "Your exit: you can stop the partnership at any moment — a team confident in its results doesn't need to lock you in",
         ],
       },
       {
         type: "h2",
-        text: "How to vet an agency before signing",
+        text: "How to vet an agency before you say yes",
       },
       {
         type: "p",
@@ -248,7 +252,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "nav",
-        intro: "Before you sign with anyone, read next:",
+        intro: "Before you say yes to anyone, read next:",
         links: [
           {
             href: "/blog/rabota-modelyu-onlyfans",
@@ -283,7 +287,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Want to compare us against your checklist?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. A manager will walk you through commission, the contract, and your privacy.",
+        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. A manager will walk you through your share, the terms, and your privacy — everything transparent at the casting, no paperwork drama.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",
@@ -437,7 +441,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Simply: if the team lifts gross revenue by 30–50%+, a 30% commission still leaves you more net than solo. Ask the agency for a case range in your niche—not a blended “average across everyone.”",
+        text: "Count the money that reaches your card, not the percentage. A 25% share of a page that doubles beats 100% of a page that has plateaued — and solo pages leak constantly: a DM at 2am goes cold in eight hours, fans in other timezones spend while you sleep, prices get set “by feel.” That lost 20–40% of revenue never shows up in anyone's commission math. To be fair, the reverse is also true: if an agency doesn't grow your balance, its percentage isn't worth it — which is exactly why you should judge by growth cases and payout dynamics, not promises. Ask for a case range in your niche, not a blended “average across everyone.”",
       },
       {
         type: "p",
@@ -486,12 +490,12 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
   "onlyfans-agentstvo-moshennichestvo": {
     title: "OnlyFans Agency Scams: 10 Red Flags to Spot in 2026",
     description:
-      "How to tell professional management from scams: upfront fees, account theft, fake income promises.",
+      "How to tell professional management from scams: upfront fees, guaranteed-income promises, no real cases or casting.",
     keywords: ["onlyfans agency scam", "onlyfans management fraud"],
     blocks: [
       {
         type: "p",
-        text: "As OnlyFans grew, so did “agencies” that disappear overnight. Victims lose money, account access, and content. Below are signs to stop the conversation immediately.",
+        text: "As OnlyFans grew, so did “agencies” that disappear overnight. Victims lose money, months of work, and content. Below are signs to stop the conversation immediately.",
       },
       {
         type: "h2",
@@ -500,16 +504,16 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "ul",
         items: [
-          "They ask for “promotion” payment before launch ($500–2000+)",
-          "They promise fixed $20k/month without analyzing your niche",
-          "They demand a single OnlyFans password “for convenience”",
-          "No contract—or they refuse to show a template before payment",
-          "Pressure: “sign today or we give your slot away”",
+          "They ask for “promotion” payment before launch ($500–2000+) — a real agency invests its own money",
+          "They promise fixed $20k/month without analyzing your niche — nobody honest guarantees income",
+          "No real casting: no manager call, no questions about your limits or content",
+          "No verifiable growth cases or payout proof — only vague “our girls earn a lot”",
+          "Pressure: “decide today or we give your slot away”",
           "They post your photos in a portfolio without written consent",
           "Communication only from a personal account, no company brand",
           "Reviews are screenshots only, with no way to verify",
-          "Commission “up to 60%” with no transparent service list",
-          "Threats when you try to terminate the agreement",
+          "They can't explain what their share actually funds — no chat team or ad budget behind the percentage",
+          "Lock-in: penalties or threats the moment you say you want to stop",
         ],
       },
       {
@@ -518,7 +522,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Enable 2FA on OnlyFans; use roles, not your password. Keep content masters on your side. Read the exit clause. Do not send crypto for “ads” to unknown intermediaries.",
+        text: "Enable 2FA on OnlyFans and on your email. Keep your content masters backed up on your side. Before you start, ask for payout proof and real cases — and make sure you can walk away at any moment: a team confident in its results never needs to trap you. Do not send crypto for “ads” to unknown intermediaries.",
       },
       {
         type: "tip",
@@ -610,10 +614,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "ul",
         items: [
           "Upfront “promotion” or “onboarding” fees before launch",
-          "Single OnlyFans password instead of role-based access",
-          "Fixed income promises without niche analysis",
-          "No contract, NDA, or written service list",
-          "Pressure to “sign today” with no 30-day exit",
+          "Fixed income promises without niche analysis — nobody honest guarantees a number",
+          "No verifiable growth cases or payout proof",
+          "No real casting: nobody asks about your limits before “signing you”",
+          "Lock-in and exit penalties instead of the freedom to leave at any moment",
         ],
       },
       {
@@ -1421,7 +1425,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "OnlyFans takes its platform cut. An agency takes its own percentage. Taxes depend on your jurisdiction. Count your real take-home, not the gross number you see on a landing page.",
+        text: "OnlyFans takes its platform cut. Then comes the split with your agency, and taxes depend on your jurisdiction. Count your real take-home, not the gross number you see on a landing page.",
       },
       {
         type: "h2",
@@ -1429,16 +1433,28 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Take a page that did $10,000 gross in a month. The platform holds back 20%, leaving $8,000. Then comes the agency cut (usually a percentage of gross, not of take-home) and the taxes of your jurisdiction. That is why the screenshot number and the money in your account are two different figures — and the gap widens the higher your tax rate is.",
+        text: "Take a page that did $10,000 gross in a month. The platform holds back 20%, leaving $8,000. Then comes the split with the agency and the taxes of your jurisdiction. That is why the screenshot number and the money in your account are two different figures — and the gap widens the higher your tax rate is.",
       },
       {
         type: "ul",
         items: [
           "Gross: everything that passed through the page balance",
           "Minus the platform 20%: fixed for everyone",
-          "Minus the agency percentage: pin it down before you sign",
+          "Minus the agency split: at OFM the model keeps 20–30% of the gross balance, depending on the work plan, her type, and the team",
           "Minus taxes: depend on your country and self-employed status",
         ],
+      },
+      {
+        type: "h2",
+        text: "Where the other 70–75% actually goes",
+      },
+      {
+        type: "p",
+        text: "If 20–30% sounds like small change, look at the agency's side of the ledger: 24/7 chatter shifts, paid traffic, content management, and constant reinvestment into the page's growth. Once the chatters and the ad budget are paid, the agency's own margin is often about the same as the model's — sometimes less. The model, meanwhile, invests nothing and risks nothing. And that reinvestment is the whole point: without it the balance doesn't grow, and 25% of a growing balance six months in is more money than 100% of a solo page stuck near zero.",
+      },
+      {
+        type: "p",
+        text: "Concrete math: say the page turns over $5,000 in a month. The platform takes its 20%, leaving $4,000 — the model's share lands at $800–1,200, with zero of her own money spent on ads or chatters. If the balance grows to $15,000 by month six, the same split puts $2,400–3,600 on her card. That's the number to watch: not the percentage, but how the absolute payout moves month over month.",
       },
       {
         type: "h2",
@@ -1495,6 +1511,14 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "No — an agency speeds up the system, it does not promise a number. The $12,000–35,000+/month range some OFM models sit in is neither a guarantee nor the median for every application.",
+      },
+      {
+        type: "h3",
+        text: "What share does a model keep with an agency?",
+      },
+      {
+        type: "p",
+        text: "The market range: CIS agencies pay models 20–30% of the gross balance, some Western teams up to 40% with a thinner service list, and European full management usually leaves the model 40–50% — without funded traffic or a 24/7 chat team. At OFM the model keeps 20–30%, the agency funds everything, and the figure that matters is not the percentage but how your monthly payout grows.",
       },
       {
         type: "tip",
@@ -1765,7 +1789,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "tip",
-        text: "Keep your master files locally and in the cloud — never hand your only copy to an agency.",
+        text: "Keep your master files both locally and in the cloud — a backup protects you from a lost phone, a dead drive, or a banned account.",
       },
       {
         type: "nav",
@@ -1839,7 +1863,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           "Buying bots and fake engagement",
           "Mixing your personal and work social accounts",
           "Weak protection of your source files",
-          "Signing with your first agency without a contract",
+          "Saying yes to the first agency you meet without checking real cases and payout proof",
           "Comparing yourself to the top 1% in month one",
         ],
       },
@@ -1986,7 +2010,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Ask the right questions up front: who can see your password, are there shared OnlyFans roles or a VPS, what happens to access when an agency staffer leaves, is there an NDA, and what's the leak-response policy. Never let an agency publish your content in its portfolio without your explicit consent.",
+        text: "Judge a team by what you can verify: real growth cases, payout proof, a proper casting call with a manager who asks about your limits, an NDA, and a clear leak-response policy. A legitimate agency walks you through exactly how your personal data is protected at the casting — before anything else happens. And never let anyone publish your content in a portfolio without your explicit written consent.",
       },
       {
         type: "h2",
@@ -2049,7 +2073,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "ul",
         items: [
           "Configuring geo-blocking and privacy settings for your specific situation",
-          "A separate data perimeter: need-to-know access, an NDA, clean metadata",
+          "A separate data perimeter: an NDA, protected personal data, clean metadata",
           "Monitoring for leaks and filing DMCA takedowns on your behalf",
           "Traffic from high-spend countries rather than from your own region",
         ],
@@ -2095,7 +2119,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Is anonymity and an NDA a priority for you?",
-        body: "At OFM, access is granted on a need-to-know basis, with an NDA and a clear leak-response plan baked into your management. Apply and a manager replies on Telegram @ofmm_agency within 24 hours.",
+        body: "At OFM, an NDA, careful data protection, and a clear leak-response plan are baked into your management. Apply and a manager replies on Telegram @ofmm_agency within 24 hours.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Figures in our case studies are gross page balance turnover, not a model's guaranteed payout. Income depends on niche, content volume and engagement — a benchmark, not a guarantee.",
@@ -2210,10 +2234,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "ul",
         items: [
-          "Upfront payments before launch",
-          "Single OnlyFans password instead of roles",
+          "Upfront payments before launch — a real agency invests its own money",
           "Fixed income promises without niche analysis",
-          "No contract or NDA",
+          "No verifiable cases or payout proof",
+          "No real casting or manager call before they “sign you”",
         ],
       },
       {
@@ -2228,13 +2252,13 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           "24/7 chats written in your own voice — PPV, customs and rebill renewals",
           "A month-long content plan instead of chaotic, last-minute shoots",
           "Weekly analytics: net and gross, lifetime value and churn",
-          "An NDA, role-based OnlyFans access and a clear plan for leaks",
+          "An NDA, careful data protection and a clear plan for leaks",
         ],
       },
-      { type: "h2", text: "Commission and contract: benchmarks for Moldova" },
+      { type: "h2", text: "The model's share: benchmarks for Moldova" },
       {
         type: "p",
-        text: "For genuine full-service management, commission usually lands somewhere around 25–40% of gross. Anything under 20% often means a stripped-down service, while a cut above 45% should be justified by real production and PR work. Any upfront fee is a red flag. Before you sign, make sure the contract spells out account ownership, the notice period to leave, reporting cadence and confidentiality — and read it the same way you would any other remote-work agreement.",
+        text: "The honest market picture: CIS agencies pay the model 20–30% of the page's gross balance; some Western teams advertise up to 40% but usually cover chatting only, and European full management leaves the model 40–50% without funded traffic. At OFM the model keeps 20–30% — and the agency funds everything: promo, paid traffic, 24/7 chatters, management, plus reinvestment into the page's growth. Any upfront fee is a red flag. And instead of paperwork, insist on what actually protects you: transparent terms agreed at the casting, verifiable payouts, and the freedom to stop the partnership at any moment.",
       },
       { type: "h2", text: "How working with OFM looks" },
       {
@@ -2342,11 +2366,11 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "ul",
         items: [
-          "Upfront “advertising” payments before launch",
-          "Single OnlyFans password",
+          "Upfront “advertising” payments before launch — a real agency invests its own money",
           "Fixed income promises without niche review",
-          "No contract, NDA, or written service list",
-          "“Sign today” pressure without 30-day exit",
+          "No verifiable cases or payout proof",
+          "No real casting or manager call before they “sign you”",
+          "“Decide today” pressure and lock-in instead of the freedom to leave anytime",
         ],
       },
       { type: "h2", text: "Brazil: note for Portuguese-speaking creators" },

@@ -74,7 +74,7 @@ export const CALCULATOR_PAGE_EN: CalculatorPageContent = {
       {
         question: 'How do you increase OnlyFans earnings?',
         answer:
-          "Three levers: more traffic (TikTok, Instagram, shoutouts), skilled chat selling, and a PPV strategy instead of hoping the subscription alone pays. Running all of that solo is brutal — which is exactly why creators join agencies. The OFM team takes over marketing, 24/7 chats and analytics while you focus on content. The first step is a 2-minute application on the casting page — free, no strings attached.",
+          "Three levers: more traffic (TikTok, Instagram, shoutouts), skilled chat selling, and a PPV strategy instead of hoping the subscription alone pays. There's a fourth one the courses never mention — reinvestment: part of the page's income has to go back into promotion, or the balance hits a ceiling. That's exactly how OFM works: the team funds marketing, 24/7 chats and analytics and reinvests into page growth while you focus on content. The first step is a 2-minute application on the casting page — free, no strings attached.",
       },
     ],
   },
