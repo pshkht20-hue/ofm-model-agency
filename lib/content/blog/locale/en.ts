@@ -1425,7 +1425,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "OnlyFans takes its platform cut. Then comes the split with your agency, and taxes depend on your jurisdiction. Count your real take-home, not the gross number you see on a landing page.",
+        text: "Count your real take-home, not the gross number you see on a landing page: what lands on your card depends on your share of the balance and the taxes of your jurisdiction.",
       },
       {
         type: "h2",
@@ -1433,15 +1433,14 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Take a page that did $10,000 gross in a month. The platform holds back 20%, leaving $8,000. Then comes the split with the agency and the taxes of your jurisdiction. That is why the screenshot number and the money in your account are two different figures — and the gap widens the higher your tax rate is.",
+        text: "The page balance is the turnover (gross): everything that passed through the page in a month. The model keeps her share — 20–30%, depending on the work plan, her type, and the team — and taxes depend on your jurisdiction. That is why the screenshot number and the money in your account are two different figures, and that's normal: a screenshot shows the scale of the page, not someone's salary.",
       },
       {
         type: "ul",
         items: [
-          "Gross: everything that passed through the page balance",
-          "Minus the platform 20%: fixed for everyone",
-          "Minus the agency split: at OFM the model keeps 20–30% of the gross balance, depending on the work plan, her type, and the team",
-          "Minus taxes: depend on your country and self-employed status",
+          "Balance (gross): everything that passed through the page in a month",
+          "The model's share: 20–30% — depends on the work plan, her type, and the team",
+          "Taxes: depend on your country and status — check with an accountant",
         ],
       },
       {
@@ -1454,7 +1453,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Concrete math: say the page turns over $5,000 in a month. The platform takes its 20%, leaving $4,000 — the model's share lands at $800–1,200, with zero of her own money spent on ads or chatters. If the balance grows to $15,000 by month six, the same split puts $2,400–3,600 on her card. That's the number to watch: not the percentage, but how the absolute payout moves month over month.",
+        text: "Concrete math: say the page balance is $4,000 for the month — the model's share lands at $800–1,200, with zero of her own money spent on ads or chatters. If the balance grows to $15,000 by month six, the same split puts $3,000–4,500 on her card. That's the number to watch: not the percentage, but how the absolute payout moves month over month.",
       },
       {
         type: "h2",

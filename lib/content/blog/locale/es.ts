@@ -1424,7 +1424,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "OnlyFans cobra la comisión de la plataforma. Después viene el reparto con tu agencia, y los impuestos dependen de tu país. Calcula lo que te queda «en mano», no la cifra bruta del landing.",
+        text: "Calcula lo que te queda «en mano», no la cifra bruta del landing: lo que llega a tu tarjeta depende de tu parte del balance y de los impuestos de tu país.",
       },
       {
         type: "h2",
@@ -1432,15 +1432,14 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Tomemos una página que facturó $10.000 brutos en un mes. La plataforma retiene el 20%, quedan $8.000. Después viene el reparto con la agencia y los impuestos de tu país. Por eso la cifra de la captura y el dinero en tu cuenta son números distintos, y la diferencia crece cuanto más alta es tu tasa impositiva.",
+        text: "El balance de la página es la facturación (bruto): todo lo que pasó por la página en un mes. La modelo se queda con su parte — el 20–30%, según el plan de trabajo, su perfil y el equipo — y los impuestos dependen de tu país. Por eso la cifra de la captura y el dinero en tu cuenta son números distintos, y es normal: la captura muestra la escala de la página, no el sueldo de nadie.",
       },
       {
         type: "ul",
         items: [
-          "Bruto: todo lo que pasó por el balance de la página",
-          "Menos el 20% de la plataforma: fijo para todas",
-          "Menos el reparto con la agencia: en OFM la modelo se queda con el 20–30% del balance bruto, según el plan de trabajo, su perfil y el equipo",
-          "Menos impuestos: dependen de tu país y de tu condición de autónoma",
+          "Balance (bruto): todo lo que pasó por la página en un mes",
+          "La parte de la modelo: 20–30% — según el plan de trabajo, su perfil y el equipo",
+          "Impuestos: dependen de tu país y tu situación — consulta con un contador",
         ],
       },
       {
@@ -1453,7 +1452,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Con números: supón que la página factura $5.000 en un mes. La plataforma retiene su 20% y quedan $4.000 — la parte de la modelo es de $800–1.200, sin haber gastado ni un dólar propio en anuncios o chatters. Si el balance sube a $15.000 hacia el sexto mes, el mismo reparto pone $2.400–3.600 en su tarjeta. Ese es el número a vigilar: no el porcentaje, sino cómo se mueve el pago absoluto mes a mes.",
+        text: "Con números: supón que el balance de la página es de $4.000 en un mes — la parte de la modelo es de $800–1.200, sin haber gastado ni un dólar propio en anuncios o chatters. Si el balance sube a $15.000 hacia el sexto mes, el mismo reparto pone $3.000–4.500 en su tarjeta. Ese es el número a vigilar: no el porcentaje, sino cómo se mueve el pago absoluto mes a mes.",
       },
       {
         type: "h2",
