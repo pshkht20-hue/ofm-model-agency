@@ -1,22 +1,40 @@
 'use client';
 
-import { useEffect, useRef, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FocusEvent, type FormEvent } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Check, Loader2, Send, ShieldCheck, Sparkles } from 'lucide-react';
 import { SuccessCheckmark } from '@/components/ui/SuccessCheckmark';
 import { ClickSpark } from '@/components/ui/ClickSpark';
 import { useLocale, useTranslations } from 'next-intl';
+import { usePathname } from '@/i18n/navigation';
 import {
   CALC_PREFILL_EVENT,
   clearCalcPrefill,
   formatUsd,
   readCalcPrefill,
 } from '@/lib/calculator/prefill';
-import { trackContactSubmit, trackFormStart } from '@/lib/analytics/gtag';
+import {
+  trackContactSubmit,
+  trackFieldFilled,
+  trackFormAbandon,
+  trackFormStart,
+  trackFormSubmit,
+  trackFormSubmitError,
+} from '@/lib/analytics/gtag';
+import type { FormErrorType } from '@/lib/analytics/events';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 type FieldState = 'idle' | 'valid' | 'invalid';
 type FieldName = 'name' | 'telegram' | 'age';
+
+/** Поля, чьё имя имеет смысл как last_field в form_abandon (honeypot исключён). */
+const ABANDON_FIELDS = new Set(['name', 'telegram', 'age', 'message']);
+
+function errorTypeFromStatus(status: number): FormErrorType {
+  if (status === 429) return 'rate_limit';
+  if (status >= 500) return 'server';
+  return 'validation';
+}
 
 const labelClass =
   'block text-sm font-medium text-white/75 mb-2 transition-colors duration-300 group-focus-within:text-accent-pink/90';
@@ -57,6 +75,7 @@ export function ContactForm() {
   const tCalc = useTranslations('home.calculator');
   const reduced = useReducedMotion();
   const locale = useLocale();
+  const pagePath = usePathname();
   const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [name, setName] = useState('');
@@ -69,6 +88,14 @@ export function ContactForm() {
   const startedRef = useRef(false);
   const messageRef = useRef('');
   const lastPrefillRef = useRef('');
+  /** field_filled шлём один раз на поле за жизнь формы (не спамим на каждый blur). */
+  const filledSentRef = useRef<Set<FieldName>>(new Set());
+  /** Последнее поле, в котором был фокус, — параметр last_field у form_abandon. */
+  const lastFieldRef = useRef<'name' | 'telegram' | 'age' | 'message' | undefined>(undefined);
+  /** form_abandon шлём максимум один раз за жизнь вкладки. */
+  const abandonSentRef = useRef(false);
+  /** Снимок для обработчиков pagehide/visibilitychange (без пересоздания слушателей). */
+  const abandonSnapshotRef = useRef({ started: false, submitted: false, hasContent: false });
 
   const valid: Record<FieldName, boolean> = {
     name: name.trim().length >= 2,
@@ -94,15 +121,62 @@ export function ContactForm() {
     setTouched((prev) => (prev[field] ? prev : { ...prev, [field]: true }));
   }
 
-  function handleFormStart() {
+  /** blur ключевого поля: touched + field_filled (один раз, только для валидного значения). */
+  function handleFieldBlur(field: FieldName, value: string) {
+    markTouched(field);
+    if (filledSentRef.current.has(field)) return;
+    if (!valid[field] || value.trim() === '') return;
+    filledSentRef.current.add(field);
+    trackFieldFilled({ field, locale, page_path: pagePath });
+  }
+
+  function handleFormFocus(e: FocusEvent<HTMLFormElement>) {
+    const target = e.target as HTMLElement & { name?: string };
+    if (target.name && ABANDON_FIELDS.has(target.name)) {
+      lastFieldRef.current = target.name as 'name' | 'telegram' | 'age' | 'message';
+    }
     if (startedRef.current) return;
     startedRef.current = true;
-    trackFormStart({ locale });
+    abandonSentRef.current = false;
+    trackFormStart({ locale, page_path: pagePath });
   }
 
   useEffect(() => {
     messageRef.current = message;
   }, [message]);
+
+  // Снимок состояния для form_abandon — слушатели ниже читают только ref.
+  useEffect(() => {
+    abandonSnapshotRef.current = {
+      started: startedRef.current,
+      submitted: status === 'success',
+      hasContent:
+        name.trim() !== '' || telegram.trim() !== '' || age.trim() !== '',
+    };
+  }, [status, name, telegram, age]);
+
+  // form_abandon: начала заполнять (есть контент в ключевых полях), но ушла со
+  // страницы/вкладки без успешной отправки. pagehide + visibilitychange(hidden)
+  // покрывают и десктоп, и мобильный «свернула браузер»; guard — один раз.
+  useEffect(() => {
+    const maybeAbandon = () => {
+      const snap = abandonSnapshotRef.current;
+      if (abandonSentRef.current || !snap.started || snap.submitted || !snap.hasContent) return;
+      abandonSentRef.current = true;
+      trackFormAbandon({ locale, last_field: lastFieldRef.current, page_path: pagePath });
+    };
+
+    const onVisibility = () => {
+      if (document.visibilityState === 'hidden') maybeAbandon();
+    };
+
+    window.addEventListener('pagehide', maybeAbandon);
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => {
+      window.removeEventListener('pagehide', maybeAbandon);
+      document.removeEventListener('visibilitychange', onVisibility);
+    };
+  }, [locale, pagePath]);
 
   // Префилл применяется и на маунте, и по событию калькулятора: форма смонтирована
   // раньше, чем девушка проходит квиз, поэтому одного чтения на маунте мало.
@@ -139,6 +213,10 @@ export function ContactForm() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const withPrefill = hasCalcPrefill || Boolean(readCalcPrefill());
+
+    // Все попытки отправки — включая те, что закончатся 400/429/сеткой.
+    trackFormSubmit({ locale, has_calc_prefill: withPrefill, page_path: pagePath });
 
     try {
       const response = await fetch('/api/application', {
@@ -152,13 +230,19 @@ export function ContactForm() {
           message: formData.get('message'),
           ageConfirmed: formData.get('ageConfirmed') === 'on',
           website: formData.get('website'),
-          hasCalcPrefill: hasCalcPrefill || Boolean(readCalcPrefill()),
+          hasCalcPrefill: withPrefill,
         }),
       });
 
       const data = (await response.json()) as { error?: string };
 
       if (!response.ok) {
+        trackFormSubmitError({
+          locale,
+          error_type: errorTypeFromStatus(response.status),
+          http_status: response.status,
+          page_path: pagePath,
+        });
         setErrorMessage(data.error ?? t('errorGeneric'));
         setStatus('error');
         return;
@@ -166,7 +250,7 @@ export function ContactForm() {
 
       trackContactSubmit({
         locale,
-        has_calc_prefill: hasCalcPrefill || Boolean(readCalcPrefill()),
+        has_calc_prefill: withPrefill,
       });
 
       setStatus('success');
@@ -181,6 +265,7 @@ export function ContactForm() {
       startedRef.current = false;
       form.reset();
     } catch {
+      trackFormSubmitError({ locale, error_type: 'network', page_path: pagePath });
       setErrorMessage(t('errorNetwork'));
       setStatus('error');
     }
@@ -238,7 +323,7 @@ export function ContactForm() {
     <form
       id="contact-form"
       onSubmit={handleSubmit}
-      onFocus={handleFormStart}
+      onFocus={handleFormFocus}
       className="relative max-w-xl mx-auto text-left card-premium neon-frame p-6 md:p-10 overflow-hidden"
     >
       <div className="neon-frame-ring" aria-hidden />
@@ -265,7 +350,7 @@ export function ContactForm() {
                 autoComplete="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                onBlur={() => markTouched('name')}
+                onBlur={() => handleFieldBlur('name', name)}
                 className={fieldClass(stateOf('name', name), 'pr-10')}
                 disabled={status === 'loading'}
               />
@@ -284,7 +369,7 @@ export function ContactForm() {
                 placeholder="18+"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
-                onBlur={() => markTouched('age')}
+                onBlur={() => handleFieldBlur('age', age)}
                 className={fieldClass(stateOf('age', age), 'pr-10')}
                 disabled={status === 'loading'}
               />
@@ -309,7 +394,7 @@ export function ContactForm() {
               placeholder={t('telegramPlaceholder')}
               value={telegram}
               onChange={(e) => setTelegram(e.target.value)}
-              onBlur={() => markTouched('telegram')}
+              onBlur={() => handleFieldBlur('telegram', telegram)}
               className={fieldClass(stateOf('telegram', telegram), 'pl-10 pr-10')}
               disabled={status === 'loading'}
             />

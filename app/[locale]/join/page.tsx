@@ -3,6 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { ContactForm } from '@/components/ContactForm';
 import { TelegramCta } from '@/components/TelegramCta';
+import { SectionViewTracker } from '@/components/analytics/SectionViewTracker';
 import { FaqAccordion } from '@/components/seo/FaqAccordion';
 import { FaqPageJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import { getJoinContent } from '@/lib/content/join';
@@ -122,6 +123,10 @@ export default async function JoinPage({ params }: Props) {
           { name: content.breadcrumb, path: '/' },
           { name: content.breadcrumb, path: '/join' },
         ]}
+      />
+      <SectionViewTracker
+        sections={['join-directions', 'join-requirements', 'join-steps', 'join-income', 'apply']}
+        page="join"
       />
 
       {/* Hero: H1 + лид + CTA-якорь к анкете */}

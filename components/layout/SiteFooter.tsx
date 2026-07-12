@@ -9,6 +9,7 @@ import { Link } from '@/i18n/navigation';
 import { CookieSettingsButton } from '@/components/consent/CookieSettingsButton';
 import { SocialLinks } from '@/components/social/SocialLinks';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { trackCtaClick } from '@/lib/analytics/gtag';
 import { staggerContainer, staggerItem, VIEWPORT_DEFAULT } from '@/lib/motion';
 
 export function SiteFooter() {
@@ -126,6 +127,7 @@ export function SiteFooter() {
               ))}
               <Link
                 href="/#contact"
+                onClick={() => trackCtaClick({ location: 'footer', locale })}
                 className="link-hover-line hover:text-accent-pink transition-colors w-fit"
               >
                 {t('apply')}

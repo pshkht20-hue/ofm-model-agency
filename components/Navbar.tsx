@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { trackCtaClick } from '@/lib/analytics/gtag';
 import { Logo } from '@/components/Logo';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { Link, usePathname } from '@/i18n/navigation';
@@ -16,6 +17,7 @@ import { EASE_SMOOTH, staggerContainer, staggerItemSlide } from '@/lib/motion';
 
 export function Navbar() {
   const t = useTranslations('nav');
+  const locale = useLocale();
   const reduced = useReducedMotion();
   const pathname = usePathname();
   const { activeId } = useSectionContext();
@@ -89,7 +91,10 @@ export function Navbar() {
               <LanguageSwitcher compact toolbar />
               <Link
                 href="/#contact"
-                onClick={closeMenu}
+                onClick={() => {
+                  closeMenu();
+                  trackCtaClick({ location: 'navbar_apply', locale, page_path: pathname });
+                }}
                 className="btn-primary !h-9 !py-0 !px-3 sm:!px-3.5 !text-[10px] sm:!text-[11px] !gap-0 !shadow-[0_0_16px_-6px_rgba(255,91,181,0.55)] whitespace-nowrap shrink-0"
               >
                 {t('apply')}
@@ -158,6 +163,7 @@ export function Navbar() {
               <Link
                 href="/#contact"
                 data-magnetic-area
+                onClick={() => trackCtaClick({ location: 'navbar_apply', locale, page_path: pathname })}
                 className="btn-primary !h-9 !py-0 !px-4 xl:!px-5 !text-[13px] !shadow-[0_0_18px_-6px_rgba(255,91,181,0.55)] whitespace-nowrap shrink-0"
               >
                 <span ref={ctaMagnetRef} className="inline-flex items-center">
@@ -227,12 +233,22 @@ export function Navbar() {
           <div className="p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] flex flex-col gap-2.5 border-t border-white/[0.06]">
             <Link
               href="/#contact"
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu();
+                trackCtaClick({ location: 'navbar_mobile_apply', locale, page_path: pathname });
+              }}
               className="btn-secondary w-full !rounded-full !py-3 !text-sm"
             >
               {t('apply')}
             </Link>
-            <Link href="/#contact" onClick={closeMenu} className="btn-primary w-full !py-3">
+            <Link
+              href="/#contact"
+              onClick={() => {
+                closeMenu();
+                trackCtaClick({ location: 'navbar_mobile_apply', locale, page_path: pathname });
+              }}
+              className="btn-primary w-full !py-3"
+            >
               {t('becomeModel')}
               <ArrowRight className="w-4 h-4" />
             </Link>

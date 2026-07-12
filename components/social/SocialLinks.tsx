@@ -5,10 +5,10 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { getSocialLinks, type SocialLink, type SocialPlatform } from '@/lib/social';
 import { SocialIcon } from '@/components/social/SocialIcons';
-import { trackTelegramClick } from '@/lib/analytics/gtag';
+import { trackTelegramClick, trackWhatsappClick } from '@/lib/analytics/gtag';
 import type { TelegramClickLocation } from '@/lib/analytics/events';
 
-const TELEGRAM_LOCATION: Record<'nav' | 'menu' | 'footer', TelegramClickLocation> = {
+const SOCIAL_LOCATION: Record<'nav' | 'menu' | 'footer', TelegramClickLocation> = {
   nav: 'navbar_social',
   menu: 'menu_social',
   footer: 'footer_social',
@@ -70,7 +70,9 @@ function SocialLinkButton({
       title={label}
       onClick={() => {
         if (link.platform === 'telegram') {
-          trackTelegramClick({ location: TELEGRAM_LOCATION[variant], locale });
+          trackTelegramClick({ location: SOCIAL_LOCATION[variant], locale });
+        } else if (link.platform === 'whatsapp') {
+          trackWhatsappClick({ location: SOCIAL_LOCATION[variant], locale });
         }
         onLinkClick?.();
       }}

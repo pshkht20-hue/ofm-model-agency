@@ -1,5 +1,6 @@
 import type { BlogBlock } from '@/lib/content/blog';
 import { Link } from '@/i18n/navigation';
+import { TrackedCtaLink, TrackedTelegramLink } from '@/components/analytics/TrackedLinks';
 
 const TELEGRAM_URL = 'https://t.me/ofmm_agency';
 const TELEGRAM_RE = /(https?:\/\/t\.me\/ofmm_agency|t\.me\/ofmm_agency|@ofmm_agency)/g;
@@ -8,20 +9,20 @@ const TELEGRAM_RE = /(https?:\/\/t\.me\/ofmm_agency|t\.me\/ofmm_agency|@ofmm_age
  * Превращает упоминания Telegram-ника (@ofmm_agency / t.me/ofmm_agency) в
  * кликабельную ссылку прямо в тексте статьи — чтобы читатель мог сразу перейти
  * в чат, а не искать вручную. Точечный матч по нашему нику, без ложных срабатываний.
+ * Клик уходит в GA4 как telegram_click{location:'article_body'} (клиентская обёртка).
  */
 function linkifyTelegram(text: string) {
   if (!text.includes('ofmm_agency')) return text;
   return text.split(TELEGRAM_RE).map((part, i) =>
     part === '@ofmm_agency' || part.includes('t.me/ofmm_agency') ? (
-      <a
+      <TrackedTelegramLink
         key={i}
         href={TELEGRAM_URL}
-        target="_blank"
-        rel="noopener noreferrer"
+        location="article_body"
         className="link-hover-line text-accent-pink hover:text-accent-cyan transition-colors"
       >
         {part}
-      </a>
+      </TrackedTelegramLink>
     ) : (
       part
     ),
@@ -115,9 +116,13 @@ export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
             >
               <h2 className="font-serif text-xl text-white mb-3">{block.title}</h2>
               <p className="text-body text-sm mb-6 max-w-lg mx-auto">{linkifyTelegram(block.body)}</p>
-              <Link href={block.buttonHref} className="btn-primary inline-flex">
+              <TrackedCtaLink
+                href={block.buttonHref}
+                location="article_cta"
+                className="btn-primary inline-flex"
+              >
                 {block.buttonLabel}
-              </Link>
+              </TrackedCtaLink>
               {block.note ? (
                 <p className="text-xs text-white/40 mt-4 max-w-md mx-auto">{linkifyTelegram(block.note)}</p>
               ) : null}

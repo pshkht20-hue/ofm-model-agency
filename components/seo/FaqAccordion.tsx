@@ -3,11 +3,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { useLocale } from 'next-intl';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { VIEWPORT_TIGHT, staggerContainer, staggerItem } from '@/lib/motion';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { parseAnswerLinks } from '@/lib/content/faq/answer-links';
 import type { FaqCategory } from '@/lib/content/faq';
+import { trackFaqOpen } from '@/lib/analytics/gtag';
 
 type FaqAccordionProps = {
   categories: FaqCategory[];
@@ -38,6 +40,8 @@ function renderAnswer(text: string) {
 export function FaqAccordion({ categories }: FaqAccordionProps) {
   const [openKey, setOpenKey] = useState<string | null>('0-0');
   const reduced = useReducedMotion();
+  const locale = useLocale();
+  const pathname = usePathname();
 
   return (
     <div className="space-y-12">
@@ -70,7 +74,12 @@ export function FaqAccordion({ categories }: FaqAccordionProps) {
                 >
                   <button
                     type="button"
-                    onClick={() => setOpenKey(isOpen ? null : key)}
+                    onClick={() => {
+                      if (!isOpen) {
+                        trackFaqOpen({ question: item.question, locale, page_path: pathname });
+                      }
+                      setOpenKey(isOpen ? null : key);
+                    }}
                     className="w-full flex items-start justify-between gap-4 p-5 md:p-6 text-left"
                     aria-expanded={isOpen}
                   >

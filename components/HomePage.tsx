@@ -17,6 +17,11 @@ import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { NeonAccents, NeonAmbience } from '@/components/ui/NeonAccents';
 import { EASE_SMOOTH, VIEWPORT_DEFAULT, fadeUpStatic } from '@/lib/motion';
 import { SectionProvider } from '@/context/SectionContext';
+import { SectionViewTracker } from '@/components/analytics/SectionViewTracker';
+import { HOME_SECTIONS } from '@/lib/sections';
+
+/** id секций главной для section_view (единый источник — lib/sections). */
+const HOME_SECTION_IDS = HOME_SECTIONS.map((s) => s.id);
 
 // Below-fold sections are code-split out of the initial bundle (SSR HTML is
 // still rendered in full, so SEO/H2s/CLS are untouched — the placeholders only
@@ -104,6 +109,7 @@ export function HomePage() {
       <ScrollProgress />
       <Navbar />
       <StickyMobileCta />
+      <SectionViewTracker sections={HOME_SECTION_IDS} page="home" />
 
       <main id="main-content">
         <HeroSection />

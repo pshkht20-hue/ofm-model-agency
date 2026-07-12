@@ -10,6 +10,7 @@ import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
 import { getModelReviews } from '@/lib/content/reviews';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
+import { trackCtaClick } from '@/lib/analytics/gtag';
 
 export function ModelReviewsSection() {
   const t = useTranslations('reviews');
@@ -55,7 +56,11 @@ export function ModelReviewsSection() {
 
       <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
         <p className="text-center text-sm text-white/50 max-w-lg">{t('ctaText')}</p>
-        <Link href="/#contact" className="btn-primary throb shrink-0 !py-2.5 !px-6 !text-sm">
+        <Link
+          href="/#contact"
+          onClick={() => trackCtaClick({ location: 'reviews', locale })}
+          className="btn-primary throb shrink-0 !py-2.5 !px-6 !text-sm"
+        >
           {t('ctaButton')}
         </Link>
       </div>

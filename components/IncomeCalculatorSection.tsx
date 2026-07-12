@@ -30,8 +30,16 @@ import {
 } from '@/lib/calculator/estimate';
 import { saveCalcPrefill } from '@/lib/calculator/prefill';
 import { TelegramCta } from '@/components/TelegramCta';
-import { trackCalculatorComplete, trackCalculatorStart, trackCtaClick } from '@/lib/analytics/gtag';
+import {
+  trackCalcInteract,
+  trackCalcResultView,
+  trackCalculatorComplete,
+  trackCalculatorStart,
+  trackCtaClick,
+} from '@/lib/analytics/gtag';
+import type { CalculatorPage } from '@/lib/analytics/events';
 import { useLocale } from 'next-intl';
+import { usePathname } from '@/i18n/navigation';
 
 const TIER_ACCENT: Record<ResultTier, 'prime' | 'pro' | 'elite' | 'brand'> = {
   launch: 'prime',
@@ -199,6 +207,9 @@ const stepVariants = {
 export function IncomeCalculator({ id }: { id?: string }) {
   const t = useTranslations('home.calculator');
   const locale = useLocale();
+  const pathname = usePathname();
+  // Один компонент живёт на главной и на /calculator — различаем в событиях.
+  const page: CalculatorPage = pathname === '/calculator' ? 'calculator' : 'home';
   const reduced = useReducedMotion();
   const isMobile = useIsMobileViewport();
   // Keep the 3D step/result tilt to desktop; mobile (and reduced) get the
@@ -236,21 +247,31 @@ export function IncomeCalculator({ id }: { id?: string }) {
       low: result.low,
       high: result.high,
       locale,
+      page,
     });
-  }, [showResult, result, locale]);
+    trackCalcResultView({
+      tier: result.tier,
+      low: result.low,
+      high: result.high,
+      page,
+      locale,
+    });
+  }, [showResult, result, locale, page]);
 
   const currentValue = answers[questionId as keyof CalculatorAnswers];
 
   function selectOption(value: Experience | Archetype | Social | Hours) {
     if (!startedRef.current) {
       startedRef.current = true;
-      trackCalculatorStart({ locale });
+      trackCalculatorStart({ locale, page });
     }
     setAnswers((prev) => ({ ...prev, [questionId]: value }));
   }
 
   function goNext() {
     if (!currentValue) return;
+    // step+1 = человекочитаемый номер шага (1–4), question — какой вопрос пройден.
+    trackCalcInteract({ action: 'step_next', step: step + 1, question: questionId, page, locale });
     setDirection(1);
     if (step < totalSteps - 1) {
       setStep((s) => s + 1);
@@ -260,6 +281,13 @@ export function IncomeCalculator({ id }: { id?: string }) {
   }
 
   function goBack() {
+    trackCalcInteract({
+      action: 'back',
+      step: showResult ? totalSteps : step + 1,
+      question: showResult ? undefined : questionId,
+      page,
+      locale,
+    });
     setDirection(-1);
     if (showResult) {
       setShowResult(false);
@@ -269,6 +297,7 @@ export function IncomeCalculator({ id }: { id?: string }) {
   }
 
   function restart() {
+    trackCalcInteract({ action: 'restart', step: totalSteps, page, locale });
     setDirection(-1);
     setAnswers(INITIAL_ANSWERS);
     setStep(0);
@@ -468,7 +497,7 @@ export function IncomeCalculator({ id }: { id?: string }) {
                               tier: result.tier,
                             });
                           }
-                          trackCtaClick({ location: 'calculator_result', locale });
+                          trackCtaClick({ location: 'calculator_result', locale, page_path: pathname });
                         }}
                       >
                         <span ref={resultCtaMagnetRef} className="inline-flex items-center gap-2">
@@ -479,7 +508,13 @@ export function IncomeCalculator({ id }: { id?: string }) {
                       <a
                         href="#models"
                         className="btn-secondary justify-center"
-                        onClick={() => trackCtaClick({ location: 'calculator_result_secondary', locale })}
+                        onClick={() =>
+                          trackCtaClick({
+                            location: 'calculator_result_secondary',
+                            locale,
+                            page_path: pathname,
+                          })
+                        }
                       >
                         {t('result.ctaSecondary')}
                       </a>

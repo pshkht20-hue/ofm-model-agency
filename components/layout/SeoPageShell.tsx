@@ -11,9 +11,10 @@ import { StickyMobileCta } from '@/components/StickyMobileCta';
 import { TelegramCta } from '@/components/TelegramCta';
 import { NeonAmbience } from '@/components/ui/NeonAccents';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { trackCtaClick } from '@/lib/analytics/gtag';
 import {
   descReveal,
   staggerContainer,
@@ -52,6 +53,7 @@ export function SeoPageShell({
 }: SeoPageShellProps) {
   const t = useTranslations('seoShell');
   const locale = useLocale() as Locale;
+  const pathname = usePathname();
   const reduced = useReducedMotion();
 
   return (
@@ -92,7 +94,13 @@ export function SeoPageShell({
                 {t('ctaBody')}
               </motion.p>
               <motion.div variants={reduced ? undefined : staggerItem(16)}>
-                <Link href="/#contact" className="btn-primary inline-flex">
+                <Link
+                  href="/#contact"
+                  className="btn-primary inline-flex"
+                  onClick={() =>
+                    trackCtaClick({ location: 'seo_shell', locale, page_path: pathname })
+                  }
+                >
                   {t('ctaButton')}
                   <ArrowRight className="w-5 h-5" />
                 </Link>
