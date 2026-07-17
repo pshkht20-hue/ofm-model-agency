@@ -15,13 +15,12 @@
  * - Даты живут ТОЛЬКО в dates.json (машинный файл авто-ротации, этап 3).
  */
 
-/** Слаги волны 1 (URL-карта плана). `smm-onlyfans` — карточка только в хабе. */
-export type VacancySlug =
-  | 'chatter-onlyfans'
-  | 'model-onlyfans'
-  | 'manager-onlyfans'
-  | 'assistant-onlyfans'
-  | 'smm-onlyfans';
+/**
+ * [slug]-роли раздела вакансий. После редизайна 2026-07-18 осталась одна роль:
+ * chatter-onlyfans. Роль «модель» переехала в гео-систему lib/content/model-geo
+ * (/vacancies/model/[country]); роли manager/assistant/smm убраны.
+ */
+export type VacancySlug = 'chatter-onlyfans';
 
 /**
  * Города для видимых блоков и массива jobLocation в JSON-LD.
@@ -52,8 +51,10 @@ export type VacancyRecord = {
   employmentType: VacancyEmploymentType[];
   jobLocationType: 'TELECOMMUTE';
   /**
-   * applicantLocationRequirements: ТОЛЬКО Украина (обязательное поле при
-   * TELECOMMUTE; запрещённые страны нигде не перечислять — см. CLAUDE.md).
+   * applicantLocationRequirements: курированный белый список стран (Украина —
+   * приоритет №1, далее Европа + Америки + Австралия/НЗ); работа 100% удалённая.
+   * Обязательное поле при TELECOMMUTE. Запрещённые страны сюда НЕ добавлять —
+   * см. docs/BANNED-COUNTRIES-2026-07.md и CLAUDE.md.
    */
   applicantCountries: readonly string[];
   /** Города для видимых блоков + jobLocation-массива (пустой = чисто удалённо). */
@@ -118,6 +119,18 @@ export type VacancyContent = {
   cta: VacancyCta;
 };
 
+/**
+ * Карточка роли на хабе /vacancies, чей URL — не /vacancies/[slug]. Сейчас это
+ * «Модель» → /vacancies/model (гео-хаб). role/summary/лейблы локализованы.
+ */
+export type VacancyHubCard = {
+  role: string;
+  cardSummary: string;
+  salaryLabel: string;
+  formatLabel: string;
+  locationLabel: string;
+};
+
 /** Контент хаба /vacancies (листинг + SEO-полотно + FAQ). */
 export type VacancyHubContent = {
   h1: string;
@@ -127,6 +140,8 @@ export type VacancyHubContent = {
   /** Трастовая строка: «{count}» и «{date}» подставляет страница. */
   trustLine: string;
   intro: string[];
+  /** Карточка «Модель» (вторая роль хаба, ведёт на гео-хаб /vacancies/model). */
+  modelCard: VacancyHubCard;
   /** SEO-полотно: PAA-вопросы дословно в H2, блок «для мужчин», блок городов. */
   sections: VacancySection[];
   faqHeading: string;

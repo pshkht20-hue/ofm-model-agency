@@ -13,8 +13,6 @@ import {
   getVacancyContent,
   getVacancyDates,
   getVacancyHubContent,
-  getVacancyRecord,
-  getVacancySlugs,
   getVacancyUi,
 } from '@/lib/content/vacancies';
 import { RichText } from './RichText';
@@ -44,10 +42,37 @@ export default async function VacanciesHubPage({ params }: Props) {
   const loc = locale as Locale;
   const hub = getVacancyHubContent(loc);
   const ui = getVacancyUi(loc);
-  const slugs = getVacancySlugs();
+
+  // Хаб показывает 2 роли: чатер (/vacancies/chatter-onlyfans, из реестра) и
+  // модель (/vacancies/model — гео-хаб, из hub.modelCard).
+  const chatter = getVacancyContent('chatter-onlyfans', loc);
+  const chatterDates = getVacancyDates('chatter-onlyfans');
+
+  const cards = [
+    {
+      key: 'chatter',
+      href: '/vacancies/chatter-onlyfans',
+      role: chatter.role,
+      summary: chatter.cardSummary,
+      salary: chatter.salaryLabel,
+      format: chatter.formatLabel,
+      location: chatter.locationLabel,
+      posted: chatterDates.datePosted,
+    },
+    {
+      key: 'model',
+      href: '/vacancies/model',
+      role: hub.modelCard.role,
+      summary: hub.modelCard.cardSummary,
+      salary: hub.modelCard.salaryLabel,
+      format: hub.modelCard.formatLabel,
+      location: hub.modelCard.locationLabel,
+      posted: null,
+    },
+  ];
 
   const trustLine = hub.trustLine
-    .replace('{count}', String(slugs.length))
+    .replace('{count}', String(cards.length))
     .replace('{date}', getLatestVacancyUpdatedAt());
 
   const sectionHeading = 'font-serif text-2xl md:text-3xl text-white mb-6';
@@ -74,66 +99,48 @@ export default async function VacanciesHubPage({ params }: Props) {
         </p>
       ))}
 
-      {/* Листинг ролей — первым экраном */}
+      {/* Листинг ролей — первым экраном (чатер + модель) */}
       <div className="mt-8 grid gap-5 sm:grid-cols-2">
-        {slugs.map((slug) => {
-          const content = getVacancyContent(slug, loc);
-          const record = getVacancyRecord(slug);
-          const dates = getVacancyDates(slug);
-          const inner = (
-            <>
-              <div className={`flex items-center gap-3 mb-3 ${metaRow}`}>
-                <span className="rounded-full border border-accent-pink/30 px-2.5 py-0.5 text-accent-pink">
-                  {ui.openBadge}
-                </span>
+        {cards.map((card) => (
+          <Link
+            key={card.key}
+            href={card.href}
+            className="group block rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 hover:border-accent-pink/30 hover:bg-white/[0.04] transition-colors"
+          >
+            <div className={`flex items-center gap-3 mb-3 ${metaRow}`}>
+              <span className="rounded-full border border-accent-pink/30 px-2.5 py-0.5 text-accent-pink">
+                {ui.openBadge}
+              </span>
+              {card.posted && (
                 <span>
-                  {ui.postedLabel}: {dates.datePosted}
-                </span>
-              </div>
-              <h2 className="font-serif text-xl md:text-2xl text-white leading-snug">
-                {content.role}
-              </h2>
-              <p className="text-body text-sm mt-3">{content.cardSummary}</p>
-              <dl className="mt-4 space-y-1.5 text-sm">
-                <div className="flex gap-2">
-                  <dt className="text-white/45">{ui.salaryLabel}:</dt>
-                  <dd className="text-white/80">{content.salaryLabel}</dd>
-                </div>
-                <div className="flex gap-2">
-                  <dt className="text-white/45">{ui.formatLabel}:</dt>
-                  <dd className="text-white/80">{content.formatLabel}</dd>
-                </div>
-                <div className="flex gap-2">
-                  <dt className="text-white/45">{ui.locationLabel}:</dt>
-                  <dd className="text-white/80">{content.locationLabel}</dd>
-                </div>
-              </dl>
-              {record.hasPage && (
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-accent-pink group-hover:text-accent-cyan transition-colors">
-                  {ui.detailsCta}
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                  {ui.postedLabel}: {card.posted}
                 </span>
               )}
-            </>
-          );
-
-          return record.hasPage ? (
-            <Link
-              key={slug}
-              href={`/vacancies/${slug}`}
-              className="group block rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 hover:border-accent-pink/30 hover:bg-white/[0.04] transition-colors"
-            >
-              {inner}
-            </Link>
-          ) : (
-            <div
-              key={slug}
-              className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6"
-            >
-              {inner}
             </div>
-          );
-        })}
+            <h2 className="font-serif text-xl md:text-2xl text-white leading-snug">
+              {card.role}
+            </h2>
+            <p className="text-body text-sm mt-3">{card.summary}</p>
+            <dl className="mt-4 space-y-1.5 text-sm">
+              <div className="flex gap-2">
+                <dt className="text-white/45">{ui.salaryLabel}:</dt>
+                <dd className="text-white/80">{card.salary}</dd>
+              </div>
+              <div className="flex gap-2">
+                <dt className="text-white/45">{ui.formatLabel}:</dt>
+                <dd className="text-white/80">{card.format}</dd>
+              </div>
+              <div className="flex gap-2">
+                <dt className="text-white/45">{ui.locationLabel}:</dt>
+                <dd className="text-white/80">{card.location}</dd>
+              </div>
+            </dl>
+            <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-accent-pink group-hover:text-accent-cyan transition-colors">
+              {ui.detailsCta}
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </Link>
+        ))}
       </div>
 
       {/* SEO-полотно: PAA-вопросы дословно в H2, блок «для мужчин», блок городов */}

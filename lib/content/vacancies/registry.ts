@@ -6,20 +6,42 @@
 import datesJson from './dates.json';
 import type { VacancyDates, VacancyRecord, VacancySlug } from './types';
 
-/** Порядок листинга в хабе: приоритетные роли (чатер, модель) — первыми. */
-export const VACANCY_ORDER: VacancySlug[] = [
-  'chatter-onlyfans',
-  'model-onlyfans',
-  'manager-onlyfans',
-  'assistant-onlyfans',
-  'smm-onlyfans',
-];
+/**
+ * [slug]-роли раздела. После редизайна 2026-07-18 — только чатер: роль «модель»
+ * ведёт гео-система (/vacancies/model), карточка модели на хабе рендерится из
+ * VacancyHubContent.modelCard, а не из этого реестра.
+ */
+export const VACANCY_ORDER: VacancySlug[] = ['chatter-onlyfans'];
 
 /**
- * applicantLocationRequirements: только Украина (требование Google при
- * TELECOMMUTE; запрещённые страны нигде не перечисляем).
+ * applicantLocationRequirements: работа 100% удалённая, брать можно из любой
+ * поддерживаемой страны. Украина — приоритетный рынок №1, поэтому первой; далее
+ * курированный список Европы + Америк + Австралия/НЗ.
+ * ⛔ КРИТИЧНО: только страны из белого списка ниже. Не добавлять сюда страны
+ * из стоп-листа docs/BANNED-COUNTRIES-2026-07.md — креаторам оттуда OnlyFans
+ * недоступен (перед расширением списка сверяться с этим файлом).
  */
-const APPLICANT_COUNTRIES = ['Ukraine'] as const;
+const APPLICANT_COUNTRIES = [
+  'Ukraine',
+  'Poland',
+  'Germany',
+  'Spain',
+  'Italy',
+  'France',
+  'Netherlands',
+  'Portugal',
+  'Czechia',
+  'Romania',
+  'United Kingdom',
+  'Ireland',
+  'United States',
+  'Canada',
+  'Australia',
+  'New Zealand',
+  'Mexico',
+  'Colombia',
+  'Argentina',
+] as const;
 
 export const VACANCIES: Record<VacancySlug, VacancyRecord> = {
   'chatter-onlyfans': {
@@ -31,51 +53,6 @@ export const VACANCIES: Record<VacancySlug, VacancyRecord> = {
     cities: [],
     // baseSalary сознательно НЕ публикуем (решение владельца: цифры на
     // собеседовании) — warning в Search Console допустим, это не error.
-    applyKind: 'telegram',
-  },
-  'model-onlyfans': {
-    slug: 'model-onlyfans',
-    hasPage: true,
-    employmentType: ['CONTRACTOR'],
-    jobLocationType: 'TELECOMMUTE',
-    applicantCountries: APPLICANT_COUNTRIES,
-    cities: ['kyiv', 'kharkiv', 'lviv', 'dnipro', 'odesa'],
-    // baseSalary НЕ публикуем: доход модели — процент от gross-баланса, а не
-    // фиксированная ставка. Any fixed range in structured data не совпал бы с
-    // видимым «% от баланса» → Google подавил бы JobPosting rich-result именно
-    // на этой (главной для найма) странице. Без baseSalary разметка валидна.
-    applyKind: 'joinForm',
-  },
-  'manager-onlyfans': {
-    slug: 'manager-onlyfans',
-    hasPage: true,
-    employmentType: ['FULL_TIME'],
-    jobLocationType: 'TELECOMMUTE',
-    applicantCountries: APPLICANT_COUNTRIES,
-    cities: [],
-    salary: { currency: 'USD', minValue: 1000, maxValue: 3000, unitText: 'MONTH' },
-    applyKind: 'telegram',
-  },
-  'assistant-onlyfans': {
-    slug: 'assistant-onlyfans',
-    hasPage: true,
-    employmentType: ['PART_TIME', 'FULL_TIME'],
-    jobLocationType: 'TELECOMMUTE',
-    applicantCountries: APPLICANT_COUNTRIES,
-    cities: [],
-    salary: { currency: 'USD', minValue: 600, unitText: 'MONTH' },
-    applyKind: 'telegram',
-  },
-  // Пятая роль листинга («листинг 5–10 своих ролей», MASTER-PLAN п.12).
-  // Отдельной страницы в волне 1 НЕТ (URL-карта плана — 4 ролевых URL);
-  // страница — волна 2 по данным GSC и решению владельца.
-  'smm-onlyfans': {
-    slug: 'smm-onlyfans',
-    hasPage: false,
-    employmentType: ['PART_TIME', 'FULL_TIME'],
-    jobLocationType: 'TELECOMMUTE',
-    applicantCountries: APPLICANT_COUNTRIES,
-    cities: [],
     applyKind: 'telegram',
   },
 };

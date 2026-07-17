@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getAllBlogSlugs, getBlogPublishedAtMap } from '@/lib/content/blog/slugs';
 import { getBlogPostLocales } from '@/lib/content/blog';
 import { getVacancyPageSlugs, getVacancyDates } from '@/lib/content/vacancies';
+import { getModelGeoPageSlugs, getModelGeoDates } from '@/lib/content/model-geo';
 import {
   getResearchReportSlugs,
   getResearchReportLocales,
@@ -50,10 +51,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   }
 
-  // --- Vacancies section (hub + 4 role pages, all locales) ---
-  // Additive block mirroring the STATIC_ROUTES loop above. getVacancyPageSlugs()
-  // returns exactly the hasPage:true roles (chatter/model/manager/assistant);
-  // smm-onlyfans is a hub-only card and gets no URL here.
+  // --- Vacancies section (hub + role pages, all locales) ---
+  // Additive block. getVacancyPageSlugs() returns the hasPage:true roles
+  // (currently: chatter-onlyfans). The model role lives in the geo-system below.
   for (const locale of routing.locales) {
     entries.push({
       url: `${siteUrl}${pathForLocale('/vacancies', locale as Locale)}`,
@@ -68,6 +68,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${siteUrl}${pathForLocale(path, locale as Locale)}`,
         lastModified: new Date(getVacancyDates(slug).dateModified),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+        alternates: { languages: hreflangAlternates(siteUrl, path) },
+      });
+    }
+  }
+
+  // --- Model geo-vacancies (hub /vacancies/model + country pages, all locales) ---
+  for (const locale of routing.locales) {
+    entries.push({
+      url: `${siteUrl}${pathForLocale('/vacancies/model', locale as Locale)}`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+      alternates: { languages: hreflangAlternates(siteUrl, '/vacancies/model') },
+    });
+
+    for (const slug of getModelGeoPageSlugs()) {
+      const path = `/vacancies/model/${slug}`;
+      entries.push({
+        url: `${siteUrl}${pathForLocale(path, locale as Locale)}`,
+        lastModified: new Date(getModelGeoDates(slug).dateModified),
         changeFrequency: 'monthly',
         priority: 0.8,
         alternates: { languages: hreflangAlternates(siteUrl, path) },

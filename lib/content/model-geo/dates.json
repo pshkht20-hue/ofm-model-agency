@@ -1,0 +1,41 @@
+{
+  "_readme": "Машинный файл дат гео-страниц модели (фундамент раздела вакансий, 2026-07-18). Формат: ISO YYYY-MM-DD. validThrough вычисляется в index.ts как datePosted + 30 дней и НЕ хранится тут. dateModified питает видимую дату «Обновлено» и sitemap lastModified. При добавлении новой страны-страницы добавь сюда её слаг с датами.",
+  "countries": {
+    "ukraine": {
+      "datePosted": "2026-07-12",
+      "dateModified": "2026-07-12"
+    },
+    "netherlands": {
+      "datePosted": "2026-07-18",
+      "dateModified": "2026-07-18"
+    },
+    "france": {
+      "datePosted": "2026-07-18",
+      "dateModified": "2026-07-18"
+    },
+    "poland": {
+      "datePosted": "2026-07-18",
+      "dateModified": "2026-07-18"
+    },
+    "italy": {
+      "datePosted": "2026-07-18",
+      "dateModified": "2026-07-18"
+    },
+    "germany": {
+      "datePosted": "2026-07-18",
+      "dateModified": "2026-07-18"
+    },
+    "united-states": {
+      "datePosted": "2026-07-18",
+      "dateModified": "2026-07-18"
+    },
+    "spain": {
+      "datePosted": "2026-07-18",
+      "dateModified": "2026-07-18"
+    },
+    "united-kingdom": {
+      "datePosted": "2026-07-18",
+      "dateModified": "2026-07-18"
+    }
+  }
+}
