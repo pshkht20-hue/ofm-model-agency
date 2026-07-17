@@ -31,6 +31,8 @@ export type CtaLocation =
   | 'reviews'
   | 'seo_shell'
   | 'article_cta'
+  | 'article_inline'
+  | 'article_calc_teaser'
   | 'footer'
   | 'join_hero'
   | 'join_income'

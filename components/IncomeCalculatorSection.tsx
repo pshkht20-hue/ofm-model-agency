@@ -17,7 +17,7 @@ import { useIsMobileViewport } from '@/hooks/useMotionPreferences';
 import { useMagnetic } from '@/hooks/useMagnetic';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
-import { usdParts } from '@/lib/results/format';
+import { formatUsd, usdParts } from '@/lib/results/format';
 import {
   estimateIncome,
   QUESTION_ORDER,
@@ -49,6 +49,16 @@ const TIER_ACCENT: Record<ResultTier, 'prime' | 'pro' | 'elite' | 'brand'> = {
 };
 
 const INITIAL_ANSWERS: Partial<CalculatorAnswers> = {};
+
+/** Пауза перед авто-переходом на следующий шаг после выбора опции (шаги 1–3). */
+const AUTO_NEXT_DELAY_MS = 350;
+// Потолок публичного доход-клейма проекта — $50K. Вилки топ-типажей считаются
+// выше, но в текст кнопки такие цифры не выносим («забронировать $68K» читается
+// как обещание) — показываем нейтральный вариант без чисел.
+const CTA_RANGE_CAP_USD = 50_000;
+
+/** «Инклюзивные» типажи показываем первыми — снижают порог входа на самом сложном шаге. */
+const ARCHETYPES_FIRST = ['exploring', 'natural'];
 
 /**
  * Count-up driven by a framer MotionValue (zero re-renders per frame, like
@@ -136,9 +146,18 @@ type OptionCardProps = {
   description: string;
   onSelect: () => void;
   highlighted?: boolean;
+  /** Плотная карточка для сеток с большим числом опций (шаг «типаж»). */
+  compact?: boolean;
 };
 
-function OptionCard({ selected, label, description, onSelect, highlighted = false }: OptionCardProps) {
+function OptionCard({
+  selected,
+  label,
+  description,
+  onSelect,
+  highlighted = false,
+  compact = false,
+}: OptionCardProps) {
   const onMove = useCallback((e: MouseEvent<HTMLButtonElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -154,7 +173,9 @@ function OptionCard({ selected, label, description, onSelect, highlighted = fals
       onMouseMove={onMove}
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.99 }}
-      className={`group relative w-full overflow-hidden rounded-2xl border p-5 text-left transition-colors duration-300 ${
+      className={`group relative w-full overflow-hidden border text-left transition-colors duration-300 ${
+        compact ? 'rounded-xl p-3 md:p-4' : 'rounded-2xl p-5'
+      } ${
         selected
           ? 'border-accent-pink/50 bg-accent-pink/[0.08] shadow-[0_0_32px_-8px_rgba(255,91,181,0.45)]'
           : highlighted
@@ -170,21 +191,41 @@ function OptionCard({ selected, label, description, onSelect, highlighted = fals
         }}
         aria-hidden
       />
-      <div className="relative z-10 flex items-start gap-4">
-        <div
-          className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-colors ${
-            selected
-              ? 'border-accent-pink bg-accent-pink text-[#050508]'
-              : 'border-white/20 bg-white/[0.03]'
-          }`}
-        >
-          {selected && <Check className="h-3 w-3" strokeWidth={3} />}
+      {compact ? (
+        <div className="relative z-10">
+          <div className="flex items-start justify-between gap-2">
+            <p className="text-sm font-semibold leading-snug text-white/95">{label}</p>
+            <div
+              className={`mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border transition-colors ${
+                selected
+                  ? 'border-accent-pink bg-accent-pink text-[#050508]'
+                  : 'border-white/20 bg-white/[0.03]'
+              }`}
+            >
+              {selected && <Check className="h-2.5 w-2.5" strokeWidth={3} />}
+            </div>
+          </div>
+          <p className="mt-1.5 text-[11px] leading-relaxed text-white/45 md:text-xs">
+            {description}
+          </p>
         </div>
-        <div className="min-w-0">
-          <p className="font-semibold text-white/95 leading-snug">{label}</p>
-          <p className="mt-1.5 text-sm leading-relaxed text-white/45">{description}</p>
+      ) : (
+        <div className="relative z-10 flex items-start gap-4">
+          <div
+            className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-colors ${
+              selected
+                ? 'border-accent-pink bg-accent-pink text-[#050508]'
+                : 'border-white/20 bg-white/[0.03]'
+            }`}
+          >
+            {selected && <Check className="h-3 w-3" strokeWidth={3} />}
+          </div>
+          <div className="min-w-0">
+            <p className="font-semibold text-white/95 leading-snug">{label}</p>
+            <p className="mt-1.5 text-sm leading-relaxed text-white/45">{description}</p>
+          </div>
         </div>
-      </div>
+      )}
     </motion.button>
   );
 }
@@ -221,6 +262,20 @@ export function IncomeCalculator({ id }: { id?: string }) {
   const [answers, setAnswers] = useState<Partial<CalculatorAnswers>>(INITIAL_ANSWERS);
   const [showResult, setShowResult] = useState(false);
   const startedRef = useRef(false);
+  const autoNextRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Зеркало step для колбэка авто-таймера: во время exit-анимации шага клики по
+  // уходящим карточкам не должны давать фантомный calc_interact step_next.
+  const stepRef = useRef(step);
+  stepRef.current = step;
+
+  const clearAutoNext = useCallback(() => {
+    if (autoNextRef.current) {
+      clearTimeout(autoNextRef.current);
+      autoNextRef.current = null;
+    }
+  }, []);
+
+  useEffect(() => clearAutoNext, [clearAutoNext]);
 
   const questionId = QUESTION_ORDER[step];
   const totalSteps = QUESTION_ORDER.length;
@@ -230,6 +285,28 @@ export function IncomeCalculator({ id }: { id?: string }) {
       return null;
     }
     return estimateIncome(answers as CalculatorAnswers);
+  }, [answers]);
+
+  /**
+   * Живая «грубая вилка» после выбора типажа: пессимистичный и оптимистичный
+   * прогнозы по ещё не отвеченным вопросам. Сужается с каждым ответом и
+   * сходится к точному result на последнем шаге.
+   */
+  const previewRange = useMemo(() => {
+    if (!answers.experience || !answers.archetype) return null;
+    const pessimistic = estimateIncome({
+      experience: answers.experience,
+      archetype: answers.archetype,
+      social: answers.social ?? 'none',
+      hours: answers.hours ?? 'light',
+    });
+    const optimistic = estimateIncome({
+      experience: answers.experience,
+      archetype: answers.archetype,
+      social: answers.social ?? 'strong',
+      hours: answers.hours ?? 'intense',
+    });
+    return { low: pessimistic.low, high: optimistic.high };
   }, [answers]);
 
   const animatedLow = useCountUp(result?.low ?? 0, showResult, !!reduced);
@@ -266,10 +343,35 @@ export function IncomeCalculator({ id }: { id?: string }) {
       trackCalculatorStart({ locale, page });
     }
     setAnswers((prev) => ({ ...prev, [questionId]: value }));
+
+    // Авто-переход на следующий шаг после короткой паузы (пользователь успевает
+    // увидеть выбор). Не на последнем шаге — там осознанное «Рассчитать».
+    // Кнопка «Далее» остаётся для доступности; трекинг тот же, что у goNext.
+    if (step < totalSteps - 1) {
+      clearAutoNext();
+      const fromStep = step;
+      const fromQuestion = questionId;
+      autoNextRef.current = setTimeout(() => {
+        autoNextRef.current = null;
+        // Шаг уже сменили вручную (или кликнули по уходящей карточке во время
+        // exit-анимации) — ни перехода, ни трекинга.
+        if (stepRef.current !== fromStep) return;
+        trackCalcInteract({
+          action: 'step_next',
+          step: fromStep + 1,
+          question: fromQuestion,
+          page,
+          locale,
+        });
+        setDirection(1);
+        setStep((s) => (s === fromStep ? s + 1 : s));
+      }, AUTO_NEXT_DELAY_MS);
+    }
   }
 
   function goNext() {
     if (!currentValue) return;
+    clearAutoNext();
     // step+1 = человекочитаемый номер шага (1–4), question — какой вопрос пройден.
     trackCalcInteract({ action: 'step_next', step: step + 1, question: questionId, page, locale });
     setDirection(1);
@@ -281,6 +383,7 @@ export function IncomeCalculator({ id }: { id?: string }) {
   }
 
   function goBack() {
+    clearAutoNext();
     trackCalcInteract({
       action: 'back',
       step: showResult ? totalSteps : step + 1,
@@ -297,6 +400,7 @@ export function IncomeCalculator({ id }: { id?: string }) {
   }
 
   function restart() {
+    clearAutoNext();
     trackCalcInteract({ action: 'restart', step: totalSteps, page, locale });
     setDirection(-1);
     setAnswers(INITIAL_ANSWERS);
@@ -309,6 +413,18 @@ export function IncomeCalculator({ id }: { id?: string }) {
   const optionKeys = Object.keys(
     t.raw(`questions.${questionId}.options`) as Record<string, { label: string; desc: string }>,
   );
+  // На шаге типажа «инклюзивные» опции всегда первые, независимо от порядка в JSON.
+  const orderedOptionKeys =
+    questionId === 'archetype'
+      ? [
+          ...ARCHETYPES_FIRST.filter((key) => optionKeys.includes(key)),
+          ...optionKeys.filter((key) => !ARCHETYPES_FIRST.includes(key)),
+        ]
+      : optionKeys;
+
+  // Живой превью-диапазон показываем после шага типажа (шаги 3–4 квиза).
+  const stepsLeft = totalSteps - step;
+  const showPreview = !showResult && step >= 2 && previewRange !== null;
 
   return (
     <div id={id} className="mx-auto max-w-3xl">
@@ -340,6 +456,20 @@ export function IncomeCalculator({ id }: { id?: string }) {
                     }
                   />
                 </div>
+                {showPreview && previewRange && (
+                  <motion.p
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: reduced ? 0 : 0.35, ease: EASE_SMOOTH }}
+                    className="mt-3 text-center text-xs font-medium tabular-nums text-accent-cyan/90"
+                  >
+                    {t('previewNote', {
+                      low: formatUsd(previewRange.low),
+                      high: formatUsd(previewRange.high),
+                      steps: stepsLeft,
+                    })}
+                  </motion.p>
+                )}
               </div>
             )}
 
@@ -366,18 +496,18 @@ export function IncomeCalculator({ id }: { id?: string }) {
                   )}
 
                   <div
-                    className={`space-y-3 ${
+                    className={
                       questionId === 'archetype'
-                        ? 'max-h-[min(52vh,420px)] overflow-y-auto pr-1'
-                        : ''
-                    }`}
+                        ? 'grid grid-cols-2 gap-2.5 md:grid-cols-3 md:gap-3'
+                        : 'space-y-3'
+                    }
                   >
-                    {optionKeys.map((key) => {
+                    {orderedOptionKeys.map((key) => {
                       const option = t.raw(`questions.${questionId}.options.${key}`) as {
                         label: string;
                         desc: string;
                       };
-                      const isInclusive = questionId === 'archetype' && (key === 'exploring' || key === 'natural');
+                      const isInclusive = questionId === 'archetype' && ARCHETYPES_FIRST.includes(key);
                       return (
                         <OptionCard
                           key={key}
@@ -386,6 +516,7 @@ export function IncomeCalculator({ id }: { id?: string }) {
                           description={option.desc}
                           onSelect={() => selectOption(key as Experience & Archetype & Social & Hours)}
                           highlighted={isInclusive}
+                          compact={questionId === 'archetype'}
                         />
                       );
                     })}
@@ -467,6 +598,45 @@ export function IncomeCalculator({ id }: { id?: string }) {
                       </div>
                     </div>
 
+                    {/* CTA сразу под цифрами: на мобиле раньше был за экраном под инсайтами. */}
+                    <div>
+                      <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
+                        <a
+                          href="#contact"
+                          data-magnetic-area
+                          className={`btn-primary group justify-center ${showResult ? 'btn-ready' : ''}`}
+                          onClick={() => {
+                            if (result) {
+                              saveCalcPrefill({
+                                low: result.low,
+                                high: result.high,
+                                tier: result.tier,
+                              });
+                            }
+                            trackCtaClick({ location: 'calculator_result', locale, page_path: pathname });
+                          }}
+                        >
+                          <span ref={resultCtaMagnetRef} className="inline-flex items-center gap-2">
+                            {result.high <= CTA_RANGE_CAP_USD
+                              ? t('result.ctaRange', {
+                                  low: formatUsd(result.low),
+                                  high: formatUsd(result.high),
+                                })
+                              : t('result.ctaDiscuss')}
+                            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                          </span>
+                        </a>
+                        <TelegramCta
+                          location="calculator_result"
+                          variant="button"
+                          label={t('result.telegramCta')}
+                        />
+                      </div>
+                      <p className="mt-3 text-center text-xs leading-relaxed text-white/45">
+                        {t('result.prefillNote')}
+                      </p>
+                    </div>
+
                     <div className="rounded-2xl border border-white/[0.08] bg-[#0a0a10]/80 p-6">
                       <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-accent-pink/90">
                         {t('result.insightsTitle')}
@@ -484,27 +654,7 @@ export function IncomeCalculator({ id }: { id?: string }) {
                       </ul>
                     </div>
 
-                    <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-                      <a
-                        href="#contact"
-                        data-magnetic-area
-                        className={`btn-primary group justify-center ${showResult ? 'btn-ready' : ''}`}
-                        onClick={() => {
-                          if (result) {
-                            saveCalcPrefill({
-                              low: result.low,
-                              high: result.high,
-                              tier: result.tier,
-                            });
-                          }
-                          trackCtaClick({ location: 'calculator_result', locale, page_path: pathname });
-                        }}
-                      >
-                        <span ref={resultCtaMagnetRef} className="inline-flex items-center gap-2">
-                          {t('result.cta')}
-                          <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-                        </span>
-                      </a>
+                    <div className="flex justify-center">
                       <a
                         href="#models"
                         className="btn-secondary justify-center"
@@ -518,14 +668,6 @@ export function IncomeCalculator({ id }: { id?: string }) {
                       >
                         {t('result.ctaSecondary')}
                       </a>
-                    </div>
-
-                    <div className="flex justify-center">
-                      <TelegramCta
-                        location="calculator_result"
-                        variant="inline"
-                        label={t('result.telegramAsk')}
-                      />
                     </div>
                   </motion.div>
                 )

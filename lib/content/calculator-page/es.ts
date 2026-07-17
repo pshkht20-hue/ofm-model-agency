@@ -69,7 +69,7 @@ export const CALCULATOR_PAGE_ES: CalculatorPageContent = {
       {
         question: '¿Cuánto ganan las principiantes en OnlyFans?',
         answer:
-          'Sola y sin promoción, el primer mes suele dejar unos modestos $100–200: una página sin tráfico sencillamente no se encuentra. Con promoción sistemática, las nuevas creadoras llegan a $500–3,000 en los primeros 1–3 meses (balance gross de la página). Las top de la agencia mueven $15,000–50,000 al mes en balance gross, pero eso es fruto de meses de trabajo en equipo, no el punto de partida.',
+          'Sola y sin promoción, el primer mes suele dejar unos modestos $300–700: una página sin tráfico sencillamente no se encuentra. Con promoción sistemática, las nuevas creadoras llegan a $500–3,000 en los primeros 1–3 meses (balance gross de la página). Las top de la agencia mueven $15,000–50,000 al mes en balance gross, pero eso es fruto de meses de trabajo en equipo, no el punto de partida.',
       },
       {
         question: '¿Cómo aumentar los ingresos en OnlyFans?',

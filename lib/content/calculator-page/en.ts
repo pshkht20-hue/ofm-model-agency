@@ -69,7 +69,7 @@ export const CALCULATOR_PAGE_EN: CalculatorPageContent = {
       {
         question: 'How much do beginners make on OnlyFans?',
         answer:
-          "Solo with no promotion, a typical first month brings a modest $100–200 — a page without traffic simply doesn't get found. With systematic promotion, new creators reach $500–3,000 within the first 1–3 months (gross page balance). Top models at the agency run $15,000–50,000 a month in gross balance, but that's the result of months of consistent teamwork, not a starting point.",
+          "Solo with no promotion, a typical first month brings a modest $300–700 — a page without traffic simply doesn't get found. With systematic promotion, new creators reach $500–3,000 within the first 1–3 months (gross page balance). Top models at the agency run $15,000–50,000 a month in gross balance, but that's the result of months of consistent teamwork, not a starting point.",
       },
       {
         question: 'How do you increase OnlyFans earnings?',

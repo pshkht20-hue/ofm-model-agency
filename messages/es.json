@@ -229,6 +229,7 @@
       "title": "¡Descubre tu potencial con la agencia OFM!",
       "subtitle": "4 preguntas rápidas — pronóstico personalizado basado en casos reales de OFM",
       "progress": "Paso {current} de {total}",
+      "previewNote": "≈ {low}–{high} / mes — lo afinamos en {steps, plural, one {# paso} other {# pasos}}",
       "back": "Atrás",
       "next": "Siguiente",
       "calculate": "Calcular",
@@ -308,9 +309,11 @@
           "ebony": "Ebony",
           "babyface": "Babyface"
         },
-        "cta": "Obtener plan en Telegram",
+        "ctaRange": "Reservar mi plan de {low}–{high}",
+        "ctaDiscuss": "Hablar de mi plan con un manager",
         "ctaSecondary": "Ver casos de éxito",
-        "telegramAsk": "¿Tienes una pregunta? Escríbenos por Telegram"
+        "telegramCta": "Escríbenos por Telegram",
+        "prefillNote": "Tu estimación queda guardada para tu solicitud: el manager verá tus cifras."
       },
       "insights": {
         "launchSupport": "Recomendamos lanzamiento completo: perfil, primeras publicaciones y tráfico en paralelo — sin perder semanas en preparación.",
@@ -396,6 +399,21 @@
     "ctaTitle": "¿Listo para hablar de colaboración?",
     "ctaBody": "Envía tu solicitud — un manager de OFM's Model Agency responderá por Telegram en 24 horas.",
     "ctaButton": "Solicitud"
+  },
+  "articleBridge": {
+    "inline": {
+      "eyebrow": "Sin experiencia ni inversión",
+      "title": "Empieza a ganar con el equipo OFM",
+      "body": "Deja tu solicitud — un manager te responderá por Telegram en 24 horas, te lo explicará todo y te ayudará a empezar. La agencia financia la promoción y el lanzamiento, y eres libre de salir en cualquier momento.",
+      "button": "Dejar solicitud",
+      "trust": "220+ modelos · Respondemos en 24 horas"
+    },
+    "calc": {
+      "title": "¿Cuánto vas a ganar?",
+      "body": "Las principiantes con la agencia suelen llegar a $500–1000 ya en el primer mes. Responde 4 preguntas — recibe tu pronóstico personal en 30 segundos.",
+      "button": "Calcular mi ingreso",
+      "note": "El pronóstico es una referencia, no una garantía de ingresos."
+    }
   },
   "seoHome": {
     "eyebrow": "Agencia OnlyFans",

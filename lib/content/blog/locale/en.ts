@@ -1372,7 +1372,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "ul",
         items: [
-          "Solo start with no promo: usually $100–200 in month one",
+          "Solo start with no promo: usually $300–700 in month one",
           "First 1–3 months of systematic work: $500–3,000",
           "$3,000–10,000: steady content plus at least 1–2 traffic channels",
           "$10,000–30,000+: strong chats, real marketing, a defined niche",
@@ -1391,7 +1391,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         rows: [
           [
             "Solo beginner, no promo",
-            "$100–200",
+            "$300–700",
             "The page exists but there's no traffic: organic reach and occasional social posts",
           ],
           [
@@ -1493,7 +1493,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Solo with no promo — usually $100–200: the page is live, but there's no traffic yet. With systematic work and a team behind you, the realistic corridor is $500–3,000 over the first 1–3 months. Growth is almost never linear, and that's a normal start.",
+        text: "Solo with no promo — usually $300–700: the page is live, but there's no traffic yet. With systematic work and a team behind you, the realistic corridor is $500–3,000 over the first 1–3 months. Growth is almost never linear, and that's a normal start.",
       },
       {
         type: "h3",

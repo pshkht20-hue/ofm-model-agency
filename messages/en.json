@@ -229,6 +229,7 @@
       "title": "Discover your potential with OFM agency!",
       "subtitle": "4 quick questions — a personalized forecast based on real OFM case studies",
       "progress": "Step {current} of {total}",
+      "previewNote": "≈ {low}–{high} / mo — {steps, plural, one {# step} other {# steps}} left to refine it",
       "back": "Back",
       "next": "Next",
       "calculate": "Calculate",
@@ -308,9 +309,11 @@
           "ebony": "Ebony",
           "babyface": "Babyface"
         },
-        "cta": "Get your plan on Telegram",
+        "ctaRange": "Reserve my {low}–{high} plan",
+        "ctaDiscuss": "Discuss my plan with a manager",
         "ctaSecondary": "View case studies",
-        "telegramAsk": "Got a question? Message us on Telegram"
+        "telegramCta": "Message us on Telegram",
+        "prefillNote": "Your estimate is saved for your application — the manager will see your numbers."
       },
       "insights": {
         "launchSupport": "We recommend a full launch: profile, first posts, and traffic in parallel — so you don't lose weeks on prep.",
@@ -396,6 +399,21 @@
     "ctaTitle": "Ready to discuss working together?",
     "ctaBody": "Apply — an OFM's Model Agency manager will reply on Telegram within 24 hours.",
     "ctaButton": "Apply"
+  },
+  "articleBridge": {
+    "inline": {
+      "eyebrow": "No experience or investment needed",
+      "title": "Start earning with the OFM team",
+      "body": "Leave a request — a manager will reply on Telegram within 24 hours, explain everything and help you start. The agency funds your promotion and launch, and you're free to leave at any moment.",
+      "button": "Apply now",
+      "trust": "220+ models · We reply within 24 hours"
+    },
+    "calc": {
+      "title": "How much will you earn?",
+      "body": "Newcomers with the agency usually reach $500–1000 in their very first month. Answer 4 questions — get your personal estimate in 30 seconds.",
+      "button": "Calculate my income",
+      "note": "The estimate is a guide, not a guarantee of income."
+    }
   },
   "seoHome": {
     "eyebrow": "OnlyFans agency",

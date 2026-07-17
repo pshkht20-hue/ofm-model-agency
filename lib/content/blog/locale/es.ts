@@ -1371,7 +1371,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "ul",
         items: [
-          "Arranque sola y sin promoción: normalmente $100–200 el primer mes",
+          "Arranque sola y sin promoción: normalmente $300–700 el primer mes",
           "Primeros 1–3 meses de trabajo sistemático: $500–3.000",
           "$3.000–10.000: contenido constante + al menos 1–2 canales de tráfico",
           "$10.000–30.000+: chats fuertes, marketing y un nicho definido",
@@ -1390,7 +1390,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         rows: [
           [
             "Principiante sola, sin promoción",
-            "$100–200",
+            "$300–700",
             "La página existe pero no hay tráfico: alcance orgánico y publicaciones sueltas en redes",
           ],
           [
@@ -1492,7 +1492,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Sola y sin promoción — normalmente $100–200: la página existe, pero todavía no hay tráfico. Con trabajo sistemático y un equipo detrás, el corredor realista es de $500–3.000 en los primeros 1–3 meses. El crecimiento casi nunca es lineal, y ese arranque es normal.",
+        text: "Sola y sin promoción — normalmente $300–700: la página existe, pero todavía no hay tráfico. Con trabajo sistemático y un equipo detrás, el corredor realista es de $500–3.000 en los primeros 1–3 meses. El crecimiento casi nunca es lineal, y ese arranque es normal.",
       },
       {
         type: "h3",

@@ -17,6 +17,7 @@ import {
   getBlogPostLocales,
   type BlogPost,
 } from '@/lib/content/blog';
+import { SectionViewTracker } from '@/components/analytics/SectionViewTracker';
 import { BlogArticleLikeBar } from '@/components/seo/BlogArticleLikeBar';
 import { RelatedPosts } from '@/components/seo/RelatedPosts';
 import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
@@ -211,6 +212,12 @@ export default async function BlogPostPage({ params }: Props) {
       <BlogArticleLikeBar slug={post.slug} />
 
       <ArticleBody blocks={post.blocks} />
+      {/* Видели ли читатели программные мосты статьи (section_view в GA4);
+          в коротких статьях блоков нет — трекер просто не найдёт id. */}
+      <SectionViewTracker
+        sections={['article-inline-cta', 'article-calc-teaser']}
+        page="blog_article"
+      />
       <RelatedPosts slug={post.slug} locale={blogLocale} />
     </SeoPageShell>
   );
