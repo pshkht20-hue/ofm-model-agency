@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllBlogSlugs, getBlogPublishedAtMap } from '@/lib/content/blog/slugs';
 import { getBlogPostLocales } from '@/lib/content/blog';
+import { getVacancyPageSlugs, getVacancyDates } from '@/lib/content/vacancies';
 import {
   getResearchReportSlugs,
   getResearchReportLocales,
@@ -47,6 +48,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
+  }
+
+  // --- Vacancies section (hub + 4 role pages, all locales) ---
+  // Additive block mirroring the STATIC_ROUTES loop above. getVacancyPageSlugs()
+  // returns exactly the hasPage:true roles (chatter/model/manager/assistant);
+  // smm-onlyfans is a hub-only card and gets no URL here.
+  for (const locale of routing.locales) {
+    entries.push({
+      url: `${siteUrl}${pathForLocale('/vacancies', locale as Locale)}`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+      alternates: { languages: hreflangAlternates(siteUrl, '/vacancies') },
+    });
+
+    for (const slug of getVacancyPageSlugs()) {
+      const path = `/vacancies/${slug}`;
+      entries.push({
+        url: `${siteUrl}${pathForLocale(path, locale as Locale)}`,
+        lastModified: new Date(getVacancyDates(slug).dateModified),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+        alternates: { languages: hreflangAlternates(siteUrl, path) },
+      });
+    }
   }
 
   for (const slug of slugs) {

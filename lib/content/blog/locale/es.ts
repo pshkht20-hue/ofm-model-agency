@@ -1362,7 +1362,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
     blocks: [
       {
         type: "p",
-        text: "Los titulares de «$100k al mes» venden cursos, pero la mediana real del mercado es mucho más modesta. Un análisis honesto te evita la decepción y te ayuda a trazar un plan que de verdad funcione.",
+        text: "Los titulares de «cifras astronómicas al mes» venden cursos, pero la mediana real del mercado es mucho más modesta. Un análisis honesto te evita la decepción y te ayuda a trazar un plan que de verdad funcione.",
       },
       {
         type: "h2",

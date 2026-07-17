@@ -7,6 +7,7 @@
     "results": "Результати",
     "blog": "Блог",
     "faq": "FAQ",
+    "careers": "Вакансії",
     "apply": "Подати заявку",
     "becomeModel": "Стати моделлю",
     "navigation": "Навігація",
@@ -343,7 +344,9 @@
       "support": "Підтримка 24/7",
       "telegramAlt": "Не хочеш заповнювати форму?",
       "telegramCta": "Написати в Telegram",
-      "whatsappCta": "Написати у WhatsApp"
+      "whatsappCta": "Написати у WhatsApp",
+      "careersLead": "Шукаєш роботу в команді агентства?",
+      "careersLink": "Відкриті вакансії"
     }
   },
   "reviews": {

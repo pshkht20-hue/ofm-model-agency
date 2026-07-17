@@ -6,6 +6,7 @@ import { Shield, Heart, Zap } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { TelegramCta } from '@/components/TelegramCta';
+import { Link } from '@/i18n/navigation';
 import { Navbar } from '@/components/Navbar';
 import { CreatorFeatureMarquee } from '@/components/CreatorTheme';
 import { HeroSection } from '@/components/hero/HeroSection';
@@ -188,6 +189,17 @@ export function HomePage() {
               <TelegramCta location="contact_primary" label={t('contact.telegramCta')} />
               <WhatsAppCta label={t('contact.whatsappCta')} />
             </div>
+
+            <p className="mt-6 text-sm text-white/40">
+              {t('contact.careersLead')}{' '}
+              <Link
+                href="/vacancies"
+                prefetch={false}
+                className="text-accent-pink/90 underline decoration-accent-pink/30 underline-offset-4 transition-colors hover:text-accent-pink hover:decoration-accent-pink"
+              >
+                {t('contact.careersLink')}
+              </Link>
+            </p>
 
             {reduced ? (
               <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-10 text-xs tracking-[0.15em] uppercase text-white/40">

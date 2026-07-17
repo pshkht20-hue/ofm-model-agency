@@ -7,6 +7,7 @@
     "results": "Results",
     "blog": "Blog",
     "faq": "FAQ",
+    "careers": "Careers",
     "apply": "Apply",
     "becomeModel": "Become a model",
     "navigation": "Menu",
@@ -343,7 +344,9 @@
       "support": "24/7 support",
       "telegramAlt": "Prefer not to fill out the form?",
       "telegramCta": "Message us on Telegram",
-      "whatsappCta": "Message us on WhatsApp"
+      "whatsappCta": "Message us on WhatsApp",
+      "careersLead": "Looking to join the agency team?",
+      "careersLink": "Open positions"
     }
   },
   "reviews": {

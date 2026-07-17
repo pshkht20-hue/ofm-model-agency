@@ -37,6 +37,7 @@ export function Navbar() {
     { href: '/#results' as const, label: t('results') },
     { href: '/blog' as const, label: t('blog'), prefetch: false },
     { href: '/faq' as const, label: t('faq'), prefetch: false },
+    { href: '/vacancies' as const, label: t('careers'), prefetch: false },
   ];
 
   useEffect(() => {

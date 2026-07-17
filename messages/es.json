@@ -7,6 +7,7 @@
     "results": "Resultados",
     "blog": "Blog",
     "faq": "FAQ",
+    "careers": "Vacantes",
     "apply": "Solicitud",
     "becomeModel": "Ser modelo",
     "navigation": "Menú",
@@ -343,7 +344,9 @@
       "support": "Soporte 24/7",
       "telegramAlt": "¿Prefieres no rellenar el formulario?",
       "telegramCta": "Escríbenos por Telegram",
-      "whatsappCta": "Escríbenos por WhatsApp"
+      "whatsappCta": "Escríbenos por WhatsApp",
+      "careersLead": "¿Buscas trabajo en el equipo de la agencia?",
+      "careersLink": "Vacantes abiertas"
     }
   },
   "reviews": {

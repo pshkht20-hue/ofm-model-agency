@@ -29,7 +29,6 @@ const APPLICANT_COUNTRIES = [
   'Poland',
   'Germany',
   'Spain',
-  'Kazakhstan',
   'United States',
   'United Kingdom',
   'Canada',

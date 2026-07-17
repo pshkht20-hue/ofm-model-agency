@@ -1363,7 +1363,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     blocks: [
       {
         type: "p",
-        text: '"$100k a month" headlines sell courses, but the real market median is far more modest. An honest breakdown keeps you from burning out on disappointment and helps you build a plan that actually holds.',
+        text: '"Sky-high numbers a month" headlines sell courses, but the real market median is far more modest. An honest breakdown keeps you from burning out on disappointment and helps you build a plan that actually holds.',
       },
       {
         type: "h2",

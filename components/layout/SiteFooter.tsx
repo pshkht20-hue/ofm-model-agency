@@ -29,6 +29,7 @@ export function SiteFooter() {
   const RESOURCES = [
     { href: '/faq' as const, label: tNav('faq') },
     { href: '/blog' as const, label: tNav('blog') },
+    { href: '/vacancies' as const, label: tNav('careers') },
     {
       href: '/blog/rabota-modelyu-onlyfans' as const,
       label: t('vacancy'),

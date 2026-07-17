@@ -40,9 +40,10 @@ export const VACANCIES: Record<VacancySlug, VacancyRecord> = {
     jobLocationType: 'TELECOMMUTE',
     applicantCountries: APPLICANT_COUNTRIES,
     cities: ['kyiv', 'kharkiv', 'lviv', 'dnipro', 'odesa'],
-    // Консервативный коридор по прецеденту /join (JoinJobPostingJsonLd):
-    // оценочная вилка gross-баланса страницы для schema.org baseSalary (не дословно из текста вакансии).
-    salary: { currency: 'USD', minValue: 1500, maxValue: 15000, unitText: 'MONTH' },
+    // baseSalary НЕ публикуем: доход модели — процент от gross-баланса, а не
+    // фиксированная ставка. Any fixed range in structured data не совпал бы с
+    // видимым «% от баланса» → Google подавил бы JobPosting rich-result именно
+    // на этой (главной для найма) странице. Без baseSalary разметка валидна.
     applyKind: 'joinForm',
   },
   'manager-onlyfans': {
