@@ -117,6 +117,13 @@ export type ModelGeoUi = {
   perMonth: string;
   /** «20–30% от gross-баланса · реинвест в рост». */
   reinvestNote: string;
+  /**
+   * Компактные pill-чипы быстрых атрибутов (без опыта · удалённо · гибкий
+   * график · выплаты · девушкам 18–35) для строки чипов в hero. Общие для всех
+   * стран (страна-агностичны), поэтому живут в UI, а не в per-country content.
+   * Только видимый слой — в JSON-LD не идут.
+   */
+  chips: string[];
   /** Дисклеймер под плашкой дохода. */
   incomeDisclaimer: string;
   citiesHeading: string;
@@ -130,6 +137,14 @@ export type ModelGeoUi = {
   locationLabel: string;
   postedLabel: string;
   validThroughLabel: string;
+  /** «Активна до» — бейдж актуальности рядом с validThrough. */
+  activeUntilLabel: string;
+  /** «Обновлено» — префикс даты в блоке работодателя. */
+  updatedLabel: string;
+  /** «Прямой работодатель · агентство OFM» — трест-строка блока работодателя. */
+  directEmployer: string;
+  /** «Работа моделью по странам» — заголовок нижнего гео-кластера перелинковки. */
+  geoClusterHeading: string;
   openBadge: string;
   detailsCta: string;
   /** «Работа моделью» — формат карточки страны на хабе. */

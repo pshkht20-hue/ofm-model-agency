@@ -17,6 +17,9 @@ export const VACANCY_UI_ES: VacancyUi = {
   postedLabel: 'Publicado',
   updatedLabel: 'Actualizado',
   validThroughLabel: 'Recepción de candidaturas hasta',
+  activeUntilLabel: 'Activa hasta',
+  directEmployer: 'Empleador directo · agencia OFM',
+  geoClusterHeading: 'Trabajo de modelo por país',
   salaryLabel: 'Pago',
   formatLabel: 'Formato',
   locationLabel: 'Ubicación',
@@ -176,6 +179,14 @@ const CHATTER_ES: VacancyContent = {
   cardSummary:
     'Mensajería con los suscriptores de las páginas de modelos con guiones listos y venta de PPV. Formación desde cero, inglés desde B1, también para hombres.',
   salaryLabel: 'Tarifa base + % de las ventas del chat',
+  chips: [
+    'Formación desde cero',
+    'En remoto',
+    'Turnos flexibles',
+    'Tarifa base + % de ventas',
+    'Inglés desde B1',
+    'Hombres bienvenidos',
+  ],
   formatLabel: 'Remoto · turnos · desde 25 h/sem',
   locationLabel: 'Remoto · Europa, EE. UU., Canadá y todo el mundo',
   intro: [

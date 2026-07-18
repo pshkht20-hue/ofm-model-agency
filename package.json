@@ -21,7 +21,8 @@
     "blog:covers": "node scripts/download-blog-covers.mjs",
     "guardrails": "node scripts/ofm-guardrails.mjs",
     "seo:positions": "node scripts/seo-positions.mjs",
-    "seo:alerts": "node scripts/seo-alerts.mjs"
+    "seo:alerts": "node scripts/seo-alerts.mjs",
+    "rotate:vacancies": "node scripts/rotate-vacancies.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

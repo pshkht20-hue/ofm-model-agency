@@ -15,6 +15,9 @@ export const VACANCY_UI_UK: VacancyUi = {
   postedLabel: 'Опубліковано',
   updatedLabel: 'Оновлено',
   validThroughLabel: 'Прийом відгуків до',
+  activeUntilLabel: 'Активна до',
+  directEmployer: 'Прямий роботодавець · агенція OFM',
+  geoClusterHeading: 'Робота моделлю за країнами',
   salaryLabel: 'Оплата',
   formatLabel: 'Формат',
   locationLabel: 'Географія',
@@ -172,6 +175,14 @@ const CHATTER_UK: VacancyContent = {
   cardSummary:
     'Листування з підписниками сторінок моделей за готовими скриптами та продажі PPV. Навчання з нуля, англійська від B1, підходить і чоловікам.',
   salaryLabel: 'Ставка + % із продажів чату',
+  chips: [
+    'Навчаємо з нуля',
+    'Віддалено',
+    'Гнучкий графік · зміни',
+    'Ставка + % із продажів',
+    'Англійська від B1',
+    'Можна чоловікам',
+  ],
   formatLabel: 'Віддалено · зміни · від 25 год/тиж',
   locationLabel: 'Віддалено · Україна, Європа та весь світ',
   intro: [

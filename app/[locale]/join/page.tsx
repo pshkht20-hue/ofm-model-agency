@@ -11,6 +11,7 @@ import type { Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
 import { getSiteUrl, siteConfig } from '@/lib/site';
 import { pathForLocale } from '@/lib/i18n/paths';
+import { htmlParagraphs, htmlList } from '@/lib/seo/job-posting-html';
 import { JoinApplyCta } from './JoinApplyCta';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -51,35 +52,48 @@ function JoinJobPostingJsonLd({ locale }: { locale: Locale }) {
     '@context': 'https://schema.org',
     '@type': 'JobPosting',
     title: content.jobPosting.title,
-    description: content.jobPosting.description,
+    // Полное HTML-описание: видимый job-абзац + видимый список требований
+    // (18+, смартфон, 2–3 ч/день, опыт не нужен) — совпадает с телом страницы.
+    description:
+      htmlParagraphs([content.jobPosting.description]) +
+      htmlList(content.requirements.items.map((item) => item.title)),
+    // Стабильный ID вакансии (анти-fake-reposting при ротации дат).
+    identifier: {
+      '@type': 'PropertyValue',
+      name: siteConfig.name,
+      value: 'join',
+    },
     datePosted: '2026-07-04',
     validThrough: '2026-12-31',
     employmentType: 'CONTRACTOR',
     inLanguage: HTML_LANG[locale],
-    hiringOrganization: {
-      '@type': 'Organization',
-      name: siteConfig.name,
-      sameAs: siteUrl,
-      logo: `${siteUrl}/icon.svg`,
-    },
+    // Ссылка на богатую глобальную Organization (@id #organization из JsonLd в
+    // layout) вместо дубль-заглушки — наследуем «верифицированного работодателя».
+    hiringOrganization: { '@id': `${siteUrl}/#organization` },
     jobLocationType: 'TELECOMMUTE',
     applicantLocationRequirements: APPLICANT_COUNTRIES.map((name) => ({
       '@type': 'Country',
       name,
     })),
-    baseSalary: {
-      '@type': 'MonetaryAmount',
-      currency: 'USD',
-      value: {
-        '@type': 'QuantitativeValue',
-        minValue: 1500,
-        maxValue: 15000,
-        unitText: 'MONTH',
-      },
+    // «Опыт не нужен» — видимо в блоке требований и FAQ страницы.
+    experienceRequirements: {
+      '@type': 'OccupationalExperienceRequirements',
+      monthsOfExperience: 0,
     },
+    experienceInPlaceOfEducation: true,
+    educationRequirements: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'high school',
+    },
+    jobImmediateStart: true,
+    // baseSalary СОЗНАТЕЛЬНО опущен: видимые на странице цифры ($1,500–5,000 и
+    // $15,000–50,000) — это gross-баланс страницы (оборот), а НЕ оклад модели
+    // (прямо сказано в дисклеймере). Маркировать оборот как baseSalary =
+    // misrepresentation → ручная санкция Google. Warning в GSC допустим (как у
+    // чатера); доход модели публикуется на гео-страницах ($500–8000 = baseSalary).
     directApply: true,
     industry: 'Creator economy / online content',
-    occupationalCategory: 'Online content creator',
+    occupationalCategory: '27-2099.00 Online content creator',
     url: `${getSiteUrl()}${pathForLocale('/join', locale)}`,
   };
 

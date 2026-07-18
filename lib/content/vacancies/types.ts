@@ -105,6 +105,13 @@ export type VacancyContent = {
   cardSummary: string;
   /** Вилка/схема оплаты для карточки и сводки-плашки. */
   salaryLabel: string;
+  /**
+   * Компактные pill-чипы быстрых атрибутов вакансии (без опыта · удалённо ·
+   * гибкий график …) для строки чипов в hero. Приём Layboard/girlswork.
+   * Только видимый слой (в JSON-LD не идут) — текст обязан быть правдивым и
+   * согласованным с телом страницы.
+   */
+  chips: string[];
   /** Формат работы («Удалённо · смены · от 25 ч/нед»). */
   formatLabel: string;
   /** Гео-строка карточки. */
@@ -157,6 +164,12 @@ export type VacancyUi = {
   postedLabel: string;
   updatedLabel: string;
   validThroughLabel: string;
+  /** «Активна до» — бейдж актуальности рядом с validThrough. */
+  activeUntilLabel: string;
+  /** «Прямой работодатель · агентство OFM» — трест-строка блока работодателя. */
+  directEmployer: string;
+  /** «Работа моделью по странам» — заголовок нижнего гео-кластера перелинковки. */
+  geoClusterHeading: string;
   salaryLabel: string;
   formatLabel: string;
   locationLabel: string;

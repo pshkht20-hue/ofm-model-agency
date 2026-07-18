@@ -222,23 +222,26 @@ export function JobPostingJsonLd({
     '@type': 'JobPosting',
     title,
     description: post.description,
+    // Стабильный ID вакансии (анти-fake-reposting при ротации дат).
+    identifier: {
+      '@type': 'PropertyValue',
+      name: siteConfig.name,
+      value: `vac-${post.slug}`,
+    },
     datePosted,
     validThrough,
     employmentType: 'CONTRACTOR',
     inLanguage: HTML_LANG[locale],
-    hiringOrganization: {
-      '@type': 'Organization',
-      name: siteConfig.name,
-      sameAs: siteUrl,
-      logo: `${siteUrl}/icon.svg`,
-    },
+    // Ссылка на богатую глобальную Organization (@id #organization из JsonLd в
+    // layout) вместо дубль-заглушки — наследуем «верифицированного работодателя».
+    hiringOrganization: { '@id': `${siteUrl}/#organization` },
     jobLocationType: 'TELECOMMUTE',
     applicantLocationRequirements: applicantCountries.map((name) => ({
       '@type': 'Country',
       name,
     })),
     industry: 'Creator economy / online content',
-    occupationalCategory: 'Online content creator',
+    occupationalCategory: '27-2099.00 Online content creator',
     url: `${siteUrl}${canonicalPath}`,
   };
 

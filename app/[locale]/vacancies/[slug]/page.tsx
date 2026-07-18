@@ -7,10 +7,15 @@ import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { TelegramCta } from '@/components/TelegramCta';
 import { FaqAccordion } from '@/components/seo/FaqAccordion';
 import { FaqPageJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
+import { VacancyChips } from '@/components/seo/VacancyChips';
+import { VacancyEmployerBadge } from '@/components/seo/VacancyEmployerBadge';
+import { VacancyGeoCluster } from '@/components/seo/VacancyGeoCluster';
+import { StickyApplyBar } from '@/components/seo/StickyApplyBar';
 import { routing, type Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
-import { getSiteUrl } from '@/lib/site';
+import { getSiteUrl, siteConfig } from '@/lib/site';
 import { pathForLocale } from '@/lib/i18n/paths';
+import { htmlParagraphs, htmlList, htmlHeading } from '@/lib/seo/job-posting-html';
 import {
   getVacancyContent,
   getVacancyDates,
@@ -31,9 +36,6 @@ const HTML_LANG: Record<Locale, string> = {
   en: 'en-US',
   es: 'es-ES',
 };
-
-/** hiringOrganization для JobPosting (публичный бренд агентства). */
-const HIRING_ORG_NAME = 'OFM Model Agency';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -75,29 +77,61 @@ function VacancyJobPostingJsonLd({
   const ui = getVacancyUi(locale);
   const dates = getVacancyDates(record.slug);
 
+  // Полное HTML-описание из ВИДИМОГО тела страницы (интро + все секции с
+  // заголовками/абзацами/буллетами) — Google рекомендует description в HTML.
+  const description =
+    htmlParagraphs(content.intro) +
+    content.sections
+      .map((section) =>
+        [
+          htmlHeading(section.heading),
+          section.paragraphs ? htmlParagraphs(section.paragraphs) : '',
+          section.bullets ? htmlList(section.bullets) : '',
+          section.outro ? htmlParagraphs(section.outro) : '',
+        ].join(''),
+      )
+      .join('');
+
   const data: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'JobPosting',
     title: content.h1,
-    description: content.seoDescription,
+    description,
+    // Стабильный ID вакансии (анти-fake-reposting при ротации дат).
+    identifier: {
+      '@type': 'PropertyValue',
+      name: siteConfig.name,
+      value: `vac-${record.slug}`,
+    },
     datePosted: dates.datePosted,
     validThrough: dates.validThrough,
     employmentType: record.employmentType,
     inLanguage: HTML_LANG[locale],
-    hiringOrganization: {
-      '@type': 'Organization',
-      name: HIRING_ORG_NAME,
-      sameAs: siteUrl,
-      logo: `${siteUrl}/icon.svg`,
-    },
+    // Ссылка на богатую глобальную Organization (@id #organization из JsonLd в
+    // layout) вместо дубль-заглушки — наследуем «верифицированного работодателя».
+    hiringOrganization: { '@id': `${siteUrl}/#organization` },
     jobLocationType: record.jobLocationType,
     applicantLocationRequirements: record.applicantCountries.map((name) => ({
       '@type': 'Country',
       name,
     })),
+    // «Обучаем с нуля / старт без опыта» — видимо в интро и FAQ страницы чатера.
+    experienceRequirements: {
+      '@type': 'OccupationalExperienceRequirements',
+      monthsOfExperience: 0,
+    },
+    experienceInPlaceOfEducation: true,
+    educationRequirements: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'high school',
+    },
+    // Значения = видимым строкам плашки: формат работы и схема «ставка + %».
+    workHours: content.formatLabel,
+    incentiveCompensation: content.salaryLabel,
+    jobImmediateStart: true,
     directApply: true,
     industry: 'Creator economy / online content',
-    occupationalCategory: 'Online content creator',
+    occupationalCategory: '43-4051.00 Customer service representative',
     url: `${siteUrl}${pathForLocale(`/vacancies/${record.slug}`, locale)}`,
   };
 
@@ -167,7 +201,40 @@ export default async function VacancyPage({ params }: Props) {
 
       {/* Hero: eyebrow + H1 */}
       <p className="eyebrow-bright mb-4">{ui.eyebrow}</p>
-      <h1 className="heading-section text-[clamp(1.8rem,4.4vw,2.7rem)] mb-6">{content.h1}</h1>
+      <h1 className="heading-section text-[clamp(1.8rem,4.4vw,2.7rem)] mb-5">{content.h1}</h1>
+
+      {/* Hero-бейдж: формат оплаты чатера (= salaryLabel плашки, = incentiveCompensation) */}
+      <div className="mb-5 flex flex-wrap items-center gap-3">
+        <span className="inline-flex items-center rounded-full border border-accent-pink/30 bg-accent-pink/[0.1] px-5 py-2 font-serif text-lg md:text-xl text-white">
+          {content.salaryLabel}
+        </span>
+        <span className="inline-flex items-center rounded-full border border-accent-cyan/25 bg-accent-cyan/[0.06] px-3.5 py-1.5 text-xs font-medium text-accent-cyan">
+          {ui.activeUntilLabel} {dates.validThrough}
+        </span>
+      </div>
+
+      {/* Чипы-атрибуты (обучаем с нуля · удалённо · ставка + % · английский от B1) */}
+      <VacancyChips items={content.chips} className="mb-6" />
+
+      {/* Верхняя вторичная CTA: тот же канал отклика, что внизу */}
+      <div className="mb-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+        {record.applyKind === 'joinForm' ? (
+          <Link href="/join" className="btn-primary inline-flex">
+            {content.cta.primaryLabel}
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        ) : (
+          <TelegramCta location="contact_primary" label={content.cta.primaryLabel} />
+        )}
+      </div>
+
+      {/* Блок «Работодатель»: логотип OFM + прямой работодатель + обновлено */}
+      <VacancyEmployerBadge
+        directEmployerLabel={ui.directEmployer}
+        updatedLabel={ui.updatedLabel}
+        updatedDate={dates.datePosted}
+        className="mb-10"
+      />
 
       {/* Сводка-плашка: видимая дата = datePosted в JSON-LD (требование Google) */}
       <div className={summaryCard}>
@@ -264,6 +331,9 @@ export default async function VacancyPage({ params }: Props) {
         <FaqAccordion categories={[{ title: content.faqHeading, items: content.faq }]} />
       </div>
 
+      {/* Нижний гео-кластер перелинковки: «Работа моделью по странам» (BOFU) */}
+      <VacancyGeoCluster locale={loc} heading={ui.geoClusterHeading} className="mt-16" />
+
       {/* CTA-заявка: joinForm → анкета /join; telegram → прямой контакт */}
       <div className="mt-14 p-8 md:p-10 rounded-2xl border border-white/[0.08] bg-white/[0.02] text-center">
         <h2 className="font-serif text-2xl md:text-3xl text-white mb-4">{content.cta.heading}</h2>
@@ -282,6 +352,12 @@ export default async function VacancyPage({ params }: Props) {
           </p>
         )}
       </div>
+
+      {/* Мобильный липкий apply-bar → тот же канал отклика, что у CTA */}
+      <StickyApplyBar
+        label={content.cta.primaryLabel}
+        variant={record.applyKind === 'joinForm' ? 'route' : 'telegram'}
+      />
     </SeoPageShell>
   );
 }

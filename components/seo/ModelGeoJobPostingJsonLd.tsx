@@ -1,8 +1,10 @@
-import { getSiteUrl } from '@/lib/site';
+import { getSiteUrl, siteConfig } from '@/lib/site';
 import { pathForLocale } from '@/lib/i18n/paths';
+import { htmlParagraphs } from '@/lib/seo/job-posting-html';
 import type { Locale } from '@/i18n/routing';
 import {
   getModelGeoDates,
+  getModelGeoUi,
   slugToCountryName,
   type ModelGeoContent,
   type ModelGeoCountry,
@@ -14,9 +16,6 @@ const HTML_LANG: Record<Locale, string> = {
   en: 'en-US',
   es: 'es-ES',
 };
-
-/** hiringOrganization для JobPosting (публичный бренд агентства). */
-const HIRING_ORG_NAME = 'OFM Model Agency';
 
 /**
  * JobPosting для страницы страны /vacancies/model/[country] — форк
@@ -39,30 +38,58 @@ export function ModelGeoJobPostingJsonLd({
 }) {
   const siteUrl = getSiteUrl();
   const dates = getModelGeoDates(record.slug);
+  const ui = getModelGeoUi(locale);
 
   const data = {
     '@context': 'https://schema.org',
     '@type': 'JobPosting',
     title: content.title,
-    description: content.description,
+    // Полное HTML-описание из ВИДИМЫХ секций страницы (интро/рынок/выплаты/
+    // заработок) — Google рекомендует description в HTML; текст совпадает с телом.
+    description: htmlParagraphs([
+      content.introHtml,
+      content.marketContext,
+      content.paymentsNote,
+      content.earningsNarrative,
+    ]),
+    // Стабильный ID вакансии (анти-fake-reposting при ротации дат).
+    identifier: {
+      '@type': 'PropertyValue',
+      name: siteConfig.name,
+      value: `model-${record.slug}`,
+    },
     datePosted: dates.datePosted,
     validThrough: dates.validThrough,
     employmentType: 'CONTRACTOR',
     inLanguage: HTML_LANG[locale],
-    hiringOrganization: {
-      '@type': 'Organization',
-      name: HIRING_ORG_NAME,
-      sameAs: siteUrl,
-      logo: `${siteUrl}/icon.svg`,
-    },
+    // Ссылка на богатую глобальную Organization (@id #organization из JsonLd в
+    // layout: sameAs Wikidata/Crunchbase/Trustpilot, logo, foundingDate) —
+    // Google наследует «верифицированного работодателя» вместо дубль-заглушки.
+    hiringOrganization: { '@id': `${siteUrl}/#organization` },
     jobLocationType: 'TELECOMMUTE',
     applicantLocationRequirements: {
       '@type': 'Country',
       name: slugToCountryName(record.slug),
     },
+    // «Опыт не нужен» — видимо в description/плашке: 0 месяцев опыта, опыт
+    // заменяет образование, порог образования — среднее (фактически без порога).
+    experienceRequirements: {
+      '@type': 'OccupationalExperienceRequirements',
+      monthsOfExperience: 0,
+    },
+    experienceInPlaceOfEducation: true,
+    educationRequirements: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'high school',
+    },
+    // Значения = видимым строкам плашки дохода/формата (reinvestNote, formatValue).
+    jobBenefits: ui.reinvestNote,
+    incentiveCompensation: ui.reinvestNote,
+    workHours: ui.formatValue,
+    jobImmediateStart: true,
     directApply: true,
     industry: 'Creator economy / online content',
-    occupationalCategory: 'Online content creator',
+    occupationalCategory: '27-2099.00 Online content creator',
     baseSalary: {
       '@type': 'MonetaryAmount',
       currency: 'USD',

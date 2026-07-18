@@ -8,6 +8,10 @@ import { TelegramCta } from '@/components/TelegramCta';
 import { FaqAccordion } from '@/components/seo/FaqAccordion';
 import { FaqPageJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import { ModelGeoJobPostingJsonLd } from '@/components/seo/ModelGeoJobPostingJsonLd';
+import { VacancyChips } from '@/components/seo/VacancyChips';
+import { VacancyEmployerBadge } from '@/components/seo/VacancyEmployerBadge';
+import { VacancyGeoCluster } from '@/components/seo/VacancyGeoCluster';
+import { StickyApplyBar } from '@/components/seo/StickyApplyBar';
 import { routing, type Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
 import {
@@ -99,7 +103,38 @@ export default async function ModelGeoCountryPage({ params }: Props) {
 
       {/* Hero: eyebrow + H1 */}
       <p className="eyebrow-bright mb-4">{ui.eyebrow}</p>
-      <h1 className="heading-section text-[clamp(1.8rem,4.4vw,2.7rem)] mb-6">{content.title}</h1>
+      <h1 className="heading-section text-[clamp(1.8rem,4.4vw,2.7rem)] mb-5">{content.title}</h1>
+
+      {/* Hero салари-бейдж: крупный pill = видимой зарплате = baseSalary в JSON-LD */}
+      <div className="mb-5 flex flex-wrap items-center gap-3">
+        <span className="inline-flex items-baseline gap-1 rounded-full border border-accent-pink/30 bg-accent-pink/[0.1] px-5 py-2 font-serif text-xl md:text-2xl text-white">
+          {usdRange}
+          <span className="text-sm font-sans text-white/65">{ui.perMonth}</span>
+        </span>
+        <span className="inline-flex items-center rounded-full border border-accent-cyan/25 bg-accent-cyan/[0.06] px-3.5 py-1.5 text-xs font-medium text-accent-cyan">
+          {ui.activeUntilLabel} {dates.validThrough}
+        </span>
+      </div>
+
+      {/* Чипы-атрибуты (без опыта · удалённо · выплаты · девушкам 18–35) */}
+      <VacancyChips items={ui.chips} className="mb-6" />
+
+      {/* Верхняя вторичная CTA: анкета + прямой Telegram */}
+      <div className="mb-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+        <Link href="/join" className="btn-primary inline-flex">
+          {ui.applyButton}
+          <ArrowRight className="w-5 h-5" />
+        </Link>
+        <TelegramCta location="contact_primary" label={ui.telegramLabel} variant="inline" />
+      </div>
+
+      {/* Блок «Работодатель»: логотип OFM + прямой работодатель + обновлено */}
+      <VacancyEmployerBadge
+        directEmployerLabel={ui.directEmployer}
+        updatedLabel={ui.updatedLabel}
+        updatedDate={dates.datePosted}
+        className="mb-10"
+      />
 
       {/* Видимая плашка дохода: $500–8000/мес = baseSalary в JSON-LD (требование Google) */}
       <div className={summaryCard}>
@@ -173,6 +208,14 @@ export default async function ModelGeoCountryPage({ params }: Props) {
         <FaqAccordion categories={[{ title: ui.faqHeading, items: faqItems }]} />
       </div>
 
+      {/* Нижний гео-кластер перелинковки: другие страны (усиливает BOFU) */}
+      <VacancyGeoCluster
+        locale={loc}
+        heading={ui.geoClusterHeading}
+        excludeSlug={country}
+        className="mt-16"
+      />
+
       {/* CTA → анкета /join + прямой Telegram */}
       <div className="mt-14 p-8 md:p-10 rounded-2xl border border-white/[0.08] bg-white/[0.02] text-center">
         <h2 className="font-serif text-2xl md:text-3xl text-white mb-4">{ui.applyHeading}</h2>
@@ -185,6 +228,9 @@ export default async function ModelGeoCountryPage({ params }: Props) {
           <TelegramCta location="contact_primary" label={ui.telegramLabel} variant="inline" />
         </div>
       </div>
+
+      {/* Мобильный липкий apply-bar → анкета /join */}
+      <StickyApplyBar href="/join" label={ui.applyButton} />
     </SeoPageShell>
   );
 }

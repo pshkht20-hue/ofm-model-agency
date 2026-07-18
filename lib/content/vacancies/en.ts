@@ -17,6 +17,9 @@ export const VACANCY_UI_EN: VacancyUi = {
   postedLabel: 'Posted',
   updatedLabel: 'Updated',
   validThroughLabel: 'Applications open until',
+  activeUntilLabel: 'Active until',
+  directEmployer: 'Direct employer · OFM agency',
+  geoClusterHeading: 'Model work by country',
   salaryLabel: 'Pay',
   formatLabel: 'Format',
   locationLabel: 'Location',
@@ -176,6 +179,14 @@ const CHATTER_EN: VacancyContent = {
   cardSummary:
     'Messaging subscribers of model pages from ready scripts and selling PPV. Training from scratch, English from B1, men welcome too.',
   salaryLabel: 'Base rate + % of chat sales',
+  chips: [
+    'Training from scratch',
+    'Remote',
+    'Flexible shifts',
+    'Base rate + % of sales',
+    'English from B1',
+    'Men welcome',
+  ],
   formatLabel: 'Remote · shifts · from 25 h/week',
   locationLabel: 'Remote · Europe, US, Canada & worldwide',
   intro: [
