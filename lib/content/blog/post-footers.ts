@@ -116,6 +116,21 @@ export const LINK = {
     href: '/blog/chatter-onlyfans-kto-eto',
     label: 'Чаттер OnlyFans: кто ведёт переписку',
   },
+  /** Вакансия модели (гео Украина) — прямой мост из контент-кластера в раздел /vacancies */
+  vacancyModelUa: {
+    href: '/vacancies/model/ukraine',
+    label: 'Вакансия модели OnlyFans — Украина',
+  },
+  /** Вакансия оператора чата (чаттера) — роль-страница раздела /vacancies */
+  vacancyChatter: {
+    href: '/vacancies/chatter-onlyfans',
+    label: 'Вакансия оператора чата (чаттер)',
+  },
+  /** Хаб раздела вакансий — все открытые роли агентства */
+  vacanciesHub: {
+    href: '/vacancies',
+    label: 'Все открытые вакансии агентства',
+  },
   founder: {
     href: '/blog/kto-sozdal-onlyfans',
     label: 'Кто создал OnlyFans: история платформы',
