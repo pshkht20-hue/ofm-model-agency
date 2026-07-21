@@ -93,7 +93,7 @@ export default async function ResearchHubPage({ params }: Props) {
         <h2 className="font-serif text-lg text-white mb-2">{ui.pressHeading}</h2>
         <p className="text-body text-sm">
           {ui.pressBody}{' '}
-          <Link href="/#contact" className="text-accent-pink hover:text-accent-cyan transition-colors">
+          <Link href="/join" className="text-accent-pink hover:text-accent-cyan transition-colors">
             {ui.contactLabel}
           </Link>
           .

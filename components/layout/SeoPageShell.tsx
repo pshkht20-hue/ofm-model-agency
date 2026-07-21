@@ -43,14 +43,26 @@ const TELEGRAM_LABEL: Record<Locale, string> = {
 type SeoPageShellProps = {
   children: ReactNode;
   breadcrumbs?: Crumb[];
+  /** Финальный CTA-блок в конце страницы. */
   showCta?: boolean;
+  /** Куда ведёт финальный CTA. По умолчанию /join — готовая посадочная с анкетой. */
+  ctaHref?: string;
+  /**
+   * Куда ведёт мобильный sticky-бар. По умолчанию совпадает с ctaHref.
+   * Передай null, чтобы не показывать бар совсем; '#apply' — если анкета на этой же странице.
+   */
+  stickyHref?: string | null;
 };
 
 export function SeoPageShell({
   children,
   breadcrumbs,
   showCta = true,
+  ctaHref = '/join',
+  stickyHref,
 }: SeoPageShellProps) {
+  const stickyTarget =
+    stickyHref === undefined ? (showCta ? ctaHref : null) : stickyHref;
   const t = useTranslations('seoShell');
   const locale = useLocale() as Locale;
   const pathname = usePathname();
@@ -61,7 +73,7 @@ export function SeoPageShell({
       <NeonAmbience />
       <ScrollProgress />
       <Navbar />
-      {showCta && <StickyMobileCta href="/#contact" />}
+      {stickyTarget && <StickyMobileCta href={stickyTarget} />}
 
       <main className="pt-24 md:pt-28 pb-16 md:pb-20">
         <div className="max-w-3xl mx-auto px-5 md:px-8 w-full">
@@ -95,7 +107,7 @@ export function SeoPageShell({
               </motion.p>
               <motion.div variants={reduced ? undefined : staggerItem(16)}>
                 <Link
-                  href="/#contact"
+                  href={ctaHref}
                   className="btn-primary inline-flex"
                   onClick={() =>
                     trackCtaClick({ location: 'seo_shell', locale, page_path: pathname })

@@ -53,7 +53,7 @@ export default async function FaqPage({ params }: Props) {
       <p className="text-body mb-10">
         {t.rich('body', {
           contact: (chunks) => (
-            <Link href="/#contact" className="text-accent-pink hover:text-accent-cyan transition">
+            <Link href="/join" className="text-accent-pink hover:text-accent-cyan transition">
               {chunks}
             </Link>
           ),

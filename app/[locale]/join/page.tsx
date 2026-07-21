@@ -127,7 +127,11 @@ export default async function JoinPage({ params }: Props) {
   const card = 'rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6';
 
   return (
-    <SeoPageShell showCta={false} breadcrumbs={[{ label: content.breadcrumb }]}>
+    <SeoPageShell
+      showCta={false}
+      stickyHref="#apply"
+      breadcrumbs={[{ label: content.breadcrumb }]}
+    >
       <FaqPageJsonLd items={content.faq.items} />
       <JoinJobPostingJsonLd locale={joinLocale} />
       <BreadcrumbJsonLd

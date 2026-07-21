@@ -87,7 +87,7 @@ export default async function BlogIndexPage({ params }: Props) {
             </Link>
           ),
           apply: (chunks) => (
-            <Link href="/#contact" className="text-accent-pink hover:text-accent-cyan transition">
+            <Link href="/join" className="text-accent-pink hover:text-accent-cyan transition">
               {chunks}
             </Link>
           ),

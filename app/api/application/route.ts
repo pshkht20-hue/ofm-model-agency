@@ -168,7 +168,11 @@ export async function POST(request: Request) {
     recordSubmission(ip);
     await sendTelegramMessage(text);
 
-    void trackContactSubmitServer({
+    // await, а не void: на serverless инстанс замораживается сразу после ответа
+    // и fire-and-forget-запрос не успевает уйти — так терялось ~35% серверных
+    // событий (client contact_submit 20 vs server 13). Внутри стоит try/catch
+    // и таймаут 2.5 с, поэтому заявку это сломать не может.
+    await trackContactSubmitServer({
       locale,
       has_calc_prefill: body.hasCalcPrefill === true,
       ...(geo?.countryCode ? { country: geo.countryCode } : {}),

@@ -26,7 +26,7 @@ export function ArticleInlineCta() {
       <p className="font-serif text-xl md:text-2xl text-white mb-3">{t('inline.title')}</p>
       <p className="text-body text-sm mb-6 max-w-lg mx-auto">{t('inline.body')}</p>
       <Link
-        href="/#contact"
+        href="/join"
         className="btn-primary inline-flex w-full min-h-12 sm:w-auto"
         onClick={() =>
           trackCtaClick({ location: 'article_inline', locale, page_path: pathname })

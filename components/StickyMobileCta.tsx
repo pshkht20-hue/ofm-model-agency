@@ -18,6 +18,7 @@ export function StickyMobileCta({ href = '#contact' }: StickyMobileCtaProps) {
   const locale = useLocale();
   const reduced = useReducedMotion();
   const [visible, setVisible] = useState(false);
+  const [formInView, setFormInView] = useState(false);
   const isRoute = href.startsWith('/');
 
   useEffect(() => {
@@ -27,9 +28,55 @@ export function StickyMobileCta({ href = '#contact' }: StickyMobileCtaProps) {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  /**
+   * Пока форма заявки на экране, бар прячем: он fixed bottom-0 и перекрывал
+   * кнопку отправки, блок ошибки и текст согласия (мобайл — 74% трафика).
+   * Форма на главной приезжает через next/dynamic, поэтому ждём её появления.
+   */
+  useEffect(() => {
+    let io: IntersectionObserver | null = null;
+    let mo: MutationObserver | null = null;
+
+    const attach = () => {
+      if (io) return true;
+      const form = document.getElementById('contact-form');
+      if (!form) return false;
+      io = new IntersectionObserver(
+        ([entry]) => setFormInView(entry.isIntersecting),
+        { rootMargin: '0px 0px -15% 0px' },
+      );
+      io.observe(form);
+      return true;
+    };
+
+    let stopWaiting: ReturnType<typeof setTimeout> | undefined;
+
+    if (!attach()) {
+      mo = new MutationObserver(() => {
+        if (attach()) {
+          mo?.disconnect();
+          mo = null;
+        }
+      });
+      mo.observe(document.body, { childList: true, subtree: true });
+      // На страницах без формы (блог, SEO) ждать бесконечно нельзя: наблюдатель
+      // реагировал бы на каждую мутацию DOM. Форма приезжает за пару секунд.
+      stopWaiting = setTimeout(() => {
+        mo?.disconnect();
+        mo = null;
+      }, 10000);
+    }
+
+    return () => {
+      clearTimeout(stopWaiting);
+      io?.disconnect();
+      mo?.disconnect();
+    };
+  }, []);
+
   return (
     <AnimatePresence>
-      {visible && (
+      {visible && !formInView && (
         <motion.div
           initial={reduced ? { opacity: 1 } : { y: 80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

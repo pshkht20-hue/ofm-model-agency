@@ -27,6 +27,9 @@ export async function trackServerEvent(
           client_id: clientId,
           events: [{ name: eventName, params }],
         }),
+        // Вызывающий код ждёт этот запрос (иначе serverless-инстанс замерзает
+        // раньше, чем событие уйдёт). Потолок, чтобы аналитика не тормозила ответ.
+        signal: AbortSignal.timeout(2500),
       },
     );
   } catch {
