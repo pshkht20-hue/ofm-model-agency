@@ -6,11 +6,16 @@ export const routing = defineRouting({
   defaultLocale: 'ru',
   localePrefix: 'as-needed',
   /**
-   * Автоязык: Accept-Language браузера/ОС → ru | uk | en | es.
+   * ВЫКЛЮЧЕНО 24.07.2026 — явное разрешение владельца (фикс каннибализации RU↔UK).
+   * Авто-редирект уводил украинок с uk-браузером с ru-страниц, показанных Google,
+   * на /uk/* → Google подменял ru-URL украинскими в русской выдаче; en/es-браузеры
+   * попадали в 404 на непереведённых статьях. Региональные hreflang ru-UA/uk-UA
+   * добавлены той же правкой в lib/i18n/paths.ts.
+   * Прежнее поведение: Автоязык Accept-Language браузера/ОС → ru | uk | en | es.
    * После ручного переключения сохраняется cookie NEXT_LOCALE.
    * pt/ro и др. → см. i18n/browser-locale.ts
    */
-  localeDetection: true,
+  localeDetection: false,
 });
 
 export type Locale = (typeof routing.locales)[number];

@@ -21,6 +21,16 @@ export function hreflangAlternates(
   for (const locale of locales) {
     entries[locale] = `${siteUrl}${pathForLocale(path, locale)}`;
   }
+  // Региональные уточнения для двуязычной Украины (добавлено 24.07.2026):
+  // рынок №1 двуязычен — значительная часть ЦА ищет по-русски с uk-локалью.
+  // ru-UA явно говорит Google «русскоязычному в Украине — русская версия»,
+  // иначе голый uk трактуется как дефолт для всей страны.
+  if (locales.includes('ru')) {
+    entries['ru-UA'] = `${siteUrl}${pathForLocale(path, 'ru')}`;
+  }
+  if (locales.includes('uk')) {
+    entries['uk-UA'] = `${siteUrl}${pathForLocale(path, 'uk')}`;
+  }
   // x-default → default locale (ru base is always available)
   entries['x-default'] = `${siteUrl}${pathForLocale(path, routing.defaultLocale)}`;
   return entries;
