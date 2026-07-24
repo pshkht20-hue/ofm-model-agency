@@ -47,6 +47,14 @@ export type JoinContent = {
     paragraphs: string[];
     disclaimer: string;
   };
+  /** BOFU-блок «что такое OnlyFans-агентство» (запрос ~770/мес KD0, C1.4).
+   * Определение — первым предложением (правило AI Overview). */
+  about?: {
+    heading: string;
+    paragraphs: string[];
+    /** Внутренние ссылки под блоком (пиллар «что делает агентство», «как выбрать»). */
+    links?: { label: string; href: string }[];
+  };
   faq: {
     heading: string;
     items: JoinFaqItem[];

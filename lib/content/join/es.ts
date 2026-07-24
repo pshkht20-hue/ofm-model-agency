@@ -90,6 +90,18 @@ export const JOIN_ES: JoinContent = {
     disclaimer:
       'Todas las cifras son el balance bruto total de la página (facturación antes de comisiones de la plataforma y repartos), no el ingreso neto de la modelo. El resultado depende de la constancia del contenido y del trabajo con el equipo.',
   },
+  about: {
+    heading: 'Qué es una agencia de OnlyFans y por qué trabajar con una',
+    paragraphs: [
+      'Una agencia de OnlyFans es un equipo que gestiona la página de la modelo de principio a fin: registro y verificación, estrategia de contenido, promoción y tráfico, chats con suscriptores y finanzas. La modelo solo graba contenido siguiendo un plan listo — del resto se encargan especialistas.',
+      'La diferencia con ir por tu cuenta está en la velocidad de crecimiento. La agencia invierte sus propios recursos en la página: publicidad, gestores de tráfico y un equipo de chat que habla con la audiencia en inglés 24/7 y cierra la mayoría de las ventas por mensajes. Por eso las páginas gestionadas suelen crecer bastante más rápido que las que van solas.',
+      'OFM es una agencia de ciclo completo: desde 2022 hemos lanzado y gestionamos 220+ páginas. La modelo recibe el 20–30% del balance bruto — el resto la agencia lo reinvierte en su publicidad, tráfico y equipo, y por eso el balance crece mes a mes en lugar de quedarse quieto.',
+    ],
+    links: [
+      { label: 'Qué hace una agencia de OnlyFans — análisis completo', href: '/blog/chto-delaet-onlyfans-agentstvo' },
+      { label: 'Cómo elegir una agencia', href: '/blog/kak-vybrat-onlyfans-agentstvo' },
+    ],
+  },
   faq: {
     heading: 'Preguntas frecuentes sobre el casting',
     items: [

@@ -90,6 +90,18 @@ export const JOIN_EN: JoinContent = {
     disclaimer:
       "All figures are gross page balance totals (turnover before platform fees and splits), not a model's net income. Results depend on content consistency and working with the team.",
   },
+  about: {
+    heading: 'What is an OnlyFans agency and why work with one',
+    paragraphs: [
+      'An OnlyFans agency is a team that runs a model\'s page end to end: registration and verification, content strategy, promotion and traffic, subscriber chats and finances. The model only shoots content following a ready-made plan — specialists handle everything else.',
+      'The difference from going solo is growth speed. An agency invests its own resources into the page: advertising, traffic managers and a chat team that talks to the audience in English 24/7 and closes most sales in DMs. That is why managed pages usually grow noticeably faster than solo ones.',
+      'OFM is a full-cycle agency: since 2022 we have launched and managed 220+ pages. A model keeps 20–30% of the gross balance — the agency reinvests the rest into her advertising, traffic and team, which is what makes the balance grow month over month instead of staying flat.',
+    ],
+    links: [
+      { label: 'What an OnlyFans agency does — full breakdown', href: '/blog/chto-delaet-onlyfans-agentstvo' },
+      { label: 'How to choose an agency', href: '/blog/kak-vybrat-onlyfans-agentstvo' },
+    ],
+  },
   faq: {
     heading: 'Casting FAQ',
     items: [

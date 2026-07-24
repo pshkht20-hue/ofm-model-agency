@@ -124,6 +124,14 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@leoyip',
     unsplashUrl: 'https://unsplash.com/photos/aerial-photography-of-city-at-night-21bda4d32df4',
   },
+  'kak-smenit-onlyfans-agentstvo': {
+    localSrc: '/blog/covers/kak-smenit-onlyfans-agentstvo.jpg',
+    remoteSrc: coverUrl('1573496359142-b8d87734a5a2'),
+    alt: 'Уверенная молодая женщина с лёгкой улыбкой — спокойное решение о смене OnlyFans-агентства',
+    photographer: 'Christina @ wocintechchat.com',
+    photographerUrl: 'https://unsplash.com/@wocintechchat',
+    unsplashUrl: 'https://unsplash.com/@wocintechchat',
+  },
   'onlyfans-agentstvo-moshennichestvo': {
     localSrc: '/blog/covers/onlyfans-agentstvo-moshennichestvo.jpg',
     remoteSrc: coverUrl('1563013544-824ae1b704d3'),

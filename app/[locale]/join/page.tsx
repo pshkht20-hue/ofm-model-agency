@@ -8,6 +8,7 @@ import { FaqAccordion } from '@/components/seo/FaqAccordion';
 import { FaqPageJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import { getJoinContent } from '@/lib/content/join';
 import type { Locale } from '@/i18n/routing';
+import { Link } from '@/i18n/navigation';
 import { createPageMetadata } from '@/lib/seo';
 import { getSiteUrl, siteConfig } from '@/lib/site';
 import { pathForLocale } from '@/lib/i18n/paths';
@@ -142,7 +143,7 @@ export default async function JoinPage({ params }: Props) {
         ]}
       />
       <SectionViewTracker
-        sections={['join-directions', 'join-requirements', 'join-steps', 'join-income', 'apply']}
+        sections={['join-directions', 'join-requirements', 'join-steps', 'join-income', 'join-about', 'apply']}
         page="join"
       />
 
@@ -234,6 +235,36 @@ export default async function JoinPage({ params }: Props) {
           <JoinApplyCta label={content.applyCta} location="join_income" />
         </div>
       </section>
+
+      {/* BOFU-блок «что такое OnlyFans-агентство» (~770/мес KD0, C1.4):
+          определение первым предложением (AI Overview), перелинковка на пиллары агентского кластера */}
+      {content.about && (
+        <section aria-labelledby="join-about">
+          <h2 id="join-about" className={sectionHeading}>
+            {content.about.heading}
+          </h2>
+          <div className={`${card} md:p-8 mb-14`}>
+            {content.about.paragraphs.map((paragraph) => (
+              <p key={paragraph} className="text-body mb-4">
+                {paragraph}
+              </p>
+            ))}
+            {content.about.links && content.about.links.length > 0 && (
+              <div className="flex flex-wrap gap-x-6 gap-y-2 border-t border-white/[0.08] pt-4">
+                {content.about.links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm text-accent-pink hover:text-accent-cyan transition"
+                  >
+                    {link.label} →
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* FAQ — та же h2/h3-структура, что на /faq, попадает в FAQPage-схему */}
       <div className="mb-14">
