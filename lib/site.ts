@@ -1,6 +1,8 @@
 export const siteConfig = {
   name: "OFM's Model Agency",
   shortName: 'OFM',
+  /** Официальная почта агентства — единый источник (футер, форма, Organization JSON-LD). Добавлено по прямому запросу владельца 24.07.2026. */
+  email: 'agency@ofmmodels.com',
   tagline: 'LUXURY ONLYFANS MANAGEMENT',
   title: 'Работа моделью OnlyFans — удалённо, анонимно | OFM',
   description:

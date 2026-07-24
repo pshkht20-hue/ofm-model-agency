@@ -15,6 +15,7 @@ export const ANALYTICS_EVENTS = {
   CONTACT_SUBMIT_SERVER: 'contact_submit_server',
   TELEGRAM_CLICK: 'telegram_click',
   WHATSAPP_CLICK: 'whatsapp_click',
+  EMAIL_CLICK: 'email_click',
   SCROLL_DEPTH: 'scroll_depth',
   SECTION_VIEW: 'section_view',
   FAQ_OPEN: 'faq_open',
@@ -138,6 +139,14 @@ export type TelegramClickParams = {
 };
 
 export type WhatsappClickLocation = TelegramClickLocation;
+
+/** Клики по официальной почте (mailto). */
+export type EmailClickLocation = 'footer' | 'contact_form';
+export type EmailClickParams = {
+  location: EmailClickLocation;
+  locale?: string;
+  page_path?: string;
+};
 
 export type WhatsappClickParams = {
   location: WhatsappClickLocation;

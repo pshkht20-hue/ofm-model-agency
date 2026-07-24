@@ -38,7 +38,8 @@
     "diaspora": "Trabajo en el extranjero",
     "clusterMarketing": "Marketing y promoción",
     "clusterEarnings": "Cuánto ganan las modelos",
-    "clusterSafety": "Anonimato y seguridad"
+    "clusterSafety": "Anonimato y seguridad",
+    "emailTitle": "Escríbenos"
   },
   "home": {
     "skipToContent": "Ir al contenido",
@@ -241,41 +242,98 @@
         "experience": {
           "title": "¿Tienes cuenta de OnlyFans?",
           "options": {
-            "none": { "label": "No — solo planeo empezar", "desc": "Lanzamiento desde cero — perfil, contenido y tráfico incluidos" },
-            "starter": { "label": "Sí, menos de $3K/mes", "desc": "Perfil existente — necesitas crecimiento y chats" },
-            "active": { "label": "Sí, $3K+/mes", "desc": "Cuenta activa — escalar PPV y retención" }
+            "none": {
+              "label": "No — solo planeo empezar",
+              "desc": "Lanzamiento desde cero — perfil, contenido y tráfico incluidos"
+            },
+            "starter": {
+              "label": "Sí, menos de $3K/mes",
+              "desc": "Perfil existente — necesitas crecimiento y chats"
+            },
+            "active": {
+              "label": "Sí, $3K+/mes",
+              "desc": "Cuenta activa — escalar PPV y retención"
+            }
           }
         },
         "archetype": {
           "title": "¿Qué arquetipo te representa mejor?",
           "hint": "No hay respuesta incorrecta. Cada creadora es única — te ayudamos a encontrar o potenciar una imagen que monetice tus fortalezas. Cosplay y roleplay funcionan con cualquier tipo de cuerpo y look.",
           "options": {
-            "exploring": { "label": "Aún no lo sé — ayúdenme a encontrar mi nicho", "desc": "Tu manager elegirá un nicho según tu look, personalidad y horario — de cosplay a GFE" },
-            "natural": { "label": "Mi propio estilo, sin nicho fijo", "desc": "Construiremos una marca sobre ti: contenido, precios y posicionamiento — sin plantillas" },
-            "cosplay": { "label": "Cosplay / roleplay", "desc": "Anime, juegos, personajes — nicho top; el foco es el personaje, no un cuerpo \"perfecto\"" },
-            "asian": { "label": "Asian / Kawaii", "desc": "Nicho étnico con fans leales — kawaii, exotic, GFE personal" },
-            "busty": { "label": "Busty / curvas", "desc": "Nicho físico con alta demanda — fotos, PPV y customs para fans dedicados" },
-            "blonde": { "label": "Blonde / girl-next-door", "desc": "Look clásico — dulce, cercana o bombshell, demanda estable" },
-            "tattoo": { "label": "Tattoo / Alt", "desc": "Estilo alternativo — imagen edgy, fetish de tatuajes, roleplay a medida" },
-            "ebony": { "label": "Ebony / Afro", "desc": "Nicho étnico con appeal cultural — baile, curves, GFE para audiencia leal" },
-            "babyface": { "label": "Babyface / cute", "desc": "Look dulce y juvenil — GFE, fetish suave, escenarios de roleplay" }
+            "exploring": {
+              "label": "Aún no lo sé — ayúdenme a encontrar mi nicho",
+              "desc": "Tu manager elegirá un nicho según tu look, personalidad y horario — de cosplay a GFE"
+            },
+            "natural": {
+              "label": "Mi propio estilo, sin nicho fijo",
+              "desc": "Construiremos una marca sobre ti: contenido, precios y posicionamiento — sin plantillas"
+            },
+            "cosplay": {
+              "label": "Cosplay / roleplay",
+              "desc": "Anime, juegos, personajes — nicho top; el foco es el personaje, no un cuerpo \"perfecto\""
+            },
+            "asian": {
+              "label": "Asian / Kawaii",
+              "desc": "Nicho étnico con fans leales — kawaii, exotic, GFE personal"
+            },
+            "busty": {
+              "label": "Busty / curvas",
+              "desc": "Nicho físico con alta demanda — fotos, PPV y customs para fans dedicados"
+            },
+            "blonde": {
+              "label": "Blonde / girl-next-door",
+              "desc": "Look clásico — dulce, cercana o bombshell, demanda estable"
+            },
+            "tattoo": {
+              "label": "Tattoo / Alt",
+              "desc": "Estilo alternativo — imagen edgy, fetish de tatuajes, roleplay a medida"
+            },
+            "ebony": {
+              "label": "Ebony / Afro",
+              "desc": "Nicho étnico con appeal cultural — baile, curves, GFE para audiencia leal"
+            },
+            "babyface": {
+              "label": "Babyface / cute",
+              "desc": "Look dulce y juvenil — GFE, fetish suave, escenarios de roleplay"
+            }
           }
         },
         "social": {
           "title": "¿Qué tan fuerte es tu presencia social?",
           "options": {
-            "none": { "label": "Casi sin audiencia", "desc": "Construimos tráfico desde cero — Reddit, partners, paid" },
-            "under5k": { "label": "Hasta 5K seguidores", "desc": "Base existente — convertir en suscripciones OF" },
-            "mid": { "label": "5K — 50K", "desc": "Base sólida para un inicio rápido" },
-            "strong": { "label": "50K+", "desc": "Tráfico listo — foco en monetización y LTV" }
+            "none": {
+              "label": "Casi sin audiencia",
+              "desc": "Construimos tráfico desde cero — Reddit, partners, paid"
+            },
+            "under5k": {
+              "label": "Hasta 5K seguidores",
+              "desc": "Base existente — convertir en suscripciones OF"
+            },
+            "mid": {
+              "label": "5K — 50K",
+              "desc": "Base sólida para un inicio rápido"
+            },
+            "strong": {
+              "label": "50K+",
+              "desc": "Tráfico listo — foco en monetización y LTV"
+            }
           }
         },
         "hours": {
           "title": "¿Cuántas horas por semana puedes dedicar?",
           "options": {
-            "light": { "label": "5–10 horas", "desc": "Tiempo parcial — el equipo gestiona chats y marketing" },
-            "medium": { "label": "10–20 horas", "desc": "Equilibrio óptimo entre contenido y crecimiento" },
-            "intense": { "label": "20+ horas", "desc": "Ritmo máximo — camino más rápido al ingreso estable" }
+            "light": {
+              "label": "5–10 horas",
+              "desc": "Tiempo parcial — el equipo gestiona chats y marketing"
+            },
+            "medium": {
+              "label": "10–20 horas",
+              "desc": "Equilibrio óptimo entre contenido y crecimiento"
+            },
+            "intense": {
+              "label": "20+ horas",
+              "desc": "Ritmo máximo — camino más rápido al ingreso estable"
+            }
           }
         }
       },
@@ -387,7 +445,8 @@
     "submitAnother": "Enviar otra solicitud",
     "consent": "Al enviar, aceptas que usemos tus datos para contactarte.",
     "calcPrefillNotice": "Hemos rellenado tu estimación del calculadora — puedes añadir más detalles.",
-    "calcPrefillMessage": "Completé el calculadora del sitio. Total bruto estimado: {low} — {high} / mes (nivel: {tier}). Quiero hablar de un plan de crecimiento con la agencia."
+    "calcPrefillMessage": "Completé el calculadora del sitio. Total bruto estimado: {low} — {high} / mes (nivel: {tier}). Quiero hablar de un plan de crecimiento con la agencia.",
+    "emailAlt": "¿Sin Telegram? Escríbenos a:"
   },
   "common": {
     "home": "Inicio",
@@ -438,12 +497,30 @@
   "creator": {
     "badge": "Agencia para plataformas creator",
     "marquee": [
-      { "label": "Suscriptores y fans", "hint": "Crecimiento de audiencia" },
-      { "label": "Mensajes directos", "hint": "Chats y ventas en DM" },
-      { "label": "Contenido de pago", "hint": "Suscripciones y exclusivos" },
-      { "label": "Monetización", "hint": "Propinas y custom" },
-      { "label": "Analítica de crecimiento", "hint": "Informes y estrategia" },
-      { "label": "Confidencialidad", "hint": "Protección de identidad" }
+      {
+        "label": "Suscriptores y fans",
+        "hint": "Crecimiento de audiencia"
+      },
+      {
+        "label": "Mensajes directos",
+        "hint": "Chats y ventas en DM"
+      },
+      {
+        "label": "Contenido de pago",
+        "hint": "Suscripciones y exclusivos"
+      },
+      {
+        "label": "Monetización",
+        "hint": "Propinas y custom"
+      },
+      {
+        "label": "Analítica de crecimiento",
+        "hint": "Informes y estrategia"
+      },
+      {
+        "label": "Confidencialidad",
+        "hint": "Protección de identidad"
+      }
     ],
     "legalDisclaimer": "OnlyFans® es marca registrada de su titular. OFM's Model Agency es independiente y no está afiliada a OnlyFans. Servicios para creadoras de contenido 18+."
   },
@@ -453,10 +530,22 @@
     "titleAccent": "hablan por sí solas",
     "footnote": "Gross total del balance OnlyFans · no ingreso neto de la modelo · datos actualizados trimestralmente",
     "items": [
-      { "label": "Modelos en la agencia", "hint": "Plantilla activa" },
-      { "label": "Balances de páginas", "hint": "de $15K a $50K · gross" },
-      { "label": "Crecimiento del total", "hint": "Primeros 6 meses" },
-      { "label": "Soporte y chats", "hint": "Sin días libres" }
+      {
+        "label": "Modelos en la agencia",
+        "hint": "Plantilla activa"
+      },
+      {
+        "label": "Balances de páginas",
+        "hint": "de $15K a $50K · gross"
+      },
+      {
+        "label": "Crecimiento del total",
+        "hint": "Primeros 6 meses"
+      },
+      {
+        "label": "Soporte y chats",
+        "hint": "Sin días libres"
+      }
     ]
   },
   "models": {

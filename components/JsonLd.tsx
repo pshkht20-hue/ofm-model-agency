@@ -46,12 +46,15 @@ export function JsonLd({ locale = 'ru', description }: JsonLdProps) {
       'OnlyFans model recruitment',
     ],
     areaServed: 'Worldwide',
+    // Официальная почта — публичный контакт организации (E-E-A-T: «реальная компания»)
+    email: siteConfig.email,
     ...(telegram
       ? {
           contactPoint: {
             '@type': 'ContactPoint',
             contactType: 'customer support',
             url: telegram,
+            email: siteConfig.email,
             availableLanguage: ['Russian', 'Ukrainian', 'English', 'Spanish'],
           },
         }

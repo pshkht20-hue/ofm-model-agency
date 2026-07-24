@@ -20,7 +20,9 @@ import {
   trackFormStart,
   trackFormSubmit,
   trackFormSubmitError,
+  trackEmailClick,
 } from '@/lib/analytics/gtag';
+import { siteConfig } from '@/lib/site';
 import type { FormErrorType } from '@/lib/analytics/events';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
@@ -469,6 +471,18 @@ export function ContactForm() {
       <p className="mt-8 flex items-start justify-center gap-1.5 text-center text-xs text-white/55">
         <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent-cyan/80" aria-hidden />
         {t('privacy')}
+      </p>
+
+      {/* Официальная почта — путь для тех, у кого нет Telegram */}
+      <p className="mt-3 text-center text-xs text-white/45">
+        {t('emailAlt')}{' '}
+        <a
+          href={`mailto:${siteConfig.email}`}
+          onClick={() => trackEmailClick({ location: 'contact_form', locale, page_path: pagePath })}
+          className="link-hover-line font-medium text-accent-pink/90 transition-colors hover:text-accent-pink"
+        >
+          {siteConfig.email}
+        </a>
       </p>
 
       <ClickSpark color="#ff5bb5" className="mt-3 block">

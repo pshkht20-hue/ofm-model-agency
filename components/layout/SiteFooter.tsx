@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Mail } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Logo } from '@/components/Logo';
 import { LegalDisclaimer } from '@/components/CreatorTheme';
@@ -9,7 +10,8 @@ import { Link } from '@/i18n/navigation';
 import { CookieSettingsButton } from '@/components/consent/CookieSettingsButton';
 import { SocialLinks } from '@/components/social/SocialLinks';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
-import { trackCtaClick } from '@/lib/analytics/gtag';
+import { trackCtaClick, trackEmailClick } from '@/lib/analytics/gtag';
+import { siteConfig } from '@/lib/site';
 import { staggerContainer, staggerItem, VIEWPORT_DEFAULT } from '@/lib/motion';
 
 export function SiteFooter() {
@@ -141,6 +143,20 @@ export function SiteFooter() {
             variants={reduced ? undefined : staggerItem(20)}
           >
             <SocialLinks variant="footer" />
+
+            {/* Официальная почта — для тех, у кого нет соцсетей */}
+            <p className="eyebrow-bright mb-4 mt-10 !text-[10px]">{t('emailTitle')}</p>
+            <a
+              href={`mailto:${siteConfig.email}`}
+              onClick={() => trackEmailClick({ location: 'footer', locale })}
+              className="group inline-flex items-center gap-2.5 rounded-full border border-accent-pink/25 bg-white/[0.03] px-4 py-2.5 text-sm text-white/70 shadow-[0_0_16px_-6px_rgba(255,91,181,0.35)] transition-all duration-300 hover:border-accent-pink/60 hover:text-white hover:shadow-[0_0_24px_-4px_rgba(255,91,181,0.55)]"
+            >
+              <Mail
+                className="h-4 w-4 shrink-0 text-accent-pink/80 transition-colors group-hover:text-accent-pink"
+                aria-hidden
+              />
+              <span className="tracking-wide">{siteConfig.email}</span>
+            </a>
           </motion.div>
         </motion.div>
 

@@ -17,6 +17,7 @@ import {
   type SectionViewParams,
   type TelegramClickParams,
   type WhatsappClickParams,
+  type EmailClickParams,
 } from '@/lib/analytics/events';
 
 function gtagSafe(...args: unknown[]) {
@@ -93,6 +94,15 @@ export function trackFieldFilled(params: FieldFilledParams) {
 /** Клик по контакту в Telegram — низкофрикционный путь конверсии. */
 export function trackTelegramClick(params: TelegramClickParams) {
   gtagSafe('event', ANALYTICS_EVENTS.TELEGRAM_CLICK, {
+    location: params.location,
+    ...(params.locale ? { locale: params.locale } : {}),
+    ...(params.page_path ? { page_path: clamp(params.page_path) } : {}),
+  });
+}
+
+/** Клик по официальной почте (mailto) — зеркало telegram_click. */
+export function trackEmailClick(params: EmailClickParams) {
+  gtagSafe('event', ANALYTICS_EVENTS.EMAIL_CLICK, {
     location: params.location,
     ...(params.locale ? { locale: params.locale } : {}),
     ...(params.page_path ? { page_path: clamp(params.page_path) } : {}),
