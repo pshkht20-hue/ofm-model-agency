@@ -1,14 +1,17 @@
 /**
  * Гео-страница «Модель OnlyFans» — Польша (волна 1).
- * Написана ПО ОБРАЗЦУ countries/ukraine.ts (эталон структуры).
+ * Формат «рекламный креатив» (директива владельца 25.07.2026, вторая итерация):
+ * интро → «Что мы предлагаем» → «Что мы ждём от тебя» → приглашение → FAQ.
  *
- * Спрос-контекст Польши: сильная украинская диаспора (сотни тысяч девушек
- * переехали и работают удалённо), рынок ЕС, близость к платёжеспособной
- * аудитории Западной Европы. SEO-якорь: RU — «онлифанс работа Польша» (~170/мес).
+ * Локальный мотив (уникализация 25.07.2026): украинки в Польше — старт без
+ * польского языка, команда говорит по-украински/по-русски, близкий менталитет;
+ * съёмка днём, вечерний пик закордонной аудитории ведёт команда; регулярные
+ * выплаты = спокойное планирование аренды/расходов. Укр-SEO-якорь
+ * «робота в польщі для дівчат» — сохранён в uk-title и uk-интро.
  *
- * Красные линии — см. ../types.ts. Доход $500–8000/мес (видимый = baseSalary),
- * «$15 000–$50 000» только как балансы топ-страниц прозой + дисклеймер, 20–30% с
- * обоснованием реинвеста, без «договор/контракт», только OnlyFans.
+ * Красные линии: без процентов/gross/реинвеста, без «договор/контракт» и
+ * триггер-слов; вилка дохода — только record.incomeUsd ($3 000–10 000);
+ * только OnlyFans; эмодзи не используем — иконки рендерит шаблон страницы.
  */
 import type { Locale } from '@/i18n/routing';
 import type { ModelGeoContent, ModelGeoCountry } from '../types';
@@ -18,143 +21,227 @@ export const record: ModelGeoCountry = {
   iso: 'PL',
   currency: 'PLN',
   usdToLocalRate: 4,
-  incomeUsd: { min: 500, max: 8000 },
+  incomeUsd: { min: 3000, max: 10000 },
   wave: 1,
   hasPage: true,
 };
 
 const RU: ModelGeoContent = {
   countryName: 'Польша',
-  title: 'Работа моделью OnlyFans в Польше — удалённо, доход $500–8000/мес',
+  title: 'Работа моделью OnlyFans в Польше — удалённо, от $3 000/мес',
   description:
-    'Онлифанс работа моделью в Польше: удалённо из Варшавы, Кракова, Вроцлава, Гданьска, Познани. Съёмка 2–3 ч/день, регистрацию, промо, чат и финансы ведёт агентство. Доход $500–8000/мес (≈ 2 000–32 000 zł). Опыт не нужен.',
+    'От $3 000 до $10 000 в месяц зарабатывают многие наши модели OnlyFans в Польше. Без польского языка: команда говорит по-украински и по-русски. Опыт не нужен.',
   introHtml:
-    'Агентство OFM Models набирает моделей OnlyFans в Польше на удалённую работу из дома — вакансия открыта и для полек, и для украинок из диаспоры, которых в стране сотни тысяч. Это одна вакансия на всю страну: из Варшавы, Кракова, Вроцлава, Гданьска или Познани — условия, команда и процент одинаковы для всех. Формат простой: ты снимаешь контент по согласованному плану 2–3 часа в день, а всё остальное — регистрацию и верификацию страницы, продвижение, переписку с подписчиками и финансы — берёт на себя команда агентства. Опыт, портфолио и профессиональная техника не нужны: большинство наших моделей начинали с нуля со смартфона. Что делает агентство на каждом этапе — разобрали в статье [что делает OnlyFans-агентство](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Варшава', 'Краков', 'Вроцлав', 'Гданьск', 'Познань'],
-  marketContext:
-    'Польша для агентства — ключевое европейское направление: здесь сложилась огромная украинская диаспора, поэтому русско- и украиноязычным девушкам старт даётся особенно легко — команда общается на родном языке, а география работы не мешает. Сама Польша сидит в еврозоне спроса: подписчики из Германии, Британии и Скандинавии платят в евро и фунтах, а разница курса к злотому работает в пользу модели. Рынок молодой и ненасыщенный — русскоязычных страниц из Польши пока в разы меньше, чем платёжеспособной аудитории, готовой на них подписываться.',
-  paymentsNote:
-    'Выплаты в Польше идут через международные платёжные системы OnlyFans — Paxum и Skrill; вывод в злотые — на польскую карту (в том числе на счёт, открытый по номеру PESEL) или удобным тебе способом, график выплат фиксированный — раз в две недели. Всю бухгалтерию, комиссии платёжек и вывод ведёт агентство: тебе не нужно разбираться в настройках кошельков и курсах — ты видишь свой процент и график, остальное закрывает команда.',
-  earningsNarrative:
-    'Честные ориентиры для Польши: в первый месяц новая страница обычно выходит на $500–1 000 gross-баланса — это разгон, аудитория только набирается. Дальше рост зависит от регулярности контента: балансы топ-страниц агентства доходят до $15 000–$50 000 gross в месяц, но это результат месяцев системной работы команды, а не стартовая точка и не гарантия. Модель получает 20–30% от gross-баланса страницы — процент зависит от плана, типажа и вовлечённости; агентство полностью финансирует промо, трафик и чат-команду, а часть дохода реинвестируется в рост страницы, поэтому баланс и твой процент растут вместе. Доход зависит от плана, типажа и вовлечённости и не является гарантией. Из чего складываются цифры — в статье [сколько зарабатывают модели OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), а прикинуть свой потенциал можно в [калькуляторе дохода](/calculator).',
+    'Привет! Мы — OFM Models, агентство полного цикла: за 3+ года мы запустили и вырастили 220+ страниц моделей. В Польше особенно ждём украинок, которые строят жизнь на новом месте, — и рады каждой девушке 18+ из Варшавы, Кракова, Гданьска или небольшого города. Польский не понадобится: команда общается на украинском и русском, менталитет общий, договориться просто. Снимать можно днём — пиковые вечерние часы зарубежной аудитории закрывает команда, а регулярные выплаты помогают спокойно планировать аренду и расходы в Польше.',
+  offers: [
+    'От тебя — контент, от нас — всё остальное: страница, продвижение, диалоги с подписчиками и финансы.',
+    'Понятная планка: большинство наших моделей зарабатывают от $3 000 до $10 000 в месяц.',
+    'Раскрутку агентство финансирует само — тебе не придётся потратить ни злотого.',
+    'Старт без польского: вся коммуникация с командой — на украинском или русском, а переписку с подписчиками ведём мы.',
+    'Конфиденциальность: бережно относимся к твоей личной информации и настраиваем приватность так, как комфортно тебе.',
+    'Мы понимаем твою ситуацию: многие девушки команды тоже начинали на новом месте — поможем выйти на стабильный доход без лишнего стресса.',
+  ],
+  expectations: [
+    'Тебе исполнилось 18 лет.',
+    'Серьёзное отношение к делу: стараешься в каждом кадре и хочешь расти.',
+    'Из оборудования — смартфон и устойчивый интернет; город внутри Польши значения не имеет.',
+    'Организованность и соблюдение контент-плана — обычно это 2–3 часа съёмок в день.',
+    'Открытость к сотрудничеству и общению с командой.',
+  ],
+  closingHtml:
+    'Начать проще, чем кажется: напиши нам сегодня — и уже завтра у тебя будет план первых шагов и понятная цель по доходу на первый месяц.',
+  specs: [
+    { label: 'График', value: 'Гибкий, 2–3 часа в день' },
+    { label: 'Опыт', value: 'Не требуется — обучаем с нуля' },
+    { label: 'Локация', value: 'Удалённо · вся Польша' },
+    { label: 'Выплаты', value: 'Регулярно, по фиксированному графику' },
+    { label: 'Старт', value: 'В первые дни после онлайн-кастинга' },
+  ],
   faq: [
     {
-      q: 'Сколько зарабатывает модель OnlyFans в Польше?',
-      a: 'Видимый ориентир дохода модели — $500–8000 в месяц (примерно 2 000–32 000 zł по курсу) в зависимости от плана, типажа и вовлечённости; в первый месяц новая страница обычно выходит на $500–1 000. Модель получает 20–30% от gross-баланса страницы, агентство реинвестирует часть дохода в промо и трафик. Балансы топ-страниц агентства доходят до $15 000–$50 000 в месяц, но это результат месяцев работы команды, а не гарантия.',
+      q: 'Насколько это анонимно и приватно?',
+      a: 'Приватность настраиваем индивидуально, а аудиторию страницы направляем на дальние рынки — знакомые в Польше или в Украине на неё практически не наткнутся. Кому рассказывать о работе, выбираешь только ты.',
     },
     {
-      q: 'Можно ли работать моделью OnlyFans в Польше, если я украинка из диаспоры?',
-      a: 'Да, это одна из главных наших аудиторий здесь. Работа полностью удалённая, вести страницу можно из Варшавы, Кракова, Вроцлава, Гданьска или Познани — гражданство и статус пребывания на условия не влияют. Команда общается по-русски и по-украински, помогает с регистрацией и верификацией, а выплаты приходят на польскую карту.',
+      q: 'Нужен ли опыт, чтобы начать?',
+      a: 'Нет. Мы работаем и с новичками, и с опытными моделями: команда даёт контент-план, подсказывает удачные ракурсы и сопровождает на каждом шагу.',
     },
     {
-      q: 'Нужен ли опыт или знание польского, чтобы начать в Польше?',
-      a: 'Нет. Польский для работы не требуется — контент рассчитан на платёжеспособную аудиторию Западной Европы и США, а переписку с подписчиками ведёт чат-команда агентства. Опыта тоже не нужно: на онбординге дают контент-план и рабочие форматы. Нужны 18+, смартфон с нормальной камерой и готовность снимать регулярно.',
+      q: 'Я не знаю польского и только обживаюсь в Польше — получится ли?',
+      a: 'Получится. Польский для этой работы не нужен совсем: с командой ты говоришь по-украински или по-русски, переписку с подписчиками ведём мы. Многие наши модели начинали ровно в такой же ситуации.',
     },
     {
-      q: 'Это анонимно и безопасно для девушки в Польше?',
-      a: 'Уровень приватности обсуждаем на кастинге индивидуально. Стандартная практика — геоблок: страница закрывается от Польши и стран, где тебя могут узнать, а платёжеспособную аудиторию приводим из Германии, Британии, Скандинавии и США. Форматы контента согласуются заранее и фиксируются в плане — ничего «по умолчанию» не публикуется.',
+      q: 'Когда я получу первую выплату?',
+      a: 'Первая выплата обычно приходит уже в первый месяц, дальше — по фиксированному графику. Как удобнее получать деньги, живя в Польше, обсудим на старте.',
+    },
+    {
+      q: 'Я не из Польши — могу ли начать?',
+      a: 'Да. Работа полностью удалённая, поэтому неважно, где ты живёшь сейчас: начать можно из любой страны и города.',
     },
   ],
 };
 
 const UK: ModelGeoContent = {
   countryName: 'Польща',
-  title: 'Робота моделлю OnlyFans у Польщі — віддалено, дохід $500–8000/міс',
+  title: 'Робота в Польщі для дівчат — OnlyFans, від $3 000/міс',
   description:
-    'Робота для дівчат моделлю OnlyFans у Польщі: віддалено з Варшави, Кракова, Вроцлава, Гданська, Познані. Зйомка 2–3 год/день, реєстрацію, промо, чат і фінанси веде агенція. Дохід $500–8000/міс (≈ 2 000–32 000 zł). Досвід не потрібен.',
+    'Від $3 000 до $10 000 на місяць заробляють багато наших моделей. Робота в Польщі для дівчат 18+ повністю віддалена, команда спілкується українською. Без досвіду.',
   introHtml:
-    'Агенція OFM Models набирає моделей OnlyFans у Польщі на віддалену роботу з дому — вакансія відкрита і для польок, і для українок із діаспори, яких у країні сотні тисяч. Це одна вакансія на всю країну: з Варшави, Кракова, Вроцлава, Гданська чи Познані — умови, команда й відсоток однакові для всіх. Формат простий: ти знімаєш контент за узгодженим планом 2–3 години на день, а все інше — реєстрацію та верифікацію сторінки, просування, листування з підписниками й фінанси — бере на себе команда агенції. Досвід, портфоліо та професійна техніка не потрібні: більшість наших моделей починали з нуля зі смартфона. Що робить агенція на кожному етапі — розібрали у статті [що робить OnlyFans-агенція](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Варшава', 'Краків', 'Вроцлав', 'Гданськ', 'Познань'],
-  marketContext:
-    'Польща для агенції — ключовий європейський напрямок: тут склалася величезна українська діаспора, тому україно- та російськомовним дівчатам старт дається особливо легко — команда спілкується рідною мовою, а географія роботи не заважає. Сама Польща сидить у зоні платоспроможного попиту: підписники з Німеччини, Британії та Скандинавії платять у євро й фунтах, а різниця курсу до злотого працює на користь моделі. Ринок молодий і ненасичений — українськомовних сторінок із Польщі поки що в рази менше, ніж аудиторії, готової на них підписуватися.',
-  paymentsNote:
-    'Виплати в Польщі йдуть через міжнародні платіжні системи OnlyFans — Paxum і Skrill; виведення у злоті — на польську картку (зокрема на рахунок, відкритий за номером PESEL) чи зручним тобі способом, графік виплат фіксований — раз на два тижні. Усю бухгалтерію, комісії платіжок і виведення веде агенція: тобі не треба розбиратися в налаштуваннях гаманців і курсах — ти бачиш свій відсоток і графік, решту закриває команда.',
-  earningsNarrative:
-    'Чесні орієнтири для Польщі: у перший місяць нова сторінка зазвичай виходить на $500–1 000 gross-балансу — це розгін, аудиторія тільки набирається. Далі зростання залежить від регулярності контенту: баланси топ-сторінок агенції сягають $15 000–$50 000 gross на місяць, але це результат місяців системної роботи команди, а не стартова точка й не гарантія. Модель отримує 20–30% від gross-балансу сторінки — відсоток залежить від плану, типажу та залученості; агенція повністю фінансує промо, трафік і чат-команду, а частина доходу реінвестується в зростання сторінки, тому баланс і твій відсоток ростуть разом. Дохід залежить від плану, типажу та залученості й не є гарантією. З чого складаються цифри — у статті [скільки заробляють моделі OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), а прикинути свій потенціал можна в [калькуляторі доходу](/calculator).',
+    'Привіт! Ми — OFM Models, агенція повного циклу: за понад 3 роки ми запустили й розвинули 220+ сторінок моделей. Якщо ти шукала роботу в Польщі для дівчат — особливо якщо ти українка, що облаштовує життя на новому місці, — це твій варіант: усе віддалено, з Варшави, Кракова, Ґданська чи маленького міста. Польська не знадобиться: команда спілкується українською, менталітет спільний, домовитися просто. Знімати можна вдень — пікові вечірні години закордонної аудиторії закриває команда, а регулярні виплати дають змогу спокійно планувати оренду й витрати в Польщі.',
+  offers: [
+    'Від тебе — контент, від нас — усе інше: сторінка, просування, діалоги з підписниками й фінанси.',
+    'Зрозуміла планка: більшість наших моделей заробляють від $3 000 до $10 000 на місяць.',
+    'Розкрутку агенція фінансує сама — тобі не доведеться витратити ані злотого.',
+    'Старт без польської: уся комунікація з командою — українською, а листування з підписниками ведемо ми.',
+    'Конфіденційність: дбайливо ставимося до твоєї особистої інформації та налаштовуємо приватність так, як зручно тобі.',
+    'Ми розуміємо твою ситуацію: багато дівчат команди теж починали на новому місці — допоможемо вийти на стабільний дохід без зайвого стресу.',
+  ],
+  expectations: [
+    'Тобі виповнилося 18 років.',
+    'Серйозне ставлення до справи: викладаєшся в кожному кадрі й хочеш зростати.',
+    'З обладнання — смартфон і стабільний інтернет; місто в межах Польщі значення не має.',
+    'Організованість і дотримання контент-плану — зазвичай це 2–3 години зйомок на день.',
+    'Відкритість до співпраці та спілкування з командою.',
+  ],
+  closingHtml:
+    'Почати простіше, ніж здається: напиши нам сьогодні — і вже завтра матимеш план перших кроків і зрозумілу ціль щодо доходу на перший місяць.',
+  specs: [
+    { label: 'Графік', value: 'Гнучкий, 2–3 години на день' },
+    { label: 'Досвід', value: 'Не потрібен — навчимо з нуля' },
+    { label: 'Локація', value: 'Віддалено · вся Польща' },
+    { label: 'Виплати', value: 'Регулярні, за фіксованим графіком' },
+    { label: 'Старт', value: 'У перші дні після онлайн-кастингу' },
+  ],
   faq: [
     {
-      q: 'Скільки заробляє модель OnlyFans у Польщі?',
-      a: 'Видимий орієнтир доходу моделі — $500–8000 на місяць (приблизно 2 000–32 000 zł за курсом) залежно від плану, типажу та залученості; у перший місяць нова сторінка зазвичай виходить на $500–1 000. Модель отримує 20–30% від gross-балансу сторінки, агенція реінвестує частину доходу в промо та трафік. Баланси топ-сторінок агенції сягають $15 000–$50 000 на місяць, але це результат місяців роботи команди, а не гарантія.',
+      q: 'Наскільки це анонімно і приватно?',
+      a: 'Приватність налаштовуємо індивідуально, а аудиторію сторінки спрямовуємо на далекі ринки — знайомі в Польщі чи в Україні на неї практично не натраплять. Кому розповідати про роботу, обираєш лише ти.',
     },
     {
-      q: 'Чи можна працювати моделлю OnlyFans у Польщі, якщо я українка з діаспори?',
-      a: 'Так, це одна з головних наших аудиторій тут. Робота повністю віддалена, вести сторінку можна з Варшави, Кракова, Вроцлава, Гданська чи Познані — громадянство та статус перебування на умови не впливають. Команда спілкується українською та російською, допомагає з реєстрацією і верифікацією, а виплати приходять на польську картку.',
+      q: 'Чи потрібен досвід, щоб почати?',
+      a: 'Ні. Ми працюємо і з новачками, і з досвідченими моделями: команда дає контент-план, підказує вдалі ракурси й супроводжує на кожному кроці.',
     },
     {
-      q: 'Чи потрібен досвід або знання польської, щоб почати у Польщі?',
-      a: 'Ні. Польська для роботи не потрібна — контент розрахований на платоспроможну аудиторію Західної Європи та США, а листування з підписниками веде чат-команда агенції. Досвіду теж не треба: на онбордингу дають контент-план і робочі формати. Потрібні 18+, смартфон із нормальною камерою та готовність знімати регулярно.',
+      q: 'Я не знаю польської й лише облаштовуюся в Польщі — чи вийде?',
+      a: 'Вийде. Польська для цієї роботи не потрібна взагалі: з командою ти говориш українською, листування з підписниками ведемо ми. Багато наших моделей починали рівно в такій самій ситуації.',
     },
     {
-      q: 'Це анонімно й безпечно для дівчини в Польщі?',
-      a: 'Рівень приватності обговорюємо на кастингу індивідуально. Стандартна практика — геоблок: сторінка закривається від Польщі та країн, де тебе можуть упізнати, а платоспроможну аудиторію приводимо з Німеччини, Британії, Скандинавії та США. Формати контенту узгоджуються заздалегідь і фіксуються в плані — нічого «за замовчуванням» не публікується.',
+      q: 'Коли я отримаю першу виплату?',
+      a: 'Перша виплата зазвичай надходить уже в перший місяць, далі — за фіксованим графіком. Як зручніше отримувати гроші, живучи в Польщі, обговоримо на старті.',
+    },
+    {
+      q: 'Я не з Польщі — чи можу почати?',
+      a: 'Так. Робота повністю віддалена, тож неважливо, де ти живеш зараз: почати можна з будь-якої країни та міста.',
     },
   ],
 };
 
 const EN: ModelGeoContent = {
   countryName: 'Poland',
-  title: 'OnlyFans model job in Poland — remote, income $500–8000/mo',
+  title: 'OnlyFans model job in Poland — remote, from $3 000/mo',
   description:
-    'OnlyFans model job in Poland: remote from Warsaw, Kraków, Wrocław, Gdańsk, Poznań. Shooting 2–3 h/day, registration, promo, chat and finances run by the agency. Income $500–8000/mo (≈ 2,000–32,000 zł). No experience needed.',
+    'Earn $3 000–10 000/mo as an OnlyFans model in Poland — fully remote, the team speaks Ukrainian and Russian, promotion and chats are handled for you. 18+.',
   introHtml:
-    'OFM Models agency is recruiting OnlyFans models in Poland for remote work from home — the vacancy is open both to Polish women and to the hundreds of thousands of Ukrainian women in the local diaspora. This is one vacancy for the whole country: from Warsaw, Kraków, Wrocław, Gdańsk or Poznań, the terms, team and percentage are the same for everyone. The format is simple: you shoot content on an agreed plan 2–3 hours a day, and everything else — registering and verifying the page, promotion, subscriber messaging and finances — is handled by the agency team. Experience, a portfolio and professional gear aren’t needed: most of our models started from scratch with a smartphone. What the agency does at each stage — we broke it down in the article [what an OnlyFans agency does](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Warsaw', 'Kraków', 'Wrocław', 'Gdańsk', 'Poznań'],
-  marketContext:
-    'Poland is the agency’s key European market: a huge Ukrainian diaspora has settled here, so Ukrainian- and Russian-speaking women get an especially easy start — the team speaks their language and the country you live in doesn’t get in the way. Poland itself sits inside a high-paying demand zone: subscribers from Germany, the UK and Scandinavia pay in euros and pounds, and the exchange gap against the złoty works in the model’s favour. The market is young and far from saturated — there are still several times fewer Polish-based pages than there is paying audience ready to subscribe to them.',
-  paymentsNote:
-    'Payouts in Poland go through OnlyFans’ international payment systems — Paxum and Skrill; withdrawal in złoty goes to a Polish card (including an account opened via a PESEL number) or whatever method suits you, on a fixed schedule — once every two weeks. All the accounting, processor fees and withdrawals are run by the agency: you don’t need to figure out wallet settings or exchange rates — you see your percentage and schedule, the team covers the rest.',
-  earningsNarrative:
-    'Honest benchmarks for Poland: in the first month a new page usually reaches $500–1,000 of gross balance — that’s the ramp-up, the audience is only just building. Further growth depends on content consistency: the agency’s top-page balances reach $15,000–$50,000 gross a month, but that’s the result of months of systematic teamwork, not a starting point and not a guarantee. A model receives 20–30% of the page’s gross balance — the percentage depends on the plan, persona and engagement; the agency fully funds promo, traffic and the chat team, and part of the income is reinvested into the page’s growth, so the balance and your percentage grow together. Income depends on the plan, persona and engagement and is not a guarantee. What the numbers are made of — in the article [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli), and you can estimate your own potential in the [income calculator](/calculator).',
+    'Hi! We are OFM Models, a full-cycle agency: over 3+ years we have launched and grown 220+ creator pages. In Poland we especially welcome Ukrainian women building life in a new place — and we are glad to hear from any woman 18+ in Warsaw, Kraków, Gdańsk or a smaller town. No Polish needed: the team speaks Ukrainian and Russian, the mentality is close, and it is easy to agree on things. You shoot during the day, the team covers the foreign audience at its evening peak, and regular payouts make it simple to plan rent and daily spending in Poland.',
+  offers: [
+    'Content from you, everything else from us: the page, promotion, subscriber dialogues and finances.',
+    'A clear benchmark: most of our models earn from $3 000 to $10 000 a month.',
+    'The agency funds all promotion itself — you will not spend a single zloty.',
+    'Start with zero Polish: all communication with the team is in Ukrainian or Russian, and subscriber messaging is run by us.',
+    'Confidentiality: we treat your personal information with care and set up privacy the way you feel comfortable.',
+    'We understand your situation: many women on the team also started over in a new place — we will help you reach a stable income without extra stress.',
+  ],
+  expectations: [
+    'You are 18 or older.',
+    'A serious attitude to the work: you put effort into every shot and want to grow.',
+    'The only equipment is a smartphone and steady internet; which Polish city you are in makes no difference.',
+    'Organised and consistent with the content plan — usually 2–3 hours of shooting a day.',
+    'Open to cooperation and easy communication with the team.',
+  ],
+  closingHtml:
+    'Starting is easier than it seems: write to us today — and by tomorrow you will have a plan of first steps and a clear income goal for your first month.',
+  specs: [
+    { label: 'Schedule', value: 'Flexible, 2–3 hours a day' },
+    { label: 'Experience', value: 'Not needed — we train from scratch' },
+    { label: 'Location', value: 'Remote · all of Poland' },
+    { label: 'Payouts', value: 'Regular, on a fixed schedule' },
+    { label: 'Start', value: 'Within days after the online casting' },
+  ],
   faq: [
     {
-      q: 'How much does an OnlyFans model earn in Poland?',
-      a: 'The visible income benchmark for a model is $500–8000 a month (roughly 2,000–32,000 zł at the current rate) depending on the plan, persona and engagement; in the first month a new page usually reaches $500–1,000. A model receives 20–30% of the page’s gross balance, and the agency reinvests part of the income into promo and traffic. The agency’s top-page balances reach $15,000–$50,000 a month, but that’s the result of months of teamwork, not a guarantee.',
+      q: 'How anonymous and private is it?',
+      a: 'Privacy is configured individually, and the page audience is aimed at faraway markets — acquaintances in Poland or Ukraine will almost never stumble upon it. Who you tell about the work is up to you alone.',
     },
     {
-      q: 'Can I work as an OnlyFans model in Poland if I’m a Ukrainian from the diaspora?',
-      a: 'Yes — that’s one of our main audiences here. The work is fully remote, and you can run the page from Warsaw, Kraków, Wrocław, Gdańsk or Poznań; citizenship and residence status don’t affect the terms. The team speaks Ukrainian and Russian, helps with registration and verification, and payouts land on a Polish card.',
+      q: 'Do I need experience to start?',
+      a: 'No. We work with both beginners and experienced models: the team provides a content plan, suggests angles that work and supports you at every step.',
     },
     {
-      q: 'Do you need experience or Polish to start in Poland?',
-      a: 'No. Polish isn’t needed for the work — the content targets the paying audience of Western Europe and the US, and the agency’s chat team handles subscriber messaging. Experience isn’t required either: at onboarding you get a content plan and working formats. You need to be 18+, have a smartphone with a decent camera and be ready to shoot regularly.',
+      q: 'I do not speak Polish and I am only settling in — will it work for me?',
+      a: 'It will. Polish is not needed for this work at all: you talk to the team in Ukrainian or Russian, and we run the subscriber messaging. Many of our models started in exactly the same situation.',
     },
     {
-      q: 'Is it anonymous and safe for a woman in Poland?',
-      a: 'The level of privacy is discussed individually at the casting. The standard practice is a geo-block: the page is closed to Poland and countries where you might be recognised, while we bring the paying audience from Germany, the UK, Scandinavia and the US. Content formats are agreed in advance and fixed in the plan — nothing is published "by default".',
+      q: 'When do I get my first payout?',
+      a: 'The first payout usually lands within the first month, then on a fixed schedule. We will discuss at the start how it is most convenient to receive money while living in Poland.',
+    },
+    {
+      q: 'I am not from Poland — can I still start?',
+      a: 'Yes. The work is fully remote, so it does not matter where you live right now: you can start from any country or city.',
     },
   ],
 };
 
 const ES: ModelGeoContent = {
   countryName: 'Polonia',
-  title: 'Trabajo de modelo de OnlyFans en Polonia — remoto, ingresos $500–8000/mes',
+  title: 'Modelo OnlyFans en Polonia — remoto, desde $3 000/mes',
   description:
-    'Trabajo de modelo de OnlyFans en Polonia: remoto desde Varsovia, Cracovia, Breslavia, Gdansk, Poznań. Grabación 2–3 h/día, el registro, la promoción, el chat y las finanzas los lleva la agencia. Ingresos $500–8000/mes (≈ 2000–32 000 zł). Sin experiencia.',
+    'Gana $3 000–10 000/mes como modelo de OnlyFans en Polonia: trabajo 100% remoto, el equipo lleva promoción, chat y finanzas y habla ucraniano. 18+, sin experiencia.',
   introHtml:
-    'La agencia OFM Models incorpora modelos de OnlyFans en Polonia para trabajo remoto desde casa — la vacante está abierta tanto a las polacas como a las cientos de miles de ucranianas de la diáspora local. Es una sola vacante para todo el país: desde Varsovia, Cracovia, Breslavia, Gdansk o Poznań, las condiciones, el equipo y el porcentaje son iguales para todas. El formato es simple: grabas contenido según un plan acordado 2–3 horas al día, y todo lo demás — el registro y la verificación de la página, la promoción, la mensajería con los suscriptores y las finanzas — lo asume el equipo de la agencia. No hacen falta experiencia, portafolio ni equipo profesional: la mayoría de nuestras modelos empezaron desde cero con el smartphone. Qué hace la agencia en cada etapa — lo analizamos en el artículo [qué hace una agencia de OnlyFans](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Varsovia', 'Cracovia', 'Breslavia', 'Gdansk', 'Poznań'],
-  marketContext:
-    'Polonia es el mercado europeo clave de la agencia: aquí se ha asentado una enorme diáspora ucraniana, así que las chicas de habla ucraniana y rusa arrancan con especial facilidad — el equipo habla su idioma y el país donde vives no supone un obstáculo. La propia Polonia está dentro de una zona de demanda con buen poder adquisitivo: los suscriptores de Alemania, Reino Unido y Escandinavia pagan en euros y libras, y la diferencia de cambio frente al esloti juega a favor de la modelo. El mercado es joven y está lejos de saturarse — todavía hay varias veces menos páginas radicadas en Polonia que audiencia con capacidad de pago dispuesta a suscribirse.',
-  paymentsNote:
-    'Los pagos en Polonia van por los sistemas de pago internacionales de OnlyFans — Paxum y Skrill; el retiro en eslotis va a una tarjeta polaca (incluida una cuenta abierta con número PESEL) o al método que te resulte cómodo, con un calendario fijo — cada dos semanas. Toda la contabilidad, las comisiones de las pasarelas y los retiros los lleva la agencia: no necesitas lidiar con la configuración de las carteras ni con los tipos de cambio — ves tu porcentaje y tu calendario, el resto lo cubre el equipo.',
-  earningsNarrative:
-    'Referencias honestas para Polonia: el primer mes una página nueva suele llegar a $500–1000 de saldo bruto — es el arranque, la audiencia apenas se forma. Después el crecimiento depende de la regularidad del contenido: los saldos de las páginas top de la agencia llegan a $15 000–$50 000 brutos al mes, pero es el resultado de meses de trabajo sistemático del equipo, no un punto de partida ni una garantía. La modelo recibe el 20–30% del saldo bruto de la página — el porcentaje depende del plan, el perfil y la implicación; la agencia financia por completo la promo, el tráfico y el equipo de chat, y parte de los ingresos se reinvierte en el crecimiento de la página, por eso el saldo y tu porcentaje crecen juntos. El ingreso depende del plan, el perfil y la implicación y no es una garantía. De qué se componen las cifras — en el artículo [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), y puedes estimar tu potencial en la [calculadora de ingresos](/calculator).',
+    '¡Hola! Somos OFM Models, una agencia de ciclo completo: en más de 3 años hemos lanzado y hecho crecer 220+ páginas de modelos. En Polonia esperamos sobre todo a ucranianas que construyen su vida en un lugar nuevo — y nos alegra cada chica mayor de 18 de Varsovia, Cracovia, Gdansk o una ciudad pequeña. No hace falta polaco: el equipo habla ucraniano y ruso, la mentalidad es cercana y entenderse resulta fácil. Grabas de día, el equipo cubre las horas punta vespertinas de la audiencia extranjera, y los pagos regulares permiten planificar el alquiler y los gastos en Polonia con calma.',
+  offers: [
+    'De ti, el contenido; de nosotros, todo lo demás: la página, la promoción, los diálogos con suscriptores y las finanzas.',
+    'Un listón claro: la mayoría de nuestras modelos gana de $3 000 a $10 000 al mes.',
+    'La agencia financia toda la promoción — no gastarás ni un céntimo.',
+    'Empieza sin polaco: toda la comunicación con el equipo es en ucraniano o ruso, y la mensajería con suscriptores la llevamos nosotros.',
+    'Confidencialidad: cuidamos tu información personal y configuramos la privacidad como a ti te resulte cómodo.',
+    'Entendemos tu situación: muchas chicas del equipo también empezaron de cero en un lugar nuevo — te ayudamos a lograr un ingreso estable sin estrés añadido.',
+  ],
+  expectations: [
+    'Tienes 18 años o más.',
+    'Una actitud seria: te esfuerzas en cada toma y quieres crecer.',
+    'El único equipo: un smartphone e internet estable; da igual en qué ciudad de Polonia estés.',
+    'Organización y constancia con el plan de contenido — normalmente 2–3 horas de grabación al día.',
+    'Apertura a la colaboración y a la comunicación con el equipo.',
+  ],
+  closingHtml:
+    'Empezar es más fácil de lo que parece: escríbenos hoy — y mañana ya tendrás un plan con los primeros pasos y una meta clara de ingresos para el primer mes.',
+  specs: [
+    { label: 'Horario', value: 'Flexible, 2–3 horas al día' },
+    { label: 'Experiencia', value: 'No hace falta — te formamos desde cero' },
+    { label: 'Ubicación', value: 'Remoto · toda Polonia' },
+    { label: 'Pagos', value: 'Regulares, con calendario fijo' },
+    { label: 'Inicio', value: 'En los primeros días tras el casting online' },
+  ],
   faq: [
     {
-      q: '¿Cuánto gana una modelo de OnlyFans en Polonia?',
-      a: 'La referencia visible de ingresos de una modelo es $500–8000 al mes (unos 2000–32 000 zł al cambio actual) según el plan, el perfil y la implicación; el primer mes una página nueva suele llegar a $500–1000. La modelo recibe el 20–30% del saldo bruto de la página, y la agencia reinvierte parte de los ingresos en promo y tráfico. Los saldos de las páginas top de la agencia llegan a $15 000–$50 000 al mes, pero es el resultado de meses de trabajo del equipo, no una garantía.',
+      q: '¿Es anónimo y privado?',
+      a: 'La privacidad se configura individualmente y la audiencia de la página se dirige a mercados lejanos — tus conocidos en Polonia o Ucrania casi nunca se toparán con ella. A quién se lo cuentas lo eliges solo tú.',
     },
     {
-      q: '¿Puedo trabajar como modelo de OnlyFans en Polonia si soy ucraniana de la diáspora?',
-      a: 'Sí, es uno de nuestros públicos principales aquí. El trabajo es totalmente remoto y puedes llevar la página desde Varsovia, Cracovia, Breslavia, Gdansk o Poznań; la nacionalidad y el estatus de residencia no afectan las condiciones. El equipo habla ucraniano y ruso, ayuda con el registro y la verificación, y los pagos llegan a una tarjeta polaca.',
+      q: '¿Necesito experiencia para empezar?',
+      a: 'No. Trabajamos con principiantes y con modelos con experiencia: el equipo te da un plan de contenido, te sugiere ángulos que funcionan y te acompaña en cada paso.',
     },
     {
-      q: '¿Hace falta experiencia o saber polaco para empezar en Polonia?',
-      a: 'No. El polaco no es necesario para el trabajo — el contenido se dirige a la audiencia con capacidad de pago de Europa Occidental y EE. UU., y el equipo de chat de la agencia se encarga de la mensajería con los suscriptores. Tampoco hace falta experiencia: en el onboarding recibes un plan de contenido y formatos que funcionan. Hace falta ser mayor de 18, tener un smartphone con una cámara decente y estar dispuesta a grabar con regularidad.',
+      q: 'No hablo polaco y apenas me estoy instalando — ¿me funcionará?',
+      a: 'Sí. El polaco no hace ninguna falta aquí: con el equipo hablas en ucraniano o ruso y la mensajería con suscriptores la llevamos nosotros. Muchas de nuestras modelos empezaron exactamente en la misma situación.',
     },
     {
-      q: '¿Es anónimo y seguro para una chica en Polonia?',
-      a: 'El nivel de privacidad lo hablamos de forma individual en el casting. La práctica estándar es el geobloqueo: la página se cierra a Polonia y a los países donde podrían reconocerte, mientras la audiencia con capacidad de pago la traemos de Alemania, Reino Unido, Escandinavia y EE. UU. Los formatos de contenido se acuerdan de antemano y se fijan en el plan — nada se publica «por defecto».',
+      q: '¿Cuándo recibo el primer pago?',
+      a: 'El primer pago suele llegar ya en el primer mes; después, con un calendario fijo. Cómo te resulta más cómodo recibir el dinero viviendo en Polonia lo hablamos al empezar.',
+    },
+    {
+      q: 'No soy de Polonia — ¿puedo empezar igualmente?',
+      a: 'Sí. El trabajo es totalmente remoto, así que no importa dónde vivas ahora: puedes empezar desde cualquier país o ciudad.',
     },
   ],
 };

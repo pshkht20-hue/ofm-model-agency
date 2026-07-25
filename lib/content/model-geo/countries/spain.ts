@@ -1,14 +1,16 @@
 /**
- * Гео-страница «Модель OnlyFans» — Испания (Spain), волна 1.
- * Написана ПО ОБРАЗЦУ countries/ukraine.ts (см. index.ts, как добавить).
+ * Гео-страница «Модель OnlyFans» — Испания (волна 1).
+ * Формат «рекламный креатив» (директива владельца 25.07.2026, вторая итерация):
+ * интро → «Что мы предлагаем» → «Что мы ждём от тебя» → приглашение → FAQ.
  *
- * SEO-контекст ES-рынка (DataForSEO): «trabajo modelo webcam» ~880/мес
- * (второй по силе сигнал спроса), «trabajo de modelo» ~210/мес — ES-локаль
- * прорабатываем сильно, якоря в title/description/faq.
+ * Локальный мотив (уникализация 25.07.2026): солнечный контент-сеттинг
+ * (естественный свет = готовая студия), сиеста-график, вечер Испании =
+ * дневной пик аудитории США — его ведёт команда; выплаты в евро.
+ * SEO-контекст ES-рынка (DataForSEO): «trabajo modelo webcam» ~880/мес.
  *
- * Красные линии — см. ../types.ts. Доход $500–8000/мес (видимый = baseSalary),
- * «$15 000–$50 000» только как балансы топ-страниц прозой + дисклеймер, 20–30%
- * с обоснованием реинвеста, без «договор/контракт», только OnlyFans.
+ * Красные линии: без процентов/gross/реинвеста, без «договор/контракт» и
+ * триггер-слов; вилка дохода — только record.incomeUsd ($3 000–10 000);
+ * только OnlyFans; эмодзи не используем — иконки рендерит шаблон страницы.
  */
 import type { Locale } from '@/i18n/routing';
 import type { ModelGeoContent, ModelGeoCountry } from '../types';
@@ -18,143 +20,227 @@ export const record: ModelGeoCountry = {
   iso: 'ES',
   currency: 'EUR',
   usdToLocalRate: 0.92,
-  incomeUsd: { min: 500, max: 8000 },
+  incomeUsd: { min: 3000, max: 10000 },
   wave: 1,
   hasPage: true,
 };
 
 const RU: ModelGeoContent = {
   countryName: 'Испания',
-  title: 'Работа моделью OnlyFans в Испании — удалённо, доход $500–8000/мес',
+  title: 'OnlyFans-модель в Испании — работа удалённо, от $3 000/мес',
   description:
-    'Работа моделью OnlyFans в Испании: удалённо из Мадрида, Барселоны, Валенсии, Севильи, Малаги. Съёмка 2–3 ч/день, регистрацию, промо, чат и финансы ведёт агентство. Доход $500–8000/мес (≈460–7360 €). Опыт не нужен.',
+    'От $3 000 до $10 000 в месяц — доход многих наших моделей OnlyFans в Испании. Снимай при солнечном свете, а продвижение, переписку и финансы ведёт команда.',
   introHtml:
-    'Агентство OFM Models набирает моделей OnlyFans по всей Испании на удалённую работу из дома. Это одна вакансия на всю страну: из Мадрида ты, из Барселоны, Валенсии, Севильи или Малаги — условия, команда и процент одинаковы для всех. Формат простой: ты снимаешь контент по согласованному плану 2–3 часа в день, а всё остальное — регистрацию и верификацию страницы, продвижение, переписку с подписчиками и финансы — берёт на себя команда агентства. Опыт, портфолио и профессиональная техника не нужны: хватает смартфона и стабильного интернета. Что делает агентство на каждом этапе — разобрали в статье [что делает OnlyFans-агентство](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Мадрид', 'Барселона', 'Валенсия', 'Севилья', 'Малага'],
-  marketContext:
-    'Испания — один из самых зрелых рынков в ЕС: испаноязычная аудитория активно ищет «trabajo de modelo webcam», поэтому местные девушки быстро понимают формат и не тратят время на объяснения «что это такое». Плюс на стороне модели — сама платёжеспособность зрителя: испанские страницы удобно продвигать сразу на два ядра, англоязычное (США, Великобритания, Канада) и огромную латиноамериканскую диаспору, что даёт широкое окно спроса и стабильный приток подписчиков. Курортная эстетика (Барселона, Коста-дель-Соль, Валенсия) и южный визуальный стиль дают готовую «картинку», под которую легко строить контент-план.',
-  paymentsNote:
-    'Выплаты в Испании идут через международные платёжные системы OnlyFans — Paxum и Skrill; вывод в евро — на испанскую карту или SEPA-счёт, раз в две недели по фиксированному графику. Всю бухгалтерию, комиссии платёжек и вывод ведёт агентство: тебе не нужно разбираться в настройках кошельков и курсах — ты видишь свой процент и график, остальное закрывает команда.',
-  earningsNarrative:
-    'Честные ориентиры для Испании: в первый месяц новая страница обычно выходит на $500–1 000 gross-баланса — это разгон, аудитория только набирается. Дальше рост зависит от регулярности контента: страницы топ-моделей агентства выходят на балансы $15 000–$50 000 gross в месяц, но это результат месяцев системной работы команды, а не стартовая точка и не гарантия. Модель получает 20–30% от gross-баланса страницы — процент зависит от плана, типажа и вовлечённости; агентство полностью финансирует промо, трафик и чат-команду, а часть дохода реинвестируется в рост страницы, поэтому баланс и твой процент растут вместе. Доход зависит от плана, типажа и вовлечённости и не является гарантией. Из чего складываются цифры — в статье [сколько зарабатывают модели OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), а прикинуть свой потенциал можно в [калькуляторе дохода](/calculator).',
+    'Привет! Мы — OFM Models, агентство полного цикла: за 3+ года мы запустили и вырастили 220+ страниц моделей. В Испании ждём девушек 18+ — от Мадрида и Барселоны до Андалусии и островов, с опытом и без. Солнце здесь само работает на картинку: естественный свет почти круглый год — лучшая «студия» для съёмок, а поздний испанский вечер совпадает с дневным пиком американской аудитории, и команда использует это время по максимуму. Выплаты в евро по фиксированным датам — удобно для повседневной жизни в Испании.',
+  offers: [
+    'На тебе — только съёмка: оформление страницы, трафик, переписку с подписчиками и финансы полностью закрывает команда.',
+    'Ориентир по цифрам: многие модели агентства зарабатывают от $3 000 до $10 000 в месяц.',
+    'Все расходы на раскрутку берёт на себя агентство — стартуешь без вложений.',
+    'Солнечная Испания — готовая студия: терраса, пляж или город в золотой час — и контент выглядит дорого без сложного оборудования.',
+    'Конфиденциальность: бережно относимся к твоей личной информации и настраиваем приватность так, как комфортно тебе.',
+    'График в испанском стиле: снимай утром или после сиесты — вечернюю активность аудитории США ведёт команда.',
+  ],
+  expectations: [
+    'Тебе исполнилось 18 лет.',
+    'Внимание к качеству: следишь за светом и кадром и хочешь, чтобы страница росла.',
+    'Готовность работать удалённо из любой точки — достаточно смартфона и стабильного интернета.',
+    'Организованность и соблюдение контент-плана — обычно это 2–3 часа съёмок в день.',
+    'Держишь связь с командой без долгих пауз — быстрые ответы ускоряют рост страницы.',
+  ],
+  closingHtml:
+    'Хочешь попробовать? Напиши нам пару строк — честно ответим даже на неудобные вопросы, покажем, как выглядит первый месяц, и вместе решим, стартуем ли.',
+  specs: [
+    { label: 'График', value: 'Гибкий, 2–3 часа в день' },
+    { label: 'Опыт', value: 'Не требуется — обучаем с нуля' },
+    { label: 'Локация', value: 'Удалённо · вся Испания' },
+    { label: 'Выплаты', value: 'Регулярно, по фиксированному графику' },
+    { label: 'Старт', value: 'В первые дни после онлайн-кастинга' },
+  ],
   faq: [
     {
-      q: 'Сколько зарабатывает модель OnlyFans в Испании?',
-      a: 'Видимый ориентир дохода модели — $500–8000 в месяц (≈460–7360 €) в зависимости от плана, типажа и вовлечённости; в первый месяц новая страница обычно выходит на $500–1 000. Модель получает 20–30% от gross-баланса страницы, агентство реинвестирует часть дохода в промо и трафик. Балансы топ-страниц агентства доходят до $15 000–$50 000 в месяц, но это результат месяцев работы команды, а не гарантия.',
+      q: 'Насколько это анонимно и приватно?',
+      a: 'Настройки приватности подбираем под тебя, а аудиторию страницы направляем за океан — в Испании её почти никто не встретит. Кому рассказать о работе, решаешь только ты.',
     },
     {
-      q: 'Из каких городов Испании можно работать моделью OnlyFans?',
-      a: 'Из любого: работа полностью удалённая. Чаще всего наши модели — из Мадрида, Барселоны, Валенсии, Севильи и Малаги, но город не влияет ни на условия, ни на процент — снимать можно из дома в любом населённом пункте Испании, нужны только смартфон и стабильный интернет.',
+      q: 'Нужен ли опыт, чтобы начать?',
+      a: 'Нет. Мы работаем и с новичками, и с опытными моделями: команда даёт контент-план, подсказывает удачные ракурсы и сопровождает на каждом шагу.',
     },
     {
-      q: 'Нужен ли опыт или английский, чтобы начать работу моделью OnlyFans в Испании?',
-      a: 'Нет. Начать можно с нуля: на онбординге дают контент-план, показывают рабочие ракурсы и форматы, а всю переписку с англоязычными подписчиками ведёт чат-команда агентства — знать английский тебе не нужно. Нужны 18+, смартфон с нормальной камерой и готовность снимать регулярно.',
+      q: 'Подходит ли часовой пояс Испании для работы с аудиторией США?',
+      a: 'Да, и даже очень: когда в Испании вечер, в США разгар дня и подписчики активны — с ними в это время работает команда. Ты снимаешь, когда удобно тебе: утром, днём или после сиесты.',
     },
     {
-      q: 'Это анонимно и безопасно для девушки из Испании?',
-      a: 'Уровень приватности обсуждаем на кастинге индивидуально. Стандартная практика — геоблок: страница закрывается от Испании, чтобы знакомые её не увидели, а платёжеспособную аудиторию приводим из США, Великобритании, Канады и латиноамериканской диаспоры. Форматы контента согласуются заранее и фиксируются в плане — ничего «по умолчанию» не публикуется.',
+      q: 'Когда я получу первую выплату?',
+      a: 'Первые деньги обычно приходят в течение первого месяца, дальше — по фиксированным датам в евро. Подходящий способ получения выберем вместе на старте.',
+    },
+    {
+      q: 'Я не из Испании — могу ли начать?',
+      a: 'Да. Работа полностью удалённая, поэтому неважно, где ты живёшь сейчас: начать можно из любой страны и города.',
     },
   ],
 };
 
 const UK: ModelGeoContent = {
   countryName: 'Іспанія',
-  title: 'Робота моделлю OnlyFans в Іспанії — віддалено, дохід $500–8000/міс',
+  title: 'Робота моделлю OnlyFans в Іспанії — від $3 000/міс',
   description:
-    'Робота для дівчат моделлю OnlyFans в Іспанії: віддалено з Мадрида, Барселони, Валенсії, Севільї, Малаги. Зйомка 2–3 год/день, реєстрацію, промо, чат і фінанси веде агенція. Дохід $500–8000/міс (≈460–7360 €). Досвід не потрібен.',
+    'Від $3 000 до $10 000 на місяць — дохід багатьох наших моделей OnlyFans в Іспанії. Знімай при сонячному світлі, а просування, листування й фінанси веде команда.',
   introHtml:
-    'Агенція OFM Models набирає моделей OnlyFans по всій Іспанії на віддалену роботу з дому. Це одна вакансія на всю країну: з Мадрида ти, з Барселони, Валенсії, Севільї чи Малаги — умови, команда й відсоток однакові для всіх. Формат простий: ти знімаєш контент за узгодженим планом 2–3 години на день, а все інше — реєстрацію та верифікацію сторінки, просування, листування з підписниками й фінанси — бере на себе команда агенції. Досвід, портфоліо та професійна техніка не потрібні: вистачає смартфона й стабільного інтернету. Що робить агенція на кожному етапі — розібрали у статті [що робить OnlyFans-агенція](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Мадрид', 'Барселона', 'Валенсія', 'Севілья', 'Малага'],
-  marketContext:
-    'Іспанія — один із найзріліших ринків у ЄС: іспаномовна аудиторія активно шукає «trabajo de modelo webcam», тож місцеві дівчата швидко розуміють формат і не витрачають час на пояснення «що це таке». Ще один плюс для моделі — платоспроможність глядача: іспанські сторінки зручно просувати одразу на два ядра, англомовне (США, Велика Британія, Канада) і величезну латиноамериканську діаспору, що дає широке вікно попиту та стабільний приплив підписників. Курортна естетика (Барселона, Коста-дель-Соль, Валенсія) і південний візуальний стиль дають готову «картинку», під яку легко будувати контент-план.',
-  paymentsNote:
-    'Виплати в Іспанії йдуть через міжнародні платіжні системи OnlyFans — Paxum і Skrill; виведення в євро — на іспанську картку чи SEPA-рахунок, раз на два тижні за фіксованим графіком. Усю бухгалтерію, комісії платіжок і виведення веде агенція: тобі не треба розбиратися в налаштуваннях гаманців і курсах — ти бачиш свій відсоток і графік, решту закриває команда.',
-  earningsNarrative:
-    'Чесні орієнтири для Іспанії: у перший місяць нова сторінка зазвичай виходить на $500–1 000 gross-балансу — це розгін, аудиторія тільки набирається. Далі зростання залежить від регулярності контенту: сторінки топ-моделей агенції виходять на баланси $15 000–$50 000 gross на місяць, але це результат місяців системної роботи команди, а не стартова точка й не гарантія. Модель отримує 20–30% від gross-балансу сторінки — відсоток залежить від плану, типажу та залученості; агенція повністю фінансує промо, трафік і чат-команду, а частина доходу реінвестується в зростання сторінки, тому баланс і твій відсоток ростуть разом. Дохід залежить від плану, типажу та залученості й не є гарантією. З чого складаються цифри — у статті [скільки заробляють моделі OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), а прикинути свій потенціал можна в [калькуляторі доходу](/calculator).',
+    'Привіт! Ми — OFM Models, агенція повного циклу: за понад 3 роки ми запустили й розвинули 220+ сторінок моделей. В Іспанії чекаємо дівчат 18+ — від Мадрида й Барселони до Андалусії та островів, з досвідом і без. Сонце тут саме працює на картинку: природне світло майже цілий рік — найкраща «студія» для зйомок, а пізній іспанський вечір збігається з денним піком американської аудиторії, і команда використовує цей час на повну. Виплати в євро за фіксованими датами — зручно для повсякденного життя в Іспанії.',
+  offers: [
+    'На тобі — лише зйомка: оформлення сторінки, трафік, листування з підписниками й фінанси повністю закриває команда.',
+    'Орієнтир у цифрах: багато моделей агенції заробляють від $3 000 до $10 000 на місяць.',
+    'Усі витрати на розкрутку бере на себе агенція — стартуєш без вкладень.',
+    'Сонячна Іспанія — готова студія: тераса, пляж чи місто в золоту годину — і контент має дорогий вигляд без складного обладнання.',
+    'Конфіденційність: дбайливо ставимося до твоєї особистої інформації та налаштовуємо приватність так, як зручно тобі.',
+    'Графік в іспанському стилі: знімай уранці або після сієсти — вечірню активність аудиторії США веде команда.',
+  ],
+  expectations: [
+    'Тобі виповнилося 18 років.',
+    'Увага до якості: стежиш за світлом і кадром та хочеш, щоб сторінка зростала.',
+    'Готовність працювати віддалено з будь-якої точки — достатньо смартфона та стабільного інтернету.',
+    'Організованість і дотримання контент-плану — зазвичай це 2–3 години зйомок на день.',
+    'Тримаєш зв’язок із командою без довгих пауз — швидкі відповіді прискорюють зростання сторінки.',
+  ],
+  closingHtml:
+    'Хочеш спробувати? Напиши нам кілька рядків — чесно відповімо навіть на незручні запитання, покажемо, який вигляд має перший місяць, і разом вирішимо, чи стартуємо.',
+  specs: [
+    { label: 'Графік', value: 'Гнучкий, 2–3 години на день' },
+    { label: 'Досвід', value: 'Не потрібен — навчимо з нуля' },
+    { label: 'Локація', value: 'Віддалено · вся Іспанія' },
+    { label: 'Виплати', value: 'Регулярні, за фіксованим графіком' },
+    { label: 'Старт', value: 'У перші дні після онлайн-кастингу' },
+  ],
   faq: [
     {
-      q: 'Скільки заробляє модель OnlyFans в Іспанії?',
-      a: 'Видимий орієнтир доходу моделі — $500–8000 на місяць (≈460–7360 €) залежно від плану, типажу та залученості; у перший місяць нова сторінка зазвичай виходить на $500–1 000. Модель отримує 20–30% від gross-балансу сторінки, агенція реінвестує частину доходу в промо та трафік. Баланси топ-сторінок агенції сягають $15 000–$50 000 на місяць, але це результат місяців роботи команди, а не гарантія.',
+      q: 'Наскільки це анонімно і приватно?',
+      a: 'Налаштування приватності добираємо під тебе, а аудиторію сторінки спрямовуємо за океан — в Іспанії її майже ніхто не побачить. Кому розповісти про роботу, вирішуєш лише ти.',
     },
     {
-      q: 'З яких міст Іспанії можна працювати моделлю OnlyFans?',
-      a: 'З будь-якого: робота повністю віддалена. Найчастіше наші моделі — з Мадрида, Барселони, Валенсії, Севільї та Малаги, але місто не впливає ні на умови, ні на відсоток — знімати можна з дому в будь-якому населеному пункті Іспанії, потрібні лише смартфон і стабільний інтернет.',
+      q: 'Чи потрібен досвід, щоб почати?',
+      a: 'Ні. Ми працюємо і з новачками, і з досвідченими моделями: команда дає контент-план, підказує вдалі ракурси й супроводжує на кожному кроці.',
     },
     {
-      q: 'Чи потрібен досвід або англійська, щоб почати роботу моделлю OnlyFans в Іспанії?',
-      a: 'Ні. Почати можна з нуля: на онбордингу дають контент-план, показують робочі ракурси та формати, а все листування з англомовними підписниками веде чат-команда агенції — знати англійську тобі не треба. Потрібні 18+, смартфон із нормальною камерою та готовність знімати регулярно.',
+      q: 'Чи підходить часовий пояс Іспанії для роботи з аудиторією США?',
+      a: 'Так, і навіть дуже: коли в Іспанії вечір, у США розпал дня й підписники активні — з ними в цей час працює команда. Ти знімаєш, коли зручно тобі: вранці, вдень чи після сієсти.',
     },
     {
-      q: 'Це анонімно й безпечно для дівчини з Іспанії?',
-      a: 'Рівень приватності обговорюємо на кастингу індивідуально. Стандартна практика — геоблок: сторінка закривається від Іспанії, щоб знайомі її не побачили, а платоспроможну аудиторію приводимо зі США, Великої Британії, Канади та латиноамериканської діаспори. Формати контенту узгоджуються заздалегідь і фіксуються в плані — нічого «за замовчуванням» не публікується.',
+      q: 'Коли я отримаю першу виплату?',
+      a: 'Перші гроші зазвичай надходять упродовж першого місяця, далі — за фіксованими датами в євро. Зручний спосіб отримання виберемо разом на старті.',
+    },
+    {
+      q: 'Я не з Іспанії — чи можу почати?',
+      a: 'Так. Робота повністю віддалена, тож неважливо, де ти живеш зараз: почати можна з будь-якої країни та міста.',
     },
   ],
 };
 
 const EN: ModelGeoContent = {
   countryName: 'Spain',
-  title: 'OnlyFans model job in Spain — remote, income $500–8000/mo',
+  title: 'OnlyFans model job in Spain — remote, from $3 000/mo',
   description:
-    'OnlyFans model job in Spain: remote from Madrid, Barcelona, Valencia, Seville, Málaga. Shooting 2–3 h/day, registration, promo, chat and finances run by the agency. Income $500–8000/mo (≈€460–7360). No experience needed.',
+    'Earn $3 000–10 000/mo as an OnlyFans model in Spain: shoot in the sun on your schedule while the team handles promotion, chats and finances. 18+ only.',
   introHtml:
-    'OFM Models agency is recruiting OnlyFans models across Spain for remote work from home. This is one vacancy for the whole country: whether you’re in Madrid, Barcelona, Valencia, Seville or Málaga, the terms, team and percentage are the same for everyone. The format is simple: you shoot content on an agreed plan 2–3 hours a day, and everything else — registering and verifying the page, promotion, subscriber messaging and finances — is handled by the agency team. Experience, a portfolio and professional gear aren’t needed: a smartphone and stable internet are enough. What the agency does at each stage — we broke it down in the article [what an OnlyFans agency does](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Madrid', 'Barcelona', 'Valencia', 'Seville', 'Málaga'],
-  marketContext:
-    'Spain is one of the most mature markets in the EU: Spanish-speaking audiences actively search for webcam and creator work, so local women grasp the format quickly and don’t waste time on “what even is this”. Another edge for the model is reach — Spanish pages are convenient to promote to two cores at once: the English-speaking paying audience (US, UK, Canada) and the huge Latin American diaspora, which gives a wide demand window and a steady flow of subscribers. The resort aesthetic (Barcelona, the Costa del Sol, Valencia) and a sun-lit southern visual style provide a ready-made “look” that a content plan is easy to build around.',
-  paymentsNote:
-    'Payouts in Spain go through OnlyFans’ international payment systems — Paxum and Skrill; withdrawal in euros goes to a Spanish card or SEPA account every two weeks on a fixed schedule. All the accounting, processor fees and withdrawals are run by the agency: you don’t need to figure out wallet settings or exchange rates — you see your percentage and schedule, the team covers the rest.',
-  earningsNarrative:
-    'Honest benchmarks for Spain: in the first month a new page usually reaches $500–1,000 of gross balance — that’s the ramp-up, the audience is only just building. Further growth depends on content consistency: the agency’s top-model pages reach balances of $15,000–$50,000 gross a month, but that’s the result of months of systematic teamwork, not a starting point and not a guarantee. A model receives 20–30% of the page’s gross balance — the percentage depends on the plan, persona and engagement; the agency fully funds promo, traffic and the chat team, and part of the income is reinvested into the page’s growth, so the balance and your percentage grow together. Income depends on the plan, persona and engagement and is not a guarantee. What the numbers are made of — in the article [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli), and you can estimate your own potential in the [income calculator](/calculator).',
+    'Hi! We are OFM Models, a full-cycle agency: over 3+ years we have launched and grown 220+ creator pages. In Spain we welcome women 18+ — from Madrid and Barcelona to Andalusia and the islands, experienced or new. The sun does half the job here: natural light almost all year round is the best possible studio, and the late Spanish evening lines up with the daytime peak of the American audience — the team makes the most of those hours. Payouts arrive in euros on fixed dates, handy for everyday life in Spain.',
+  offers: [
+    'Shooting is your only task: page design, traffic, subscriber messaging and finances are fully covered by the team.',
+    'A benchmark in numbers: many of the agency’s models earn from $3 000 to $10 000 a month.',
+    'All promotion costs are carried by the agency — you start with zero investment.',
+    'Sunny Spain is a ready-made studio: a terrace, a beach or a city street at golden hour — and content looks premium without complex gear.',
+    'Confidentiality: we treat your personal information with care and set up privacy the way you feel comfortable.',
+    'A schedule the Spanish way: shoot in the morning or after siesta — the evening activity of the US audience is run by the team.',
+  ],
+  expectations: [
+    'You are 18 or older.',
+    'An eye for quality: you care about light and framing and want the page to grow.',
+    'Ready to work remotely from anywhere — a smartphone and stable internet are enough.',
+    'Organised and consistent with the content plan — usually 2–3 hours of shooting a day.',
+    'You stay in touch with the team without long pauses — quick replies keep the page growing faster.',
+  ],
+  closingHtml:
+    'Want to give it a try? Drop us a few lines — we will honestly answer even the awkward questions, show what the first month looks like and decide together whether to start.',
+  specs: [
+    { label: 'Schedule', value: 'Flexible, 2–3 hours a day' },
+    { label: 'Experience', value: 'Not needed — we train from scratch' },
+    { label: 'Location', value: 'Remote · all of Spain' },
+    { label: 'Payouts', value: 'Regular, on a fixed schedule' },
+    { label: 'Start', value: 'Within days after the online casting' },
+  ],
   faq: [
     {
-      q: 'How much does an OnlyFans model earn in Spain?',
-      a: 'The visible income benchmark for a model is $500–8000 a month (≈€460–7360) depending on the plan, persona and engagement; in the first month a new page usually reaches $500–1,000. A model receives 20–30% of the page’s gross balance, and the agency reinvests part of the income into promo and traffic. The agency’s top-page balances reach $15,000–$50,000 a month, but that’s the result of months of teamwork, not a guarantee.',
+      q: 'How anonymous and private is it?',
+      a: 'Privacy settings are picked for you personally, and the page audience is sent overseas — hardly anyone in Spain will ever come across it. Who to tell about the work is entirely your call.',
     },
     {
-      q: 'Which cities in Spain can you work as an OnlyFans model from?',
-      a: 'Any: the work is fully remote. Most often our models are from Madrid, Barcelona, Valencia, Seville and Málaga, but the city affects neither the terms nor the percentage — you can shoot from home in any locality in Spain, all you need is a smartphone and stable internet.',
+      q: 'Do I need experience to start?',
+      a: 'No. We work with both beginners and experienced models: the team provides a content plan, suggests angles that work and supports you at every step.',
     },
     {
-      q: 'Do you need experience or English to start OnlyFans model work in Spain?',
-      a: 'No. You can start from scratch: at onboarding you get a content plan and are shown working angles and formats, while all messaging with English-speaking subscribers is handled by the agency’s chat team — you don’t need to know English. You need to be 18+, have a smartphone with a decent camera and be ready to shoot regularly.',
+      q: 'Does the Spanish time zone suit working with a US audience?',
+      a: 'Yes, very much so: when it is evening in Spain, the US is in the middle of its day and subscribers are active — the team works with them during those hours. You shoot whenever suits you: morning, afternoon or after siesta.',
     },
     {
-      q: 'Is it anonymous and safe for a woman from Spain?',
-      a: 'The level of privacy is discussed individually at the casting. The standard practice is a geo-block: the page is closed to Spain so acquaintances won’t see it, while we bring the paying audience from the US, UK, Canada and the Latin American diaspora. Content formats are agreed in advance and fixed in the plan — nothing is published "by default".',
+      q: 'When do I get my first payout?',
+      a: 'The first money usually arrives within the first month, then on fixed dates in euros. We will choose the payout method that fits you together at the start.',
+    },
+    {
+      q: 'I am not from Spain — can I still start?',
+      a: 'Yes. The work is fully remote, so it does not matter where you live right now: you can start from any country or city.',
     },
   ],
 };
 
 const ES: ModelGeoContent = {
   countryName: 'España',
-  title: 'Trabajo de modelo de OnlyFans en España — remoto, ingresos $500–8000/mes',
+  title: 'Modelo OnlyFans en España — remoto, desde $3 000/mes',
   description:
-    'Trabajo de modelo de OnlyFans en España: remoto desde Madrid, Barcelona, Valencia, Sevilla, Málaga. Grabación 2–3 h/día, el registro, la promoción, el chat y las finanzas los lleva la agencia. Ingresos $500–8000/mes (≈460–7360 €). Sin experiencia.',
+    'Gana $3 000–10 000/mes como modelo de OnlyFans en España: graba con luz del sol y a tu ritmo; el equipo lleva promoción, chat y finanzas. 18+, sin experiencia.',
   introHtml:
-    'La agencia OFM Models incorpora modelos de OnlyFans en toda España para trabajo remoto desde casa. Es una sola vacante para todo el país: da igual que estés en Madrid, Barcelona, Valencia, Sevilla o Málaga — las condiciones, el equipo y el porcentaje son iguales para todas. El formato es simple: grabas contenido según un plan acordado 2–3 horas al día, y todo lo demás — el registro y la verificación de la página, la promoción, la mensajería con los suscriptores y las finanzas — lo asume el equipo de la agencia. No hacen falta experiencia, portafolio ni equipo profesional: basta con un smartphone e internet estable. Qué hace la agencia en cada etapa — lo analizamos en el artículo [qué hace una agencia de OnlyFans](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Madrid', 'Barcelona', 'Valencia', 'Sevilla', 'Málaga'],
-  marketContext:
-    'España es uno de los mercados más maduros de la UE: el público hispanohablante busca de forma activa «trabajo de modelo webcam», así que las chicas de aquí entienden el formato enseguida y no pierden tiempo explicando «qué es esto». Otra ventaja para la modelo es el alcance: las páginas españolas se promocionan cómodamente a dos núcleos a la vez, el público de pago anglosajón (EE. UU., Reino Unido, Canadá) y la enorme diáspora latinoamericana, lo que abre una ventana de demanda amplia y un flujo estable de suscriptores. La estética de costa (Barcelona, la Costa del Sol, Valencia) y el estilo visual sureño y luminoso ofrecen una «imagen» ya lista sobre la que es fácil montar el plan de contenido.',
-  paymentsNote:
-    'Los pagos en España van por los sistemas de pago internacionales de OnlyFans — Paxum y Skrill; el retiro en euros va a una tarjeta española o a una cuenta SEPA cada dos semanas, con un calendario de pagos fijo. Toda la contabilidad, las comisiones de las pasarelas y los retiros los lleva la agencia: no necesitas lidiar con la configuración de las carteras ni con los tipos de cambio — ves tu porcentaje y tu calendario, el resto lo cubre el equipo.',
-  earningsNarrative:
-    'Referencias honestas para España: el primer mes una página nueva suele llegar a $500–1000 de saldo bruto — es el arranque, la audiencia apenas se forma. Después el crecimiento depende de la regularidad del contenido: las páginas de las top-modelos de la agencia llegan a saldos de $15 000–$50 000 brutos al mes, pero es el resultado de meses de trabajo sistemático del equipo, no un punto de partida ni una garantía. La modelo recibe el 20–30% del saldo bruto de la página — el porcentaje depende del plan, el perfil y la implicación; la agencia financia por completo la promo, el tráfico y el equipo de chat, y parte de los ingresos se reinvierte en el crecimiento de la página, por eso el saldo y tu porcentaje crecen juntos. El ingreso depende del plan, el perfil y la implicación y no es una garantía. De qué se componen las cifras — en el artículo [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), y puedes estimar tu potencial en la [calculadora de ingresos](/calculator).',
+    '¡Hola! Somos OFM Models, una agencia de ciclo completo: en más de 3 años hemos lanzado y hecho crecer 220+ páginas de modelos. En España esperamos a chicas mayores de 18 — de Madrid y Barcelona a Andalucía y las islas, con o sin experiencia. Aquí el sol hace la mitad del trabajo: luz natural casi todo el año como mejor estudio posible, y la noche española coincide con el pico diurno de la audiencia americana — el equipo aprovecha esas horas al máximo. Los pagos llegan en euros en fechas fijas, cómodo para el día a día en España.',
+  offers: [
+    'Lo tuyo es solo grabar: el diseño de la página, el tráfico, la mensajería con suscriptores y las finanzas los cubre el equipo al completo.',
+    'Una referencia en cifras: muchas modelos de la agencia ganan de $3 000 a $10 000 al mes.',
+    'Todos los gastos de promoción los asume la agencia — empiezas sin invertir nada.',
+    'La España soleada es un estudio ya montado: una terraza, la playa o la ciudad en la hora dorada — y el contenido luce premium sin equipos complejos.',
+    'Confidencialidad: cuidamos tu información personal y configuramos la privacidad como a ti te resulte cómodo.',
+    'Horario a la española: graba por la mañana o después de la siesta — la actividad vespertina de la audiencia de EE. UU. la lleva el equipo.',
+  ],
+  expectations: [
+    'Tienes 18 años o más.',
+    'Ojo para la calidad: cuidas la luz y el encuadre y quieres que la página crezca.',
+    'Disponibilidad para trabajar en remoto desde cualquier lugar — bastan un smartphone e internet estable.',
+    'Organización y constancia con el plan de contenido — normalmente 2–3 horas de grabación al día.',
+    'Mantienes el contacto con el equipo sin pausas largas — responder rápido acelera el crecimiento de la página.',
+  ],
+  closingHtml:
+    '¿Quieres probar? Escríbenos unas líneas — responderemos con honestidad incluso a las preguntas incómodas, te enseñamos cómo es el primer mes y decidimos juntas si empezamos.',
+  specs: [
+    { label: 'Horario', value: 'Flexible, 2–3 horas al día' },
+    { label: 'Experiencia', value: 'No hace falta — te formamos desde cero' },
+    { label: 'Ubicación', value: 'Remoto · toda España' },
+    { label: 'Pagos', value: 'Regulares, con calendario fijo' },
+    { label: 'Inicio', value: 'En los primeros días tras el casting online' },
+  ],
   faq: [
     {
-      q: '¿Cuánto gana una modelo de OnlyFans en España?',
-      a: 'La referencia visible de ingresos de una modelo es $500–8000 al mes (≈460–7360 €) según el plan, el perfil y la implicación; el primer mes una página nueva suele llegar a $500–1000. La modelo recibe el 20–30% del saldo bruto de la página, y la agencia reinvierte parte de los ingresos en promo y tráfico. Los saldos de las páginas top de la agencia llegan a $15 000–$50 000 al mes, pero es el resultado de meses de trabajo del equipo, no una garantía.',
+      q: '¿Es anónimo y privado?',
+      a: 'Los ajustes de privacidad se eligen contigo y la audiencia de la página se dirige al otro lado del océano — en España casi nadie la encontrará. A quién contárselo lo decides solo tú.',
     },
     {
-      q: '¿Desde qué ciudades de España se puede trabajar como modelo de OnlyFans?',
-      a: 'Desde cualquiera: el trabajo es totalmente remoto. Lo más habitual es que nuestras modelos sean de Madrid, Barcelona, Valencia, Sevilla y Málaga, pero la ciudad no influye ni en las condiciones ni en el porcentaje — puedes grabar desde casa en cualquier localidad de España, solo necesitas un smartphone e internet estable.',
+      q: '¿Necesito experiencia para empezar?',
+      a: 'No. Trabajamos con principiantes y con modelos con experiencia: el equipo te da un plan de contenido, te sugiere ángulos que funcionan y te acompaña en cada paso.',
     },
     {
-      q: '¿Hace falta experiencia o inglés para empezar a trabajar como modelo de OnlyFans en España?',
-      a: 'No. Puedes empezar desde cero: en el onboarding recibes un plan de contenido y se te muestran ángulos y formatos que funcionan, mientras toda la mensajería con los suscriptores angloparlantes la lleva el equipo de chat de la agencia — no necesitas saber inglés. Hace falta ser mayor de 18, tener un smartphone con una cámara decente y estar dispuesta a grabar con regularidad.',
+      q: '¿El huso horario de España encaja para trabajar con audiencia de EE. UU.?',
+      a: 'Sí, y mucho: cuando en España es de noche, en EE. UU. es pleno día y los suscriptores están activos — el equipo trabaja con ellos en esas horas. Tú grabas cuando te convenga: mañana, tarde o después de la siesta.',
     },
     {
-      q: '¿Es anónimo y seguro para una chica de España?',
-      a: 'El nivel de privacidad lo hablamos de forma individual en el casting. La práctica estándar es el geobloqueo: la página se cierra a España para que los conocidos no la vean, mientras la audiencia con capacidad de pago la traemos de EE. UU., Reino Unido, Canadá y la diáspora latinoamericana. Los formatos de contenido se acuerdan de antemano y se fijan en el plan — nada se publica «por defecto».',
+      q: '¿Cuándo recibo el primer pago?',
+      a: 'El primer dinero suele llegar dentro del primer mes; después, en fechas fijas y en euros. El método de cobro que mejor te encaje lo elegimos juntas al empezar.',
+    },
+    {
+      q: 'No soy de España — ¿puedo empezar igualmente?',
+      a: 'Sí. El trabajo es totalmente remoto, así que no importa dónde vivas ahora: puedes empezar desde cualquier país o ciudad.',
     },
   ],
 };

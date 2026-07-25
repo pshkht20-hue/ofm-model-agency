@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
-import { getModelGeoContent, getModelGeoPageSlugs } from '@/lib/content/model-geo';
+import { getModelGeoContent, getModelGeoGeoSlugs } from '@/lib/content/model-geo';
 
 /**
  * Нижний гео-кластер перелинковки: сетка ссылок «Работа моделью по странам»
@@ -22,7 +22,7 @@ export function VacancyGeoCluster({
   excludeSlug?: string;
   className?: string;
 }): ReactNode {
-  const countries = getModelGeoPageSlugs()
+  const countries = getModelGeoGeoSlugs()
     .filter((slug) => slug !== excludeSlug)
     .map((slug) => {
       const content = getModelGeoContent(slug, locale);

@@ -1,6 +1,6 @@
 import { getSiteUrl, siteConfig } from '@/lib/site';
 import { pathForLocale } from '@/lib/i18n/paths';
-import { htmlParagraphs } from '@/lib/seo/job-posting-html';
+import { htmlHeading, htmlList, htmlParagraphs } from '@/lib/seo/job-posting-html';
 import type { Locale } from '@/i18n/routing';
 import {
   getModelGeoDates,
@@ -44,14 +44,17 @@ export function ModelGeoJobPostingJsonLd({
     '@context': 'https://schema.org',
     '@type': 'JobPosting',
     title: content.title,
-    // Полное HTML-описание из ВИДИМЫХ секций страницы (интро/рынок/выплаты/
-    // заработок) — Google рекомендует description в HTML; текст совпадает с телом.
-    description: htmlParagraphs([
-      content.introHtml,
-      content.marketContext,
-      content.paymentsNote,
-      content.earningsNarrative,
-    ]),
+    // Полное HTML-описание из ВИДИМЫХ блоков страницы (интро → офферы →
+    // ожидания → заключение) — Google рекомендует description в HTML;
+    // текст совпадает с телом страницы в формате «рекламный креатив».
+    description: [
+      htmlParagraphs([content.introHtml]),
+      htmlHeading(ui.offersHeading),
+      htmlList(content.offers),
+      htmlHeading(ui.expectationsHeading),
+      htmlList(content.expectations),
+      htmlParagraphs([content.closingHtml]),
+    ].join(''),
     // Стабильный ID вакансии (анти-fake-reposting при ротации дат).
     identifier: {
       '@type': 'PropertyValue',
@@ -67,10 +70,11 @@ export function ModelGeoJobPostingJsonLd({
     // Google наследует «верифицированного работодателя» вместо дубль-заглушки.
     hiringOrganization: { '@id': `${siteUrl}/#organization` },
     jobLocationType: 'TELECOMMUTE',
-    applicantLocationRequirements: {
-      '@type': 'Country',
-      name: slugToCountryName(record.slug),
-    },
+    // Гео-страница — одна страна из слага; позиция-формат — белый список стран
+    // записи (работа удалённая, берём из любой поддерживаемой страны).
+    applicantLocationRequirements: record.applicantCountries
+      ? record.applicantCountries.map((name) => ({ '@type': 'Country', name }))
+      : { '@type': 'Country', name: slugToCountryName(record.slug) },
     // «Опыт не нужен» — видимо в description/плашке: 0 месяцев опыта, опыт
     // заменяет образование, порог образования — среднее (фактически без порога).
     experienceRequirements: {

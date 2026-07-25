@@ -1,10 +1,15 @@
 /**
- * Гео-страница «Модель OnlyFans» — Нидерланды (волна 1, европейский рынок).
- * Написана ПО ОБРАЗЦУ countries/ukraine.ts (структура record + content ru/uk/en/es).
+ * Гео-страница «Модель OnlyFans» — Нидерланды (волна 1).
+ * Формат «рекламный креатив» (директива владельца 25.07.2026, вторая итерация):
+ * интро → «Что мы предлагаем» → «Что мы ждём от тебя» → приглашение → FAQ.
  *
- * Красные линии — см. ../types.ts. Доход $500–8000/мес (видимый = baseSalary),
- * «$15 000–$50 000» только как балансы топ-страниц прозой + дисклеймер, 20–30% с
- * обоснованием реинвеста, без «договор/контракт», только OnlyFans.
+ * Локальный мотив (уникализация 25.07.2026): англоязычная среда голландок +
+ * часовой пояс CET — съёмка днём, вечерний прайм США закрывает команда;
+ * выплаты в евро по фиксированным датам. Старт из любого города.
+ *
+ * Красные линии: без процентов/gross/реинвеста, без «договор/контракт» и
+ * триггер-слов; вилка дохода — только record.incomeUsd ($3 000–10 000);
+ * только OnlyFans; эмодзи не используем — иконки рендерит шаблон страницы.
  */
 import type { Locale } from '@/i18n/routing';
 import type { ModelGeoContent, ModelGeoCountry } from '../types';
@@ -14,143 +19,227 @@ export const record: ModelGeoCountry = {
   iso: 'NL',
   currency: 'EUR',
   usdToLocalRate: 0.92,
-  incomeUsd: { min: 500, max: 8000 },
+  incomeUsd: { min: 3000, max: 10000 },
   wave: 1,
   hasPage: true,
 };
 
 const RU: ModelGeoContent = {
   countryName: 'Нидерланды',
-  title: 'Работа моделью OnlyFans в Нидерландах — удалённо, доход $500–8000/мес',
+  title: 'Работа моделью OnlyFans в Нидерландах — от $3 000/мес',
   description:
-    'Работа моделью OnlyFans в Нидерландах: удалённо из Амстердама, Роттердама, Гааги, Утрехта, Эйндховена. Съёмка 2–3 ч/день, регистрацию, промо, чат и финансы ведёт агентство. Доход $500–8000/мес (≈ €460–7360). Опыт не нужен.',
+    'От $3 000 до $10 000 в месяц — реальный доход наших моделей OnlyFans в Нидерландах. Контент — твой, продвижение, переписка и финансы — на команде. 18+, без опыта.',
   introHtml:
-    'Агентство OFM Models набирает моделей OnlyFans по всем Нидерландам на удалённую работу из дома. Это одна вакансия на всю страну: из Амстердама, Роттердама, Гааги, Утрехта или Эйндховена — условия, команда и процент одинаковы для всех. Формат простой: ты снимаешь контент по согласованному плану 2–3 часа в день, а регистрацию и верификацию страницы, продвижение, переписку с подписчиками и финансы берёт на себя команда агентства. Опыт, портфолио и профессиональная техника не нужны — достаточно смартфона. Что делает агентство на каждом этапе — разобрали в статье [что делает OnlyFans-агентство](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Амстердам', 'Роттердам', 'Гаага', 'Утрехт', 'Эйндховен'],
-  marketContext:
-    'Нидерланды — один из самых удобных европейских рынков для старта: почти все местные девушки свободно говорят по-английски на уровне носителя, а значит переписка с платёжеспособной аудиторией США, Великобритании и Канады идёт живо и без языкового барьера. Голландская культура фриланса и самозанятости (ZZP) делает удалённый график привычным и понятным, а либеральное отношение общества к взрослому контенту снижает стигму и упрощает решение начать. Высокая покупательная способность страны и развитая цифровая инфраструктура — стабильный интернет, привычка к онлайн-платежам — дают быстрый и предсказуемый старт.',
-  paymentsNote:
-    'Выплаты идут через международные платёжные системы OnlyFans — Paxum и Skrill; вывод в евро на нидерландскую карту или IBAN-счёт, график фиксированный — раз в две недели. Всю бухгалтерию, комиссии платёжек и вывод ведёт агентство: тебе не нужно разбираться в настройках кошельков и курсах — ты видишь свой процент и график. Формат самозанятости ZZP, привычный в Нидерландах, хорошо ложится на такой доход, но налоговые вопросы ты решаешь на своей стороне.',
-  earningsNarrative:
-    'Честные ориентиры для Нидерландов: в первый месяц новая страница обычно выходит на $500–1 000 gross-баланса — это разгон, аудитория только набирается. Дальше рост зависит от регулярности контента: страницы топ-моделей агентства выходят на балансы $15 000–$50 000 gross в месяц, но это результат месяцев системной работы команды, а не стартовая точка и не гарантия. Модель получает 20–30% от gross-баланса страницы — процент зависит от плана, типажа и вовлечённости; агентство полностью финансирует промо, трафик и чат-команду, а часть дохода реинвестируется в рост страницы, поэтому баланс и твой процент растут вместе. Доход зависит от плана, типажа и вовлечённости и не является гарантией. Из чего складываются цифры — в статье [сколько зарабатывают модели OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), а прикинуть свой потенциал можно в [калькуляторе дохода](/calculator).',
+    'Привет! Мы — OFM Models, агентство полного цикла: за 3+ года мы запустили и вырастили 220+ страниц моделей. Сейчас набираем девушек 18+ по всем Нидерландам — от Амстердама до Гронингена, с опытом и без. Нидерланды для этой работы удобны вдвойне: привычный голландкам свободный английский снимает языковой барьер, а часовой пояс CET позволяет снимать днём — вечерний прайм заокеанской аудитории закрывает команда. Выплаты приходят в евро и по фиксированным датам, так что планировать расходы в Нидерландах легко.',
+  offers: [
+    'Ты отвечаешь только за контент: регистрацию страницы, продвижение, общение с подписчиками и финансы полностью ведёт команда.',
+    'Реальный ориентир по доходу — от $3 000 до $10 000 в месяц: в этом коридоре работает большинство наших моделей.',
+    'Продвижение полностью за счёт агентства — с твоей стороны никаких вложений.',
+    'Часовой пояс на твоей стороне: ты снимаешь днём по CET, а вечерний прайм американской аудитории закрывает команда — ночные смены не нужны.',
+    'Конфиденциальность: бережно относимся к твоей личной информации и настраиваем приватность так, как комфортно тебе.',
+    'Твой английский — дополнительный козырь для англоязычных подписчиков; если переписываться не хочешь, этим займётся команда.',
+  ],
+  expectations: [
+    'Тебе исполнилось 18 лет.',
+    'Ответственное отношение к съёмкам: аккуратные фото и видео и готовность становиться лучше от месяца к месяцу.',
+    'Готовность работать удалённо из любой точки — достаточно смартфона и стабильного интернета.',
+    'Дисциплина в мелочах: контент-план — это примерно 2–3 часа съёмок в день, и его важно придерживаться.',
+    'Открытость к сотрудничеству и общению с командой.',
+  ],
+  closingHtml:
+    'Готова узнать больше? Отправь заявку — покажем примеры страниц, расскажем, как всё устроено изнутри, и ответим на любые вопросы ещё до старта.',
+  specs: [
+    { label: 'График', value: 'Гибкий, 2–3 часа в день' },
+    { label: 'Опыт', value: 'Не требуется — обучаем с нуля' },
+    { label: 'Локация', value: 'Удалённо · все Нидерланды' },
+    { label: 'Выплаты', value: 'Регулярно, по фиксированному графику' },
+    { label: 'Старт', value: 'В первые дни после онлайн-кастинга' },
+  ],
   faq: [
     {
-      q: 'Сколько зарабатывает модель OnlyFans в Нидерландах?',
-      a: 'Видимый ориентир дохода — $500–8000 в месяц (≈ €460–7360) в зависимости от плана, типажа и вовлечённости; в первый месяц новая страница обычно выходит на $500–1 000. Модель получает 20–30% от gross-баланса страницы, агентство реинвестирует часть дохода в промо и трафик. Балансы топ-страниц агентства доходят до $15 000–$50 000 в месяц, но это результат месяцев работы команды, а не гарантия.',
+      q: 'Насколько это анонимно и приватно?',
+      a: 'Уровень приватности настраиваем индивидуально, а аудиторию страницы направляем на США и другие англоязычные рынки — знакомые из Нидерландов на неё практически не попадают. О работе будут знать только те, кому расскажешь ты сама.',
     },
     {
-      q: 'Легально ли работать моделью OnlyFans в Нидерландах?',
-      a: 'Взрослый контент для совершеннолетних в Нидерландах легален, а платформа OnlyFans полностью поддерживает выплаты голландским креаторам. Работать можно как самозанятая (ZZP) — это привычный в стране формат. Налоговые вопросы ты решаешь на своей стороне; агентство ведёт саму страницу, промо и финансы платформы.',
+      q: 'Нужен ли опыт, чтобы начать?',
+      a: 'Нет. Мы работаем и с новичками, и с опытными моделями: команда даёт контент-план, подсказывает удачные ракурсы и сопровождает на каждом шагу.',
     },
     {
-      q: 'Нужен ли опыт или английский, чтобы начать в Нидерландах?',
-      a: 'Опыт не нужен: на онбординге дают контент-план, показывают рабочие ракурсы и форматы, а маркетинг, переписку с подписчиками и финансы команда берёт на себя. Английский у большинства голландских девушек и так на высоком уровне, но переписку с аудиторией при желании полностью ведёт чат-команда агентства. Нужны 18+, смартфон с нормальной камерой и готовность снимать регулярно.',
+      q: 'Нужен ли для старта идеальный английский?',
+      a: 'Нет. Хороший английский, привычный для Нидерландов, — приятный бонус для общения с подписчиками, но не условие: переписку в любом случае может полностью вести команда, а контент говорит сам за себя.',
     },
     {
-      q: 'Из каких городов Нидерландов можно работать?',
-      a: 'Из любого: работа полностью удалённая. Чаще всего наши модели — из Амстердама, Роттердама, Гааги, Утрехта и Эйндховена, но город не влияет ни на условия, ни на процент — снимать можно из дома в любом населённом пункте Нидерландов, нужны только смартфон и стабильный интернет.',
+      q: 'Когда я получу первую выплату?',
+      a: 'Обычно первая выплата приходит уже в течение первого месяца — в евро и по заранее согласованному графику. Удобный именно тебе способ получения обсудим на старте.',
+    },
+    {
+      q: 'Я не из Нидерландов — могу ли начать?',
+      a: 'Да. Работа полностью удалённая, поэтому неважно, где ты живёшь сейчас: начать можно из любой страны и города.',
     },
   ],
 };
 
 const UK: ModelGeoContent = {
   countryName: 'Нідерланди',
-  title: 'Робота моделлю OnlyFans у Нідерландах — віддалено, дохід $500–8000/міс',
+  title: 'Робота моделлю OnlyFans у Нідерландах — від $3 000/міс',
   description:
-    'Робота для дівчат моделлю OnlyFans у Нідерландах: віддалено з Амстердама, Роттердама, Гааги, Утрехта, Ейндговена. Зйомка 2–3 год/день, реєстрацію, промо, чат і фінанси веде агенція. Дохід $500–8000/міс (≈ €460–7360). Досвід не потрібен.',
+    'Від $3 000 до $10 000 на місяць — реальний дохід моделей OnlyFans у Нідерландах. Контент — твій, просування, листування й фінанси — на команді. 18+, без досвіду.',
   introHtml:
-    'Агенція OFM Models набирає моделей OnlyFans по всіх Нідерландах на віддалену роботу з дому. Це одна вакансія на всю країну: з Амстердама, Роттердама, Гааги, Утрехта чи Ейндговена — умови, команда й відсоток однакові для всіх. Формат простий: ти знімаєш контент за узгодженим планом 2–3 години на день, а реєстрацію та верифікацію сторінки, просування, листування з підписниками й фінанси бере на себе команда агенції. Досвід, портфоліо та професійна техніка не потрібні — достатньо смартфона. Що робить агенція на кожному етапі — розібрали у статті [що робить OnlyFans-агенція](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Амстердам', 'Роттердам', 'Гаага', 'Утрехт', 'Ейндговен'],
-  marketContext:
-    'Нідерланди — один із найзручніших європейських ринків для старту: майже всі місцеві дівчата вільно говорять англійською на рівні носія, тож листування з платоспроможною аудиторією США, Великої Британії та Канади йде живо й без мовного бар’єра. Голландська культура фрилансу та самозайнятості (ZZP) робить віддалений графік звичним і зрозумілим, а ліберальне ставлення суспільства до дорослого контенту знижує стигму й спрощує рішення почати. Висока купівельна спроможність країни та розвинена цифрова інфраструктура — стабільний інтернет, звичка до онлайн-платежів — дають швидкий і передбачуваний старт.',
-  paymentsNote:
-    'Виплати йдуть через міжнародні платіжні системи OnlyFans — Paxum і Skrill; виведення в євро на нідерландську картку чи IBAN-рахунок, графік фіксований — раз на два тижні. Усю бухгалтерію, комісії платіжок і виведення веде агенція: тобі не треба розбиратися в налаштуваннях гаманців і курсах — ти бачиш свій відсоток і графік. Формат самозайнятості ZZP, звичний у Нідерландах, добре лягає на такий дохід, але податкові питання ти вирішуєш на своєму боці.',
-  earningsNarrative:
-    'Чесні орієнтири для Нідерландів: у перший місяць нова сторінка зазвичай виходить на $500–1 000 gross-балансу — це розгін, аудиторія тільки набирається. Далі зростання залежить від регулярності контенту: сторінки топ-моделей агенції виходять на баланси $15 000–$50 000 gross на місяць, але це результат місяців системної роботи команди, а не стартова точка й не гарантія. Модель отримує 20–30% від gross-балансу сторінки — відсоток залежить від плану, типажу та залученості; агенція повністю фінансує промо, трафік і чат-команду, а частина доходу реінвестується в зростання сторінки, тому баланс і твій відсоток ростуть разом. Дохід залежить від плану, типажу та залученості й не є гарантією. З чого складаються цифри — у статті [скільки заробляють моделі OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), а прикинути свій потенціал можна в [калькуляторі доходу](/calculator).',
+    'Привіт! Ми — OFM Models, агенція повного циклу: за понад 3 роки ми запустили й розвинули 220+ сторінок моделей. Зараз набираємо дівчат 18+ по всіх Нідерландах — від Амстердама до Гронінгена, з досвідом і без. Нідерланди зручні для цієї роботи одразу з двох причин: вільна англійська, звична для голландок, знімає мовний бар’єр, а часовий пояс CET дає змогу знімати вдень — вечірній прайм заокеанської аудиторії закриває команда. Виплати надходять у євро за фіксованими датами, тож планувати витрати в Нідерландах просто.',
+  offers: [
+    'Ти відповідаєш лише за контент: реєстрацію сторінки, просування, спілкування з підписниками й фінанси повністю веде команда.',
+    'Реальний орієнтир доходу — від $3 000 до $10 000 на місяць: у цьому коридорі працює більшість наших моделей.',
+    'Просування повністю коштом агенції — жодних вкладень із твого боку.',
+    'Часовий пояс на твоєму боці: ти знімаєш удень за CET, а вечірній прайм американської аудиторії закриває команда — нічні зміни не потрібні.',
+    'Конфіденційність: дбайливо ставимося до твоєї особистої інформації та налаштовуємо приватність так, як зручно тобі.',
+    'Твоя англійська — додатковий козир для англомовних підписників; а якщо листуватися не хочеться, це робить команда.',
+  ],
+  expectations: [
+    'Тобі виповнилося 18 років.',
+    'Відповідальне ставлення до зйомок: охайні фото й відео та бажання ставати кращою з місяця в місяць.',
+    'Готовність працювати віддалено з будь-якої точки — достатньо смартфона та стабільного інтернету.',
+    'Дисципліна в дрібницях: контент-план — це приблизно 2–3 години зйомок на день, і його важливо дотримуватися.',
+    'Відкритість до співпраці та спілкування з командою.',
+  ],
+  closingHtml:
+    'Готова дізнатися більше? Надішли заявку — покажемо приклади сторінок, розкажемо, як усе влаштовано зсередини, і відповімо на будь-які запитання ще до старту.',
+  specs: [
+    { label: 'Графік', value: 'Гнучкий, 2–3 години на день' },
+    { label: 'Досвід', value: 'Не потрібен — навчимо з нуля' },
+    { label: 'Локація', value: 'Віддалено · всі Нідерланди' },
+    { label: 'Виплати', value: 'Регулярні, за фіксованим графіком' },
+    { label: 'Старт', value: 'У перші дні після онлайн-кастингу' },
+  ],
   faq: [
     {
-      q: 'Скільки заробляє модель OnlyFans у Нідерландах?',
-      a: 'Видимий орієнтир доходу — $500–8000 на місяць (≈ €460–7360) залежно від плану, типажу та залученості; у перший місяць нова сторінка зазвичай виходить на $500–1 000. Модель отримує 20–30% від gross-балансу сторінки, агенція реінвестує частину доходу в промо та трафік. Баланси топ-сторінок агенції сягають $15 000–$50 000 на місяць, але це результат місяців роботи команди, а не гарантія.',
+      q: 'Наскільки це анонімно і приватно?',
+      a: 'Рівень приватності налаштовуємо індивідуально, а аудиторію сторінки спрямовуємо на США та інші англомовні ринки — знайомі з Нідерландів на неї практично не потрапляють. Про роботу знатимуть лише ті, кому розкажеш ти сама.',
     },
     {
-      q: 'Чи легально працювати моделлю OnlyFans у Нідерландах?',
-      a: 'Дорослий контент для повнолітніх у Нідерландах легальний, а платформа OnlyFans повністю підтримує виплати голландським креаторам. Працювати можна як самозайнята (ZZP) — це звичний у країні формат. Податкові питання ти вирішуєш на своєму боці; агенція веде саму сторінку, промо та фінанси платформи.',
+      q: 'Чи потрібен досвід, щоб почати?',
+      a: 'Ні. Ми працюємо і з новачками, і з досвідченими моделями: команда дає контент-план, підказує вдалі ракурси й супроводжує на кожному кроці.',
     },
     {
-      q: 'Чи потрібен досвід або англійська, щоб почати в Нідерландах?',
-      a: 'Досвід не потрібен: на онбордингу дають контент-план, показують робочі ракурси та формати, а маркетинг, листування з підписниками й фінанси команда бере на себе. Англійська в більшості голландських дівчат і так на високому рівні, але листування з аудиторією за бажанням повністю веде чат-команда агенції. Потрібні 18+, смартфон із нормальною камерою та готовність знімати регулярно.',
+      q: 'Чи потрібна для старту ідеальна англійська?',
+      a: 'Ні. Добра англійська, звична для Нідерландів, — приємний бонус для спілкування з підписниками, але не умова: листування в будь-якому разі може повністю вести команда, а контент говорить сам за себе.',
     },
     {
-      q: 'З яких міст Нідерландів можна працювати?',
-      a: 'З будь-якого: робота повністю віддалена. Найчастіше наші моделі — з Амстердама, Роттердама, Гааги, Утрехта та Ейндговена, але місто не впливає ні на умови, ні на відсоток — знімати можна з дому в будь-якому населеному пункті Нідерландів, потрібні лише смартфон і стабільний інтернет.',
+      q: 'Коли я отримаю першу виплату?',
+      a: 'Зазвичай перша виплата надходить уже впродовж першого місяця — у євро та за наперед узгодженим графіком. Зручний саме тобі спосіб отримання обговоримо на старті.',
+    },
+    {
+      q: 'Я не з Нідерландів — чи можу почати?',
+      a: 'Так. Робота повністю віддалена, тож неважливо, де ти живеш зараз: почати можна з будь-якої країни та міста.',
     },
   ],
 };
 
 const EN: ModelGeoContent = {
   countryName: 'the Netherlands',
-  title: 'OnlyFans model job in the Netherlands — remote, income $500–8000/mo',
+  title: 'OnlyFans model job in the Netherlands — from $3 000/mo',
   description:
-    'OnlyFans model job in the Netherlands: remote from Amsterdam, Rotterdam, The Hague, Utrecht, Eindhoven. Shooting 2–3 h/day, registration, promo, chat and finances run by the agency. Income $500–8000/mo (≈ €460–7360). No experience needed.',
+    'Earn $3 000–10 000/mo as an OnlyFans model in the Netherlands: you create content, our team handles promotion, subscriber chats and payouts. 18+, no experience.',
   introHtml:
-    'OFM Models agency is recruiting OnlyFans models across the Netherlands for remote work from home. This is one vacancy for the whole country: from Amsterdam, Rotterdam, The Hague, Utrecht or Eindhoven — the terms, team and percentage are the same for everyone. The format is simple: you shoot content on an agreed plan 2–3 hours a day, while registering and verifying the page, promotion, subscriber messaging and finances are handled by the agency team. Experience, a portfolio and professional gear aren’t needed — a smartphone is enough. What the agency does at each stage — we broke it down in the article [what an OnlyFans agency does](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Amsterdam', 'Rotterdam', 'The Hague', 'Utrecht', 'Eindhoven'],
-  marketContext:
-    'The Netherlands is one of the easiest European markets to start in: nearly all local women speak English at a near-native level, so chatting with the paying audiences of the US, UK and Canada flows naturally with no language barrier. The Dutch culture of freelancing and self-employment (the ZZP model) makes a remote schedule familiar and clear, while society’s liberal attitude toward adult content lowers stigma and makes the decision to start easier. The country’s high purchasing power and mature digital infrastructure — stable internet, an everyday habit of online payments — deliver a fast and predictable ramp-up.',
-  paymentsNote:
-    'Payouts go through OnlyFans’ international payment systems — Paxum and Skrill; withdrawal in euros to a Dutch card or IBAN account, on a fixed schedule — every two weeks. All the accounting, processor fees and withdrawals are run by the agency: you don’t need to figure out wallet settings or exchange rates — you see your percentage and schedule. The ZZP self-employment format common in the Netherlands fits this kind of income well, though tax matters you handle on your own side.',
-  earningsNarrative:
-    'Honest benchmarks for the Netherlands: in the first month a new page usually reaches $500–1,000 of gross balance — that’s the ramp-up, the audience is only just building. Further growth depends on content consistency: the agency’s top-model pages reach balances of $15,000–$50,000 gross a month, but that’s the result of months of systematic teamwork, not a starting point and not a guarantee. A model receives 20–30% of the page’s gross balance — the percentage depends on the plan, persona and engagement; the agency fully funds promo, traffic and the chat team, and part of the income is reinvested into the page’s growth, so the balance and your percentage grow together. Income depends on the plan, persona and engagement and is not a guarantee. What the numbers are made of — in the article [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli), and you can estimate your own potential in the [income calculator](/calculator).',
+    'Hi! We are OFM Models, a full-cycle agency: over 3+ years we have launched and grown 220+ creator pages. We are recruiting women 18+ across the Netherlands — from Amsterdam to Groningen, experienced or brand new. The country suits this work twice over: the near-native English most Dutch women speak removes any language barrier, and the CET time zone lets you shoot during the day while the team covers the evening prime time of the overseas audience. Payouts arrive in euros on fixed dates, which makes budgeting in the Netherlands simple.',
+  offers: [
+    'Your only job is content: page setup, promotion, subscriber conversations and finances are fully handled by the team.',
+    'A realistic income benchmark is from $3 000 to $10 000 a month — that is the corridor most of our models work in.',
+    'Promotion is fully funded by the agency — no investment on your side.',
+    'The time zone works for you: you shoot during the day on CET while the team covers the US evening prime — no night shifts.',
+    'Confidentiality: we treat your personal information with care and set up privacy the way you feel comfortable.',
+    'Your English is an extra asset with English-speaking subscribers — and if you would rather not chat yourself, the team does it.',
+  ],
+  expectations: [
+    'You are 18 or older.',
+    'A responsible attitude to shooting: neat photos and videos, and the ambition to get better month by month.',
+    'Ready to work remotely from anywhere — a smartphone and stable internet are enough.',
+    'Discipline in the small things: the content plan means roughly 2–3 hours of shooting a day, and sticking to it matters.',
+    'Open to cooperation and easy communication with the team.',
+  ],
+  closingHtml:
+    'Ready to learn more? Send a short application — we will show example pages, explain how everything works from the inside and answer any questions before you commit.',
+  specs: [
+    { label: 'Schedule', value: 'Flexible, 2–3 hours a day' },
+    { label: 'Experience', value: 'Not needed — we train from scratch' },
+    { label: 'Location', value: 'Remote · all of the Netherlands' },
+    { label: 'Payouts', value: 'Regular, on a fixed schedule' },
+    { label: 'Start', value: 'Within days after the online casting' },
+  ],
   faq: [
     {
-      q: 'How much does an OnlyFans model earn in the Netherlands?',
-      a: 'The visible income benchmark is $500–8000 a month (≈ €460–7,360) depending on the plan, persona and engagement; in the first month a new page usually reaches $500–1,000. A model receives 20–30% of the page’s gross balance, and the agency reinvests part of the income into promo and traffic. The agency’s top-page balances reach $15,000–$50,000 a month, but that’s the result of months of teamwork, not a guarantee.',
+      q: 'How anonymous and private is it?',
+      a: 'Privacy is set up individually, and the page audience is targeted at the US and other English-speaking markets — people you know in the Netherlands are very unlikely to come across it. Only those you choose to tell will know.',
     },
     {
-      q: 'Is it legal to work as an OnlyFans model in the Netherlands?',
-      a: 'Adult content for consenting adults is legal in the Netherlands, and OnlyFans fully supports payouts to Dutch creators. You can work as self-employed (ZZP) — a format that’s common in the country. Tax matters you handle on your own side; the agency runs the page itself, promotion and the platform finances.',
+      q: 'Do I need experience to start?',
+      a: 'No. We work with both beginners and experienced models: the team provides a content plan, suggests angles that work and supports you at every step.',
     },
     {
-      q: 'Do you need experience or English to start in the Netherlands?',
-      a: 'No experience is needed: at onboarding you get a content plan and are shown working angles and formats, while the team takes on marketing, subscriber messaging and finances. Most Dutch women already speak strong English, but the agency’s chat team can fully handle subscriber messaging if you prefer. You need to be 18+, have a smartphone with a decent camera and be ready to shoot regularly.',
+      q: 'Do I need perfect English to start?',
+      a: 'No. The strong English most Dutch women have is a nice bonus for subscriber chats, but not a requirement: the team can run all messaging for you, and your content speaks for itself.',
     },
     {
-      q: 'Which cities in the Netherlands can you work from?',
-      a: 'Any: the work is fully remote. Most often our models are from Amsterdam, Rotterdam, The Hague, Utrecht and Eindhoven, but the city affects neither the terms nor the percentage — you can shoot from home in any locality in the Netherlands, all you need is a smartphone and stable internet.',
+      q: 'When do I get my first payout?',
+      a: 'The first payout usually arrives within your first month — in euros, on a schedule agreed in advance. We will pick the method that suits you best at the start.',
+    },
+    {
+      q: 'I am not from the Netherlands — can I still start?',
+      a: 'Yes. The work is fully remote, so it does not matter where you live right now: you can start from any country or city.',
     },
   ],
 };
 
 const ES: ModelGeoContent = {
   countryName: 'los Países Bajos',
-  title: 'Trabajo de modelo de OnlyFans en los Países Bajos — remoto, $500–8000/mes',
+  title: 'Modelo OnlyFans en Países Bajos — remoto, desde $3 000/mes',
   description:
-    'Trabajo de modelo de OnlyFans en los Países Bajos: remoto desde Ámsterdam, Róterdam, La Haya, Utrecht, Eindhoven. Grabación 2–3 h/día, el registro, la promoción, el chat y las finanzas los lleva la agencia. Ingresos $500–8000/mes (≈ €460–7360). Sin experiencia.',
+    'Gana $3 000–10 000/mes como modelo de OnlyFans en Países Bajos: tú creas el contenido y el equipo lleva promoción, chat y finanzas. 18+, sin experiencia.',
   introHtml:
-    'La agencia OFM Models incorpora modelos de OnlyFans en todos los Países Bajos para trabajo remoto desde casa. Es una sola vacante para todo el país: desde Ámsterdam, Róterdam, La Haya, Utrecht o Eindhoven — las condiciones, el equipo y el porcentaje son iguales para todas. El formato es simple: grabas contenido según un plan acordado 2–3 horas al día, mientras el registro y la verificación de la página, la promoción, la mensajería con los suscriptores y las finanzas los asume el equipo de la agencia. No hacen falta experiencia, portafolio ni equipo profesional — basta con un smartphone. Qué hace la agencia en cada etapa — lo analizamos en el artículo [qué hace una agencia de OnlyFans](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Ámsterdam', 'Róterdam', 'La Haya', 'Utrecht', 'Eindhoven'],
-  marketContext:
-    'Los Países Bajos son uno de los mercados europeos más cómodos para empezar: casi todas las chicas locales hablan inglés a un nivel casi nativo, así que la mensajería con la audiencia con capacidad de pago de EE. UU., el Reino Unido y Canadá fluye con naturalidad y sin barrera idiomática. La cultura neerlandesa del freelance y el autoempleo (el modelo ZZP) hace que un horario remoto sea familiar y claro, y la actitud liberal de la sociedad hacia el contenido adulto reduce el estigma y facilita la decisión de empezar. El alto poder adquisitivo del país y su infraestructura digital madura — internet estable, el hábito cotidiano de los pagos en línea — ofrecen un arranque rápido y predecible.',
-  paymentsNote:
-    'Los pagos van por los sistemas de pago internacionales de OnlyFans — Paxum y Skrill; el retiro en euros va a una tarjeta neerlandesa o cuenta IBAN, con un calendario fijo — cada dos semanas. Toda la contabilidad, las comisiones de las pasarelas y los retiros los lleva la agencia: no necesitas lidiar con la configuración de las carteras ni con los tipos de cambio — ves tu porcentaje y tu calendario. El formato de autoempleo ZZP, habitual en los Países Bajos, encaja bien con este tipo de ingreso, aunque los asuntos fiscales los gestionas por tu cuenta.',
-  earningsNarrative:
-    'Referencias honestas para los Países Bajos: el primer mes una página nueva suele llegar a $500–1000 de saldo bruto — es el arranque, la audiencia apenas se forma. Después el crecimiento depende de la regularidad del contenido: las páginas de las top-modelos de la agencia llegan a saldos de $15 000–$50 000 brutos al mes, pero es el resultado de meses de trabajo sistemático del equipo, no un punto de partida ni una garantía. La modelo recibe el 20–30% del saldo bruto de la página — el porcentaje depende del plan, el perfil y la implicación; la agencia financia por completo la promo, el tráfico y el equipo de chat, y parte de los ingresos se reinvierte en el crecimiento de la página, por eso el saldo y tu porcentaje crecen juntos. El ingreso depende del plan, el perfil y la implicación y no es una garantía. De qué se componen las cifras — en el artículo [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), y puedes estimar tu potencial en la [calculadora de ingresos](/calculator).',
+    '¡Hola! Somos OFM Models, una agencia de ciclo completo: en más de 3 años hemos lanzado y hecho crecer 220+ páginas de modelos. Buscamos chicas mayores de 18 en todos los Países Bajos — de Ámsterdam a Groninga, con o sin experiencia. El país es doblemente cómodo para este trabajo: el inglés casi nativo de las neerlandesas elimina la barrera del idioma, y el huso horario CET te deja grabar de día mientras el equipo cubre el prime time nocturno de la audiencia al otro lado del océano. Los pagos llegan en euros en fechas fijas — fácil de planificar viviendo en los Países Bajos.',
+  offers: [
+    'Tu única tarea es el contenido: el alta de la página, la promoción, las conversaciones con suscriptores y las finanzas las lleva el equipo.',
+    'Una referencia realista de ingresos: de $3 000 a $10 000 al mes — en ese corredor trabaja la mayoría de nuestras modelos.',
+    'La promoción corre por cuenta de la agencia — sin ninguna inversión por tu parte.',
+    'El huso horario juega a tu favor: grabas de día en CET y el equipo cubre el prime time vespertino de EE. UU. — sin turnos de noche.',
+    'Confidencialidad: cuidamos tu información personal y configuramos la privacidad como a ti te resulte cómodo.',
+    'Tu inglés es un plus con los suscriptores angloparlantes — y si prefieres no chatear tú misma, lo hace el equipo.',
+  ],
+  expectations: [
+    'Tienes 18 años o más.',
+    'Una actitud responsable ante las sesiones: fotos y vídeos cuidados y ganas de mejorar mes a mes.',
+    'Disponibilidad para trabajar en remoto desde cualquier lugar — bastan un smartphone e internet estable.',
+    'Disciplina en los detalles: el plan de contenido supone unas 2–3 horas de grabación al día y conviene cumplirlo.',
+    'Apertura a la colaboración y a la comunicación con el equipo.',
+  ],
+  closingHtml:
+    '¿Quieres saber más? Envía una solicitud breve — te enseñamos ejemplos de páginas, te contamos cómo funciona todo por dentro y resolvemos tus dudas antes de empezar.',
+  specs: [
+    { label: 'Horario', value: 'Flexible, 2–3 horas al día' },
+    { label: 'Experiencia', value: 'No hace falta — te formamos desde cero' },
+    { label: 'Ubicación', value: 'Remoto · todos los Países Bajos' },
+    { label: 'Pagos', value: 'Regulares, con calendario fijo' },
+    { label: 'Inicio', value: 'En los primeros días tras el casting online' },
+  ],
   faq: [
     {
-      q: '¿Cuánto gana una modelo de OnlyFans en los Países Bajos?',
-      a: 'La referencia visible de ingresos es $500–8000 al mes (≈ €460–7360) según el plan, el perfil y la implicación; el primer mes una página nueva suele llegar a $500–1000. La modelo recibe el 20–30% del saldo bruto de la página, y la agencia reinvierte parte de los ingresos en promo y tráfico. Los saldos de las páginas top de la agencia llegan a $15 000–$50 000 al mes, pero es el resultado de meses de trabajo del equipo, no una garantía.',
+      q: '¿Es anónimo y privado?',
+      a: 'La privacidad se configura de forma individual y la audiencia de la página se orienta a EE. UU. y otros mercados angloparlantes — tus conocidos en los Países Bajos difícilmente la verán. Solo lo sabrán las personas a las que tú se lo cuentes.',
     },
     {
-      q: '¿Es legal trabajar como modelo de OnlyFans en los Países Bajos?',
-      a: 'El contenido adulto entre personas mayores de edad es legal en los Países Bajos, y OnlyFans admite plenamente los pagos a creadoras neerlandesas. Puedes trabajar como autónoma (ZZP), un formato habitual en el país. Los asuntos fiscales los gestionas por tu cuenta; la agencia lleva la página en sí, la promoción y las finanzas de la plataforma.',
+      q: '¿Necesito experiencia para empezar?',
+      a: 'No. Trabajamos con principiantes y con modelos con experiencia: el equipo te da un plan de contenido, te sugiere ángulos que funcionan y te acompaña en cada paso.',
     },
     {
-      q: '¿Hace falta experiencia o inglés para empezar en los Países Bajos?',
-      a: 'No hace falta experiencia: en el onboarding recibes un plan de contenido y se te muestran ángulos y formatos que funcionan, mientras el equipo asume el marketing, la mensajería con los suscriptores y las finanzas. La mayoría de las chicas neerlandesas ya hablan un inglés sólido, pero el equipo de chat de la agencia puede encargarse por completo de la mensajería si lo prefieres. Hace falta ser mayor de 18, tener un smartphone con una cámara decente y estar dispuesta a grabar con regularidad.',
+      q: '¿Necesito un inglés perfecto para empezar?',
+      a: 'No. El buen inglés habitual en los Países Bajos es un plus para el chat con suscriptores, pero no una condición: el equipo puede llevar toda la mensajería por ti, y tu contenido habla por sí solo.',
     },
     {
-      q: '¿Desde qué ciudades de los Países Bajos se puede trabajar?',
-      a: 'Desde cualquiera: el trabajo es totalmente remoto. Lo más habitual es que nuestras modelos sean de Ámsterdam, Róterdam, La Haya, Utrecht y Eindhoven, pero la ciudad no influye ni en las condiciones ni en el porcentaje — puedes grabar desde casa en cualquier localidad de los Países Bajos, solo necesitas un smartphone e internet estable.',
+      q: '¿Cuándo recibo el primer pago?',
+      a: 'El primer pago suele llegar dentro del primer mes — en euros y con un calendario acordado de antemano. El método que mejor te venga lo decidimos al empezar.',
+    },
+    {
+      q: 'No soy de los Países Bajos — ¿puedo empezar igualmente?',
+      a: 'Sí. El trabajo es totalmente remoto, así que no importa dónde vivas ahora: puedes empezar desde cualquier país o ciudad.',
     },
   ],
 };

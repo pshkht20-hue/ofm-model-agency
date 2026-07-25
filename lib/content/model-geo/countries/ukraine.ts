@@ -1,161 +1,245 @@
 /**
  * ЭТАЛОН гео-системы «Модель OnlyFans» — Украина (приоритетный рынок №1).
- * Следующие 8 стран пишутся ПО ОБРАЗЦУ этого файла (см. index.ts, как добавить).
+ * Следующие страны пишутся ПО ОБРАЗЦУ этого файла (см. index.ts, как добавить).
  *
- * Правило Украины (задача владельца): ОДНА вакансия на всю страну и все города —
- * Киев/Харьков/Львов/Днепр/Одесса/Запорожье идут СЕКЦИЯМИ внутри одной страницы,
- * а не отдельными URL. SEO-якоря: RU — «онлифанс работа»; UK — «робота для
- * дівчат», «робота моделлю».
- *
- * Красные линии — см. ../types.ts. Доход $500–8000/мес (видимый = baseSalary),
- * «$15 000–$50 000» только как балансы топ-страниц прозой + дисклеймер, 20–30% с
- * обоснованием реинвеста, без «договор/контракт», только OnlyFans.
+ * Формат «рекламный креатив» (директива владельца 25.07.2026, 2-я итерация):
+ * интро (кто мы + локальная специфика) → offers «Что мы предлагаем» →
+ * expectations «Что мы ждём от тебя» → closingHtml (приглашение перед CTA) →
+ * FAQ. Видимая вилка $3 000–10 000/мес = baseSalary JSON-LD.
+ * ЗАПРЕЩЕНО: процент модели, gross/net, реинвест, «$15 000–50 000»,
+ * «договор/контракт», триггер-слова; только OnlyFans, 18+. Тон — привлекать.
+ * Локальный угол Украины: приоритетный рынок агентства, самый быстрый старт,
+ * украиноязычная команда.
  */
 import type { Locale } from '@/i18n/routing';
-import type { ModelGeoContent, ModelGeoCountry } from '../types';
+import type { ModelGeoContent, ModelGeoCountry, ModelGeoCountryFile } from '../types';
 
 export const record: ModelGeoCountry = {
   slug: 'ukraine',
   iso: 'UA',
   currency: 'UAH',
   usdToLocalRate: 41,
-  incomeUsd: { min: 500, max: 8000 },
+  incomeUsd: { min: 3000, max: 10000 },
   wave: 1,
   hasPage: true,
 };
 
 const RU: ModelGeoContent = {
   countryName: 'Украина',
-  title: 'Онлифанс работа моделью в Украине — удалённо, страницу ведёт агентство',
+  title: 'Онлифанс работа моделью в Украине — от $3 000/мес, удалённо',
   description:
-    'Онлифанс работа моделью в Украине: удалённо из Киева, Харькова, Львова, Днепра, Одессы, Запорожья. Съёмка 2–3 ч/день, регистрацию, промо, чат и финансы ведёт агентство. Доход $500–8000/мес. Опыт не нужен.',
+    'Онлифанс работа моделью в Украине: удалённо из любого города. Многие модели зарабатывают от $3 000 до $10 000 в месяц, продвижение за счёт агентства. 18+.',
   introHtml:
-    'Агентство OFM Models набирает моделей OnlyFans по всей Украине на удалённую работу из дома. Это одна вакансия на всю страну: неважно, из какого ты города — Киева, Харькова, Львова, Днепра, Одессы или Запорожья, — условия, команда и процент одинаковы для всех. Формат простой: ты снимаешь контент по согласованному плану 2–3 часа в день, а всё остальное — регистрацию и верификацию страницы, продвижение, переписку с подписчиками и финансы — берёт на себя команда агентства. Опыт, портфолио и профессиональная техника не нужны: большинство наших украинских моделей начинали с нуля со смартфона. Что делает агентство на каждом этапе — разобрали в статье [что делает OnlyFans-агентство](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Киев', 'Харьков', 'Львов', 'Днепр', 'Одесса', 'Запорожье'],
-  marketContext:
-    'Украина — приоритетный рынок агентства №1: отсюда приходит больше всего заявок, и именно на украинских типажах у нас отлажены контент-план и промо. Славянская внешность стабильно в топе спроса у платёжеспособной аудитории США, Канады и Австралии, а привычка украинских девушек к удалённой работе и фрилансу делает старт быстрым и понятным. При этом рынок ещё далёк от насыщения: спрос на новые страницы кратно превышает число моделей, которых успевает запустить команда.',
-  paymentsNote:
-    'Выплаты в Украине идут через международные платёжные системы OnlyFans — Paxum и Skrill; вывод в гривну — на украинскую карту или удобным тебе способом, график выплат фиксированный. Всю бухгалтерию, комиссии платёжек и вывод ведёт агентство: тебе не нужно разбираться в настройках кошельков и курсах — ты видишь свой процент и график, остальное закрывает команда.',
-  earningsNarrative:
-    'Честные ориентиры для Украины: в первый месяц новая страница обычно выходит на $500–1 000 gross-баланса — это разгон, аудитория только набирается. Дальше рост зависит от регулярности контента: страницы топ-моделей агентства выходят на балансы $15 000–$50 000 gross в месяц, но это результат месяцев системной работы команды, а не стартовая точка и не гарантия. Модель получает 20–30% от gross-баланса страницы — процент зависит от плана, типажа и вовлечённости; агентство полностью финансирует промо, трафик и чат-команду, а часть дохода реинвестируется в рост страницы, поэтому баланс и твой процент растут вместе. Доход зависит от плана, типажа и вовлечённости и не является гарантией. Из чего складываются цифры — в статье [сколько зарабатывают модели OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), а прикинуть свой потенциал можно в [калькуляторе дохода](/calculator).',
+    'OFM Models — агентство полного цикла: уже больше трёх лет мы запускаем и развиваем страницы моделей, за это время через команду прошло 220+ страниц. Сейчас мы ищем девушек 18+ по всей Украине — с опытом и без. Украина для нас рынок №1: старт здесь самый быстрый, а на связи с тобой всегда украиноязычная команда. От тебя — контент и желание расти, всё остальное мы берём на себя.',
+  offers: [
+    'Ты создаёшь контент 2–3 часа в день — всю остальную работу берёт на себя команда: промо, переписка с подписчиками, продвижение страницы.',
+    'Достойный доход: многие наши модели зарабатывают от $3 000 до $10 000 в месяц.',
+    'Продвижение полностью за счёт агентства — стартуешь без вложений с твоей стороны.',
+    'Рядом опытная команда: больше трёх лет практики и сотни запущенных страниц.',
+    'Конфиденциальность: бережно относимся к твоей личной информации и настраиваем уровень приватности под тебя.',
+    'Украина — наш приоритетный рынок: самый быстрый старт после заявки и украиноязычная поддержка на каждом шаге.',
+  ],
+  expectations: [
+    'Тебе уже есть 18 лет.',
+    'Серьёзный подход к созданию контента и желание развиваться.',
+    'Готовность работать удалённо из любой точки — достаточно смартфона и стабильного интернета.',
+    'Организованность: соблюдение контент-плана и сроков.',
+    'Открытость к сотрудничеству и общению с командой.',
+  ],
+  closingHtml:
+    'Остались вопросы? Напиши нам — с радостью ответим. Все детали и подтверждения обсудим в переписке или на созвоне, как тебе удобнее.',
+  specs: [
+    { label: 'График', value: 'Гибкий, 2–3 часа в день' },
+    { label: 'Опыт', value: 'Не требуется — обучаем с нуля' },
+    { label: 'Локация', value: 'Удалённо · вся Украина' },
+    { label: 'Выплаты', value: 'Регулярно, по фиксированному графику' },
+    { label: 'Старт', value: 'В первые дни после онлайн-кастинга' },
+  ],
   faq: [
     {
-      q: 'Из каких городов Украины можно работать моделью OnlyFans?',
-      a: 'Из любого: работа полностью удалённая. Чаще всего наши модели — из Киева, Харькова, Львова, Днепра, Одессы и Запорожья, но город не влияет ни на условия, ни на процент — снимать можно из дома в любом населённом пункте Украины, нужны только смартфон и стабильный интернет.',
+      q: 'Это анонимно? Кто увидит мой контент?',
+      a: 'Уровень приватности настраиваем индивидуально. По желанию ставим геоблок: страница не видна в Украине и соседних странах, а аудиторию приводим из США, Канады, Австралии и Европы.',
     },
     {
-      q: 'Сколько можно заработать моделью OnlyFans в Украине?',
-      a: 'Видимый ориентир дохода модели — $500–8000 в месяц в зависимости от плана, типажа и вовлечённости; в первый месяц новая страница обычно выходит на $500–1 000. Модель получает 20–30% от gross-баланса страницы, агентство реинвестирует часть дохода в промо и трафик. Балансы топ-страниц агентства доходят до $15 000–$50 000 в месяц, но это результат месяцев работы команды, а не гарантия.',
+      q: 'Нужен ли опыт, чтобы начать?',
+      a: 'Нет. Большинство наших моделей начинали с нуля: на онбординге ты получишь контент-план, рабочие ракурсы и поддержку команды на каждом шаге.',
     },
     {
-      q: 'Нужен ли опыт, чтобы начать онлифанс работу моделью в Украине?',
-      a: 'Нет. Большинство украинских моделей агентства начинали с нуля: на онбординге дают контент-план, показывают рабочие ракурсы и форматы, а маркетинг, переписку с подписчиками и финансы команда берёт на себя. Нужны 18+, смартфон с нормальной камерой и готовность снимать регулярно.',
+      q: 'Сколько времени нужно уделять в день?',
+      a: 'В среднем 2–3 часа на съёмку контента. Когда именно снимать — выбираешь сама, график полностью гибкий.',
     },
     {
-      q: 'Это анонимно и безопасно для девушки из Украины?',
-      a: 'Уровень приватности обсуждаем на кастинге индивидуально. Стандартная практика — геоблок: страница закрывается от Украины и соседних стран, чтобы знакомые её не увидели, а платёжеспособную аудиторию приводим из США, Канады и Австралии. Форматы контента согласуются заранее и фиксируются в плане — ничего «по умолчанию» не публикуется.',
+      q: 'Когда будет первая выплата?',
+      a: 'Страницу запускаем в первые дни после онлайн-кастинга, а выплаты приходят регулярно по фиксированному графику. Точные даты под твой план расскажем в переписке.',
+    },
+    {
+      q: 'Можно ли совмещать с учёбой или основной работой?',
+      a: 'Да, это частый сценарий: 2–3 часа съёмок легко встраиваются в любое расписание, а промо и переписку с подписчиками ведёт команда.',
     },
   ],
 };
 
 const UK: ModelGeoContent = {
   countryName: 'Україна',
-  title: 'Робота моделлю OnlyFans в Україні — віддалено, сторінку веде агенція',
+  title: 'Робота моделлю OnlyFans в Україні — від $3 000/міс, віддалено',
   description:
-    'Робота для дівчат моделлю OnlyFans в Україні: віддалено з Києва, Харкова, Львова, Дніпра, Одеси, Запоріжжя. Зйомка 2–3 год/день, реєстрацію, промо, чат і фінанси веде агенція. Дохід $500–8000/міс. Досвід не потрібен.',
+    'Робота для дівчат моделлю OnlyFans в Україні: віддалено з будь-якого міста. Багато моделей заробляють від $3 000 до $10 000 на місяць, промо коштом агенції. 18+.',
   introHtml:
-    'Агенція OFM Models набирає моделей OnlyFans по всій Україні на віддалену роботу з дому. Це одна вакансія на всю країну: байдуже, з якого ти міста — Києва, Харкова, Львова, Дніпра, Одеси чи Запоріжжя, — умови, команда й відсоток однакові для всіх. Формат простий: ти знімаєш контент за узгодженим планом 2–3 години на день, а все інше — реєстрацію та верифікацію сторінки, просування, листування з підписниками й фінанси — бере на себе команда агенції. Досвід, портфоліо та професійна техніка не потрібні: більшість наших українських моделей починали з нуля зі смартфона. Що робить агенція на кожному етапі — розібрали у статті [що робить OnlyFans-агенція](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Київ', 'Харків', 'Львів', 'Дніпро', 'Одеса', 'Запоріжжя'],
-  marketContext:
-    'Україна — пріоритетний ринок агенції №1: звідси приходить найбільше заявок, і саме на українських типажах у нас відлагоджені контент-план і промо. Слов’янська зовнішність стабільно в топі попиту у платоспроможної аудиторії США, Канади та Австралії, а звичка українських дівчат до віддаленої роботи й фрилансу робить старт швидким і зрозумілим. При цьому ринок ще далеко не насичений: попит на нові сторінки кратно перевищує кількість моделей, яких встигає запустити команда.',
-  paymentsNote:
-    'Виплати в Україні йдуть через міжнародні платіжні системи OnlyFans — Paxum і Skrill; виведення в гривню — на українську картку чи зручним тобі способом, графік виплат фіксований. Усю бухгалтерію, комісії платіжок і виведення веде агенція: тобі не треба розбиратися в налаштуваннях гаманців і курсах — ти бачиш свій відсоток і графік, решту закриває команда.',
-  earningsNarrative:
-    'Чесні орієнтири для України: у перший місяць нова сторінка зазвичай виходить на $500–1 000 gross-балансу — це розгін, аудиторія тільки набирається. Далі зростання залежить від регулярності контенту: сторінки топ-моделей агенції виходять на баланси $15 000–$50 000 gross на місяць, але це результат місяців системної роботи команди, а не стартова точка й не гарантія. Модель отримує 20–30% від gross-балансу сторінки — відсоток залежить від плану, типажу та залученості; агенція повністю фінансує промо, трафік і чат-команду, а частина доходу реінвестується в зростання сторінки, тому баланс і твій відсоток ростуть разом. Дохід залежить від плану, типажу та залученості й не є гарантією. З чого складаються цифри — у статті [скільки заробляють моделі OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), а прикинути свій потенціал можна в [калькуляторі доходу](/calculator).',
+    'OFM Models — агенція повного циклу: понад три роки ми запускаємо й розвиваємо сторінки моделей, за цей час через команду пройшло 220+ сторінок. Зараз шукаємо дівчат 18+ по всій Україні — з досвідом і без. Україна для нас ринок №1: старт тут найшвидший, а на зв’язку з тобою завжди україномовна команда. Від тебе — контент і бажання рости, решту ми беремо на себе.',
+  offers: [
+    'Ти створюєш контент 2–3 години на день — усю іншу роботу бере на себе команда: промо, листування з підписниками, просування сторінки.',
+    'Гідний дохід: багато наших моделей заробляють від $3 000 до $10 000 на місяць.',
+    'Просування повністю коштом агенції — стартуєш без жодних вкладень.',
+    'Поруч досвідчена команда: понад три роки практики й сотні запущених сторінок.',
+    'Конфіденційність: дбайливо ставимося до твоєї особистої інформації та налаштовуємо рівень приватності під тебе.',
+    'Україна — наш пріоритетний ринок: найшвидший старт після заявки та україномовна підтримка на кожному кроці.',
+  ],
+  expectations: [
+    'Тобі вже виповнилося 18 років.',
+    'Серйозне ставлення до створення контенту й бажання розвиватися.',
+    'Готовність працювати віддалено з будь-якої точки — вистачить смартфона та стабільного інтернету.',
+    'Організованість: дотримання контент-плану і термінів.',
+    'Відкритість до співпраці та спілкування з командою.',
+  ],
+  closingHtml:
+    'Лишилися запитання? Напиши нам — залюбки відповімо. Усі деталі й підтвердження обговоримо в листуванні або на дзвінку — як тобі зручніше.',
+  specs: [
+    { label: 'Графік', value: 'Гнучкий, 2–3 години на день' },
+    { label: 'Досвід', value: 'Не потрібен — навчимо з нуля' },
+    { label: 'Локація', value: 'Віддалено · вся Україна' },
+    { label: 'Виплати', value: 'Регулярні, за фіксованим графіком' },
+    { label: 'Старт', value: 'У перші дні після онлайн-кастингу' },
+  ],
   faq: [
     {
-      q: 'З яких міст України можна працювати моделлю OnlyFans?',
-      a: 'З будь-якого: робота повністю віддалена. Найчастіше наші моделі — з Києва, Харкова, Львова, Дніпра, Одеси та Запоріжжя, але місто не впливає ні на умови, ні на відсоток — знімати можна з дому в будь-якому населеному пункті України, потрібні лише смартфон і стабільний інтернет.',
+      q: 'Це анонімно? Хто побачить мій контент?',
+      a: 'Рівень приватності налаштовуємо індивідуально. За бажанням ставимо геоблок: сторінку не видно в Україні та сусідніх країнах, а аудиторію приводимо зі США, Канади, Австралії та Європи.',
     },
     {
-      q: 'Скільки можна заробити моделлю OnlyFans в Україні?',
-      a: 'Видимий орієнтир доходу моделі — $500–8000 на місяць залежно від плану, типажу та залученості; у перший місяць нова сторінка зазвичай виходить на $500–1 000. Модель отримує 20–30% від gross-балансу сторінки, агенція реінвестує частину доходу в промо та трафік. Баланси топ-сторінок агенції сягають $15 000–$50 000 на місяць, але це результат місяців роботи команди, а не гарантія.',
+      q: 'Чи потрібен досвід, щоб почати?',
+      a: 'Ні. Більшість наших моделей починали з нуля: на онбордингу ти отримаєш контент-план, робочі ракурси та підтримку команди на кожному кроці.',
     },
     {
-      q: 'Чи потрібен досвід, щоб почати роботу моделлю OnlyFans в Україні?',
-      a: 'Ні. Більшість українських моделей агенції починали з нуля: на онбордингу дають контент-план, показують робочі ракурси та формати, а маркетинг, листування з підписниками й фінанси команда бере на себе. Потрібні 18+, смартфон із нормальною камерою та готовність знімати регулярно.',
+      q: 'Скільки часу потрібно приділяти на день?',
+      a: 'У середньому 2–3 години на зйомку контенту. Коли саме знімати — обираєш сама, графік повністю гнучкий.',
     },
     {
-      q: 'Це анонімно й безпечно для дівчини з України?',
-      a: 'Рівень приватності обговорюємо на кастингу індивідуально. Стандартна практика — геоблок: сторінка закривається від України та сусідніх країн, щоб знайомі її не побачили, а платоспроможну аудиторію приводимо зі США, Канади та Австралії. Формати контенту узгоджуються заздалегідь і фіксуються в плані — нічого «за замовчуванням» не публікується.',
+      q: 'Коли буде перша виплата?',
+      a: 'Сторінку запускаємо в перші дні після онлайн-кастингу, а виплати надходять регулярно за фіксованим графіком. Точні дати під твій план розповімо в листуванні.',
+    },
+    {
+      q: 'Чи можна поєднувати з навчанням або основною роботою?',
+      a: 'Так, це частий сценарій: 2–3 години зйомок легко вписуються в будь-який розклад, а промо та листування з підписниками веде команда.',
     },
   ],
 };
 
 const EN: ModelGeoContent = {
   countryName: 'Ukraine',
-  title: 'OnlyFans model job in Ukraine — remote, the page run by the agency',
+  title: 'OnlyFans model job in Ukraine — from $3 000/mo, remote',
   description:
-    'OnlyFans model job in Ukraine: remote from Kyiv, Kharkiv, Lviv, Dnipro, Odesa, Zaporizhzhia. Shooting 2–3 h/day, registration, promo, chat and finances run by the agency. Income $500–8000/mo. No experience needed.',
+    'OnlyFans model job in Ukraine: remote from any city. Many models earn from $3 000 to $10 000 a month, shooting 2–3 h/day, promotion funded by the agency. 18+.',
   introHtml:
-    'OFM Models agency is recruiting OnlyFans models across Ukraine for remote work from home. This is one vacancy for the whole country: no matter which city you’re in — Kyiv, Kharkiv, Lviv, Dnipro, Odesa or Zaporizhzhia — the terms, team and percentage are the same for everyone. The format is simple: you shoot content on an agreed plan 2–3 hours a day, and everything else — registering and verifying the page, promotion, subscriber messaging and finances — is handled by the agency team. Experience, a portfolio and professional gear aren’t needed: most of our Ukrainian models started from scratch with a smartphone. What the agency does at each stage — we broke it down in the article [what an OnlyFans agency does](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Kyiv', 'Kharkiv', 'Lviv', 'Dnipro', 'Odesa', 'Zaporizhzhia'],
-  marketContext:
-    'Ukraine is the agency’s priority market #1: it brings the most applications, and it’s on Ukrainian personas that our content plan and promo are best honed. Slavic looks are consistently in top demand with the paying audiences of the US, Canada and Australia, and Ukrainian women’s familiarity with remote work and freelancing makes the start fast and clear. At the same time the market is far from saturated: demand for new pages far outstrips the number of models the team can launch.',
-  paymentsNote:
-    'Payouts in Ukraine go through OnlyFans’ international payment systems — Paxum and Skrill; withdrawal in hryvnia goes to a Ukrainian card or whatever method suits you, on a fixed payout schedule. All the accounting, processor fees and withdrawals are run by the agency: you don’t need to figure out wallet settings or exchange rates — you see your percentage and schedule, the team covers the rest.',
-  earningsNarrative:
-    'Honest benchmarks for Ukraine: in the first month a new page usually reaches $500–1,000 of gross balance — that’s the ramp-up, the audience is only just building. Further growth depends on content consistency: the agency’s top-model pages reach balances of $15,000–$50,000 gross a month, but that’s the result of months of systematic teamwork, not a starting point and not a guarantee. A model receives 20–30% of the page’s gross balance — the percentage depends on the plan, persona and engagement; the agency fully funds promo, traffic and the chat team, and part of the income is reinvested into the page’s growth, so the balance and your percentage grow together. Income depends on the plan, persona and engagement and is not a guarantee. What the numbers are made of — in the article [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli), and you can estimate your own potential in the [income calculator](/calculator).',
+    'OFM Models is a full-cycle agency: for over three years we have been launching and growing model pages — 220+ pages so far. We are looking for women 18+ across Ukraine, with or without experience. Ukraine is our number-one market: the start here is the fastest, and a Ukrainian-speaking team stays in touch with you at every step. You bring the content and the wish to grow — we take care of everything else.',
+  offers: [
+    'You create content 2–3 hours a day — the team takes over everything else: promotion, subscriber messaging and page growth.',
+    'A solid income: many of our models earn from $3 000 to $10 000 a month.',
+    'Promotion is fully funded by the agency — you start with zero investment.',
+    'An experienced team by your side: 3+ years of practice and hundreds of launched pages.',
+    'Confidentiality: we treat your personal information with care and tune the privacy level to what feels right for you.',
+    'Ukraine is our priority market: the fastest start after your application and Ukrainian-speaking support at every step.',
+  ],
+  expectations: [
+    'You are 18 or older.',
+    'A serious attitude to content and a desire to grow.',
+    'Readiness to work remotely from anywhere — a smartphone and stable internet are enough.',
+    'Self-organisation: keeping to the content plan and timelines.',
+    'Openness to teamwork and easy communication.',
+  ],
+  closingHtml:
+    'Questions left? Message us — we will gladly answer. All the details and confirmations are discussed in chat or on a call, whichever suits you best.',
+  specs: [
+    { label: 'Schedule', value: 'Flexible, 2–3 hours a day' },
+    { label: 'Experience', value: 'Not needed — we train from scratch' },
+    { label: 'Location', value: 'Remote · all of Ukraine' },
+    { label: 'Payouts', value: 'Regular, on a fixed schedule' },
+    { label: 'Start', value: 'Within days after the online casting' },
+  ],
   faq: [
     {
-      q: 'Which cities in Ukraine can you work as an OnlyFans model from?',
-      a: 'Any: the work is fully remote. Most often our models are from Kyiv, Kharkiv, Lviv, Dnipro, Odesa and Zaporizhzhia, but the city affects neither the terms nor the percentage — you can shoot from home in any locality in Ukraine, all you need is a smartphone and stable internet.',
+      q: 'Is it anonymous? Who will see my content?',
+      a: 'The privacy level is set up individually. On request we add a geo-block: the page is not visible in Ukraine and neighbouring countries, while the audience comes from the US, Canada, Australia and Europe.',
     },
     {
-      q: 'How much can you earn as an OnlyFans model in Ukraine?',
-      a: 'The visible income benchmark for a model is $500–8000 a month depending on the plan, persona and engagement; in the first month a new page usually reaches $500–1,000. A model receives 20–30% of the page’s gross balance, and the agency reinvests part of the income into promo and traffic. The agency’s top-page balances reach $15,000–$50,000 a month, but that’s the result of months of teamwork, not a guarantee.',
+      q: 'Do I need experience to start?',
+      a: 'No. Most of our models started from scratch: onboarding gives you a content plan, working angles and the team’s support at every step.',
     },
     {
-      q: 'Do you need experience to start OnlyFans model work in Ukraine?',
-      a: 'No. Most of the agency’s Ukrainian models started from scratch: at onboarding they get a content plan, are shown working angles and formats, while the team takes on marketing, subscriber messaging and finances. You need to be 18+, have a smartphone with a decent camera and be ready to shoot regularly.',
+      q: 'How much time does it take per day?',
+      a: 'On average 2–3 hours of shooting. You choose when to shoot — the schedule is fully flexible.',
     },
     {
-      q: 'Is it anonymous and safe for a woman from Ukraine?',
-      a: 'The level of privacy is discussed individually at the casting. The standard practice is a geo-block: the page is closed to Ukraine and neighbouring countries so acquaintances won’t see it, while we bring the paying audience from the US, Canada and Australia. Content formats are agreed in advance and fixed in the plan — nothing is published "by default".',
+      q: 'When is the first payout?',
+      a: 'The page launches within days after the online casting, and payouts arrive regularly on a fixed schedule. We will walk you through the exact dates for your plan in chat.',
+    },
+    {
+      q: 'Can I combine it with studies or a main job?',
+      a: 'Yes, it is a common scenario: 2–3 hours of shooting fit into any timetable, while the team handles promotion and subscriber messaging.',
     },
   ],
 };
 
 const ES: ModelGeoContent = {
   countryName: 'Ucrania',
-  title: 'Trabajo de modelo de OnlyFans en Ucrania — remoto, la página la lleva la agencia',
+  title: 'Trabajo de modelo OnlyFans en Ucrania — desde $3 000/mes, remoto',
   description:
-    'Trabajo de modelo de OnlyFans en Ucrania: remoto desde Kyiv, Járkiv, Lviv, Dnipró, Odesa, Zaporiyia. Grabación 2–3 h/día, el registro, la promoción, el chat y las finanzas los lleva la agencia. Ingresos $500–8000/mes. Sin experiencia.',
+    'Trabajo de modelo OnlyFans en Ucrania: remoto desde cualquier ciudad. Muchas modelos ganan de $3 000 a $10 000 al mes, promoción a cargo de la agencia. 18+.',
   introHtml:
-    'La agencia OFM Models incorpora modelos de OnlyFans en toda Ucrania para trabajo remoto desde casa. Es una sola vacante para todo el país: da igual desde qué ciudad estés — Kyiv, Járkiv, Lviv, Dnipró, Odesa o Zaporiyia —, las condiciones, el equipo y el porcentaje son iguales para todas. El formato es simple: grabas contenido según un plan acordado 2–3 horas al día, y todo lo demás — el registro y la verificación de la página, la promoción, la mensajería con los suscriptores y las finanzas — lo asume el equipo de la agencia. No hacen falta experiencia, portafolio ni equipo profesional: la mayoría de nuestras modelos ucranianas empezaron desde cero con el smartphone. Qué hace la agencia en cada etapa — lo analizamos en el artículo [qué hace una agencia de OnlyFans](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Kyiv', 'Járkiv', 'Lviv', 'Dnipró', 'Odesa', 'Zaporiyia'],
-  marketContext:
-    'Ucrania es el mercado prioritario #1 de la agencia: es de donde llegan más candidaturas, y es con los perfiles ucranianos donde mejor están afinados nuestro plan de contenido y la promo. El físico eslavo está de forma estable en lo más alto de la demanda de la audiencia con capacidad de pago de EE. UU., Canadá y Australia, y la costumbre de las chicas ucranianas al trabajo remoto y el freelance hace que el arranque sea rápido y claro. Al mismo tiempo el mercado dista de estar saturado: la demanda de páginas nuevas supera con creces el número de modelos que el equipo alcanza a lanzar.',
-  paymentsNote:
-    'Los pagos en Ucrania van por los sistemas de pago internacionales de OnlyFans — Paxum y Skrill; el retiro en grivnas va a una tarjeta ucraniana o al método que te resulte cómodo, con un calendario de pagos fijo. Toda la contabilidad, las comisiones de las pasarelas y los retiros los lleva la agencia: no necesitas lidiar con la configuración de las carteras ni con los tipos de cambio — ves tu porcentaje y tu calendario, el resto lo cubre el equipo.',
-  earningsNarrative:
-    'Referencias honestas para Ucrania: el primer mes una página nueva suele llegar a $500–1000 de saldo bruto — es el arranque, la audiencia apenas se forma. Después el crecimiento depende de la regularidad del contenido: las páginas de las top-modelos de la agencia llegan a saldos de $15 000–$50 000 brutos al mes, pero es el resultado de meses de trabajo sistemático del equipo, no un punto de partida ni una garantía. La modelo recibe el 20–30% del saldo bruto de la página — el porcentaje depende del plan, el perfil y la implicación; la agencia financia por completo la promo, el tráfico y el equipo de chat, y parte de los ingresos se reinvierte en el crecimiento de la página, por eso el saldo y tu porcentaje crecen juntos. El ingreso depende del plan, el perfil y la implicación y no es una garantía. De qué se componen las cifras — en el artículo [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), y puedes estimar tu potencial en la [calculadora de ingresos](/calculator).',
+    'OFM Models es una agencia de ciclo completo: llevamos más de tres años lanzando y haciendo crecer páginas de modelos — más de 220 páginas hasta hoy. Buscamos chicas mayores de 18 en toda Ucrania, con o sin experiencia. Ucrania es nuestro mercado número uno: aquí el arranque es el más rápido y te acompaña un equipo que habla ucraniano en cada paso. Tú pones el contenido y las ganas de crecer — del resto nos encargamos nosotros.',
+  offers: [
+    'Tú creas contenido 2–3 horas al día — el equipo asume todo lo demás: promoción, mensajería con los suscriptores y crecimiento de la página.',
+    'Ingresos sólidos: muchas de nuestras modelos ganan de $3 000 a $10 000 al mes.',
+    'La promoción corre por completo a cargo de la agencia — empiezas sin invertir nada.',
+    'Un equipo con experiencia a tu lado: más de 3 años de práctica y cientos de páginas lanzadas.',
+    'Confidencialidad: cuidamos tu información personal y ajustamos el nivel de privacidad a lo que te resulte cómodo.',
+    'Ucrania es nuestro mercado prioritario: el arranque más rápido tras la candidatura y soporte en ucraniano en cada paso.',
+  ],
+  expectations: [
+    'Tienes 18 años o más.',
+    'Actitud seria hacia el contenido y ganas de crecer.',
+    'Disponibilidad para trabajar en remoto desde cualquier lugar — bastan un smartphone e internet estable.',
+    'Organización: cumplir el plan de contenido y los plazos.',
+    'Apertura a la colaboración y a una comunicación fluida con el equipo.',
+  ],
+  closingHtml:
+    '¿Te quedan dudas? Escríbenos — te responderemos con gusto. Todos los detalles y confirmaciones los vemos por chat o en una llamada, como prefieras.',
+  specs: [
+    { label: 'Horario', value: 'Flexible, 2–3 horas al día' },
+    { label: 'Experiencia', value: 'No hace falta — te formamos desde cero' },
+    { label: 'Ubicación', value: 'Remoto · toda Ucrania' },
+    { label: 'Pagos', value: 'Regulares, con calendario fijo' },
+    { label: 'Inicio', value: 'En los primeros días tras el casting online' },
+  ],
   faq: [
     {
-      q: '¿Desde qué ciudades de Ucrania se puede trabajar como modelo de OnlyFans?',
-      a: 'Desde cualquiera: el trabajo es totalmente remoto. Lo más habitual es que nuestras modelos sean de Kyiv, Járkiv, Lviv, Dnipró, Odesa y Zaporiyia, pero la ciudad no influye ni en las condiciones ni en el porcentaje — puedes grabar desde casa en cualquier localidad de Ucrania, solo necesitas un smartphone e internet estable.',
+      q: '¿Es anónimo? ¿Quién verá mi contenido?',
+      a: 'El nivel de privacidad se configura de forma individual. Si lo pides, activamos el geobloqueo: la página no se ve en Ucrania ni en los países vecinos, mientras la audiencia llega de EE. UU., Canadá, Australia y Europa.',
     },
     {
-      q: '¿Cuánto se puede ganar como modelo de OnlyFans en Ucrania?',
-      a: 'La referencia visible de ingresos de una modelo es $500–8000 al mes según el plan, el perfil y la implicación; el primer mes una página nueva suele llegar a $500–1000. La modelo recibe el 20–30% del saldo bruto de la página, y la agencia reinvierte parte de los ingresos en promo y tráfico. Los saldos de las páginas top de la agencia llegan a $15 000–$50 000 al mes, pero es el resultado de meses de trabajo del equipo, no una garantía.',
+      q: '¿Necesito experiencia para empezar?',
+      a: 'No. La mayoría de nuestras modelos empezaron desde cero: en el onboarding recibes un plan de contenido, ángulos que funcionan y el apoyo del equipo en cada paso.',
     },
     {
-      q: '¿Hace falta experiencia para empezar a trabajar como modelo de OnlyFans en Ucrania?',
-      a: 'No. La mayoría de las modelos ucranianas de la agencia empezaron desde cero: en el onboarding reciben un plan de contenido, se les muestran ángulos y formatos que funcionan, mientras el equipo asume el marketing, la mensajería con los suscriptores y las finanzas. Hace falta ser mayor de 18, tener un smartphone con una cámara decente y estar dispuesta a grabar con regularidad.',
+      q: '¿Cuánto tiempo hay que dedicar al día?',
+      a: 'De media, 2–3 horas de grabación. Tú eliges cuándo grabar — el horario es totalmente flexible.',
     },
     {
-      q: '¿Es anónimo y seguro para una chica de Ucrania?',
-      a: 'El nivel de privacidad lo hablamos de forma individual en el casting. La práctica estándar es el geobloqueo: la página se cierra a Ucrania y a los países vecinos para que los conocidos no la vean, mientras la audiencia con capacidad de pago la traemos de EE. UU., Canadá y Australia. Los formatos de contenido se acuerdan de antemano y se fijan en el plan — nada se publica «por defecto».',
+      q: '¿Cuándo llega el primer pago?',
+      a: 'La página se lanza en los primeros días tras el casting online, y los pagos llegan con regularidad según un calendario fijo. Las fechas exactas para tu plan te las contamos por chat.',
+    },
+    {
+      q: '¿Puedo combinarlo con los estudios o con otro trabajo?',
+      a: 'Sí, es un escenario habitual: 2–3 horas de grabación encajan en cualquier agenda, mientras el equipo lleva la promoción y la mensajería con los suscriptores.',
     },
   ],
 };
@@ -166,3 +250,5 @@ export const content: Record<Locale, ModelGeoContent> = {
   en: EN,
   es: ES,
 };
+
+export const UKRAINE: ModelGeoCountryFile = { record, content };

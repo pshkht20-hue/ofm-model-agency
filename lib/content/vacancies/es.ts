@@ -4,9 +4,12 @@
  * estructura de ru.ts (la localización base).
  *
  * Líneas rojas (CLAUDE.md): sin palabras «contrato/acuerdo» sobre la agencia;
- * 20–30% solo CON la justificación de la reinversión; cifras de ingresos solo
- * como $15K–$50K de saldo bruto de las páginas de las top-modelos, ancla de
- * principiante $500–1000 el primer mes; solo OnlyFans; tono — atraer, no asustar.
+ * solo OnlyFans; tono — atraer, no asustar.
+ * Política de vacantes 25.07.2026 (for-girls + modelCard): rango visible
+ * $3 000–10 000/mes (espacios como separadores de miles), SIN porcentajes/
+ * gross/reinversión ni reservas, sin enlaces a /calculator; los detalles de
+ * dinero van a Telegram; estilo — job board breve (bullets de beneficios).
+ * $15 000–50 000 solo como balances de páginas top, nunca como garantía.
  */
 import type { VacancyContent, VacancyHubContent, VacancySlug, VacancyUi } from './types';
 
@@ -40,9 +43,9 @@ export const VACANCY_UI_ES: VacancyUi = {
 export const VACANCY_HUB_ES: VacancyHubContent = {
   h1: 'Vacantes actuales en OFM Model Agency',
   seoTitle:
-    'Trabajo en OnlyFans — vacantes de la agencia 2026: chatter y modelo | OFM Model Agency',
+    'Trabajo en OnlyFans — vacantes 2026: chatter y modelo',
   seoDescription:
-    'Vacantes abiertas en la agencia de OnlyFans OFM Models: chatter (operador de chat) y modelo. Trabajo remoto, formación desde cero, postula en 2 minutos. Europa, EE. UU., Canadá y todo el mundo.',
+    'Vacantes de la agencia OnlyFans: chatter y modelo — $3 000–10 000/mes. Trabajo remoto, formación desde cero, postula en 2 minutos. Europa, EE. UU. y todo el mundo.',
   keywords: [
     'trabajo onlyfans',
     'vacantes onlyfans',
@@ -64,7 +67,7 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
       ],
       bullets: [
         'Chatter (operador de chat) — mensajería con los suscriptores en nombre de la página y venta de PPV con guiones listos; el pago es una tarifa base + % de las ventas del chat; formación desde cero, también para hombres',
-        'Modelo de OnlyFans — contenido 2–3 horas al día según un plan acordado; el registro, la promoción, el chat y las finanzas de la página los lleva por completo la agencia. Ingresos $500–8000/mes — es el 20–30% del saldo bruto de la página, reinvertido en su crecimiento. Elige tu país en la [página «Trabajo de modelo»](/vacancies/model)',
+        'Modelo de OnlyFans — contenido 2–3 horas al día según un plan listo; ingresos $3 000–10 000/mes, y del registro, la promoción, el chat y el crecimiento de la página se encarga por completo el equipo. Elige tu país en la [página «Trabajo de modelo»](/vacancies/model)',
       ],
     },
     {
@@ -84,8 +87,8 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
     {
       heading: '¿Se puede ganar de verdad en OnlyFans?',
       paragraphs: [
-        'Sí — pero con cifras honestas, sin cuentos. Chatter: tarifa base + un porcentaje de las ventas de tu propio chat (el rango lo decimos en la entrevista tras la prueba, para no pintar un publicitario «hasta $X»). Modelo: la referencia visible de ingresos es $500–8000/mes — es el 20–30% del saldo bruto de la página; la agencia financia por completo la promoción, el tráfico y el equipo de chat, y parte de los ingresos de la página se reinvierte en su crecimiento — por eso el saldo y el porcentaje de la modelo crecen juntos.',
-        'Referencias por páginas: el primer mes una página nueva suele llegar a $500–1000 de saldo bruto — eso es el arranque, no el techo; los saldos de las páginas de las top-modelos de la agencia llegan a $15 000–$50 000 brutos al mes, pero es el resultado de meses de trabajo sistemático del equipo, no una garantía. El desglose completo de las cifras está en el artículo [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
+        'Sí — pero con cifras honestas, sin cuentos. Chatter: tarifa base + un porcentaje de las ventas de tu propio chat (el rango lo decimos en la entrevista tras la prueba, para no pintar un publicitario «hasta $X»). Modelo: ingresos de $3 000 a $10 000/mes, las top-modelos superan los $10 000 — tu rango personal y el plan te los mostramos por Telegram.',
+        'Referencias por páginas: los saldos de las páginas de las top-modelos de la agencia llegan a $15 000–50 000 al mes — detrás de esas cifras está el trabajo sistemático de todo el equipo: promoción, chat y gestión. El desglose completo de las cifras está en el artículo [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       ],
     },
     {
@@ -133,7 +136,7 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
     {
       question: '¿Cuánto paga una agencia de OnlyFans?',
       answer:
-        'Chatter — tarifa base + % de las ventas de tu propio chat (rango en la entrevista tras la prueba). Modelo — una referencia visible de $500–8000/mes, que es el 20–30% del saldo bruto de la página: la agencia financia la promoción, el tráfico y el equipo y reinvierte parte de los ingresos de la página en su crecimiento. El ingreso de la modelo depende del plan, el perfil y la implicación y no es una garantía.',
+        'Chatter — tarifa base + % de las ventas de tu propio chat (rango en la entrevista tras la prueba). Modelo — de $3 000 a $10 000/mes; las páginas top de la agencia alcanzan saldos de $15 000–50 000/mes. Tu rango personal y el plan te los mostramos por Telegram.',
     },
     {
       question: '¿Es trabajo remoto?',
@@ -149,8 +152,8 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
   modelCard: {
     role: 'Modelo de OnlyFans',
     cardSummary:
-      'Grabación de contenido 2–3 horas al día según un plan listo — el registro, la promoción, el chat y las finanzas los asume el equipo de la agencia. Elige tu país en la página del rol.',
-    salaryLabel: '$500–8000/mes · 20–30% del saldo bruto (reinvertido)',
+      'Contenido 2–3 horas al día según un plan listo — del registro, la promoción, el chat y las finanzas se encarga por completo el equipo de la agencia.',
+    salaryLabel: '$3 000–10 000/mes',
     formatLabel: 'Remoto · contenido 2–3 h/día',
     locationLabel: 'Remoto · Europa, EE. UU., Canadá y todo el mundo',
   },
@@ -165,7 +168,7 @@ const CHATTER_ES: VacancyContent = {
   slug: 'chatter-onlyfans',
   role: 'Chatter / operador de chat',
   h1: 'Trabajo de chatter de OnlyFans — vacante remota de operador de chat',
-  seoTitle: 'Vacante de chatter de OnlyFans (operador de chat) — remoto, tarifa base + % de ventas',
+  seoTitle: 'Vacante de chatter OnlyFans — remoto, tarifa + % de ventas',
   seoDescription:
     'Vacante de chatter de OnlyFans en la agencia OFM Models: trabajo remoto en el chat, formación desde cero, tarifa base + % de ventas, desde 25 h/sem. También para hombres. ¡Postula!',
   keywords: [
@@ -247,7 +250,7 @@ const CHATTER_ES: VacancyContent = {
       heading: 'Pago: tarifa base + porcentaje de las ventas del chat',
       paragraphs: [
         'El esquema es transparente: una tarifa fija por turnos + un porcentaje de las ventas que hizo tu chat. Las cifras concretas dependen del horario, la experiencia y los resultados de la prueba — las comunicamos en la entrevista para nombrar tu rango real, no un publicitario «hasta $X».',
-        'Por qué el porcentaje es algo serio: las páginas de las top-modelos bajo nuestra gestión llegan a $15K–$50K brutos al mes, y la mayor parte de esas ventas nacen en la mensajería. Cuanto mejor venda tu chat, mayor es tu porcentaje en cifras absolutas. Cuánto ganan las propias páginas y de qué se compone su ingreso — mira el análisis [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
+        'Por qué el porcentaje es algo serio: las páginas de las top-modelos bajo nuestra gestión llegan a $15 000–50 000 al mes, y la mayor parte de esas ventas nacen en la mensajería. Cuanto mejor venda tu chat, mayor es tu porcentaje en cifras absolutas. Cuánto ganan las propias páginas y de qué se compone su ingreso — mira el análisis [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       ],
     },
     {
@@ -315,9 +318,137 @@ const CHATTER_ES: VacancyContent = {
     text: 'Escríbenos por Telegram unas palabras sobre ti: tu nivel de inglés, experiencia en ventas o mensajería (si la tienes) y cuántas horas por semana estás dispuesto/a a trabajar. Respondemos en el día.',
     primaryLabel: 'Escribir por Telegram',
     bridgeNote:
-      '¿No buscas trabajo en el chat, sino tu propia página? Si eres una chica y piensas en tu propio perfil en OnlyFans — [rellena la solicitud de modelo](/join): la agencia se encarga de la promoción, el chat y las finanzas de la página. Puedes estimar tu ingreso potencial en la [calculadora](/calculator).',
+      '¿No buscas trabajo en el chat, sino tu propia página? Si eres una chica y piensas en tu propio perfil en OnlyFans — [rellena la solicitud de modelo](/join): la agencia se encarga de la promoción, el chat y las finanzas de la página, y la solicitud lleva 2–3 minutos.',
   },
 };
+const FOR_GIRLS_ES: VacancyContent = {
+  slug: 'for-girls',
+  role: 'Trabajo online para chicas',
+  h1: 'Trabajo online para chicas — vacantes remotas en la agencia OFM Models',
+  seoTitle: 'Trabajo online para chicas — $3 000–10 000/mes remoto',
+  seoDescription:
+    'Trabajo online para chicas en OFM Models: modelo de OnlyFans u operadora de soporte. $3 000–10 000/mes, remoto, sin experiencia, con formación. ¡Postula en 2 minutos!',
+  keywords: [
+    'trabajo para chicas',
+    'trabajo online para chicas',
+    'trabajo para mujeres online',
+    'trabajo remoto para chicas',
+    'trabajo online para chicas sin experiencia',
+  ],
+  cardSummary:
+    'Trabajo remoto para chicas 18+: de $3 000 a $10 000/mes, contenido 2–3 horas al día — de todo lo demás se encarga el equipo de la agencia.',
+  salaryLabel: '$3 000–10 000/mes',
+  chips: [
+    'Sin experiencia',
+    'Remoto',
+    'Horario flexible',
+    'Formación desde cero',
+    'Soporte 24/7',
+    '18+',
+  ],
+  formatLabel: 'Remoto · desde 2–3 h/día',
+  locationLabel: 'Remoto · Ucrania, Europa y todo el mundo',
+  intro: [
+    'La agencia OFM Models busca chicas 18+ para trabajo remoto: la dirección [modelo de OnlyFans](/vacancies/model) paga de $3 000 a $10 000/mes por 2–3 horas de contenido al día, mientras el equipo se encarga por completo del registro, la promoción, los mensajes y las finanzas de la página.',
+    '¿Prefieres no grabar? Existe la [vacante de operador de chat](/vacancies/chatter-onlyfans) — escríbenos por Telegram y elegimos tu dirección y te contamos las condiciones.',
+  ],
+  sections: [
+    {
+      heading: 'Qué obtienes',
+      bullets: [
+        'Ingresos de $3 000 a $10 000/mes; las páginas top de la agencia alcanzan balances de $15 000–50 000/mes',
+        'El equipo lleva la página: registro, promo, chat y finanzas dejan de ser tu problema',
+        'Contenido 2–3 horas al día según un plan listo — compatible con estudios u otro empleo',
+        'Formación y onboarding desde cero — no hacen falta experiencia ni portafolio',
+        'Mánager disponible 24/7 — de lo técnico a los límites personales',
+        'Arranque en unos días: sin cuotas y sin papeleo',
+      ],
+      outro: [
+        'Las condiciones por país están en la página [«Trabajo de modelo»](/vacancies/model); los detalles, por Telegram.',
+      ],
+    },
+    {
+      heading: 'Qué necesitamos de ti',
+      bullets: [
+        'Edad 18+ — estricto, sin excepciones',
+        '2–3 horas al día con horario flexible',
+        'Un smartphone con buena cámara e internet estable',
+        'Disposición a seguir el plan junto con el equipo',
+      ],
+    },
+    {
+      heading: 'Seguridad y privacidad',
+      bullets: [
+        'El registro, la verificación y los pagos se gestionan del lado de la agencia',
+        'Los moderadores filtran los mensajes; los límites del contenido los defines tú',
+        'Todo el trabajo ocurre online, dentro de la plataforma — sin encuentros ni «servicios offline»',
+      ],
+    },
+  ],
+  hiringHeading: 'Cómo es el arranque: 4 pasos',
+  hiringSteps: [
+    {
+      title: 'Solicitud',
+      text: 'Escríbenos por Telegram o rellena el formulario del sitio — 2–3 minutos, sin CV.',
+    },
+    {
+      title: 'Llamada',
+      text: 'Un breve encuentro online: respondemos tus preguntas y elegimos la dirección — modelo u operadora.',
+    },
+    {
+      title: 'Plan',
+      text: 'El equipo arma tu plan personal: imagen, contenido y promoción de la página.',
+    },
+    {
+      title: 'Primeros pagos',
+      text: 'Lanzamos la página — el primer dinero suele llegar ya en el primer mes.',
+    },
+  ],
+  hiringNote:
+    'Arranque sin papeleo: sin cuotas, sin «depósitos» y sin obligación de quedarte — puedes salir en cualquier momento.',
+  faqHeading: 'Preguntas frecuentes sobre el trabajo online para chicas',
+  faq: [
+    {
+      question: '¿Desde qué edad se puede empezar?',
+      answer:
+        'Estrictamente desde los 18 años — es la regla de la plataforma y de la agencia, sin excepciones. No hay límite superior: en el nicho triunfan chicas tanto de 20 como de 35+.',
+    },
+    {
+      question: '¿Puedo empezar sin experiencia?',
+      answer:
+        'Sí: recibes un plan de contenido listo, formación y un equipo que se encarga del registro, la promoción y las finanzas de la página.',
+    },
+    {
+      question: '¿Cuánto se puede ganar?',
+      answer:
+        'El rango visible es de $3 000 a $10 000/mes; las páginas top de la agencia alcanzan balances de $15 000–50 000/mes. Las condiciones exactas para tu caso te las contamos por Telegram.',
+    },
+    {
+      question: '¿Cuándo llega el primer dinero?',
+      answer:
+        'Normalmente ya en el primer mes de la página. Cómo funcionan los pagos te lo explicamos por Telegram antes del arranque.',
+    },
+    {
+      question: '¿Es legal?',
+      answer:
+        'Sí. OnlyFans es una plataforma legal, y el trabajo de modelo y de operadora es un empleo remoto común: contenido, mensajería, ventas online. Todo el trabajo es con audiencia adulta y dentro de las reglas de la plataforma.',
+    },
+    {
+      question: '¿Es obligatorio grabar o hay trabajo sin cámara?',
+      answer:
+        'Lo hay: la operadora de soporte no crea contenido en absoluto — es trabajo de mensajería con los suscriptores de las páginas de las modelos. Y si eliges la dirección de modelo, el formato y los límites del contenido se acuerdan contigo antes del arranque.',
+    },
+  ],
+  cta: {
+    heading: 'Empieza con un mensaje en Telegram',
+    text: 'Escríbenos unas palabras sobre ti: edad, ciudad y qué dirección te interesa — modelo u operadora de soporte. Respondemos en el día.',
+    primaryLabel: 'Escribir por Telegram',
+    bridgeNote:
+      '¿Ya decidiste que quieres tu propia página? [Rellena la solicitud de modelo](/join) — el equipo asume el registro, la promoción y las finanzas.',
+  },
+};
+
 export const VACANCIES_ES: Record<VacancySlug, VacancyContent> = {
   'chatter-onlyfans': CHATTER_ES,
+  'for-girls': FOR_GIRLS_ES,
 };

@@ -1,0 +1,6694 @@
+{
+ "kept": [
+  {
+   "kw": "работа кривой рог для женщин",
+   "vol": 1900,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота біла церква для жінок",
+   "vol": 1600,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок",
+   "vol": 880,
+   "cpc": 0.25,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.12,
+   "lang": "uk"
+  },
+  {
+   "kw": "работа кривой рог вакансии свежие для женщин",
+   "vol": 720,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для студенток",
+   "vol": 590,
+   "cpc": 0.11,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.22,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа кропивницкий для женщин",
+   "vol": 590,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота для жінок кам янець подільський",
+   "vol": 590,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk"
+  },
+  {
+   "kw": "работа кропивницкий для женщин без опыта",
+   "vol": 320,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа хмельницкий для женщин",
+   "vol": 320,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин",
+   "vol": 260,
+   "cpc": 0.08,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.05,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в кропивницком для женщин",
+   "vol": 260,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота для жінки хмельницький",
+   "vol": 260,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок хмельницький",
+   "vol": 260,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "работа в одессе для женщин без опыта",
+   "vol": 210,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "кривой рог работа для женщин",
+   "vol": 210,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа белая церковь для женщин",
+   "vol": 210,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин кривой рог",
+   "vol": 210,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин харьков без опыта",
+   "vol": 210,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа каменское для женщин",
+   "vol": 210,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота для дівчат",
+   "vol": 210,
+   "cpc": 0.21,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.31,
+   "lang": "uk"
+  },
+  {
+   "kw": "шукаю роботу для жінки",
+   "vol": 210,
+   "cpc": 1.11,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 1.54,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок кривий ріг",
+   "vol": 210,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "шукаю роботу для жінок",
+   "vol": 210,
+   "cpc": 1.11,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 1.54,
+   "lang": "uk"
+  },
+  {
+   "kw": "работа на дому для женщин",
+   "vol": 170,
+   "cpc": 0.22,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.22,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа вишневое для женщин",
+   "vol": 170,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа левый берег для женщин",
+   "vol": 170,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "високооплачувана робота для жінок",
+   "vol": 170,
+   "cpc": 0.12,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.13,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в рівному для жінки",
+   "vol": 170,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота софіївська борщагівка для жінок",
+   "vol": 170,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk"
+  },
+  {
+   "kw": "работа для девушек",
+   "vol": 140,
+   "cpc": 0.43,
+   "comp": "MEDIUM",
+   "bidLow": 0.05,
+   "bidHigh": 0.71,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в белгород днестровском без опыта для женщин",
+   "vol": 140,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа днепр для женщин без опыта",
+   "vol": 140,
+   "cpc": 0.04,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа кропивницкий для женщин неофициально",
+   "vol": 140,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота кам янка бузька для жінок",
+   "vol": 140,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk"
+  },
+  {
+   "kw": "подработка кропивницкий для женщин",
+   "vol": 110,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин каменское",
+   "vol": 110,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа одесса для девушек",
+   "vol": 110,
+   "cpc": 0.23,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.23,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа харьков для женщин без опыта",
+   "vol": 110,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота горішні плавні для жінок",
+   "vol": 110,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.05,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок кропивницький",
+   "vol": 110,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота могилів подільський для жінок",
+   "vol": 110,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "рівне робота для жінок",
+   "vol": 110,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "работа для девушек киев",
+   "vol": 90,
+   "cpc": 0.74,
+   "comp": "HIGH",
+   "bidLow": 0.04,
+   "bidHigh": 0.94,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек одесса",
+   "vol": 90,
+   "cpc": 0.23,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.45,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа онлайн для девушек",
+   "vol": 90,
+   "cpc": 0.81,
+   "comp": "MEDIUM",
+   "bidLow": 0.18,
+   "bidHigh": 0.88,
+   "lang": "ru"
+  },
+  {
+   "kw": "каменское работа для женщин",
+   "vol": 90,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка кривой рог для женщин",
+   "vol": 90,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.05,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в приднепровске для женщин",
+   "vol": 90,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа харьков для девушек",
+   "vol": 90,
+   "cpc": 0.09,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота для дівчат київ",
+   "vol": 90,
+   "cpc": 0.22,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.37,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінки в декреті",
+   "vol": 90,
+   "cpc": 0.13,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.2,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота жінкам",
+   "vol": 90,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.07,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота київська область для жінок",
+   "vol": 90,
+   "cpc": 0.04,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.2,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота на дому для жінки",
+   "vol": 90,
+   "cpc": 0.49,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.2,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота хмельницький для жінок",
+   "vol": 90,
+   "cpc": 0.05,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.05,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота хмельницький для жінок без досвіду роботи",
+   "vol": 90,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk"
+  },
+  {
+   "kw": "работа для девушек харьков",
+   "vol": 70,
+   "cpc": 0.13,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.06,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа киев для девушек",
+   "vol": 70,
+   "cpc": 0.31,
+   "comp": "HIGH",
+   "bidLow": 0.02,
+   "bidHigh": 0.79,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа в киеве для женщин",
+   "vol": 70,
+   "cpc": 0.87,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.89,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа днепр для девушек",
+   "vol": 70,
+   "cpc": 0.14,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.28,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка для женщин с ежедневной оплатой",
+   "vol": 70,
+   "cpc": 0.07,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru"
+  },
+  {
+   "kw": "запорожсталь вакансии для женщин",
+   "vol": 70,
+   "cpc": 0.05,
+   "comp": "LOW",
+   "bidLow": 0.04,
+   "bidHigh": 0.18,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в днр для женщин",
+   "vol": 70,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в новой водолаге для женщин",
+   "vol": 70,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин неполный рабочий день",
+   "vol": 70,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота для дівчат львів",
+   "vol": 70,
+   "cpc": 0.1,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.17,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в вишневому для жінок",
+   "vol": 70,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок біла церква",
+   "vol": 70,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота новий розділ для жінок",
+   "vol": 70,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота охорона для жінок",
+   "vol": 70,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота хмельницький без досвіду для жінок",
+   "vol": 70,
+   "cpc": 0.06,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "uk"
+  },
+  {
+   "kw": "хмельницький робота для жінок",
+   "vol": 70,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "uk"
+  },
+  {
+   "kw": "работа для девушек онлайн",
+   "vol": 50,
+   "cpc": 0.85,
+   "comp": "HIGH",
+   "bidLow": 0.23,
+   "bidHigh": 0.88,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек днепр",
+   "vol": 50,
+   "cpc": 0.36,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.67,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин в вишневом срочно",
+   "vol": 50,
+   "cpc": 0.13,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.07,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин харьков",
+   "vol": 50,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "интерпайп вакансии для женщин",
+   "vol": 50,
+   "cpc": 0.16,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.19,
+   "lang": "ru"
+  },
+  {
+   "kw": "нацгвардия вакансии для женщин",
+   "vol": 50,
+   "cpc": 0.67,
+   "comp": "MEDIUM",
+   "bidLow": 0.09,
+   "bidHigh": 0.38,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в раздельной для женщин",
+   "vol": 50,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.08,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин без опыта",
+   "vol": 50,
+   "cpc": 0.34,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.2,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин каменское левый берег",
+   "vol": 50,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин кропивницкий",
+   "vol": 50,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин левый берег",
+   "vol": 50,
+   "cpc": 0.04,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа кривой рог севгок для женщин",
+   "vol": 50,
+   "cpc": 0.11,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.12,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на производстве для женщин",
+   "vol": 50,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.07,
+   "lang": "ru"
+  },
+  {
+   "kw": "харьковский премьер работа для женщин",
+   "vol": 50,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота онлайн для дівчат",
+   "vol": 50,
+   "cpc": 0.6,
+   "comp": "HIGH",
+   "bidLow": 0.12,
+   "bidHigh": 0.71,
+   "lang": "uk"
+  },
+  {
+   "kw": "підробіток для жінок",
+   "vol": 50,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.06,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в білій церкві для жінок",
+   "vol": 50,
+   "cpc": 0.12,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в старому самборі для жінок",
+   "vol": 50,
+   "cpc": 0.04,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок київська область",
+   "vol": 50,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота кривий ріг для жінок",
+   "vol": 50,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота львів для дівчат",
+   "vol": 50,
+   "cpc": 0.1,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.26,
+   "lang": "uk"
+  },
+  {
+   "kw": "шукаю роботу рівне жінка",
+   "vol": 50,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "военкомат вакансии для женщин",
+   "vol": 40,
+   "cpc": 0.13,
+   "comp": "LOW",
+   "bidLow": 0.05,
+   "bidHigh": 0.14,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка в киеве для женщин с ежедневной оплатой",
+   "vol": 40,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа кривой рог для девушек",
+   "vol": 40,
+   "cpc": 0.06,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на левом берегу для женщин",
+   "vol": 40,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота для дівчат хмельницький",
+   "vol": 40,
+   "cpc": 0.11,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок з дітьми",
+   "vol": 40,
+   "cpc": 0.12,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.21,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок львівська область",
+   "vol": 40,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок у львівській області",
+   "vol": 40,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота у вишневому для жінок",
+   "vol": 40,
+   "cpc": 0.08,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.08,
+   "lang": "uk"
+  },
+  {
+   "kw": "вакансии для женщин",
+   "vol": 30,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.06,
+   "lang": "ru"
+  },
+  {
+   "kw": "ищу работу для женщин",
+   "vol": 30,
+   "cpc": 0.45,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.22,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка для женщин",
+   "vol": 30,
+   "cpc": 0.07,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.14,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в кривом роге для женщин",
+   "vol": 30,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в одессе для девушек",
+   "vol": 30,
+   "cpc": 0.16,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.21,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в типографии для женщин",
+   "vol": 30,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек кривой рог",
+   "vol": 30,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.06,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин в кривом роге",
+   "vol": 30,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин на шахте",
+   "vol": 30,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на 7 км для девушек",
+   "vol": 30,
+   "cpc": 0.07,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.21,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа одесса для девушек без опыта",
+   "vol": 30,
+   "cpc": 0.06,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.06,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа онлайн для женщин",
+   "vol": 30,
+   "cpc": 0.75,
+   "comp": "MEDIUM",
+   "bidLow": 0.02,
+   "bidHigh": 0.25,
+   "lang": "ru"
+  },
+  {
+   "kw": "харьков вакансии для женщин",
+   "vol": 30,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансії для жінок",
+   "vol": 30,
+   "cpc": 0.25,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.33,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в охороні для жінок 1 3",
+   "vol": 30,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота видубичі для жінок",
+   "vol": 30,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.13,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для дівчат онлайн",
+   "vol": 30,
+   "cpc": 0.62,
+   "comp": "HIGH",
+   "bidLow": 0.09,
+   "bidHigh": 0.42,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінки на дому",
+   "vol": 30,
+   "cpc": 1.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.2,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок в білій церкві",
+   "vol": 30,
+   "cpc": 0,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота львів для дівчат без досвіду",
+   "vol": 30,
+   "cpc": 0.17,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.17,
+   "lang": "uk"
+  },
+  {
+   "kw": "подработка для девушек",
+   "vol": 20,
+   "cpc": 0.32,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.6,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для девушек",
+   "vol": 20,
+   "cpc": 0.97,
+   "comp": "LOW",
+   "bidLow": 0.26,
+   "bidHigh": 0.89,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин с ежедневной оплатой",
+   "vol": 20,
+   "cpc": 0.04,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.07,
+   "lang": "ru"
+  },
+  {
+   "kw": "свежие вакансии для женщин",
+   "vol": 20,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для девушек одесса",
+   "vol": 20,
+   "cpc": 0.53,
+   "comp": "LOW",
+   "bidLow": 0.05,
+   "bidHigh": 0.53,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин на дому",
+   "vol": 20,
+   "cpc": 0.17,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.46,
+   "lang": "ru"
+  },
+  {
+   "kw": "арселормиттал кривой рог вакансии для женщин",
+   "vol": 20,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии в одессе для женщин",
+   "vol": 20,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин днепр",
+   "vol": 20,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии днепр для женщин",
+   "vol": 20,
+   "cpc": 0.04,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для девушек днепр",
+   "vol": 20,
+   "cpc": 1.75,
+   "comp": "LOW",
+   "bidLow": 0.2,
+   "bidHigh": 35.41,
+   "lang": "ru"
+  },
+  {
+   "kw": "девушка ищет работу",
+   "vol": 20,
+   "cpc": 0.07,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "днепр вакансии для женщин",
+   "vol": 20,
+   "cpc": 0.03,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "ищу работу в кропивницком женщина",
+   "vol": 20,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "ищу работу кривой рог для женщин",
+   "vol": 20,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "кропивницкий работа для женщин",
+   "vol": 20,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "найти работу для женщин",
+   "vol": 20,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.06,
+   "lang": "ru"
+  },
+  {
+   "kw": "одесса вакансии для женщин",
+   "vol": 20,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка для женщин кривой рог",
+   "vol": 20,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в хмельницком для женщин",
+   "vol": 20,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа вакансии для женщин",
+   "vol": 20,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.19,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин белая церковь",
+   "vol": 20,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин на дмк каменское",
+   "vol": 20,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщины киево святошинский район",
+   "vol": 20,
+   "cpc": 0.09,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.07,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщины на софиевской борщаговке",
+   "vol": 20,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщины с ежедневной оплатой",
+   "vol": 20,
+   "cpc": 0.04,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.07,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа женщина",
+   "vol": 20,
+   "cpc": 0.05,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа женщине",
+   "vol": 20,
+   "cpc": 0.05,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа каменское для девушек",
+   "vol": 20,
+   "cpc": 0.14,
+   "comp": "MEDIUM",
+   "bidLow": 0.02,
+   "bidHigh": 0.31,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа харьков для девушек без опыта",
+   "vol": 20,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.06,
+   "lang": "ru"
+  },
+  {
+   "kw": "резюме девушек на работу",
+   "vol": 20,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "срочно работа для женщин",
+   "vol": 20,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.32,
+   "lang": "ru"
+  },
+  {
+   "kw": "удаленная работа на дому для женщин",
+   "vol": 20,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "високооплачувана робота для дівчат",
+   "vol": 20,
+   "cpc": 0.17,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.52,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в інтернеті для жінок",
+   "vol": 20,
+   "cpc": 0.26,
+   "comp": "MEDIUM",
+   "bidLow": 0.14,
+   "bidHigh": 0.3,
+   "lang": "uk"
+  },
+  {
+   "kw": "работа для жінок",
+   "vol": 20,
+   "cpc": 0.07,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.08,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в кам янці подільському для жінок",
+   "vol": 20,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в києві для дівчат",
+   "vol": 20,
+   "cpc": 0.35,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.34,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в кропивницькому для жінок",
+   "vol": 20,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в охороні для жінок",
+   "vol": 20,
+   "cpc": 0.05,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.08,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок без досвіду",
+   "vol": 20,
+   "cpc": 0.01,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок в хмельницькому",
+   "vol": 20,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота зелена гура для жінок",
+   "vol": 20,
+   "cpc": 0.09,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота київ для дівчат",
+   "vol": 20,
+   "cpc": 0.24,
+   "comp": "HIGH",
+   "bidLow": 0.02,
+   "bidHigh": 0.36,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота львівська область для жінок",
+   "vol": 20,
+   "cpc": 0.04,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.07,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота рівне жінкам",
+   "vol": 20,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота хмельницький для дівчат",
+   "vol": 20,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.05,
+   "lang": "uk"
+  },
+  {
+   "kw": "удаленная работа для девушек",
+   "vol": 10,
+   "cpc": 0.64,
+   "comp": "HIGH",
+   "bidLow": 0.06,
+   "bidHigh": 0.4,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек львов",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек без опыта",
+   "vol": 10,
+   "cpc": 0.18,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.29,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на дому для девушек",
+   "vol": 10,
+   "cpc": 0.8,
+   "comp": "HIGH",
+   "bidLow": 0.2,
+   "bidHigh": 0.85,
+   "lang": "ru"
+  },
+  {
+   "kw": "онлайн работа для женщин",
+   "vol": 10,
+   "cpc": 0.51,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа с ежедневной оплатой для женщин",
+   "vol": 10,
+   "cpc": 0.06,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин срочно",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "удаленная работа для женщин",
+   "vol": 10,
+   "cpc": 0.05,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.05,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек удаленно",
+   "vol": 10,
+   "cpc": 1.06,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 1.11,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек в интернете",
+   "vol": 10,
+   "cpc": 0.56,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в интернете для девушек",
+   "vol": 10,
+   "cpc": 0.92,
+   "comp": "MEDIUM",
+   "bidLow": 0.15,
+   "bidHigh": 0.6,
+   "lang": "ru"
+  },
+  {
+   "kw": "онлайн работа для девушек",
+   "vol": 10,
+   "cpc": 0.56,
+   "comp": "HIGH",
+   "bidLow": 0.21,
+   "bidHigh": 0.8,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа кривой рог с ежедневной оплатой для женщин",
+   "vol": 10,
+   "cpc": 0.04,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.1,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек киев с ежедневной оплатой",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в белой церкви для женщин",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка с ежедневной оплатой для женщин",
+   "vol": 10,
+   "cpc": 0.35,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для девушек киев",
+   "vol": 10,
+   "cpc": 1.66,
+   "comp": "MEDIUM",
+   "bidLow": 0.34,
+   "bidHigh": 1.07,
+   "lang": "ru"
+  },
+  {
+   "kw": "заработок для девушек",
+   "vol": 10,
+   "cpc": 0.69,
+   "comp": "HIGH",
+   "bidLow": 0.27,
+   "bidHigh": 0.73,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа без опыта для женщин",
+   "vol": 10,
+   "cpc": 0.27,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.18,
+   "lang": "ru"
+  },
+  {
+   "kw": "веб модель работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек по телефону",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа киев для девушек без опыта работы",
+   "vol": 10,
+   "cpc": 0.24,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.41,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин высокооплачиваемая",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "vip работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "брачное агентство работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "быстрый заработок для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии 1 3 для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии без опыта для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии без опыта работы для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии в вое��комате для девушек",
+   "vol": 10,
+   "cpc": 0.25,
+   "comp": "MEDIUM",
+   "bidLow": 0.13,
+   "bidHigh": 0.26,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии в военной части для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии в воинских частях для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии в воинской части для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии в гаи для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии в киеве для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.1,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии в метро для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии гибдд для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для девушек",
+   "vol": 10,
+   "cpc": 0.16,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.36,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для девушек без опыта",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для девушек без опыта работы",
+   "vol": 10,
+   "cpc": null,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для девушек киев",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин без опыта",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин без опыта работы",
+   "vol": 10,
+   "cpc": null,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин в декрете",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин в днепре",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин в киеве",
+   "vol": 10,
+   "cpc": 0.07,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин в одессе",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин киев",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин кривой рог",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин новотитаровская без опыта",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин одесса",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для женщин с ежедневной оплатой",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для красивых девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии для молодых девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии киев для девушек",
+   "vol": 10,
+   "cpc": 0.27,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии киев для женщин",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии на производстве для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии на производство для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии одесса для девушек",
+   "vol": 10,
+   "cpc": 0.13,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии работа для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "вакансии работы в киеве для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "ванкор вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "варианты работы на дому для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "веб заработок для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "веб работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "временная работа для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа в интернете для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа в одессе для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа девушкам",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для девушек без опыта",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для девушек в киеве",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для девушек в одессе",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для девушек крым",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для девушек львов",
+   "vol": 10,
+   "cpc": 0.29,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для девушек харьков",
+   "vol": 10,
+   "cpc": 0.1,
+   "comp": "MEDIUM",
+   "bidLow": 0.03,
+   "bidHigh": 0.34,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа для женщин одесса",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемая работа киев для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемые работы для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "высокооплачиваемые работы для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "гожув велькопольский работа для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "гуфсин работа для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "девушка ищет высокооплачиваемую работу",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "девушка ищу работу",
+   "vol": 10,
+   "cpc": 0.26,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "девушка работа",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "для девушек работа",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "днепр работа для девушек",
+   "vol": 10,
+   "cpc": 0.15,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.82,
+   "lang": "ru"
+  },
+  {
+   "kw": "днепроспецсталь работа для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "дополнительный заработок для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "дополнительный заработок для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "ежедневная работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "женщина ищет работу",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "ишу работа для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "ищу девушек для работы",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "ищу работу в кривом роге для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "ищу работу девушка",
+   "vol": 10,
+   "cpc": 0.2,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "ищу работу девушка киев",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "ищу работу для девушек",
+   "vol": 10,
+   "cpc": 0.21,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.22,
+   "lang": "ru"
+  },
+  {
+   "kw": "ищу работу женщина",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "киев вакансии для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "киев работа для девушек",
+   "vol": 10,
+   "cpc": 0.3,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.34,
+   "lang": "ru"
+  },
+  {
+   "kw": "киев работа для женщин без опыта",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "кривой рог вакансии для женщин",
+   "vol": 10,
+   "cpc": 0.09,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "кривой рог работа для девушек",
+   "vol": 10,
+   "cpc": 0.03,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "кропивницкий работа для женщин без опыта работы",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "легкая работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "львов работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "метинвест кривой рог вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "министерство обороны вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "модель девушка работа",
+   "vol": 10,
+   "cpc": 1.33,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "мчс вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "найти работу в кропивницком для женщин",
+   "vol": 10,
+   "cpc": 0.05,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "найти работу для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "найти работу на дому для женщин",
+   "vol": 10,
+   "cpc": 0.34,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.29,
+   "lang": "ru"
+  },
+  {
+   "kw": "не сидячая работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "неофициальная работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "несложная работа для женщин",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "новые вакансии для женщин",
+   "vol": 10,
+   "cpc": 10.98,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "ночная работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "одесса работа для девушек",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.09,
+   "lang": "ru"
+  },
+  {
+   "kw": "подвижная работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка в ночь для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка в одессе для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка в одессе с ежедневной оплатой для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка для девушек киев",
+   "vol": 10,
+   "cpc": 0.1,
+   "comp": "HIGH",
+   "bidLow": 0.04,
+   "bidHigh": 0.57,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка для девушек на дому",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка для девушек одесса",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка для девушек с ежедневной оплатой",
+   "vol": 10,
+   "cpc": 0.06,
+   "comp": "LOW",
+   "bidLow": 0.02,
+   "bidHigh": 0.69,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка для девушек с ежедневной оплатой киев",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка для женщин в декрете",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка для студенток",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка киев для девушек",
+   "vol": 10,
+   "cpc": 0.19,
+   "comp": "MEDIUM",
+   "bidLow": 0.02,
+   "bidHigh": 0.51,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка киев ежедневная оплата для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка киев с ежедневной оплатой для девушек",
+   "vol": 10,
+   "cpc": 0.2,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.21,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка на выходные для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка на дому для женщин",
+   "vol": 10,
+   "cpc": 0.18,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.23,
+   "lang": "ru"
+  },
+  {
+   "kw": "подработка одесса для девушек",
+   "vol": 10,
+   "cpc": 0.2,
+   "comp": "HIGH",
+   "bidLow": 0.03,
+   "bidHigh": 0.38,
+   "lang": "ru"
+  },
+  {
+   "kw": "прибыльная работа для девушек",
+   "vol": 10,
+   "cpc": 0.44,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа 1 3 для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа 2 2 для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа без образования для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа без опыта для девушек",
+   "vol": 10,
+   "cpc": 0.3,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.35,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в автосалоне для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в автосалоне киев для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в белой церкви для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в вишневом для женщин",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в военкомате для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в военной части для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в военной части для женщин",
+   "vol": 10,
+   "cpc": 0.47,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в воинской части для женщин",
+   "vol": 10,
+   "cpc": 0.21,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в газпроме для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в гаи для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в днепре для девушек",
+   "vol": 10,
+   "cpc": 0.1,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.38,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в днепре для женщин без опыта",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в днепре с ежедневной оплатой для девушек",
+   "vol": 10,
+   "cpc": 0.07,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в желтых водах для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в жуковском для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в зеленой гуре для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в интернете для девушек на дому",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в киеве вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в киеве для девушек",
+   "vol": 10,
+   "cpc": 0.42,
+   "comp": "HIGH",
+   "bidLow": 0.17,
+   "bidHigh": 0.54,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в киеве для девушек без опыта работы",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в киеве для женщин без опыта",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в киеве свежие вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в клубе для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в кнб для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в красном селе для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в кривом роге для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в кривом рогу для женщин",
+   "vol": 10,
+   "cpc": 0.04,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в кропивницком для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в крыму для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в крыму для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в метро для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в минеральных водах для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в море для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в море для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в мчс для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в ночную смену для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в ночную смену для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в ночь для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в ночь для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в одессе без опыта для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в одессе для девушек без опыта",
+   "vol": 10,
+   "cpc": 0.31,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в одессе для девушек без опыта работы",
+   "vol": 10,
+   "cpc": 0.52,
+   "comp": "MEDIUM",
+   "bidLow": 0.03,
+   "bidHigh": 0.27,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в одессе с ежедневной оплатой для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в одинцовском районе для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в офисе для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в офисе для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в полевском для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в прибалтике для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в радужном для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в росгвардии для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в старом осколе для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в харькове для девушек",
+   "vol": 10,
+   "cpc": 0.04,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в харькове для девушек без опыта работы",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в харькове для женщин без опыта",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в харькове свежие вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа в яблоновском для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа во львове для девушек",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа высокооплачиваемая для девушек",
+   "vol": 10,
+   "cpc": 1.62,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа высокооплачиваемая для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа где много платят для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа девушка",
+   "vol": 10,
+   "cpc": 0.34,
+   "comp": "MEDIUM",
+   "bidLow": 0.28,
+   "bidHigh": 0.78,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа девушка на час",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа девушка одесса",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа девушке",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для высоких девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек 18",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек без образования",
+   "vol": 10,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек без опыта киев",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек без опыта работы",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек белая церковь",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек в декрете",
+   "vol": 10,
+   "cpc": 0.68,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек в днепре",
+   "vol": 10,
+   "cpc": 0.36,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек в интернете общение",
+   "vol": 10,
+   "cpc": 0.72,
+   "comp": "MEDIUM",
+   "bidLow": 0.23,
+   "bidHigh": 1.12,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек в киеве",
+   "vol": 10,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек в клубе",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек в кривом роге",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек в крыму",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек в ночь",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек в одессе",
+   "vol": 10,
+   "cpc": 0.17,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.21,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек вакансии",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек веб модель",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек во львове",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек высокооплачиваемая",
+   "vol": 10,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек за рубежом",
+   "vol": 10,
+   "cpc": 0.08,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек каменское",
+   "vol": 10,
+   "cpc": 0.04,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.06,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек киев без опыта",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек киев ежедневная оплата",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек кропивницкий",
+   "vol": 10,
+   "cpc": 0.05,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек крым",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек на выезд",
+   "vol": 10,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек на дому",
+   "vol": 10,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек неполный рабочий день",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек нижний новгород",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек общение с иностранцами",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек одесса высокооплачиваемая",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек переписка",
+   "vol": 10,
+   "cpc": 1.35,
+   "comp": "MEDIUM",
+   "bidLow": 0.25,
+   "bidHigh": 1.36,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек с высоким доходом",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек с высшим образованием",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек с ежедневной оплатой",
+   "vol": 10,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.02,
+   "bidHigh": 0.35,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек с ежедневной оплатой днепр",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек с ежедневной оплатой киев",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек с ежедневной оплатой одесса",
+   "vol": 10,
+   "cpc": 0.12,
+   "comp": "MEDIUM",
+   "bidLow": 0.02,
+   "bidHigh": 0.16,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек с ежедневной оплатой харьков",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек с ежедневными выплатами",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек с телефона",
+   "vol": 10,
+   "cpc": 0.52,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек студентов",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек студенток",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для девушек телеграм",
+   "vol": 10,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин 45",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин 50",
+   "vol": 10,
+   "cpc": 0.11,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин 50 плюс",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин без образования",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин без опыта киев",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин без опыта одесса",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин без опыта работы",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин без опыта харьков",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин в декрете",
+   "vol": 10,
+   "cpc": 0.04,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.1,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин в декрете на дому",
+   "vol": 10,
+   "cpc": 0.32,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин в днепре без опыта",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин в ночную смену",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин в ночь",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин в харькове свежие вакансии",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин в хмельницком",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин голосеевский район",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин киевская область",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин кривой рог в сфере обслуживания",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин на лесном массиве",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин на производстве",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин неполный день",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин пенсионного возраста",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин посменно",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин с графиком 7 7",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин с детьми",
+   "vol": 10,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин с предоставлением жилья",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин удаленно",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин упаковка",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин частичная занятость",
+   "vol": 10,
+   "cpc": null,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для красивых девушек",
+   "vol": 10,
+   "cpc": 0.67,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для молодых девушек",
+   "vol": 10,
+   "cpc": 0.05,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для пожилых женщин",
+   "vol": 10,
+   "cpc": 0.22,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для полных девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для студентов девушек",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа днепр без опыта для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа днепр вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа днепр девушке",
+   "vol": 10,
+   "cpc": 0.27,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.05,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа днепр для девушек без опыта",
+   "vol": 10,
+   "cpc": 0.07,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа дома для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа за рубежом для девушек",
+   "vol": 10,
+   "cpc": 0.05,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа за рубежом для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа киев без опыта для девушек",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.25,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа киев вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа киев девушка",
+   "vol": 10,
+   "cpc": 0.06,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.18,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа киев для красивых девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа киев ежедневная оплата для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа киев с п��оживанием для девушек",
+   "vol": 10,
+   "cpc": 0.04,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа кривой рог без опыта для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа кривой рог женщины",
+   "vol": 10,
+   "cpc": 0.09,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа кривой рог с ежедневной оплатой для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа кропивницкий для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа кропивницкий посуточно для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа львов для девушек",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа моделью для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на веб камеру для девушек",
+   "vol": 10,
+   "cpc": 4.37,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на выезд для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на дальнем востоке для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на дому вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на дому для женщин в декрете",
+   "vol": 10,
+   "cpc": 0.31,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на кпп для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на лето для девушек",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на лето для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на машине для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на неполный рабочий день для женщин",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на предприятии без опыта для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на предприятии для женщин",
+   "vol": 10,
+   "cpc": 0.16,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на производстве каменское женщина",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на производство для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на стройке для женщин",
+   "vol": 10,
+   "cpc": 0.18,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на трассе для девушек",
+   "vol": 10,
+   "cpc": 0.67,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа на юге для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа ночью для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа одесса без опыта девушке",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа по контракту для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа подработка для женщин",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.24,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа с девушками",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа с ежедневной оплатой для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа с ежедневной оплатой киев для девушек",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа с жильем для женщин",
+   "vol": 10,
+   "cpc": 0.65,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа с предоставлением жилья для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа свежие вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа сутками для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа удаленно для девушек",
+   "vol": 10,
+   "cpc": 0.69,
+   "comp": "HIGH",
+   "bidLow": 0.2,
+   "bidHigh": 0.75,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа харьков вакансии без опыта для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа юа киев вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работы для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "рабочие вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота в днепре для девушек",
+   "vol": 10,
+   "cpc": 0.39,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота в киеве для девушек",
+   "vol": 10,
+   "cpc": 2.49,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота в одессе для девушек",
+   "vol": 10,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.02,
+   "bidHigh": 0.2,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота в харькове для девушек",
+   "vol": 10,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота для девушек киев",
+   "vol": 10,
+   "cpc": 0.94,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.71,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота для девушек одесса",
+   "vol": 10,
+   "cpc": 0.1,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота для девушек харьков",
+   "vol": 10,
+   "cpc": 0.11,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота онлайн для девушек",
+   "vol": 10,
+   "cpc": 1.63,
+   "comp": "HIGH",
+   "bidLow": 0.1,
+   "bidHigh": 0.6,
+   "lang": "ru"
+  },
+  {
+   "kw": "росгвардия вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "сайт для девушек заработок",
+   "vol": 10,
+   "cpc": 1.14,
+   "comp": "HIGH",
+   "bidLow": 0.5,
+   "bidHigh": 1.24,
+   "lang": "ru"
+  },
+  {
+   "kw": "самая высокооплачиваемая работа для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "самая высокооплачиваемая работа для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "сидячая работа для женщин",
+   "vol": 10,
+   "cpc": 0.48,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "сменная работа для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "спокойная работа для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "требуется женщина для приготовления еды",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "требуется женщина по уходу",
+   "vol": 10,
+   "cpc": 0.06,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "удаленная работа вакансии для студентов",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "удаленная работа для женщин на дому",
+   "vol": 10,
+   "cpc": 0.1,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.16,
+   "lang": "ru"
+  },
+  {
+   "kw": "харьков работа для девушек",
+   "vol": 10,
+   "cpc": 0.04,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "шу покровское вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "эльгауголь вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "зелена гура робота для жінок",
+   "vol": 10,
+   "cpc": 0.13,
+   "comp": "LOW",
+   "bidLow": 0.06,
+   "bidHigh": 0.12,
+   "lang": "uk"
+  },
+  {
+   "kw": "карлові вари робота для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "львів робота для дівчат",
+   "vol": 10,
+   "cpc": 0.16,
+   "comp": "HIGH",
+   "bidLow": 0.02,
+   "bidHigh": 0.22,
+   "lang": "uk"
+  },
+  {
+   "kw": "пропоную роботу для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "работа в білій церкві без досвіду роботи для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота без досвіду для жінок",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в білі церкві для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в білій церкві без досвіду роботи для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в білій церкві для дівчат",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в дома для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в драгобраті для жінок",
+   "vol": 10,
+   "cpc": 0.07,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в жирардові для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в жовтих водах для жінок",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в зеленій гурі для жінок",
+   "vol": 10,
+   "cpc": 0.07,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в карлових варах для жінки",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в києві для дівчат 18 років",
+   "vol": 10,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в кривому розі для жінок",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в м слупську для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в прибалтиці для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в прушкові для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в радомі для жінок",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в рясне для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в рівне для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в рівному для дівчат",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.08,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в слупську для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в хелмі для жінок",
+   "vol": 10,
+   "cpc": 0.12,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в чуднові для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в інтернеті для дівчат",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в інтернеті для жінок в декреті",
+   "vol": 10,
+   "cpc": 0.23,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота валбжих для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота вдома для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота гожув великопольський для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для дівчат біла церква",
+   "vol": 10,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для дівчат в інтернеті",
+   "vol": 10,
+   "cpc": 0.24,
+   "comp": "HIGH",
+   "bidLow": 0.16,
+   "bidHigh": 0.38,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок без досвіду роботи",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок в калинівці вінницька обл",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок київська обл",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок на закарпатті",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок онлайн",
+   "vol": 10,
+   "cpc": 0.31,
+   "comp": "HIGH",
+   "bidLow": 0.01,
+   "bidHigh": 0.23,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок у хмельницькому",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота з житлом для жінок",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота кам янка бузька для дівчат",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота карлові вари для жінок",
+   "vol": 10,
+   "cpc": 0.24,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота київ для дівчат без досвіду",
+   "vol": 10,
+   "cpc": 0.29,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота на дому для дівчат",
+   "vol": 10,
+   "cpc": 0.12,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота новоград волинський для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота нічна зміна для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота охорона жінки",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.05,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота охоронця для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота переяслав хмельницький для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота по біометрії для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота рава руська для жінок",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота суточна для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота у білій церкві для жінок",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота у кропивницькому для жінок",
+   "vol": 10,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота у львові для дівчат",
+   "vol": 10,
+   "cpc": 0.14,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.34,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота у новому роздолі для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота чеське будейовіце для жінок",
+   "vol": 10,
+   "cpc": 0.04,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "тимчасова робота для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "ченстохова робота для жінок",
+   "vol": 10,
+   "cpc": 0.13,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "шукаю роботу в рівному для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  }
+ ],
+ "adjacentFound": [
+  {
+   "kw": "зсу вакансії для жінок",
+   "vol": 390,
+   "cpc": 0.39,
+   "comp": "MEDIUM",
+   "bidLow": 0.11,
+   "bidHigh": 0.41,
+   "lang": "uk",
+   "match": "зсу"
+  },
+  {
+   "kw": "робота на складі для жінок",
+   "vol": 260,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk",
+   "match": "склад"
+  },
+  {
+   "kw": "робота в буковелі для жінок посудомойка",
+   "vol": 210,
+   "cpc": 0.06,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.06,
+   "lang": "uk",
+   "match": "посудомой"
+  },
+  {
+   "kw": "работа на железной дороге для женщин",
+   "vol": 110,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "железн"
+  },
+  {
+   "kw": "кривой рог работа для женщин санитарка в аптеку",
+   "vol": 90,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru",
+   "match": "санитарк"
+  },
+  {
+   "kw": "робота для жінок в зсу",
+   "vol": 50,
+   "cpc": 0.38,
+   "comp": "MEDIUM",
+   "bidLow": 0.02,
+   "bidHigh": 0.24,
+   "lang": "uk",
+   "match": "зсу"
+  },
+  {
+   "kw": "вакансии на складе для женщин",
+   "vol": 40,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru",
+   "match": "склад"
+  },
+  {
+   "kw": "работа для женщин упаковщица",
+   "vol": 30,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru",
+   "match": "упаковщиц"
+  },
+  {
+   "kw": "работа охрана кривой рог для женщин",
+   "vol": 30,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru",
+   "match": "охран"
+  },
+  {
+   "kw": "olx работа для женщин в деснянском районе",
+   "vol": 20,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "нян"
+  },
+  {
+   "kw": "требуются женщины в охрану",
+   "vol": 20,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru",
+   "match": "охран"
+  },
+  {
+   "kw": "робота в зсу для жінок",
+   "vol": 20,
+   "cpc": 0.41,
+   "comp": "HIGH",
+   "bidLow": 0.13,
+   "bidHigh": 0.39,
+   "lang": "uk",
+   "match": "зсу"
+  },
+  {
+   "kw": "работа на заводе для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "завод"
+  },
+  {
+   "kw": "вакансии в полиции для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "полиц"
+  },
+  {
+   "kw": "вакансии в полиции для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "полиц"
+  },
+  {
+   "kw": "вакансии в сизо для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "сизо"
+  },
+  {
+   "kw": "вакансии на заводе для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "завод"
+  },
+  {
+   "kw": "вневедомственная охрана вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "охран"
+  },
+  {
+   "kw": "женщина охранник",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "охран"
+  },
+  {
+   "kw": "кладовщик женщина",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "кладовщик"
+  },
+  {
+   "kw": "комплектовщик женщина",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "комплектовщ"
+  },
+  {
+   "kw": "комплектовщик женщина отзывы",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "комплектовщ"
+  },
+  {
+   "kw": "охрана женщины вакансии",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "охран"
+  },
+  {
+   "kw": "охрана работа для женщин",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "охран"
+  },
+  {
+   "kw": "охранник женщина",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "охран"
+  },
+  {
+   "kw": "охранник женщина вакансии",
+   "vol": 10,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "охран"
+  },
+  {
+   "kw": "работа в охране для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "охран"
+  },
+  {
+   "kw": "работа в полиции девушке",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "полиц"
+  },
+  {
+   "kw": "работа в полиции для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "полиц"
+  },
+  {
+   "kw": "работа в полиции для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "полиц"
+  },
+  {
+   "kw": "работа в правоохранительных органах для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "охран"
+  },
+  {
+   "kw": "работа в сизо для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "сизо"
+  },
+  {
+   "kw": "работа в сизо для женщин отзывы",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "сизо"
+  },
+  {
+   "kw": "работа в цеху для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "цех"
+  },
+  {
+   "kw": "работа для девушек в полиции",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "полиц"
+  },
+  {
+   "kw": "работа для девушек хостес",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "хостес"
+  },
+  {
+   "kw": "работа для женщин в заводском районе",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "завод"
+  },
+  {
+   "kw": "работа для женщин на железной дороге",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "железн"
+  },
+  {
+   "kw": "работа для женщин уборщица",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "уборщиц"
+  },
+  {
+   "kw": "работа на заводе для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "завод"
+  },
+  {
+   "kw": "работа на складе для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "склад"
+  },
+  {
+   "kw": "работа на складе для девушек киев",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "склад"
+  },
+  {
+   "kw": "работа на складе для девушек одесса",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "склад"
+  },
+  {
+   "kw": "работа на складе для девушек харьков",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "склад"
+  },
+  {
+   "kw": "работа на складе для женщин",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "склад"
+  },
+  {
+   "kw": "работа охрана для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "охран"
+  },
+  {
+   "kw": "сизо вакансии для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "сизо"
+  },
+  {
+   "kw": "зсу робота для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "зсу"
+  },
+  {
+   "kw": "контракт зсу для жінок вакансії",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "зсу"
+  },
+  {
+   "kw": "робота для жінок прибирання",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "прибиранн"
+  },
+  {
+   "kw": "робота на заводі для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "завод"
+  },
+  {
+   "kw": "робота на складі для жинок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "склад"
+  }
+ ],
+ "conditionFound": [
+  {
+   "kw": "робота з проживанням для жінок",
+   "vol": 720,
+   "cpc": 0.06,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.05,
+   "lang": "uk",
+   "match": "проживанн"
+  },
+  {
+   "kw": "робота за кордоном для жінок з проживанням",
+   "vol": 720,
+   "cpc": 0.22,
+   "comp": "MEDIUM",
+   "bidLow": 0.02,
+   "bidHigh": 0.22,
+   "lang": "uk",
+   "match": "проживанн"
+  },
+  {
+   "kw": "работа сутки трое для женщин",
+   "vol": 480,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru",
+   "match": "сутки"
+  },
+  {
+   "kw": "сезонна робота для жінок",
+   "vol": 140,
+   "cpc": 2.3,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 2.24,
+   "lang": "uk",
+   "match": "сезонн"
+  },
+  {
+   "kw": "робота в буковелі для жінки",
+   "vol": 110,
+   "cpc": 0.04,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.05,
+   "lang": "uk",
+   "match": "буковел"
+  },
+  {
+   "kw": "робота для жінок вахта з проживанням",
+   "vol": 90,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk",
+   "match": "вахт"
+  },
+  {
+   "kw": "робота з проживанням для жінок з дітьми",
+   "vol": 90,
+   "cpc": 0.1,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.19,
+   "lang": "uk",
+   "match": "проживанн"
+  },
+  {
+   "kw": "работа в буковеле для женщин",
+   "vol": 70,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.05,
+   "lang": "ru",
+   "match": "буковел"
+  },
+  {
+   "kw": "работа с проживанием и питанием для женщин",
+   "vol": 70,
+   "cpc": 0.08,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.06,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "робота в буковелі для жінок",
+   "vol": 50,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk",
+   "match": "буковел"
+  },
+  {
+   "kw": "робота для жінок з проживанням",
+   "vol": 50,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "uk",
+   "match": "проживанн"
+  },
+  {
+   "kw": "робота вахта для жінок",
+   "vol": 40,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk",
+   "match": "вахт"
+  },
+  {
+   "kw": "робота вахтовим методом для жінок",
+   "vol": 30,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk",
+   "match": "вахт"
+  },
+  {
+   "kw": "вахтовая работа для женщин",
+   "vol": 20,
+   "cpc": 0.05,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "ru",
+   "match": "вахт"
+  },
+  {
+   "kw": "работа для женщин с проживанием",
+   "vol": 20,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа с проживанием для женщин с детьми",
+   "vol": 20,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "робота для жінок вахта",
+   "vol": 20,
+   "cpc": 0.04,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk",
+   "match": "вахт"
+  },
+  {
+   "kw": "работа с проживанием для женщин",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "вакансии вахтовый метод для женщин",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "вахт"
+  },
+  {
+   "kw": "вакансии для женщин с проживанием",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "вакансии сутки трое для женщин",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "ru",
+   "match": "сутки"
+  },
+  {
+   "kw": "вахтовые работы для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "вахт"
+  },
+  {
+   "kw": "вахтовый метод для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "вахт"
+  },
+  {
+   "kw": "вахтовый метод работа для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "вахт"
+  },
+  {
+   "kw": "вахтовый метод работы для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "вахт"
+  },
+  {
+   "kw": "вахтовый метод работы для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "вахт"
+  },
+  {
+   "kw": "женщина с ребенком ищет работу с проживанием",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа в белой церкви сутки трое для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "сутки"
+  },
+  {
+   "kw": "работа в киеве для девушек с проживанием",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа в киеве с проживанием для девушек",
+   "vol": 10,
+   "cpc": 0.85,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа в крыму для женщин с проживанием",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа в крыму с проживанием для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа в одессе для девушек с проживанием",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа в одессе с проживанием для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа в харькове с проживанием для девушек",
+   "vol": 10,
+   "cpc": 0.06,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа вахтовый метод для женщин",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "вахт"
+  },
+  {
+   "kw": "работа для девушек киев с проживанием",
+   "vol": 10,
+   "cpc": 0.08,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа для девушек с проживанием",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа для женщин ночные смены",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "ночные смены"
+  },
+  {
+   "kw": "работа для женщин сутки трое",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "сутки"
+  },
+  {
+   "kw": "работа для женщин сутки через трое",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "сутки"
+  },
+  {
+   "kw": "работа для мужчин и женщин с проживанием",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа киев для девушек с проживанием",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа на вахте для женщин",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "вахт"
+  },
+  {
+   "kw": "работа по вахтам для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "вахт"
+  },
+  {
+   "kw": "работа с проживанием для девушек",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "HIGH",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа с проживанием одесса для девушек",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "проживанием"
+  },
+  {
+   "kw": "работа сутки трое каменское для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "сутки"
+  },
+  {
+   "kw": "работа сутки через трое для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "сутки"
+  },
+  {
+   "kw": "сезонная работа для женщин",
+   "vol": 10,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "сезонн"
+  },
+  {
+   "kw": "сутки трое работа для женщин",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru",
+   "match": "сутки"
+  },
+  {
+   "kw": "вахтова робота для жінок",
+   "vol": 10,
+   "cpc": 0.07,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.14,
+   "lang": "uk",
+   "match": "вахт"
+  },
+  {
+   "kw": "робота буковель для дівчат",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.29,
+   "lang": "uk",
+   "match": "буковел"
+  },
+  {
+   "kw": "робота в буковелі для дівчат",
+   "vol": 10,
+   "cpc": 0.14,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.22,
+   "lang": "uk",
+   "match": "буковел"
+  },
+  {
+   "kw": "робота в києві для дівчат з проживанням",
+   "vol": 10,
+   "cpc": 0.1,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "проживанн"
+  },
+  {
+   "kw": "робота для жінок в буковелі",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk",
+   "match": "буковел"
+  },
+  {
+   "kw": "робота для жінок вахтовим методом",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "вахт"
+  },
+  {
+   "kw": "робота для жінок з проживанням і щоденною оплатою",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "проживанн"
+  },
+  {
+   "kw": "робота на буковелі для жінок",
+   "vol": 10,
+   "cpc": 0.07,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "буковел"
+  },
+  {
+   "kw": "робота охорона вахта для жінок",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "вахт"
+  },
+  {
+   "kw": "робота сутки троє для жінок",
+   "vol": 10,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "сутки"
+  },
+  {
+   "kw": "робота у буковелі для жінок",
+   "vol": 10,
+   "cpc": 0.03,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk",
+   "match": "буковел"
+  }
+ ],
+ "ageRejected": [
+  {
+   "kw": "робота хмельницький для жінок 50 років",
+   "vol": 480,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.02,
+   "lang": "uk"
+  },
+  {
+   "kw": "работа для женщин от 45 кривой рог",
+   "vol": 210,
+   "cpc": 0.02,
+   "comp": "MEDIUM",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота для жінок за 55 років",
+   "vol": 210,
+   "cpc": 0.69,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 20,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок після 60 років",
+   "vol": 170,
+   "cpc": 0.41,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.61,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок після 55 років",
+   "vol": 170,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.16,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінки 50 років",
+   "vol": 90,
+   "cpc": 1.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок 50 років",
+   "vol": 90,
+   "cpc": 1.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.03,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок після 50",
+   "vol": 70,
+   "cpc": 0.86,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 1.07,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінки 60 років",
+   "vol": 50,
+   "cpc": 2.18,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 20,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок після 45 років",
+   "vol": 50,
+   "cpc": 0.02,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінки 45 років",
+   "vol": 20,
+   "cpc": 0.52,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.17,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінки 55 років",
+   "vol": 20,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.01,
+   "lang": "uk"
+  },
+  {
+   "kw": "найти работу после 50",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для 45 летних женщин",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для 50 летних женщин",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "MEDIUM",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин за 50",
+   "vol": 10,
+   "cpc": 1.13,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 1.99,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин после 40",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин после 45",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа для женщин после 50",
+   "vol": 10,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа женщинам за 50",
+   "vol": 10,
+   "cpc": 0.03,
+   "comp": "LOW",
+   "bidLow": 0.01,
+   "bidHigh": 0.04,
+   "lang": "ru"
+  },
+  {
+   "kw": "работа после 45 для женщин",
+   "vol": 10,
+   "cpc": null,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "ru"
+  },
+  {
+   "kw": "робота для жінок за 50",
+   "vol": 10,
+   "cpc": 0,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота в києві для дівчат 17 років",
+   "vol": 10,
+   "cpc": null,
+   "comp": null,
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота для жінок після 50 років",
+   "vol": 10,
+   "cpc": 0.01,
+   "comp": "LOW",
+   "bidLow": null,
+   "bidHigh": null,
+   "lang": "uk"
+  },
+  {
+   "kw": "робота львів для дівчат 17 років",
+   "vol": 10,
+   "cpc": 0.16,
+   "comp": "HIGH",
+   "bidLow": 0.03,
+   "bidHigh": 0.48,
+   "lang": "uk"
+  }
+ ]
+}

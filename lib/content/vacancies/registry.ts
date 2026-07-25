@@ -11,7 +11,7 @@ import type { VacancyDates, VacancyRecord, VacancySlug } from './types';
  * ведёт гео-система (/vacancies/model), карточка модели на хабе рендерится из
  * VacancyHubContent.modelCard, а не из этого реестра.
  */
-export const VACANCY_ORDER: VacancySlug[] = ['chatter-onlyfans'];
+export const VACANCY_ORDER: VacancySlug[] = ['chatter-onlyfans', 'for-girls'];
 
 /**
  * applicantLocationRequirements: работа 100% удалённая, брать можно из любой
@@ -53,6 +53,17 @@ export const VACANCIES: Record<VacancySlug, VacancyRecord> = {
     cities: [],
     // baseSalary сознательно НЕ публикуем (решение владельца: цифры на
     // собеседовании) — warning в Search Console допустим, это не error.
+    applyKind: 'telegram',
+  },
+  'for-girls': {
+    slug: 'for-girls',
+    hasPage: true,
+    employmentType: ['FULL_TIME', 'PART_TIME'],
+    jobLocationType: 'TELECOMMUTE',
+    applicantCountries: APPLICANT_COUNTRIES,
+    cities: [],
+    // Вилка совпадает с видимой на странице (политика подачи 25.07.2026).
+    salary: { currency: 'USD', minValue: 3000, maxValue: 10000, unitText: 'MONTH' },
     applyKind: 'telegram',
   },
 };

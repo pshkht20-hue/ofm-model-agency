@@ -205,10 +205,10 @@ export default async function VacancyPage({ params }: Props) {
 
       {/* Hero-бейдж: формат оплаты чатера (= salaryLabel плашки, = incentiveCompensation) */}
       <div className="mb-5 flex flex-wrap items-center gap-3">
-        <span className="inline-flex items-center rounded-full border border-accent-pink/30 bg-accent-pink/[0.1] px-5 py-2 font-serif text-lg md:text-xl text-white">
+        <span className="inline-flex items-center rounded-full border border-accent-cyan/35 bg-accent-cyan/[0.09] px-5 py-2 font-sans text-lg md:text-xl font-semibold tracking-tight text-white tabular-nums shadow-[0_0_22px_-10px_rgba(34,211,238,0.7)]">
           {content.salaryLabel}
         </span>
-        <span className="inline-flex items-center rounded-full border border-accent-cyan/25 bg-accent-cyan/[0.06] px-3.5 py-1.5 text-xs font-medium text-accent-cyan">
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/25 bg-emerald-400/[0.07] px-3.5 py-1.5 text-xs font-medium text-emerald-300 tabular-nums">
           {ui.activeUntilLabel} {dates.validThrough}
         </span>
       </div>

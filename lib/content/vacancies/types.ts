@@ -19,8 +19,10 @@
  * [slug]-роли раздела вакансий. После редизайна 2026-07-18 осталась одна роль:
  * chatter-onlyfans. Роль «модель» переехала в гео-систему lib/content/model-geo
  * (/vacancies/model/[country]); роли manager/assistant/smm убраны.
+ * 2026-07-25: добавлен лендинг 'for-girls' («онлайн-работа для девушек») —
+ * мост generic-спроса (~530/мес) к модельной и чатерской воронкам.
  */
-export type VacancySlug = 'chatter-onlyfans';
+export type VacancySlug = 'chatter-onlyfans' | 'for-girls';
 
 /**
  * Города для видимых блоков и массива jobLocation в JSON-LD.

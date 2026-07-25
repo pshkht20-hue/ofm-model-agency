@@ -36,6 +36,42 @@
     "united-kingdom": {
       "datePosted": "2026-07-18",
       "dateModified": "2026-07-18"
+    },
+    "ukraine/kyiv": {
+      "datePosted": "2026-07-25",
+      "dateModified": "2026-07-25"
+    },
+    "ukraine/kharkiv": {
+      "datePosted": "2026-07-25",
+      "dateModified": "2026-07-25"
+    },
+    "ukraine/lviv": {
+      "datePosted": "2026-07-25",
+      "dateModified": "2026-07-25"
+    },
+    "no-experience": {
+      "datePosted": "2026-07-25",
+      "dateModified": "2026-07-25"
+    },
+    "part-time": {
+      "datePosted": "2026-07-25",
+      "dateModified": "2026-07-25"
+    },
+    "full-time": {
+      "datePosted": "2026-07-25",
+      "dateModified": "2026-07-25"
+    },
+    "english-audience": {
+      "datePosted": "2026-07-25",
+      "dateModified": "2026-07-25"
+    },
+    "premium-25-plus": {
+      "datePosted": "2026-07-25",
+      "dateModified": "2026-07-25"
+    },
+    "with-account": {
+      "datePosted": "2026-07-25",
+      "dateModified": "2026-07-25"
     }
   }
 }

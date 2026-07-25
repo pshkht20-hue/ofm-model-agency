@@ -4,9 +4,12 @@
  * of ru.ts (the base locale) 1:1.
  *
  * Red lines (CLAUDE.md): no "contract/agreement" wording about the agency;
- * 20–30% only WITH the reinvestment rationale; income claims only as
- * $15K–$50K gross page balances of top-model pages, newcomer anchor
- * $500–1,000 in the first month; OnlyFans only; tone — inviting, not scary.
+ * OnlyFans only; tone — inviting, not scary.
+ * Vacancy-pay policy 25.07.2026 (for-girls + modelCard): visible range
+ * $3 000–10 000/mo (space thousands separators), NO percentages/gross/
+ * reinvestment or scary caveats, no /calculator links; money details go to
+ * Telegram; style — short job-board copy (benefit bullets). $15 000–50 000
+ * only as top-page balances, never as a guarantee.
  */
 import type { VacancyContent, VacancyHubContent, VacancySlug, VacancyUi } from './types';
 
@@ -40,9 +43,9 @@ export const VACANCY_UI_EN: VacancyUi = {
 export const VACANCY_HUB_EN: VacancyHubContent = {
   h1: 'Current openings at OFM Model Agency',
   seoTitle:
-    'OnlyFans jobs — agency openings 2026: chatter and model | OFM Model Agency',
+    'OnlyFans jobs — agency openings 2026: chatter and model',
   seoDescription:
-    'Open roles at OnlyFans agency OFM Models: chatter (chat operator) and model. Remote work, training from scratch, apply in 2 minutes. Europe, US, Canada & worldwide.',
+    'Open roles at an OnlyFans agency: chatter (chat operator) and model — $3 000–10 000/mo. Remote work, training from scratch, apply in 2 min. Europe, US, worldwide.',
   keywords: [
     'onlyfans jobs',
     'onlyfans vacancies',
@@ -64,7 +67,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
       ],
       bullets: [
         'Chatter (chat operator) — messaging subscribers on behalf of the page and selling PPV from ready scripts; pay is a base rate + % of chat sales; training from scratch, men welcome too',
-        'OnlyFans model — content for 2–3 hours a day on an agreed plan; registration, promo, chat and the page’s finances are fully handled by the agency. Income $500–8000/mo — that’s 20–30% of the page’s gross balance, reinvested into its growth. Choose your country on the [“Model work” page](/vacancies/model)',
+        'OnlyFans model — content for 2–3 hours a day on a ready plan; income $3 000–10 000/mo, with registration, promo, chat and page promotion fully handled by the team. Choose your country on the [“Model work” page](/vacancies/model)',
       ],
     },
     {
@@ -84,8 +87,8 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
     {
       heading: 'Can you really earn on OnlyFans?',
       paragraphs: [
-        'Yes — but the numbers are honest, no fairy tales. Chatter: a base rate + a percentage of your own chat’s sales (we name the range at the interview after the test task, so we don’t paint an advertising "up to $X"). Model: the visible income benchmark is $500–8000/mo — that’s 20–30% of the page’s gross balance; the agency fully funds promotion, traffic and the chat team, and part of the page’s income is reinvested into its growth — which is why both the balance and the model’s percentage grow together.',
-        'Page benchmarks: in the first month a new page usually reaches $500–1,000 of gross balance — that’s the ramp-up, not the ceiling; the balances of the agency’s top-model pages reach $15,000–$50,000 gross a month, but that’s the result of months of systematic teamwork, not a guarantee. A full breakdown of the numbers is in the article [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
+        'Yes — but the numbers are honest, no fairy tales. Chatter: a base rate + a percentage of your own chat’s sales (we name the range at the interview after the test task, so we don’t paint an advertising "up to $X"). Model: income of $3 000–10 000/mo, with top models earning $10 000+ — we’ll show your personal range and plan on Telegram.',
+        'Page benchmarks: the balances of the agency’s top-model pages reach $15 000–50 000 a month — the result of the whole team’s systematic work on promo, chat and management. A full breakdown of the numbers is in the article [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       ],
     },
     {
@@ -133,7 +136,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
     {
       question: 'How much does an OnlyFans agency pay?',
       answer:
-        'Chatter — base rate + % of your own chat’s sales (range named at the interview after the test task). Model — a visible benchmark of $500–8000/mo, which is 20–30% of the page’s gross balance: the agency funds promotion, traffic and the team and reinvests part of the page’s income into its growth. A model’s income depends on the plan, persona and engagement and is not a guarantee.',
+        'Chatter — base rate + % of your own chat’s sales (range named at the interview after the test task). Model — $3 000–10 000/mo; the agency’s top pages reach balances of $15 000–50 000/mo. We’ll share your personal range and plan on Telegram.',
     },
     {
       question: 'Is this remote work?',
@@ -149,8 +152,8 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
   modelCard: {
     role: 'OnlyFans model',
     cardSummary:
-      'Shooting content 2–3 hours a day on a ready plan — registration, promo, chat and finances are taken on by the agency team. Choose your country on the role page.',
-    salaryLabel: '$500–8000/mo · 20–30% of the gross balance (reinvested)',
+      'Content 2–3 hours a day on a ready plan — registration, promo, chat and finances are fully handled by the agency team.',
+    salaryLabel: '$3 000–10 000/mo',
     formatLabel: 'Remote · content 2–3 h/day',
     locationLabel: 'Remote · Europe, US, Canada & worldwide',
   },
@@ -165,7 +168,7 @@ const CHATTER_EN: VacancyContent = {
   slug: 'chatter-onlyfans',
   role: 'Chatter / chat operator',
   h1: 'OnlyFans chatter job — remote chat operator vacancy',
-  seoTitle: 'OnlyFans chatter vacancy (chat operator) — remote, base rate + % of sales',
+  seoTitle: 'OnlyFans chatter job — remote, base rate + % of sales',
   seoDescription:
     'OnlyFans chatter vacancy at OFM Models agency: remote chat work, training from scratch, base rate + % of sales, from 25 h/week. Men welcome too. Apply now!',
   keywords: [
@@ -247,7 +250,7 @@ const CHATTER_EN: VacancyContent = {
       heading: 'Pay: base rate + percentage of chat sales',
       paragraphs: [
         'The scheme is transparent: a fixed rate for shifts + a percentage of the sales your chat made. The exact figures depend on schedule, experience and test-task results — we state them at the interview so we name your real range, not an advertising "up to $X".',
-        'Why the percentage is serious: top-model pages under our management reach $15K–$50K gross a month, and most of those sales are born in the messaging. The better your chat sells, the larger your percentage in absolute figures. How much the pages themselves earn and what their income is made of — see the breakdown [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
+        'Why the percentage is serious: top-model pages under our management reach $15 000–50 000 a month, and most of those sales are born in the messaging. The better your chat sells, the larger your percentage in absolute figures. How much the pages themselves earn and what their income is made of — see the breakdown [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       ],
     },
     {
@@ -315,9 +318,137 @@ const CHATTER_EN: VacancyContent = {
     text: 'Message us on Telegram with a few words about yourself: your English level, sales or messaging experience (if any) and how many hours a week you’re ready to work. We reply within a day.',
     primaryLabel: 'Message us on Telegram',
     bridgeNote:
-      'Looking not for chat work but for your own page? If you’re a woman thinking about your own OnlyFans profile — [fill in the model application](/join): the agency takes on the promotion, chat and finances of the page. You can estimate your potential income in the [calculator](/calculator).',
+      'Looking not for chat work but for your own page? If you’re a woman thinking about your own OnlyFans profile — [fill in the model application](/join): the agency takes on the promotion, chat and finances of the page, and the application takes 2–3 minutes.',
   },
 };
+const FOR_GIRLS_EN: VacancyContent = {
+  slug: 'for-girls',
+  role: 'Online work for women',
+  h1: 'Online work for women — remote roles at the OFM Models agency',
+  seoTitle: 'Online Work for Women — Remote, $3 000–10 000/mo',
+  seoDescription:
+    'Online work for women at OFM Models: OnlyFans model or support operator. $3 000–10 000/mo, fully remote, no experience needed, training included. Apply in 2 minutes!',
+  keywords: [
+    'online work for women',
+    'online jobs for girls',
+    'remote work for women',
+    'work from home for women',
+    'online work for women no experience',
+  ],
+  cardSummary:
+    'Remote work for women 18+: from $3 000 to $10 000/mo, 2–3 hours of content a day — the agency team handles everything else.',
+  salaryLabel: '$3 000–10 000/mo',
+  chips: [
+    'No experience needed',
+    'Remote',
+    'Flexible schedule',
+    'Training from scratch',
+    '24/7 support',
+    '18+',
+  ],
+  formatLabel: 'Remote · from 2–3 h/day',
+  locationLabel: 'Remote · Ukraine, Europe and worldwide',
+  intro: [
+    'The OFM Models agency is hiring women 18+ for remote work: the [OnlyFans model](/vacancies/model) track pays from $3 000 to $10 000/mo for 2–3 hours of content a day, while the team fully handles registration, promotion, messaging and the page finances.',
+    'Prefer not to film? There’s the [chat operator vacancy](/vacancies/chatter-onlyfans) — message us on Telegram and we’ll pick your track and walk you through the terms.',
+  ],
+  sections: [
+    {
+      heading: 'What you get',
+      bullets: [
+        'Income from $3 000 to $10 000/mo; the agency’s top pages reach balances of $15 000–50 000/mo',
+        'The team runs the page: registration, promo, chat and finances are off your plate',
+        '2–3 hours of content a day on a ready plan — fits around studies or another job',
+        'Training and onboarding from scratch — no experience or portfolio needed',
+        'A manager available 24/7 — from technical questions to personal boundaries',
+        'Start in a few days: no fees and no paperwork',
+      ],
+      outro: [
+        'Country-specific terms live on the [model jobs page](/vacancies/model); details — on Telegram.',
+      ],
+    },
+    {
+      heading: 'What we need from you',
+      bullets: [
+        'Age 18+ — strictly, no exceptions',
+        '2–3 hours a day on a flexible schedule',
+        'A smartphone with a good camera and stable internet',
+        'Readiness to follow the plan together with the team',
+      ],
+    },
+    {
+      heading: 'Safety and privacy',
+      bullets: [
+        'Registration, verification and payouts are handled on the agency’s side',
+        'Moderators filter the messages; you set your own content boundaries',
+        'All work happens online, inside the platform — no meet-ups or “offline services”',
+      ],
+    },
+  ],
+  hiringHeading: 'How the start works: 4 steps',
+  hiringSteps: [
+    {
+      title: 'Application',
+      text: 'Message us on Telegram or fill in the form on the site — 2–3 minutes, no CV needed.',
+    },
+    {
+      title: 'Call',
+      text: 'A short online intro: we answer your questions and choose the track — model or operator.',
+    },
+    {
+      title: 'Plan',
+      text: 'The team builds your personal plan: persona, content and page promotion.',
+    },
+    {
+      title: 'First payouts',
+      text: 'We launch the page — the first money usually comes within the first month.',
+    },
+  ],
+  hiringNote:
+    'The start comes with no paperwork: no fees, no “deposits”, no obligation to stay — you can leave at any moment.',
+  faqHeading: 'Frequently asked questions about online work for women',
+  faq: [
+    {
+      question: 'From what age can I start?',
+      answer:
+        'Strictly from 18 — that’s the platform’s and the agency’s rule, no exceptions. There’s no upper limit: women succeed in this niche at 20 and at 35+.',
+    },
+    {
+      question: 'Can I start with no experience?',
+      answer:
+        'Yes: you get a ready-made content plan, training and a team that handles registration, promotion and the page finances.',
+    },
+    {
+      question: 'How much can I earn?',
+      answer:
+        'The visible range is from $3 000 to $10 000/mo; the agency’s top pages reach balances of $15 000–50 000/mo. We’ll go through the exact terms for your situation on Telegram.',
+    },
+    {
+      question: 'When does the first money come?',
+      answer:
+        'Usually within the first month of the page. We’ll explain how payouts work on Telegram before the start.',
+    },
+    {
+      question: 'Is it legal?',
+      answer:
+        'Yes. OnlyFans is a legal platform, and the model’s and operator’s work is ordinary remote employment: content, messaging, online sales. All the work is with an adult audience within the platform’s rules.',
+    },
+    {
+      question: 'Do I have to film, or is there work without a camera?',
+      answer:
+        'There is: the support operator doesn’t create content at all — it’s messaging work with subscribers of the models’ pages. And if you choose the model track, the format and boundaries of your content are agreed with you before the start.',
+    },
+  ],
+  cta: {
+    heading: 'Start with one Telegram message',
+    text: 'Message us a few words about yourself: your age, city and which track interests you — model or support operator. We reply within a day.',
+    primaryLabel: 'Message us on Telegram',
+    bridgeNote:
+      'Already decided you want your own page? [Fill in the model application](/join) — the team takes on registration, promotion and finances.',
+  },
+};
+
 export const VACANCIES_EN: Record<VacancySlug, VacancyContent> = {
   'chatter-onlyfans': CHATTER_EN,
+  'for-girls': FOR_GIRLS_EN,
 };

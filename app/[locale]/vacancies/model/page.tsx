@@ -1,20 +1,69 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Crown, Flame } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { FaqAccordion } from '@/components/seo/FaqAccordion';
 import { FaqPageJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
+import { ItemListJsonLd } from '@/components/seo/ItemListJsonLd';
 import { routing, type Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
 import {
+  getLatestModelGeoUpdatedAt,
   getModelGeoContent,
+  getModelGeoCountry,
   getModelGeoDates,
+  getModelGeoGeoSlugs,
   getModelGeoHubContent,
   getModelGeoPageSlugs,
   getModelGeoUi,
 } from '@/lib/content/model-geo';
+import { MODEL_FEED } from '@/lib/content/model-geo/feed';
 import { RichText } from '../RichText';
+
+/**
+ * Строки «живой ленты» позиций (локальные константы по прецеденту
+ * TRUST_LINE в SeoPageShell — не тянем в hub.ts ради трёх строк).
+ */
+const FEED_HEADING: Record<Locale, string> = {
+  ru: 'Открытые позиции для моделей',
+  uk: 'Відкриті позиції для моделей',
+  en: 'Open model positions',
+  es: 'Posiciones abiertas para modelos',
+};
+
+const FEED_STATUS: Record<Locale, string> = {
+  ru: 'Набор открыт',
+  uk: 'Набір відкрито',
+  en: 'Hiring now',
+  es: 'Vacantes abiertas',
+};
+
+const FEED_CTA: Record<Locale, string> = {
+  ru: 'Подробнее',
+  uk: 'Детальніше',
+  en: 'Details',
+  es: 'Detalles',
+};
+
+const FEED_BADGE: Record<Locale, { hot: string; top: string }> = {
+  ru: { hot: 'Горячая', top: 'ТОП-набор недели' },
+  uk: { hot: 'Гаряча', top: 'ТОП-набір тижня' },
+  en: { hot: 'Hot', top: 'Top pick this week' },
+  es: { hot: 'Urgente', top: 'Top de la semana' },
+};
+
+const FEED_COUNTER: Record<Locale, (n: number, date: string) => string> = {
+  ru: (n, date) => `${n} открытых направлений · обновлено ${date}`,
+  uk: (n, date) => `${n} відкритих напрямів · оновлено ${date}`,
+  en: (n, date) => `${n} open tracks · updated ${date}`,
+  es: (n, date) => `${n} posiciones abiertas · actualizado ${date}`,
+};
+
+/** «$3 000» — группировка тысяч пробелами (детерминированно для SSR). */
+function groupThousands(value: number): string {
+  return String(Math.round(value)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+}
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -46,7 +95,7 @@ export default async function ModelGeoHubPage({ params }: Props) {
   const loc = locale as Locale;
   const hub = getModelGeoHubContent(loc);
   const ui = getModelGeoUi(loc);
-  const slugs = getModelGeoPageSlugs();
+  const slugs = getModelGeoGeoSlugs();
   const faqItems = toFaqItems(hub.faq);
 
   const sectionHeading = 'font-serif text-2xl md:text-3xl text-white mb-6';
@@ -60,6 +109,16 @@ export default async function ModelGeoHubPage({ params }: Props) {
       ]}
     >
       <FaqPageJsonLd items={faqItems} />
+      <ItemListJsonLd
+        locale={loc}
+        listName={hub.h1}
+        items={getModelGeoPageSlugs()
+          .map((slug) => {
+            const c = getModelGeoContent(slug, loc);
+            return c ? { name: c.title, path: `/vacancies/model/${slug}` } : null;
+          })
+          .filter((item): item is { name: string; path: string } => item !== null)}
+      />
       <BreadcrumbJsonLd
         locale={loc}
         items={[
@@ -78,14 +137,106 @@ export default async function ModelGeoHubPage({ params }: Props) {
         </p>
       ))}
 
-      {/* Листинг стран */}
+      {/* Живая лента позиций: джоборд-формат — заголовок со статус-индикатором,
+          строки «роль + выгоды слева, крупная вилка справа». JobPosting-схемы
+          остаются на детальных страницах. */}
       <div className="mt-10">
+        <div className="mb-6 flex flex-wrap items-end justify-between gap-x-4 gap-y-2">
+          <div>
+            <h2 className="font-serif text-2xl md:text-3xl text-white">{FEED_HEADING[loc]}</h2>
+            {/* Честный счётчик живой доски: число из данных, дата из dates.json */}
+            <p className="mt-1.5 text-sm text-white/45 tabular-nums">
+              {FEED_COUNTER[loc](
+                MODEL_FEED[loc].length,
+                getLatestModelGeoUpdatedAt().split('-').reverse().join('.'),
+              )}
+            </p>
+          </div>
+          <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/[0.07] px-3.5 py-1.5 text-xs font-medium text-emerald-300">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+            </span>
+            {FEED_STATUS[loc]}
+          </span>
+        </div>
+        <ul className="space-y-2.5">
+          {MODEL_FEED[loc].map((position) => (
+            <li key={position.id}>
+              {/* Stretched-link: карточка кликабельна целиком через ::after у
+                  заголовка, теги-ссылки лежат выше (z-10) — валидная вложенность */}
+              <div className="group relative grid gap-3 rounded-xl border border-white/[0.08] bg-gradient-to-r from-white/[0.035] to-transparent px-5 py-4 transition-all duration-200 hover:border-accent-pink/40 hover:from-accent-pink/[0.06] hover:to-accent-cyan/[0.03] sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center">
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+                    {position.badge && (
+                      <span
+                        className={
+                          position.badge === 'hot'
+                            ? 'inline-flex items-center gap-1 rounded-full border border-amber-400/40 bg-amber-400/[0.1] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-amber-300'
+                            : 'inline-flex items-center gap-1 rounded-full border border-accent-pink/45 bg-accent-pink/[0.12] px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-accent-pink'
+                        }
+                      >
+                        {position.badge === 'hot' ? (
+                          <Flame className="h-3 w-3" aria-hidden />
+                        ) : (
+                          <Crown className="h-3 w-3" aria-hidden />
+                        )}
+                        {FEED_BADGE[loc][position.badge]}
+                      </span>
+                    )}
+                    <Link
+                      href={position.href}
+                      className="font-semibold text-white leading-snug after:absolute after:inset-0 after:content-['']"
+                    >
+                      {position.title}
+                    </Link>
+                  </div>
+                  <p className="mt-1 text-sm text-white/55 line-clamp-1">{position.summary}</p>
+                  <span className="relative z-10 mt-2.5 flex flex-wrap gap-1.5">
+                    {position.tags && position.tags.length > 0
+                      ? position.tags.slice(0, 3).map((tag) => (
+                          <Link
+                            key={tag.href + tag.label}
+                            href={tag.href}
+                            className="rounded-full border border-white/[0.09] bg-white/[0.03] px-2.5 py-0.5 text-xs text-white/65 transition-colors hover:border-accent-cyan/40 hover:bg-accent-cyan/[0.07] hover:text-white"
+                          >
+                            {tag.label}
+                          </Link>
+                        ))
+                      : position.chips.slice(0, 3).map((chip) => (
+                          <span
+                            key={chip}
+                            className="rounded-full border border-white/[0.09] bg-white/[0.03] px-2.5 py-0.5 text-xs text-white/65"
+                          >
+                            {chip}
+                          </span>
+                        ))}
+                  </span>
+                </div>
+                <span className="flex items-center justify-between gap-3 sm:flex-col sm:items-end sm:gap-2">
+                  <span className="inline-flex items-center whitespace-nowrap rounded-full border border-accent-cyan/35 bg-accent-cyan/[0.09] px-4 py-2 font-sans text-base font-semibold tracking-tight text-white tabular-nums shadow-[0_0_20px_-10px_rgba(34,211,238,0.65)] transition-shadow group-hover:shadow-[0_0_26px_-8px_rgba(34,211,238,0.85)]">
+                    {position.salaryLabel}
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-xs font-medium text-accent-pink">
+                    {FEED_CTA[loc]}
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                </span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Листинг стран */}
+      <div className="mt-14">
         <h2 className={sectionHeading}>{hub.listHeading}</h2>
         <div className="grid gap-5 sm:grid-cols-2">
           {slugs.map((slug) => {
             const content = getModelGeoContent(slug, loc);
+            const record = getModelGeoCountry(slug);
             const dates = getModelGeoDates(slug);
-            if (!content) return null;
+            if (!content || !record) return null;
             return (
               <Link
                 key={slug}
@@ -101,12 +252,13 @@ export default async function ModelGeoHubPage({ params }: Props) {
                 <h3 className="font-serif text-xl md:text-2xl text-white leading-snug">
                   {content.countryName}
                 </h3>
-                <p className="text-body text-sm mt-3 line-clamp-2">{content.marketContext}</p>
+                <p className="text-body text-sm mt-3 line-clamp-2">{content.description}</p>
                 <dl className="mt-4 space-y-1.5 text-sm">
                   <div className="flex gap-2">
                     <dt className="text-white/45">{ui.incomeLabel}:</dt>
-                    <dd className="text-white/80">
-                      $500–8000{ui.perMonth}
+                    <dd className="font-semibold text-white/90 tabular-nums">
+                      ${groupThousands(record.incomeUsd.min)}–{groupThousands(record.incomeUsd.max)}
+                      {ui.perMonth}
                     </dd>
                   </div>
                   <div className="flex gap-2">

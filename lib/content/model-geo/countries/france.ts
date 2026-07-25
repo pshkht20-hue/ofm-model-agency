@@ -1,10 +1,16 @@
 /**
- * Франция — гео-страница «Модель OnlyFans» (волна 1, европейский рынок).
- * Написана ПО ОБРАЗЦУ countries/ukraine.ts (см. index.ts, как добавить страну).
+ * Гео-страница «Модель OnlyFans» — Франция (волна 1).
+ * Формат «рекламный креатив» (директива владельца 25.07.2026, вторая итерация):
+ * интро → «Что мы предлагаем» → «Что мы ждём от тебя» → приглашение → FAQ.
  *
- * Красные линии — см. ../types.ts. Доход $500–8000/мес (видимый = baseSalary),
- * «$15 000–$50 000» только как балансы топ-страниц прозой + дисклеймер, 20–30% с
- * обоснованием реинвеста, без «договор/контракт», только OnlyFans.
+ * Локальный мотив (уникализация 25.07.2026): французская эстетика/лайфстайл
+ * как актив страницы + работа в собственном ритме (утро — кофе, день — свет,
+ * вечер — для себя); пиковые часы заокеанской аудитории закрывает команда;
+ * выплаты в евро без конвертации. Старт из любого города.
+ *
+ * Красные линии: без процентов/gross/реинвеста, без «договор/контракт» и
+ * триггер-слов; вилка дохода — только record.incomeUsd ($3 000–10 000);
+ * только OnlyFans; эмодзи не используем — иконки рендерит шаблон страницы.
  */
 import type { Locale } from '@/i18n/routing';
 import type { ModelGeoContent, ModelGeoCountry } from '../types';
@@ -14,143 +20,227 @@ export const record: ModelGeoCountry = {
   iso: 'FR',
   currency: 'EUR',
   usdToLocalRate: 0.92,
-  incomeUsd: { min: 500, max: 8000 },
+  incomeUsd: { min: 3000, max: 10000 },
   wave: 1,
   hasPage: true,
 };
 
 const RU: ModelGeoContent = {
   countryName: 'Франция',
-  title: 'Работа моделью OnlyFans во Франции — удалённо, доход $500–8000/мес',
+  title: 'Модель OnlyFans во Франции — работа удалённо, от $3 000/мес',
   description:
-    'Работа моделью OnlyFans во Франции: удалённо из Парижа, Марселя, Лиона, Тулузы, Ниццы. Съёмка 2–3 ч/день, регистрацию, промо, чат и финансы ведёт агентство. Доход $500–8000/мес (≈ €460–7360). Опыт не нужен.',
+    'От $3 000 до $10 000 в месяц зарабатывают многие наши модели во Франции. OnlyFans в твоём ритме: ты снимаешь контент, команда ведёт продвижение, чат и финансы.',
   introHtml:
-    'Агентство OFM Models набирает моделей OnlyFans по всей Франции на удалённую работу из дома. Это одна вакансия на всю страну: живёшь ли ты в Париже, Марселе, Лионе, Тулузе или Ницце — условия, команда и процент одинаковы для всех. Формат простой: ты снимаешь контент по согласованному плану 2–3 часа в день, а всё остальное — регистрацию и верификацию страницы, продвижение, переписку с подписчиками и финансы — берёт на себя команда агентства. Опыт, портфолио и профессиональная техника не нужны: начать можно со смартфона, а привычный во Франции статус фрилансера-микропредпринимателя делает удалённую работу из дома понятным форматом. Что делает агентство на каждом этапе — разобрали в статье [что делает OnlyFans-агентство](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Париж', 'Марсель', 'Лион', 'Тулуза', 'Ницца'],
-  marketContext:
-    'Франция — один из самых зрелых рынков OnlyFans в Европе: французская аудитория платёжеспособна и привыкла платить за авторский контент, а сам французский язык — отдельная ниша, в которой конкуренция за подписчика ниже, чем в перегретом англоязычном сегменте. При этом основную выручку страницам французских моделей всё равно приносит платёжеспособная аудитория США, Канады и Австралии, а европейская «шик»-эстетика и естественный стиль стабильно в спросе. Часовой пояс Центральной Европы удобен: пик активности подписчиков в Европе приходится на твой вечер, а команда агентства подхватывает ночные часы под США.',
-  paymentsNote:
-    'Выплаты во Франции идут через международные платёжные системы OnlyFans — Paxum и Skrill; вывод в евро — на французскую карту или SEPA-счёт, график фиксированный, раз в две недели. Всю бухгалтерию, комиссии платёжек и вывод ведёт агентство: тебе не нужно разбираться в настройках кошельков и курсах — ты видишь свой процент и график в евро, остальное закрывает команда.',
-  earningsNarrative:
-    'Честные ориентиры для Франции: в первый месяц новая страница обычно выходит на $500–1 000 gross-баланса (≈ €460–920) — это разгон, аудитория только набирается. Дальше рост зависит от регулярности контента: страницы топ-моделей агентства выходят на балансы $15 000–$50 000 gross в месяц (≈ €13 800–€46 000), но это результат месяцев системной работы команды, а не стартовая точка и не гарантия. Модель получает 20–30% от gross-баланса страницы — процент зависит от плана, типажа и вовлечённости; агентство полностью финансирует промо, трафик и чат-команду, а часть дохода реинвестируется в рост страницы, поэтому баланс и твой процент растут вместе. Доход зависит от плана, типажа и вовлечённости и не является гарантией. Из чего складываются цифры — в статье [сколько зарабатывают модели OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), а прикинуть свой потенциал можно в [калькуляторе дохода](/calculator).',
+    'Бонжур! Мы — OFM Models, агентство полного цикла: за 3+ года мы запустили и вырастили 220+ страниц моделей. Во Франции ищем девушек 18+ — из Парижа, Лиона, Бордо или маленького городка в Провансе, с опытом и без. Здесь легко работать в собственном ритме: утренний кофе, дневной свет для съёмок, вечер — для себя, ведь пиковые часы заокеанской аудитории команда закрывает без твоего участия. Выплаты регулярные и приходят в евро — привычная валюта, никакой возни с конвертацией.',
+  offers: [
+    'Твоя зона — камера и образ: страницу, раскрутку, диалоги с подписчиками и все финансовые вопросы ведём мы.',
+    'Большинство девушек нашей команды выходят на доход от $3 000 до $10 000 в месяц.',
+    'Бюджет на продвижение выделяет агентство — тебе не нужно вкладывать ни евро.',
+    'Французская эстетика — твой актив: поможем выстроить стиль, свет и подачу так, чтобы лайфстайл в кадре стал фирменной чертой страницы.',
+    'Конфиденциальность: бережно относимся к твоей личной информации и настраиваем приватность так, как комфортно тебе.',
+    'Ритм подстраиваем под тебя: съёмки в удобные часы, а вечерний прайм аудитории США остаётся за командой.',
+  ],
+  expectations: [
+    'Тебе исполнилось 18 лет.',
+    'Серьёзный подход к контенту: качественные фото и видео, желание расти.',
+    'Достаточно смартфона и стабильного интернета — снимать можно из любой точки.',
+    'Организованность и соблюдение контент-плана — обычно это 2–3 часа съёмок в день.',
+    'Лёгкость в коммуникации: мы на связи каждый день и ценим, когда это взаимно.',
+  ],
+  closingHtml:
+    'Звучит интересно? Сделай первый шаг: короткая заявка, пара сообщений — и ты уже понимаешь, твой это формат или нет. Никаких обязательств на этом этапе.',
+  specs: [
+    { label: 'График', value: 'Гибкий, 2–3 часа в день' },
+    { label: 'Опыт', value: 'Не требуется — обучаем с нуля' },
+    { label: 'Локация', value: 'Удалённо · вся Франция' },
+    { label: 'Выплаты', value: 'Регулярно, по фиксированному графику' },
+    { label: 'Старт', value: 'В первые дни после онлайн-кастинга' },
+  ],
   faq: [
     {
-      q: 'Из каких городов Франции можно работать моделью OnlyFans?',
-      a: 'Из любого: работа полностью удалённая. Чаще всего наши модели — из Парижа, Марселя, Лиона, Тулузы и Ниццы, но город не влияет ни на условия, ни на процент — снимать можно из дома в любом населённом пункте Франции, нужны только смартфон и стабильный интернет.',
+      q: 'Насколько это анонимно и приватно?',
+      a: 'Приватность настраиваем под тебя, а аудиторию страницы направляем на другие страны, прежде всего англоязычные — французские знакомые её почти не видят. Решение, кому рассказывать о работе, всегда остаётся за тобой.',
     },
     {
-      q: 'Сколько зарабатывает модель OnlyFans во Франции?',
-      a: 'Видимый ориентир дохода модели — $500–8000 в месяц (≈ €460–7360) в зависимости от плана, типажа и вовлечённости; в первый месяц новая страница обычно выходит на $500–1 000. Модель получает 20–30% от gross-баланса страницы, агентство реинвестирует часть дохода в промо и трафик. Балансы топ-страниц агентства доходят до $15 000–$50 000 в месяц, но это результат месяцев работы команды, а не гарантия.',
+      q: 'Нужен ли опыт, чтобы начать?',
+      a: 'Нет. Мы работаем и с новичками, и с опытными моделями: команда даёт контент-план, подсказывает удачные ракурсы и сопровождает на каждом шагу.',
     },
     {
-      q: 'Нужен ли опыт или знание языков, чтобы начать работу моделью OnlyFans во Франции?',
-      a: 'Нет. Начать можно с нуля: на онбординге дают контент-план, показывают рабочие ракурсы и форматы, а переписку с подписчиками ведёт англоязычная чат-команда агентства — знать английский тебе не нужно. Нужны 18+, смартфон с нормальной камерой и готовность снимать регулярно.',
+      q: 'Сколько времени занимает работа? Можно ли совмещать с учёбой или другой работой?',
+      a: 'В среднем 2–3 часа съёмки в день, и ты сама выбираешь, какие это будут часы — утро перед парами или вечер после работы. Всё остальное происходит без тебя, поэтому совмещать легко.',
     },
     {
-      q: 'Это анонимно и безопасно для девушки из Франции?',
-      a: 'Уровень приватности обсуждаем на кастинге индивидуально. Стандартная практика — геоблок: страница закрывается от Франции и соседних стран, чтобы знакомые её не увидели, а платёжеспособную аудиторию приводим из США, Канады и Австралии. Форматы контента согласуются заранее и фиксируются в плане — ничего «по умолчанию» не публикуется.',
+      q: 'Обязательно ли жить в Париже?',
+      a: 'Совсем нет. Страница одинаково растёт из Лиона, Тулузы или деревушки в Нормандии: значение имеют контент и регулярность, а не адрес. Вся работа с командой идёт онлайн.',
+    },
+    {
+      q: 'Я не из Франции — могу ли начать?',
+      a: 'Да. Работа полностью удалённая, поэтому неважно, где ты живёшь сейчас: начать можно из любой страны и города.',
     },
   ],
 };
 
 const UK: ModelGeoContent = {
   countryName: 'Франція',
-  title: 'Робота моделлю OnlyFans у Франції — віддалено, дохід $500–8000/міс',
+  title: 'Модель OnlyFans у Франції — віддалено, від $3 000/міс',
   description:
-    'Робота моделлю OnlyFans у Франції: віддалено з Парижа, Марселя, Ліона, Тулузи, Ніцци. Зйомка 2–3 год/день, реєстрацію, промо, чат і фінанси веде агенція. Дохід $500–8000/міс (≈ €460–7360). Досвід не потрібен.',
+    'Від $3 000 до $10 000 на місяць заробляють багато наших моделей у Франції. OnlyFans у твоєму ритмі: ти знімаєш контент, команда веде просування, чат і фінанси.',
   introHtml:
-    'Агенція OFM Models набирає моделей OnlyFans по всій Франції на віддалену роботу з дому. Це одна вакансія на всю країну: живеш ти в Парижі, Марселі, Ліоні, Тулузі чи Ніцці — умови, команда й відсоток однакові для всіх. Формат простий: ти знімаєш контент за узгодженим планом 2–3 години на день, а все інше — реєстрацію та верифікацію сторінки, просування, листування з підписниками й фінанси — бере на себе команда агенції. Досвід, портфоліо та професійна техніка не потрібні: почати можна зі смартфона, а звичний у Франції статус фрилансера-мікропідприємця робить віддалену роботу з дому зрозумілим форматом. Що робить агенція на кожному етапі — розібрали у статті [що робить OnlyFans-агенція](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Париж', 'Марсель', 'Ліон', 'Тулуза', 'Ніцца'],
-  marketContext:
-    'Франція — один із найзріліших ринків OnlyFans у Європі: французька аудиторія платоспроможна та звикла платити за авторський контент, а сама французька мова — окрема ніша, у якій конкуренція за підписника нижча, ніж у перегрітому англомовному сегменті. Водночас основну виручку сторінкам французьких моделей усе одно приносить платоспроможна аудиторія США, Канади та Австралії, а європейська «шик»-естетика й природний стиль стабільно в попиті. Часовий пояс Центральної Європи зручний: пік активності підписників у Європі припадає на твій вечір, а команда агенції підхоплює нічні години під США.',
-  paymentsNote:
-    'Виплати у Франції йдуть через міжнародні платіжні системи OnlyFans — Paxum і Skrill; виведення в євро — на французьку картку чи SEPA-рахунок, графік фіксований, раз на два тижні. Усю бухгалтерію, комісії платіжок і виведення веде агенція: тобі не треба розбиратися в налаштуваннях гаманців і курсах — ти бачиш свій відсоток і графік у євро, решту закриває команда.',
-  earningsNarrative:
-    'Чесні орієнтири для Франції: у перший місяць нова сторінка зазвичай виходить на $500–1 000 gross-балансу (≈ €460–920) — це розгін, аудиторія тільки набирається. Далі зростання залежить від регулярності контенту: сторінки топ-моделей агенції виходять на баланси $15 000–$50 000 gross на місяць (≈ €13 800–€46 000), але це результат місяців системної роботи команди, а не стартова точка й не гарантія. Модель отримує 20–30% від gross-балансу сторінки — відсоток залежить від плану, типажу та залученості; агенція повністю фінансує промо, трафік і чат-команду, а частина доходу реінвестується в зростання сторінки, тому баланс і твій відсоток ростуть разом. Дохід залежить від плану, типажу та залученості й не є гарантією. З чого складаються цифри — у статті [скільки заробляють моделі OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), а прикинути свій потенціал можна в [калькуляторі доходу](/calculator).',
+    'Бонжур! Ми — OFM Models, агенція повного циклу: за понад 3 роки ми запустили й розвинули 220+ сторінок моделей. У Франції шукаємо дівчат 18+ — з Парижа, Ліона, Бордо чи маленького містечка в Провансі, з досвідом і без. Тут легко працювати у власному ритмі: ранкова кава, денне світло для зйомок, вечір — для себе, адже пікові години заокеанської аудиторії команда закриває без твоєї участі. Виплати регулярні й надходять у євро — звична валюта, жодної мороки з конвертацією.',
+  offers: [
+    'Твоя зона — камера та образ: сторінку, розкрутку, діалоги з підписниками й усі фінансові питання ведемо ми.',
+    'Більшість дівчат нашої команди виходять на дохід від $3 000 до $10 000 на місяць.',
+    'Бюджет на просування виділяє агенція — тобі не треба вкладати ані євро.',
+    'Французька естетика — твій актив: допоможемо вибудувати стиль, світло й подачу так, щоб лайфстайл у кадрі став фірмовою рисою сторінки.',
+    'Конфіденційність: дбайливо ставимося до твоєї особистої інформації та налаштовуємо приватність так, як зручно тобі.',
+    'Ритм підлаштовуємо під тебе: зйомки у зручні години, а вечірній прайм аудиторії США лишається за командою.',
+  ],
+  expectations: [
+    'Тобі виповнилося 18 років.',
+    'Серйозний підхід до контенту: якісні фото й відео, бажання розвиватися.',
+    'Досить смартфона та стабільного інтернету — знімати можна з будь-якої точки.',
+    'Організованість і дотримання контент-плану — зазвичай це 2–3 години зйомок на день.',
+    'Легкість у комунікації: ми на зв’язку щодня й цінуємо, коли це взаємно.',
+  ],
+  closingHtml:
+    'Звучить цікаво? Зроби перший крок: коротка заявка, кілька повідомлень — і ти вже розумієш, твій це формат чи ні. Жодних зобов’язань на цьому етапі.',
+  specs: [
+    { label: 'Графік', value: 'Гнучкий, 2–3 години на день' },
+    { label: 'Досвід', value: 'Не потрібен — навчимо з нуля' },
+    { label: 'Локація', value: 'Віддалено · вся Франція' },
+    { label: 'Виплати', value: 'Регулярні, за фіксованим графіком' },
+    { label: 'Старт', value: 'У перші дні після онлайн-кастингу' },
+  ],
   faq: [
     {
-      q: 'З яких міст Франції можна працювати моделлю OnlyFans?',
-      a: 'З будь-якого: робота повністю віддалена. Найчастіше наші моделі — з Парижа, Марселя, Ліона, Тулузи та Ніцци, але місто не впливає ні на умови, ні на відсоток — знімати можна з дому в будь-якому населеному пункті Франції, потрібні лише смартфон і стабільний інтернет.',
+      q: 'Наскільки це анонімно і приватно?',
+      a: 'Приватність налаштовуємо під тебе, а аудиторію сторінки спрямовуємо на інші країни, насамперед англомовні — французькі знайомі її майже не бачать. Рішення, кому розповідати про роботу, завжди лишається за тобою.',
     },
     {
-      q: 'Скільки заробляє модель OnlyFans у Франції?',
-      a: 'Видимий орієнтир доходу моделі — $500–8000 на місяць (≈ €460–7360) залежно від плану, типажу та залученості; у перший місяць нова сторінка зазвичай виходить на $500–1 000. Модель отримує 20–30% від gross-балансу сторінки, агенція реінвестує частину доходу в промо та трафік. Баланси топ-сторінок агенції сягають $15 000–$50 000 на місяць, але це результат місяців роботи команди, а не гарантія.',
+      q: 'Чи потрібен досвід, щоб почати?',
+      a: 'Ні. Ми працюємо і з новачками, і з досвідченими моделями: команда дає контент-план, підказує вдалі ракурси й супроводжує на кожному кроці.',
     },
     {
-      q: 'Чи потрібен досвід або знання мов, щоб почати роботу моделлю OnlyFans у Франції?',
-      a: 'Ні. Почати можна з нуля: на онбордингу дають контент-план, показують робочі ракурси та формати, а листування з підписниками веде англомовна чат-команда агенції — знати англійську тобі не потрібно. Потрібні 18+, смартфон із нормальною камерою та готовність знімати регулярно.',
+      q: 'Скільки часу займає робота? Чи можна поєднувати з навчанням або іншою роботою?',
+      a: 'У середньому 2–3 години зйомки на день, і ти сама обираєш, які це будуть години — ранок перед парами чи вечір після роботи. Усе інше відбувається без тебе, тому поєднувати легко.',
     },
     {
-      q: 'Це анонімно й безпечно для дівчини з Франції?',
-      a: 'Рівень приватності обговорюємо на кастингу індивідуально. Стандартна практика — геоблок: сторінка закривається від Франції та сусідніх країн, щоб знайомі її не побачили, а платоспроможну аудиторію приводимо зі США, Канади та Австралії. Формати контенту узгоджуються заздалегідь і фіксуються в плані — нічого «за замовчуванням» не публікується.',
+      q: 'Чи обов’язково жити в Парижі?',
+      a: 'Зовсім ні. Сторінка однаково росте з Ліона, Тулузи чи села в Нормандії: значення мають контент і регулярність, а не адреса. Уся робота з командою відбувається онлайн.',
+    },
+    {
+      q: 'Я не з Франції — чи можу почати?',
+      a: 'Так. Робота повністю віддалена, тож неважливо, де ти живеш зараз: почати можна з будь-якої країни та міста.',
     },
   ],
 };
 
 const EN: ModelGeoContent = {
   countryName: 'France',
-  title: 'OnlyFans model job in France — remote, income $500–8000/mo',
+  title: 'OnlyFans model in France — remote job from $3 000/mo',
   description:
-    'OnlyFans model job in France: remote from Paris, Marseille, Lyon, Toulouse, Nice. Shooting 2–3 h/day, registration, promo, chat and finances run by the agency. Income $500–8000/mo (≈ €460–7360). No experience needed.',
+    'Earn $3 000–10 000/mo as an OnlyFans model in France, at your own rhythm: you create content, the team runs promotion, subscriber chats and finances. 18+.',
   introHtml:
-    'OFM Models agency is recruiting OnlyFans models across France for remote work from home. This is one vacancy for the whole country: whether you live in Paris, Marseille, Lyon, Toulouse or Nice, the terms, team and percentage are the same for everyone. The format is simple: you shoot content on an agreed plan 2–3 hours a day, and everything else — registering and verifying the page, promotion, subscriber messaging and finances — is handled by the agency team. Experience, a portfolio and professional gear aren’t needed: you can start with a smartphone, and France’s familiar micro-entrepreneur freelancer status makes working remotely from home a well-understood arrangement. What the agency does at each stage — we broke it down in the article [what an OnlyFans agency does](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['Paris', 'Marseille', 'Lyon', 'Toulouse', 'Nice'],
-  marketContext:
-    'France is one of the most mature OnlyFans markets in Europe: the French audience has spending power and is used to paying for creator content, while the French language itself is a distinct niche where competition for a subscriber is lower than in the overheated English-language segment. Even so, the bulk of the revenue for French models’ pages still comes from the paying audiences of the US, Canada and Australia, where European “chic” aesthetics and a natural style stay in steady demand. The Central European time zone is convenient: the peak of subscriber activity in Europe falls in your evening, while the agency team picks up the night hours for the US.',
-  paymentsNote:
-    'Payouts in France go through OnlyFans’ international payment systems — Paxum and Skrill; withdrawal in euros goes to a French card or SEPA account on a fixed schedule, every two weeks. All the accounting, processor fees and withdrawals are run by the agency: you don’t need to figure out wallet settings or exchange rates — you see your percentage and schedule in euros, the team covers the rest.',
-  earningsNarrative:
-    'Honest benchmarks for France: in the first month a new page usually reaches $500–1,000 of gross balance (≈ €460–920) — that’s the ramp-up, the audience is only just building. Further growth depends on content consistency: the agency’s top-model pages reach balances of $15,000–$50,000 gross a month (≈ €13,800–€46,000), but that’s the result of months of systematic teamwork, not a starting point and not a guarantee. A model receives 20–30% of the page’s gross balance — the percentage depends on the plan, persona and engagement; the agency fully funds promo, traffic and the chat team, and part of the income is reinvested into the page’s growth, so the balance and your percentage grow together. Income depends on the plan, persona and engagement and is not a guarantee. What the numbers are made of — in the article [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli), and you can estimate your own potential in the [income calculator](/calculator).',
+    'Bonjour! We are OFM Models, a full-cycle agency: over 3+ years we have launched and grown 220+ creator pages. In France we are looking for women 18+ — from Paris, Lyon, Bordeaux or a small town in Provence, experienced or new. Life here fits the work beautifully: morning coffee, daylight for shooting, evenings to yourself, because the team covers the overseas audience at its peak hours without you. Payouts are regular and arrive in euros — your everyday currency, no conversion hassle.',
+  offers: [
+    'Your zone is the camera and your image: the page, promotion, subscriber dialogues and all money matters are on us.',
+    'Most of the women on our team reach an income of $3 000 to $10 000 a month.',
+    'The promotion budget comes from the agency — you do not put in a single euro.',
+    'French aesthetics are your asset: we will help shape style, light and presentation so lifestyle on camera becomes the signature of your page.',
+    'Confidentiality: we treat your personal information with care and set up privacy the way you feel comfortable.',
+    'The rhythm adapts to you: you shoot at hours you choose, while the US evening prime stays with the team.',
+  ],
+  expectations: [
+    'You are 18 or older.',
+    'A serious approach to content: quality photos and videos, and a desire to grow.',
+    'A smartphone and stable internet are all the gear you need — you can shoot from anywhere.',
+    'Organised and consistent with the content plan — usually 2–3 hours of shooting a day.',
+    'Easy communication: we are in touch every day and appreciate it being mutual.',
+  ],
+  closingHtml:
+    'Sounds interesting? Take the first step: a short application, a few messages — and you will already know whether this format is for you. No obligations at this stage.',
+  specs: [
+    { label: 'Schedule', value: 'Flexible, 2–3 hours a day' },
+    { label: 'Experience', value: 'Not needed — we train from scratch' },
+    { label: 'Location', value: 'Remote · all of France' },
+    { label: 'Payouts', value: 'Regular, on a fixed schedule' },
+    { label: 'Start', value: 'Within days after the online casting' },
+  ],
   faq: [
     {
-      q: 'Which cities in France can you work as an OnlyFans model from?',
-      a: 'Any: the work is fully remote. Most often our models are from Paris, Marseille, Lyon, Toulouse and Nice, but the city affects neither the terms nor the percentage — you can shoot from home in any locality in France, all you need is a smartphone and stable internet.',
+      q: 'How anonymous and private is it?',
+      a: 'Privacy is tailored to you, and the page audience is pointed at other countries, primarily English-speaking ones — people you know in France will hardly ever see it. Who to tell about the work always remains your decision.',
     },
     {
-      q: 'How much does an OnlyFans model earn in France?',
-      a: 'The visible income benchmark for a model is $500–8000 a month (≈ €460–7360) depending on the plan, persona and engagement; in the first month a new page usually reaches $500–1,000. A model receives 20–30% of the page’s gross balance, and the agency reinvests part of the income into promo and traffic. The agency’s top-page balances reach $15,000–$50,000 a month, but that’s the result of months of teamwork, not a guarantee.',
+      q: 'Do I need experience to start?',
+      a: 'No. We work with both beginners and experienced models: the team provides a content plan, suggests angles that work and supports you at every step.',
     },
     {
-      q: 'Do you need experience or languages to start OnlyFans model work in France?',
-      a: 'No. You can start from scratch: at onboarding you get a content plan and are shown working angles and formats, while an English-speaking agency chat team handles subscriber messaging — you don’t need to know English yourself. You need to be 18+, have a smartphone with a decent camera and be ready to shoot regularly.',
+      q: 'How much time does it take? Can I combine it with studies or another job?',
+      a: 'On average 2–3 hours of shooting a day, and you choose which hours those are — morning before classes or evening after work. Everything else happens without you, so combining is easy.',
     },
     {
-      q: 'Is it anonymous and safe for a woman from France?',
-      a: 'The level of privacy is discussed individually at the casting. The standard practice is a geo-block: the page is closed to France and neighbouring countries so acquaintances won’t see it, while we bring the paying audience from the US, Canada and Australia. Content formats are agreed in advance and fixed in the plan — nothing is published "by default".',
+      q: 'Do I have to live in Paris?',
+      a: 'Not at all. A page grows just as well from Lyon, Toulouse or a village in Normandy: what matters is content and consistency, not your address. All work with the team happens online.',
+    },
+    {
+      q: 'I am not from France — can I still start?',
+      a: 'Yes. The work is fully remote, so it does not matter where you live right now: you can start from any country or city.',
     },
   ],
 };
 
 const ES: ModelGeoContent = {
   countryName: 'Francia',
-  title: 'Trabajo de modelo de OnlyFans en Francia — remoto, ingresos $500–8000/mes',
+  title: 'Modelo OnlyFans en Francia — remoto, desde $3 000/mes',
   description:
-    'Trabajo de modelo de OnlyFans en Francia: remoto desde París, Marsella, Lyon, Toulouse, Niza. Grabación 2–3 h/día, el registro, la promoción, el chat y las finanzas los lleva la agencia. Ingresos $500–8000/mes (≈ €460–7360). Sin experiencia.',
+    'Gana $3 000–10 000/mes como modelo de OnlyFans en Francia, a tu ritmo: tú creas el contenido y el equipo gestiona promoción, chat y finanzas. 18+, sin experiencia.',
   introHtml:
-    'La agencia OFM Models incorpora modelos de OnlyFans en toda Francia para trabajo remoto desde casa. Es una sola vacante para todo el país: vivas en París, Marsella, Lyon, Toulouse o Niza, las condiciones, el equipo y el porcentaje son iguales para todas. El formato es simple: grabas contenido según un plan acordado 2–3 horas al día, y todo lo demás — el registro y la verificación de la página, la promoción, la mensajería con los suscriptores y las finanzas — lo asume el equipo de la agencia. No hacen falta experiencia, portafolio ni equipo profesional: puedes empezar con el smartphone, y el conocido estatus francés de autónomo-microempresario hace del trabajo remoto desde casa un formato fácil de entender. Qué hace la agencia en cada etapa — lo analizamos en el artículo [qué hace una agencia de OnlyFans](/blog/chto-delaet-onlyfans-agentstvo).',
-  cities: ['París', 'Marsella', 'Lyon', 'Toulouse', 'Niza'],
-  marketContext:
-    'Francia es uno de los mercados de OnlyFans más maduros de Europa: la audiencia francesa tiene capacidad de pago y está acostumbrada a pagar por contenido de autor, mientras que el propio idioma francés es un nicho aparte donde la competencia por un suscriptor es menor que en el recalentado segmento en inglés. Aun así, el grueso de los ingresos de las páginas de las modelos francesas sigue llegando de la audiencia con capacidad de pago de EE. UU., Canadá y Australia, donde la estética «chic» europea y un estilo natural mantienen una demanda estable. El huso horario de Europa Central es cómodo: el pico de actividad de los suscriptores en Europa cae en tu tarde-noche, mientras el equipo de la agencia cubre las horas nocturnas de EE. UU.',
-  paymentsNote:
-    'Los pagos en Francia van por los sistemas de pago internacionales de OnlyFans — Paxum y Skrill; el retiro en euros va a una tarjeta francesa o cuenta SEPA, con un calendario fijo, cada dos semanas. Toda la contabilidad, las comisiones de las pasarelas y los retiros los lleva la agencia: no necesitas lidiar con la configuración de las carteras ni con los tipos de cambio — ves tu porcentaje y tu calendario en euros, el resto lo cubre el equipo.',
-  earningsNarrative:
-    'Referencias honestas para Francia: el primer mes una página nueva suele llegar a $500–1000 de saldo bruto (≈ €460–920) — es el arranque, la audiencia apenas se forma. Después el crecimiento depende de la regularidad del contenido: las páginas de las top-modelos de la agencia llegan a saldos de $15 000–$50 000 brutos al mes (≈ €13 800–€46 000), pero es el resultado de meses de trabajo sistemático del equipo, no un punto de partida ni una garantía. La modelo recibe el 20–30% del saldo bruto de la página — el porcentaje depende del plan, el perfil y la implicación; la agencia financia por completo la promo, el tráfico y el equipo de chat, y parte de los ingresos se reinvierte en el crecimiento de la página, por eso el saldo y tu porcentaje crecen juntos. El ingreso depende del plan, el perfil y la implicación y no es una garantía. De qué se componen las cifras — en el artículo [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli), y puedes estimar tu potencial en la [calculadora de ingresos](/calculator).',
+    '¡Bonjour! Somos OFM Models, una agencia de ciclo completo: en más de 3 años hemos lanzado y hecho crecer 220+ páginas de modelos. En Francia buscamos chicas mayores de 18 — de París, Lyon, Burdeos o un pueblito de Provenza, con o sin experiencia. La vida aquí encaja con el trabajo: café por la mañana, luz de día para grabar y las tardes para ti, porque las horas punta de la audiencia al otro lado del océano las cubre el equipo. Los pagos son regulares y llegan en euros — tu moneda de siempre, sin conversiones.',
+  offers: [
+    'Tu terreno es la cámara y tu imagen: la página, la promoción, los diálogos con suscriptores y todo lo financiero corre de nuestra cuenta.',
+    'La mayoría de las chicas de nuestro equipo alcanza ingresos de $3 000 a $10 000 al mes.',
+    'El presupuesto de promoción lo pone la agencia — tú no inviertes ni un euro.',
+    'La estética francesa es tu activo: te ayudamos a definir estilo, luz y presentación para que el lifestyle ante la cámara sea el sello de tu página.',
+    'Confidencialidad: cuidamos tu información personal y configuramos la privacidad como a ti te resulte cómodo.',
+    'El ritmo se adapta a ti: grabas en las horas que elijas y el prime time vespertino de EE. UU. queda en manos del equipo.',
+  ],
+  expectations: [
+    'Tienes 18 años o más.',
+    'Un enfoque serio del contenido: fotos y vídeos de calidad y ganas de crecer.',
+    'Un smartphone e internet estable son todo el equipo necesario — puedes grabar desde cualquier sitio.',
+    'Organización y constancia con el plan de contenido — normalmente 2–3 horas de grabación al día.',
+    'Comunicación fluida: estamos en contacto a diario y valoramos que sea mutuo.',
+  ],
+  closingHtml:
+    '¿Suena interesante? Da el primer paso: una solicitud breve, un par de mensajes — y sabrás si este formato es para ti. Sin ningún compromiso en esta etapa.',
+  specs: [
+    { label: 'Horario', value: 'Flexible, 2–3 horas al día' },
+    { label: 'Experiencia', value: 'No hace falta — te formamos desde cero' },
+    { label: 'Ubicación', value: 'Remoto · toda Francia' },
+    { label: 'Pagos', value: 'Regulares, con calendario fijo' },
+    { label: 'Inicio', value: 'En los primeros días tras el casting online' },
+  ],
   faq: [
     {
-      q: '¿Desde qué ciudades de Francia se puede trabajar como modelo de OnlyFans?',
-      a: 'Desde cualquiera: el trabajo es totalmente remoto. Lo más habitual es que nuestras modelos sean de París, Marsella, Lyon, Toulouse y Niza, pero la ciudad no influye ni en las condiciones ni en el porcentaje — puedes grabar desde casa en cualquier localidad de Francia, solo necesitas un smartphone e internet estable.',
+      q: '¿Es anónimo y privado?',
+      a: 'La privacidad se ajusta a ti y la audiencia de la página se orienta a otros países, sobre todo angloparlantes — tus conocidos en Francia apenas la verán. A quién contárselo siempre es decisión tuya.',
     },
     {
-      q: '¿Cuánto gana una modelo de OnlyFans en Francia?',
-      a: 'La referencia visible de ingresos de una modelo es $500–8000 al mes (≈ €460–7360) según el plan, el perfil y la implicación; el primer mes una página nueva suele llegar a $500–1000. La modelo recibe el 20–30% del saldo bruto de la página, y la agencia reinvierte parte de los ingresos en promo y tráfico. Los saldos de las páginas top de la agencia llegan a $15 000–$50 000 al mes, pero es el resultado de meses de trabajo del equipo, no una garantía.',
+      q: '¿Necesito experiencia para empezar?',
+      a: 'No. Trabajamos con principiantes y con modelos con experiencia: el equipo te da un plan de contenido, te sugiere ángulos que funcionan y te acompaña en cada paso.',
     },
     {
-      q: '¿Hace falta experiencia o idiomas para empezar a trabajar como modelo de OnlyFans en Francia?',
-      a: 'No. Puedes empezar desde cero: en el onboarding recibes un plan de contenido y se te muestran ángulos y formatos que funcionan, mientras que un equipo de chat de la agencia que habla inglés se encarga de la mensajería con los suscriptores — no necesitas saber inglés tú misma. Hace falta ser mayor de 18, tener un smartphone con una cámara decente y estar dispuesta a grabar con regularidad.',
+      q: '¿Cuánto tiempo ocupa? ¿Puedo compaginarlo con estudios u otro trabajo?',
+      a: 'De media, 2–3 horas de grabación al día, y tú eliges cuáles — la mañana antes de clase o la tarde después del trabajo. Todo lo demás sucede sin ti, así que compaginar resulta fácil.',
     },
     {
-      q: '¿Es anónimo y seguro para una chica de Francia?',
-      a: 'El nivel de privacidad lo hablamos de forma individual en el casting. La práctica estándar es el geobloqueo: la página se cierra a Francia y a los países vecinos para que los conocidos no la vean, mientras la audiencia con capacidad de pago la traemos de EE. UU., Canadá y Australia. Los formatos de contenido se acuerdan de antemano y se fijan en el plan — nada se publica «por defecto».',
+      q: '¿Tengo que vivir en París?',
+      a: 'Para nada. Una página crece igual desde Lyon, Toulouse o un pueblo de Normandía: lo que importa es el contenido y la constancia, no tu dirección. Todo el trabajo con el equipo es online.',
+    },
+    {
+      q: 'No soy de Francia — ¿puedo empezar igualmente?',
+      a: 'Sí. El trabajo es totalmente remoto, así que no importa dónde vivas ahora: puedes empezar desde cualquier país o ciudad.',
     },
   ],
 };

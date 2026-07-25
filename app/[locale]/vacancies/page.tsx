@@ -6,6 +6,7 @@ import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { TelegramCta } from '@/components/TelegramCta';
 import { FaqAccordion } from '@/components/seo/FaqAccordion';
 import { FaqPageJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
+import { ItemListJsonLd } from '@/components/seo/ItemListJsonLd';
 import { routing, type Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
 import {
@@ -43,10 +44,12 @@ export default async function VacanciesHubPage({ params }: Props) {
   const hub = getVacancyHubContent(loc);
   const ui = getVacancyUi(loc);
 
-  // Хаб показывает 2 роли: чатер (/vacancies/chatter-onlyfans, из реестра) и
-  // модель (/vacancies/model — гео-хаб, из hub.modelCard).
+  // Хаб показывает 3 направления: чатер и for-girls (/vacancies/[slug], из
+  // реестра) + модель (/vacancies/model — гео-хаб, из hub.modelCard).
   const chatter = getVacancyContent('chatter-onlyfans', loc);
   const chatterDates = getVacancyDates('chatter-onlyfans');
+  const forGirls = getVacancyContent('for-girls', loc);
+  const forGirlsDates = getVacancyDates('for-girls');
 
   const cards = [
     {
@@ -69,6 +72,16 @@ export default async function VacanciesHubPage({ params }: Props) {
       location: hub.modelCard.locationLabel,
       posted: null,
     },
+    {
+      key: 'for-girls',
+      href: '/vacancies/for-girls',
+      role: forGirls.role,
+      summary: forGirls.cardSummary,
+      salary: forGirls.salaryLabel,
+      format: forGirls.formatLabel,
+      location: forGirls.locationLabel,
+      posted: forGirlsDates.datePosted,
+    },
   ];
 
   const trustLine = hub.trustLine
@@ -81,6 +94,11 @@ export default async function VacanciesHubPage({ params }: Props) {
   return (
     <SeoPageShell showCta={false} breadcrumbs={[{ label: ui.breadcrumbHub }]}>
       <FaqPageJsonLd items={hub.faq} />
+      <ItemListJsonLd
+        locale={loc}
+        listName={hub.h1}
+        items={cards.map((card) => ({ name: card.role, path: card.href }))}
+      />
       <BreadcrumbJsonLd
         locale={loc}
         items={[

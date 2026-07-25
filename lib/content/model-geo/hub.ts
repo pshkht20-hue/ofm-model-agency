@@ -9,9 +9,9 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
   ru: {
     h1: 'Работа моделью OnlyFans — удалённо, по всему миру',
     seoTitle:
-      'Работа моделью OnlyFans — удалённо по всему миру, страницу ведёт агентство | OFM Model Agency',
+      'Работа моделью OnlyFans удалённо — страницу ведёт агентство',
     seoDescription:
-      'Онлифанс работа моделью удалённо: агентство ведёт страницу полностью — регистрация, промо, чат и финансы, с тебя контент 2–3 ч/день. Доход $500–8000/мес. Выбери свою страну.',
+      'Онлифанс работа моделью удалённо: агентство ведёт страницу полностью — регистрация, промо, чат и финансы, с тебя контент 2–3 ч/день. Доход $3 000–10 000/мес. Выбери свою страну.',
     keywords: [
       'работа моделью onlyfans',
       'онлифанс работа',
@@ -25,23 +25,31 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     earningsHeading: 'Сколько зарабатывает модель',
     earningsBody: [
-      'Видимый ориентир дохода модели — $500–8000 в месяц в зависимости от плана, типажа и вовлечённости. В первый месяц новая страница обычно выходит на $500–1 000 gross-баланса — это разгон, аудитория только набирается.',
-      'Модель получает 20–30% от gross-баланса страницы: агентство полностью финансирует промо, трафик и чат-команду, а часть дохода реинвестируется в рост страницы — поэтому баланс и твой процент растут вместе. Балансы топ-страниц агентства доходят до $15 000–$50 000 gross в месяц, но это результат месяцев системной работы команды, а не стартовая точка и не гарантия. Доход зависит от плана, типажа и вовлечённости и не является гарантией.',
+      'Топ-модели агентства выходят на $10 000+ уже в первые месяцы, а балансы топ-страниц достигают $15 000–50 000/мес.',
+      'Личную вилку и план первого месяца покажем в Telegram — напиши, это ни к чему не обязывает.',
     ],
     listHeading: 'Выбери свою страну',
     faqHeading: 'Частые вопросы о работе моделью',
     faq: [
+      {
+        q: 'Сколько зарабатывает модель OnlyFans с агентством?',
+        a: 'Рабочий ориентир — $3 000–10 000 в месяц, топ-позиции агентства выходят на $15 000–20 000. Личную вилку под твой типаж и план первого месяца покажем в Telegram — напиши, и посчитаем вместе.',
+      },
+      {
+        q: 'Когда придут первые деньги?',
+        a: 'Страницу запускаем в первые дни после онлайн-кастинга, так что ждать месяцами не придётся. Выплаты регулярные, по фиксированному графику. Точные даты под твой план обсудим в переписке.',
+      },
       {
         q: 'Из какой страны можно работать моделью OnlyFans?',
         a: 'Работа полностью удалённая, поэтому подходит большинство стран мира. Ниже — страны, под которые у нас уже собраны отдельные страницы с условиями и выплатами; если твоей страны в списке пока нет, заполни анкету — команда подскажет по твоему рынку.',
       },
       {
         q: 'Сколько получает модель?',
-        a: 'Видимый ориентир — $500–8000 в месяц в зависимости от плана, типажа и вовлечённости. Модель получает 20–30% от gross-баланса страницы, агентство реинвестирует часть дохода в промо и трафик. Балансы топ-страниц доходят до $15 000–$50 000 в месяц, но это результат месяцев работы команды, а не гарантия.',
+        a: 'Ориентир — $3 000–10 000/мес. Топ-модели агентства выходят на $10 000+, а балансы топ-страниц достигают $15 000–50 000/мес. Личную вилку и план первого месяца покажем в Telegram — напиши, это ни к чему не обязывает.',
       },
       {
         q: 'Что делает агентство, а что — модель?',
-        a: 'С тебя — контент 2–3 часа в день по согласованному плану. Регистрацию и верификацию страницы, продвижение, переписку с подписчиками и финансы (Paxum, Skrill, выплаты по графику) полностью ведёт команда агентства.',
+        a: 'С тебя — контент 2–3 часа в день по согласованному плану. Регистрацию и верификацию страницы, продвижение, переписку с подписчиками и финансы с выплатами по графику полностью ведёт команда агентства.',
       },
       {
         q: 'Нужен ли опыт?',
@@ -57,9 +65,9 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
   uk: {
     h1: 'Робота моделлю OnlyFans — віддалено, по всьому світу',
     seoTitle:
-      'Робота моделлю OnlyFans — віддалено по всьому світу, сторінку веде агенція | OFM Model Agency',
+      'Робота моделлю OnlyFans віддалено — сторінку веде агенція',
     seoDescription:
-      'Робота для дівчат моделлю OnlyFans віддалено: агенція веде сторінку повністю — реєстрація, промо, чат і фінанси, з тебе контент 2–3 год/день. Дохід $500–8000/міс. Обери свою країну.',
+      'Робота для дівчат моделлю OnlyFans віддалено: агенція веде сторінку повністю — реєстрація, промо, чат і фінанси, з тебе контент 2–3 год/день. Дохід $3 000–10 000/міс. Обери свою країну.',
     keywords: [
       'робота моделлю onlyfans',
       'онліфанс робота',
@@ -73,23 +81,31 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     earningsHeading: 'Скільки заробляє модель',
     earningsBody: [
-      'Видимий орієнтир доходу моделі — $500–8000 на місяць залежно від плану, типажу та залученості. У перший місяць нова сторінка зазвичай виходить на $500–1 000 gross-балансу — це розгін, аудиторія тільки набирається.',
-      'Модель отримує 20–30% від gross-балансу сторінки: агенція повністю фінансує промо, трафік і чат-команду, а частина доходу реінвестується в зростання сторінки — тому баланс і твій відсоток ростуть разом. Баланси топ-сторінок агенції сягають $15 000–$50 000 gross на місяць, але це результат місяців системної роботи команди, а не стартова точка й не гарантія. Дохід залежить від плану, типажу та залученості й не є гарантією.',
+      'Топ-моделі агенції виходять на $10 000+ уже в перші місяці, а баланси топ-сторінок сягають $15 000–50 000/міс.',
+      'Особисту вилку та план першого місяця покажемо в Telegram — напиши, це ні до чого не зобов’язує.',
     ],
     listHeading: 'Обери свою країну',
     faqHeading: 'Часті питання про роботу моделлю',
     faq: [
+      {
+        q: 'Скільки заробляє модель OnlyFans з агенцією?',
+        a: 'Робочий орієнтир — $3 000–10 000 на місяць, топ-позиції агенції виходять на $15 000–20 000. Особисту вилку під твій типаж і план першого місяця покажемо в Telegram — напиши, і порахуємо разом.',
+      },
+      {
+        q: 'Коли прийдуть перші гроші?',
+        a: 'Сторінку запускаємо в перші дні після онлайн-кастингу, тож чекати місяцями не доведеться. Виплати регулярні, за фіксованим графіком. Точні дати під твій план обговоримо в листуванні.',
+      },
       {
         q: 'З якої країни можна працювати моделлю OnlyFans?',
         a: 'Робота повністю віддалена, тому підходить більшість країн світу. Нижче — країни, під які у нас уже зібрані окремі сторінки з умовами й виплатами; якщо твоєї країни у списку поки немає, заповни анкету — команда підкаже по твоєму ринку.',
       },
       {
         q: 'Скільки отримує модель?',
-        a: 'Видимий орієнтир — $500–8000 на місяць залежно від плану, типажу та залученості. Модель отримує 20–30% від gross-балансу сторінки, агенція реінвестує частину доходу в промо та трафік. Баланси топ-сторінок сягають $15 000–$50 000 на місяць, але це результат місяців роботи команди, а не гарантія.',
+        a: 'Орієнтир — $3 000–10 000/міс. Топ-моделі агенції виходять на $10 000+, а баланси топ-сторінок сягають $15 000–50 000/міс. Особисту вилку та план першого місяця покажемо в Telegram — напиши, це ні до чого не зобов’язує.',
       },
       {
         q: 'Що робить агенція, а що — модель?',
-        a: 'З тебе — контент 2–3 години на день за узгодженим планом. Реєстрацію та верифікацію сторінки, просування, листування з підписниками й фінанси (Paxum, Skrill, виплати за графіком) повністю веде команда агенції.',
+        a: 'З тебе — контент 2–3 години на день за узгодженим планом. Реєстрацію та верифікацію сторінки, просування, листування з підписниками й фінанси з виплатами за графіком повністю веде команда агенції.',
       },
       {
         q: 'Чи потрібен досвід?',
@@ -105,9 +121,9 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
   en: {
     h1: 'OnlyFans model job — remote, worldwide',
     seoTitle:
-      'OnlyFans model job — remote worldwide, the page run by the agency | OFM Model Agency',
+      'OnlyFans model job — remote, the agency runs your page',
     seoDescription:
-      'Remote OnlyFans model work: the agency runs the page end to end — registration, promo, chat and finances, 2–3 hours of content a day from you. Income $500–8000/mo. Choose your country.',
+      'Remote OnlyFans model work: the agency runs the page end to end — registration, promo, chat and finances, 2–3 hours of content a day from you. Income $3 000–10 000/mo. Choose your country.',
     keywords: [
       'onlyfans model job',
       'work as onlyfans model',
@@ -121,23 +137,31 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     earningsHeading: 'How much a model earns',
     earningsBody: [
-      'The visible income benchmark for a model is $500–8000 a month depending on the plan, persona and engagement. In the first month a new page usually reaches $500–1,000 of gross balance — that’s the ramp-up, the audience is only just building.',
-      'A model receives 20–30% of the page’s gross balance: the agency fully funds promo, traffic and the chat team, and part of the income is reinvested into the page’s growth — so the balance and your percentage grow together. The agency’s top-page balances reach $15,000–$50,000 gross a month, but that’s the result of months of systematic teamwork, not a starting point and not a guarantee. Income depends on the plan, persona and engagement and is not a guarantee.',
+      'Top models at the agency reach $10 000+ within their first months, and top-page balances run at $15 000–50 000/mo.',
+      'We’ll show you your personal range and first-month plan on Telegram — message us, it doesn’t commit you to anything.',
     ],
     listHeading: 'Choose your country',
     faqHeading: 'Common questions about model work',
     faq: [
+      {
+        q: 'How much does an OnlyFans model earn with an agency?',
+        a: 'The working benchmark is $3 000–10 000 a month, with top positions at the agency reaching $15 000–20 000. We’ll show you your personal range and first-month plan on Telegram — message us and we’ll map it out together.',
+      },
+      {
+        q: 'When does the first money come in?',
+        a: 'Your page goes live within the first days after the online casting, so there’s no waiting around for months. Payouts are regular and follow a fixed schedule. We’ll walk you through the exact dates for your plan in the chat.',
+      },
       {
         q: 'Which country can you work as an OnlyFans model from?',
         a: 'The work is fully remote, so most countries in the world are suitable. Below are the countries we already have dedicated pages for, with terms and payouts; if your country isn’t in the list yet, fill in the application — the team will advise for your market.',
       },
       {
         q: 'How much does a model receive?',
-        a: 'The visible benchmark is $500–8000 a month depending on the plan, persona and engagement. A model receives 20–30% of the page’s gross balance, and the agency reinvests part of the income into promo and traffic. Top-page balances reach $15,000–$50,000 a month, but that’s the result of months of teamwork, not a guarantee.',
+        a: 'The benchmark is $3 000–10 000/mo. Top models at the agency reach $10 000+, and top-page balances run at $15 000–50 000/mo. We’ll show you your personal range and first-month plan on Telegram — message us, it doesn’t commit you to anything.',
       },
       {
         q: 'What does the agency do, and what does the model do?',
-        a: 'From you — content 2–3 hours a day on an agreed plan. Registering and verifying the page, promotion, subscriber messaging and finances (Paxum, Skrill, payouts on schedule) are fully run by the agency team.',
+        a: 'From you — content 2–3 hours a day on an agreed plan. Registering and verifying the page, promotion, subscriber messaging and finances with payouts on a fixed schedule are fully run by the agency team.',
       },
       {
         q: 'Do you need experience?',
@@ -153,9 +177,9 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
   es: {
     h1: 'Trabajo de modelo de OnlyFans — remoto, en todo el mundo',
     seoTitle:
-      'Trabajo de modelo de OnlyFans — remoto en todo el mundo, la página la lleva la agencia | OFM Model Agency',
+      'Trabajo de modelo de OnlyFans — la agencia lleva tu página',
     seoDescription:
-      'Trabajo remoto de modelo de OnlyFans: la agencia lleva la página de principio a fin — registro, promo, chat y finanzas, tú aportas 2–3 horas de contenido al día. Ingresos $500–8000/mes. Elige tu país.',
+      'Trabajo remoto de modelo de OnlyFans: la agencia lleva la página de principio a fin — registro, promo, chat y finanzas, tú aportas 2–3 horas de contenido al día. Ingresos $3 000–10 000/mes. Elige tu país.',
     keywords: [
       'trabajo modelo onlyfans',
       'trabajar como modelo onlyfans',
@@ -169,23 +193,31 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     earningsHeading: 'Cuánto gana una modelo',
     earningsBody: [
-      'La referencia visible de ingresos de una modelo es $500–8000 al mes según el plan, el perfil y la implicación. El primer mes una página nueva suele llegar a $500–1000 de saldo bruto — es el arranque, la audiencia apenas se forma.',
-      'La modelo recibe el 20–30% del saldo bruto de la página: la agencia financia por completo la promo, el tráfico y el equipo de chat, y parte de los ingresos se reinvierte en el crecimiento de la página — por eso el saldo y tu porcentaje crecen juntos. Los saldos de las páginas top de la agencia llegan a $15 000–$50 000 brutos al mes, pero es el resultado de meses de trabajo sistemático del equipo, no un punto de partida ni una garantía. El ingreso depende del plan, el perfil y la implicación y no es una garantía.',
+      'Las modelos top de la agencia llegan a $10 000+ ya en sus primeros meses, y los saldos de las páginas top alcanzan $15 000–50 000/mes.',
+      'Tu rango personal y el plan del primer mes te los mostramos por Telegram — escríbenos, sin ningún compromiso.',
     ],
     listHeading: 'Elige tu país',
     faqHeading: 'Preguntas frecuentes sobre el trabajo de modelo',
     faq: [
+      {
+        q: '¿Cuánto gana una modelo de OnlyFans con la agencia?',
+        a: 'La referencia de trabajo es $3 000–10 000 al mes, y las posiciones top de la agencia llegan a $15 000–20 000. Tu rango personal y el plan del primer mes te los mostramos por Telegram — escríbenos y lo calculamos juntas.',
+      },
+      {
+        q: '¿Cuándo llega el primer dinero?',
+        a: 'La página se lanza en los primeros días después del casting online, así que no hay que esperar meses. Los pagos son regulares y siguen un calendario fijo. Las fechas exactas para tu plan las vemos en el chat.',
+      },
       {
         q: '¿Desde qué país se puede trabajar como modelo de OnlyFans?',
         a: 'El trabajo es totalmente remoto, así que la mayoría de los países del mundo son adecuados. Abajo están los países para los que ya tenemos páginas dedicadas, con condiciones y pagos; si tu país aún no está en la lista, rellena la solicitud — el equipo te orientará para tu mercado.',
       },
       {
         q: '¿Cuánto recibe una modelo?',
-        a: 'La referencia visible es $500–8000 al mes según el plan, el perfil y la implicación. La modelo recibe el 20–30% del saldo bruto de la página, y la agencia reinvierte parte de los ingresos en promo y tráfico. Los saldos de las páginas top llegan a $15 000–$50 000 al mes, pero es el resultado de meses de trabajo del equipo, no una garantía.',
+        a: 'La referencia es $3 000–10 000/mes. Las modelos top de la agencia llegan a $10 000+, y los saldos de las páginas top alcanzan $15 000–50 000/mes. Tu rango personal y el plan del primer mes te los mostramos por Telegram — escríbenos, sin ningún compromiso.',
       },
       {
         q: '¿Qué hace la agencia y qué hace la modelo?',
-        a: 'De tu parte — contenido 2–3 horas al día según un plan acordado. El registro y la verificación de la página, la promoción, la mensajería con los suscriptores y las finanzas (Paxum, Skrill, pagos según calendario) los lleva por completo el equipo de la agencia.',
+        a: 'De tu parte — contenido 2–3 horas al día según un plan acordado. El registro y la verificación de la página, la promoción, la mensajería con los suscriptores y las finanzas con pagos según calendario los lleva por completo el equipo de la agencia.',
       },
       {
         q: '¿Hace falta experiencia?',
@@ -208,14 +240,11 @@ export const MODEL_GEO_UI: Record<Locale, ModelGeoUi> = {
     eyebrow: 'Вакансии агентства · 2026',
     incomeLabel: 'Доход',
     perMonth: '/мес',
-    reinvestNote: '20–30% от gross-баланса · реинвест в рост страницы',
-    chips: ['Без опыта', 'Удалённо', 'Гибкий график', 'Выплаты Paxum / Skrill', 'Девушкам 18–35'],
-    incomeDisclaimer:
-      'Доход зависит от плана, типажа и вовлечённости и не является гарантией.',
-    citiesHeading: 'Города',
-    marketHeading: 'Спрос и рынок',
-    paymentsHeading: 'Выплаты',
-    topBalancesHeading: 'Балансы топ-страниц',
+    reinvestNote: 'Промо, трафик и чат-команду финансирует агентство',
+    chips: ['Без опыта', 'Удалённо', 'Гибкий график', 'Поддержка 24/7'],
+    incomeDisclaimer: 'Точные условия — на кастинге.',
+    offersHeading: 'Что мы предлагаем',
+    expectationsHeading: 'Что мы ждём от тебя',
     faqHeading: 'Частые вопросы',
     formatLabel: 'Формат',
     formatValue: 'Удалённо · контент 2–3 ч/день',
@@ -240,14 +269,11 @@ export const MODEL_GEO_UI: Record<Locale, ModelGeoUi> = {
     eyebrow: 'Вакансії агенції · 2026',
     incomeLabel: 'Дохід',
     perMonth: '/міс',
-    reinvestNote: '20–30% від gross-балансу · реінвест у зростання сторінки',
-    chips: ['Без досвіду', 'Віддалено', 'Гнучкий графік', 'Виплати Paxum / Skrill', 'Дівчатам 18–35'],
-    incomeDisclaimer:
-      'Дохід залежить від плану, типажу та залученості й не є гарантією.',
-    citiesHeading: 'Міста',
-    marketHeading: 'Попит і ринок',
-    paymentsHeading: 'Виплати',
-    topBalancesHeading: 'Баланси топ-сторінок',
+    reinvestNote: 'Промо, трафік і чат-команду фінансує агенція',
+    chips: ['Без досвіду', 'Віддалено', 'Гнучкий графік', 'Підтримка 24/7'],
+    incomeDisclaimer: 'Точні умови — на кастингу.',
+    offersHeading: 'Що ми пропонуємо',
+    expectationsHeading: 'Чого ми чекаємо від тебе',
     faqHeading: 'Часті питання',
     formatLabel: 'Формат',
     formatValue: 'Віддалено · контент 2–3 год/день',
@@ -272,14 +298,11 @@ export const MODEL_GEO_UI: Record<Locale, ModelGeoUi> = {
     eyebrow: 'Agency openings · 2026',
     incomeLabel: 'Income',
     perMonth: '/mo',
-    reinvestNote: '20–30% of the gross balance · reinvested into the page’s growth',
-    chips: ['No experience', 'Remote', 'Flexible schedule', 'Paxum / Skrill payouts', 'Women 18–35'],
-    incomeDisclaimer:
-      'Income depends on the plan, persona and engagement and is not a guarantee.',
-    citiesHeading: 'Cities',
-    marketHeading: 'Demand and market',
-    paymentsHeading: 'Payouts',
-    topBalancesHeading: 'Top-page balances',
+    reinvestNote: 'Promo, traffic and the chat team are funded by the agency',
+    chips: ['No experience', 'Remote', 'Flexible schedule', '24/7 support'],
+    incomeDisclaimer: 'Exact terms are discussed at the casting.',
+    offersHeading: 'What we offer',
+    expectationsHeading: 'What we expect from you',
     faqHeading: 'Common questions',
     formatLabel: 'Format',
     formatValue: 'Remote · content 2–3 h/day',
@@ -304,14 +327,11 @@ export const MODEL_GEO_UI: Record<Locale, ModelGeoUi> = {
     eyebrow: 'Vacantes de la agencia · 2026',
     incomeLabel: 'Ingresos',
     perMonth: '/mes',
-    reinvestNote: '20–30% del saldo bruto · reinvertido en el crecimiento de la página',
-    chips: ['Sin experiencia', 'En remoto', 'Horario flexible', 'Pagos Paxum / Skrill', 'Chicas 18–35'],
-    incomeDisclaimer:
-      'El ingreso depende del plan, el perfil y la implicación y no es una garantía.',
-    citiesHeading: 'Ciudades',
-    marketHeading: 'Demanda y mercado',
-    paymentsHeading: 'Pagos',
-    topBalancesHeading: 'Saldos de las páginas top',
+    reinvestNote: 'La agencia financia la promo, el tráfico y el equipo de chat',
+    chips: ['Sin experiencia', 'En remoto', 'Horario flexible', 'Soporte 24/7'],
+    incomeDisclaimer: 'Las condiciones exactas se comentan en el casting.',
+    offersHeading: 'Qué ofrecemos',
+    expectationsHeading: 'Qué esperamos de ti',
     faqHeading: 'Preguntas frecuentes',
     formatLabel: 'Formato',
     formatValue: 'Remoto · contenido 2–3 h/día',
