@@ -18,7 +18,7 @@ export const VACANCY_UI_UK: VacancyUi = {
   postedLabel: 'Опубліковано',
   updatedLabel: 'Оновлено',
   validThroughLabel: 'Прийом відгуків до',
-  activeUntilLabel: 'Активна до',
+  activeUntilLabel: 'Набір відкрито',
   directEmployer: 'Прямий роботодавець · агенція OFM',
   geoClusterHeading: 'Робота моделлю за країнами',
   salaryLabel: 'Оплата',

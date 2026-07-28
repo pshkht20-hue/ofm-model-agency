@@ -118,10 +118,12 @@ export type ModelGeoCountryFile = {
   content: Record<Locale, ModelGeoContent>;
 };
 
-/** Даты страны из dates.json; validThrough = datePosted + 30 дней (index.ts). */
+/**
+ * Даты страны из dates.json. validThrough НЕТ сознательно: набор бессрочный,
+ * Google предписывает для таких вакансий свойство не указывать (28.07.2026).
+ */
 export type ModelGeoDates = {
   datePosted: string;
-  validThrough: string;
   dateModified: string;
 };
 

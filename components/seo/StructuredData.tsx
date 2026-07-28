@@ -213,9 +213,6 @@ export function JobPostingJsonLd({
   const siteUrl = getSiteUrl();
   const canonicalPath = pathForLocale(`/blog/${post.slug}`, locale);
   const datePosted = post.updatedAt ?? post.publishedAt;
-  const validThroughDate = new Date(datePosted);
-  validThroughDate.setFullYear(validThroughDate.getFullYear() + 1);
-  const validThrough = validThroughDate.toISOString().slice(0, 10);
 
   const data = {
     '@context': 'https://schema.org',
@@ -229,7 +226,8 @@ export function JobPostingJsonLd({
       value: `vac-${post.slug}`,
     },
     datePosted,
-    validThrough,
+    // validThrough не указываем: набор бессрочный (правило Google для
+    // non-expiring jobs, решение 28.07.2026).
     employmentType: 'CONTRACTOR',
     inLanguage: HTML_LANG[locale],
     // Ссылка на богатую глобальную Organization (@id #organization из JsonLd в

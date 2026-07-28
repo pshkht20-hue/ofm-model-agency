@@ -66,10 +66,13 @@ export type VacancyRecord = {
   applyKind: VacancyApplyKind;
 };
 
-/** Даты вакансии из dates.json. ISO YYYY-MM-DD; validThrough = datePosted + 30 дней. */
+/**
+ * Даты вакансии из dates.json. ISO YYYY-MM-DD. validThrough НЕТ сознательно:
+ * набор бессрочный, Google предписывает для таких вакансий свойство не
+ * указывать; это же снимает запрет на обновление datePosted без изменений.
+ */
 export type VacancyDates = {
   datePosted: string;
-  validThrough: string;
   /** Для видимой даты «Обновлено» и sitemap lastModified. */
   dateModified: string;
 };

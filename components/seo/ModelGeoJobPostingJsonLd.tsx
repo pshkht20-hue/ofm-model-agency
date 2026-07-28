@@ -62,7 +62,9 @@ export function ModelGeoJobPostingJsonLd({
       value: `model-${record.slug}`,
     },
     datePosted: dates.datePosted,
-    validThrough: dates.validThrough,
+    // validThrough не указываем: набор бессрочный. Google — «If a job posting
+    // never expires, or you do not know when the job will expire, do not
+    // include this property». Это также снимает риск «fake reposting».
     employmentType: 'CONTRACTOR',
     inLanguage: HTML_LANG[locale],
     // Ссылка на богатую глобальную Organization (@id #organization из JsonLd в
@@ -75,12 +77,11 @@ export function ModelGeoJobPostingJsonLd({
     applicantLocationRequirements: record.applicantCountries
       ? record.applicantCountries.map((name) => ({ '@type': 'Country', name }))
       : { '@type': 'Country', name: slugToCountryName(record.slug) },
-    // «Опыт не нужен» — видимо в description/плашке: 0 месяцев опыта, опыт
-    // заменяет образование, порог образования — среднее (фактически без порога).
-    experienceRequirements: {
-      '@type': 'OccupationalExperienceRequirements',
-      monthsOfExperience: 0,
-    },
+    // «Опыт не нужен»: experienceRequirements СОЗНАТЕЛЬНО опущено — Google
+    // требует monthsOfExperience > 0 (валидатор давал WARNING «must be
+    // positive» на всех страницах), а отсутствие свойства и есть корректный
+    // способ сказать «опыт не требуется». Сигнал остаётся в
+    // experienceInPlaceOfEducation + видимом тексте страницы.
     experienceInPlaceOfEducation: true,
     educationRequirements: {
       '@type': 'EducationalOccupationalCredential',

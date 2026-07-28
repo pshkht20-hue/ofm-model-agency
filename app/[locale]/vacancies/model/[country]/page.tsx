@@ -120,8 +120,14 @@ export default async function ModelGeoCountryPage({ params }: Props) {
           {usdRange}
           <span className="text-sm font-normal text-white/65">{ui.perMonth}</span>
         </span>
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/25 bg-emerald-400/[0.07] px-3.5 py-1.5 text-xs font-medium text-emerald-300 tabular-nums">
-          {ui.activeUntilLabel} {fmtDate(dates.validThrough)}
+        {/* Статус набора вместо срока: вакансия бессрочная, validThrough в
+            разметке не указываем (правило Google для non-expiring jobs) */}
+        <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/[0.07] px-3.5 py-1.5 text-xs font-medium text-emerald-300">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+          </span>
+          {ui.activeUntilLabel}
         </span>
       </div>
 
@@ -188,8 +194,8 @@ export default async function ModelGeoCountryPage({ params }: Props) {
             <dd className="text-white/85 tabular-nums">{fmtDate(dates.datePosted)}</dd>
           </div>
           <div className="flex items-baseline gap-2 sm:justify-end">
-            <dt className="uppercase tracking-wider text-xs text-white/45">{ui.validThroughLabel}</dt>
-            <dd className="text-white/85 tabular-nums">{fmtDate(dates.validThrough)}</dd>
+            <dt className="uppercase tracking-wider text-xs text-white/45">{ui.updatedLabel}</dt>
+            <dd className="text-white/85 tabular-nums">{fmtDate(dates.dateModified)}</dd>
           </div>
         </dl>
       </div>

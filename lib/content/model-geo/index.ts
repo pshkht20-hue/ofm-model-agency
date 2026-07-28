@@ -141,14 +141,17 @@ const DATES = datesJson.countries as Record<
   { datePosted: string; dateModified: string }
 >;
 
-/** Даты страны: validThrough вычисляется как datePosted + 30 дней. */
+/**
+ * Даты страны. validThrough СОЗНАТЕЛЬНО не отдаётся: набор в агентство
+ * бессрочный, а Google предписывает для таких вакансий свойство не указывать
+ * («If a job posting never expires… do not include this property»). Это же
+ * снимает необходимость двигать datePosted — обновлять его без реального
+ * изменения вакансии запрещено политикой Google (Search Central, 13.07.2021).
+ */
 export function getModelGeoDates(slug: string): ModelGeoDates {
   const raw = DATES[slug];
-  const validThrough = new Date(raw.datePosted);
-  validThrough.setDate(validThrough.getDate() + 30);
   return {
     datePosted: raw.datePosted,
-    validThrough: validThrough.toISOString().slice(0, 10),
     dateModified: raw.dateModified,
   };
 }

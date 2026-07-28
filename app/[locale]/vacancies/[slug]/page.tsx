@@ -104,7 +104,9 @@ function VacancyJobPostingJsonLd({
       value: `vac-${record.slug}`,
     },
     datePosted: dates.datePosted,
-    validThrough: dates.validThrough,
+    // validThrough не указываем: набор бессрочный. Google — «If a job posting
+    // never expires… do not include this property» (28.07.2026). Это также
+    // снимает необходимость двигать datePosted, что политикой запрещено.
     employmentType: record.employmentType,
     inLanguage: HTML_LANG[locale],
     // Ссылка на богатую глобальную Organization (@id #organization из JsonLd в
@@ -115,11 +117,11 @@ function VacancyJobPostingJsonLd({
       '@type': 'Country',
       name,
     })),
-    // «Обучаем с нуля / старт без опыта» — видимо в интро и FAQ страницы чатера.
-    experienceRequirements: {
-      '@type': 'OccupationalExperienceRequirements',
-      monthsOfExperience: 0,
-    },
+    // «Обучаем с нуля / старт без опыта»: experienceRequirements СОЗНАТЕЛЬНО
+    // опущено — Google требует monthsOfExperience > 0 (валидатор давал WARNING
+    // «must be positive»), а отсутствие свойства и есть корректный способ
+    // сказать «опыт не требуется». Сигнал — в experienceInPlaceOfEducation
+    // и в видимом тексте страницы.
     experienceInPlaceOfEducation: true,
     educationRequirements: {
       '@type': 'EducationalOccupationalCredential',
@@ -208,8 +210,12 @@ export default async function VacancyPage({ params }: Props) {
         <span className="inline-flex items-center rounded-full border border-accent-cyan/35 bg-accent-cyan/[0.09] px-5 py-2 font-sans text-lg md:text-xl font-semibold tracking-tight text-white tabular-nums shadow-[0_0_22px_-10px_rgba(34,211,238,0.7)]">
           {content.salaryLabel}
         </span>
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/25 bg-emerald-400/[0.07] px-3.5 py-1.5 text-xs font-medium text-emerald-300 tabular-nums">
-          {ui.activeUntilLabel} {dates.validThrough}
+        <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/[0.07] px-3.5 py-1.5 text-xs font-medium text-emerald-300">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+          </span>
+          {ui.activeUntilLabel}
         </span>
       </div>
 
@@ -254,7 +260,7 @@ export default async function VacancyPage({ params }: Props) {
           <div>
             <dt className="text-xs uppercase tracking-wide text-white/45">{ui.postedLabel}</dt>
             <dd className="text-white/90 mt-0.5">
-              {dates.datePosted} · {ui.validThroughLabel} {dates.validThrough}
+              {dates.datePosted} · {ui.updatedLabel} {dates.dateModified}
             </dd>
           </div>
         </dl>

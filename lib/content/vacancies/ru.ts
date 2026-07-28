@@ -20,7 +20,7 @@ export const VACANCY_UI_RU: VacancyUi = {
   postedLabel: 'Опубликовано',
   updatedLabel: 'Обновлено',
   validThroughLabel: 'Приём откликов до',
-  activeUntilLabel: 'Активна до',
+  activeUntilLabel: 'Набор открыт',
   directEmployer: 'Прямой работодатель · агентство OFM',
   geoClusterHeading: 'Работа моделью по странам',
   salaryLabel: 'Оплата',

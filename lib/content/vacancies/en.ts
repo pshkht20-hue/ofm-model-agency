@@ -20,7 +20,7 @@ export const VACANCY_UI_EN: VacancyUi = {
   postedLabel: 'Posted',
   updatedLabel: 'Updated',
   validThroughLabel: 'Applications open until',
-  activeUntilLabel: 'Active until',
+  activeUntilLabel: 'Hiring now',
   directEmployer: 'Direct employer · OFM agency',
   geoClusterHeading: 'Model work by country',
   salaryLabel: 'Pay',

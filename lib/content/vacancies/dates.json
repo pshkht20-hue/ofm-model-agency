@@ -1,14 +1,12 @@
 {
-  "_readme": "Машинный файл дат вакансий (план: docs/VACANCIES-SECTION-PLAN-2026-07-08.md). Правится ТОЛЬКО scripts/rotate-vacancies.mjs (этап 3) — вручную не редактировать. Формат: ISO YYYY-MM-DD; validThrough всегда = datePosted + 30 дней; dateModified питает видимую дату «Обновлено» и sitemap lastModified. Посев дат разбросан по слагам (анти-«fake reposting»: даты никогда не двигаются пачкой).",
+  "_readme": "Машинный файл дат вакансий. Формат: ISO YYYY-MM-DD. validThrough НЕ хранится и НЕ выводится в JobPosting: набор в агентство бессрочный, а Google предписывает для таких вакансий свойство не указывать («If a job posting never expires… do not include this property»). datePosted = реальная дата публикации и меняется ТОЛЬКО при реальном изменении вакансии (новая вилка, новые условия, переписанный текст) — обновлять её без изменений запрещено политикой Google (Search Central, 13.07.2021: «don't update the DatePosted property if there was no change to the job post»). dateModified питает видимую дату «Обновлено» и sitemap lastModified.",
   "vacancies": {
     "chatter-onlyfans": {
       "datePosted": "2026-07-15",
-      "validThrough": "2026-08-14",
       "dateModified": "2026-07-15"
     },
     "for-girls": {
       "datePosted": "2026-07-25",
-      "validThrough": "2026-08-24",
       "dateModified": "2026-07-25"
     }
   }

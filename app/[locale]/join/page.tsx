@@ -65,7 +65,8 @@ function JoinJobPostingJsonLd({ locale }: { locale: Locale }) {
       value: 'join',
     },
     datePosted: '2026-07-04',
-    validThrough: '2026-12-31',
+    // validThrough не указываем: набор бессрочный (правило Google для
+    // non-expiring jobs, решение 28.07.2026).
     employmentType: 'CONTRACTOR',
     inLanguage: HTML_LANG[locale],
     // Ссылка на богатую глобальную Organization (@id #organization из JsonLd в
@@ -76,11 +77,9 @@ function JoinJobPostingJsonLd({ locale }: { locale: Locale }) {
       '@type': 'Country',
       name,
     })),
-    // «Опыт не нужен» — видимо в блоке требований и FAQ страницы.
-    experienceRequirements: {
-      '@type': 'OccupationalExperienceRequirements',
-      monthsOfExperience: 0,
-    },
+    // «Опыт не нужен»: experienceRequirements СОЗНАТЕЛЬНО опущено — Google
+    // требует monthsOfExperience > 0, а отсутствие свойства и есть корректный
+    // способ сказать «опыт не требуется» (валидатор давал WARNING).
     experienceInPlaceOfEducation: true,
     educationRequirements: {
       '@type': 'EducationalOccupationalCredential',
