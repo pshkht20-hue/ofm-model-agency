@@ -2417,4 +2417,1318 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
     ],
   },
+  "chatter-onlyfans-kto-eto": {
+    title: "Who Is an OnlyFans Chatter? Job, Pay & How to Get Hired",
+    description:
+      "Who is an OnlyFans chatter? What the job involves, how DM sales work, how chatters get paid, and how to get hired with no experience. OFM is hiring.",
+    keywords: [
+      "onlyfans chatter",
+      "of chatters",
+      "what is a chatter",
+      "onlyfans chatter jobs",
+      "only fans chatter",
+      "onlyfans chat operator",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "An OnlyFans chatter is a remote specialist who runs the direct messages on a model's page: replies to subscribers, keeps fans engaged, and sells paid content in DMs. Chatter, OF chatter, chat operator, chat manager — the job ads use different words for the same profession.",
+      },
+      {
+        type: "p",
+        text: "Why no serious page runs without this role: 70–90% of an OnlyFans page's revenue comes from direct messages, not from the subscription price. Fans pay for the feeling of a personal conversation — and the chatter is the person who creates it.",
+      },
+      {
+        type: "p",
+        text: "This guide is written for two readers. If you are looking for remote work, you will see what the job actually involves, how chatters are paid, and how to get hired. If you are a model, you will see who will be handling your DMs — and why that is not supposed to be your job.",
+      },
+      {
+        type: "h2",
+        text: "Chatter, chat operator, chat manager: who is who",
+      },
+      {
+        type: "p",
+        text: "Job listings label the same role in several different ways, which makes it look like several professions. In practice the differences are small:",
+      },
+      {
+        type: "table",
+        caption: "Chatter, OF chatter, chat operator, chat manager and OnlyFans manager: how the roles differ.",
+        headers: ["Term", "What it means"],
+        rows: [
+          [
+            "Chatter",
+            "The most common industry term — a specialist who handles DMs and sells inside the conversation",
+          ],
+          [
+            "OF chatter",
+            "The same role, shortened: “OF” is how the platform is abbreviated in job ads and on forums",
+          ],
+          [
+            "Chat operator",
+            "The formal job title you will most often see in listings and on payroll paperwork",
+          ],
+          [
+            "Chat manager",
+            "Usually a synonym; in larger teams it means the shift lead who coordinates 3–5 chatters",
+          ],
+          [
+            "OnlyFans manager",
+            "A broader role: owns the whole page — strategy, content plan, promotion, analytics. Chatters are part of that team",
+          ],
+        ],
+      },
+      {
+        type: "h3",
+        text: "Chatter vs OnlyFans manager",
+      },
+      {
+        type: "p",
+        text: "Short version: the manager owns the page, the chatter owns the conversations and the sales inside them. The manager decides what gets shot, where the traffic comes from, and how the subscription is priced; the chatter works inside that system and turns incoming messages into revenue. In an agency both roles are covered by the team.",
+      },
+      {
+        type: "h2",
+        text: "What an OnlyFans chatter actually does",
+      },
+      {
+        type: "p",
+        text: "A typical task list for a chatter on a professional team:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Answers incoming messages and keeps conversations alive — usually 5–10 dialogues running in parallel",
+          "Onboards new subscribers: welcome messages, the first paid offer",
+          "Sells PPV content, customs and video calls — knowing who to offer what, and at what price",
+          "Keeps notes on fans: name, what is going on in their life, what they have bought — this is the base for repeat sales",
+          "Wins back subscribers who went quiet and works with the ones about to cancel",
+          "Runs mass messages and segments the audience by activity and spending",
+          "Passes custom requests to the model and logs everything that was promised to a fan",
+          "Follows platform rules and the model's agreed boundaries",
+        ],
+      },
+      {
+        type: "p",
+        text: "In practice it is CRM work dressed as flirting: tracking, segmentation, follow-ups — except the customer is a fan of one specific creator.",
+      },
+      {
+        type: "h3",
+        text: "Shifts and prime time: why the chat lives at night",
+      },
+      {
+        type: "p",
+        text: "The main paying audience on OnlyFans sits in the US, Canada and Western Europe. Message volume peaks in their evening, which for European chatters lands late at night. That is why chat teams work in shifts: 2–3 shifts cover the full day, and the US prime-time shift is usually the most lucrative one. A single person simply cannot answer hundreds of fans in a foreign time zone — which is exactly where solo models burn out.",
+      },
+      {
+        type: "h3",
+        text: "Voice, persona and the model's boundaries",
+      },
+      {
+        type: "p",
+        text: "A chatter writes as the model, and that is regulated more tightly than it looks from the outside. Every model has an agreed profile: her backstory, her tone of voice, off-limits topics, what can be promised and what cannot. Custom requests always go back to the model herself, and nobody overrides her “no”. For the subscriber the conversation stays personal — the tone, the details and the boundaries are hers.",
+      },
+      {
+        type: "nav",
+        intro: "How DM sales work in detail:",
+        links: [
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "OnlyFans chats and DM sales",
+          },
+        ],
+      },
+      {
+        type: "h2",
+        text: "How much does an OnlyFans chatter get paid?",
+      },
+      {
+        type: "p",
+        text: "The standard scheme across the industry is a fixed base rate plus a percentage of the sales made in your own chats during your own shift. So the payout is only partly a salary — the rest is performance-based, and it is the part that grows fastest.",
+      },
+      {
+        type: "ul",
+        items: [
+          "The base rate — what you are paid for covering the shift itself",
+          "Your percentage of the sales you close in DMs during that shift",
+          "Which pages you are assigned to: a page with heavy traffic gives a chatter far more to work with",
+          "Your conversion — the same fan base converts very differently for a strong and a weak chatter",
+          "Your shift: US prime time carries more volume than a quiet morning slot",
+          "Seniority: shift leads and chat leads are paid on a different scale",
+        ],
+      },
+      {
+        type: "tip",
+        text: "We deliberately do not publish a fixed pay range here — rates differ from team to team and from page to page, and a number posted online ages badly. At OFM the base rate and the percentage are named at the interview, in plain numbers, before your first shift. If a team refuses to state both upfront, treat that as a red flag.",
+      },
+      {
+        type: "p",
+        text: "One thing worth separating: this is the pay of a chat-team specialist. A model's income works completely differently — it is calculated from the gross balance of her page, and we break that down in a separate article.",
+      },
+      {
+        type: "nav",
+        intro: "A model's income is a different calculation:",
+        links: [
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "How much OnlyFans models earn",
+          },
+        ],
+      },
+      {
+        type: "h2",
+        text: "Do you need experience to become an OnlyFans chatter?",
+      },
+      {
+        type: "p",
+        text: "No — sales experience helps, but it is not a requirement. What you do need:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Written English at B1 or above — the conversations are with English-speaking fans; you do not need to speak it, only to write confidently",
+          "Typing speed and multitasking — 5–10 parallel dialogues is a normal shift",
+          "Empathy plus a sales instinct — hearing the person and offering at the right moment, without pushing",
+          "Discipline — shifts are fixed, and the best-paying ones run at night",
+          "18+ and a calm attitude toward adult content",
+        ],
+      },
+      {
+        type: "p",
+        text: "Serious teams train you. At OFM the path looks like this: a short test task → training with scripts and breakdowns of real dialogues → your first shift alongside a mentor. No bureaucracy at the start: if it is not for you, you are free to stop; if it clicks, you grow into a shift lead.",
+      },
+      {
+        type: "p",
+        text: "The full requirements, terms and selection stages are on our chat operator vacancy page.",
+      },
+      {
+        type: "nav",
+        intro: "Terms, requirements and selection stages:",
+        links: [
+          {
+            href: "/vacancies/chatter-onlyfans",
+            label: "Vacancy: OnlyFans chat operator (chatter) at OFM",
+          },
+        ],
+      },
+      {
+        type: "h2",
+        text: "OnlyFans chatter jobs: the honest pros and cons",
+      },
+      {
+        type: "p",
+        text: "What people praise. Fully remote — you can work from any city, or while travelling. Income in dollars tied to results: sell better, earn more. A fast entry — days between applying and your first shift, not months. A clear ladder up to shift lead and chat lead.",
+      },
+      {
+        type: "p",
+        text: "What people complain about. Night shifts — US prime time is not for everyone. Sales targets set out of thin air in weak teams, with no training behind them. Emotional load — difficult fans happen, and without a shift lead to back you up, beginners burn out. And a share of the work is routine: mass messages, notes, logging.",
+      },
+      {
+        type: "p",
+        text: "The myths. “Easy money” — no: it is sales work with shifts and statistics, just remote. “It is only chatting” — also no: chatting does not produce 70–90% of a page's revenue, selling does. “It is shady” — no: it is ordinary remote work with a foreign client, on a platform that operates legally, with an adult audience only.",
+      },
+      {
+        type: "p",
+        text: "How to spot a decent team from the job ad alone: there is training and a mentor, the “base + %” scheme is described in numbers before you start, payouts run on a schedule, and a shift lead is reachable during working hours. If all four are there, most of the horror stories simply do not apply.",
+      },
+      {
+        type: "h2",
+        text: "If you are a model: the DMs are the team's job",
+      },
+      {
+        type: "p",
+        text: "From a model's side all of this looks simple: you shoot the content, the chat team sells it in the messages. Running the DMs yourself means 8–10 hours a day in someone else's time zone, on top of shooting. That is why delegating conversations is the industry standard rather than a luxury — a model's hours are worth more in front of a camera than in an inbox.",
+      },
+      {
+        type: "p",
+        text: "At OFM a chat team is part of the setup for every model by default. The model keeps 20–30% of her page's gross balance — the exact share depends on the work plan, her type and the size of the team on her page — and the rest is reinvested into what makes that balance grow: chatters across 2–3 shifts, paid traffic, promotion, management. You pay nothing for the chat team, upfront or out of pocket. The agency also runs the account itself: registration, verification and the payout side (Paxum/Skrill); your own access to the page is agreed individually.",
+      },
+      {
+        type: "p",
+        text: "Strong pages with a full team run $15,000–$50,000 a month in gross balance turnover. You can sketch out your own potential by niche and type in the income calculator, and see how a model's work is structured end to end in our main guide. Ready to try? Submit an application — a manager replies on Telegram within 24 hours.",
+      },
+      {
+        type: "h2",
+        text: "FAQ",
+      },
+      {
+        type: "h3",
+        text: "What is a chatter on OnlyFans?",
+      },
+      {
+        type: "p",
+        text: "A chatter (chat operator, chat manager) is a specialist who handles direct messages on behalf of a model's page: answering fans, building the relationship and selling paid content in DMs. It sits between sales and psychology — and it is where 70–90% of an OnlyFans page's revenue is made.",
+      },
+      {
+        type: "h3",
+        text: "How much do OF chatters get paid?",
+      },
+      {
+        type: "p",
+        text: "The usual scheme is a fixed base rate plus a percentage of the sales closed in your own chats. The final figure depends on the pages you work, your conversion rate, your shift and your seniority, so it varies widely between teams. At OFM the exact base and percentage are stated at the interview, before your first shift.",
+      },
+      {
+        type: "h3",
+        text: "Can I become an OnlyFans chatter with no experience?",
+      },
+      {
+        type: "p",
+        text: "Yes. Written English at B1+, decent typing speed and a willingness to learn DM selling are enough — previous sales experience is a plus, not a requirement. At OFM the route is a test task, then training with scripts and a mentor, then your first shift. Requirements and terms are on the chatter vacancy page.",
+      },
+      {
+        type: "h3",
+        text: "Is being a chatter a legitimate job?",
+      },
+      {
+        type: "p",
+        text: "Yes. It is standard remote work for a foreign client: communicating with an adult (18+) audience and selling content on a platform that operates legally. Income is declared the same way any freelancer declares work for an overseas client.",
+      },
+      {
+        type: "p",
+        text: "Bottom line: the chatter is the reason a model with an agency spends her time creating content instead of sitting in her inbox at 3 a.m. If you want the job — read the vacancy. If you are a model and want the DMs, traffic and finances handled by a team — send us an application.",
+      },
+      {
+        type: "nav",
+        intro: "Related reads on how the money works:",
+        links: [
+          {
+            href: "/vacancies/chatter-onlyfans",
+            label: "Vacancy: OnlyFans chat operator (chatter)",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats and DM sales",
+          },
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Pricing: subscription, PPV and tips",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "How much OnlyFans models earn",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "What an OnlyFans agency does: 12 services",
+          },
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/join",
+            label: "Apply to the OFM agency — model application",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want to join a chat team?",
+        body: "Read the terms on the OFM chat operator vacancy page, or message us on Telegram @ofmm_agency. Test task, training with a mentor, and the base rate and percentage named before your first shift.",
+        buttonHref: "/vacancies/chatter-onlyfans",
+        buttonLabel: "See the chatter vacancy",
+        note: "18+ only. Pay is a base rate plus a percentage of your own chat sales; the exact figures are agreed at the interview. Model income figures on this site are page balance turnover (gross), not a guaranteed payout.",
+      },
+    ],
+  },
+  "kto-sozdal-onlyfans": {
+    title: "Who Created OnlyFans? Founder, Year & Current Owner",
+    description:
+      "OnlyFans was created by Tim Stokely in 2016 in London, under Fenix International. Who owns it now, who runs it, and how much the platform is worth.",
+    keywords: [
+      "who created onlyfans",
+      "onlyfans founder",
+      "when was onlyfans founded",
+      "who owns onlyfans",
+      "tim stokely",
+      "fenix international ltd",
+      "onlyfans ceo",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "Short answer: OnlyFans was created by British entrepreneur Tim Stokely, and the platform launched in London in 2016. From 2018 the controlling stake belonged to American businessman Leonid Radvinsky; after his death in March 2026 control passed to his widow, Yekaterina Chudnovsky. The company behind the platform is Fenix International Limited. Here is the full story, in facts.",
+      },
+      {
+        type: "h2",
+        text: "Tim Stokely and the 2016 launch",
+      },
+      {
+        type: "p",
+        text: "Tim Stokely launched OnlyFans in November 2016 on a £10,000 loan from his father, Guy. It started as a family business: his brother Thomas served as chief operating officer and his father as chief financial officer. Legally the platform belongs to the London-registered company Fenix International Limited. The idea was simple — let creators sell content directly to fans on a subscription, with no advertisers in between. That model went on to become a blueprint for the whole creator economy.",
+      },
+      {
+        type: "h2",
+        text: "Is OnlyFans based in London?",
+      },
+      {
+        type: "p",
+        text: "Yes. OnlyFans is operated by Fenix International Limited, a company registered in London, and that is where the platform was founded. Ownership since 2018 has been American, and the executive team is international, but the corporate home of OnlyFans is still the UK.",
+      },
+      {
+        type: "h2",
+        text: "Leonid Radvinsky: majority owner from 2018",
+      },
+      {
+        type: "p",
+        text: "In 2018 American entrepreneur Leonid Radvinsky bought 75% of Fenix International from the Stokely family. The platform's explosive growth happened under his ownership: the pandemic years turned OnlyFans into the dominant paid-subscription service for creators, with millions of accounts and hundreds of millions of registered users, and turned Radvinsky into a Forbes-listed billionaire. He avoided publicity throughout, staying one of the industry's most private figures.",
+      },
+      {
+        type: "p",
+        text: "The scale of the business under him is easiest to read in the filings: in fiscal 2024 OnlyFans reported around $7.2 billion in gross revenue, about $1.4 billion in net revenue for the company, and roughly $684 million in pre-tax profit. The remainder — the bulk of that gross figure — is what went to creators.",
+      },
+      {
+        type: "h2",
+        text: "Who owns and runs OnlyFans now",
+      },
+      {
+        type: "p",
+        text: "Stokely stepped down as CEO in December 2021 and was succeeded by Amrapali “Ami” Gan; since July 2023 the company has been led by Keily Blair, a lawyer who joined OnlyFans in 2022 from a London law firm. In March 2026 Leonid Radvinsky died at 43 after a cancer diagnosis he had kept private. Control of Fenix International — roughly 75% of the shares and voting rights, plus the right to appoint the board — passed to his widow, corporate lawyer Yekaterina “Katie” Chudnovsky. In May 2026 she signed off on the sale of about 16% of the company to the investment firm Architect Capital for $535 million, a deal that valued OnlyFans at roughly $3.15 billion.",
+      },
+      {
+        type: "h2",
+        text: "Timeline: from a £10,000 loan to a $3 billion valuation",
+      },
+      {
+        type: "table",
+        caption: "Key dates in the history of OnlyFans",
+        headers: ["Year", "What happened"],
+        rows: [
+          [
+            "2016",
+            "Tim Stokely launches OnlyFans in London on a £10,000 loan; the operating company is Fenix International Ltd",
+          ],
+          ["2018", "Leonid Radvinsky buys 75% of Fenix International from the Stokely family"],
+          ["2021", "Stokely steps down as CEO; Amrapali Gan takes over"],
+          ["2023", "Keily Blair becomes CEO"],
+          [
+            "2024",
+            "The platform reports around $7.2 billion in gross revenue for the fiscal year",
+          ],
+          [
+            "2026",
+            "Radvinsky dies; control passes to Yekaterina Chudnovsky; Architect Capital buys ~16% for $535 million at a $3.15 billion valuation",
+          ],
+        ],
+      },
+      {
+        type: "h2",
+        text: "FAQ",
+      },
+      {
+        type: "h3",
+        text: "Who created OnlyFans?",
+      },
+      {
+        type: "p",
+        text: "OnlyFans was created by British entrepreneur Tim Stokely in 2016, in London, using a £10,000 loan from his father. The operating company is Fenix International Limited. Stokely ran the platform until December 2021, when he stepped down as CEO.",
+      },
+      {
+        type: "h3",
+        text: "When was OnlyFans founded?",
+      },
+      {
+        type: "p",
+        text: "In November 2016. The platform went live that autumn as a subscription service letting creators sell content directly to fans, and it took until the 2020–2021 period for it to reach mass scale.",
+      },
+      {
+        type: "h3",
+        text: "Who owns OnlyFans now?",
+      },
+      {
+        type: "p",
+        text: "From 2018 to 2026 the controlling stake in Fenix International belonged to Leonid Radvinsky. After his death in March 2026 control passed to his widow, Yekaterina Chudnovsky, who holds around 75% of the shares and voting rights. In May 2026 Architect Capital acquired roughly 16% of the company. Day-to-day the platform is run by CEO Keily Blair.",
+      },
+      {
+        type: "h3",
+        text: "Is it true that the owner of OnlyFans died?",
+      },
+      {
+        type: "p",
+        text: "Yes. Leonid Radvinsky, the majority owner since 2018, died on 20 March 2026 at the age of 43 after a long illness. It did not disrupt the platform: OnlyFans continued operating normally and creator payouts ran on schedule.",
+      },
+      {
+        type: "h3",
+        text: "Who is the CEO of OnlyFans?",
+      },
+      {
+        type: "p",
+        text: "Keily Blair, CEO since July 2023. She joined OnlyFans in January 2022 as chief strategy and operations officer, after leading the cyber, privacy and data practice at a London law firm, and took over from Amrapali Gan.",
+      },
+      {
+        type: "p",
+        text: "The history is context; what matters in practice is how the platform works today — what the money actually looks like for creators, and how to start. Those breakdowns are below.",
+      },
+      {
+        type: "nav",
+        intro: "Now the practical side:",
+        links: [
+          {
+            href: "/blog/chto-takoe-onlyfans",
+            label: "What OnlyFans is: how the platform works",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "How much OnlyFans models earn",
+          },
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "An agency for beginners: how to start",
+          },
+          {
+            href: "/join",
+            label: "Apply to the OFM agency — model application",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "From the platform's history to your own page",
+        body: "If you want to see how it works from the inside — the numbers, the promotion, the chat team — submit an application or message us on Telegram @ofmm_agency. Anonymous, with no obligation.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "18+ only. Figures for the platform are public company data; income figures on this site are page balance turnover (gross), not a guaranteed payout.",
+      },
+    ],
+  },
+  "onlyfans-modeli-kto-eto": {
+    title: "What Is an OF Model? OFM Meaning, Pay & How to Start",
+    description:
+      "An OF model is an OnlyFans creator who earns from a paid page — subscriptions, PPV and chats. What OFM means, how much models really make, how to start.",
+    keywords: [
+      "of model",
+      "of models",
+      "what is an of model",
+      "what is ofm",
+      "ofm meaning",
+      "of model meaning",
+      "ofm model",
+      "onlyfans model",
+      "how much do of models make",
+      "how to become an of model",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "An OF model is an OnlyFans model: a woman who runs a paid subscription page, publishes photo and video content behind a paywall, and talks to her subscribers. OF is simply the abbreviation of OnlyFans, and OFM usually stands for OnlyFans Management — the agency side of the business, and often a shorthand for the model who works with one. This guide covers what the job actually involves, how the pay really works, and how to start, without the hype.",
+      },
+      {
+        type: "h2",
+        text: "OF, OFM, OF models: what the abbreviations mean",
+      },
+      {
+        type: "p",
+        text: "The letters confuse people more than the work does. OF stands for OnlyFans, the paid-subscription platform. An OF model — written elsewhere as OF models, OnlyFans model or OFM model — is a creator who earns on that platform. OFM stands for OnlyFans Management: the agencies, managers, marketers and chat teams that run pages on a creator's behalf. So an OFM model is simply a model working with a management team instead of doing everything solo.",
+      },
+      {
+        type: "ul",
+        items: [
+          "OF — OnlyFans, the subscription platform launched in 2016.",
+          "OF model / OnlyFans model — a creator running a paid page: content plus paid messaging.",
+          "OFM — OnlyFans Management: the agency, the manager, the marketing and the chat team behind a page.",
+          "OFM model — a model who works under that management rather than handling everything alone.",
+          "Creator — the platform's own term for anyone publishing on OnlyFans, adult or not.",
+        ],
+      },
+      {
+        type: "tip",
+        text: "Short version for the impatient: an OF model is an OnlyFans creator. OFM is the management layer around her — the team that funds traffic, runs the chats around the clock and handles the account.",
+      },
+      {
+        type: "h2",
+        text: "How an OF model differs from a regular model",
+      },
+      {
+        type: "p",
+        text: "A fashion or commercial model sells a look to a client: castings, briefs, measurements, a booking. An OF model sells access and attention directly to her own audience. There is no client to approve her, no casting director, no height requirement — subscribers decide, and they pay every month.",
+      },
+      {
+        type: "ul",
+        items: [
+          "No measurements and no runway standards — personality and consistency outperform a model look.",
+          "No client and no booking made by someone else: she plans and shoots her own content on her own schedule.",
+          "Income is recurring rather than per-job: subscriptions renew and paid messages sell daily.",
+          "Most of the money comes from conversation, not from the photos themselves.",
+          "The work is remote, and the page can stay invisible to people at home through geo-blocking.",
+        ],
+      },
+      {
+        type: "p",
+        text: "It is not webcam work either. A cam model is live on a schedule and earns only while she is on camera. An OF model shoots when it suits her, and the page keeps selling around the clock through the feed and the inbox.",
+      },
+      {
+        type: "h2",
+        text: "What OF models actually do in a week",
+      },
+      {
+        type: "p",
+        text: "The realistic version, seen from inside an agency. Two shooting days a week: daylight by a window, a phone on a tripod, a few photo sets and short clips against a content plan. On the other days, an hour or two — stories-style clips, a couple of voice notes for fans, a check-in with the manager. Ten to fifteen hours a week, from home, in her own rhythm.",
+      },
+      {
+        type: "p",
+        text: "Everything else is a separate profession. Bringing subscribers in is marketing. Answering fans and selling paid messages 24/7 is a chat team. Account setup, verification, privacy settings and payouts are management. A solo model does all of it herself — which is exactly why solo pages so often stall at a few hundred dollars: there simply are not enough hours in the day for shoots, promotion and chats in an American time zone.",
+      },
+      {
+        type: "h2",
+        text: "How much do OF models earn?",
+      },
+      {
+        type: "p",
+        text: "Counted honestly, from the page balance. A solo beginner with no promotion budget usually lands at $300–700 in her first month, and many solo pages never move far past that — not because the platform doesn't pay, but because nobody is bringing subscribers in. Pages under management climb into the thousands within a few months, and the balances of strong pages run $15,000–50,000 a month gross.",
+      },
+      {
+        type: "p",
+        text: "Here is the part most articles skip. The model's share is 20–30% of the page's gross balance — the exact figure depends on the work plan, her type and the size of the team behind her page. The rest is reinvested: paid traffic, social promotion, round-the-clock chatter shifts and management are all funded out of it, and the model puts in nothing of her own. That reinvestment is the entire mechanism — it is what makes a balance grow month after month, and 25% of a balance that keeps climbing is more money than 100% of a solo page stuck near zero.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Solo, no promotion: usually $300–700 in the first months — normal, not a failure.",
+          "Under management: thousands a month within the first season, growing with traffic and chat quality.",
+          "Strong managed pages: $15,000–50,000 a month gross balance — a ceiling, not an average.",
+          "The model keeps 20–30% of gross, invests nothing, and the remainder funds the growth of her own page.",
+          "What actually moves the number: niche, how regularly you shoot, and how well the chats are run.",
+        ],
+      },
+      {
+        type: "table",
+        caption:
+          "Balance means the page's gross turnover, before the platform's commission and your local taxes. Ranges are guidelines, not guarantees.",
+        headers: ["", "Solo", "With an OFM agency"],
+        rows: [
+          [
+            "Page balance / month",
+            "usually $300–700",
+            "thousands, up to $15,000–50,000 on strong pages",
+          ],
+          ["Traffic and promotion", "on you", "the agency, at its own expense"],
+          ["Chats and sales 24/7", "on you", "a professional chat team in shifts"],
+          ["Money in at the start", "yours", "funded by the agency"],
+          [
+            "What you keep",
+            "100% of a small balance",
+            "20–30% of a balance that grows",
+          ],
+          [
+            "Privacy setup (geo-block)",
+            "you configure it",
+            "the team configures it",
+          ],
+        ],
+      },
+      {
+        type: "tip",
+        text: "Every figure here is a range and a guideline, never a promise. The income is real, but it follows the work — not luck, and not a screenshot on someone's Instagram.",
+      },
+      {
+        type: "h2",
+        text: "Do you need a model's look? The types that actually sell",
+      },
+      {
+        type: "p",
+        text: "Successful OF models are not one type — they are dozens of niches. Girl next door: natural, unpolished, familiar. Fitness and sport. Alt aesthetics: tattoos, piercings, bright hair. The 30+ niche, where the audience tends to be more loyal and spends more. Cosplay and gaming. What decides the outcome is not facial features but grooming, warmth and the willingness to shoot regularly: a page that is alive and talking beats a page with perfect photos posted once a month.",
+      },
+      {
+        type: "p",
+        text: "English is not a barrier either. With a chat team, conversations with subscribers are handled by people writing in native English 24/7 — one of the main reasons models from Ukraine and the rest of Europe can compete for a US and Canadian audience from day one.",
+      },
+      {
+        type: "h2",
+        text: "How to become an OF model: the practical steps",
+      },
+      {
+        type: "ul",
+        items: [
+          "Confirm the hard requirement: you must be 18+, with a valid ID for the platform's verification.",
+          "Decide the format first — solo or with a management team. It changes how much work lands on you, and nothing else matters as much.",
+          "Register on the official onlyfans.com, verify your identity (document plus selfie) and connect a payout method.",
+          "Set your boundaries before you shoot: what you are willing to publish and what is off the table. Write it down.",
+          "Turn on geo-blocking for your own country and any others you choose, and promote to a US, Canadian and Australian audience.",
+          "Build a content rhythm you can actually sustain — two shooting days a week beats a heroic first week and then silence.",
+          "Plan for traffic from day one: a page without new subscribers coming in earns close to nothing, however good the content is.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The technical part — creating the account — takes about fifteen minutes and is not what agencies are paid for. The hard part starts afterwards: promotion, traffic and conversations that never stop.",
+      },
+      {
+        type: "h2",
+        text: "What an OFM agency does — and what it doesn't",
+      },
+      {
+        type: "p",
+        text: "The working formula is simple: the agency runs everything except the content. Account setup and verification, marketing and paid traffic at the team's expense, 24/7 chats, analytics, finances and payouts through Paxum or Skrill. What stays with the model is the shoots and her own limits — what she films and what she refuses to film is her call, and a serious team fixes that line and does not push it.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Funded promotion: paid traffic and social growth, at the agency's cost, not yours.",
+          "A chat team across two to three shifts, so the page sells while you sleep.",
+          "Content strategy and analytics: what to shoot, what to test, what to price.",
+          "Account and privacy management: verification, geo-blocking, leak monitoring, DMCA takedowns.",
+          "Finances and payouts, so you are not sorting out payment rails alone.",
+        ],
+      },
+      {
+        type: "p",
+        text: "What a real agency does not do: charge you an entry fee, promise a guaranteed number, or lock you in. There is no joining payment and no bureaucracy — you can stop the partnership whenever you want. A team that delivers results does not need penalties to keep a model.",
+      },
+      {
+        type: "h2",
+        text: "Frequently asked questions",
+      },
+      {
+        type: "h3",
+        text: "What does OF model mean?",
+      },
+      {
+        type: "p",
+        text: "OF model means OnlyFans model: a creator who runs a paid page on OnlyFans, publishes photos and videos for subscribers and earns from subscriptions, paid messages (PPV), tips and custom content. OF is just an abbreviation of the platform's name — there is no separate service called OF.",
+      },
+      {
+        type: "h3",
+        text: "What does OFM stand for?",
+      },
+      {
+        type: "p",
+        text: "OFM stands for OnlyFans Management — the agencies and teams that manage creators' pages: marketing, traffic, 24/7 chatting, analytics, account and payout handling. In everyday use, OFM model simply means a model who works with such a team rather than running everything solo.",
+      },
+      {
+        type: "h3",
+        text: "How much do OF models make?",
+      },
+      {
+        type: "p",
+        text: "A solo beginner without promotion typically makes $300–700 a month. Managed pages reach thousands within months, and strong ones run a gross balance of $15,000–50,000 a month. The model keeps 20–30% of that balance; the rest funds the traffic, the chat team and the growth of the page, and she invests nothing herself. All figures are guidelines, not guarantees.",
+      },
+      {
+        type: "h3",
+        text: "Is being an OF model legal?",
+      },
+      {
+        type: "p",
+        text: "In most countries, creating 18+ content is not itself prohibited — the real question is declaring your income where you are a tax resident. In Ukraine, for example, many creators register as a sole trader (FOP). This is information rather than legal advice: for your own situation, a local tax specialist gives the accurate answer. The platform works only with adults and verifies identity with a document.",
+      },
+      {
+        type: "h3",
+        text: "Can you work as an OF model anonymously?",
+      },
+      {
+        type: "p",
+        text: "Privacy rests on geo-blocking rather than on hiding: you block your own country and any others you choose, while promotion targets the US, Canada and Australia, so people at home will not stumble across the page. Nobody can promise absolute certainty — VPNs and screenshots exist — but the combination of geo-blocking and a distant audience keeps the risk low.",
+      },
+      {
+        type: "h3",
+        text: "Do I need experience or an existing following?",
+      },
+      {
+        type: "p",
+        text: "No. Most models start from zero: no audience, no shooting experience, no English. What you need is to be 18+, a phone with a decent camera, stable internet and the willingness to shoot regularly. Training at the start usually takes ten to fourteen days — lighting at home, framing, holding a character.",
+      },
+      {
+        type: "h3",
+        text: "What is the difference between an OF model and an OFM model?",
+      },
+      {
+        type: "p",
+        text: "There is no difference in the job, only in the setup. An OF model is any OnlyFans creator, including someone running everything alone. An OFM model works with an OnlyFans Management team: she creates the content while marketing, traffic, chats and account handling sit with the agency, funded by the agency.",
+      },
+      {
+        type: "nav",
+        intro: "Trying the role on for size? Next steps:",
+        links: [
+          {
+            href: "/join",
+            label: "Apply to OFM — anonymous application form",
+          },
+          {
+            href: "/blog/chto-takoe-onlyfans",
+            label: "What is OnlyFans and how it works",
+          },
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model: the agency job",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "How much OnlyFans models earn",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "Beginners: agency or solo",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats and DMs: where the revenue hides",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonymity and safety",
+          },
+          {
+            href: "/blog/onlyfans-rabota-bez-lica",
+            label: "Your face on OnlyFans",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want to know whether this format fits you?",
+        body: "Send an application or message us on Telegram @ofmm_agency — we will go through your type, your niche and your expectations honestly. No pressure and no entry fee: the decision always stays yours.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "Income figures are gross page-balance turnover and guidelines, not guaranteed payouts. 18+ only.",
+      },
+    ],
+  },
+  "chto-takoe-onlyfans": {
+    title: "What Is OnlyFans? How It Works and How Creators Earn",
+    description:
+      "OnlyFans is a subscription platform where creators earn from paid content, PPV messages and tips. How it works, who earns what, safety, and how to start.",
+    keywords: [
+      "what is onlyfans",
+      "onlyfans",
+      "how does onlyfans work",
+      "onlyfans explained",
+      "how do onlyfans creators make money",
+      "is onlyfans safe",
+      "how much do onlyfans models make",
+      "how to start on onlyfans",
+      "onlyfans for beginners",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "OnlyFans is a paid-subscription platform where a creator publishes content behind a paywall and talks to her fans, while subscribers pay for access to the page, for paid messages and for private conversation. The money arrives from four places — subscriptions, PPV, tips and custom content — and the platform keeps 20% of everything earned on it.",
+      },
+      {
+        type: "p",
+        text: "Put simply: you run a closed page, people subscribe to it and pay for photos, videos and conversation, and you earn from that. Below we go through it honestly and without hype — how OnlyFans works, what creators actually do all day, how much can realistically be earned (and how much is myth), whether it is a scam, and how safe and legal it really is.",
+      },
+      {
+        type: "h2",
+        text: "What OnlyFans is, in plain words",
+      },
+      {
+        type: "p",
+        text: "OnlyFans is a website and app built on subscriptions. A creator sets up a page and posts content that only paying people can see. A fan subscribes — usually monthly — and gets access. The content is closed: it is not indexed by search engines and is invisible to anyone without a subscription, unlike open social networks such as Instagram or TikTok.",
+      },
+      {
+        type: "p",
+        text: "One misunderstanding worth clearing up straight away: OnlyFans is not only 18+. There are fitness coaches, musicians, chefs and artists selling lessons and behind-the-scenes work. But the paying majority, and the reason most people search for the platform, is adult content. This page is about exactly that: working as a model 18+, remotely and privately.",
+      },
+      {
+        type: "p",
+        text: "The platform itself is not new or experimental. It launched in the UK in 2016, now has tens of millions of users worldwide, pays out on a fixed schedule and verifies every creator's identity with a document. In other words, a mature service with predictable rules — not a get-rich-quick app.",
+      },
+      {
+        type: "tip",
+        text: "The defining feature of OnlyFans: it is a closed platform. Someone who has not subscribed will not find your page in search — that is the foundation of the privacy we come back to further down.",
+      },
+      {
+        type: "h2",
+        text: "The quick answers",
+      },
+      {
+        type: "h3",
+        text: "What is OnlyFans?",
+      },
+      {
+        type: "p",
+        text: "A subscription platform where a creator earns from closed content and from talking to fans. Subscribers pay for access to the page, for paid messages and for custom content. It is one international service, onlyfans.com, available in most of the world.",
+      },
+      {
+        type: "h3",
+        text: "How does OnlyFans work?",
+      },
+      {
+        type: "p",
+        text: "The creator runs a closed page; subscribers pay for the subscription, for paid messages (PPV), tips and customs. Most of the income comes from private conversations rather than from the price of the subscription. The content is not indexed by search engines, and a creator can block her own country from seeing the page.",
+      },
+      {
+        type: "h3",
+        text: "Who is an OnlyFans model?",
+      },
+      {
+        type: "p",
+        text: "An OnlyFans model — the platform calls her a creator — is the author of a paid page: she shoots photos and videos, publishes them for subscribers and talks to fans. It is remote self-employment rather than easy money: the result depends on how regularly you post, how much traffic reaches the page and how well the chats are run.",
+      },
+      {
+        type: "h3",
+        text: "Is OnlyFans free to join?",
+      },
+      {
+        type: "p",
+        text: "Creating an account is free. OnlyFans earns from a 20% commission on what you make, not from a joining fee. Anyone asking for money to register you, train you or reserve you a slot is running a scam — and that applies to agencies too.",
+      },
+      {
+        type: "nav",
+        intro: "Where to go next:",
+        links: [
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "How much OnlyFans models earn",
+          },
+          {
+            href: "/blog/onlyfans-modeli-kto-eto",
+            label: "What is an OF model? OFM meaning",
+          },
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model: the agency job",
+          },
+          {
+            href: "/join",
+            label: "Apply to OFM — application form",
+          },
+        ],
+      },
+      {
+        type: "h2",
+        text: "How OnlyFans works: subscriptions, PPV, tips and DMs",
+      },
+      {
+        type: "p",
+        text: "Income on OnlyFans comes from several sources, and understanding their structure matters before you start. There are four main streams:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Subscription — a fixed monthly fee for entry to the page (often $5–15). It is the ticket, but rarely the main earner.",
+          "PPV (pay-per-view) — paid content sent in direct messages: the subscriber pays separately to unlock a specific photo or video. A large share of the income lives here.",
+          "Tips — voluntary payments from fans, for conversation, as thanks, or on request.",
+          "Customs and calls — content made to a specific subscriber's request, and video calls. The highest price per item.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The non-obvious part for beginners: by most estimates 70–90% of the income arrives not through the subscription price but through direct messages, where PPV, customs and tips are sold. Talking to subscribers is the actual job, not a bonus on top of the content. That is precisely why creators who work with a team hand the chats to professional chatters.",
+      },
+      {
+        type: "p",
+        text: "OnlyFans keeps 20% commission on everything earned through it — worth building into your numbers from day one. So when we talk about a page's balance below, remember what that number is: gross turnover, before commission and before the taxes you owe where you live. It is not money in hand.",
+      },
+      {
+        type: "nav",
+        intro: "How the money works — detailed breakdowns:",
+        links: [
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Pricing: subscription, PPV and customs",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats and DMs: where most revenue hides",
+          },
+          {
+            href: "/blog/chatter-onlyfans-kto-eto",
+            label: "Who is an OnlyFans chatter",
+          },
+          {
+            href: "/blog/onlyfans-uderzhanie-podpischikov",
+            label: "Retention: churn and LTV",
+          },
+        ],
+      },
+      {
+        type: "h2",
+        text: "Who is actually on OnlyFans",
+      },
+      {
+        type: "p",
+        text: "Two audiences share the platform. On one side, non-adult creators: personal trainers selling programmes, musicians sharing unreleased tracks, chefs, illustrators, tattoo artists. On the other — and this is where the money concentrates — adult creators, mostly women, running paid pages for a mainly English-speaking audience in the US, Canada, the UK and Australia.",
+      },
+      {
+        type: "p",
+        text: "The paying subscriber is not the stereotype either. He is typically in his thirties or forties, employed, and pays for attention and conversation as much as for images — which is why a page that answers messages consistently outperforms a prettier page that does not.",
+      },
+      {
+        type: "h2",
+        text: "What an OnlyFans model actually does",
+      },
+      {
+        type: "p",
+        text: "Translated into concrete terms: the model creates photo and video content for her page and then — if she works solo — handles promotion, subscriber acquisition and conversation herself, effectively around the clock, because fans in different time zones write at all hours.",
+      },
+      {
+        type: "p",
+        text: "Here it is worth separating myth from reality. OnlyFans is not post a couple of photos and the money arrives. It is three jobs at once: content (shooting and editing), marketing (where the subscribers come from) and sales in chat (where most of the money is made). Remove any one of the three and the page stops growing. Anyone describing this as easy money is usually selling a course.",
+      },
+      {
+        type: "p",
+        text: "You can work with your face shown or not — that is your choice, and both formats exist. Your face is a strong asset: subscribers pay for a person and a real conversation, not for an anonymous set of images. But privacy from the people you know does not rest on hiding your face; it rests on geo-blocking, which we cover below.",
+      },
+      {
+        type: "p",
+        text: "And here is the fork this whole section leads to: part of this work can be delegated. Content, marketing and chats are either things you do yourself, or things a team does for you.",
+      },
+      {
+        type: "h2",
+        text: "How much do OnlyFans creators earn?",
+      },
+      {
+        type: "p",
+        text: "The honest conversation, without headlines. For a solo creator, traffic and budget decide almost everything: a beginner with no advertising budget and no experience usually sits at the low end in the first months — often a few hundred dollars, and sometimes less in month one. With systematic work, a realistic marker for the first one to three months is $500–3,000. That is a normal start, not a failure. Articles about extraordinary monthly sums describe a handful of top accounts, or sell a course.",
+      },
+      {
+        type: "p",
+        text: "Managed pages are a different order of magnitude: they move into the thousands within a season, and the balances of strong pages run $15,000–50,000 a month. But be clear what that number is — gross turnover of the page balance, before the platform's commission and before taxes. It is not a payout and not a promise: the result depends on niche, on how much and how regularly you shoot, and on the quality of the chats and the marketing.",
+      },
+      {
+        type: "p",
+        text: "And the part usually left vague: the model's share is 20–30% of the gross balance, depending on the work plan, her type and the team behind her page. The remainder is reinvested — paid traffic, promotion, chatter shifts and management are funded from it, while the model puts in nothing of her own. That reinvestment is the mechanism that makes a balance grow, and 25% of a page that keeps climbing is worth more than 100% of a page nobody is promoting.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Solo without a budget or traffic: usually a few hundred dollars, less in the first month — that is normal.",
+          "Solo with systematic work: roughly $500–3,000 across the first one to three months.",
+          "Under management: thousands a month, with strong pages at $15,000–50,000 gross — a ceiling, not an average.",
+          "The model keeps 20–30% of gross and invests nothing; the rest funds the growth of her own page.",
+          "The real drivers: niche, regularity of content, and the quality of chats and marketing.",
+        ],
+      },
+      {
+        type: "table",
+        caption:
+          "Balance means the page's gross turnover, before the platform's commission and your local taxes. Guidelines, not guarantees.",
+        headers: ["", "Solo", "With an agency"],
+        rows: [
+          [
+            "Page balance / month",
+            "usually $300–700",
+            "thousands, up to $15,000–50,000 on strong pages",
+          ],
+          ["Marketing and traffic", "on you", "the agency, at its own expense"],
+          ["Chats 24/7 and sales", "on you", "a professional chat team"],
+          ["Money in at the start", "yours", "funded by the agency"],
+          [
+            "What you keep",
+            "100% of a small balance",
+            "20–30% of a balance that grows",
+          ],
+          ["Privacy (geo-block)", "you configure it", "the team configures it"],
+        ],
+      },
+      {
+        type: "tip",
+        text: "Any figure named anywhere is a range and a guideline, never a promise. Income on OnlyFans is real but guaranteed by nobody — it follows the work, not luck.",
+      },
+      {
+        type: "h2",
+        text: "OnlyFans in 2026: pros and cons",
+      },
+      {
+        type: "p",
+        text: "A short review of the platform as we see it from inside an agency. OnlyFans is mature: payouts are stable and the rules are clear, but easy money disappeared years ago — the market grew and subscribers became choosier. Here is the honest balance sheet.",
+      },
+      {
+        type: "h3",
+        text: "Pros",
+      },
+      {
+        type: "ul",
+        items: [
+          "The income ceiling is not tied to your local job market: the audience pays in dollars, and strong pages grow for years.",
+          "Flexibility: you work from home, at your own pace, with no commute and no shift rota.",
+          "A closed platform: pages are not indexed by search engines, and you can block your own country from viewing.",
+          "A low technical barrier: a phone, good light and stable internet are enough — no studio required.",
+          "A direct relationship with the audience: subscribers pay you for content and conversation, not advertisers for views.",
+        ],
+      },
+      {
+        type: "h3",
+        text: "Cons",
+      },
+      {
+        type: "ul",
+        items: [
+          "Competition has grown sharply: millions of pages, and simply opening an account no longer works.",
+          "Promotion is mandatory: without a constant flow of traffic from social media a page does not grow, and that is a profession of its own.",
+          "The platform's commission is 20% of everything earned, and taxes apply where you are a tax resident.",
+          "Messaging is daily work: the core income lives in chats rather than in the subscription price.",
+          "Income is not guaranteed: the ranges are real, but results depend on niche, regularity and quality.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The verdict: OnlyFans in 2026 is a working but demanding tool. It pays fairly for people who treat the page as a business, and disappoints anyone who arrived expecting passive income.",
+      },
+      {
+        type: "h2",
+        text: "Is OnlyFans a scam?",
+      },
+      {
+        type: "p",
+        text: "The most common question from a cautious audience. The honest answer: OnlyFans itself is a legitimate international service, payouts are real and arrive in bank accounts, and millions of creators have been paid through it for years. The scams in this niche are almost never the platform — they are dishonest managers and fake agencies feeding on beginners.",
+      },
+      {
+        type: "ul",
+        items: [
+          "They ask for money up front — an entry fee, paid training or a guaranteed slot. A real agency earns from your income, not from your wallet.",
+          "They promise a guaranteed amount, or a five-figure first month. Nobody in this business can guarantee a number.",
+          "They lean on phrases like easy money, passive income, or you will not have to do anything.",
+          "They rush you: start today, decide now — instead of a real casting call with a manager and terms stated openly.",
+          "They cannot show a single verifiable case with payout dynamics.",
+        ],
+      },
+      {
+        type: "p",
+        text: "One honest caveat that cuts both ways: income here is guaranteed by nobody, including us. This is work, not passive income, and the phrase you risk nothing should not be believed as a universal promise. Before agreeing to work with any team, check them against the red-flag list.",
+      },
+      {
+        type: "h2",
+        text: "Is OnlyFans safe and legal?",
+      },
+      {
+        type: "p",
+        text: "The short answer: creating 18+ content is not in itself prohibited in most countries. Legality turns on paperwork and on declaring your income properly, and that depends on where you are a tax resident.",
+      },
+      {
+        type: "p",
+        text: "On taxes: income from OnlyFans is declared where you live. In Ukraine a common route is registering as a sole trader (FOP), though it is not the only option and there is no universal answer for every country. This material is informational rather than legal advice — a lawyer or tax specialist gives you a proper answer for your own situation.",
+      },
+      {
+        type: "p",
+        text: "On privacy: the platform lets you geo-block your own country and any neighbouring ones you choose, so people at home do not find the page, while promotion targets a high-spending Tier-1 audience in the US, Canada and Australia. Geo-blocking reduces the risk a great deal but is not an absolute guarantee — VPNs and screenshots exist — so privacy is handled as a system, not a single setting.",
+      },
+      {
+        type: "nav",
+        intro: "Legality and privacy — deeper reads:",
+        links: [
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonymity and geo-blocking",
+          },
+          {
+            href: "/blog/onlyfans-rabota-bez-lica",
+            label: "Your face on OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Agency scams: 10 red flags",
+          },
+        ],
+      },
+      {
+        type: "h2",
+        text: "Privacy: who can actually find your page",
+      },
+      {
+        type: "p",
+        text: "This is the question that stops most people, so let us be concrete. OnlyFans pages are not indexed by Google, so your name does not surface in a search. Geo-blocking closes the page to viewers in the countries you select — including your own — so it cannot be opened from your city even with a direct link.",
+      },
+      {
+        type: "p",
+        text: "On top of that: a pseudonym instead of your real name, a separate email and phone number used only for work, watermarks on previews, and promotion aimed exclusively at a distant audience. What we will not tell you is that this is bulletproof — no honest team will. VPNs and screenshots exist. But the combination of geo-blocking and far-away traffic reduces the practical risk to a very small number.",
+      },
+      {
+        type: "p",
+        text: "Your identity documents are a separate matter. The platform requires verification with a document and a selfie — that is mandatory and cannot be skipped — but those files stay private with OnlyFans and are never shown to subscribers or displayed on your page.",
+      },
+      {
+        type: "h2",
+        text: "Fansly and LoyalFans: the alternatives",
+      },
+      {
+        type: "p",
+        text: "OnlyFans is the largest platform of its kind, but not the only one. Fansly and LoyalFans work on the same logic — paid subscription, PPV in messages, tips, customs — with smaller audiences and, in return, less competition and somewhat looser content rules. Some creators run pages on more than one platform and cross-promote between them.",
+      },
+      {
+        type: "p",
+        text: "The practical difference: on OnlyFans there is more money circulating and more established demand, so a page that gets traffic grows faster; on the smaller platforms it is easier to stand out but harder to reach a high balance. For most creators the sensible order is OnlyFans first, alternatives second — and the choice can also depend on where you live, since availability differs by country.",
+      },
+      {
+        type: "h2",
+        text: "Who OnlyFans suits — and who should think twice",
+      },
+      {
+        type: "p",
+        text: "An honest portrait: OnlyFans suits women 18+ who are ready to work systematically on content and conversation. Looks and experience are not decisive — successful models come in every shape; regularity, discipline and willingness to learn matter far more. You can start from zero, with no audience, remotely.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Think twice if you are expecting passive income: this is active work, not money while you sleep.",
+          "Think twice if you are not ready for the fact that part of the audience sees you publicly — even with geo-blocking, total invisibility does not exist.",
+          "Think twice if selling in chat feels genuinely uncomfortable — although with a team the chats are not yours to run.",
+        ],
+      },
+      {
+        type: "p",
+        text: "On boundaries: setting them is a normal part of the job, not unprofessionalism. A good team and a reasonable audience respect your limits. Starting from zero, with no subscribers and from home, is genuinely possible — just treat it as a considered decision rather than a promised shortcut.",
+      },
+      {
+        type: "h2",
+        text: "AI models on OnlyFans: why teams work with real women",
+      },
+      {
+        type: "p",
+        text: "There is a lot of noise about AI-generated creators, and technically such pages exist. But the economics of the platform work against them: an OnlyFans subscriber is not paying for a picture — the internet is full of free pictures — he is paying for a real conversation with a real person, customs made to his request and the sense of personal contact.",
+      },
+      {
+        type: "p",
+        text: "Remember the number from earlier: 70–90% of income lives in messages. A fan comes back to a person he has a relationship with, not to a generated image. A generated page cannot record a voice note with his name, take a video call or shoot a custom to his script — and those are the most expensive products on the platform. On top of that, the platform requires identity verification, so a page with nobody real behind it lasts until the first check.",
+      },
+      {
+        type: "h2",
+        text: "How to start on OnlyFans: solo or with an agency",
+      },
+      {
+        type: "p",
+        text: "The first real decision is not your niche or your subscription price — it is solo versus managed. Everything else follows from it, because it determines how much of the work lands on you.",
+      },
+      {
+        type: "p",
+        text: "Solo: content, marketing, chats around the clock, promotion and risk are all yours. The upside is full control and the whole balance; the downside is that this is several professions at once, and without an advertising budget growth is slow.",
+      },
+      {
+        type: "p",
+        text: "With an agency: the content stays with you and the team takes the rest, at its own expense. Stated plainly, without a sales pitch, an agency normally covers:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Traffic and advertising — bringing in a high-spending audience, funded by the agency.",
+          "24/7 chats — a team of chatters running conversations and sales around the clock.",
+          "Content strategy and analytics — what to shoot, when to post, what to test.",
+          "Account protection and privacy — geo-blocking, watermarks, leak monitoring and takedowns.",
+          "Finances and payouts — account setup, verification and payment rails handled for you.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The minimum you need either way: you are 18+, you have a phone or camera, stable internet and a serious approach. A professional studio, prior experience and a large following are not required. And there is no bureaucracy at the start and no lock-in — you are free to stop whenever you want.",
+      },
+      {
+        type: "h2",
+        text: "Frequently asked questions about OnlyFans",
+      },
+      {
+        type: "h3",
+        text: "What is OnlyFans in simple terms?",
+      },
+      {
+        type: "p",
+        text: "OnlyFans is a subscription platform where a creator publishes paid content and talks to subscribers for money, and the subscriber pays for access and private conversation. It is not exclusively adult — there are fitness, music and cooking creators — but the paying majority is adult content. The content is closed: without a subscription you cannot see the page.",
+      },
+      {
+        type: "h3",
+        text: "How do OnlyFans creators make money?",
+      },
+      {
+        type: "p",
+        text: "From four sources: the subscription (a fixed fee for access), PPV — paid photos and videos sent in messages, tips, and custom content made to request. Roughly 70–90% of income comes from the messages rather than the subscription price. The platform keeps 20% commission; what remains is the page's turnover, before the model's share and taxes.",
+      },
+      {
+        type: "h3",
+        text: "How much do OnlyFans models make?",
+      },
+      {
+        type: "p",
+        text: "The range is enormous. Solo pages without traffic usually sit at $300–700 a month. With a team, traffic and regular content, income grows month by month, and strong managed pages reach a gross balance of $15,000–50,000. The model keeps 20–30% of that balance while the rest is reinvested into her page's growth — and she invests nothing herself. Guidelines, not guarantees.",
+      },
+      {
+        type: "h3",
+        text: "Is OnlyFans safe?",
+      },
+      {
+        type: "p",
+        text: "The platform itself is a legitimate service with stable payouts and mandatory identity verification, and pages are not indexed by search engines. The practical safety questions are privacy and leaks, and both are managed: geo-blocking, a pseudonym, separate contact details, watermarks and takedown requests. No one can promise absolute certainty, but the risk is manageable.",
+      },
+      {
+        type: "h3",
+        text: "Is OnlyFans free?",
+      },
+      {
+        type: "p",
+        text: "Registering and creating a page is free for creators. OnlyFans earns through a 20% commission on what you make. Subscribers pay you — you never pay to be on the platform. Anyone charging you a fee to join, to be trained or to be accepted is running a scam.",
+      },
+      {
+        type: "h3",
+        text: "Do you have to show your face on OnlyFans?",
+      },
+      {
+        type: "p",
+        text: "Both formats exist, but your face is a strong asset: subscribers pay for a person and a real conversation, and pages with a face usually earn more. Privacy, meanwhile, rests on geo-blocking rather than on hiding your face, so the two questions are separate ones.",
+      },
+      {
+        type: "h3",
+        text: "What do you need to start on OnlyFans?",
+      },
+      {
+        type: "p",
+        text: "The minimum: you are 18+, you have a valid ID for verification, an email, a phone or camera, stable internet and the readiness to shoot regularly. Experience, an audience, English and a studio are not required. The only hard condition is being of legal age.",
+      },
+      {
+        type: "h3",
+        text: "How long does it take to see income?",
+      },
+      {
+        type: "p",
+        text: "The account takes about fifteen minutes; the income takes longer. Solo, the first meaningful money usually appears in month two or three, once there is traffic. With a team running promotion and chats from day one the ramp is faster — but the first month is still a build-up phase, and anyone promising an immediate five-figure result is selling something.",
+      },
+      {
+        type: "h3",
+        text: "Can people I know find my page?",
+      },
+      {
+        type: "p",
+        text: "With geo-blocking you close your own country and any others you choose, and promotion targets the US, Canada and Australia, so people at home will not meet your page in ordinary search or feeds. Geo-blocking noticeably reduces the risk without giving an absolute guarantee, since VPNs and screenshots exist.",
+      },
+      {
+        type: "nav",
+        intro: "Keep reading:",
+        links: [
+          {
+            href: "/join",
+            label: "Apply to OFM — anonymous application form",
+          },
+          {
+            href: "/blog/onlyfans-modeli-kto-eto",
+            label: "What is an OF model? OFM meaning",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "How much OnlyFans models earn",
+          },
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model: the agency job",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "Beginners: agency or solo",
+          },
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Content plan and shoots",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "How to choose an agency",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Agency scams: 10 red flags",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: "If you finished this page with questions about your own situation, you can send an anonymous application or message us on Telegram @ofmm_agency. It commits you to nothing: we will talk through income, conditions and privacy calmly and without pressure. We work only with adults 18+, and every figure on this page is a gross guideline, not a guaranteed payout.",
+      },
+      {
+        type: "cta",
+        title: "Want to know whether this is for you?",
+        body: "If OnlyFans looks like your option after reading this, we will explain honestly how it all works and help you start with a team behind you. The application commits you to nothing.",
+        buttonHref: "/#contact",
+        buttonLabel: "Find out more",
+        note: "Figures on this site are gross page-balance turnover on OnlyFans, not the model's net income. 18+ only.",
+      },
+    ],
+  },
 };

@@ -2,9 +2,9 @@ import type { JoinContent } from './types';
 
 export const JOIN_ES: JoinContent = {
   meta: {
-    title: 'Trabajo de modelo OnlyFans — solicitud a la agencia OFM | Casting 2026',
+    title: 'Modelo OnlyFans — solicitud a la agencia, casting 2026',
     description:
-      'OFM busca modelos OnlyFans: empieza sin experiencia, el equipo se encarga del marketing y los chats, condiciones justas y cero pagos por adelantado. Rellena la solicitud en 2 minutos — un mánager te responde por Telegram en 24 horas.',
+      'Buscamos modelos OnlyFans: empieza sin experiencia, el equipo lleva marketing y chats, cero pagos por adelantado. Solicitud en 2 minutos, respuesta en 24 h. 18+.',
     keywords: [
       'trabajo de modelo onlyfans',
       'cómo ser modelo de onlyfans',

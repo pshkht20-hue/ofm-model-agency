@@ -2,9 +2,9 @@ import type { JoinContent } from './types';
 
 export const JOIN_EN: JoinContent = {
   meta: {
-    title: 'Become an OF Model — OFM Agency Casting & Application',
+    title: 'Become an OF Model — Agency Casting & Application 2026',
     description:
-      'OFM is recruiting OnlyFans models: no experience needed, the team runs marketing and fan chats, fair terms with zero upfront fees. Fill out the 2-minute application — a manager replies on Telegram within 24 hours.',
+      'Now recruiting OnlyFans models: no experience needed, the team runs marketing and fan chats, zero upfront fees. A 2-minute application, reply on Telegram in 24h. 18+.',
     keywords: [
       'become an onlyfans model',
       'onlyfans modeling jobs',

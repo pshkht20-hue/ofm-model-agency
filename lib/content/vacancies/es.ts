@@ -74,7 +74,7 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
       heading: '¿En qué consiste el trabajo en OnlyFans?',
       paragraphs: [
         'OnlyFans es una plataforma de suscripciones de pago, y «trabajo en OnlyFans» es mucho más que las propias modelos. En equipo con la agencia, la modelo solo se ocupa del contenido: 2–3 horas de grabación al día según un plan listo. Todo lo demás lo hace el equipo de la agencia: los chatters venden contenido en las conversaciones con los suscriptores, la gestión arma el plan de contenido y vigila las cifras, y la promo trae tráfico con capacidad de pago.',
-        'El dato clave del nicho: el 70–90% de los ingresos de una página vienen de la conversación, no de la suscripción — por eso el rol de chatter es la segunda vacante clave de la agencia junto a la de modelo. Si es tu primera vez en el tema, empieza por la guía [qué es OnlyFans](/blog/chto-takoe-onlyfans) y luego vuelve a los roles de arriba.',
+        'El dato clave del nicho: el 70–90% de los ingresos de una página vienen de la conversación, no de la suscripción — por eso el rol de chatter es la segunda vacante clave de la agencia junto a la de modelo. Si es tu primera vez en el tema, empieza por la guía [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli) y luego vuelve a los roles de arriba.',
       ],
     },
     {
@@ -201,7 +201,7 @@ const CHATTER_ES: VacancyContent = {
       heading: 'Quién es un chatter y por qué es la profesión clave en una agencia de OnlyFans',
       paragraphs: [
         'El chatter es un especialista que se comunica con los suscriptores en nombre de la página de la modelo: responde a los mensajes, mantiene el interés de los fans y vende contenido de pago en los mensajes privados. En OnlyFans el 70–90% de los ingresos de una página vienen precisamente de la mensajería, no de la suscripción — por eso un buen operador de chat literalmente hace la caja de la página.',
-        '¿Quieres entender la profesión más a fondo? Tenemos un análisis detallado: [quién es un chatter de OnlyFans y cómo trabaja](/blog/chatter-onlyfans-kto-eto). Y si es la primera vez que oyes hablar de la plataforma, empieza por la guía [qué es OnlyFans](/blog/chto-takoe-onlyfans).',
+        '¿Quieres entender mejor cómo funciona el trabajo por dentro? Mira cómo se estructuran [los chats y las ventas por DM](/blog/onlyfans-chaty-dm-prodazhi). Y si es la primera vez que oyes hablar de la plataforma, empieza por la guía [trabajo de modelo en OnlyFans](/blog/rabota-modelyu-onlyfans).',
       ],
     },
     {
