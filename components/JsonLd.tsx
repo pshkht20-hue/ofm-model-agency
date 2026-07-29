@@ -50,6 +50,26 @@ export function JsonLd({ locale = 'ru', description }: JsonLdProps) {
       'OnlyFans model recruitment',
     ],
     areaServed: 'Worldwide',
+    /**
+     * Услуги переехали сюда из отдельной схемы ProfessionalService (удалена
+     * 29.07.2026, подтверждено владельцем). Причины удаления: ProfessionalService —
+     * подтип LocalBusiness, которому Google требует address; физического адреса
+     * у нас нет и публиковать его мы не будем. Плюс та схема объявляла второе
+     * «OFM's Model Agency» без @id, то есть раздваивала сущность бренда на всех
+     * 266 страницах.
+     * Service — не LocalBusiness, адрес ему не нужен, и здесь он привязан к
+     * единственному узлу Organization через #organization.
+     */
+    makesOffer: {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'OnlyFans management and creator agency services',
+        serviceType: 'OnlyFans management and creator agency services',
+        provider: { '@id': `${siteUrl}/#organization` },
+        areaServed: 'Worldwide',
+      },
+    },
     // Официальная почта — публичный контакт организации (E-E-A-T: «реальная компания»)
     email: siteConfig.email,
     ...(telegram
@@ -77,7 +97,6 @@ export function JsonLd({ locale = 'ru', description }: JsonLdProps) {
 
   return (
     <>
-      <ServiceJsonLd locale={locale} description={description} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}

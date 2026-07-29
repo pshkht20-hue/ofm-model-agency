@@ -8,7 +8,6 @@ import {
   BreadcrumbJsonLd,
   FaqPageJsonLd,
   HowToJsonLd,
-  JobPostingJsonLd,
 } from '@/components/seo/StructuredData';
 import {
   getAllBlogSlugs,
@@ -43,62 +42,34 @@ const DATE_LOCALE: Record<Locale, string> = {
   es: 'es-ES',
 };
 
-/** Slug of the genuine remote-vacancy post that gets JobPosting structured data. */
-const JOB_POSTING_SLUG = 'rabota-modelyu-onlyfans';
-const JOB_TITLE: Record<Locale, string> = {
-  ru: 'Модель OnlyFans (удалённо, без опыта)',
-  uk: 'Модель OnlyFans (віддалено, без досвіду)',
-  en: 'OnlyFans Model (remote, no experience)',
-  es: 'Modelo de OnlyFans (remoto, sin experiencia)',
-};
-const JOB_APPLICANT_COUNTRIES = [
-  'Ukraine',
-  'Poland',
-  'Germany',
-  'Czechia',
-  'Italy',
-  'Spain',
-  'United Kingdom',
-  'Canada',
-];
-
-/** City pages also get a city-scoped remote JobPosting — the same honest single
- *  vacancy, geo-titled. Earns the Google "job listing" rich result for
- *  "онлифанс работа [город]" and gives an AI a structured hiring fact to cite. */
-const CITY_JOB_TITLE: Record<string, Partial<Record<Locale, string>>> = {
-  'onlyfans-rabota-kiev': {
-    ru: 'Модель OnlyFans — работа в Киеве (удалённо, без опыта)',
-    uk: 'Модель OnlyFans — робота в Києві (віддалено, без досвіду)',
-  },
-  'onlyfans-rabota-odessa': {
-    ru: 'Модель OnlyFans — работа в Одессе (удалённо, без опыта)',
-    uk: 'Модель OnlyFans — робота в Одесі (віддалено, без досвіду)',
-  },
-  'onlyfans-rabota-harkov': {
-    ru: 'Модель OnlyFans — работа в Харькове (удалённо, без опыта)',
-    uk: 'Модель OnlyFans — робота в Харкові (віддалено, без досвіду)',
-  },
-  'onlyfans-rabota-dnepr': {
-    ru: 'Модель OnlyFans — работа в Днепре (удалённо, без опыта)',
-    uk: 'Модель OnlyFans — робота у Дніпрі (віддалено, без досвіду)',
-  },
-  'onlyfans-rabota-lvov': {
-    ru: 'Модель OnlyFans — работа во Львове (удалённо, без опыта)',
-    uk: 'Модель OnlyFans — робота у Львові (віддалено, без досвіду)',
-  },
-};
-
-function jobPostingProps(
-  slug: string,
-  locale: Locale,
-): { title: string; applicantCountries: string[] } | null {
-  if (slug === JOB_POSTING_SLUG) {
-    return { title: JOB_TITLE[locale], applicantCountries: JOB_APPLICANT_COUNTRIES };
-  }
-  const cityTitle = CITY_JOB_TITLE[slug]?.[locale];
-  if (cityTitle) return { title: cityTitle, applicantCountries: ['Ukraine'] };
-  return null;
-}
+/**
+ * ⛔ JobPosting УДАЛЁН ИЗ БЛОГА 29.07.2026 — подтверждено владельцем.
+ *
+ * Здесь жила разметка JobPosting для статьи rabota-modelyu-onlyfans и пяти
+ * городских статей (Киев, Одесса, Харьков, Днепр, Львов). Замер на проде показал,
+ * что ОДНА И ТА ЖЕ вакансия была размечена на шести URL одновременно:
+ *   /blog/rabota-modelyu-onlyfans   «Модель OnlyFans (удалённо, без опыта)»
+ *   /join                           «Модель OnlyFans (удалённая работа)»
+ *   /vacancies/model/ukraine        «Онлифанс работа моделью в Украине»
+ *   /vacancies/for-girls            «Работа для девушек онлайн»
+ *   /blog/onlyfans-rabota-kiev      ↔ /vacancies/model/ukraine/kyiv
+ *   /blog/onlyfans-rabota-lvov      ↔ /vacancies/model/ukraine/lviv
+ *   (то же для Харькова)
+ * Google называет это duplicate job postings и прямо запрещает публиковать одну
+ * вакансию по нескольким URL. Санкция по job-policies бьёт по домену целиком.
+ *
+ * Проведена граница: БЛОГ — информационные статьи, ВАКАНСИИ живут в /vacancies
+ * и /join. Городские вакансии остаются на /vacancies/model/ukraine/{city}.
+ * Одесса и Днепр гео-страниц не имеют — если они нужны как вакансии, создаём им
+ * гео-страницы, а не размечаем блог-статью.
+ *
+ * Потеря нулевая: Google for Jobs в украинской adult-выдаче не отдаётся вовсе
+ * (проверено 28.07.2026), то есть rich-результат мы и так не получали — только
+ * несли риск.
+ *
+ * НЕ возвращать разметку в блог. Нужна новая городская вакансия — заводится
+ * гео-страница в lib/content/model-geo/countries/.
+ */
 
 /** Pull a visible FAQ (h3 question ending in "?" + the next paragraph) into
  *  FAQPage items. Matches on-page content; strengthens AI Q&A extraction. */
@@ -150,7 +121,6 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPost(slug, blogLocale);
   if (!post) notFound();
   const categoryLabels = getBlogCategoryLabels(blogLocale);
-  const jobPosting = jobPostingProps(post.slug, blogLocale);
   const faqItems = extractFaqItems(post.blocks);
 
   return (
@@ -161,14 +131,6 @@ export default async function BlogPostPage({ params }: Props) {
       ]}
     >
       <ArticleJsonLd post={post} locale={blogLocale} />
-      {jobPosting && (
-        <JobPostingJsonLd
-          post={post}
-          locale={blogLocale}
-          title={jobPosting.title}
-          applicantCountries={jobPosting.applicantCountries}
-        />
-      )}
       {faqItems.length >= 2 && <FaqPageJsonLd items={faqItems} />}
       {HOW_TO_SLUGS.has(post.slug) && <HowToJsonLd post={post} locale={blogLocale} />}
       <BreadcrumbJsonLd
