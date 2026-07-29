@@ -63,9 +63,11 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
               </div>
               <p className="text-[11px] text-white/42 mt-0.5 truncate">{review.meta}</p>
             </div>
-            <time className="text-[10px] text-white/32 whitespace-nowrap shrink-0 pt-0.5">
-              {review.dateLabel}
-            </time>
+            {review.dateLabel && (
+              <time className="text-[10px] text-white/32 whitespace-nowrap shrink-0 pt-0.5">
+                {review.dateLabel}
+              </time>
+            )}
           </div>
 
           <div className="mt-2 flex items-center gap-2 flex-wrap">
@@ -117,7 +119,9 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
           <div className="max-w-[94%] rounded-2xl rounded-tr-sm border border-accent-pink/20 bg-accent-pink/[0.06] px-4 py-3">
             <p className="text-[10px] font-medium text-accent-pink/80 mb-1.5">{t('agencyReply')}</p>
             <p className="text-[13px] text-white/62 leading-relaxed">{review.agencyReply.text}</p>
-            <p className="text-[10px] text-white/28 mt-2">{review.agencyReply.dateLabel}</p>
+            {review.agencyReply.dateLabel && (
+              <p className="text-[10px] text-white/28 mt-2">{review.agencyReply.dateLabel}</p>
+            )}
           </div>
         </div>
       )}

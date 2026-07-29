@@ -51,11 +51,19 @@ export function getSocialHref(platform: SocialPlatform): string | null {
  * Авторитетные entity-профили для Organization.sameAs. Это НЕ соц-CTA
  * (иконок в футере не дают) — а узлы графа сущности, которые помогают Google
  * Knowledge Graph и ИИ понять, что «OFM's Model Agency» — реальная компания.
- * Добавляй по одному по мере создания: Wikidata → LinkedIn → Crunchbase →
- * Trustpilot → X. Каждый должен ссылаться в ответ на ofmmodels.com.
+ *
+ * ⛔ ПУСТО СОЗНАТЕЛЬНО (29.07.2026). Здесь лежали три URL, объявлявшие профили,
+ * которых не существует: Wikidata Q140391425 (запрос к API отдаёт `missing`),
+ * Crunchbase и Trustpilot — оба непроверены. Ложная декларация уходила на все
+ * 266 страниц через components/JsonLd.tsx и наследовалась в JobPosting.
+ * Заявлять в разметке несуществующие сущности нельзя: это ровно тот тип
+ * несоответствия разметки действительности, за который Google снимает
+ * rich-результаты вручную.
+ *
+ * ПРАВИЛО ДОБАВЛЕНИЯ: URL попадает сюда только после ручной проверки двух
+ * условий — (1) страница реально существует и открывается, (2) она ссылается
+ * в ответ на ofmmodels.com. Порядок по ценности: LinkedIn Company → Crunchbase
+ * → Trustpilot → X. Wikidata не заводим: самосозданный элемент без независимых
+ * источников удалят по критерию значимости.
  */
-export const ENTITY_SAME_AS: string[] = [
-  'https://www.wikidata.org/wiki/Q140391425', // Wikidata — OFM's Model Agency
-  'https://www.crunchbase.com/organization/ofm-s-model-agency', // Crunchbase
-  'https://www.trustpilot.com/review/ofmmodels.com', // Trustpilot
-];
+export const ENTITY_SAME_AS: string[] = [];
