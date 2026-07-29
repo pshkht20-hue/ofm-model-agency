@@ -29,6 +29,11 @@ export function SiteFooter() {
   ];
 
   const RESOURCES = [
+    // /about — страница «кто мы» (29.07.2026). Тема смежна с YMYL, а объяснения
+    // «что мы за компания» не было ни на одной из 266 страниц: sitewide-ссылка
+    // из футера — единственный способ дать новой странице внутренний вес сразу,
+    // и она же ведёт на неё брендовый трафик (главная: 773 показа, CTR 7,63%).
+    { href: '/about' as const, label: tNav('aboutPage') },
     { href: '/faq' as const, label: tNav('faq') },
     { href: '/blog' as const, label: tNav('blog') },
     { href: '/vacancies' as const, label: tNav('careers') },

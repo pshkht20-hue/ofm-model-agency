@@ -6,6 +6,7 @@ import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { FaqAccordion } from '@/components/seo/FaqAccordion';
 import { FaqPageJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import { ItemListJsonLd } from '@/components/seo/ItemListJsonLd';
+import { VacancyFacets } from '@/components/seo/VacancyFacets';
 import { routing, type Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
 import {
@@ -136,6 +137,12 @@ export default async function ModelGeoHubPage({ params }: Props) {
           <RichText text={paragraph} />
         </p>
       ))}
+
+      {/* Фасеты каталога над лентой: чипы «Киев (3)», «Без опыта (10)» с реальными
+          числами из MODEL_FEED. Приём лидера кластера (xjobber, позиция 1) —
+          18 узлов перелинковки на гео-страницы, города и форматы + сигнал
+          настоящего каталога вакансий. Ленту и список стран не заменяет. */}
+      <VacancyFacets locale={loc} className="mt-10" />
 
       {/* Живая лента позиций: джоборд-формат — заголовок со статус-индикатором,
           строки «роль + выгоды слева, крупная вилка справа». JobPosting-схемы
