@@ -9,6 +9,12 @@ import { getModelGeoContent, getModelGeoGeoSlugs } from '@/lib/content/model-geo
  * на /vacancies/model/[country] из реестра model-geo. Сильнейший внутренний
  * приём BOFU-перелинковки (Layboard). Локализованные имена стран берутся из
  * content.countryName каждой страны. Презентационный слой — не трогает схему.
+ *
+ * ⛔ НЕ рендерить на страницах, где уже стоит <GeoLinkBar/>: он отдаёт те же
+ * URL с теми же анкорами, и кластер превращается в 8–9 дублирующихся href на
+ * страницу (аудит перелинковки 07.2026 — именно поэтому блок снят со всех 72
+ * страниц /vacancies/model/[country]). Живые места: /vacancies и
+ * /vacancies/[slug], где GeoLinkBar нет.
  */
 export function VacancyGeoCluster({
   locale,
@@ -22,7 +28,10 @@ export function VacancyGeoCluster({
   excludeSlug?: string;
   className?: string;
 }): ReactNode {
-  const countries = getModelGeoGeoSlugs()
+  // Set — страховка от повторного href: getModelGeoGeoSlugs() маппит массив
+  // COUNTRY_FILES напрямую (а не Map BY_SLUG), поэтому случайная дублирующая
+  // запись в реестре дала бы две одинаковые ссылки и коллизию React-key.
+  const countries = [...new Set(getModelGeoGeoSlugs())]
     .filter((slug) => slug !== excludeSlug)
     .map((slug) => {
       const content = getModelGeoContent(slug, locale);

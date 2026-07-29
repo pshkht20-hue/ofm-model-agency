@@ -4,7 +4,11 @@
  * @see https://unsplash.com/license
  */
 export type BlogCover = {
-  /** Локальный путь (приоритет после npm run blog:covers) */
+  /**
+   * Локальный путь в public/ (файлы кладёт npm run blog:covers).
+   * Источник og:image / twitter:image для статей блога — картинка соцкарточки
+   * обязана лежать на нашем домене, иначе её судьба зависит от чужого CDN.
+   */
   localSrc: string;
   /** Unsplash CDN — 1600×900, crop, q=85 */
   remoteSrc: string;
@@ -18,6 +22,24 @@ export type BlogCover = {
 function coverUrl(photoId: string): string {
   return `https://images.unsplash.com/photo-${photoId}?auto=format&fit=crop&w=1600&h=900&q=85`;
 }
+
+/**
+ * Реальный размер локальных копий обложек — 1600×900.
+ * Не «примерно»: замерено 29.07.2026 по всем 42 файлам в public/blog/covers
+ * (System.Drawing на каждом .jpg — 42 из 42 отдали 1600x900), и это тот же размер,
+ * который зашит в coverUrl (w=1600&h=900), то есть скрипт npm run blog:covers
+ * не может принести другой.
+ *
+ * Зачем константы: og:image без og:image:width/og:image:height заставляет соцсеть
+ * при первом шаринге сначала скачать картинку — до этого карточка рендерится без
+ * изображения. Это било по CTR всех внешних ссылок на 42 статьи блога (в четырёх
+ * локалях — 132 URL), включая покупные размещения, за которые платим деньгами.
+ *
+ * Если когда-нибудь изменится размер в coverUrl — менять и здесь, иначе соцсети
+ * получат враньё о размере и обрежут карточку.
+ */
+export const BLOG_COVER_OG_WIDTH = 1600;
+export const BLOG_COVER_OG_HEIGHT = 900;
 
 export const BLOG_COVERS: Record<string, BlogCover> = {
   'rabota-modelyu-onlyfans': {

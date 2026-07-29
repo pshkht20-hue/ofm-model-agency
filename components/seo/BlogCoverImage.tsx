@@ -1,8 +1,19 @@
 import Image from 'next/image';
 import type { BlogCover } from '@/lib/content/blog/covers';
 
+/**
+ * Минимум, которого хватает для рендера обложки: картинка + alt. Кредиты
+ * фотографа рисует только hero-вариант, поэтому карточка листинга получает
+ * урезанный объект — её props сериализуются в HTML страницы, и лишние поля
+ * BlogCover стоили ~10 КБ на /blog (см. blog-card-post.ts).
+ * Тип расширяющий: полный BlogCover ему соответствует, вызовы со статей
+ * блога не меняются.
+ */
+export type BlogCoverRenderable = Pick<BlogCover, 'remoteSrc' | 'alt'> &
+  Partial<Omit<BlogCover, 'remoteSrc' | 'alt'>>;
+
 type BlogCoverImageProps = {
-  cover: BlogCover;
+  cover: BlogCoverRenderable;
   priority?: boolean;
   variant?: 'hero' | 'card';
 };
@@ -37,7 +48,7 @@ export function BlogCoverImage({
         className="absolute inset-0 bg-gradient-to-br from-accent-pink/10 via-transparent to-accent-violet/10 pointer-events-none opacity-80"
         aria-hidden
       />
-      {!isCard && (
+      {!isCard && cover.photographer && (
         <figcaption className="absolute bottom-0 left-0 right-0 px-4 py-3 text-[10px] text-white/45 leading-relaxed">
           Фото:{' '}
           <a

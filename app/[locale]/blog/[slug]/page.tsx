@@ -16,6 +16,10 @@ import {
   getBlogPostLocales,
   type BlogPost,
 } from '@/lib/content/blog';
+import {
+  BLOG_COVER_OG_HEIGHT,
+  BLOG_COVER_OG_WIDTH,
+} from '@/lib/content/blog/covers';
 import { SectionViewTracker } from '@/components/analytics/SectionViewTracker';
 import { BlogArticleLikeBar } from '@/components/seo/BlogArticleLikeBar';
 import { RelatedPosts } from '@/components/seo/RelatedPosts';
@@ -23,6 +27,7 @@ import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
+import { getSiteUrl } from '@/lib/site';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -99,17 +104,47 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(slug, locale as Locale);
   if (!post) return {};
 
-  return createPageMetadata({
+  /**
+   * og:image ведём на НАШУ копию обложки, а не на images.unsplash.com.
+   *
+   * Замер 29.07.2026: 132 URL блога (42 статьи × локали) отдавали og:image на
+   * чужой CDN и без размеров. Две проблемы разом:
+   *  1) чужой домен — картинка соцкарточки может исчезнуть или смениться без нас,
+   *     и все ранее расшаренные ссылки посыплются;
+   *  2) без og:image:width/height соцсеть при первом шаринге обязана сначала
+   *     скачать файл, поэтому карточка часто показывается вообще без картинки —
+   *     это прямой минус к CTR внешних ссылок, включая покупные размещения.
+   * Локальные копии проверены curl-ом: все 42 файла отдают 200 и байт в байт
+   * совпадают с public/blog/covers (например chto-takoe-onlyfans.jpg — 280 528 B).
+   */
+  const coverUrl = post.cover ? `${getSiteUrl()}${post.cover.localSrc}` : undefined;
+
+  const metadata = createPageMetadata({
     title: post.title,
     description: post.description,
     path: `/blog/${post.slug}`,
     locale: locale as Locale,
     keywords: post.keywords,
     availableLocales: getBlogPostLocales(post.slug),
-    image: post.cover
-      ? { url: post.cover.remoteSrc, alt: post.cover.alt }
-      : undefined,
+    image: coverUrl && post.cover ? { url: coverUrl, alt: post.cover.alt } : undefined,
   });
+
+  // Размеры дописываем поверх результата: тип image в createPageMetadata —
+  // { url, alt } без width/height, а lib/seo.ts относится к СЕО-скелету и правится
+  // только с подтверждения владельца. Как только в PageMeta появятся width/height,
+  // этот блок можно снести и передать размеры напрямую.
+  if (coverUrl && post.cover && metadata.openGraph) {
+    metadata.openGraph.images = [
+      {
+        url: coverUrl,
+        width: BLOG_COVER_OG_WIDTH,
+        height: BLOG_COVER_OG_HEIGHT,
+        alt: post.cover.alt,
+      },
+    ];
+  }
+
+  return metadata;
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -122,6 +157,37 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
   const categoryLabels = getBlogCategoryLabels(blogLocale);
   const faqItems = extractFaqItems(post.blocks);
+
+  /**
+   * Видимая дата обновления (только для статей блога, JobPosting здесь больше нет
+   * и трогать её нельзя — см. блок выше).
+   *
+   * Было: печаталась одна publishedAt, updatedAt жил только в
+   * ArticleJsonLd.dateModified. Google берёт дату сниппета из совокупности
+   * сигналов и при расхождении разметки с видимым текстом чаще верит видимому —
+   * поэтому в выдаче светилась дата публикации (у «сколько зарабатывают модели»
+   * это 18.03.2026 при реальном обновлении 24.07.2026). На freshness-запросах
+   * («онлифанс 2026», «сколько зарабатывают») дата в сниппете — прямой CTR-фактор
+   * и один из немногих рычагов под AI Overview.
+   *
+   * Показываем «обновлено» ТОЛЬКО когда updatedAt действительно позже publishedAt:
+   * из 24 статей с этим полем у 9 даты совпадают, и лепить им «обновлено» — то же
+   * самое омоложение дат, за которое Google наказывает. Метку получают 15 статей,
+   * среди них весь верх трафика: chto-takoe-onlyfans (9 963 показа/мес,
+   * обновлена 26.07 при публикации 28.06), kak-zaregistrirovatsya (2 218),
+   * chatter-onlyfans-kto-eto (1 353), onlyfans-skolko-zarabatyvayut-modeli
+   * (18.03 → 24.07 — та самая freshness-выдача «сколько зарабатывают»).
+   */
+  const publishedDate = new Date(post.publishedAt);
+  const updatedDate = post.updatedAt ? new Date(post.updatedAt) : null;
+  const isUpdated =
+    updatedDate !== null && updatedDate.getTime() > publishedDate.getTime();
+  const formatDate = (date: Date) =>
+    date.toLocaleDateString(DATE_LOCALE[blogLocale], {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
 
   return (
     <SeoPageShell
@@ -160,16 +226,28 @@ export default async function BlogPostPage({ params }: Props) {
       </p>
       <h1 className="heading-section text-[clamp(1.75rem,4vw,2.75rem)] mb-4">{post.title}</h1>
       <p className="text-lead mb-6">{post.description}</p>
-      <time
-        dateTime={post.publishedAt}
-        className="text-xs text-white/35 uppercase tracking-widest block mb-6"
-      >
-        {new Date(post.publishedAt).toLocaleDateString(DATE_LOCALE[blogLocale], {
-          day: 'numeric',
-          month: 'long',
-          year: 'numeric',
-        })}
-      </time>
+      {isUpdated && updatedDate ? (
+        // Дата обновления идёт первой и ярче: она — та, ради которой правка.
+        // Дату публикации не прячем — иначе теряется возраст материала (E-E-A-T).
+        <p className="text-xs uppercase tracking-widest mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
+          <time dateTime={post.updatedAt} className="text-white/60">
+            {t('updatedOn', { date: formatDate(updatedDate) })}
+          </time>
+          <span className="text-white/20" aria-hidden>
+            ·
+          </span>
+          <time dateTime={post.publishedAt} className="text-white/35">
+            {t('publishedOn', { date: formatDate(publishedDate) })}
+          </time>
+        </p>
+      ) : (
+        <time
+          dateTime={post.publishedAt}
+          className="text-xs text-white/35 uppercase tracking-widest block mb-6"
+        >
+          {formatDate(publishedDate)}
+        </time>
+      )}
 
       <BlogArticleLikeBar slug={post.slug} />
 

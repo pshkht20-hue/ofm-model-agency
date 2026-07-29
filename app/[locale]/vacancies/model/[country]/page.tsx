@@ -10,7 +10,6 @@ import { FaqPageJsonLd, BreadcrumbJsonLd } from '@/components/seo/StructuredData
 import { ModelGeoJobPostingJsonLd } from '@/components/seo/ModelGeoJobPostingJsonLd';
 import { VacancyChips } from '@/components/seo/VacancyChips';
 import { VacancyEmployerBadge } from '@/components/seo/VacancyEmployerBadge';
-import { VacancyGeoCluster } from '@/components/seo/VacancyGeoCluster';
 import { StickyApplyBar } from '@/components/seo/StickyApplyBar';
 import { GeoLinkBar } from '@/components/seo/GeoLinkBar';
 import { WhyOfmStrip } from '@/components/seo/WhyOfmStrip';
@@ -19,12 +18,6 @@ import { RelatedVacancies } from '@/components/seo/RelatedVacancies';
 import { QuickApply } from '@/components/seo/QuickApply';
 import { UsefulReading } from '@/components/seo/UsefulReading';
 
-/** Курируемые статьи «Полезное перед стартом» для модельных вакансий. */
-const USEFUL_SLUGS = [
-  'kak-stat-onlyfans-modelyu-s-nulya',
-  'onlyfans-skolko-zarabatyvayut-modeli',
-  'onlyfans-anonimnost-i-bezopasnost',
-];
 import { routing, type Locale } from '@/i18n/routing';
 import { createPageMetadata } from '@/lib/seo';
 import {
@@ -32,10 +25,52 @@ import {
   getModelGeoCountry,
   getModelGeoDates,
   getModelGeoCountrySlugs,
+  getModelGeoPageSlugs,
   getModelGeoUi,
   isModelGeoSlug,
 } from '@/lib/content/model-geo';
 import { RichText } from '../../RichText';
+
+/**
+ * «Полезное перед стартом» — мост из раздела вакансий в инфо-ядро блога.
+ *
+ * ПРИЧИНА ПЕРЕДЕЛКИ (аудит перелинковки 07.2026): все 72 страницы
+ * /vacancies/model отдавали блогу одну и ту же захардкоженную тройку слагов,
+ * и НИ ОДНОГО пиллара среди них не было. При этом 781 внутренняя ссылка ведёт
+ * на 22 ru-страницы раздела вакансий, который даёт ~1,5% показов сайта, а
+ * обратная связка в инфо-ядро — 2 ссылки из 192: почти половина внутреннего
+ * веса ru-локали была закольцована внутри раздела.
+ *
+ * ЧТО СДЕЛАНО: два пула — пиллары (реальные носители показов, GSC 01–28.07.2026)
+ * и тематически близкие к вакансии статьи-саппорты. Оба ротируются по позиции
+ * страницы в реестре гео и чередуются «пиллар → саппорт»; рендерится 4 ссылки:
+ * ru/uk получают 2 пиллара + 2 саппорта, en — минимум 1 пиллар, es (где нет
+ * локализаций пилларов) — 4 саппорта. Ротация детерминирована (реестр
+ * статичен), но у каждой из 18 страниц свой набор, поэтому 72 страницы больше
+ * не бьют в один и тот же URL.
+ */
+const PILLAR_SLUGS = [
+  'chto-takoe-onlyfans', // 9 963 показа, поз. 12,2 — главный пиллар инфо-ядра
+  'kak-zaregistrirovatsya-na-onlyfans', // 2 218 показов
+  'chatter-onlyfans-kto-eto', // 1 353 показа
+  'onlyfans-modeli-kto-eto', // 735 показов
+];
+
+/** Саппорт-статьи: близки к вакансии по теме, есть локализации под en/es. */
+const SUPPORT_SLUGS = [
+  'kak-stat-onlyfans-modelyu-s-nulya',
+  'onlyfans-skolko-zarabatyvayut-modeli',
+  'onlyfans-anonimnost-i-bezopasnost',
+  'rabota-modelyu-onlyfans',
+  'onlyfans-agentstvo-dlya-nachinayushchih',
+];
+
+/** Сдвиг списка по кругу: rotate([a,b,c], 1) → [b,c,a]. Чистая функция → SSR-стабильно. */
+function rotate<T>(list: T[], offset: number): T[] {
+  if (list.length === 0) return list;
+  const shift = ((offset % list.length) + list.length) % list.length;
+  return [...list.slice(shift), ...list.slice(0, shift)];
+}
 
 type Props = { params: Promise<{ locale: string; country: string }> };
 
@@ -76,6 +111,18 @@ export default async function ModelGeoCountryPage({ params }: Props) {
   const ui = getModelGeoUi(loc);
   const dates = getModelGeoDates(country);
   const faqItems = content.faq.map((item) => ({ question: item.q, answer: item.a }));
+
+  // Позиция страницы в реестре гео — единый детерминированный сдвиг ротации
+  // блока «Полезное перед стартом» (реестр статичен → сборки совпадают).
+  const rotationIndex = Math.max(getModelGeoPageSlugs().indexOf(country), 0);
+  const pillars = rotate(PILLAR_SLUGS, rotationIndex);
+  const support = rotate(SUPPORT_SLUGS, rotationIndex);
+  // Чередование «пиллар → саппорт»: пул с запасом (9 слагов), рендерятся первые 4
+  // из тех, что реально существуют в текущей локали (фильтр внутри UsefulReading).
+  const usefulSlugs = [
+    ...pillars.flatMap((slug, i) => (i < support.length ? [slug, support[i]] : [slug])),
+    ...support.slice(pillars.length),
+  ];
 
   const { min, max } = record.incomeUsd;
   // Видимая вилка = baseSalary в JSON-LD (требование Google к JobPosting).
@@ -267,19 +314,21 @@ export default async function ModelGeoCountryPage({ params }: Props) {
         <FaqAccordion categories={[{ title: ui.faqHeading, items: faqItems }]} />
       </div>
 
-      {/* «Полезное перед стартом»: мост в инфо-ядро блога */}
-      <UsefulReading locale={loc} slugs={USEFUL_SLUGS} className="mt-16" />
+      {/* «Полезное перед стартом»: мост в инфо-ядро блога (ротация пилларов) */}
+      <UsefulReading locale={loc} slugs={usefulSlugs} limit={4} className="mt-16" />
 
       {/* Соседние вакансии — с любой страницы есть следующий шаг */}
       <RelatedVacancies locale={loc} currentSlug={country} className="mt-16" />
 
-      {/* Нижний гео-кластер перелинковки: другие страны (усиливает BOFU) */}
-      <VacancyGeoCluster
-        locale={loc}
-        heading={ui.geoClusterHeading}
-        excludeSlug={country}
-        className="mt-16"
-      />
+      {/* ⛔ НЕ возвращать сюда <VacancyGeoCluster/> (снят 29.07.2026).
+          Причина: GeoLinkBar выше (строка с чипами под H1) уже отдаёт ВСЕ 12
+          гео-страниц раздела теми же URL и теми же анкорами — нижний кластер
+          дублировал 8–9 из них на каждой из 72 страниц (≈612 дублирующихся
+          href по сайту, 100% пересечение). Второй анкор на тот же URL веса не
+          добавляет, зато раздувал закольцованность раздела: 781 внутренняя
+          ссылка на 22 ru-страницы вакансий при ~1,5% показов сайта.
+          Компонент остаётся в /vacancies и /vacancies/[slug], где GeoLinkBar
+          не рендерится. */}
 
       {/* Мобильный липкий apply-bar → анкета /join */}
       <StickyApplyBar href="/join" label={ui.applyButton} />

@@ -28,18 +28,26 @@ const MIN_READ: Record<Locale, string> = {
 export function UsefulReading({
   locale,
   slugs,
+  limit = 5,
   className = '',
 }: {
   locale: Locale;
-  /** Курируемые слаги статей (3–5), релевантные этой вакансии. */
+  /**
+   * Курируемые слаги статей в порядке приоритета. Может быть ДЛИННЕЕ limit:
+   * слаги без локале-оверлея отсеиваются, поэтому пул с запасом гарантирует,
+   * что на uk/en/es блок не схлопнется до одной-двух ссылок (у es, например,
+   * нет ни одного из пилларов инфо-ядра).
+   */
   slugs: string[];
+  /** Сколько ссылок реально рендерить (после отсева по локали). */
+  limit?: number;
   className?: string;
 }): ReactNode {
   const posts = slugs
     .filter((slug) => locale === 'ru' || getBlogPostLocales(slug).includes(locale))
     .map((slug) => getBlogPost(slug, locale))
     .filter((p): p is NonNullable<typeof p> => p !== undefined)
-    .slice(0, 5);
+    .slice(0, limit);
 
   if (posts.length === 0) return null;
 

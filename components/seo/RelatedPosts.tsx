@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { getRelatedPosts } from '@/lib/content/blog';
 import type { Locale } from '@/i18n/routing';
 import { BlogPostCard } from '@/components/seo/BlogPostCard';
+import { toBlogCardPost } from '@/components/seo/blog-card-post';
 import { RelatedPostsList } from '@/components/seo/RelatedPostsList';
 
 export async function RelatedPosts({
@@ -21,7 +22,10 @@ export async function RelatedPosts({
       <p className="eyebrow-bright mb-5">{t('readAlso')}</p>
       <RelatedPostsList className="space-y-5">
         {related.map((post) => (
-          <BlogPostCard key={post.slug} post={post} locale={locale} />
+          // Тот же сужающий мост, что и на /blog: три полных поста в props
+          // блока «Читайте также» — это ~45 КБ лишнего HTML на каждой из
+          // 42 статей блога, включая пиллар с 9 963 показами/мес.
+          <BlogPostCard key={post.slug} post={toBlogCardPost(post)} locale={locale} />
         ))}
       </RelatedPostsList>
     </aside>

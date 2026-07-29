@@ -3,8 +3,14 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
-import type { BlogPost } from '@/lib/content/blog';
-import { getBlogCategoryLabels } from '@/lib/content/blog';
+import type { BlogCardPost } from '@/components/seo/blog-card-post';
+// Ярлыки категорий берём из модуля с ярлыками, а НЕ из бочки '@/lib/content/blog':
+// бочка на верхнем уровне собирает все 42 статьи, и раз карточка клиентская,
+// Turbopack укладывал весь блог в клиентский чанк целиком — 618 КБ JS на /blog
+// и на КАЖДОЙ статье блога (замер прод-бандла 29.07.2026:
+// static/chunks/01146z0zyb5e4.js, внутри 42 объекта blocks и тексты статей).
+// Карточке нужны пять строк-названий категорий, а не тексты статей.
+import { getBlogCategoryLabels } from '@/lib/content/blog/locale/labels';
 import type { Locale } from '@/i18n/routing';
 import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
 import { LikeButton } from '@/components/ui/LikeButton';
@@ -19,7 +25,15 @@ const DATE_LOCALE: Record<Locale, string> = {
   es: 'es-ES',
 };
 
-export function BlogPostCard({ post, locale }: { post: BlogPost; locale: Locale }) {
+/**
+ * Карточка статьи в листинге. Клиентская намеренно: hover-подъём на пружине
+ * (whileHover) + stagger-варианты для каскада в «Читайте также» + LikeButton
+ * с localStorage. Цена клиентской границы — props целиком уезжают в HTML,
+ * поэтому на вход идёт BlogCardPost (только поля карточки), а не BlogPost:
+ * это и есть разница между 996 КБ и ~370 КБ на /blog. Подробности и цифры —
+ * в blog-card-post.ts.
+ */
+export function BlogPostCard({ post, locale }: { post: BlogCardPost; locale: Locale }) {
   const t = useTranslations('blogUi');
   const tCommon = useTranslations('common');
   const categoryLabels = getBlogCategoryLabels(locale);

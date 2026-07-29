@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { BlogPostCard } from '@/components/seo/BlogPostCard';
+import { toBlogCardPost } from '@/components/seo/blog-card-post';
 import { BreadcrumbJsonLd } from '@/components/seo/StructuredData';
 import {
   BLOG_CATEGORIES_ORDER,
@@ -71,7 +72,14 @@ export default async function BlogIndexPage({ params }: Props) {
               </h2>
               <ul className="space-y-5">
                 {categoryPosts.map((post) => (
-                  <BlogPostCard key={post.slug} post={post} locale={blogLocale} />
+                  // toBlogCardPost обязателен: BlogPostCard клиентский, и что
+                  // сюда передали — то и легло в HTML хаба. Передать post
+                  // целиком = вернуть 636 КБ мусора на /blog.
+                  <BlogPostCard
+                    key={post.slug}
+                    post={toBlogCardPost(post)}
+                    locale={blogLocale}
+                  />
                 ))}
               </ul>
             </section>
