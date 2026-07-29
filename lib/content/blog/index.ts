@@ -107,6 +107,27 @@ export function getPostsByCategory(
     );
 }
 
+/**
+ * Пилларные статьи — те, что несут основной поисковый спрос. Блок «Читайте
+ * также» обязан отдавать им хотя бы один слот из трёх на каждой статье блога.
+ *
+ * Зачем: раньше блок сортировал пул ТОЛЬКО по publishedAt, то есть ссылки
+ * получали самые свежие статьи, а не самые ценные. По замеру 29.07.2026 это
+ * отдавало 62% всей рециркуляции блога шести случайным по дате материалам, а
+ * пиллар «что такое онлифанс» (9 963 показа/мес, позиция 12,2) получал 3 ссылки
+ * из 252. Блок «Читайте также» — главный внутренний насос блога, и он работал
+ * против цели.
+ *
+ * Порядок в массиве = приоритет. Держать коротким: если пилларом объявить всё,
+ * пилларом не будет ничто. Сверять с GSC раз в квартал.
+ */
+const PILLAR_SLUGS: readonly string[] = [
+  'chto-takoe-onlyfans', // 9 963 показа/мес — инфо-ядро, цель ТОП-3–5
+  'kak-zaregistrirovatsya-na-onlyfans', // 2 218
+  'chatter-onlyfans-kto-eto', // 1 353
+  'onlyfans-modeli-kto-eto', // 735, позиция 6,1 — ближе всех к топ-3
+];
+
 export function getRelatedPosts(
   slug: string,
   limit = 3,
@@ -119,14 +140,31 @@ export function getRelatedPosts(
     .sort(
       (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     );
-  // Same-category first (most relevant), then backfill from other categories so
-  // every post ALWAYS surfaces a full set of related links. The old same-category
-  // filter left small clusters (money/safety, 3 posts) with only 1-2 related
-  // links and created category "islands" — exactly the under-linked topology that
-  // keeps long-tail posts stuck in GSC "Discovered – currently not indexed".
-  const sameCategory = pool.filter((p) => p.category === current.category);
-  const otherCategory = pool.filter((p) => p.category !== current.category);
-  return [...sameCategory, ...otherCategory].slice(0, limit);
+
+  // Один слот резервируем под пиллар. Выбор детерминированный, но разный для
+  // разных статей-доноров — иначе все 42 статьи ссылались бы на один и тот же
+  // пиллар, и получился бы новый перекос вместо старого.
+  const pillars = PILLAR_SLUGS.map((s) => pool.find((p) => p.slug === s)).filter(
+    (p): p is BlogPost => Boolean(p)
+  );
+  const pick =
+    pillars.length > 0
+      ? pillars[
+          [...slug].reduce((acc, ch) => acc + ch.charCodeAt(0), 0) % pillars.length
+        ]
+      : undefined;
+
+  // Дальше — прежняя логика: своя категория первой (релевантность), затем добор
+  // из остальных, чтобы у каждой статьи всегда был полный набор ссылок. Старый
+  // фильтр «только своя категория» оставлял мелкие кластеры (money/safety, по
+  // 3 статьи) с одной-двумя ссылками и создавал «острова» — ровно ту разреженную
+  // топологию, из-за которой длинный хвост зависает в GSC «Discovered – currently
+  // not indexed».
+  const rest = pool.filter((p) => p.slug !== pick?.slug);
+  const sameCategory = rest.filter((p) => p.category === current.category);
+  const otherCategory = rest.filter((p) => p.category !== current.category);
+
+  return [...(pick ? [pick] : []), ...sameCategory, ...otherCategory].slice(0, limit);
 }
 
 export const BLOG_CATEGORIES_ORDER: BlogCategory[] = [

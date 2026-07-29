@@ -32,6 +32,15 @@ export function SiteFooter() {
     { href: '/faq' as const, label: tNav('faq') },
     { href: '/blog' as const, label: tNav('blog') },
     { href: '/vacancies' as const, label: tNav('careers') },
+    // Пиллар инфо-ядра в sitewide-слоте. До 29.07.2026 футер отдавал 71 ссылку
+    // с каждой страницы локали статьям с 7–30 показами, а страница с 9 963
+    // показами (позиция 12,2) не получала ни одной sitewide-ссылки. Sitewide —
+    // самый дорогой ссылочный ресурс сайта, и он должен работать на цель
+    // «ТОП-3–5 по инфо-ядру», а не на длинный хвост.
+    {
+      href: '/blog/chto-takoe-onlyfans' as const,
+      label: t('pillarWhatIs'),
+    },
     {
       href: '/blog/rabota-modelyu-onlyfans' as const,
       label: t('vacancy'),

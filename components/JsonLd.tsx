@@ -32,8 +32,12 @@ export function JsonLd({ locale = 'ru', description }: JsonLdProps) {
     alternateName: siteConfig.shortName,
     description,
     url: `${siteUrl}${homePath}`,
-    logo: `${siteUrl}/icon.svg`,
-    image: `${siteUrl}/icon.svg`,
+    // Google требует для Organization.logo минимум 112×112. Здесь стоял
+    // /icon.svg, который объявляет width="32" height="32" — логотип не проходил
+    // порог и не попадал в брендовый блок выдачи. /icon.png — 512×512, уже на
+    // проде. image — og-default 1200×630, полноценное брендовое изображение.
+    logo: `${siteUrl}/icon.png`,
+    image: `${siteUrl}/og-default.png`,
     slogan: siteConfig.tagline,
     foundingDate: '2022',
     knowsAbout: [

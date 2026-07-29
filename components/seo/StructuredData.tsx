@@ -212,7 +212,18 @@ export function JobPostingJsonLd({
 }) {
   const siteUrl = getSiteUrl();
   const canonicalPath = pathForLocale(`/blog/${post.slug}`, locale);
-  const datePosted = post.updatedAt ?? post.publishedAt;
+  /**
+   * ⛔ ТОЛЬКО publishedAt. Раньше здесь стояло `post.updatedAt ?? post.publishedAt`,
+   * из-за чего любая SEO-правка текста статьи омолаживала дату вакансии: 6 статей
+   * с JobPosting × 4 локали = до 24 документов с новой датой без единого изменения
+   * в самой вакансии. Это ровно то, что Google называет fake reposting и запрещает
+   * дословно («don't update the DatePosted property if there was no change to the
+   * job post», Search Central 13.07.2021) — и ровно то, ради чего 28.07.2026 был
+   * обезврежен scripts/rotate-vacancies.mjs. Скрипт выключили, а этот источник той
+   * же проблемы остался в коде и работал.
+   * Менять publishedAt статьи-вакансии можно ТОЛЬКО при реальном изменении условий.
+   */
+  const datePosted = post.publishedAt;
 
   const data = {
     '@context': 'https://schema.org',
