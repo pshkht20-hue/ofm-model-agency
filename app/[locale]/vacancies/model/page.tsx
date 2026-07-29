@@ -184,12 +184,19 @@ export default async function ModelGeoHubPage({ params }: Props) {
                         {FEED_BADGE[loc][position.badge]}
                       </span>
                     )}
-                    <Link
-                      href={position.href}
-                      className="font-semibold text-white leading-snug after:absolute after:inset-0 after:content-['']"
-                    >
-                      {position.title}
-                    </Link>
+                    {/* h3, а не просто ссылка: 18 позиций ленты — это 18 заголовков
+                        третьего уровня под h2 «актуальные позиции». Именно так
+                        размечает карточки лидер кластера (xjobber: 34 карточки как
+                        H3 → позиция 1). Без заголовочного тега Google не видит
+                        листинг вакансий, а видит абзац со ссылками. */}
+                    <h3 className="font-semibold text-white leading-snug">
+                      <Link
+                        href={position.href}
+                        className="after:absolute after:inset-0 after:content-['']"
+                      >
+                        {position.title}
+                      </Link>
+                    </h3>
                   </div>
                   <p className="mt-1 text-sm text-white/55 line-clamp-1">{position.summary}</p>
                   <span className="relative z-10 mt-2.5 flex flex-wrap gap-1.5">
