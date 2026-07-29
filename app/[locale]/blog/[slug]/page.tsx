@@ -119,32 +119,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
    */
   const coverUrl = post.cover ? `${getSiteUrl()}${post.cover.localSrc}` : undefined;
 
-  const metadata = createPageMetadata({
+  // Размеры передаём напрямую: 29.07.2026 в PageMeta.image добавлены width/height
+  // (подтверждение владельца), прежний костыль с дописыванием openGraph.images
+  // поверх готового объекта удалён.
+  return createPageMetadata({
     title: post.title,
     description: post.description,
     path: `/blog/${post.slug}`,
     locale: locale as Locale,
     keywords: post.keywords,
     availableLocales: getBlogPostLocales(post.slug),
-    image: coverUrl && post.cover ? { url: coverUrl, alt: post.cover.alt } : undefined,
+    image:
+      coverUrl && post.cover
+        ? {
+            url: coverUrl,
+            alt: post.cover.alt,
+            width: BLOG_COVER_OG_WIDTH,
+            height: BLOG_COVER_OG_HEIGHT,
+          }
+        : undefined,
   });
-
-  // Размеры дописываем поверх результата: тип image в createPageMetadata —
-  // { url, alt } без width/height, а lib/seo.ts относится к СЕО-скелету и правится
-  // только с подтверждения владельца. Как только в PageMeta появятся width/height,
-  // этот блок можно снести и передать размеры напрямую.
-  if (coverUrl && post.cover && metadata.openGraph) {
-    metadata.openGraph.images = [
-      {
-        url: coverUrl,
-        width: BLOG_COVER_OG_WIDTH,
-        height: BLOG_COVER_OG_HEIGHT,
-        alt: post.cover.alt,
-      },
-    ];
-  }
-
-  return metadata;
 }
 
 export default async function BlogPostPage({ params }: Props) {

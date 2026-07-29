@@ -10,7 +10,15 @@ type PageMeta = {
   locale?: Locale;
   keywords?: string[];
   noIndex?: boolean;
-  image?: { url: string; alt?: string };
+  /**
+   * width/height добавлены 29.07.2026 (подтверждение владельца). Без них
+   * og:image уходил без размеров, и соцсеть при первом шаринге обязана была
+   * сначала скачать файл — карточка часто рендерилась вообще без картинки,
+   * что резало CTR всех внешних ссылок на статьи, включая покупные размещения.
+   * Раньше размеры дописывались костылём поверх готового объекта в
+   * app/[locale]/blog/[slug]/page.tsx; теперь передаются напрямую.
+   */
+  image?: { url: string; alt?: string; width?: number; height?: number };
   /** If set, hreflang lists only these locales (e.g. blog posts lacking some overlays). */
   availableLocales?: Locale[];
 };
@@ -28,7 +36,15 @@ export function createPageMetadata({
   const siteUrl = getSiteUrl();
   const canonicalPath = pathForLocale(path, locale);
   const ogImages = image
-    ? [{ url: image.url, alt: image.alt ?? title }]
+    ? [
+        {
+          url: image.url,
+          alt: image.alt ?? title,
+          ...(image.width && image.height
+            ? { width: image.width, height: image.height }
+            : {}),
+        },
+      ]
     : [{ url: `${siteUrl}/og-default.png`, width: 1200, height: 630, alt: title }];
 
   return {
