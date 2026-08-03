@@ -128,6 +128,27 @@ const PILLAR_SLUGS: readonly string[] = [
   'onlyfans-modeli-kto-eto', // 735, позиция 6,1 — ближе всех к топ-3
 ];
 
+/** Детерминированный 32-битный FNV-1a хэш пары «донор|кандидат». */
+function pairHash(donorSlug: string, candidateSlug: string): number {
+  const key = `${donorSlug}|${candidateSlug}`;
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < key.length; i++) {
+    hash ^= key.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193) >>> 0;
+  }
+  return hash;
+}
+
+/**
+ * «Читайте также», 3 слота. Слот 1 — пиллар (PILLAR_SLUGS). Слоты 2–3 раньше
+ * сортировались по publishedAt desc, и блок стягивался на самые свежие статьи:
+ * 126 ссылок падали на 18 URL, а 24 из 42 статей не получали ни одной входящей.
+ * Теперь слот 2 — своя категория, но порядок задаёт парный хэш «донор|кандидат»
+ * (каждый донор выбирает свою статью, а не все — одну и ту же), слот 3 —
+ * алфавитное кольцо по slug: донор ссылается на следующий за собой slug, поэтому
+ * каждая статья гарантированно получает входящую от алфавитной соседки. Всё
+ * детерминировано — SSG отдаёт одинаковый HTML между сборками.
+ */
 export function getRelatedPosts(
   slug: string,
   limit = 3,
@@ -135,15 +156,12 @@ export function getRelatedPosts(
 ): BlogPost[] {
   const current = getBlogPost(slug, locale);
   if (!current) return [];
-  const pool = getBlogPosts(locale)
-    .filter((p) => p.slug !== slug)
-    .sort(
-      (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-    );
+  const all = getBlogPosts(locale);
+  const pool = all.filter((p) => p.slug !== slug);
 
-  // Один слот резервируем под пиллар. Выбор детерминированный, но разный для
-  // разных статей-доноров — иначе все 42 статьи ссылались бы на один и тот же
-  // пиллар, и получился бы новый перекос вместо старого.
+  // Слот 1: пиллар. Выбор детерминированный, но разный для разных
+  // статей-доноров — иначе все статьи ссылались бы на один и тот же пиллар,
+  // и получился бы новый перекос вместо старого.
   const pillars = PILLAR_SLUGS.map((s) => pool.find((p) => p.slug === s)).filter(
     (p): p is BlogPost => Boolean(p)
   );
@@ -154,17 +172,33 @@ export function getRelatedPosts(
         ]
       : undefined;
 
-  // Дальше — прежняя логика: своя категория первой (релевантность), затем добор
-  // из остальных, чтобы у каждой статьи всегда был полный набор ссылок. Старый
-  // фильтр «только своя категория» оставлял мелкие кластеры (money/safety, по
-  // 3 статьи) с одной-двумя ссылками и создавал «острова» — ровно ту разреженную
-  // топологию, из-за которой длинный хвост зависает в GSC «Discovered – currently
-  // not indexed».
-  const rest = pool.filter((p) => p.slug !== pick?.slug);
-  const sameCategory = rest.filter((p) => p.category === current.category);
-  const otherCategory = rest.filter((p) => p.category !== current.category);
+  // Слот 2: релевантность — статья своей категории, порядок задаёт парный хэш,
+  // а не дата публикации: ссылки категории распределяются по всем её статьям.
+  const sameCategory = pool
+    .filter((p) => p.category === current.category && p.slug !== pick?.slug)
+    .sort(
+      (a, b) =>
+        pairHash(slug, a.slug) - pairHash(slug, b.slug) ||
+        (a.slug < b.slug ? -1 : 1)
+    );
+  const second = sameCategory[0];
 
-  return [...(pick ? [pick] : []), ...sameCategory, ...otherCategory].slice(0, limit);
+  // Слот 3 (и добор при limit > 3): алфавитное кольцо по всему пулу локали.
+  // Донор ссылается на следующий за собой slug, пропуская себя и уже занятые
+  // слоты, — почти биекция, закрывающая сирот без входящих ссылок.
+  const ringSlugs = all.map((p) => p.slug).sort();
+  const donorIndex = ringSlugs.indexOf(slug);
+  const picked: BlogPost[] = [];
+  if (pick) picked.push(pick);
+  if (second) picked.push(second);
+  for (let step = 1; step <= ringSlugs.length && picked.length < limit; step++) {
+    const candidateSlug = ringSlugs[(donorIndex + step) % ringSlugs.length];
+    if (candidateSlug === slug) continue;
+    if (picked.some((p) => p.slug === candidateSlug)) continue;
+    const candidate = pool.find((p) => p.slug === candidateSlug);
+    if (candidate) picked.push(candidate);
+  }
+  return picked.slice(0, limit);
 }
 
 export const BLOG_CATEGORIES_ORDER: BlogCategory[] = [

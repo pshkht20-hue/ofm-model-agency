@@ -30,8 +30,8 @@ export const LINK = {
   home: { href: '/', label: 'Главная — кейсы и заявка' },
   /** Keyword-анкор «онлифанс агентство» на главную для agency-кластера */
   ofm: { href: '/', label: 'Онлифанс агентство OFM — главная и заявка' },
-  /** Якорь калькулятора дохода на главной */
-  calc: { href: '/#calculator', label: 'Калькулятор дохода на главной' },
+  /** Страница-инструмент /calculator — редакционный вес самой странице, а не якорю главной */
+  calc: { href: '/calculator', label: 'Калькулятор дохода OnlyFans' },
   /** Отдельная страница-инструмент /calculator */
   calcPage: { href: '/calculator', label: 'Калькулятор дохода OnlyFans' },
   pillar: { href: '/blog/rabota-modelyu-onlyfans', label: 'Работа моделью OnlyFans' },

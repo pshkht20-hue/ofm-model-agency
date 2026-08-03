@@ -184,7 +184,7 @@ export const safetyPosts: BlogPost[] = [
       blogNav('Безопасность, легальность и выбор команды:', [
         LINK.safetyResearch,
         LINK.legal,
-        LINK.pillar,
+        { href: '/blog/rabota-modelyu-onlyfans', label: 'Как устроена работа моделью OnlyFans' },
         LINK.scam,
         LINK.choose,
         LINK.noface,
@@ -308,7 +308,7 @@ export const safetyPosts: BlogPost[] = [
       },
       blogNav('Анонимность, легальность и старт:', [
         LINK.legal,
-        LINK.pillar,
+        { href: '/blog/rabota-modelyu-onlyfans', label: 'Работа моделью OnlyFans: условия и старт' },
         LINK.safety,
         LINK.ua,
         LINK.faq,
@@ -399,7 +399,7 @@ export const safetyPosts: BlogPost[] = [
         LINK.research2026,
         LINK.noface,
         LINK.diaspora,
-        LINK.pillar,
+        { href: '/blog/rabota-modelyu-onlyfans', label: 'Условия работы моделью OnlyFans с агентством' },
         LINK.income,
         LINK.calc,
       ]),

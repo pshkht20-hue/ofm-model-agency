@@ -131,7 +131,8 @@ export const marketingPosts: BlogPost[] = [
         text: 'Если маркетинг съедает больше времени, чем съёмка — это сигнал делегировать. OFM строит воронку под ключ: заявка на сайте, ответ менеджера за 24 часа.',
       },
       blogNav('Связанные гайды OFM:', [
-        LINK.pillar,
+        { href: '/blog/rabota-modelyu-onlyfans', label: 'Гайд по работе моделью OnlyFans' },
+        { href: '/blog/onlyfans-kontent-plan-i-syomki', label: 'Контент-план и организация съёмок' },
         LINK.reddit,
         LINK.ig,
         LINK.retention,
@@ -247,7 +248,7 @@ export const marketingPosts: BlogPost[] = [
         text: 'Трафик без чатов — как вода в дырявом ведре: подписчик пришёл и ушёл без покупки. Оптимизируйте профиль OnlyFans под холодный трафик: чёткий bio, закреп с лучшим контентом, welcome message с мягким CTA. Первые 48 часов в DM критичны.',
       },
       blogNav('Углубитесь в воронку:', [
-        LINK.pillar,
+        { href: '/blog/rabota-modelyu-onlyfans', label: 'Работа моделью OnlyFans: условия и старт с нуля' },
         LINK.chats,
         LINK.marketing,
         LINK.retention,
@@ -410,7 +411,8 @@ export const marketingPosts: BlogPost[] = [
         text: "Регулярность важнее объёма. Рабочий ориентир — 1–2 Reels/TikTok в день и 3–5 Stories, постоянно тестируя время публикации под вашу аудиторию. В bio ведите не на прямой OnlyFans, а на link hub или мини-лендинг с возрастным подтверждением.",
       },
       blogNav('Параллельные каналы роста:', [
-        LINK.pillar,
+        { href: '/blog/rabota-modelyu-onlyfans', label: 'Работа моделью OnlyFans: как всё устроено' },
+        { href: '/blog/onlyfans-kontent-plan-i-syomki', label: 'Как составить контент-план для OnlyFans' },
         LINK.reddit,
         LINK.marketing,
         LINK.safety,

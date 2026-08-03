@@ -12,7 +12,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'What is an OnlyFans agency, and why would a model need one?',
         answer:
-          'An OnlyFans agency (management) is a team that handles the business side of your account: promotion, subscriber messaging, pricing, content planning, analytics, and revenue growth. You focus on your brand and content; the agency runs the system that turns traffic into subscriptions and sales in direct messages. Without structure, many creators hit a ceiling around $2–5k per month even when their potential is higher.',
+          'An OnlyFans agency (management) is a team that handles the business side of your account: promotion, subscriber messaging, pricing, content planning, analytics, and revenue growth. You focus on your brand and content; the agency runs the system that turns traffic into subscriptions and sales in direct messages. Without structure, many creators hit a ceiling around $2–5k per month even when their potential is higher. For the full picture, see [what an OnlyFans agency does](/blog/chto-delaet-onlyfans-agentstvo).',
       },
       {
         question: 'How is an agency different from a single “manager on Telegram”?',
@@ -87,7 +87,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How much do models typically earn with an agency?',
         answer:
-          'The range is wide: from a few hundred dollars for beginners to five-figure months for top accounts. At OFM, some models have reached roughly $12,000 to $35,000+ per month, but that is not a guarantee or a minimum. Results depend on niche, discipline, content, and traffic volume.',
+          'The range is wide: from a few hundred dollars for beginners to five-figure months for top accounts. At OFM, some models have reached roughly $12,000 to $35,000+ per month, but that is not a guarantee or a minimum. Results depend on niche, discipline, content, and traffic volume. For a detailed breakdown by level and niche, see [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       },
       {
         question: 'Can I stop working with the agency, and how fast?',
@@ -177,7 +177,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How to choose a good OnlyFans agency: checklist',
         answer:
-          'Check: (1) a transparent percentage and a clear service list; (2) verifiable case studies and real payouts — or a chance to speak with a current model; (3) a real casting call with a manager, not “sign today” in DMs; (4) the agency funds the launch itself and never asks you for money; (5) response speed and tone; (6) a clear privacy policy; (7) freedom to end the partnership at any moment. Compare 2–3 agencies before deciding.',
+          'Check: (1) a transparent percentage and a clear service list; (2) verifiable case studies and real payouts — or a chance to speak with a current model; (3) a real casting call with a manager, not “sign today” in DMs; (4) the agency funds the launch itself and never asks you for money; (5) response speed and tone; (6) a clear privacy policy; (7) freedom to end the partnership at any moment. Compare 2–3 agencies before deciding. A deeper guide: [how to choose an OnlyFans agency](/blog/kak-vybrat-onlyfans-agentstvo).',
       },
       {
         question: 'What questions should I ask a manager on the first call?',

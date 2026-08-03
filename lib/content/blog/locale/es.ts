@@ -144,8 +144,8 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             label: "Anonimato y seguridad",
           },
           {
-            href: "/blog/onlyfans-rabota-bez-lica",
-            label: "Rostro y anonimato",
+            href: "/blog/onlyfans-agentstvo-moldova",
+            label: "Agencia OnlyFans en Moldova",
           },
           {
             href: "/blog/onlyfans-agentstvo-latinskaya-amerika",
@@ -160,12 +160,12 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             label: "Instagram y TikTok sin baneos",
           },
           {
-            href: "/",
-            label: "Agencia OnlyFans OFM — página principal",
+            href: "/vacancies",
+            label: "Vacantes OnlyFans — todas las posiciones abiertas",
           },
           {
-            href: "/#calculator",
-            label: "Calculadora de ingresos",
+            href: "/calculator",
+            label: "Calculadora de ingresos OnlyFans",
           },
         ],
       },
@@ -368,6 +368,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/kak-vybrat-onlyfans-agentstvo",
             label: "Cómo elegir agencia",
+          },
+          {
+            href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
+            label: "Cuándo contratar agencia",
           },
           {
             href: "/",
@@ -654,6 +658,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             label: "Instagram y TikTok sin baneos",
           },
           {
+            href: "/blog/onlyfans-agentstvo-moldova",
+            label: "Agencia OnlyFans en Moldova",
+          },
+          {
             href: "/",
             label: "Agencia OnlyFans OFM — página principal",
           },
@@ -739,6 +747,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-uderzhanie-podpischikov",
             label: "Retención y churn",
+          },
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Plan de contenido y rodajes",
           },
           {
             href: "/",
@@ -933,6 +945,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-chaty-dm-prodazhi",
             label: "Chats y ventas por DM",
+          },
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Plan de contenido y rodajes",
           },
           {
             href: "/",
@@ -1186,6 +1202,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-prodvizhenie-reddit-twitter",
             label: "Promoción en Reddit y X",
+          },
+          {
+            href: "/vacancies/chatter-onlyfans",
+            label: "Vacante de chatter OnlyFans",
           },
           {
             href: "/",
@@ -2319,6 +2339,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             label: "Instagram y TikTok sin baneos",
           },
           {
+            href: "/blog/onlyfans-agentstvo-latinskaya-amerika",
+            label: "Agencia OnlyFans en Latinoamérica",
+          },
+          {
             href: "/",
             label: "Agencia OnlyFans OFM — página principal",
           },
@@ -2435,6 +2459,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-instagram-tiktok-bez-bana",
             label: "Instagram y TikTok sin baneos (TikTok BR)",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moldova",
+            label: "Agencia OnlyFans en Moldova",
           },
           {
             href: "/",

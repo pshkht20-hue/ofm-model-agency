@@ -144,8 +144,8 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Anonymity and safety",
           },
           {
-            href: "/blog/onlyfans-rabota-bez-lica",
-            label: "Your face & anonymity",
+            href: "/blog/onlyfans-agentstvo-moldova",
+            label: "OnlyFans agency in Moldova",
           },
           {
             href: "/blog/onlyfans-agentstvo-ukraina",
@@ -160,12 +160,12 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Instagram & TikTok promo without bans",
           },
           {
-            href: "/",
-            label: "OFM agency — home and application",
+            href: "/vacancies",
+            label: "OnlyFans agency jobs — all open positions",
           },
           {
-            href: "/#calculator",
-            label: "Income calculator on the homepage",
+            href: "/calculator",
+            label: "OnlyFans income calculator",
           },
         ],
       },
@@ -282,6 +282,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             href: "/",
             label: "OFM agency — cases and application",
           },
+          {
+            href: "/faq",
+            label: "OFM agency FAQ",
+          },
         ],
       },
       {
@@ -388,8 +392,16 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "How to choose an agency",
           },
           {
+            href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
+            label: "When to hire an agency",
+          },
+          {
             href: "/",
             label: "OFM agency — full-service management, home",
+          },
+          {
+            href: "/faq",
+            label: "OFM agency FAQ",
           },
         ],
       },
@@ -474,6 +486,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-uderzhanie-podpischikov",
             label: "Subscriber retention: churn & LTV",
+          },
+          {
+            href: "/faq",
+            label: "OFM agency FAQ",
           },
         ],
       },
@@ -660,6 +676,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-instagram-tiktok-bez-bana",
             label: "Instagram & TikTok without bans",
           },
+          {
+            href: "/blog/onlyfans-agentstvo-moldova",
+            label: "OnlyFans agency in Moldova",
+          },
         ],
       },
       {
@@ -745,6 +765,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-uderzhanie-podpischikov",
             label: "Subscriber retention and LTV",
+          },
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Content plan and shoots",
           },
         ],
       },
@@ -937,6 +961,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-chaty-dm-prodazhi",
             label: "Chats and DM sales",
+          },
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Content plan and shoots",
           },
         ],
       },
@@ -1192,6 +1220,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-marketing-strategiya-2026",
             label: "Marketing strategy 2026",
+          },
+          {
+            href: "/vacancies/chatter-onlyfans",
+            label: "OnlyFans chatter job — apply",
           },
         ],
       },
@@ -2306,6 +2338,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-instagram-tiktok-bez-bana",
             label: "Instagram & TikTok without bans",
           },
+          {
+            href: "/blog/onlyfans-agentstvo-latinskaya-amerika",
+            label: "OnlyFans agency in Latin America",
+          },
         ],
       },
       {
@@ -2404,6 +2440,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-instagram-tiktok-bez-bana",
             label: "Instagram & TikTok without bans (TikTok BR)",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moldova",
+            label: "OnlyFans agency in Moldova",
           },
         ],
       },
@@ -2712,6 +2752,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/rabota-modelyu-onlyfans",
             label: "Become an OnlyFans model",
+          },
+          {
+            href: "/blog/onlyfans-modeli-kto-eto",
+            label: "What is an OF model? OFM meaning",
           },
           {
             href: "/join",
@@ -3169,8 +3213,12 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Anonymity and safety",
           },
           {
-            href: "/blog/onlyfans-rabota-bez-lica",
-            label: "Your face on OnlyFans",
+            href: "/blog/chatter-onlyfans-kto-eto",
+            label: "Who is an OnlyFans chatter",
+          },
+          {
+            href: "/blog/kto-sozdal-onlyfans",
+            label: "Who created OnlyFans: founder and owner",
           },
         ],
       },
@@ -3279,6 +3327,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/rabota-modelyu-onlyfans",
             label: "Become an OnlyFans model: the agency job",
+          },
+          {
+            href: "/blog/kto-sozdal-onlyfans",
+            label: "Who created OnlyFans: founder and owner",
           },
           {
             href: "/join",
