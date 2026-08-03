@@ -15,6 +15,77 @@
         "робота моделлю": null
       },
       "notes": "Базовый снимок. По найму: близко только «онлифанс работа» (9.9). «работа моделью/робота для дівчат/робота моделлю» вне ТОП-20. EN/ES — вне выдачи (не измерялось детально). Раздел вакансий с JobPosting задеплоен/деплоится."
+    },
+    {
+      "date": "2026-08-03",
+      "source": "GSC (sc-domain:ofmmodels.com, 27.07–02.08 vs 20.07–26.07) + DataForSEO live SERP (10 приоритетных запросов) + backlinks_bulk_ranks",
+      "positions": {
+        "онлифанс работа": 7.5,
+        "модель онліфанс": 3.0,
+        "онлифанс модель это": 8.4,
+        "чаттер это": 8.6,
+        "онліфанс агенція": 8.6,
+        "модель онлифанс вакансии": 8.4,
+        "онлифанс агентство": 9.7,
+        "работа онлифанс модель": 7.6,
+        "чатер работа": 8.5,
+        "работа чаттером": 8.8,
+        "чаттер онлифанс вакансии": 9.0,
+        "робота онліфанс": 9.4,
+        "онліфанс робота відгуки": 6.5,
+        "onlyfans job": 9.2,
+        "onlyfans chatter": 39.5,
+        "of models": 4.8,
+        "ofm agency": 4.6,
+        "работа моделью": null,
+        "робота для дівчат": null,
+        "робота моделлю": null,
+        "оператор чата": null,
+        "оператор чата удаленно": null,
+        "вебкам модель": null,
+        "onlyfans agency": null,
+        "webcam model job": null,
+        "modelo webcam": null
+      },
+      "competitor_ranks": {
+        "_scale": "DataForSEO backlinks rank 0–1000; null = беклинков не обнаружено",
+        "ofmmodels.com": 79,
+        "forumonly.fun": 67,
+        "only-boost.agency": 82,
+        "x.layboard.com": 146,
+        "girlswork.com.ua": 291,
+        "layboard.in": 312,
+        "milanuncios.com": 485,
+        "robota.ua": 550,
+        "work.ua": 649,
+        "indeed.com": 725,
+        "xjobber.com": null,
+        "ofmodels.com.ua": null,
+        "royalmodelagency.com": null,
+        "ofmarketing.net": null,
+        "only-plus.me": null,
+        "spiritagency.space": null
+      },
+      "live_serp_top3": {
+        "онлифанс работа": ["girlswork.com.ua", "xjobber.com", "datingforum.com.ua"],
+        "онліфанс агенція": ["instagram.com/ofmarketingnet", "royalmodelagency.com", "spiritagency.space"],
+        "оператор чата удаленно": ["robota.ua", "work.ua", "olx.ua"],
+        "робота для дівчат": ["work.ua", "jooble.org", "olx.ua"],
+        "модель онлифанс вакансии": ["xjobber.com", "datingforum.com.ua", "girlswork.com.ua"],
+        "работа моделью": ["robota.ua", "work.ua", "olx.ua"],
+        "onlyfans agency": ["tdmmanagement.com", "reddit.com", "influencers.feedspot.com"],
+        "onlyfans jobs": ["linkedin.com", "indeed.com", "onlyfanschatters.com"],
+        "modelo webcam": ["models1a.com", "es.wikipedia.org", "facebook.com"]
+      },
+      "traffic": {
+        "recruitment_clicks_7d": 115,
+        "recruitment_clicks_prev_7d": 64,
+        "recruitment_impressions_7d": 3856,
+        "recruitment_impressions_prev_7d": 3278,
+        "site_clicks_7d": 231,
+        "site_clicks_prev_7d": 118
+      },
+      "notes": "Прорыв недели: «онліфанс агенція» 18.5→8.6 (BOFU-цель квартала вошла в ТОП-10), «онлифанс работа» 9.5→7.5, «чаттер это» 9.6→8.6. Закрыта дыра «модель онлифанс вакансии» — 8.4 в GSC и №9 живой выдачи через /blog/rabota-modelyu-onlyfans. Раздел /vacancies индексируется и даёт клики (чатер 10 кл. p8.0, хаб 8 кл. p8.1, модель/Украина 6 кл. p6.7). Открылся EN-фронт: «onlyfans job» p9.2 с 93 показами с нуля, «of models» 7.1→4.8 (1813 показов). Клики по найм-кластеру 64→115 (+80%). Гэпы без изменений: «оператор чата», «робота для дівчат», «работа моделью», «вебкам модель», ES/EN найм — ноль показов; эти SERP держат robota.ua/work.ua/olx/jooble. Новая угроза: плотный украинский агентский кластер на «онліфанс агенція» (ofmarketing.net, royalmodelagency, spiritagency, only-boost, only-plus) — все 6 позиций ТОП-8. В RU/UA-выдаче появился AI Overview, сдвигающий органику вниз."
     }
   ]
 }
