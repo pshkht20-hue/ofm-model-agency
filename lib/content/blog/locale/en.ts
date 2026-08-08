@@ -2758,6 +2758,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "What is an OF model? OFM meaning",
           },
           {
+            href: "/blog/chto-takoe-ofm",
+            label: "What is OFM? The term explained",
+          },
+          {
             href: "/join",
             label: "Apply to the OFM agency — model application",
           },
@@ -3217,8 +3221,8 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Who is an OnlyFans chatter",
           },
           {
-            href: "/blog/kto-sozdal-onlyfans",
-            label: "Who created OnlyFans: founder and owner",
+            href: "/blog/chto-takoe-ofm",
+            label: "What is OFM? OnlyFans Management explained",
           },
         ],
       },
@@ -3780,6 +3784,118 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         buttonHref: "/#contact",
         buttonLabel: "Find out more",
         note: "Figures on this site are gross page-balance turnover on OnlyFans, not the model's net income. 18+ only.",
+      },
+    ],
+  },
+  "chto-takoe-ofm": {
+    title: "What Is OFM? OnlyFans Management Explained",
+    description:
+      "OFM stands for OnlyFans Management: the business of running creator pages — marketing, 24/7 chats, analytics and payouts — while the model makes the content. How OFM works, in plain terms.",
+    keywords: [
+      "what is ofm",
+      "ofm meaning",
+      "what is ofm business",
+      "whats ofm",
+      "what is ofm agency",
+      "what does ofm stand for",
+      "ofm business model",
+      "onlyfans management meaning",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "OFM stands for OnlyFans Management — the business of running OnlyFans creator pages. An OFM agency takes over promotion, subscriber chats, analytics and payouts, while the model focuses on content. People use the abbreviation three ways: for the industry itself, for an individual agency, and for the working format of a model backed by a team.",
+      },
+      {
+        type: "p",
+        text: "The term is easy to confuse with the platform, so let's separate the two: OnlyFans is the site where subscribers pay for content; OFM is the service market that has grown around it. OFM agencies do not belong to the platform and do not speak for it — the closest analogy is a record label managing an artist.",
+      },
+      { type: "h2", text: "How the OFM business model works" },
+      {
+        type: "p",
+        text: "The OFM business runs on a division of labour: the model creates the content, and the agency turns it into a growing page balance. Revenue is shared, which means the agency earns only when the model earns — and the model invests nothing of her own. Who owns what:",
+      },
+      {
+        type: "table",
+        caption: "The OFM business model: what the agency runs and what stays with the model",
+        headers: ["Area", "Agency", "Model"],
+        rows: [
+          ["Traffic and promotion", "Runs marketing and pays for ads from its own budget", "Invests nothing"],
+          ["Subscriber chats", "A chat team in two or three shifts sells in DMs 24/7", "Stays out of the inbox"],
+          ["Content", "Builds the content plan around her niche and type", "Shoots photo and video — 10–15 hours a week from home"],
+          ["Account and finances", "Registration, verification, payment rails (Paxum, Skrill), payouts on schedule", "Receives her share"],
+          ["Boundaries", "Fixes the model's limits and never pushes them", "Decides what she films and what she refuses"],
+        ],
+      },
+      { type: "h2", text: "OFM agency vs a solo manager" },
+      {
+        type: "p",
+        text: "The key difference is a team instead of one person: in an OFM agency, traffic, chats, content strategy and analytics are separate specialists, while a solo manager does everything himself. One person physically cannot answer subscribers around the clock — peak chat hours fall on the US evening — and run promotion at the same time, which is why pages under solo managers usually hit a ceiling. The second difference is transparency: a mature agency has a website, a public FAQ and verifiable case studies; a lone \"manager on Telegram\" has only promises.",
+      },
+      { type: "h2", text: "OFM in numbers" },
+      {
+        type: "p",
+        text: "The market OFM grew around is measured in billions: according to the annual accounts of Fenix International Limited (the company behind OnlyFans) filed at UK Companies House, the platform paid creators $5.80 billion in its 2024 financial year. The platform's commission is 20% — of every $100 on a page balance, $80 goes to the creator — and that 80% is what the whole OFM economy lives on: the shares of models, agencies and chat teams. The gross balances of top managed pages reach $15,000–50,000 a month — the top of the funnel, not the average.",
+      },
+      { type: "h2", text: "What a model gets from OFM" },
+      {
+        type: "p",
+        text: "For a model, OFM is a way to try the platform with no investment and no experience: the team funds the launch and the promotion, and her only job is the shoots. The model receives 20–30% of the page's gross balance, with the exact share depending on the work plan, her type and the team. The rest is not pure agency profit: it pays for ads, traffic, the 24/7 chat team and management, and part of the income is reinvested into growing the page — without that reinvestment a balance simply does not grow. A beginner usually lands at $500–1,000 of balance in her first month, and the number climbs with the page. There is no bureaucracy at the start, and she can leave at any moment — a team that delivers results has no need to hold on to anyone.",
+      },
+      { type: "h2", text: "Frequently asked questions about OFM" },
+      { type: "h3", text: "What does OFM mean?" },
+      {
+        type: "p",
+        text: "OFM means OnlyFans Management. It is the industry of agencies and teams that run models' pages: promotion, subscriber messaging, analytics and finances. An \"OFM model\" is simply a model who works with such a team instead of handling everything solo.",
+      },
+      { type: "h3", text: "Is OFM the same as OnlyFans?" },
+      {
+        type: "p",
+        text: "No. OnlyFans is the platform, owned by Fenix International Limited: it hosts the content, processes subscriber payments and keeps a 20% commission. An OFM agency is an independent team that runs a model's page on that platform — traffic, chats, content planning and finances. Agencies have no legal ties to OnlyFans and do not speak on its behalf.",
+      },
+      { type: "h3", text: "How much do people make in OFM?" },
+      {
+        type: "p",
+        text: "The model keeps 20–30% of her page's gross balance — the rest covers ads, traffic and the chat team, and gets reinvested into growing the page. A beginner usually reaches $500–1,000 in the first month, while top managed pages run gross balances of $15,000–50,000 a month. These are ranges, not guarantees — results depend on the niche, how regularly she shoots and how well the chats are run. There is also a separate profession inside OFM, the chatter, paid a base rate plus a percentage of the sales closed on their shift.",
+      },
+      { type: "h3", text: "Is OFM legal?" },
+      {
+        type: "p",
+        text: "Yes. Creating 18+ content is legal in most countries, and working with an agency is ordinary remote collaboration: the model declares her income where she is a tax resident. The platform works only with adults and verifies every creator's identity with a document.",
+      },
+      {
+        type: "nav",
+        intro: "Term covered — keep going through the cluster:",
+        links: [
+          {
+            href: "/blog/onlyfans-modeli-kto-eto",
+            label: "What is an OF model and how she earns",
+          },
+          {
+            href: "/blog/chatter-onlyfans-kto-eto",
+            label: "Who is an OnlyFans chatter",
+          },
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model: the agency job",
+          },
+          {
+            href: "/faq",
+            label: "Agency FAQ: percentage, terms and how to start",
+          },
+          {
+            href: "/join",
+            label: "Apply to OFM — anonymous application form",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Want to see OFM from the inside?",
+        body: "Send an application — an OFM manager will reply on Telegram within 24 hours, go through your type and tell you honestly whether the format fits.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "18+ only. Figures are gross page-balance turnover, not a guaranteed payout.",
       },
     ],
   },

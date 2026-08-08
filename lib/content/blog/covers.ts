@@ -371,6 +371,15 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@thefourthwxll',
     unsplashUrl: 'https://unsplash.com/photos/hands-typing-on-a-smartphone-with-a-message-on-screen-SrgMu4Fvk7E',
   },
+  // Переиспользуем фото из kak-vybrat-onlyfans-agentstvo (та же агентская тема)
+  'chto-takoe-ofm': {
+    localSrc: '/blog/covers/chto-takoe-ofm.jpg',
+    remoteSrc: coverUrl('1521737711867-e3b97375f902'),
+    alt: 'Команда агентства за столом с ноутбуками разбирает стратегию страницы — что такое OFM (OnlyFans Management)',
+    photographer: 'Brooke Cagle',
+    photographerUrl: 'https://unsplash.com/@brookecagle',
+    unsplashUrl: 'https://unsplash.com/photos/people-sitting-down-near-table-with-assorted-laptop-computers-G7CuPfG0MR4',
+  },
   'kto-sozdal-onlyfans': {
     localSrc: '/blog/covers/kto-sozdal-onlyfans.jpg',
     remoteSrc: coverUrl('1543832923-44667a44c804'),

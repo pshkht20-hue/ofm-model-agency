@@ -1857,7 +1857,7 @@ export const startPosts: BlogPost[] = [
         LINK.income,
         LINK.howstart,
         LINK.chatter,
-        LINK.vebkam,
+        { href: "/blog/chto-takoe-ofm", label: "OFM — что это такое: разбор термина" },
         LINK.noface,
         { href: "/blog/kto-sozdal-onlyfans", label: "Кто создал онлифанс и кому он принадлежит" },
       ]),
