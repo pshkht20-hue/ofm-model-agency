@@ -9,6 +9,8 @@ export type BlogBlock =
   | { type: 'tip'; text: string }
   | { type: 'quote'; text: string; author?: string }
   | { type: 'nav'; intro?: string; links: { href: string; label: string }[] }
+  /** Тизер реальных кейсов: миниатюры скринов + суммарный NET, ведёт на /#models. */
+  | { type: 'cases'; title: string; note: string; linkLabel: string }
   | {
       type: 'cta';
       title: string;

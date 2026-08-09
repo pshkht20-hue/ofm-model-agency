@@ -135,6 +135,64 @@ export const resultCases: ResultCase[] = [
   },
 ];
 
+/**
+ * Реальные скриншоты earning-статистики (водяной знак ofmmodels.com нанесён
+ * на файлы; свежайший снимок каждого аккаунта, public/cases/*.webp).
+ */
+export type CaseShot = {
+  id: string;
+  tier: ResultTier;
+  periodLabel: string;
+  netTotal: number;
+  grossTotal: number;
+  src: string;
+  width: number;
+  height: number;
+};
+
+export const caseShots: CaseShot[] = [
+  {
+    id: 'shot-01',
+    tier: 'elite',
+    periodLabel: 'Jul 2024 — Jan 2026',
+    netTotal: 1_644_029.67,
+    grossTotal: 2_055_142.39,
+    src: '/cases/case-01-1644k.webp',
+    width: 1179,
+    height: 2071,
+  },
+  {
+    id: 'shot-02',
+    tier: 'pro',
+    periodLabel: 'Jul 2023 — Jan 2026',
+    netTotal: 947_164.73,
+    grossTotal: 1_183_957.32,
+    src: '/cases/case-02-947k.webp',
+    width: 1179,
+    height: 2100,
+  },
+  {
+    id: 'shot-03',
+    tier: 'prime',
+    periodLabel: 'Dec 2023 — Jan 2026',
+    netTotal: 392_062.69,
+    grossTotal: 490_062.89,
+    src: '/cases/case-03-392k.webp',
+    width: 1179,
+    height: 2095,
+  },
+  {
+    id: 'shot-04',
+    tier: 'prime',
+    periodLabel: 'Feb 2024 — Aug 2025',
+    netTotal: 289_420.8,
+    grossTotal: 361_780.0,
+    src: '/cases/case-04-289k.webp',
+    width: 1179,
+    height: 2260,
+  },
+];
+
 export function combinedNetTotal(): number {
   return resultCases.reduce((sum, item) => sum + item.statement.netTotal, 0);
 }

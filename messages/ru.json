@@ -558,8 +558,16 @@
     "peakMonth": "Пик total / мес",
     "perMonth": "/ мес",
     "verified": "Подтверждено",
-    "aggregateLabel": "Суммарно по 3 кейсам",
+    "aggregateLabel": "Суммарно по 4 кейсам",
     "aggregateHint": "gross total · не net модели",
+    "galleryHint": "Открыть в полном размере",
+    "lightbox": {
+      "close": "Закрыть",
+      "prev": "Предыдущий кейс",
+      "next": "Следующий кейс",
+      "counter": "{current} из {total}",
+      "zoomHint": "Скриншот листается — прокрути, чтобы увидеть помесячные суммы"
+    },
     "cta": "Хочу такой же результат",
     "disclaimer": "Скриншоты статистики OnlyFans с согласия моделей. Суммы — gross total баланса страницы, не чистый доход и не гарантия результата. OFM не аффилирован с OnlyFans.",
     "altScreenshot": {

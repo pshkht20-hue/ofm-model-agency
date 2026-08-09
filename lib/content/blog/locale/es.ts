@@ -61,6 +61,12 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         text: "Las páginas de nuestras modelos bajo gestión facturan entre $3000 y $30000 al mes: es la facturación total del balance de la página (antes de descontar el porcentaje de la agencia). Cuánto exactamente depende del nicho, del volumen y la calidad del contenido, de la constancia y del nivel de interacción. No hay techo: cuanto más en serio te lo tomes, mayor es el resultado.",
       },
       {
+        type: "cases",
+        title: "Casos reales de modelos OFM — capturas de estadísticas",
+        note: "Las cifras son gross total del balance de página, no ingreso neto. Publicadas con consentimiento.",
+        linkLabel: "Ver casos",
+      },
+      {
         type: "p",
         text: "Para comparar: en solitario, sin equipo y sin presupuesto de publicidad, una modelo promedio rara vez pasa de $300 a $700 al mes. Con una agencia que invierte en promoción y lleva las ventas por mensajes 24/7, las cifras son de otro orden por completo.",
       },
@@ -1401,6 +1407,12 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "En OFM una parte de las modelos se mueve en el rango de $12.000–35.000+/mes. No es una garantía ni la mediana para todas las solicitudes.",
+      },
+      {
+        type: "cases",
+        title: "Casos reales de modelos OFM — capturas de estadísticas",
+        note: "Las cifras son gross total del balance de página, no ingreso neto. Publicadas con consentimiento.",
+        linkLabel: "Ver casos",
       },
       {
         type: "table",

@@ -558,8 +558,16 @@
     "peakMonth": "Pico total / mes",
     "perMonth": "/ mes",
     "verified": "Verificado",
-    "aggregateLabel": "Combinado en 3 casos",
+    "aggregateLabel": "Combinado en 4 casos",
     "aggregateHint": "gross total · no net de la modelo",
+    "galleryHint": "Abrir a tamaño completo",
+    "lightbox": {
+      "close": "Cerrar",
+      "prev": "Caso anterior",
+      "next": "Caso siguiente",
+      "counter": "{current} de {total}",
+      "zoomHint": "La captura se desplaza — desliza para ver los totales mensuales"
+    },
     "cta": "Quiero resultados así",
     "disclaimer": "Capturas de estadísticas OnlyFans con consentimiento de las modelos. Las cifras son gross total del balance, no ingreso neto ni garantía de resultado. OFM no está afiliado a OnlyFans.",
     "altScreenshot": {

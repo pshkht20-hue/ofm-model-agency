@@ -558,8 +558,16 @@
     "peakMonth": "Peak total / mo",
     "perMonth": "/ mo",
     "verified": "Verified",
-    "aggregateLabel": "Combined across 3 cases",
+    "aggregateLabel": "Combined across 4 cases",
     "aggregateHint": "gross total · not creator net",
+    "galleryHint": "Open full size",
+    "lightbox": {
+      "close": "Close",
+      "prev": "Previous case",
+      "next": "Next case",
+      "counter": "{current} of {total}",
+      "zoomHint": "The screenshot scrolls — swipe down to see monthly totals"
+    },
     "cta": "I want similar results",
     "disclaimer": "OnlyFans statistics screenshots published with creators' consent. Figures are gross page totals, not net payout or guaranteed results. OFM is not affiliated with OnlyFans.",
     "altScreenshot": {

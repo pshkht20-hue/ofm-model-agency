@@ -61,6 +61,12 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         text: "The model pages we manage do between $3,000 and $30,000 a month — that's the total page balance turnover (gross, before the agency's percentage). How much exactly depends on your niche, the volume and quality of your content, how consistent you are, and how engaged your audience becomes. There's no ceiling: the more seriously you approach it, the bigger the result.",
       },
       {
+        type: "cases",
+        title: "Real OFM model cases — page statistics screenshots",
+        note: "Figures are gross page balance totals, not creator net payout. Published with consent.",
+        linkLabel: "View cases",
+      },
+      {
         type: "p",
         text: "For comparison: on her own, with no team and no advertising budget, the average model rarely clears even $300–700 a month. With an agency that invests in promotion and runs sales in the chats 24/7, the numbers are on a completely different level.",
       },
@@ -1414,6 +1420,12 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "p",
         text: "Some of our models at OFM sit in the $12,000–35,000+/month range — but that's neither a guarantee nor the median for every application we receive.",
+      },
+      {
+        type: "cases",
+        title: "Real OFM model cases — page statistics screenshots",
+        note: "Figures are gross page balance totals, not creator net payout. Published with consent.",
+        linkLabel: "View cases",
       },
       {
         type: "table",
@@ -3027,6 +3039,12 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         text: "Counted honestly, from the page balance. A solo beginner with no promotion budget usually lands at $300–700 in her first month, and many solo pages never move far past that — not because the platform doesn't pay, but because nobody is bringing subscribers in. Pages under management climb into the thousands within a few months, and the balances of strong pages run $15,000–50,000 a month gross.",
       },
       {
+        type: "cases",
+        title: "Real OFM model cases — page statistics screenshots",
+        note: "Figures are gross page balance totals, not creator net payout. Published with consent.",
+        linkLabel: "View cases",
+      },
+      {
         type: "p",
         text: "Here is the part most articles skip. The model's share is 20–30% of the page's gross balance — the exact figure depends on the work plan, her type and the size of the team behind her page. The rest is reinvested: paid traffic, social promotion, round-the-clock chatter shifts and management are all funded out of it, and the model puts in nothing of her own. That reinvestment is the entire mechanism — it is what makes a balance grow month after month, and 25% of a balance that keeps climbing is more money than 100% of a solo page stuck near zero.",
       },
@@ -3446,6 +3464,12 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           "The model keeps 20–30% of gross and invests nothing; the rest funds the growth of her own page.",
           "The real drivers: niche, regularity of content, and the quality of chats and marketing.",
         ],
+      },
+      {
+        type: "cases",
+        title: "Real OFM model cases — page statistics screenshots",
+        note: "Figures are gross page balance totals, not creator net payout. Published with consent.",
+        linkLabel: "View cases",
       },
       {
         type: "table",

@@ -1,9 +1,14 @@
 import { Fragment } from 'react';
+import Image from 'next/image';
 import type { BlogBlock } from '@/lib/content/blog';
 import { Link } from '@/i18n/navigation';
+import { caseShots } from '@/lib/results/cases';
 import { TrackedCtaLink, TrackedTelegramLink } from '@/components/analytics/TrackedLinks';
 import { ArticleCalcTeaser } from '@/components/seo/ArticleCalcTeaser';
 import { ArticleInlineCta } from '@/components/seo/ArticleInlineCta';
+
+const fmtCaseNet = (n: number) =>
+  n >= 1_000_000 ? `$${(n / 1_000_000).toFixed(2)}M` : `$${Math.round(n / 1_000)}K`;
 
 const TELEGRAM_URL = 'https://t.me/ofmm_agency';
 const TELEGRAM_RE = /(https?:\/\/t\.me\/ofmm_agency|t\.me\/ofmm_agency|@ofmm_agency)/g;
@@ -134,6 +139,44 @@ function renderBlock(block: BlogBlock, i: number) {
           </figcaption>
         ) : null}
       </figure>
+    );
+  }
+  if (block.type === 'cases') {
+    const combined = caseShots.reduce((sum, s) => sum + s.netTotal, 0);
+    return (
+      <Link
+        key={i}
+        href="/#models"
+        className="group my-2 flex flex-col gap-4 rounded-2xl border border-white/[0.09] bg-[#0b0814] p-4 no-underline transition-colors duration-300 hover:border-accent-pink/40 sm:flex-row sm:items-center sm:gap-5 sm:p-5"
+      >
+        {/* миниатюры реальных скринов (водяной знак уже на файлах) */}
+        <span className="flex shrink-0 justify-center gap-2" aria-hidden>
+          {caseShots.map((shot) => (
+            <span
+              key={shot.id}
+              className="relative block h-[72px] w-[42px] overflow-hidden rounded-md border border-white/10 bg-white"
+            >
+              <Image
+                src={shot.src}
+                alt=""
+                fill
+                sizes="42px"
+                className="object-cover object-top"
+              />
+            </span>
+          ))}
+        </span>
+        <span className="min-w-0 flex-1 text-center sm:text-left">
+          <span className="text-gradient-brand block text-2xl font-extrabold tabular-nums leading-tight">
+            {fmtCaseNet(combined)} NET
+          </span>
+          <span className="mt-1 block text-sm font-medium text-white">{block.title}</span>
+          <span className="mt-1 block text-xs leading-relaxed text-white/45">{block.note}</span>
+        </span>
+        <span className="shrink-0 self-center text-sm font-semibold text-accent-pink transition-colors group-hover:text-accent-cyan">
+          {block.linkLabel} →
+        </span>
+      </Link>
     );
   }
   if (block.type === 'nav') {
