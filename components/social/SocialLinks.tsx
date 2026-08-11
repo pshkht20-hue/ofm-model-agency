@@ -21,6 +21,12 @@ const PLATFORM_NEON: Record<SocialPlatform, { surface: string; icon: string; glo
     icon: 'text-[#2AABEE]/90 group-hover:text-[#5bc8f5]',
     glow: 'bg-[#2AABEE]/25',
   },
+  telegramChannel: {
+    surface:
+      'border-accent-cyan/30 shadow-[0_0_16px_-4px_rgba(0,212,255,0.45)] hover:border-accent-cyan/70 hover:shadow-[0_0_24px_0px_rgba(0,212,255,0.6),0_0_40px_-8px_rgba(0,212,255,0.3)]',
+    icon: 'text-accent-cyan/90 group-hover:text-accent-cyan',
+    glow: 'bg-accent-cyan/25',
+  },
   whatsapp: {
     surface:
       'border-[#25D366]/30 shadow-[0_0_16px_-4px_rgba(37,211,102,0.45)] hover:border-[#25D366]/70 hover:shadow-[0_0_24px_0px_rgba(37,211,102,0.6),0_0_40px_-8px_rgba(37,211,102,0.3)]',
@@ -69,7 +75,7 @@ function SocialLinkButton({
       aria-label={label}
       title={label}
       onClick={() => {
-        if (link.platform === 'telegram') {
+        if (link.platform === 'telegram' || link.platform === 'telegramChannel') {
           trackTelegramClick({ location: SOCIAL_LOCATION[variant], locale });
         } else if (link.platform === 'whatsapp') {
           trackWhatsappClick({ location: SOCIAL_LOCATION[variant], locale });

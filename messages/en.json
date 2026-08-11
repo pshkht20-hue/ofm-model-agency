@@ -22,6 +22,7 @@
     "menuEyebrow": "Follow us",
     "menuLead": "Stay updated on OFM — Telegram is the fastest way to reach us.",
     "telegram": "Telegram",
+    "telegramChannel": "Channel",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram"
   },
@@ -595,6 +596,11 @@
     "meta": {
       "title": "OnlyFans Work Blog — Earnings, Tips & Guides for Models 2026",
       "description": "OnlyFans management guides: agency selection, regional playbooks (Ukraine, Moldova, LatAm), marketing, chats, safety. OFM's Model Agency."
+    },
+    "channelTeaser": {
+      "title": "Cases, guides and openings — on our Telegram channel",
+      "subtitle": "Real statistics screenshots, honest talk about earnings and safety, fresh agency openings — no spam.",
+      "cta": "Subscribe"
     }
   },
   "faqUi": {

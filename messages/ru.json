@@ -22,6 +22,7 @@
     "menuEyebrow": "Мы в соцсетях",
     "menuLead": "Следите за OFM и пишите в Telegram — отвечаем быстрее всего там.",
     "telegram": "Telegram",
+    "telegramChannel": "Канал",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram"
   },
@@ -595,6 +596,11 @@
     "meta": {
       "title": "Блог о работе на OnlyFans — заработок и советы моделям 2026",
       "description": "Гайды по OnlyFans management: выбор агентства, гео-материалы (Украина, Молдова, LatAm), маркетинг, чаты, безопасность. OFM's Model Agency."
+    },
+    "channelTeaser": {
+      "title": "Кейсы, разборы и вакансии — в нашем Telegram-канале",
+      "subtitle": "Реальные скриншоты статистики, честно о доходах и безопасности, свежие вакансии агентства — без спама.",
+      "cta": "Подписаться"
     }
   },
   "faqUi": {

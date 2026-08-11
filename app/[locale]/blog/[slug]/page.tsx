@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { ArticleBody } from '@/components/seo/ArticleBody';
+import { ChannelTeaser } from '@/components/seo/ChannelTeaser';
 import {
   ArticleJsonLd,
   BreadcrumbJsonLd,
@@ -252,6 +253,7 @@ export default async function BlogPostPage({ params }: Props) {
         sections={['article-inline-cta', 'article-calc-teaser']}
         page="blog_article"
       />
+      <ChannelTeaser />
       <RelatedPosts slug={post.slug} locale={blogLocale} />
     </SeoPageShell>
   );

@@ -1,4 +1,4 @@
-export type SocialPlatform = 'telegram' | 'whatsapp' | 'instagram';
+export type SocialPlatform = 'telegram' | 'telegramChannel' | 'whatsapp' | 'instagram';
 
 export type SocialLink = {
   platform: SocialPlatform;
@@ -8,17 +8,19 @@ export type SocialLink = {
 /** Можно переопределить через NEXT_PUBLIC_SOCIAL_* в Vercel / .env (иначе дефолты ниже) */
 const DEFAULT_LINKS: Record<SocialPlatform, string> = {
   telegram: 'https://t.me/ofmm_agency',
+  telegramChannel: 'https://t.me/ofmmAgency',
   whatsapp: 'https://wa.me/380939747588',
   instagram: 'https://www.instagram.com/ofmmodel.agency',
 };
 
 const ENV_KEYS: Record<SocialPlatform, string> = {
   telegram: 'NEXT_PUBLIC_SOCIAL_TELEGRAM',
+  telegramChannel: 'NEXT_PUBLIC_SOCIAL_TELEGRAM_CHANNEL',
   whatsapp: 'NEXT_PUBLIC_SOCIAL_WHATSAPP',
   instagram: 'NEXT_PUBLIC_SOCIAL_INSTAGRAM',
 };
 
-const ORDER: SocialPlatform[] = ['telegram', 'whatsapp', 'instagram'];
+const ORDER: SocialPlatform[] = ['telegram', 'telegramChannel', 'whatsapp', 'instagram'];
 
 function resolveHref(platform: SocialPlatform): string | null {
   const fromEnv = process.env[ENV_KEYS[platform]]?.trim();
