@@ -2949,4 +2949,410 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
     ],
   },
+  "chto-takoe-ofm": {
+    // Glosario ES 16.08.2026 — «que es ofm» / «ofm que significa» (MX). SERP en
+    // vivo: la orgánica es 100% franciscanos (ofm.org, Wikipedia); la única
+    // respuesta «OnlyFans Management» vive en el AI Overview con un solo blog
+    // (tdmbusiness). El bloque de video es todo OFM-business y related pone
+    // «OFM business» primero: demanda confirmada, orgánica vacía. Formato AA
+    // (respuesta directa en la primera frase de cada bloque) + desambiguación
+    // frailes/management que ningún texto en español hace. FAQ «agencia OFM vs
+    // estudio webcam» cubre la PAA colombiana «¿Qué diferencia hay entre
+    // OnlyFans y webcam?» — el ángulo remoto-desde-casa contra los estudios
+    // presenciales que dominan «modelo webcam».
+    title: "Qué es OFM (OnlyFans Management) y cómo funciona",
+    description:
+      "OFM significa OnlyFans Management: la agencia lleva la promoción, los chats y las finanzas, y la modelo solo crea contenido. Qué es, cifras reales y FAQ.",
+    keywords: [
+      "que es ofm",
+      "ofm que significa",
+      "ofm significado",
+      "que significan las siglas ofm",
+      "ofm agencia",
+      "agencia ofm que es",
+      "onlyfans management que es",
+      "que es onlyfans management",
+      "ofm business que es",
+      "manager de onlyfans",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "OFM significa OnlyFans Management: la gestión profesional de páginas de OnlyFans. Es un negocio donde una agencia asume la promoción, los chats con los suscriptores, la analítica y las finanzas de la página, y la modelo se queda con una sola tarea — el contenido. La sigla se usa para tres cosas: la industria del management en general, una agencia OFM concreta y el formato de trabajo «modelo + equipo».",
+      },
+      {
+        type: "p",
+        text: "Una aclaración, porque Google mezcla dos mundos: OFM también son las siglas de la Orden de los Frailes Menores — los franciscanos. Si buscabas frailes, esta no es tu página. Aquí hablamos del otro OFM: el de los videos de negocios y los managers en Instagram, un mercado que mueve millones y que en español casi nadie ha explicado por escrito. Vamos a hacerlo, con cifras.",
+      },
+      { type: "h2", text: "Cómo funciona el modelo de negocio OFM" },
+      {
+        type: "p",
+        text: "Toda la lógica del OFM cabe en una frase: una página de OnlyFans es un negocio con demasiados trabajos para una sola persona. Grabar es solo uno. Además hay que atraer suscriptores, responder mensajes a las tres de la mañana (el pico de ventas es la noche americana), fijar precios y administrar los pagos. El OFM divide ese trabajo: la modelo crea el contenido, el equipo lo convierte en un balance que crece. Así se reparte:",
+      },
+      {
+        type: "table",
+        caption: "El modelo de negocio OFM: zonas de la agencia y zonas de la modelo",
+        headers: ["Zona", "Agencia", "Modelo"],
+        rows: [
+          [
+            "Tráfico y promoción",
+            "Lleva la publicidad y la paga con su propio presupuesto",
+            "No invierte ni un dólar",
+          ],
+          [
+            "Chats con suscriptores",
+            "Equipo de chatters en 2–3 turnos vende por mensaje 24/7",
+            "No pasa las noches en el chat",
+          ],
+          [
+            "Contenido",
+            "Da el plan de contenido según nicho y perfil",
+            "Graba fotos y video 10–15 horas por semana desde casa",
+          ],
+          [
+            "Cuenta y finanzas",
+            "Registro, verificación, pagos (Paxum, Skrill), transferencias puntuales",
+            "Recibe su parte en su cuenta",
+          ],
+          [
+            "Límites",
+            "Anota los tabúes de la modelo y no los mueve",
+            "Decide qué graba y qué no",
+          ],
+        ],
+      },
+      {
+        type: "p",
+        text: "El detalle que sostiene el esquema: la agencia cobra un porcentaje del resultado, no una tarifa fija — solo gana cuando gana la modelo. Por eso ningún equipo serio te pide dinero por «entrar»: si alguien te cobra la entrada, no es OFM, es una estafa con siglas de moda. ¿Y qué papel juega OnlyFans aquí? Menos del que la gente cree.",
+      },
+      { type: "h2", text: "OFM no es OnlyFans: quién es quién" },
+      {
+        type: "p",
+        text: "El error más común es pensar que las agencias OFM «son de OnlyFans». No: OnlyFans es la plataforma — el sitio donde los fans pagan la suscripción — y pertenece a la empresa británica Fenix International. Las agencias OFM son negocios independientes que trabajan sobre esa plataforma, igual que un sello musical trabaja con Spotify sin ser Spotify. La plataforma retiene su 20% de comisión; todo lo demás — tráfico, chats, estrategia — es terreno del OFM.",
+      },
+      {
+        type: "p",
+        text: "Y otra confusión frecuente en Latinoamérica: una agencia OFM no es un estudio webcam. El estudio es presencial: sede física, horarios, turnos en vivo frente a la cámara. El OFM es remoto: grabas en tu casa, cuando te acomoda — de día, mientras el bebé duerme, o el fin de semana entero — y nadie te exige transmitir en directo. Si vienes cansada de los turnos de estudio, o nunca quisiste pisar uno, esa diferencia lo cambia todo.",
+      },
+      { type: "h2", text: "OFM en cifras: cuánto dinero mueve esta industria" },
+      {
+        type: "p",
+        text: "Aquí la mayoría de los textos pone humo; nosotros ponemos el registro mercantil británico. Según las cuentas anuales de Fenix International en Companies House, OnlyFans pagó a sus creadores unos $5.800 millones en el año fiscal 2024 — pagos auditados, no cifras de marketing. De cada $100 del balance de una página, $80 llegan a la creadora tras la comisión del 20%, y de esos $80 vive toda la economía OFM: modelos, agencias y equipos de chat.",
+      },
+      {
+        type: "p",
+        text: "¿La escala por página? Las cuentas top bajo management facturan entre $15.000 y $50.000 brutos al mes. Es la cima de la pirámide, no el promedio — pero explica por qué alrededor de una sola plataforma creció una industria entera. La pregunta que importa no es cuánto mueve la industria, sino cuánto te toca a ti.",
+      },
+      { type: "h2", text: "Qué gana la modelo con el OFM" },
+      {
+        type: "p",
+        text: "Para la modelo, el OFM es la forma de probar la plataforma sin invertir nada: el equipo financia el arranque y la publicidad con su propio dinero, y su única zona son las sesiones de contenido. La modelo recibe el 20–30% del balance bruto de la página; la cifra exacta depende del plan de trabajo, del perfil y del equipo. El resto no es «el bolsillo de la agencia»: de ahí se pagan la publicidad, el tráfico, los chatters 24/7 y el management, y una parte se reinvierte en el crecimiento de la página — sin esa reinversión el balance simplemente no crece.",
+      },
+      {
+        type: "p",
+        text: "En cifras honestas: sola, sin tráfico ni equipo, la mayoría de las novatas se queda en $300–700 al mes. Con equipo, la referencia del primer mes es de $500–1.000 brutos, y con meses de trabajo sistemático el rango se mueve hacia $500–3.000. El arranque es sin burocracia, y puedes dejar la colaboración cuando quieras: a un equipo que da resultados no le hace falta retener a nadie por la fuerza.",
+      },
+      {
+        type: "cases",
+        title: "Casos reales de modelos OFM — capturas de estadísticas",
+        note: "Las cifras son gross total del balance de página, no ingreso neto. Publicadas con consentimiento.",
+        linkLabel: "Ver casos",
+      },
+      { type: "h2", text: "Preguntas frecuentes sobre OFM" },
+      { type: "h3", text: "¿Qué significan las siglas OFM?" },
+      {
+        type: "p",
+        text: "OFM tiene dos significados sin relación entre sí. El histórico: Ordo Fratrum Minorum, la Orden de los Frailes Menores fundada por Francisco de Asís — por eso media búsqueda de Google habla de franciscanos. El moderno: OnlyFans Management, la industria de agencias que gestionan páginas de OnlyFans a cambio de un porcentaje del resultado. Cuando un video de negocios o un manager en redes dice «OFM», se refiere al segundo.",
+      },
+      { type: "h3", text: "¿OFM es lo mismo que OnlyFans?" },
+      {
+        type: "p",
+        text: "No. OnlyFans es la plataforma donde los fans pagan; OFM es el mercado de servicios que creció a su alrededor. Las agencias OFM no pertenecen a la plataforma ni hablan en su nombre: son equipos independientes que llevan la promoción, los chats y las finanzas de las páginas de sus modelos. El trabajo de la agencia empieza donde termina el de la plataforma.",
+      },
+      { type: "h3", text: "¿Cuánto se gana en OFM?" },
+      {
+        type: "p",
+        text: "La modelo recibe el 20–30% del balance bruto de su página; el resto financia la publicidad, el tráfico y el equipo de chat, y una parte se reinvierte en el crecimiento — sin reinversión la página no crece. En rangos: el primer mes con equipo suele dar $500–1.000, luego la referencia va de $500 a $3.000, y las páginas top facturan $15.000–50.000 brutos al mes. Son referencias, no garantías. Dentro del OFM también trabajan los chatters, con fijo más porcentaje de las ventas de su turno.",
+      },
+      {
+        type: "h3",
+        text: "¿Qué diferencia hay entre una agencia OFM y un estudio webcam?",
+      },
+      {
+        type: "p",
+        text: "El formato. El estudio webcam es presencial: sede física, horarios y transmisiones en vivo por turnos. La agencia OFM es 100% remota: grabas contenido desde tu casa, a tu ritmo, y las ventas ocurren en los chats que lleva el equipo, no en un show en directo. Además, en OFM la promoción apunta a Estados Unidos, Canadá y Europa — donde están los fans que más pagan — y tu propio país se puede bloquear para que tu entorno no se cruce con tu página.",
+      },
+      { type: "h3", text: "¿Es legal trabajar en OFM?" },
+      {
+        type: "p",
+        text: "Sí. Crear contenido para adultos siendo mayor de 18 es legal en la gran mayoría de países hispanohablantes, y colaborar con una agencia es trabajo remoto normal: declaras el ingreso en tu país de residencia fiscal. La plataforma verifica la identidad y la mayoría de edad con documento, sin excepciones. Y un filtro simple contra estafas: una agencia OFM real nunca te cobra por empezar — gana solo cuando ganas tú.",
+      },
+      {
+        type: "nav",
+        intro: "El término ya está claro — sigue por aquí:",
+        links: [
+          {
+            href: "/blog/chto-takoe-onlyfans",
+            label: "Qué es OnlyFans y cómo funciona: guía completa",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "Qué hace una agencia OnlyFans por ti",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Cómo elegir agencia y verificarla",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "Cuánto ganan las modelos de verdad",
+          },
+          {
+            href: "/faq",
+            label: "FAQ: porcentaje, condiciones y arranque",
+          },
+          {
+            href: "/join",
+            label: "Enviar tu solicitud a la agencia OFM",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Quieres ver el OFM por dentro?",
+        body: "Deja una solicitud anónima: un manager te responde por Telegram en 24 horas, analiza tu perfil y te dice con honestidad si el formato es para ti.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Solo +18. Las cifras son balances brutos (gross) de páginas, no un ingreso garantizado.",
+      },
+    ],
+  },
+  "vebkam-ili-onlyfans": {
+    // Puente ES 16.08.2026 — «modelo webcam» (11K/mes, CO 8,1K) y «webcam o
+    // onlyfans». SERP en vivo (CO): el top de «modelo webcam» es 100% estudios
+    // presenciales de Bogotá/Medellín (models1a, lineup, estudiowebcam) con
+    // promesas de «pagos semanales, spa gratuito»; ni un solo comparativo serio
+    // en la orgánica (solo monro3.com). PAA cubiertas: «¿Qué diferencia hay
+    // entre OnlyFans y webcam?», «¿Cuánto gana una modelo webcam?», «¿Qué se
+    // necesita para ser modelo webcam?», «¿Qué tan rentable es ser modelo
+    // webcam en Colombia?», «¿Cómo saber si una mujer es modelo webcam?»
+    // (miedo al reconocimiento → sección de privacidad). No es traducción del
+    // RU: está escrito para la chica que YA hace turnos de estudio.
+    title: "¿Modelo webcam u OnlyFans? Diferencias reales 2026",
+    description:
+      "Turnos de 6–8 horas y porcentaje del estudio contra contenido que vende mientras duermes. Comparación honesta entre webcam y OnlyFans 2026, con cifras reales.",
+    keywords: [
+      "modelo webcam",
+      "webcam o onlyfans",
+      "modelo webcam onlyfans",
+      "dejar el estudio webcam",
+      "que diferencia hay entre onlyfans y webcam",
+      "cuanto gana una modelo webcam",
+      "que se necesita para ser modelo webcam",
+      "onlyfans sin shows en vivo",
+      "estudio webcam o desde casa",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "Sales del estudio a las cuatro de la mañana. La calle está vacía, el celular muestra los tokens de la noche y tú ya hiciste la cuenta de siempre: de lo que dejaron los fans, una parte se queda en la plataforma, otra en el estudio, y lo tuyo es lo que sobra. Si trabajas en webcam, nada de esto es noticia. La pregunta que te trajo aquí es otra: ¿OnlyFans es de verdad diferente o es el mismo trabajo con otro nombre? Vamos a compararlos sin humo. El webcam no es el enemigo — para muchas fue la puerta de entrada —, pero las diferencias son más grandes de lo que se ven desde la cabina.",
+      },
+      {
+        type: "h2",
+        text: "La diferencia de fondo: el show termina, el contenido queda",
+      },
+      {
+        type: "p",
+        text: "En webcam el dinero existe mientras tú existes en pantalla. Cierras la transmisión y el contador se detiene hasta el próximo turno: cada peso está amarrado a una hora de tu vida en vivo, y esa hora no se puede vender dos veces. OnlyFans funciona al revés. El contenido se graba antes, se publica según un plan y se vende una, diez, cien veces: la página cobra suscripciones y mensajes de pago también a las tres de la mañana, cuando tú duermes. No es magia, es otro modelo: en uno vendes tu hora, en el otro construyes un catálogo que trabaja sin ti. De esa diferencia sale todo lo demás — el horario, la privacidad y el techo del ingreso.",
+      },
+      {
+        type: "h2",
+        text: "Lo que el estudio te dio — y lo que te está cobrando",
+      },
+      {
+        type: "p",
+        text: "Seamos justas: el estudio webcam es la primera escuela de miles de chicas en Colombia y México, y suele cumplir lo que promete el cartel — equipo, internet estable, pagos semanales, y en los grandes hasta spa y «habitaciones de lujo». Para llegar al primer ingreso sin invertir un peso, funciona. Y te entrena en lo más difícil de esta industria: hablar a una cámara sin congelarte, leer a un fan, vender sin pena.",
+      },
+      {
+        type: "p",
+        text: "El precio aparece después. Turnos de 6–8 horas, casi siempre de noche, porque los que pagan viven en el horario de Estados Unidos. Multas por llegar tarde en más de un estudio. Y la matemática que conoces mejor que nadie: la plataforma toma su comisión, el estudio la suya — en muchos estudios se queda con entre el 40 y el 60% de lo que generas —, todo a cambio de una habitación y una cámara que no son tuyas. Hace poco medio internet colombiano discutió si las chicas webcam «son modelos o no». Debate equivocado. La pregunta útil no es cómo te llaman: es cuánto de tu trabajo se queda contigo — y quién decide tu horario.",
+      },
+      {
+        type: "h2",
+        text: "Horario: la noche americana contra tu propio calendario",
+      },
+      {
+        type: "p",
+        text: "En webcam el horario no lo eliges tú, lo elige el mapa: el prime time de Nueva York es la madrugada de Bogotá, y por eso llevas meses durmiendo de día y explicando en tu casa por qué. En OnlyFans se graba por lotes: uno o dos días de sesiones a la semana cierran el plan de contenido, y el resto — publicar, responder, vender — se acomoda a tu vida y no al revés. Grabas de día, mientras el bebé duerme o antes de la universidad. Y si trabajas con una agencia, los chats de la madrugada los cubre un equipo de chatters por turnos, no tu insomnio: la noche americana trabaja para ti sin ti. Queda la pregunta del millón: ¿y la plata?",
+      },
+      {
+        type: "h2",
+        text: "La plata: tokens por hora contra un balance que crece",
+      },
+      {
+        type: "p",
+        text: "Aquí va la parte que pocos dicen en voz alta: en la primera semana, el webcam gana. Los primeros tokens caen en las primeras transmisiones, y esa velocidad es real — si necesitas dinero esta semana, el live es su territorio. OnlyFans arranca más lento: una página nueva, sola y sin tráfico, suele hacer $300–700 al mes al principio, y hay que decirlo sin maquillaje.",
+      },
+      {
+        type: "p",
+        text: "La diferencia está en la curva. En webcam, el mes veinte se parece al mes uno: mismas horas, mismos tokens, mismo porcentaje del estudio — el ingreso se reinicia cada turno y no acumula nada. En OnlyFans la base de fans se queda: los suscriptores renuevan, el contenido se vende otra vez, los chats agregan ventas encima de la suscripción. Con equipo y trabajo sistemático, la referencia honesta del primer mes es de $500–1.000, en 1–3 meses el rango se mueve hacia $500–3.000, y las páginas top bajo management facturan $15.000–50.000 al mes. Todas las cifras son facturación bruta (gross) del balance de página — antes del 20% de la plataforma, de la parte del equipo y de impuestos — y son referencias, no promesas.",
+      },
+      {
+        type: "table",
+        caption:
+          "Webcam y OnlyFans frente a frente (cifras orientativas, no una promesa; los balances son gross)",
+        headers: ["Criterio", "Webcam (estudio)", "OnlyFans"],
+        rows: [
+          [
+            "Formato",
+            "Show en vivo por turnos",
+            "Contenido grabado + chats asíncronos",
+          ],
+          [
+            "Primer dinero",
+            "En las primeras transmisiones",
+            "Normalmente en 2–6 semanas",
+          ],
+          [
+            "Ligado a horas",
+            "Total: sin transmisión no hay tokens",
+            "Flexible: el contenido se vende de nuevo",
+          ],
+          [
+            "Dónde trabajas",
+            "Cabina del estudio, con traslados de madrugada",
+            "Tu casa, tu cámara, tu calendario",
+          ],
+          [
+            "Privacidad",
+            "El show sale en vivo, sin filtro previo",
+            "Selección previa de cada toma + geobloqueo de tu país",
+          ],
+          [
+            "Techo del ingreso",
+            "Tope duro: tus horas en línea",
+            "Crece con la base de fans y las ventas por DM",
+          ],
+        ],
+      },
+      {
+        type: "h2",
+        text: "Privacidad: quién controla lo que sale de tu cámara",
+      },
+      {
+        type: "p",
+        text: "Existe una búsqueda real en Google: «¿cómo saber si una mujer es modelo webcam?». Piénsalo un segundo — hay gente dedicándole tiempo a eso. El miedo a que te reconozca un primo, un excompañero o la vecina no es paranoia: es la parte del trabajo de la que menos se habla en el estudio, y la que más pesa a las tres de la mañana.",
+      },
+      {
+        type: "p",
+        text: "En un show en vivo no hay segunda toma: lo que salió, salió, y las transmisiones se graban y se resuben a sitios que nunca autorizaste. En OnlyFans cada foto y cada video pasa por tu filtro antes de publicarse — tú decides el encuadre, la luz y qué no aparece jamás. Encima se activa el geobloqueo: cierras Colombia, México o el país que quieras, y tu página deja de existir para la gente de tu ciudad, porque la promoción apunta a Estados Unidos, Canadá y Europa — donde están los fans que más pagan y donde nadie te conoce. Garantía absoluta no la da ningún formato, pero la cantidad de control no se parece en nada.",
+      },
+      {
+        type: "h2",
+        text: "¿Y si no eliges todavía? La ruta de las que vienen del estudio",
+      },
+      {
+        type: "p",
+        text: "Dejar el estudio webcam de un día para otro suena épico en TikTok y fatal en tu presupuesto. La ruta real de las chicas que ya cruzaron es menos dramática y más inteligente: mantener los turnos mientras la página de OnlyFans arranca, grabar contenido en los días libres y soltar el estudio cuando el balance de la página alcanza y supera el ingreso de las transmisiones — para la mayoría, cuestión de uno a tres meses de trabajo sistemático. Nada de lo aprendido se pierde: la soltura frente a la cámara y el oficio de conversar con fans valen oro en OnlyFans. Solo cambia dónde ocurre la venta — y de quién es el activo que construyes.",
+      },
+      {
+        type: "cases",
+        title: "Casos reales de modelos OFM — capturas de estadísticas",
+        note: "Las cifras son gross total del balance de página, no ingreso neto. Publicadas con consentimiento.",
+        linkLabel: "Ver casos",
+      },
+      {
+        type: "h2",
+        text: "Qué cambia con una agencia OFM (y qué te toca a ti)",
+      },
+      {
+        type: "p",
+        text: "La objeción lógica: «si dejo el estudio, ¿quién me trae a los fans?». Exactamente ese es el trabajo de una agencia OFM. La diferencia con el estudio está en qué recibes a cambio del porcentaje: el estudio te presta una habitación con cámara; la agencia pone su propio dinero en publicidad y tráfico hacia tu página, lleva los chats con un equipo por turnos las 24 horas y gestiona la cuenta y las finanzas — registro, verificación, pagos — para que tu única zona sea el contenido. Trabajas desde tu casa, sin traslados de madrugada y sin multas por llegar tarde.",
+      },
+      {
+        type: "p",
+        text: "Los números, sin letra pequeña: la modelo recibe el 20–30% del balance bruto de la página, y la cifra exacta depende del plan de trabajo, del perfil y del equipo. El resto no desaparece en un bolsillo: paga la publicidad, el tráfico y los chatters, y una parte se reinvierte en el crecimiento de la página — sin esa reinversión el balance simplemente no crece, y el 25% de un balance que sube cada mes vale más que el 100% de una página sola estancada en cero. Sin pagos de entrada, sin burocracia de papeles, y puedes dejar la colaboración cuando quieras: a un equipo que da resultados no le hace falta retener a nadie.",
+      },
+      {
+        type: "tip",
+        text: "No decidas «para siempre». Prueba 4–6 semanas del formato nuevo sin soltar el actual, mira las cifras y cómo duermes — y escala el que gane. Es tu carrera, no un turno más.",
+      },
+      { type: "h2", text: "Preguntas frecuentes: webcam u OnlyFans" },
+      { type: "h3", text: "¿Qué diferencia hay entre OnlyFans y webcam?" },
+      {
+        type: "p",
+        text: "El formato del trabajo. Webcam es transmisión en vivo: el ingreso existe mientras estás en línea, casi siempre en turnos nocturnos y muchas veces desde un estudio físico. OnlyFans es contenido grabado más chats: la página vende suscripciones y mensajes de pago las 24 horas aunque no estés conectada, y se trabaja desde casa. Ninguno es «mejor» en abstracto — cambian el horario, el control de la privacidad y la curva del ingreso.",
+      },
+      { type: "h3", text: "¿Cuánto gana una modelo webcam?" },
+      {
+        type: "p",
+        text: "Depende de las horas y del reparto. El fan compra tokens, la plataforma toma su comisión y el estudio la suya — en muchos estudios, entre el 40 y el 60% de lo que generas; los pagos suelen ser semanales. Con turnos completos y constancia se puede vivir de esto, pero el contador se detiene cada vez que apagas la cámara: no hay acumulación de mes a mes. En OnlyFans la misma constancia produce un balance que crece — con equipo, la referencia va de $500–1.000 el primer mes hacia $500–3.000 con los meses (cifras gross, orientativas, no una garantía).",
+      },
+      { type: "h3", text: "¿Qué se necesita para pasar del webcam a OnlyFans?" },
+      {
+        type: "p",
+        text: "Menos de lo que el estudio te hizo creer: 18 años cumplidos (la plataforma los verifica con documento, sin excepciones), un teléfono con buena cámara, internet estable y constancia para grabar por lotes. No necesitas equipo profesional ni audiencia previa — y si vienes del webcam, ya tienes la habilidad más difícil: la cámara no te asusta. Con agencia, el registro, la verificación y la configuración de privacidad se hacen contigo desde el primer día.",
+      },
+      { type: "h3", text: "¿Puedo hacer OnlyFans sin dejar el estudio webcam?" },
+      {
+        type: "p",
+        text: "Sí, y es la ruta más usada. Los turnos siguen pagando tus cuentas mientras la página arranca; el contenido se graba en los días libres, y la experiencia del show se convierte en ventaja en los chats. Cuando el balance de la página alcanza el ingreso del estudio — para la mayoría, en uno a tres meses de trabajo sistemático — decides con números en la mano, no con fe.",
+      },
+      { type: "h3", text: "¿En OnlyFans hay que hacer shows en vivo?" },
+      {
+        type: "p",
+        text: "No. Los lives existen como opción, pero el ingreso principal sale del contenido grabado, las suscripciones, el PPV y la conversación en los mensajes — que con agencia lleva un equipo de chatters. Si lo que buscas es justamente dejar las transmisiones en vivo, OnlyFans funciona completo sin un solo directo.",
+      },
+      {
+        type: "h3",
+        text: "¿Qué tan rentable es ser modelo webcam en Colombia en 2026?",
+      },
+      {
+        type: "p",
+        text: "El mercado es real y grande — Colombia es uno de los países con más estudios webcam del mundo, y la DIAN ya trata este ingreso como cualquier otro: se declara. Rentable puede ser; la pregunta es para quién. Con turnos de 6–8 horas y el porcentaje del estudio, tu techo son tus propias horas en línea. Por eso cada vez más chicas usan el webcam como escuela y primer ingreso, y construyen en paralelo un activo propio en OnlyFans que no se apaga con la cámara.",
+      },
+      {
+        type: "nav",
+        intro: "Si estás armando tu salida del turno, sigue por aquí:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Trabajo de modelo OnlyFans con agencia",
+          },
+          {
+            href: "/blog/chto-takoe-ofm",
+            label: "Qué es OFM y cómo funciona el management",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "Cuánto ganan las modelos: cifras honestas",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonimato y geobloqueo, paso a paso",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-latinskaya-amerika",
+            label: "Agencia OnlyFans para Latinoamérica",
+          },
+          {
+            href: "/join",
+            label: "Enviar tu solicitud a la agencia",
+          },
+          {
+            href: "/vacancies/chatter-onlyfans",
+            label: "¿Prefieres el otro lado del chat? Vacante de chatter",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Cansada de que el contador se detenga al apagar la cámara?",
+        body: "Deja tu solicitud, anónima y sin compromiso, o escríbenos por Telegram a @ofmm_agency. Un manager analiza tu experiencia webcam y te dice con números si el cambio te conviene — respuesta en 24 horas.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Solo +18. Los rangos de ingreso son facturación bruta (gross) del balance de página con trabajo sistemático — una referencia, no una garantía.",
+      },
+    ],
+  },
 };
