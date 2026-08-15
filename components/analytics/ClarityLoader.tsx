@@ -15,7 +15,7 @@ import {
  * «запрещено», включение по CONSENT_EVENT. ID проекта не секрет (виден в HTML
  * любого сайта с Clarity), поэтому живёт в env с фолбэком в коде.
  */
-const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || '';
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || 'y2xm7yxice';
 
 export function ClarityLoader() {
   const [enabled, setEnabled] = useState(false);
