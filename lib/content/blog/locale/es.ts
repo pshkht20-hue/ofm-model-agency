@@ -2492,4 +2492,461 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
     ],
   },
+  "chto-takoe-onlyfans": {
+    // Pillar ES 16.08.2026 — «que es onlyfans» 21 900/mes (MX+ES+AR+CO+CL).
+    // Un solo URL debe cubrir qué es + cómo funciona + cómo ganar dinero (patrón
+    // xataka). PAA de la SERP en vivo integradas textualmente como h3 con «?»
+    // (extractFaqItems). Ángulo libre en los tops: la perspectiva de la creadora
+    // con cifras verificables (Fenix $5.800M FY2024, mediana ~$180 XSRUS).
+    title: "Qué es OnlyFans y cómo funciona: guía completa 2026",
+    description:
+      "OnlyFans es una plataforma de suscripción: las creadoras cobran por contenido exclusivo y chats. Cómo funciona, cuánto se gana de verdad y cómo empezar.",
+    keywords: [
+      "que es onlyfans",
+      "como funciona onlyfans",
+      "onlyfans que es",
+      "que es onlyfans y como funciona",
+      "modelo onlyfans",
+      "como ganar dinero en onlyfans",
+      "que es onlyfans y para que sirve",
+      "que significa onlyfans en español",
+      "cuanto gana un principiante en onlyfans",
+      "como ganar dinero en onlyfans sin mostrar la cara",
+      "que hacen las mujeres que trabajan en onlyfans",
+      "como abrir onlyfans",
+      "cuanto se paga para entrar a onlyfans",
+      "como vender fotos en onlyfans",
+      "onlyfans es gratuito",
+      "onlyfans para creadoras",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "OnlyFans es una plataforma de suscripción donde una creadora publica contenido exclusivo y cobra por el acceso: los fans pagan una cuota mensual, compran contenido por mensaje y dejan propinas. Funciona como Netflix, pero en lugar de pagar por un catálogo de series, el fan paga por la página de una persona concreta; de cada dólar que entra, la plataforma se queda con el 20% y el resto va al balance de la creadora.",
+      },
+      {
+        type: "p",
+        text: "En internet sobran artículos que explican OnlyFans para el espectador o para padres preocupados. Esta guía lo cuenta desde el otro lado: la perspectiva de la creadora. Qué se hace ahí de verdad, cuánto se gana (con cifras verificables, no con titulares), cuánto cuesta entrar, cómo se protege el anonimato y qué hace una agencia. Sin humo y sin promesas de dinero fácil.",
+      },
+      { type: "h2", text: "Qué es OnlyFans y para qué sirve" },
+      {
+        type: "p",
+        text: "OnlyFans es un sitio web lanzado en 2016 en Reino Unido y operado por la empresa Fenix International. El modelo es simple: la creadora (en la plataforma, creator) abre una página, publica fotos y videos que solo ven quienes pagan, y conversa con sus suscriptores por mensajes privados. A diferencia de Instagram o TikTok, el contenido es cerrado: no aparece en Google y no existe un feed público donde alguien pueda toparse contigo por casualidad.",
+      },
+      {
+        type: "p",
+        text: "Un matiz que conviene aclarar de entrada: OnlyFans no es solo contenido para adultos. Hay entrenadoras fitness, cocineros, músicos y artistas que venden clases y material exclusivo. Pero el segmento que realmente paga es el contenido 18+, y de eso habla esta guía: de trabajar como creadora adulta, de forma legal, remota y con la privacidad bajo control.",
+      },
+      {
+        type: "p",
+        text: "¿Y el tamaño del negocio? Según las cuentas anuales que Fenix International presentó en el registro mercantil británico (Companies House), la plataforma pagó a sus creadores unos $5.800 millones en el año fiscal 2024 — pagos reales, auditados y declarados, no cifras de marketing. El dinero en OnlyFans existe; la pregunta honesta es cómo se reparte, y de eso hablamos más abajo.",
+      },
+      {
+        type: "tip",
+        text: "La clave de OnlyFans es que es una plataforma cerrada: sin suscripción de pago, nadie ve tu página, y los buscadores no indexan el contenido. Esa es la base de la privacidad de las creadoras, y volveremos a ella.",
+      },
+      { type: "h3", text: "¿Qué significa OnlyFans en español?" },
+      {
+        type: "p",
+        text: "Traducido literalmente, OnlyFans significa «solo fans» o «solo para fans», y el nombre resume el modelo: el contenido existe solo para los fans que pagan la suscripción. No es una red social abierta ni una app de citas; es una plataforma de membresía donde cada creadora tiene su página cerrada y decide qué publica y cuánto cobra.",
+      },
+      { type: "h3", text: "¿Cómo funciona OnlyFans para ver contenido?" },
+      {
+        type: "p",
+        text: "Para el fan es simple: crea una cuenta en onlyfans.com, añade un método de pago y se suscribe a la página de una creadora por una cuota mensual. Aparte puede comprar contenido extra por mensaje (PPV), dejar propinas o pedir contenido personalizado. Ese es todo el lado del espectador; el resto de esta guía cubre el lado que casi nadie explica bien: cómo funciona para la creadora que gana dinero.",
+      },
+      {
+        type: "h2",
+        text: "Cómo funciona OnlyFans: suscripción, PPV, propinas y customs",
+      },
+      {
+        type: "p",
+        text: "OnlyFans funciona con cuatro fuentes de ingreso: la suscripción mensual, el contenido de pago por mensaje (PPV), las propinas y los customs. Entender esa estructura antes de empezar evita la decepción más común de las novatas («publiqué fotos y no pasó nada»):",
+      },
+      {
+        type: "ul",
+        items: [
+          "Suscripción: la cuota fija por entrar a la página (normalmente $5–15 al mes). Es la «puerta de entrada», pero casi nunca la fuente principal de ingreso.",
+          "PPV (pay-per-view): contenido de pago que se envía por mensaje privado; el suscriptor paga aparte por desbloquear cada foto o video. Aquí vive gran parte del dinero.",
+          "Propinas (tips): pagos voluntarios de los fans por la conversación, por agradecimiento o a petición.",
+          "Customs y videollamadas: contenido personalizado grabado a pedido de un fan concreto y llamadas privadas; es lo que mejor se paga en toda la plataforma.",
+        ],
+      },
+      {
+        type: "p",
+        text: "El dato que sorprende a casi todas: según distintas estimaciones, entre el 70% y el 90% del ingreso no viene del precio de la suscripción, sino de los mensajes privados, donde se venden los PPV, los customs y las propinas. Conversar con los suscriptores no es un extra: es el trabajo en sí. Por eso las modelos con agencia delegan los chats a un equipo que responde 24/7 y vende por ellas.",
+      },
+      {
+        type: "p",
+        text: "Y la aritmética honesta: OnlyFans retiene el 20% de comisión sobre todo lo que generas — igual para todo el mundo, inclúyelo en los cálculos desde el día uno. Del resto salen la parte de la agencia (si trabajas con una) y los impuestos de tu país. Cuando esta guía habla de «facturación del balance de la página», la cifra es bruta (gross): antes del 20% de la plataforma, de la parte del equipo y de impuestos, no dinero «en mano».",
+      },
+      {
+        type: "nav",
+        intro: "Cómo se mueve el dinero por dentro:",
+        links: [
+          {
+            href: "/blog/onlyfans-tseny-podpiska-ppv",
+            label: "Precios: suscripción, PPV y propinas",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "Chats y ventas por DM: dónde vive el ingreso",
+          },
+          {
+            href: "/vacancies/chatter-onlyfans",
+            label: "Vacante de chatter OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "Cuánto ganan las modelos de verdad",
+          },
+        ],
+      },
+      {
+        type: "h2",
+        text: "Qué hacen las mujeres que trabajan en OnlyFans: la semana real",
+      },
+      {
+        type: "p",
+        text: "Graban, publican y conversan con sus suscriptores: la rutina es mucho más normal de lo que la gente imagina. Una semana típica: uno o dos días de sesiones (luz, teléfono o cámara, varios sets de fotos y video), publicaciones según un plan de contenido, respuestas a los suscriptores y venta por chat. Si la modelo trabaja sola, a eso se suma el marketing completo; con agencia, la parte pesada la lleva el equipo y a ella le queda lo esencial: el contenido.",
+      },
+      {
+        type: "p",
+        text: "Aquí conviene separar el mito de la realidad. OnlyFans no es «subes un par de fotos y el dinero llega solo». Es la suma de tres cosas: contenido (grabar y editar), marketing (de dónde salen los suscriptores) y ventas en el chat (donde se genera la mayor parte del ingreso). Si falta cualquiera de las tres, la página no crece. Quien te venda lo contrario, o te vende un curso, o te oculta el volumen real de trabajo.",
+      },
+      {
+        type: "p",
+        text: "Igual de importante es lo que una creadora NO hace. No está obligada a reunirse con suscriptores, ni a cruzar sus propios límites, ni a volverse una figura pública en su ciudad: la audiencia está al otro lado del océano y tu país se puede bloquear por geolocalización. Qué grabas y qué es tabú lo decides tú, y poner límites es la norma de la profesión, no un capricho.",
+      },
+      { type: "h3", text: "¿Qué cosas raras se piden en OnlyFans?" },
+      {
+        type: "p",
+        text: "Los pedidos más comunes son bastante inocentes: decir el nombre del fan en un video, un outfit concreto, un roleplay, contenido de pies o un saludo personalizado. Los customs elaborados se pagan más caro, y ahí está el punto: todo pedido pasa por tu lista de límites, que defines antes de empezar. Lo que está fuera de tus tabúes se rechaza; con agencia, el equipo de chat filtra los pedidos y tú ni ves los que no encajan contigo.",
+      },
+      { type: "h3", text: "¿Qué buscan las mujeres en OnlyFans?" },
+      {
+        type: "p",
+        text: "Tres cosas, casi siempre: ingreso en dólares que no depende del mercado laboral local, flexibilidad total (desde casa, a tu ritmo, sin jefe ni horario) y privacidad, porque la página es cerrada y tu entorno no tiene por qué enterarse. Estudiantes, mamás, chicas con trabajos mal pagados: perfiles distintos, la misma búsqueda de un ingreso que crezca con su esfuerzo.",
+      },
+      {
+        type: "h2",
+        text: "Modelo OnlyFans sola o con agencia: quién hace qué",
+      },
+      {
+        type: "p",
+        text: "El reparto es así: sola, todo el trabajo corre por tu cuenta; con agencia, tú te quedas con el contenido y el equipo asume el resto. Es la primera gran decisión — más importante que tu nicho o el precio de tu suscripción, porque de ahí depende cuánto trabajo cae sobre ti y a qué velocidad crece la página.",
+      },
+      {
+        type: "p",
+        text: "Sola: el contenido, el marketing, los chats 24/7 (los fans escriben desde todas las zonas horarias) y la promoción corren por tu cuenta. La ventaja es el control total y que el balance es tuyo tras el 20% de la plataforma; la desventaja: son varias profesiones a la vez, y sin presupuesto de publicidad el crecimiento es lento.",
+      },
+      {
+        type: "p",
+        text: "Con agencia: el equipo trabaja con su propio dinero, no con el tuyo. Sin tono de venta, esto es lo que una agencia seria cubre en la práctica:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Tráfico y publicidad: atraer suscriptores con poder de compra, financiado por la agencia — tú no inviertes ni un dólar",
+          "Chats 24/7: un equipo de chatters profesionales conversa y vende mientras duermes",
+          "Estrategia de contenido y analítica: qué grabar, cuándo publicar, qué testear",
+          "Gestión completa de la cuenta y las finanzas: registro, verificación, configuración de pagos",
+          "Privacidad: geobloqueo de tu país y control para que tus datos personales no se filtren",
+        ],
+      },
+      {
+        type: "p",
+        text: "Tu parte con la agencia es el 20–30% del balance bruto total de la página; la cifra exacta depende del plan de trabajo, tu perfil y el equipo asignado. ¿Por qué ese reparto tiene sentido? Porque la agencia financia todo lo demás: publicidad, tráfico de pago, chatters 24/7 y management, y una parte del ingreso se reinvierte en el crecimiento de la página. Sin esa reinversión el balance no crece, y el 25% de una página que crece vale más a los seis meses que el 100% de una página sola estancada. Empiezas sin burocracia y sin pagos de entrada, y puedes dejar la colaboración en el momento que quieras.",
+      },
+      {
+        type: "nav",
+        intro: "Sobre agencias, a fondo:",
+        links: [
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Trabajo de modelo OnlyFans con agencia",
+          },
+          {
+            href: "/blog/chto-delaet-onlyfans-agentstvo",
+            label: "Qué hace una agencia OnlyFans por ti",
+          },
+          {
+            href: "/blog/kak-vybrat-onlyfans-agentstvo",
+            label: "Cómo elegir agencia y verificarla",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Señales de agencia fraudulenta",
+          },
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cuánto se gana de verdad en OnlyFans: cifras honestas",
+      },
+      {
+        type: "p",
+        text: "En OnlyFans se gana desde $300–700 al mes (novata sola, sin tráfico) hasta $15.000–50.000 brutos al mes en las páginas top con agencia — y la mediana del mercado es mucho más baja de lo que sugieren los titulares. Sí, la plataforma pagó unos $5.800 millones a sus creadores en el año fiscal 2024, pero ese dinero se reparte de forma brutalmente desigual: el análisis independiente más citado (XSRUS, del analista Tom Hollands) sitúa la mediana en torno a $180 al mes — la mitad de las cuentas gana menos que eso. La causa casi siempre es la misma: falta de tráfico y de horas para los chats, no falta de belleza ni de contenido.",
+      },
+      {
+        type: "p",
+        text: "Ahora la escalera realista. Una novata sola, sin presupuesto de publicidad, suele quedarse en $300–700 al mes, y el primer mes puede ser menos: es lo normal, no un fracaso. Con trabajo sistemático y un equipo detrás, la referencia honesta del primer mes es de $500–1.000, y en 1–3 meses la página puede moverse hacia los $500–3.000 mientras acumula suscriptores.",
+      },
+      {
+        type: "p",
+        text: "¿Y el techo? Las páginas top bajo gestión de agencia facturan entre $15.000 y $50.000 al mes de balance. Pero lee bien lo que significa: es facturación bruta (gross), antes del 20% de la plataforma, de la parte de la agencia y de impuestos. No es dinero «en mano», no es la mediana y no es una garantía: depende del nicho, de la constancia del contenido y de la calidad de los chats y el marketing.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Sola, sin presupuesto ni tráfico: normalmente $300–700 al mes; el primer mes puede ser menos",
+          "Primer mes con equipo y trabajo sistemático: referencia de $500–1.000",
+          "Meses 1–3 con sistema: rango orientativo de $500–3.000",
+          "Páginas top con agencia: $15.000–50.000 al mes gross — antes de comisiones e impuestos, orientación y no garantía",
+        ],
+      },
+      {
+        type: "table",
+        caption:
+          "La facturación es el balance bruto de la página, antes de la comisión de la plataforma (20%), la parte de la agencia y los impuestos; es una referencia, no una garantía.",
+        headers: ["", "Sola (por tu cuenta)", "Con agencia OFM"],
+        rows: [
+          [
+            "Facturación del balance / mes",
+            "a menudo $300–700",
+            "desde ~$3.000; páginas top $15.000–50.000 gross",
+          ],
+          [
+            "Marketing y tráfico",
+            "corre por tu cuenta",
+            "lo financia la agencia con su dinero",
+          ],
+          [
+            "Chats 24/7 y ventas",
+            "corren por tu cuenta",
+            "equipo profesional de chatters",
+          ],
+          [
+            "Inversión inicial",
+            "tuya",
+            "la financia la agencia",
+          ],
+          [
+            "Anonimato (geobloqueo)",
+            "lo configuras tú",
+            "lo configura la agencia",
+          ],
+        ],
+      },
+      {
+        type: "cases",
+        title: "Casos reales de modelos OFM — capturas de estadísticas",
+        note: "Las cifras son gross total del balance de página, no ingreso neto. Publicadas con consentimiento.",
+        linkLabel: "Ver casos",
+      },
+      {
+        type: "p",
+        text: "Esto es el resumen. El desglose por etapas —mes 1, mes 3, año 1— está en el artículo sobre cuánto ganan las modelos, y puedes estimar tu rango con la calculadora de ingresos del sitio.",
+      },
+      {
+        type: "tip",
+        text: "Cualquier cifra de esta guía es un rango y una referencia, no una promesa. El ingreso en OnlyFans es real, pero nadie te lo garantiza: depende del trabajo, no de la suerte.",
+      },
+      { type: "h3", text: "¿Cuánto gana un principiante en OnlyFans?" },
+      {
+        type: "p",
+        text: "Con trabajo sistemático y equipo, la referencia realista del primer mes es de $500–1.000 de facturación bruta, con crecimiento a medida que la página acumula suscriptores. Sola y sin tráfico, la mayoría de las novatas se queda en $300–700 o menos al principio. Todas las cifras son gross: antes del 20% de la plataforma, de la parte del equipo y de impuestos.",
+      },
+      { type: "h3", text: "¿Cuánto pagan por fotos de pies en Only?" },
+      {
+        type: "p",
+        text: "El nicho de pies existe y es real: un set o un custom suele venderse entre $5 y $25, y los pedidos personalizados pagan más. Pero nadie vive de fotos sueltas: el ingreso estable sale de combinar suscripción, PPV y customs dentro de un nicho trabajado con constancia. La ventaja evidente: es uno de los nichos donde se trabaja sin mostrar la cara desde el primer día.",
+      },
+      {
+        type: "nav",
+        intro: "Cifras y expectativas, en detalle:",
+        links: [
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "Cuánto ganan las modelos: desglose por etapas",
+          },
+          {
+            href: "/calculator",
+            label: "Calculadora de ingresos OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "Sola o con agencia: guía para empezar",
+          },
+        ],
+      },
+      { type: "h2", text: "Cómo empezar de cero en OnlyFans" },
+      {
+        type: "p",
+        text: "Los requisitos mínimos caben en una línea: 18 años cumplidos, teléfono o cámara, internet estable y constancia. No necesitas estudio profesional, ni experiencia, ni audiencia previa, ni inglés (los chats se delegan). El único requisito innegociable es la mayoría de edad: la plataforma la verifica con documento.",
+      },
+      {
+        type: "p",
+        text: "El registro en sí es la parte fácil: unos 15 minutos, siempre en el sitio oficial onlyfans.com (los clones y «espejos» son phishing). Los pasos: crear la cuenta con un email, verificar tu identidad con documento y selfie —obligatorio, pero esos datos quedan privados y ningún suscriptor los ve—, conectar un método de pago, completar el perfil y configurar el geobloqueo para cerrar tu país. Después del registro empieza el trabajo de verdad: tráfico, contenido y chats.",
+      },
+      { type: "h3", text: "¿Cuánto se paga para entrar a OnlyFans?" },
+      {
+        type: "p",
+        text: "Nada: crear una cuenta de creadora es gratis. OnlyFans gana con el 20% de comisión sobre lo que generas, no cobrando por la entrada. Y esto sirve de filtro anti-estafa: si una «agencia» te pide dinero por el registro, por formación o por un «cupo garantizado», es señal clarísima de fraude — una agencia real gana solo cuando tú ganas y financia el arranque con su propio dinero.",
+      },
+      { type: "h3", text: "¿Qué se necesita para abrir una OnlyFans?" },
+      {
+        type: "p",
+        text: "El checklist completo: 18+ (sin excepciones), documento de identidad vigente más selfie para la verificación, un email, un método de pago para retirar y un teléfono con cámara decente. La verificación es privada: confirma tu edad e identidad, y los suscriptores nunca ven tus documentos ni tu nombre real si usas seudónimo.",
+      },
+      { type: "h3", text: "¿Qué debo saber antes de abrir OnlyFans?" },
+      {
+        type: "p",
+        text: "Tres verdades que ahorran meses: el ingreso vive en los chats, no en publicar y esperar — sin conversación no hay ventas. El cuello de botella real es el tráfico: sin promoción constante la página no crece, por bueno que sea el contenido. Y la privacidad se configura desde el día uno con el geobloqueo, igual que tus límites de contenido: se definen antes de empezar, no sobre la marcha.",
+      },
+      {
+        type: "p",
+        text: "Con agencia, el arranque se ve distinto: te ayudamos a pasar la verificación a la primera, el equipo gestiona la cuenta y las finanzas —registro, pagos, precios— y a ti te queda solo el contenido. Si prefieres empezar acompañada, la solicitud es anónima y no te compromete a nada.",
+      },
+      {
+        type: "h2",
+        text: "Cómo ganar dinero en OnlyFans (también sin mostrar la cara)",
+      },
+      {
+        type: "p",
+        text: "La fórmula ya la conoces: contenido que retiene, tráfico que trae suscriptores y chats que convierten. Vamos a lo concreto: qué se publica, cómo se vende y qué hacer si no quieres mostrar la cara.",
+      },
+      {
+        type: "h3",
+        text: "¿Qué tipo de contenido se puede subir a OnlyFans?",
+      },
+      {
+        type: "p",
+        text: "Fotos y videos exclusivos, sets temáticos, transmisiones en vivo, audios y customs a pedido. El abanico va desde lifestyle, fitness y cosplay hasta contenido 18+, y el nivel lo decide cada creadora: conviven páginas muy explícitas con páginas que nunca pasan de lencería. Lo prohibido lo marcan las normas de la plataforma, y la verificación garantiza que todas las personas en el contenido sean mayores de edad.",
+      },
+      { type: "h3", text: "¿Cómo vender fotos en OnlyFans?" },
+      {
+        type: "p",
+        text: "La regla de oro: el feed atrae y el chat vende. Las fotos no se venden en el muro, sino por mensaje privado como PPV con un precio por desbloquear; los sets completos y los customs valen más que las fotos sueltas. Por eso una página sin conversación activa casi no factura aunque tenga buen contenido: la venta ocurre en el diálogo, no en la galería.",
+      },
+      {
+        type: "p",
+        text: "¿Y sin mostrar la cara? Es posible y hay nichos enteros que funcionan así: pies, fitness, cosplay con máscara, ASMR. Eso sí, seamos honestas: la cara es un activo fuerte —los fans pagan por una persona y una conexión— y las páginas con rostro suelen facturar más. La buena noticia: el anonimato real no depende de esconder la cara sino de un sistema — geobloqueo de tu país, seudónimo, marcas de agua y cero datos personales en el perfil. Así tu entorno no te encuentra aunque trabajes a cara descubierta.",
+      },
+      {
+        type: "nav",
+        intro: "Privacidad y formato de trabajo:",
+        links: [
+          {
+            href: "/blog/onlyfans-rabota-bez-lica",
+            label: "Trabajar sin mostrar la cara: guía completa",
+          },
+          {
+            href: "/blog/onlyfans-anonimnost-i-bezopasnost",
+            label: "Anonimato y geobloqueo en OnlyFans",
+          },
+          {
+            href: "/blog/onlyfans-kontent-plan-i-syomki",
+            label: "Plan de contenido y sesiones",
+          },
+          {
+            href: "/blog/onlyfans-oshibki-novichkov",
+            label: "Errores típicos de las novatas",
+          },
+        ],
+      },
+      { type: "h2", text: "Seguridad, anonimato y legalidad" },
+      {
+        type: "p",
+        text: "La plataforma en sí es legal: una empresa británica registrada, pagos a cuentas bancarias reales y verificación de identidad y edad para cada creadora. Crear contenido para adultos siendo mayor de 18 no está prohibido en la gran mayoría de países hispanohablantes; la parte seria no es el «qué», sino el orden: declarar el ingreso donde corresponda y cuidar la privacidad desde el primer día.",
+      },
+      {
+        type: "p",
+        text: "El anonimato funciona como sistema. En la plataforma bloqueas por geolocalización tu país y los que tú elijas, para que nadie de tu entorno se cruce con tu página; la promoción, mientras tanto, apunta a la audiencia con mayor poder de compra —Estados Unidos, Canadá, Australia, Europa Occidental—, donde están los fans que pagan. El geobloqueo reduce el riesgo de forma drástica, pero no da garantía absoluta (existen VPN y capturas), así que la privacidad se trabaja en capas: geobloqueo, seudónimo, marcas de agua y control de datos.",
+      },
+      {
+        type: "p",
+        text: "Sobre impuestos, la regla general: el ingreso de OnlyFans se declara en tu país de residencia fiscal, y el mecanismo exacto depende de si estás en México, España, Argentina, Colombia o Chile. Este artículo es informativo, no una asesoría legal ni fiscal: para tu caso concreto, un asesor fiscal local te da el camino exacto. Lo que ya no funciona es «cobrar a una cuenta y que nadie se entere»: los bancos reportan, así que lo inteligente es hacerlo en regla desde el inicio.",
+      },
+      { type: "h2", text: "Preguntas frecuentes sobre OnlyFans" },
+      { type: "h3", text: "¿Qué es lo que hacen en OnlyFans?" },
+      {
+        type: "p",
+        text: "Las creadoras publican contenido exclusivo —fotos, videos, audios, transmisiones— en una página cerrada y conversan con sus suscriptores por mensajes privados. Los fans pagan la suscripción mensual, compran contenido por mensaje (PPV), dejan propinas y piden customs. Hay creadoras de fitness, cocina y música, pero el segmento principal que paga es el contenido para adultos 18+.",
+      },
+      {
+        type: "h3",
+        text: "¿Qué hacen las mujeres que trabajan en OnlyFans?",
+      },
+      {
+        type: "p",
+        text: "En la práctica: sesiones de fotos y video uno o dos días por semana, publicaciones según un plan, conversación con los suscriptores y venta por chat. Solas suman el marketing completo; con agencia, el equipo lleva el tráfico y los chats y a la modelo le queda el contenido. No están obligadas a reunirse con nadie ni a cruzar sus límites: qué grabar y qué es tabú lo decide cada una.",
+      },
+      { type: "h3", text: "¿Cómo se empieza a ganar dinero en OnlyFans?" },
+      {
+        type: "p",
+        text: "Primero la base: cuenta verificada en onlyfans.com, perfil completo, geobloqueo configurado y un precio de suscripción inicial. Después, lo que mueve el ingreso: contenido constante, tráfico desde redes y chats activos donde se venden PPV y customs. El error clásico es publicar y esperar: sin promoción y sin conversación, la página no factura. Con equipo, la referencia del primer mes es de $500–1.000 brutos.",
+      },
+      { type: "h3", text: "¿Qué te pide OnlyFans para ganar dinero?" },
+      {
+        type: "p",
+        text: "Tres cosas: ser mayor de 18 años (se verifica con documento y selfie, sin excepciones), tener la cuenta verificada como creadora y conectar un método de pago para retirar. La verificación es privada: los suscriptores no ven tus documentos ni tu nombre real. A partir de ahí la plataforma retiene su 20% y el resto queda en el balance de tu página.",
+      },
+      { type: "h3", text: "¿OnlyFans es gratuito?" },
+      {
+        type: "p",
+        text: "Para la creadora, sí: abrir la cuenta y publicar no cuesta nada, y la plataforma solo gana el 20% de lo que factures. Para el fan depende de cada página: la suscripción tiene el precio que fija la creadora (algunas páginas son gratis y venden todo por PPV). Si alguien te cobra por «entrar a trabajar» en OnlyFans, es una estafa: la entrada real es gratuita.",
+      },
+      {
+        type: "h3",
+        text: "¿Se puede ganar dinero en OnlyFans sin mostrar la cara?",
+      },
+      {
+        type: "p",
+        text: "Sí: nichos como pies, fitness, cosplay o ASMR funcionan sin rostro, y el anonimato se refuerza con geobloqueo, seudónimo y marcas de agua. La parte honesta: las páginas con cara suelen facturar más, porque los fans pagan por una persona y una conexión. Muchas empiezan sin rostro y deciden después, cuando ven cómo funciona la privacidad por dentro.",
+      },
+      {
+        type: "p",
+        text: "Si quieres respuestas para tu caso concreto, deja una solicitud anónima en el sitio o escríbenos por Telegram a @ofmm_agency: te contamos el ingreso, las condiciones y la privacidad con calma y sin presión. Trabajamos solo con mayores de 18 años. Todas las cifras de esta guía son referencias brutas (gross), antes de comisiones e impuestos, no un ingreso garantizado.",
+      },
+      {
+        type: "nav",
+        intro: "Sigue por aquí:",
+        links: [
+          {
+            href: "/join",
+            label: "Enviar tu solicitud a la agencia OFM",
+          },
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Trabajo de modelo OnlyFans: la vacante",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-latinskaya-amerika",
+            label: "Agencia OnlyFans en Latinoamérica",
+          },
+          {
+            href: "/blog/onlyfans-marketing-strategiya-2026",
+            label: "Estrategia de marketing OnlyFans 2026",
+          },
+          {
+            href: "/faq",
+            label: "FAQ: qué es OFM",
+          },
+          {
+            href: "/calculator",
+            label: "Calculadora de ingresos OnlyFans",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Quieres saber si OnlyFans es para ti?",
+        body: "Te contamos con honestidad cómo funciona todo por dentro y te ayudamos a empezar con el respaldo de la agencia. La solicitud es anónima y no te compromete a nada.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
+      },
+    ],
+  },
 };
