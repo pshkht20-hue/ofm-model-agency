@@ -1,7 +1,7 @@
 # SEO Analytics Report
 
-**Generated:** 2026-08-03T08:10:04.507Z  
-**Period:** last 28 days (2026-07-06 → 2026-08-03)  
+**Generated:** 2026-08-28T13:54:05.339Z  
+**Period:** last 28 days (2026-07-31 → 2026-08-28)  
 **Site:** sc-domain:ofmmodels.com  
 **GA4 property:** 540360466
 
@@ -11,10 +11,10 @@
 
 | Metric | Value |
 |--------|-------|
-| GSC impressions (top queries sum) | 21559 |
-| GSC clicks (top queries sum) | 362 |
-| GA4 sessions | 645 |
-| GA4 organic sessions | 252 |
+| GSC impressions (top queries sum) | 37406 |
+| GSC clicks (top queries sum) | 786 |
+| GA4 sessions | 2296 |
+| GA4 organic sessions | 894 |
 
 
 
@@ -24,21 +24,21 @@
 
 | Query | Clicks | Impressions | CTR % | Position |
 |-------|--------|-------------|-------|----------|
-| of models | 88 | 5503 | 1.60 | 6.9 |
-| ofm agency | 29 | 355 | 8.17 | 6.1 |
-| of model | 27 | 2963 | 0.91 | 5.8 |
-| онлифанс | 23 | 4585 | 0.50 | 10.6 |
-| onlyfans | 17 | 750 | 2.27 | 16.8 |
-| онлифанщица это | 17 | 2283 | 0.74 | 6.8 |
-| ofm models | 16 | 51 | 31.37 | 2.7 |
-| онли фанс | 15 | 1487 | 1.01 | 10.5 |
-| онлифанс агентство | 10 | 68 | 14.71 | 12.2 |
-| онлифанс официальный сайт | 10 | 473 | 2.11 | 8.5 |
-| онлифанщица кто это | 8 | 182 | 4.40 | 5.9 |
-| onlyfans moldova | 7 | 29 | 24.14 | 6.4 |
-| онлифанс работа | 6 | 111 | 5.41 | 8.9 |
-| онлифанщица это простыми словами | 6 | 205 | 2.93 | 6.6 |
-| онлифанс в молдове | 4 | 16 | 25.00 | 3.4 |
+| of models | 197 | 8642 | 2.28 | 4.2 |
+| ofm models | 57 | 119 | 47.90 | 1.3 |
+| of model | 49 | 3375 | 1.45 | 3.9 |
+| onlyfans job | 40 | 1583 | 2.53 | 8.5 |
+| онлифанс | 40 | 5640 | 0.71 | 10.2 |
+| онлі фанс | 32 | 1215 | 2.63 | 7.6 |
+| ofm agency | 27 | 383 | 7.05 | 6.3 |
+| онлифанс работа | 27 | 824 | 3.28 | 7.5 |
+| онлифанс вакансии | 15 | 370 | 4.05 | 7.2 |
+| онлифанс официальный сайт | 15 | 1162 | 1.29 | 8.1 |
+| onlyfans | 14 | 575 | 2.43 | 18.9 |
+| ofm jobs | 13 | 788 | 1.65 | 6.4 |
+| what is an of model | 12 | 1188 | 1.01 | 3.3 |
+| онли фанс | 12 | 2680 | 0.45 | 9.7 |
+| онлифанс модели | 12 | 265 | 4.53 | 7.2 |
 
 ---
 
@@ -46,16 +46,16 @@
 
 | Page | Clicks | Impressions | CTR % | Position |
 |------|--------|-------------|-------|----------|
-| https://ofmmodels.com/en | 174 | 9486 | 1.83 | 7.2 |
-| https://ofmmodels.com/blog/chto-takoe-onlyfans | 150 | 18356 | 0.82 | 10.4 |
-| https://ofmmodels.com/ | 78 | 986 | 7.91 | 8.0 |
-| https://ofmmodels.com/blog/chatter-onlyfans-kto-eto | 58 | 2645 | 2.19 | 8.1 |
-| https://ofmmodels.com/blog/onlyfans-agentstvo-moldova | 41 | 192 | 21.35 | 5.1 |
-| https://ofmmodels.com/uk/blog/chto-takoe-onlyfans | 37 | 2384 | 1.55 | 11.7 |
-| https://ofmmodels.com/blog/kak-zaregistrirovatsya-na-onlyfans | 36 | 3000 | 1.20 | 9.3 |
-| https://ofmmodels.com/blog/rabota-modelyu-onlyfans | 29 | 551 | 5.26 | 8.3 |
-| https://ofmmodels.com/en/blog/rabota-modelyu-onlyfans | 29 | 1008 | 2.88 | 11.1 |
-| https://ofmmodels.com/en/blog/onlyfans-modeli-kto-eto | 23 | 2848 | 0.81 | 6.5 |
+| https://ofmmodels.com/en | 343 | 10839 | 3.16 | 6.5 |
+| https://ofmmodels.com/blog/chatter-onlyfans-kto-eto | 275 | 6700 | 4.10 | 6.2 |
+| https://ofmmodels.com/en/vacancies | 206 | 4004 | 5.14 | 8.2 |
+| https://ofmmodels.com/ | 202 | 1826 | 11.06 | 5.9 |
+| https://ofmmodels.com/blog/chto-takoe-onlyfans | 174 | 20396 | 0.85 | 9.7 |
+| https://ofmmodels.com/en/blog/onlyfans-modeli-kto-eto | 131 | 18392 | 0.71 | 6.1 |
+| https://ofmmodels.com/en/blog/rabota-modelyu-onlyfans | 128 | 3986 | 3.21 | 9.6 |
+| https://ofmmodels.com/uk/blog/chto-takoe-onlyfans | 119 | 9358 | 1.27 | 9.0 |
+| https://ofmmodels.com/vacancies/chatter-onlyfans | 106 | 1064 | 9.96 | 7.0 |
+| https://ofmmodels.com/en/vacancies/chatter-onlyfans | 70 | 2432 | 2.88 | 7.7 |
 
 ---
 
@@ -63,16 +63,16 @@
 
 | Country | Clicks | Impressions |
 |---------|--------|-------------|
-| rus | 265 | 20188 |
-| ukr | 196 | 8037 |
-| usa | 84 | 7956 |
-| mda | 46 | 280 |
-| deu | 28 | 1466 |
-| kaz | 24 | 2369 |
-| pol | 21 | 343 |
-| esp | 19 | 450 |
-| zzz | 13 | 180 |
-| phl | 11 | 509 |
+| ukr | 721 | 25757 |
+| rus | 600 | 28621 |
+| usa | 219 | 17920 |
+| kaz | 80 | 3069 |
+| esp | 72 | 1856 |
+| mda | 59 | 444 |
+| bra | 57 | 2372 |
+| srb | 57 | 937 |
+| nga | 56 | 1282 |
+| deu | 50 | 3515 |
 
 ---
 
@@ -80,21 +80,21 @@
 
 | Page | Sessions |
 |------|----------|
-| /en/vacancies/chatter-onlyfans | 239 |
-| / | 91 |
-| /en | 75 |
-| (not set) | 24 |
-| /blog/chto-takoe-onlyfans | 15 |
-| /blog/rabota-modelyu-onlyfans | 15 |
-| /es/vacancies/chatter-onlyfans | 15 |
-|  | 13 |
-| /blog/chatter-onlyfans-kto-eto | 12 |
-| /en/blog/rabota-modelyu-onlyfans | 11 |
-| /es | 9 |
-| /en/faq | 8 |
-| /en/vacancies | 8 |
-| /uk/blog/chatter-onlyfans-kto-eto | 7 |
-| /join | 6 |
+| /en/vacancies/chatter-onlyfans | 981 |
+| / | 205 |
+| /en | 164 |
+| /es/vacancies/chatter-onlyfans | 108 |
+| /en/vacancies | 94 |
+| /blog/chatter-onlyfans-kto-eto | 80 |
+| (not set) | 74 |
+| /vacancies/chatter-onlyfans | 64 |
+| /en/blog/rabota-modelyu-onlyfans | 41 |
+| /es | 39 |
+|  | 35 |
+| /en/blog/chatter-onlyfans-kto-eto | 22 |
+| /blog/rabota-modelyu-onlyfans | 20 |
+| /uk/blog/chto-takoe-onlyfans | 19 |
+| /en/join | 18 |
 
 ---
 
@@ -102,67 +102,49 @@
 
 | Country | Sessions |
 |---------|----------|
-| Ukraine | 64 |
-| Nigeria | 54 |
-| Russia | 47 |
-| Georgia | 38 |
-| Kenya | 38 |
-| United States | 28 |
-| Romania | 27 |
-| Serbia | 27 |
-| Philippines | 26 |
-| Bulgaria | 24 |
-| Poland | 16 |
-| Italy | 15 |
-| Germany | 14 |
-| United Kingdom | 13 |
-| Mexico | 12 |
+| Ukraine | 238 |
+| Nigeria | 205 |
+| Russia | 179 |
+| Serbia | 118 |
+| United States | 109 |
+| Kenya | 91 |
+| Spain | 88 |
+| Philippines | 66 |
+| Romania | 60 |
+| Germany | 53 |
+| Kazakhstan | 46 |
+| Argentina | 44 |
+| Colombia | 41 |
+| Poland | 38 |
+| Madagascar | 35 |
 
 ---
 
 ## Auto-detected actions (for agent)
 
 ### Low CTR pages (impressions ≥ 20, CTR < 2%)
-- `https://ofmmodels.com/en` — CTR 1.83%, pos 7.2
-- `https://ofmmodels.com/blog/chto-takoe-onlyfans` — CTR 0.82%, pos 10.4
-- `https://ofmmodels.com/uk/blog/chto-takoe-onlyfans` — CTR 1.55%, pos 11.7
-- `https://ofmmodels.com/blog/kak-zaregistrirovatsya-na-onlyfans` — CTR 1.20%, pos 9.3
-- `https://ofmmodels.com/en/blog/onlyfans-modeli-kto-eto` — CTR 0.81%, pos 6.5
-- `https://ofmmodels.com/en/faq` — CTR 0.88%, pos 13.7
-- `https://ofmmodels.com/blog/onlyfans-modeli-kto-eto` — CTR 1.76%, pos 14.7
-- `https://ofmmodels.com/en/calculator` — CTR 0.97%, pos 21.2
-- `https://ofmmodels.com/uk/blog/onlyfans-modeli-kto-eto` — CTR 1.46%, pos 14.8
+- `https://ofmmodels.com/blog/chto-takoe-onlyfans` — CTR 0.85%, pos 9.7
+- `https://ofmmodels.com/en/blog/onlyfans-modeli-kto-eto` — CTR 0.71%, pos 6.1
+- `https://ofmmodels.com/uk/blog/chto-takoe-onlyfans` — CTR 1.27%, pos 9.0
+- `https://ofmmodels.com/en/blog/chatter-onlyfans-kto-eto` — CTR 1.33%, pos 9.5
+- `https://ofmmodels.com/blog/kak-zaregistrirovatsya-na-onlyfans` — CTR 0.94%, pos 7.4
+- `https://ofmmodels.com/en/faq` — CTR 1.10%, pos 9.1
+- `https://ofmmodels.com/uk/blog/kak-zaregistrirovatsya-na-onlyfans` — CTR 1.69%, pos 8.3
 
 ### Quick-win queries (pos ≤ 15, impressions ≥ 10, clicks < 3)
-- «of modles» — pos 7.0, 207 impr.
-- «of-model» — pos 7.3, 14 impr.
-- «of.models» — pos 6.5, 14 impr.
-- «ofm agencies» — pos 8.9, 16 impr.
-- «ofm onlyfans» — pos 6.1, 28 impr.
-- «ofm onlyfans management» — pos 7.1, 30 impr.
-- «onlyfans model» — pos 7.4, 14 impr.
-- «whats an of model» — pos 7.1, 36 impr.
-- «онли фанс работа» — pos 6.6, 26 impr.
-- «онлифанс регистрация» — pos 10.4, 88 impr.
-- «онлифанс стать моделью» — pos 8.3, 10 impr.
-- «работа онлифанс модель» — pos 8.2, 13 impr.
-- «чаттер онлифанс вакансии» — pos 9.7, 24 impr.
-- «шо таке онліфанс» — pos 10.5, 31 impr.
-- «moldova onlyfans» — pos 5.7, 19 impr.
-- «o f model» — pos 7.3, 42 impr.
-- «of midel» — pos 5.2, 22 impr.
+- None yet (need more data)
 
 ### Geo focus (target: UA, MD, AR, LatAm)
-- Ukraine in GSC: 8037 impressions
-- Moldova: 280 impressions
-- Argentina: 0 impressions
+- Ukraine in GSC: 25757 impressions
+- Moldova: 444 impressions
+- Argentina: 607 impressions
 
 ---
 
 ## Raw exports
 
-- `gsc-queries-2026-08-03.csv`
-- `gsc-pages-2026-08-03.csv`
-- `gsc-countries-2026-08-03.csv`
+- `gsc-queries-2026-08-28.csv`
+- `gsc-pages-2026-08-28.csv`
+- `gsc-countries-2026-08-28.csv`
 
 > Cursor agent: read this file and propose a 2-week SEO backlog (code + content).
