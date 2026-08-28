@@ -32,18 +32,28 @@ export function LogoMark3D({ size, speed, className = '', style }: Props) {
   const mobile = useIsMobileViewport();
 
   // Desktop: three.js (~140KB gz, the largest chunk in the build) used to be
-  // fetched right after hydration, competing with everything else for
-  // bandwidth and main thread — for a spinning 40px logo. Defer the import to
-  // browser idle time; the SVG fallback is already on screen.
+  // fetched right after hydration, competing with everything else for main
+  // thread — for a spinning 40px logo (~250ms of parse/compile long tasks).
+  // Mount it on the FIRST user interaction instead: any mouse move / scroll /
+  // key press — which a real visitor produces within the first seconds, while
+  // the initial-load window stays free of the parse cost. A long fallback
+  // timer covers visitors who never touch the page.
   useEffect(() => {
     if (mobile) return;
-    // Safari has no requestIdleCallback — fall back to a timer.
-    if (typeof window.requestIdleCallback === 'function') {
-      const id = window.requestIdleCallback(() => setIdle(true), { timeout: 4000 });
-      return () => window.cancelIdleCallback(id);
-    }
-    const timer = window.setTimeout(() => setIdle(true), 2500);
-    return () => window.clearTimeout(timer);
+    let fired = false;
+    const events = ['pointermove', 'pointerdown', 'keydown', 'wheel', 'touchstart', 'scroll'] as const;
+    const arm = () => {
+      if (fired) return;
+      fired = true;
+      setIdle(true);
+      events.forEach((e) => window.removeEventListener(e, arm));
+    };
+    events.forEach((e) => window.addEventListener(e, arm, { passive: true, once: false }));
+    const timer = window.setTimeout(arm, 12000);
+    return () => {
+      events.forEach((e) => window.removeEventListener(e, arm));
+      window.clearTimeout(timer);
+    };
   }, [mobile]);
 
   return (
