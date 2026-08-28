@@ -631,6 +631,14 @@ input[type="number"] {
   color: #fff;
 }
 
+/* Italic serif accents inside headings use the PRELOADED 400-italic family
+   (the hero instance) — the rest-family declares normal style only, so real
+   italic glyphs come from a file that is already in flight. */
+.font-serif-italic {
+  font-family: var(--font-playfair), serif;
+  font-style: italic;
+}
+
 .heading-section {
   font-family: var(--font-playfair-rest), serif;
   font-size: clamp(2.25rem, 5vw, 3.75rem);

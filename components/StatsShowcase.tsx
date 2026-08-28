@@ -129,7 +129,7 @@ export function StatsShowcase() {
           <p className="eyebrow-bright mb-3">{t('eyebrow')}</p>
           <h2 className="font-serif text-2xl md:text-3xl text-white/95 tracking-tight">
             {t('title')}{' '}
-            <span className="text-gradient-brand italic">{t('titleAccent')}</span>
+            <span className="text-gradient-brand font-serif-italic">{t('titleAccent')}</span>
           </h2>
         </div>
 

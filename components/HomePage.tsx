@@ -149,7 +149,7 @@ export function HomePage() {
                 <h2 className="heading-section text-[clamp(2.5rem,6vw,4.25rem)] !leading-[1.2] mb-8">
                   {t('contact.title')}
                   <br />
-                  <span className="text-gradient-brand italic inline-block pb-[0.22em]">{t('contact.titleAccent')}</span>
+                  <span className="text-gradient-brand font-serif-italic inline-block pb-[0.22em]">{t('contact.titleAccent')}</span>
                 </h2>
                 <p className="text-lead max-w-2xl mx-auto mb-12">{t('contact.lead')}</p>
               </>
@@ -165,7 +165,7 @@ export function HomePage() {
                 <h2 className="heading-section text-[clamp(2.5rem,6vw,4.25rem)] !leading-[1.2] mb-8">
                   {t('contact.title')}
                   <br />
-                  <span className="text-gradient-brand italic inline-block pb-[0.22em]">{t('contact.titleAccent')}</span>
+                  <span className="text-gradient-brand font-serif-italic inline-block pb-[0.22em]">{t('contact.titleAccent')}</span>
                 </h2>
                 <p className="text-lead max-w-2xl mx-auto mb-12">{t('contact.lead')}</p>
               </motion.div>

@@ -41,13 +41,18 @@ const playfairHeadline = Playfair_Display({
   preload: true,
 });
 
-// All other serif text (heading-display, section titles, font-serif) — normal +
-// italic, 400/700, NOT preloaded (not in the LCP path).
+// All other serif text (heading-display, section titles, font-serif) — normal
+// 400 only, NOT preloaded (not in the LCP path). Italic is deliberately NOT
+// declared here: it would emit @font-face rules for the same italic files the
+// preloaded headline instance already loads under its .p. URLs, and the
+// browser then downloads the identical font twice (seen live: the 22KB latin
+// italic fetched under both URLs during the LCP window). Italic serif accents
+// use .font-serif-italic (the headline family) instead.
 const playfairRest = Playfair_Display({
   variable: '--font-playfair-rest',
   subsets: ['latin'],
   weight: ['400'],
-  style: ['normal', 'italic'],
+  style: ['normal'],
   display: 'swap',
   preload: false,
 });
