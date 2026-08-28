@@ -41,12 +41,14 @@ export const VACANCY_UI_EN: VacancyUi = {
 };
 
 export const VACANCY_HUB_EN: VacancyHubContent = {
-  h1: 'Current openings at OFM Model Agency',
+  h1: 'OnlyFans agency jobs — careers at OFM Models',
   seoTitle:
-    'OnlyFans jobs — agency openings 2026: chatter and model',
+    'OnlyFans Agency Jobs — Remote Careers: Chatter & Model',
   seoDescription:
-    'Open roles at an OnlyFans agency: chatter (chat operator) and model — $3 000–10 000/mo. Remote work, training from scratch, apply in 2 min. Europe, US, worldwide.',
+    'OnlyFans agency jobs at OFM Models: chatter (chat operator) and model — $3 000–10 000/mo. Fully remote, training from scratch, apply in 2 min. Europe, US & worldwide.',
   keywords: [
+    'onlyfans agency jobs',
+    'onlyfans agency careers',
     'onlyfans jobs',
     'onlyfans vacancies',
     'work at onlyfans agency',
@@ -56,7 +58,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
   trustLine:
     '{count} open roles · Updated {date} · Europe, US, Canada & worldwide · remote',
   intro: [
-    'These are the agency’s own openings, not a job board: OFM Models is hiring into its own team — from chatters to the models whose pages we run end to end since 2022. Both roles are fully remote: you can work from anywhere — Europe, the US, Canada, Latin America or elsewhere in the world.',
+    'These are OnlyFans agency jobs from the team itself, not a job board: OFM Models hires straight into its own crew — from chatters to the models whose pages we run end to end since 2022. Every role here is fully remote: work from anywhere — Europe, the US, Canada, Latin America or elsewhere in the world.',
     'Pick a role below, apply on Telegram or through the form — we reply within a day, and getting started takes a few days with no paperwork hassle.',
   ],
   sections: [

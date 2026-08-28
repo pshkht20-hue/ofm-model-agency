@@ -189,7 +189,11 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     title: "How to Choose an OnlyFans Agency: 2026 Checklist (No Scams)",
     description:
       "A practical guide to OnlyFans management: commission, chat ops, marketing, red flags, and the questions to ask on your first call.",
-    keywords: ["how to choose onlyfans agency", "onlyfans management"],
+    keywords: [
+      "how to choose onlyfans agency",
+      "onlyfans agency red flags",
+      "questions to ask an onlyfans agency",
+    ],
     blocks: [
       {
         type: "p",
@@ -305,105 +309,314 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   "chto-delaet-onlyfans-agentstvo": {
-    title: "What an OnlyFans Agency Does: 12 Management Services",
+    title: "OnlyFans Agency: What It Does, Real Costs & How It Works",
     description:
-      "OnlyFans management explained: from discovery chats to Reddit marketing, analytics, and anti-piracy—what actually drives growth.",
-    keywords: ["onlyfans management", "what does onlyfans agency do"],
+      "An OnlyFans agency runs a creator's page for a share of its income — marketing, 24/7 chat sales, content, protection. Real costs, and how to spot a legit team.",
+    keywords: [
+      "onlyfans agency",
+      "onlyfans management",
+      "what does an onlyfans agency do",
+      "how do onlyfans agencies work",
+      "onlyfans agency legit",
+      "how much do onlyfans managers cost",
+      "is onlyfans management legal",
+    ],
     blocks: [
       {
         type: "p",
-        text: "“OnlyFans agency” sounds broad. In practice, some teams sell chat outsourcing only; others run a full cycle like talent agencies in music. Below are 12 services strong management includes in 2026—and why each affects revenue.",
+        text: "Scroll any creator forum and you'll meet two girls. One joined an agency, stopped answering DMs at 3 a.m., and watched her page climb from a side hustle to a full income. The other handed her page to a stranger from her DMs and got burned. Same word — \"agency\" — two completely different stories. This guide breaks down what an OnlyFans agency actually does all day, what management really costs, where the money goes, and how to check a team in twenty minutes before you say yes.",
       },
       {
         type: "h2",
-        text: "1–4: Traffic and visibility",
+        text: "What is an OnlyFans agency?",
+      },
+      {
+        type: "p",
+        text: "An OnlyFans agency is a team that runs a creator's page as a business. The creator makes the content; the agency handles everything around it — marketing and fan traffic, 24/7 chatting and DM sales, content planning, analytics, and account protection — and earns a share of the page's income, so it only gets paid when the page grows.",
+      },
+      {
+        type: "p",
+        text: "\"OnlyFans management\" is the same thing by another name, and the label covers wildly different setups. Some \"agencies\" are one guy with a spreadsheet reselling chat shifts. Others are full teams — managers, marketers, chatters, content strategists — the same structure a music label or talent agency runs, adapted to a subscription platform. The difference between those two decides whether a page does $300 a month or $10,000, which is why it pays to know exactly what you're looking at. Full management covers six areas:",
       },
       {
         type: "ul",
         items: [
-          "Niche and positioning strategy (feet, GFE, fitness, cosplay, etc.)",
-          "X/Twitter management—often the main channel for adult-creator traffic",
-          "Reddit: native posts, not link spam",
-          "Instagram / TikTok: SFW funnel, Reels, Stories without bans",
+          "Account management: registration, verification, bio and pricing, posting schedule, page finances and payouts",
+          "24/7 chatting: trained operators reply to every DM in the model's voice and sell PPV, customs and tips",
+          "Marketing and growth: Instagram, TikTok, X and Reddit funnels that bring new paying fans every week",
+          "Content strategy: shoot plans, teasers and a calendar built on what actually sells, not guesswork",
+          "Analytics: churn, spend per fan, price testing — decisions made from numbers, not vibes",
+          "Protection: leak monitoring, DMCA takedowns and geo-blocking that keeps your page invisible in your home country",
         ],
       },
       {
         type: "h2",
-        text: "5–8: On-platform conversion",
+        text: "How OnlyFans management works day to day",
+      },
+      {
+        type: "p",
+        text: "Behind one managed profile there are usually five to eight people, each owning one piece of the machine. Here's the real org chart of a page that grows:",
+      },
+      {
+        type: "table",
+        caption: "Who does what on a managed OnlyFans page",
+        headers: ["Role", "What they own", "Why it matters for income"],
+        rows: [
+          [
+            "Account manager",
+            "Strategy, pricing, weekly numbers, your plan",
+            "One person is accountable for growth — you always know who to ask",
+          ],
+          [
+            "Chat team, 24/7",
+            "DMs, PPV sales, customs, fan retention",
+            "70–90% of a page's income is made in messages, not subscriptions",
+          ],
+          [
+            "Traffic team",
+            "Instagram, TikTok, X and Reddit funnels",
+            "New paying fans keep arriving — including while you sleep",
+          ],
+          [
+            "Content strategist",
+            "Shoot plans, calendar, teasers",
+            "You film 2–3 hours a day on a ready plan instead of guessing",
+          ],
+          [
+            "You, the creator",
+            "Content and your boundaries",
+            "Your limits are set once at the start — the whole team works inside them",
+          ],
+        ],
+      },
+      {
+        type: "p",
+        text: "The engine of the whole system is the chat. The subscription is just the door: the real money on OnlyFans comes from what happens after a fan walks in — pay-per-view drops, custom requests, tips, long conversations that turn a $10 subscriber into a $300 regular. That's why serious agencies run chat in shifts around US and EU prime time: a DM answered at 4 a.m. sells, a DM answered eight hours later is a lost fan. It's also why a model working solo hits a ceiling — she physically can't be online when her highest-spending fans are.",
+      },
+      {
+        type: "tip",
+        text: "Quick test for any agency you talk to: ask who exactly answers your DMs at 4 a.m. and how the shifts are scheduled. A real team answers in detail. A fake one changes the subject.",
+      },
+      {
+        type: "h2",
+        text: "Real costs: how OnlyFans agencies make money",
+      },
+      {
+        type: "p",
+        text: "Agencies rarely publish price lists, which is why \"how much do OnlyFans managers cost\" has no single answer. But the market runs on three models, and once you know them, every offer you'll ever get becomes easy to place:",
+      },
+      {
+        type: "table",
+        caption: "The three pricing models on the OnlyFans management market",
+        headers: ["Pricing model", "Typical market terms", "What to check"],
+        rows: [
+          [
+            "Revenue share, full service",
+            "The agency keeps 30–50% of page earnings and runs everything",
+            "What the share funds: ads, chat shifts, management — ask for the list",
+          ],
+          [
+            "Revenue share, chat-only",
+            "Smaller cut, but the agency only staffs your DMs",
+            "Marketing stays on you — without fan inflow, chatters sell to an empty room",
+          ],
+          [
+            "Flat fee",
+            "$500–2,000 per month regardless of results",
+            "You pay even in a bad month — the team earns whether you grow or not",
+          ],
+        ],
+      },
+      {
+        type: "p",
+        text: "At OFM the model keeps 20–30% of the page's gross balance — and invests exactly $0. The agency funds the entire operation out of its own pocket: paid traffic and promotion, 24/7 chat shifts, management and content strategy. Part of the page's income goes straight back into growing it — more ads, more traffic, more chat coverage — because that reinvestment is the only thing that makes a balance climb month after month. That's the honest math behind the split: 25% of a page that keeps doubling is real money; 100% of a solo page stuck at $300 is not. And there's no lock-in paperwork — the plan is agreed openly at the casting, and you're free to leave at any moment.",
+      },
+      {
+        type: "p",
+        text: "One thing worth naming, because almost nobody in this niche does: the figures agencies show off are gross page balances — the total before the platform's 20% and the team's share. When you compare offers, compare the same number: what lands in your pocket at your realistic balance, not the biggest screenshot on a landing page. A team confident in its numbers will walk you through that math without flinching.",
+      },
+      {
+        type: "h2",
+        text: "Is the agency legit? How to check in 20 minutes",
+      },
+      {
+        type: "p",
+        text: "Spend five minutes on Reddit and you'll see why creators are careful: the top threads about agencies are warnings. Fair enough — the niche has no licenses, so anyone can put \"management\" in an Instagram bio. The good news: professional teams and fakes behave so differently that twenty minutes of checking separates them. Here's what a real agency gives you without being asked:",
       },
       {
         type: "ul",
         items: [
-          "Profile setup: bio, pinned post, welcome message",
-          "Discovery chatting—first 48–72 hours with a new subscriber",
-          "PPV and custom sales in DMs",
-          "Pricing: subscription as the “door,” not the main revenue",
+          "A proper casting: a call where they ask about your limits, your goals and your content comfort zone before promising anything",
+          "Verifiable results: real page statistics screenshots, published with the models' consent — not a vague \"our girls earn a lot\"",
+          "A written breakdown of what their share funds: ad budget, chat shifts, management",
+          "You keep access to your page stats at any time — the numbers are never a secret from you",
+          "Nothing about you is published anywhere without your written OK",
+          "Freedom to leave whenever you choose — a team confident in its results doesn't need to trap anyone",
+        ],
+      },
+      {
+        type: "p",
+        text: "And the signals to stop the conversation, whoever is on the other side:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Any upfront fee — for \"promotion\", \"setup\" or \"verification\". A real agency invests its own money and earns only when you do",
+          "A guaranteed fixed income — \"you WILL make $20K a month\". Nobody honest guarantees a number before seeing your niche",
+          "Zero questions about your boundaries — a team that doesn't ask about limits doesn't plan to respect them",
+          "Pressure: \"decide today or the slot goes to another girl\"",
+          "Penalties or threats the moment you mention leaving",
         ],
       },
       {
         type: "tip",
-        text: "At large agencies, up to ~90% of revenue for many accounts comes from chats and PPV, not the monthly sub.",
+        text: "The alignment test beats every checklist: a team paid only a share of your page's income has exactly one way to earn — grow your page. If someone's money arrives before your growth does, walk away.",
       },
       {
         type: "h2",
-        text: "9–12: Systems and protection",
+        text: "The numbers behind the industry",
       },
       {
-        type: "ul",
-        items: [
-          "Content calendar and shoot days",
-          "Weekly analytics: churn, ARPPU, funnel",
-          "Collabs with other creators",
-          "Leak monitoring, DMCA, anonymity recommendations",
-        ],
+        type: "p",
+        text: "OnlyFans is a bigger economy than most people realise. According to filings by Fenix International, the platform's parent company, creators earned $5.8 billion on OnlyFans in fiscal 2024. The platform keeps a flat 20% of every transaction; the rest is paid out to more than four million creators. Averages across those millions are low — most pages are solo side projects that were never marketed. Managed pages live in a different distribution, because someone is actively pushing traffic and selling in the DMs every single day.",
+      },
+      {
+        type: "p",
+        text: "So what's realistic? With a team behind the page, a beginner usually sees $500–1,000 in gross page balance in her first month, while the launch is still ramping. Established pages typically run $500–3,000 a month, and the agency's top pages reach $15,000–50,000. Those top figures are gross balance turnover — before the platform's cut and the team's share — and they're a benchmark of what systematic work builds, not a promise.",
+      },
+      {
+        type: "cases",
+        title: "Real OFM page statistics — screenshots from managed accounts",
+        note: "Figures are gross page balance totals, not creator net payout. Published with each model's consent.",
+        linkLabel: "View cases",
       },
       {
         type: "h2",
-        text: "Chat-only vs full-service",
+        text: "Do beginners need an agency from day one?",
       },
       {
         type: "p",
-        text: "Chat-only is cheaper on percentage but does not replace marketing: without subscriber inflow, chat managers “sell into a void.” Full-service costs more but covers the full cycle—logical when you want to grow past $10k/month and not live in DMs.",
+        text: "Most agencies in the search results position themselves for the \"top 1%\" — girls already earning. OFM works from the other end: the majority of our models started from zero, with no following, no portfolio and no platform experience. For a beginner the agency removes the two hardest parts of the first months — getting seen (traffic) and turning attention into money (chat) — and replaces trial-and-error with a plan: casting, onboarding and training in 10–14 days, launch with promo funded by the agency. If you'd rather test the waters solo first, that's a legitimate route too — the guides below cover both paths, and the door stays open for when the DMs get to be too much.",
+      },
+      {
+        type: "h2",
+        text: "OnlyFans agency FAQ",
+      },
+      {
+        type: "h3",
+        text: "What does an OnlyFans agency do?",
       },
       {
         type: "p",
-        text: "OFM's Model Agency works full-service: manager, marketing, chats, and content strategy. Apply on the homepage.",
+        text: "An agency runs the business side of a creator's page: marketing and fan traffic, 24/7 chatting and PPV sales, content planning, pricing, analytics, and protection from leaks. The creator supplies the content and sets her boundaries; the team handles everything else and earns a share of the page's income.",
+      },
+      {
+        type: "h3",
+        text: "How does OnlyFans management work?",
+      },
+      {
+        type: "p",
+        text: "Day to day: a manager builds the strategy and tracks the numbers, a traffic team brings new fans from social media, and chat operators reply to DMs in the model's voice around the clock. The model films 2–3 hours a day on a ready plan. At OFM the agency also handles registration, verification and the page finances — the launch is funded entirely by the team.",
+      },
+      {
+        type: "h3",
+        text: "Is OnlyFans management legal?",
+      },
+      {
+        type: "p",
+        text: "Yes. An OnlyFans agency is a talent-management business — the same legal model as managers in music or modeling. What's regulated is how it operates: creators must be 18+, verified on the platform, and everything is published with their consent. The chat, marketing and management work itself is ordinary remote services.",
+      },
+      {
+        type: "h3",
+        text: "How much do OnlyFans managers cost?",
+      },
+      {
+        type: "p",
+        text: "Market-wide: full-service agencies keep 30–50% of page earnings, chat-only teams take less but leave marketing to you, and freelance managers charge flat fees of $500–2,000 a month win or lose. At OFM the model keeps 20–30% of the gross page balance with zero investment — the agency funds the ads, traffic, 24/7 chat team and management, and reinvests part of the income into the page's growth.",
+      },
+      {
+        type: "h3",
+        text: "How do I join an OnlyFans agency?",
+      },
+      {
+        type: "p",
+        text: "Apply and go through a casting. At OFM that's an anonymous application on the site or a message on Telegram, then a call where the team asks about your goals and limits and shows real page stats. If it's a match, onboarding and training take 10–14 days and the page launches with promo funded by the agency. You need to be 18+; experience and a following are not required.",
+      },
+      {
+        type: "h3",
+        text: "How to make $5,000 a month on OnlyFans?",
+      },
+      {
+        type: "p",
+        text: "A $5,000 balance is built in the DMs, not the subscription: consistent content (2–3 hours a day), daily chatting through US prime time, and steady traffic from social media. Solo, that's three jobs at once, which is why most solo pages plateau far below that. With a team covering traffic and chat, beginners typically pass $500–1,000 in month one and grow from there — the pace depends on niche, content volume and engagement.",
+      },
+      {
+        type: "h3",
+        text: "Can I hire someone to manage my OnlyFans?",
+      },
+      {
+        type: "p",
+        text: "Yes — from a single freelance manager to a full agency. A freelancer covers one function, usually chat or socials, and charges a fee either way. A full-service agency staffs every function and earns only a share of what the page makes. The more of the machine one team owns, the more its incentives line up with yours.",
+      },
+      {
+        type: "h3",
+        text: "Which OnlyFans agency is best for beginners?",
+      },
+      {
+        type: "p",
+        text: "One that's built to start from zero rather than recruit girls already earning: training instead of experience requirements, a launch funded by the agency instead of an \"entry fee\", published page stats instead of promises, and the freedom to leave at any time. Ask any team you're considering for those four things — the answers tell you everything.",
+      },
+      {
+        type: "h3",
+        text: "What sells most on OnlyFans?",
+      },
+      {
+        type: "p",
+        text: "Custom content and pay-per-view drops sold in DMs: personal videos made to a fan's request, themed photo sets, and long girlfriend-experience conversations. Subscriptions are the smallest layer of income on most pages; the highest-spending fans buy attention and exclusivity, which is exactly what a trained chat team sells.",
       },
       {
         type: "nav",
-        intro: "Read next to understand the full cycle:",
+        intro: "Keep researching — these guides go deeper:",
         links: [
           {
-            href: "/blog/rabota-modelyu-onlyfans",
-            label: "Become an OnlyFans model",
-          },
-          {
-            href: "/blog/onlyfans-chaty-dm-prodazhi",
-            label: "Chats and DM sales",
-          },
-          {
-            href: "/blog/onlyfans-marketing-strategiya-2026",
-            label: "Marketing strategy 2026",
-          },
-          {
-            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
-            label: "Instagram & TikTok without bans",
-          },
-          {
-            href: "/blog/onlyfans-uderzhanie-podpischikov",
-            label: "Retention: churn & LTV",
-          },
-          {
             href: "/blog/kak-vybrat-onlyfans-agentstvo",
-            label: "How to choose an agency",
+            label: "How to choose an OnlyFans agency: the full checklist",
+          },
+          {
+            href: "/blog/onlyfans-agentstvo-moshennichestvo",
+            label: "Agency scams: 10 red flags in detail",
           },
           {
             href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
-            label: "When to hire an agency",
+            label: "When it's time to hire an agency",
           },
           {
-            href: "/",
-            label: "OFM agency — full-service management, home",
+            href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            label: "Starting OnlyFans: agency or solo",
+          },
+          {
+            href: "/blog/rabota-modelyu-onlyfans",
+            label: "Become an OnlyFans model with OFM",
+          },
+          {
+            href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            label: "How much OnlyFans models really earn",
+          },
+          {
+            href: "/blog/onlyfans-chaty-dm-prodazhi",
+            label: "How chats and DM sales actually work",
+          },
+          {
+            href: "/blog/chatter-onlyfans-kto-eto",
+            label: "Who OnlyFans chatters are",
+          },
+          {
+            href: "/join",
+            label: "Apply to OFM — model application",
+          },
+          {
+            href: "/vacancies",
+            label: "OnlyFans agency jobs — open roles at OFM",
           },
           {
             href: "/faq",
@@ -413,8 +626,8 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "cta",
-        title: "Want a team that runs all 12 for you?",
-        body: "Submit an application — anonymous and with no obligation — or message us on Telegram @ofmm_agency. A manager explains marketing, chats, and content strategy before any commitment.",
+        title: "Want to see what managed looks like on a real page?",
+        body: "Apply on the site — anonymous, with no obligation — or message us on Telegram @ofmm_agency. A manager will show real page statistics, walk you through your share and the plan for your niche — no pressure, no lock-in paperwork.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "Income depends on your niche, content volume, and engagement. Figures are page balance turnover (gross), a guideline and not a guaranteed payout. 18+.",

@@ -150,20 +150,20 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             label: "Anonimato y seguridad",
           },
           {
-            href: "/blog/onlyfans-agentstvo-moldova",
-            label: "Agencia OnlyFans en Moldova",
+            href: "/blog/chto-takoe-onlyfans",
+            label: "Qué es OnlyFans y cómo funciona",
           },
           {
             href: "/blog/onlyfans-agentstvo-latinskaya-amerika",
             label: "Agencia OnlyFans en Latinoamérica",
           },
           {
-            href: "/blog/onlyfans-marketing-strategiya-2026",
-            label: "Estrategia de marketing OnlyFans 2026",
+            href: "/blog/chto-takoe-ofm",
+            label: "OFM: qué es el OnlyFans Management",
           },
           {
-            href: "/blog/onlyfans-instagram-tiktok-bez-bana",
-            label: "Instagram y TikTok sin baneos",
+            href: "/blog/vebkam-ili-onlyfans",
+            label: "¿Modelo webcam u OnlyFans? Diferencias reales",
           },
           {
             href: "/vacancies",
@@ -282,6 +282,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             label: "Estrategia de marketing 2026",
           },
           {
+            href: "/blog/chto-takoe-onlyfans",
+            label: "Qué es OnlyFans: guía completa 2026",
+          },
+          {
             href: "/",
             label: "Agencia OnlyFans OFM — página principal",
           },
@@ -378,6 +382,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
             label: "Cuándo contratar agencia",
+          },
+          {
+            href: "/blog/chto-takoe-ofm",
+            label: "Qué es OFM: el término explicado",
           },
           {
             href: "/",
@@ -534,6 +542,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-marketing-strategiya-2026",
             label: "Estrategia de marketing 2026",
+          },
+          {
+            href: "/blog/chto-takoe-ofm",
+            label: "Qué significa OFM (OnlyFans Management)",
           },
           {
             href: "/",
@@ -1587,12 +1599,12 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             label: "Retención: churn y LTV",
           },
           {
-            href: "/blog/onlyfans-marketing-strategiya-2026",
-            label: "Estrategia de marketing 2026",
+            href: "/blog/chto-takoe-onlyfans",
+            label: "Qué es OnlyFans y cómo se gana dinero",
           },
           {
-            href: "/",
-            label: "Agencia OnlyFans OFM — página principal",
+            href: "/blog/vebkam-ili-onlyfans",
+            label: "¿Webcam u OnlyFans? Comparativa de ingresos",
           },
         ],
       },
@@ -1695,6 +1707,10 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-instagram-tiktok-bez-bana",
             label: "Instagram y TikTok sin baneos",
+          },
+          {
+            href: "/blog/chto-takoe-onlyfans",
+            label: "Qué es OnlyFans: la base antes de empezar",
           },
           {
             href: "/",
@@ -2148,8 +2164,8 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             label: "FAQ: qué es OFM",
           },
           {
-            href: "/",
-            label: "Agencia OnlyFans OFM — página principal",
+            href: "/blog/vebkam-ili-onlyfans",
+            label: "¿Webcam u OnlyFans? Privacidad y diferencias",
           },
         ],
       },
@@ -2477,8 +2493,12 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             label: "Agencia OnlyFans en Moldova",
           },
           {
-            href: "/",
-            label: "Agencia OnlyFans OFM — página principal",
+            href: "/blog/chto-takoe-onlyfans",
+            label: "Qué es OnlyFans y cómo funciona la plataforma",
+          },
+          {
+            href: "/blog/vebkam-ili-onlyfans",
+            label: "¿Modelo webcam u OnlyFans? Comparación honesta",
           },
         ],
       },
