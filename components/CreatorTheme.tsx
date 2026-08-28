@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type CSSProperties } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import {
@@ -55,42 +55,12 @@ export function CreatorFloatingMotifs() {
               x2="1"
               y2="1"
             >
+              {/* Static gradient: the SMIL x1/y1/x2/y2 animations (24 infinite
+                  main-thread tickers) were invisible on 20-24px icons. */}
               <stop offset="0%" stopColor="#ff5bb5" />
               <stop offset="35%" stopColor="#a855f7" />
               <stop offset="65%" stopColor="#00d4ff" />
               <stop offset="100%" stopColor="#ff5bb5" />
-              {!reduced && (
-                <>
-                  <animate
-                    attributeName="x1"
-                    values="0;0.8;0"
-                    dur="8s"
-                    begin={`${phase * -1.3}s`}
-                    repeatCount="indefinite"
-                  />
-                  <animate
-                    attributeName="y1"
-                    values="0;0.2;0"
-                    dur="8s"
-                    begin={`${phase * -1.3}s`}
-                    repeatCount="indefinite"
-                  />
-                  <animate
-                    attributeName="x2"
-                    values="1;1.8;1"
-                    dur="8s"
-                    begin={`${phase * -1.3}s`}
-                    repeatCount="indefinite"
-                  />
-                  <animate
-                    attributeName="y2"
-                    values="1;1.2;1"
-                    dur="8s"
-                    begin={`${phase * -1.3}s`}
-                    repeatCount="indefinite"
-                  />
-                </>
-              )}
             </linearGradient>
           ))}
         </defs>
@@ -102,14 +72,7 @@ export function CreatorFloatingMotifs() {
           className="absolute"
           style={{ left: x, top: y }}
           initial={{ opacity: 0, y: isMobile ? 6 : 0, scale: isMobile ? 1 : 0.85 }}
-          animate={
-            reduced || isMobile
-              ? { opacity: 0.5, y: 0 }
-              : {
-                  opacity: 0.5,
-                  y: [0, -6, 0],
-                }
-          }
+          animate={reduced || isMobile ? { opacity: 0.5, y: 0 } : { opacity: 0.5 }}
           transition={
             reduced || isMobile
               ? {
@@ -118,11 +81,20 @@ export function CreatorFloatingMotifs() {
                 }
               : {
                   opacity: { duration: 0.7, delay, ease: 'easeOut' },
-                  y: { duration: 5 + i * 0.4, repeat: Infinity, ease: 'easeInOut', delay },
                 }
           }
         >
-          <div className="hero-motif-card p-2.5 md:p-3 rounded-2xl">
+          {/* The infinite bob lives in CSS (compositor) — the framer entrance
+              above runs once and stops ticking. */}
+          <div
+            className="hero-motif-card hero-motif-float p-2.5 md:p-3 rounded-2xl"
+            style={
+              {
+                '--motif-dur': `${5 + i * 0.4}s`,
+                '--motif-delay': `${delay}s`,
+              } as CSSProperties
+            }
+          >
             <Icon
               className="hero-motif-icon w-5 h-5 md:w-6 md:h-6"
               strokeWidth={1.5}

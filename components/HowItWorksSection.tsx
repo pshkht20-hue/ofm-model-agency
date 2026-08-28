@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Clock } from 'lucide-react';
 import {
   motion,
@@ -135,7 +135,18 @@ export function HowItWorksSection() {
   });
   const smooth = useSpring(scrollYProgress, { stiffness: 90, damping: 26, restDelta: 0.001 });
   const fillScale = useTransform(smooth, [0, 1], [0, 1]);
-  const cometTop = useTransform(smooth, [0, 1], ['0%', '100%']);
+  // The comet travels via transform (compositor), not `top` — animating `top`
+  // forced layout+paint on every scroll/spring frame. Track height is cached by
+  // a ResizeObserver so no per-frame reads happen.
+  const [trackH, setTrackH] = useState(0);
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => setTrackH(el.offsetHeight));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  const cometY = useTransform(smooth, (v) => v * trackH);
   const cometOpacity = useTransform(smooth, [0, 0.04, 0.97, 1], [0, 1, 1, 0]);
 
   return (
@@ -168,16 +179,16 @@ export function HowItWorksSection() {
               aria-hidden
             />
             <motion.div
-              style={{ top: cometTop, opacity: cometOpacity }}
-              className="pointer-events-none absolute left-6 z-0 -translate-x-1/2 -translate-y-1/2 md:left-7"
+              style={{ y: cometY, opacity: cometOpacity }}
+              className="pointer-events-none absolute left-6 top-0 z-0 md:left-7"
               aria-hidden
             >
-              <span className="absolute left-1/2 top-1/2 h-12 w-1 -translate-x-1/2 -translate-y-full rounded-full bg-gradient-to-t from-accent-pink/70 to-transparent blur-[2px]" />
-              <motion.span
-                className="relative block h-3.5 w-3.5 rounded-full bg-white shadow-[0_0_14px_4px_rgba(255,91,181,0.85),0_0_30px_12px_rgba(168,85,247,0.5)]"
-                animate={{ scale: [1, 1.25, 1] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-              />
+              {/* Static centering lives on an inner div: framer owns the outer
+                  transform, so Tailwind translates there would be overwritten. */}
+              <div className="-translate-x-1/2 -translate-y-1/2">
+                <span className="absolute left-1/2 top-1/2 h-12 w-1 -translate-x-1/2 -translate-y-full rounded-full bg-gradient-to-t from-accent-pink/70 to-transparent blur-[2px]" />
+                <span className="comet-pulse relative block h-3.5 w-3.5 rounded-full bg-white shadow-[0_0_14px_4px_rgba(255,91,181,0.85),0_0_30px_12px_rgba(168,85,247,0.5)]" />
+              </div>
             </motion.div>
           </>
         )}

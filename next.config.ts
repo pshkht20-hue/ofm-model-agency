@@ -27,6 +27,10 @@ const nextConfig: NextConfig = {
   // modules pulled through the barrels are tree-shaken out of the client bundle.
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+    // Inlines page CSS into the HTML <head>: removes both render-blocking
+    // stylesheet requests (~27KB gz) and lets @font-face be discovered from the
+    // document itself, cutting one hop off the font critical chain.
+    inlineCss: true,
   },
   images: {
     remotePatterns: [

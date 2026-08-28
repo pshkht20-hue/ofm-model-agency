@@ -1,9 +1,9 @@
 'use client';
 
-import { useCallback, type MouseEvent } from 'react';
 import { motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
+import { useSpotlight } from '@/hooks/useSpotlight';
 import { SPRING_HOVER, hoverLift } from '@/lib/motion';
 
 type FeatureCardProps = {
@@ -22,18 +22,12 @@ export function FeatureCard({
   className = '',
 }: FeatureCardProps) {
   const reduced = useReducedMotion();
-
-  const onMove = useCallback((e: MouseEvent<HTMLElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    e.currentTarget.style.setProperty('--mouse-x', `${x}%`);
-    e.currentTarget.style.setProperty('--mouse-y', `${y}%`);
-  }, []);
+  const spotlight = useSpotlight();
 
   return (
     <motion.article
-      onMouseMove={reduced ? undefined : onMove}
+      onMouseEnter={reduced ? undefined : spotlight.onMouseEnter}
+      onMouseMove={reduced ? undefined : spotlight.onMouseMove}
       whileHover={hoverLift(reduced)}
       transition={SPRING_HOVER}
       className={`group card-glass relative overflow-hidden p-8 md:p-9 flex flex-col ${className}`}

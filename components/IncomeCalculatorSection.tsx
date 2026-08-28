@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowRight, Check, ChevronLeft, Clock, RefreshCw, Sparkles } from 'lucide-react';
 import {
   AnimatePresence,
@@ -15,6 +15,7 @@ import { useTranslations } from 'next-intl';
 import { EASE_SMOOTH } from '@/lib/motion';
 import { useIsMobileViewport } from '@/hooks/useMotionPreferences';
 import { useMagnetic } from '@/hooks/useMagnetic';
+import { useSpotlight } from '@/hooks/useSpotlight';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { formatUsd, usdParts } from '@/lib/results/format';
@@ -158,19 +159,14 @@ function OptionCard({
   highlighted = false,
   compact = false,
 }: OptionCardProps) {
-  const onMove = useCallback((e: MouseEvent<HTMLButtonElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    e.currentTarget.style.setProperty('--mouse-x', `${x}%`);
-    e.currentTarget.style.setProperty('--mouse-y', `${y}%`);
-  }, []);
+  const spotlight = useSpotlight();
 
   return (
     <motion.button
       type="button"
       onClick={onSelect}
-      onMouseMove={onMove}
+      onMouseEnter={spotlight.onMouseEnter}
+      onMouseMove={spotlight.onMouseMove}
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.99 }}
       className={`group relative w-full overflow-hidden border text-left transition-colors duration-300 ${

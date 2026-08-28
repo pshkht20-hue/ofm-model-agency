@@ -80,12 +80,12 @@ const SiteFooter = dynamic(
 function ContactGlow({ reduced }: { reduced: boolean | null }) {
   if (reduced) return null;
 
+  // CSS pulse (compositor) — was an infinite framer loop ticking on the main
+  // thread even while the contact section was off screen.
   return (
-    <motion.div
-      className="pointer-events-none absolute inset-4 md:inset-8 rounded-3xl border border-accent-pink/20"
-      initial={{ opacity: 0, scale: 0.98 }}
-      animate={{ opacity: [0.15, 0.4, 0.15], scale: 1 }}
-      transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.3 }}
+    <div
+      className="pointer-events-none absolute inset-4 md:inset-8 rounded-3xl border border-accent-pink/20 neon-fade-pulse"
+      style={{ animationDuration: '4s', animationDelay: '0.3s' }}
       aria-hidden
     />
   );

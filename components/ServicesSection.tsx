@@ -1,6 +1,5 @@
 'use client';
 
-import { useCallback, type MouseEvent } from 'react';
 import {
   Users,
   MessageCircle,
@@ -13,6 +12,7 @@ import {
 import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { hoverLift, SPRING_CARD } from '@/lib/motion';
+import { useSpotlight } from '@/hooks/useSpotlight';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { MotionFade, StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
@@ -47,19 +47,14 @@ type ServiceCardProps = {
 
 function ServiceCard({ icon: Icon, index, featured, item, accent }: ServiceCardProps) {
   const reduced = useReducedMotion();
-  const onMove = useCallback((e: MouseEvent<HTMLElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    e.currentTarget.style.setProperty('--mouse-x', `${x}%`);
-    e.currentTarget.style.setProperty('--mouse-y', `${y}%`);
-  }, []);
+  const spotlight = useSpotlight();
 
   const num = String(index + 1).padStart(2, '0');
 
   return (
     <motion.article
-      onMouseMove={onMove}
+      onMouseEnter={spotlight.onMouseEnter}
+      onMouseMove={spotlight.onMouseMove}
       whileHover={hoverLift(reduced)}
       transition={SPRING_CARD}
       className={`card-premium group relative flex h-full flex-col overflow-hidden p-6 md:p-8 md:backdrop-blur-sm ${

@@ -115,10 +115,14 @@ export function HeroTrustStrip() {
   }
 
   return (
+    // initial={false}: the strip sits in the first mobile screen and must be
+    // visible straight from the SSR HTML — the per-item stagger left it
+    // opacity-0 until hydration + IntersectionObserver. Desktop entrance is
+    // still handled by the GSAP [data-hero-reveal] timeline.
     <motion.div
       data-hero-trust
       data-hero-reveal
-      initial="hidden"
+      initial={false}
       whileInView="visible"
       viewport={VIEWPORT_TIGHT}
       variants={staggerContainer()}

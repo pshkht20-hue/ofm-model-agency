@@ -61,10 +61,10 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
                   <BadgeCheck className="w-3.5 h-3.5" strokeWidth={2} />
                 </span>
               </div>
-              <p className="text-[11px] text-white/42 mt-0.5 truncate">{review.meta}</p>
+              <p className="text-[11px] text-white/50 mt-0.5 truncate">{review.meta}</p>
             </div>
             {review.dateLabel && (
-              <time className="text-[10px] text-white/32 whitespace-nowrap shrink-0 pt-0.5">
+              <time className="text-[10px] text-white/50 whitespace-nowrap shrink-0 pt-0.5">
                 {review.dateLabel}
               </time>
             )}
@@ -73,7 +73,7 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
           <div className="mt-2 flex items-center gap-2 flex-wrap">
             <ReviewStars rating={review.rating} variant="gold" />
             {review.rating < 5 && (
-              <span className="text-[10px] text-white/35">{t('honestRating')}</span>
+              <span className="text-[10px] text-white/50">{t('honestRating')}</span>
             )}
           </div>
         </div>
@@ -84,7 +84,7 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
           {review.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 rounded-md text-[10px] text-white/45 bg-white/[0.04] border border-white/[0.06]"
+              className="px-2 py-0.5 rounded-md text-[10px] text-white/50 bg-white/[0.04] border border-white/[0.06]"
             >
               {tag}
             </span>
@@ -108,7 +108,7 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
         </div>
 
         {review.resultNote && (
-          <p className="text-[11px] text-white/38 leading-relaxed border-l-2 border-accent-pink/30 pl-3">
+          <p className="text-[11px] text-white/50 leading-relaxed border-l-2 border-accent-pink/30 pl-3">
             {review.resultNote}
           </p>
         )}
@@ -120,7 +120,7 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
             <p className="text-[10px] font-medium text-accent-pink/80 mb-1.5">{t('agencyReply')}</p>
             <p className="text-[13px] text-white/62 leading-relaxed">{review.agencyReply.text}</p>
             {review.agencyReply.dateLabel && (
-              <p className="text-[10px] text-white/28 mt-2">{review.agencyReply.dateLabel}</p>
+              <p className="text-[10px] text-white/50 mt-2">{review.agencyReply.dateLabel}</p>
             )}
           </div>
         </div>

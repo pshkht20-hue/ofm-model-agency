@@ -34,7 +34,7 @@ export function ReviewsSummary() {
                 size="md"
                 variant="gold"
               />
-              <p className="text-xs text-white/40 mt-1">
+              <p className="text-xs text-white/50 mt-1">
                 {t('basedOn', { count: total })}
               </p>
             </div>
@@ -46,7 +46,7 @@ export function ReviewsSummary() {
             .filter((d) => d.star >= 4)
             .map(({ star, count }) => (
               <div key={star} className="flex items-center gap-2 text-xs">
-                <span className="w-3 text-white/40 tabular-nums">{star}</span>
+                <span className="w-3 text-white/50 tabular-nums">{star}</span>
                 <Star className="w-3 h-3 fill-[#fbbc04] text-[#fbbc04]" strokeWidth={0} />
                 <div className="flex-1 h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
                   <motion.div
@@ -58,12 +58,12 @@ export function ReviewsSummary() {
                     transition={reduced ? { duration: 0 } : { duration: 0.7, ease: EASE_SMOOTH }}
                   />
                 </div>
-                <span className="w-4 text-right text-white/35 tabular-nums">{count}</span>
+                <span className="w-4 text-right text-white/50 tabular-nums">{count}</span>
               </div>
             ))}
         </div>
 
-        <ul className="text-xs text-white/45 space-y-2 md:text-right md:max-w-[220px]">
+        <ul className="text-xs text-white/50 space-y-2 md:text-right md:max-w-[220px]">
           <li className="flex md:justify-end gap-2">
             <span className="text-accent-pink">●</span> {t('consent')}
           </li>

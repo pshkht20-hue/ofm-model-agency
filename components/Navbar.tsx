@@ -66,10 +66,13 @@ export function Navbar() {
 
   return (
     <>
+      {/* initial={false}: the fixed navbar must be visible in the SSR HTML —
+          with an opacity-0 initial state the whole top of the page stayed
+          empty until the client bundle hydrated (Speed Index penalty). */}
       <motion.nav
-        initial={reduced ? false : { y: -20, opacity: 0 }}
+        initial={false}
         animate={{ y: 0, opacity: 1 }}
-        transition={reduced ? { duration: 0 } : { duration: 0.5 }}
+        transition={{ duration: 0 }}
         className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 border-b ${
           scrolled
             ? 'bg-[#050508]/95 backdrop-blur-xl border-accent-pink/20 shadow-[0_8px_32px_-12px_rgba(255,91,181,0.2),0_1px_0_0_rgba(255,91,181,0.15)]'

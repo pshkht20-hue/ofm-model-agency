@@ -3,7 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google';
+import { Geist, Playfair_Display } from 'next/font/google';
 import { AnalyticsLoader } from '@/components/analytics/AnalyticsLoader';
 import { ClarityLoader } from '@/components/analytics/ClarityLoader';
 import { GoogleConsentDefaults } from '@/components/analytics/GoogleConsentDefaults';
@@ -15,19 +15,14 @@ import { getSiteUrl, siteConfig } from '@/lib/site';
 import { pathForLocale, hreflangAlternates } from '@/lib/i18n/paths';
 import '../globals.css';
 
+// 'cyrillic' in subsets: the site's base locale is Russian, so the cyrillic
+// glyph file is fetched on every ru/uk page anyway — listing the subset turns
+// that late CSS-discovered fetch into an early parallel preload.
 const geistSans = Geist({
   variable: '--font-geist-sans',
-  subsets: ['latin'],
+  subsets: ['latin', 'cyrillic'],
   display: 'swap',
   fallback: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
-  preload: false,
 });
 
 // The giant italic hero headline ("OnlyFans") is the mobile LCP element. It is
@@ -51,7 +46,7 @@ const playfairHeadline = Playfair_Display({
 const playfairRest = Playfair_Display({
   variable: '--font-playfair-rest',
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400'],
   style: ['normal', 'italic'],
   display: 'swap',
   preload: false,
@@ -138,7 +133,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} ${playfairHeadline.variable} ${playfairRest.variable}`}
+      className={`${geistSans.variable} ${playfairHeadline.variable} ${playfairRest.variable}`}
     >
       <body className="min-h-full font-sans antialiased bg-[#050508] text-[#f4f2ef]">
         <GoogleConsentDefaults />

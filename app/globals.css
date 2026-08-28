@@ -20,7 +20,7 @@
   --color-surface: var(--surface);
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
   --font-serif: var(--font-playfair-rest), "Times New Roman", serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-mono: ui-monospace, monospace;
 }
 
 html {
@@ -105,7 +105,6 @@ input[type="number"] {
   background-clip: text;
   color: transparent;
   animation: hero-accent-flow 11s linear infinite;
-  will-change: background-position;
 }
 
 @keyframes hero-accent-flow {
@@ -175,24 +174,107 @@ input[type="number"] {
   z-index: 1;
 }
 
-@keyframes hero-badge-sparkle {
+/* Desktop-only infinite bob for the floating hero icons — pure compositor. */
+@keyframes hero-motif-float {
   0%,
   100% {
-    color: #00d4ff;
-    filter: drop-shadow(0 0 6px #00d4ff) drop-shadow(0 0 14px rgba(0, 212, 255, 0.6));
+    transform: translateY(0);
   }
-  33% {
-    color: #ff5bb5;
-    filter: drop-shadow(0 0 6px #ff5bb5) drop-shadow(0 0 14px rgba(255, 91, 181, 0.6));
-  }
-  66% {
-    color: #a855f7;
-    filter: drop-shadow(0 0 6px #a855f7) drop-shadow(0 0 14px rgba(168, 85, 247, 0.6));
+  50% {
+    transform: translateY(-6px);
   }
 }
 
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .hero-motif-float {
+    animation: hero-motif-float var(--motif-dur, 5s) ease-in-out var(--motif-delay, 0s) infinite;
+  }
+}
+
+/* Timeline comet core pulse (was an infinite framer loop). The comet block is
+   already rendered only when motion is allowed. */
+@keyframes comet-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+.comet-pulse {
+  animation: comet-pulse 2s ease-in-out infinite;
+}
+
+/* Static glow: the animated colour/filter cycle repainted a first-screen icon
+   every frame forever, and the hue shift is unreadable at 14px anyway. */
 .hero-badge-sparkle {
-  animation: hero-badge-sparkle 5s ease-in-out infinite;
+  color: #00d4ff;
+  filter: drop-shadow(0 0 6px #00d4ff) drop-shadow(0 0 14px rgba(0, 212, 255, 0.6));
+}
+
+/* ——— Neon accent pulses ———
+   CSS-only replacements for what used to be ~25 infinite framer-motion loops
+   (one rAF tick per element per frame, forever, even for display:none elements).
+   opacity/transform stay on the compositor; display:none elements cost nothing. */
+@keyframes neon-dot-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes neon-ring-pulse {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes neon-fade-pulse {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.neon-dot-pulse {
+  animation: neon-dot-pulse 4s ease-in-out infinite both;
+}
+
+.neon-ring-pulse {
+  animation: neon-ring-pulse 6s ease-in-out infinite both;
+}
+
+.neon-fade-pulse {
+  animation: neon-fade-pulse 5s ease-in-out infinite both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neon-dot-pulse {
+    animation: none;
+    opacity: 0.6;
+  }
+  .neon-ring-pulse {
+    animation: none;
+    opacity: 0.2;
+  }
+  .neon-fade-pulse {
+    animation: none;
+    opacity: 0.3;
+  }
 }
 
 /* Hero — cosmic galaxy background */

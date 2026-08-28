@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type CSSProperties } from 'react';
+import { useEffect, useState, type CSSProperties } from 'react';
 import dynamic from 'next/dynamic';
 import { LogoMark } from '@/components/Logo';
 import { useIsMobileViewport } from '@/hooks/useMotionPreferences';
@@ -28,7 +28,23 @@ type Props = {
  */
 export function LogoMark3D({ size, speed, className = '', style }: Props) {
   const [ready, setReady] = useState(false);
+  const [idle, setIdle] = useState(false);
   const mobile = useIsMobileViewport();
+
+  // Desktop: three.js (~140KB gz, the largest chunk in the build) used to be
+  // fetched right after hydration, competing with everything else for
+  // bandwidth and main thread — for a spinning 40px logo. Defer the import to
+  // browser idle time; the SVG fallback is already on screen.
+  useEffect(() => {
+    if (mobile) return;
+    // Safari has no requestIdleCallback — fall back to a timer.
+    if (typeof window.requestIdleCallback === 'function') {
+      const id = window.requestIdleCallback(() => setIdle(true), { timeout: 4000 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const timer = window.setTimeout(() => setIdle(true), 2500);
+    return () => window.clearTimeout(timer);
+  }, [mobile]);
 
   return (
     <div
@@ -36,7 +52,7 @@ export function LogoMark3D({ size, speed, className = '', style }: Props) {
       style={{ width: size, height: size, maxWidth: '100%', ...style }}
     >
       {(mobile || !ready) && <LogoMark size={size} className="absolute inset-0 h-full w-full" />}
-      {!mobile && <Inner onReady={() => setReady(true)} speed={speed} />}
+      {!mobile && idle && <Inner onReady={() => setReady(true)} speed={speed} />}
     </div>
   );
 }

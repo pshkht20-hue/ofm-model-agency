@@ -1,5 +1,15 @@
 # Реестр ссылок (обновлять при каждом размещении)
 
+## 🆕 Сентябрь W1: сетка plitkarnews (startjob) — 3 размещения, ОПЛАЧЕНО $184 USDT 28.08
+
+| Донор | Цена | URL | Ссылки | Внутр. перелинковка | Проверено до оплаты |
+|---|---|---|---|---|---|
+| startjob.com.ua (rank 495/spam 26) | $18 | /onlajn-profesiyi-dlya-divchat-bez-dosvidu-chesnyj-rozbir-2026/ | 2/2 dofollow → uk/rabota-modelyu + uk/vacancies/model/ukraine | 3 с главной | ✅ 28.08 |
+| studway.com.ua (rank 295/spam 18/ETV 3.9K) | $68 | /pidrobitok-yakyj-ne-zavazhaye-param-shho-obyrayut-studentky-u-2026/ | 2/2 dofollow → uk/chatter-пиллар + uk/vacancies/chatter | 2 из /news/ | ✅ 28.08 |
+| 1tv.com.ua (rank 403/spam 7/ETV 3.9K) | $98 | /suspilstvo/rynok-onlajn-roboty-dlya-zhinok-u-2026-czyfry-zamist-obiczyanok/ | 2/2 dofollow → uk/rabota-modelyu + /uk (бренд) | 10 в рубрике «Суспільство» | ✅ 28.08 |
+
+Контакт: plitkarnews@gmail.com (info@startjob отклоняет почту — слать только на Gmail). Отработали образцово: 3 статьи за вечер, все с рубриками, оплата после публикации. Держать тёплыми для октября. **Индекс-чек: 04–05.09 и 11.09.** Эффективность мерить по: индексация → видимость у бота DataForSEO → позиции целевых (uk/rabota-modelyu «онлифанс работа», чатер-пиллар, uk-главная «агенція»).
+
 Формат: дата · донор · страница-донор · целевая · анкор · dofollow · цена · indexed (дата проверки) · жив?
 
 ## Сверка 08.08.2026 (агент): 7 размещений, все живы, все dofollow 2/2

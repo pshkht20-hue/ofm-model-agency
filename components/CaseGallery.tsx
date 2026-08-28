@@ -187,7 +187,6 @@ function Lightbox({
             width={shot.width}
             height={shot.height}
             quality={90}
-            priority
             className="mx-auto h-auto w-full max-w-[560px] rounded-xl md:h-[82vh] md:w-auto md:max-w-none"
           />
         </motion.div>
@@ -257,7 +256,6 @@ export function CaseGallery() {
     <div className="relative">
       <div
         className="mx-auto flex w-fit max-w-full snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 pt-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:px-2 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]"
-        role="list"
       >
         {caseShots.map((shot, i) => (
           <ShotCard

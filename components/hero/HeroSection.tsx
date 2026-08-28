@@ -1,10 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import { gsap, registerGsapPlugins } from '@/lib/gsap/register';
-
-registerGsapPlugins();
+import { useEffect, useRef } from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { trackCtaClick } from '@/lib/analytics/gtag';
@@ -14,8 +10,6 @@ import { HeroTrustStrip } from '@/components/hero/HeroTrustStrip';
 import { NeonAccents } from '@/components/ui/NeonAccents';
 import { useMagnetic } from '@/hooks/useMagnetic';
 import { ClickSpark } from '@/components/ui/ClickSpark';
-
-gsap.registerPlugin(useGSAP);
 
 const CORNERS = [
   'top-8 left-8 border-t border-l',
@@ -36,41 +30,32 @@ export function HeroSection() {
   const ctaMagnetRef = useMagnetic<HTMLSpanElement>(0.3);
   const ctaSecondaryMagnetRef = useMagnetic<HTMLSpanElement>(0.2);
 
-  useGSAP(
-    () => {
-      const section = sectionRef.current;
-      const mm = gsap.matchMedia();
+  // GSAP is loaded lazily and ONLY on desktop with motion allowed. On mobile
+  // the entrance timeline never did anything (content is visible from first
+  // paint — the .hero-pending CSS gate applies at ≥768px only), yet the static
+  // import used to put ~27KB gz of gsap into the critical mobile bundle.
+  useEffect(() => {
+    const section = sectionRef.current;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const mobile = window.matchMedia('(max-width: 767px)').matches;
 
-      mm.add(
-        {
-          reduceMotion: '(prefers-reduced-motion: reduce)',
-          mobile: '(max-width: 767px)',
-          desktop: '(min-width: 768px)',
-        },
-        (context) => {
-          const { reduceMotion = false, mobile = false } = context.conditions ?? {};
+    if (reduceMotion || mobile) {
+      clearHeroPending(section);
+      return;
+    }
 
-          // Mobile + reduced-motion: show the hero instantly, no JS-gated reveal.
-          // The headline is the LCP element — keeping it visible from first paint
-          // (instead of opacity:0 until GSAP) is the biggest mobile LCP win. The
-          // rich entrance timeline stays desktop-only.
-          if (reduceMotion || mobile) {
-            gsap.set('[data-hero-reveal]', {
-              opacity: 1,
-              y: 0,
-              scale: 1,
-              rotateX: 0,
-              filter: 'none',
-              clearProps: 'transform,filter',
-            });
-            gsap.set('[data-hero-scan], [data-hero-corner], [data-hero-scroll]', {
-              opacity: 1,
-              clearProps: 'transform,filter',
-            });
-            clearHeroPending(section);
-            return;
-          }
+    let cancelled = false;
+    let ctx: { revert: () => void } | undefined;
 
+    import('@/lib/gsap/register')
+      .then(({ gsap, registerGsapPlugins }) => {
+        registerGsapPlugins();
+        if (cancelled) {
+          clearHeroPending(section);
+          return;
+        }
+
+        ctx = gsap.context(() => {
           if (section) {
             // Scroll-out darkens the cosmic background as the hero leaves. We fade
             // in a cheap solid dim layer (GPU opacity on ONE element) plus a subtle
@@ -90,9 +75,9 @@ export function HeroSection() {
                   scrub: 0.3,
                 },
               });
-              dimTl.to(cosmos, { scale: mobile ? 1.03 : 1.05, ease: 'none' }, 0);
+              dimTl.to(cosmos, { scale: 1.05, ease: 'none' }, 0);
               if (dim) {
-                dimTl.to(dim, { opacity: mobile ? 0.72 : 0.9, ease: 'none' }, 0);
+                dimTl.to(dim, { opacity: 0.9, ease: 'none' }, 0);
               }
             }
           }
@@ -156,13 +141,18 @@ export function HeroSection() {
             ease: 'power1.inOut',
             delay: 2.4,
           });
-        },
-      );
+        }, sectionRef);
+      })
+      .catch(() => {
+        // If the chunk fails to load, the hero must never stay hidden.
+        clearHeroPending(section);
+      });
 
-      return () => mm.revert();
-    },
-    { scope: sectionRef },
-  );
+    return () => {
+      cancelled = true;
+      ctx?.revert();
+    };
+  }, []);
 
   return (
     <section

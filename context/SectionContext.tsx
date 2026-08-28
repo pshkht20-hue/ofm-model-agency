@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { HOME_SECTIONS, type SectionAccent } from '@/lib/sections';
 
 type SectionContextValue = {
@@ -17,50 +17,41 @@ export function SectionProvider({ children }: { children: ReactNode }) {
   const [activeId, setActiveId] = useState<string | null>(null);
 
   useEffect(() => {
-    const ids = HOME_SECTIONS.map((s) => s.id);
-    if (ids.every((id) => !document.getElementById(id))) return;
+    // Scroll-spy via IntersectionObserver: the root is collapsed to a single
+    // line at 38% of the viewport, so the section covering that line is the
+    // active one and callbacks fire only when a section enters/leaves the line.
+    // The previous implementation called getBoundingClientRect() for every
+    // section on every scroll frame — a forced-layout read interleaved with
+    // GSAP/framer transform writes.
+    const els = HOME_SECTIONS
+      .map((s) => document.getElementById(s.id))
+      .filter((el): el is HTMLElement => el !== null);
+    if (els.length === 0) return;
 
-    let ticking = false;
-
-    const update = () => {
-      const trigger = window.innerHeight * 0.38;
-      let current: string | null = null;
-
-      for (const id of ids) {
-        const el = document.getElementById(id);
-        if (!el) continue;
-        if (el.getBoundingClientRect().top <= trigger) {
-          current = id;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveId((entry.target as HTMLElement).id);
+          }
         }
-      }
+      },
+      { rootMargin: '-38% 0px -62% 0px', threshold: 0 }
+    );
 
-      setActiveId(current);
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(update);
-    };
-
-    update();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', onScroll);
-    };
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
-  const activeAccent =
-    HOME_SECTIONS.find((s) => s.id === activeId)?.accent ?? 'pink';
-
-  return (
-    <SectionContext.Provider value={{ activeId, activeAccent }}>
-      {children}
-    </SectionContext.Provider>
+  const value = useMemo<SectionContextValue>(
+    () => ({
+      activeId,
+      activeAccent: HOME_SECTIONS.find((s) => s.id === activeId)?.accent ?? 'pink',
+    }),
+    [activeId]
   );
+
+  return <SectionContext.Provider value={value}>{children}</SectionContext.Provider>;
 }
 
 export function useSectionContext() {
