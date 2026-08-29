@@ -81,7 +81,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: hub.seoDescription,
     path: '/vacancies/model',
     locale: locale as Locale,
-    keywords: [...hub.keywords],
   });
 }
 

@@ -33,7 +33,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: hub.seoDescription,
     path: '/vacancies',
     locale: locale as Locale,
-    keywords: [...hub.keywords],
   });
 }
 

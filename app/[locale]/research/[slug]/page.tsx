@@ -36,7 +36,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: report.dek,
     path: `/research/${slug}`,
     locale: locale as Locale,
-    keywords: report.keywords,
     availableLocales: getResearchReportLocales(slug),
     image: { url: ogImage, alt: report.seoTitle },
   });

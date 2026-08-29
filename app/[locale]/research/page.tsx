@@ -26,12 +26,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: ui.lead,
     path: '/research',
     locale: locale as Locale,
-    keywords: [
-      'onlyfans статистика',
-      'creator economy data',
-      'безопасность креаторов исследование',
-      'onlyfans research',
-    ],
     availableLocales: getResearchLocales(),
   });
 }

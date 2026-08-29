@@ -24,12 +24,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('description'),
     path: '/blog',
     locale: locale as Locale,
-    keywords: [
-      'onlyfans blog',
-      'onlyfans guide',
-      'onlyfans marketing',
-      'onlyfans agency blog',
-    ],
   });
 }
 

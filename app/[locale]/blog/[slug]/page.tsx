@@ -128,7 +128,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.description,
     path: `/blog/${post.slug}`,
     locale: locale as Locale,
-    keywords: post.keywords,
     availableLocales: getBlogPostLocales(post.slug),
     image:
       coverUrl && post.cover

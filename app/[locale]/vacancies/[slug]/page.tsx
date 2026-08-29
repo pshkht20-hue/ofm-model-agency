@@ -53,7 +53,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: content.seoDescription,
     path: `/vacancies/${slug}`,
     locale: locale as Locale,
-    keywords: [...content.keywords],
   });
 }
 

@@ -18,12 +18,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('description'),
     path: '/faq',
     locale: locale as Locale,
-    keywords: [
-      'onlyfans agency faq',
-      'onlyfans management questions',
-      'onlyfans agency commission',
-      'how to choose onlyfans agency',
-    ],
   });
 }
 

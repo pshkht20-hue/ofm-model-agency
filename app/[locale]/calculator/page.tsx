@@ -68,7 +68,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: content.meta.description,
     path: '/calculator',
     locale: locale as Locale,
-    keywords: [...content.meta.keywords],
   });
 }
 
