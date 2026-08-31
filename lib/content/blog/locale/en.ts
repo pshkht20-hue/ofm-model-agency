@@ -2838,6 +2838,78 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           },
         ],
       },
+      // ЭКСПЕРИМЕНТ 31.08.2026 — мост «Chatter or Model» (директива 30.08 «фокус на моделей»).
+      // Контекст: чатер-лидов избыток, модельных мало; юнит-экономика: 1 типажная модель
+      // с сайта = $2 500. Гипотеза: секция-сравнение вилок сразу после блока о зарплате
+      // чатера перехватывает читательниц, которые выбирают между ролями, и ведёт их на
+      // /vacancies/model + /join (модельный CTA стоит РАНЬШЕ чатерского финала статьи).
+      {
+        type: "h2",
+        text: "Chatter or model: where the real money is",
+      },
+      {
+        type: "p",
+        text: "Straight answer: a chatter earns a wage — a base rate plus a percentage of the sales in their own chats; a model earns a share of everything her page makes. Strong pages under OFM management run $15,000–$50,000 a month in gross balance, and the model's share is counted from that entire number, not from one shift's sales. In absolute money the model's ceiling is many times higher — which matters if you are a woman reading a chatter article and quietly weighing both options.",
+      },
+      {
+        type: "table",
+        caption:
+          "Two roles on the same page: how the income and the entry differ. Model figures are gross page-balance turnover, not a guaranteed payout.",
+        headers: ["", "Chatter", "Model with OFM"],
+        rows: [
+          [
+            "What the income is",
+            "Base rate + % of your own chat sales",
+            "A share of the page's entire gross balance",
+          ],
+          [
+            "Ceiling",
+            "Capped by shift hours and assigned pages",
+            "Grows with the page — strong pages: $15,000–50,000/mo gross",
+          ],
+          [
+            "What you invest",
+            "Time on shifts",
+            "Nothing — promo, traffic and the chat team are funded by the agency",
+          ],
+          [
+            "Entry requirements",
+            "Written English B1+, typing speed, sales instinct",
+            "18+, a phone camera and 10–15 hours a week; no English, no experience",
+          ],
+          [
+            "Time to start",
+            "Days: test task → training → first shift",
+            "7–14 days from application to a launched page",
+          ],
+        ],
+      },
+      {
+        type: "p",
+        text: "Why the model's share is 20–30% of gross and not more: the rest of the balance funds everything that makes it grow — paid traffic, promotion, 2–3 chatter shifts, management — and part of the income is reinvested into the page itself. The model puts in nothing of her own, and 25% of a balance that keeps climbing is more money than 100% of a solo page stuck near zero.",
+      },
+      {
+        type: "p",
+        text: "What usually stops women is not the maths but the fears. Anonymity: the page is geo-blocked for your own country and any others you choose, while promotion targets the US, Canada and Australia — people at home do not stumble across it. Experience: not needed, training takes 10–14 days. Boundaries: what you shoot and what you refuse to shoot stays your call, and a serious team fixes that line instead of pushing it. If you want the comparison for your own situation, message the manager on Telegram @ofmm_agency — she will tell you honestly which role fits, with no obligations.",
+      },
+      {
+        type: "nav",
+        intro: "Considering the model side? Start here:",
+        links: [
+          {
+            href: "/vacancies/model",
+            label: "OnlyFans model vacancy at OFM — terms",
+          },
+          {
+            href: "/join",
+            label: "Model application — anonymous, 2 minutes",
+          },
+          {
+            href: "/calculator",
+            label: "Income calculator — your range in 1 minute",
+          },
+        ],
+      },
       {
         type: "h2",
         text: "Do you need experience to become an OnlyFans chatter?",
@@ -3166,26 +3238,36 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
     ],
   },
+  // ЭКСПЕРИМЕНТ 31.08.2026 — EN-реврайт по золотому стандарту (CONTENT-GOLD-STANDARD-2026-09).
+  // ДО: CTR 0,76% при позиции 5,9 — классический CTR-резерв: тайтл «What Is an OF Model?»
+  // дублировал определение из AI Overview, сниппет не давал причин кликать.
+  // Гипотеза: формула «[ключ]: кто это, сколько платят и как стать» (CTR ×11 на чатер-статье)
+  // + дескрипшен-джоб-объявление (remote, no experience, 7–14 days, anonymous, 18+)
+  // + вилки денег в сниппете (то, чего НЕТ в AI Overview) поднимут CTR до 2–4%.
+  // Также: nav-мосты → /vacancies/model + /join + /calculator, 2-колоночная таблица «уровень →
+  // деньги», FAQ сокращён с 7 до 6 живых вопросов, соцпруф-цитата у финального CTA,
+  // интернациональный тон (EN-воронка = русско/украиноязычные модели по всему миру;
+  // юнит-экономика: 1 модель с EN-версии = $2 500 — кейс модели из Японии).
   "onlyfans-modeli-kto-eto": {
-    title: "What Is an OF Model? OFM Meaning, Pay & How to Start",
+    title: "OnlyFans Models: Who They Are, Pay & How to Start",
     description:
-      "An OF model is an OnlyFans creator who earns from a paid page — subscriptions, PPV and chats. What OFM means, how much models really make, how to start.",
+      "How much OnlyFans models make — from $300 solo to $15K–50K/mo gross with an agency. Remote, no experience, start in 7–14 days, anonymous application. 18+.",
     keywords: [
+      "onlyfans models",
+      "onlyfans model",
+      "what is an onlyfans model",
       "of model",
       "of models",
       "what is an of model",
-      "what is ofm",
       "ofm meaning",
-      "of model meaning",
       "ofm model",
-      "onlyfans model",
-      "how much do of models make",
-      "how to become an of model",
+      "how much do onlyfans models make",
+      "how to become an onlyfans model",
     ],
     blocks: [
       {
         type: "p",
-        text: "An OF model is an OnlyFans model: a woman who runs a paid subscription page, publishes photo and video content behind a paywall, and talks to her subscribers. OF is simply the abbreviation of OnlyFans, and OFM usually stands for OnlyFans Management — the agency side of the business, and often a shorthand for the model who works with one. This guide covers what the job actually involves, how the pay really works, and how to start, without the hype.",
+        text: "An OnlyFans model is a woman who runs a paid subscription page on OnlyFans and earns from subscriptions, paid messages (PPV) and tips. The money spread is wide: a solo beginner usually makes $300–700 in her first month, while strong pages under agency management run $15,000–50,000 a month in gross balance. The work is remote, needs no experience and no English, launch takes 7–14 days, and the only hard requirement is being 18+. This guide covers what the job actually involves, how the pay really works, and how to start — whether you are reading it from Ukraine, Germany, Spain or anywhere else in the world.",
       },
       {
         type: "h2",
@@ -3232,6 +3314,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         text: "It is not webcam work either. A cam model is live on a schedule and earns only while she is on camera. An OF model shoots when it suits her, and the page keeps selling around the clock through the feed and the inbox.",
       },
       {
+        type: "tip",
+        text: "Wondering whether the format could fit you specifically? Message the manager on Telegram @ofmm_agency — she will tell you where to start, honestly and with no obligations. The conversation is anonymous and commits you to nothing.",
+      },
+      {
         type: "h2",
         text: "What OF models actually do in a week",
       },
@@ -3249,13 +3335,25 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Counted honestly, from the page balance. A solo beginner with no promotion budget usually lands at $300–700 in her first month, and many solo pages never move far past that — not because the platform doesn't pay, but because nobody is bringing subscribers in. Pages under management climb into the thousands within a few months, and the balances of strong pages run $15,000–50,000 a month gross.",
+        text: "Counted honestly, from the page balance. A solo beginner with no promotion budget usually lands at $300–700 in her first month, and many solo pages never move far past that — not because the platform doesn't pay, but because nobody is bringing subscribers in. Pages under OFM agency management climb into the thousands within the first few months, and the balances of strong pages run $15,000–50,000 a month gross.",
       },
       {
         type: "cases",
         title: "Real OFM model cases — page statistics screenshots",
         note: "Figures are gross page balance totals, not creator net payout. Published with consent.",
         linkLabel: "View cases",
+      },
+      {
+        type: "table",
+        caption:
+          "Gross page balance per month by level. Ranges are guidelines from managed pages, not guarantees.",
+        headers: ["Level", "Page balance / month"],
+        rows: [
+          ["Solo start, no promotion", "$300–700"],
+          ["First months with an agency", "$500–3,000"],
+          ["Established managed page", "$5,000–15,000"],
+          ["Top managed pages", "$15,000–50,000"],
+        ],
       },
       {
         type: "p",
@@ -3302,6 +3400,20 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         text: "Every figure here is a range and a guideline, never a promise. The income is real, but it follows the work — not luck, and not a screenshot on someone's Instagram.",
       },
       {
+        type: "nav",
+        intro: "Check your own numbers before deciding anything:",
+        links: [
+          {
+            href: "/calculator",
+            label: "Income calculator — your range in 1 minute",
+          },
+          {
+            href: "/vacancies/model",
+            label: "OnlyFans model vacancy at OFM — terms",
+          },
+        ],
+      },
+      {
         type: "h2",
         text: "Do you need a model's look? The types that actually sell",
       },
@@ -3311,7 +3423,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "English is not a barrier either. With a chat team, conversations with subscribers are handled by people writing in native English 24/7 — one of the main reasons models from Ukraine and the rest of Europe can compete for a US and Canadian audience from day one.",
+        text: "English is not a barrier either. With a chat team, conversations with subscribers are handled by people writing in native English 24/7 — one of the main reasons models join OFM from Ukraine, Germany, Poland, Spain, the US and as far away as Japan, and compete for a US and Canadian audience from day one. Where you live matters far less than whether the page is run well.",
       },
       {
         type: "h2",
@@ -3331,7 +3443,21 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "The technical part — creating the account — takes about fifteen minutes and is not what agencies are paid for. The hard part starts afterwards: promotion, traffic and conversations that never stop.",
+        text: "The technical part — creating the account — takes about fifteen minutes and is not what agencies are paid for. The hard part starts afterwards: promotion, traffic and conversations that never stop. If you would rather skip the trial-and-error phase, write to the manager on Telegram @ofmm_agency — she will walk you through the start step by step, without obligations.",
+      },
+      {
+        type: "nav",
+        intro: "The two ways to start with a team:",
+        links: [
+          {
+            href: "/vacancies/model",
+            label: "OnlyFans model vacancy — requirements and terms",
+          },
+          {
+            href: "/join",
+            label: "Apply to OFM — anonymous form, 2 minutes",
+          },
+        ],
       },
       {
         type: "h2",
@@ -3361,23 +3487,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h3",
-        text: "What does OF model mean?",
-      },
-      {
-        type: "p",
-        text: "OF model means OnlyFans model: a creator who runs a paid page on OnlyFans, publishes photos and videos for subscribers and earns from subscriptions, paid messages (PPV), tips and custom content. OF is just an abbreviation of the platform's name — there is no separate service called OF.",
-      },
-      {
-        type: "h3",
-        text: "What does OFM stand for?",
-      },
-      {
-        type: "p",
-        text: "OFM stands for OnlyFans Management — the agencies and teams that manage creators' pages: marketing, traffic, 24/7 chatting, analytics, account and payout handling. In everyday use, OFM model simply means a model who works with such a team rather than running everything solo.",
-      },
-      {
-        type: "h3",
-        text: "How much do OF models make?",
+        text: "How much do OnlyFans models make?",
       },
       {
         type: "p",
@@ -3409,6 +3519,14 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h3",
+        text: "How fast do OnlyFans models start earning?",
+      },
+      {
+        type: "p",
+        text: "With an agency, launch takes 7–14 days: profile setup, verification, first content, chats and traffic switched on. The first payouts usually arrive within the first month; a meaningful balance builds over two to four months as traffic and the fan base compound. Solo, the same road is slower — everything depends on how fast you learn promotion yourself.",
+      },
+      {
+        type: "h3",
         text: "What is the difference between an OF model and an OFM model?",
       },
       {
@@ -3420,8 +3538,16 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         intro: "Trying the role on for size? Next steps:",
         links: [
           {
+            href: "/vacancies/model",
+            label: "OnlyFans model vacancy at OFM",
+          },
+          {
             href: "/join",
             label: "Apply to OFM — anonymous application form",
+          },
+          {
+            href: "/calculator",
+            label: "Income calculator",
           },
           {
             href: "/blog/chto-takoe-onlyfans",
@@ -3458,11 +3584,16 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         ],
       },
       {
+        type: "quote",
+        text: "I sent the application from abroad, sure they would say my English was too weak and my type too ordinary. Month four, my page balance passed $6,000 gross — my share came to about $1,500, and I still shoot only twice a week. The team runs everything else.",
+        author: "OFM model, 8 months with the agency (published with consent)",
+      },
+      {
         type: "cta",
         title: "Want to know whether this format fits you?",
-        body: "Send an application or message us on Telegram @ofmm_agency — we will go through your type, your niche and your expectations honestly. No pressure and no entry fee: the decision always stays yours.",
-        buttonHref: "/#contact",
-        buttonLabel: "Apply",
+        body: "Message the manager on Telegram @ofmm_agency — she will tell you where to start, honestly and without obligations. Or send the anonymous application: we will go through your type, your niche and your expectations. No pressure and no entry fee — the decision always stays yours.",
+        buttonHref: "/join",
+        buttonLabel: "Apply — 2 minutes, anonymous",
         note: "Income figures are gross page-balance turnover and guidelines, not guaranteed payouts. 18+ only.",
       },
     ],
