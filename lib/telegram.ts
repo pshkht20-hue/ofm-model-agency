@@ -24,6 +24,13 @@ export type ApplicationPayload = {
   ageConfirmed?: boolean;
   locale?: string;
   location?: string;
+  /** Роль из переключателя формы: сортировка лидов (модели в приоритете). */
+  role?: 'model' | 'chatter';
+};
+
+const ROLE_LABELS: Record<'model' | 'chatter', string> = {
+  model: '👩‍🎤 МОДЕЛЬ',
+  chatter: '💬 ЧАТЕР',
 };
 
 function formatTelegramContact(raw: string): string {
@@ -53,8 +60,9 @@ export function formatApplicationMessage(data: ApplicationPayload): string {
     timeStyle: 'short',
   });
 
+  const roleLabel = ROLE_LABELS[data.role ?? 'model'];
   const lines = [
-    '🆕 <b>Новая заявка — OFM\'s Model Agency</b>',
+    `🆕 <b>Новая заявка — ${roleLabel}</b>`,
     `🌐 <b>Сайт:</b> ofmmodels.com`,
     localeLabel ? `🗣 <b>Язык формы:</b> ${localeLabel}` : null,
     data.location ? `📍 <b>Откуда:</b> ${escapeTelegramHtml(data.location)}` : null,

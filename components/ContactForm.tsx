@@ -28,6 +28,7 @@ import type { FormErrorType } from '@/lib/analytics/events';
 type Status = 'idle' | 'loading' | 'success' | 'error';
 type FieldState = 'idle' | 'valid' | 'invalid';
 type FieldName = 'name' | 'telegram' | 'age';
+type ApplicantRole = 'model' | 'chatter';
 
 /** Поля, чьё имя имеет смысл как last_field в form_abandon (honeypot исключён). */
 const ABANDON_FIELDS = new Set(['name', 'telegram', 'age', 'message']);
@@ -80,6 +81,9 @@ export function ContactForm() {
   const pagePath = usePathname();
   const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  // Роль заявки (директива 30.08: модельный поток приоритетен — модель по
+  // умолчанию). Разделение нужно владельцу для сортировки лидов в Telegram.
+  const [role, setRole] = useState<ApplicantRole>('model');
   const [name, setName] = useState('');
   const [telegram, setTelegram] = useState('');
   const [age, setAge] = useState('');
@@ -180,6 +184,12 @@ export function ContactForm() {
     };
   }, [locale, pagePath]);
 
+  // Предвыбор роли по URL (?role=chatter из статей/навигации чатер-кластера).
+  useEffect(() => {
+    const fromUrl = new URLSearchParams(window.location.search).get('role');
+    if (fromUrl === 'chatter') setRole('chatter');
+  }, []);
+
   // Префилл применяется и на маунте, и по событию калькулятора: форма смонтирована
   // раньше, чем девушка проходит квиз, поэтому одного чтения на маунте мало.
   useEffect(() => {
@@ -226,6 +236,7 @@ export function ContactForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           locale,
+          role,
           name: formData.get('name'),
           age: formData.get('age'),
           telegram: formData.get('telegram'),
@@ -339,6 +350,31 @@ export function ContactForm() {
       />
 
       <div className="relative grid gap-5">
+        {/* Переключатель роли: сегмент-контрол в стиле формы. Модель — дефолт
+            (модельный поток приоритетен), чатер — для сортировки лидов. */}
+        <div
+          role="group"
+          aria-label={t('roleLabel')}
+          className="grid grid-cols-2 gap-2 rounded-xl border border-white/10 bg-white/[0.03] p-1.5"
+        >
+          {(['model', 'chatter'] as const).map((r) => (
+            <button
+              key={r}
+              type="button"
+              onClick={() => setRole(r)}
+              aria-pressed={role === r}
+              disabled={status === 'loading'}
+              className={`rounded-lg px-4 py-2.5 text-sm font-semibold uppercase tracking-[0.08em] transition-all duration-300 ${
+                role === r
+                  ? 'bg-accent-pink/[0.14] text-white border border-accent-pink/50 shadow-[0_0_18px_-6px_rgba(255,91,181,0.55)]'
+                  : 'text-white/45 border border-transparent hover:text-white/70 hover:bg-white/[0.04]'
+              }`}
+            >
+              {r === 'model' ? t('roleModel') : t('roleChatter')}
+            </button>
+          ))}
+        </div>
+
         <div className="grid sm:grid-cols-2 gap-5">
           <label className="group block">
             <span className={labelClass}>{t('name')} *</span>
@@ -500,7 +536,7 @@ export function ContactForm() {
             </>
           ) : (
             <>
-              {t('submit')}
+              {role === 'chatter' ? t('submitChatter') : t('submitModel')}
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5" />
             </>
           )}

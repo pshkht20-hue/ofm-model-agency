@@ -449,7 +449,12 @@
     "consent": "By submitting, you agree we may use your data to contact you.",
     "calcPrefillNotice": "We prefilled your calculator estimate — feel free to add more details.",
     "calcPrefillMessage": "I completed the site calculator. Estimated gross total: {low} — {high} / month (tier: {tier}). I'd like to discuss a growth plan with the agency.",
-    "emailAlt": "No Telegram? Email us at:"
+    "emailAlt": "No Telegram? Email us at:",
+    "roleLabel": "Which role are you applying for",
+    "roleModel": "Model",
+    "roleChatter": "Chatter",
+    "submitModel": "Become a Model",
+    "submitChatter": "Become a Chatter"
   },
   "common": {
     "home": "Home",

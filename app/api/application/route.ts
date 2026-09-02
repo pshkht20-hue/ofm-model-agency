@@ -104,6 +104,8 @@ function validate(
   const age = trim(body.age);
   const message = trim(body.message);
   const ageConfirmed = body.ageConfirmed === true;
+  // Роль заявки: только два допустимых значения, всё остальное → model.
+  const role = body.role === 'chatter' ? 'chatter' : 'model';
 
   if (!name || name.length < 2) {
     return { ok: false, error: e.nameRequired };
@@ -133,6 +135,7 @@ function validate(
       name,
       telegram,
       ageConfirmed,
+      role,
       ...(age && { age }),
       ...(message && { message }),
     },
