@@ -24,13 +24,16 @@ export function BlogCoverImage({
   variant = 'hero',
 }: BlogCoverImageProps) {
   const isCard = variant === 'card';
-  const height = isCard ? 'h-44 md:h-52' : 'h-52 md:h-72';
+  // 02.09.2026: фиксированные высоты (h-52/h-72) резали 16:9-обложки на ~40%
+  // через object-cover — фирменные композиции теряли края. aspect-video
+  // показывает кадр целиком в обоих вариантах.
   const sizes = isCard
     ? '(max-width: 768px) 100vw, 400px'
-    : '(max-width: 768px) 100vw, 768px';
+    : '(max-width: 768px) 100vw, 900px';
+  const isOwnPhoto = !cover.unsplashUrl || !cover.unsplashUrl.includes('unsplash.com');
 
   return (
-    <figure className={`relative w-full overflow-hidden rounded-2xl border border-white/[0.08] ${height} group`}>
+    <figure className={`relative w-full overflow-hidden rounded-2xl border border-white/[0.08] aspect-video group`}>
       <Image
         src={cover.remoteSrc}
         alt={cover.alt}
@@ -38,36 +41,43 @@ export function BlogCoverImage({
         priority={priority}
         fetchPriority={priority ? 'high' : undefined}
         sizes={sizes}
+        // Тёмные неоновые градиенты фирменных обложек бандятся на дефолтном
+        // quality=75 — 90 держит их гладкими ценой ~30% веса.
+        quality={90}
         className="cover-zoom object-cover transition-transform duration-700 group-hover:scale-[1.03]"
       />
-      <div
-        className="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/40 to-transparent pointer-events-none"
-        aria-hidden
-      />
-      <div
-        className="absolute inset-0 bg-gradient-to-br from-accent-pink/10 via-transparent to-accent-violet/10 pointer-events-none opacity-80"
-        aria-hidden
-      />
+      {/* Лёгкая подложка ТОЛЬКО под строкой кредита — сплошная дымка поверх
+          всего кадра (эпоха стоковых фото) глушила фирменные обложки. */}
       {!isCard && cover.photographer && (
-        <figcaption className="absolute bottom-0 left-0 right-0 px-4 py-3 text-[10px] text-white/45 leading-relaxed">
+        <div
+          className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#050508]/75 to-transparent pointer-events-none"
+          aria-hidden
+        />
+      )}
+      {!isCard && cover.photographer && (
+        <figcaption className="absolute bottom-0 left-0 right-0 px-4 py-3 text-[10px] text-white/50 leading-relaxed">
           Фото:{' '}
           <a
             href={cover.photographerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/60 hover:text-accent-pink transition-colors underline-offset-2 hover:underline"
+            className="text-white/65 hover:text-accent-pink transition-colors underline-offset-2 hover:underline"
           >
             {cover.photographer}
           </a>
-          {' · '}
-          <a
-            href={cover.unsplashUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/50 hover:text-accent-cyan transition-colors"
-          >
-            Unsplash
-          </a>
+          {!isOwnPhoto && cover.unsplashUrl && (
+            <>
+              {' · '}
+              <a
+                href={cover.unsplashUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/50 hover:text-accent-cyan transition-colors"
+              >
+                Unsplash
+              </a>
+            </>
+          )}
         </figcaption>
       )}
     </figure>
