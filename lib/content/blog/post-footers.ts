@@ -131,6 +131,11 @@ export const LINK = {
     href: '/vacancies',
     label: 'Все открытые вакансии агентства',
   },
+  /** Мамы в декрете — модельная воронка под бытовой запрос «работа для мам в декрете» */
+  dekret: {
+    href: '/blog/rabota-dlya-mam-v-dekrete',
+    label: 'Работа для мам в декрете онлайн',
+  },
   founder: {
     href: '/blog/kto-sozdal-onlyfans',
     label: 'Кто создал OnlyFans: история платформы',

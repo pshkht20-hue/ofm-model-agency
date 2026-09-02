@@ -50,13 +50,14 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@christinhumephoto',
     unsplashUrl: 'https://unsplash.com/photos/person-using-laptop-computer-Hcfwew744z4',
   },
+  // Фирменная fal.ai-обложка (стиль Creator Room, BRAND-IMAGE-STYLE-2026-09)
   'kak-stat-onlyfans-modelyu-s-nulya': {
     localSrc: '/blog/covers/kak-stat-onlyfans-modelyu-s-nulya.jpg',
-    remoteSrc: coverUrl('1738566495642-5911b1ed08b6'),
-    alt: 'Молодая женщина пишет в блокноте за столом — начало пути модели OnlyFans с нуля',
-    photographer: 'Vitaly Gariev',
-    photographerUrl: 'https://unsplash.com/@silverkblack',
-    unsplashUrl: 'https://unsplash.com/photos/a-woman-sitting-at-a-desk-writing-on-a-notebook-0utix0NILr4',
+    remoteSrc: '/blog/covers/kak-stat-onlyfans-modelyu-s-nulya.jpg',
+    alt: 'Уютная креаторская комната с кольцевой лампой и смартфоном на штативе — рабочее место модели OnlyFans, готовое к первой съёмке',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
   },
   'onlyfans-rabota-polsha': {
     localSrc: '/blog/covers/onlyfans-rabota-polsha.jpg',
@@ -210,13 +211,14 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@longmirephoto',
     unsplashUrl: 'https://unsplash.com/photos/1-dollar-and-coins-on-white-surface-LNl6kF2A6fE',
   },
+  // Фирменная fal.ai-обложка (стиль Glass 3D, BRAND-IMAGE-STYLE-2026-09)
   'onlyfans-skolko-zarabatyvayut-modeli': {
     localSrc: '/blog/covers/onlyfans-skolko-zarabatyvayut-modeli.jpg',
-    remoteSrc: coverUrl('1504384308090-c894fdcc538d'),
-    alt: 'Ноутбук и планирование дохода creator',
-    photographer: 'Kelly Sikkema',
-    photographerUrl: 'https://unsplash.com/@kellysikkema',
-    unsplashUrl: 'https://unsplash.com/photos/white-and-black-casio-calculator-3-tcBU6Y2OQ',
+    remoteSrc: '/blog/covers/onlyfans-skolko-zarabatyvayut-modeli.jpg',
+    alt: 'Хрустальный растущий график с золотыми монетами в неоновом свете — рост дохода моделей OnlyFans по месяцам',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
   },
   'onlyfans-agentstvo-dlya-nachinayushchih': {
     localSrc: '/blog/covers/onlyfans-agentstvo-dlya-nachinayushchih.jpg',
@@ -355,13 +357,14 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@microsoftedge',
     unsplashUrl: 'https://unsplash.com/photos/a-woman-using-a-laptop-1N49Cn7P0Fg',
   },
+  // Фирменная fal.ai-обложка (стиль Silhouette Cosmos, BRAND-IMAGE-STYLE-2026-09)
   'onlyfans-modeli-kto-eto': {
     localSrc: '/blog/covers/onlyfans-modeli-kto-eto.jpg',
-    remoteSrc: coverUrl('1486403184395-fc4990866136'),
-    alt: 'Уверенная улыбающаяся девушка со смартфоном в руках — кто такие OnlyFans-модели и чем они занимаются',
-    photographer: 'Luke Porter',
-    photographerUrl: 'https://unsplash.com/@lukeporter',
-    unsplashUrl: 'https://unsplash.com/photos/woman-holding-phone-smiling-UGX2qdjdKkw',
+    remoteSrc: '/blog/covers/onlyfans-modeli-kto-eto.jpg',
+    alt: 'Элегантный силуэт девушки в вечернем платье на фоне неоновой галактики — кто такие модели OnlyFans',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
   },
   'chatter-onlyfans-kto-eto': {
     localSrc: '/blog/covers/chatter-onlyfans-kto-eto.jpg',
@@ -379,6 +382,18 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographer: 'Brooke Cagle',
     photographerUrl: 'https://unsplash.com/@brookecagle',
     unsplashUrl: 'https://unsplash.com/photos/people-sitting-down-near-table-with-assorted-laptop-computers-G7CuPfG0MR4',
+  },
+  // TODO: заменить на fal.ai-обложку (фирменная графика по стиль-гайду).
+  // Временно переиспользуем фото из onlyfans-rabota-legalno-i-bezopasno
+  // (девушка спокойно работает за ноутбуком дома — та же «домашняя» тема).
+  // Фирменная fal.ai-обложка (стиль Cinematic Lifestyle, BRAND-IMAGE-STYLE-2026-09)
+  'rabota-dlya-mam-v-dekrete': {
+    localSrc: '/blog/covers/rabota-dlya-mam-v-dekrete.jpg',
+    remoteSrc: '/blog/covers/rabota-dlya-mam-v-dekrete.jpg',
+    alt: 'Молодая женщина уютным вечером дома у окна с видом на город — онлайн-работа в декрете по своему графику',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
   },
   'kto-sozdal-onlyfans': {
     localSrc: '/blog/covers/kto-sozdal-onlyfans.jpg',
