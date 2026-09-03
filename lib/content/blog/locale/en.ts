@@ -591,6 +591,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "When it's time to hire an agency",
           },
           {
+            href: "/blog/onlyfans-agency-for-japanese-creators",
+            label: "OnlyFans agency for Japanese creators",
+          },
+          {
             href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
             label: "Starting OnlyFans: agency or solo",
           },
@@ -2444,6 +2448,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Marketing strategy 2026",
           },
           {
+            href: "/blog/onlyfans-agency-for-japanese-creators",
+            label: "OnlyFans agency for Japanese creators",
+          },
+          {
             href: "/blog/onlyfans-instagram-tiktok-bez-bana",
             label: "SFW promo: Instagram & TikTok",
           },
@@ -3699,6 +3707,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Who created OnlyFans: founder and owner",
           },
           {
+            href: "/blog/onlyfans-agency-for-japanese-creators",
+            label: "OnlyFans agency for Japanese creators",
+          },
+          {
             href: "/join",
             label: "Apply to OFM — application form",
           },
@@ -4264,6 +4276,176 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "18+ only. Figures are gross page-balance turnover, not a guaranteed payout.",
+      },
+    ],
+  },
+  "onlyfans-agency-for-japanese-creators": {
+    // EN-ОВЕРЛЕЙ 03.09.2026 — японский мини-кластер №1 (ofm-japan-strategy).
+    // Целевая версия статьи: EN-база + японские блоки внутри (контент, не локаль).
+    // Simple English сознательно — реальная ЦА просила «simple English,
+    // translator-friendly» (карта болей из переписки со скаутом-моделью).
+    // ⛔ Железно: гео-блок Японии по умолчанию + мозаика/цензура (ст. 175) —
+    // в каждом разделе о безопасности. Ja-выдача пуста (машинные переводы) —
+    // гипотеза: топ без покупных ссылок; замер конец сентября, до него ja-ссылки
+    // не покупать. Статьи №2–3 кластера (Fantia/Myfans, Anonymity) — W4.
+    title: "OnlyFans Agency for Japanese Creators — Safe Remote Start",
+    description:
+      "OFM is an OnlyFans agency for Japanese creators: Japan geo-blocked by default, censorship to Japanese standards, DMCA protection, Paxum payouts. Simple English is enough — the team runs chats. 日本人クリエイター向け。18+.",
+    keywords: [
+      "onlyfans agency for japanese creators",
+      "onlyfans agency japan",
+      "japanese onlyfans creator",
+      "onlyfans management japan",
+      "onlyfans manager for japanese",
+      "onlyfans 代理店",
+      "onlyfans エージェンシー 日本",
+      "日本人 onlyfans クリエイター",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "OFM Models is an OnlyFans agency that works with Japanese creators fully remotely — with two safety rules that are always on: your page is geo-blocked in Japan by default, and all content follows Japanese censorship standards before anything is published. Promotion targets the US, Canada, Australia and Western Europe only. The team handles registration, ID verification, Paxum payouts, fan chats around the clock and DMCA takedowns of leaks. You only create content, 10–15 hours a week, and set your own boundaries. Simple English is enough — a translator app is fine too.",
+      },
+      {
+        type: "p",
+        text: "日本人クリエイターの方へ：OFM Modelsは、海外のOnlyFans運用代行エージェンシーです。日本からのアクセスは初期設定でブロックされており、プロモーションは米国・欧州など海外のファン向けのみです。登録・本人確認・報酬の受け取り（Paxum）・ファンとのメッセージ対応は、すべてチームが代行します。コンテンツは日本の法律に合わせて修正（モザイク処理）してから公開します。英語は簡単なレベルで大丈夫です。",
+      },
+      {
+        type: "nav",
+        intro: "Ready to ask questions? It costs nothing:",
+        links: [{ href: "/join", label: "Apply to OFM — 2 minutes, anonymous" }],
+      },
+      { type: "h2", text: "Why Japanese creators work with an overseas agency" },
+      {
+        type: "p",
+        text: "Creators in Japan tell us about the same three fears: being recognized (leaks travel fast in tight social circles), the strict Japanese law on uncensored content, and English chats with foreign fans. An overseas agency removes all three at once. Your page is simply invisible to the Japanese audience. Content is censored to Japanese standards before publishing. And English is the team's job, not yours: chatters answer fans 24/7, and your manager writes to you in simple, translator-friendly English.",
+      },
+      {
+        type: "p",
+        text: "There is also a money reason. Foreign fans on OnlyFans pay in dollars, tip more, and buy custom content — while local Japanese scout agencies often take a large cut for much less work. With OFM the split is transparent from day one, and everything the agency keeps is reinvested into your page: paid traffic, a three-shift chat team, promotion. That reinvestment is why managed pages grow month over month.",
+      },
+      { type: "h2", text: "Anonymity: geo-blocking Japan is the default — 日本からは見えません" },
+      {
+        type: "p",
+        text: "For every Japanese creator we launch, blocking Japan is not an option you have to ask for — it is the standard setting from day one. We also block any other country you name. Promotion runs only toward the US, Canada, Australia and Western Europe, so your page never appears in recommendations at home. How much to show your face is your decision, made together with your manager: many creators work with partial face, angles or masks, and we plan content around that choice.",
+      },
+      {
+        type: "p",
+        text: "Honest note: no one can promise 100% — VPNs and screenshots exist everywhere in the world. What we control, we control fully: geo-block from day one, promotion far from Japan, a careful visual style, and DMCA takedowns when a leak or a fake account appears. Takedowns are part of page management, not a paid extra.",
+      },
+      { type: "h2", text: "Article 175 and censorship: how we keep it legal — 法律について" },
+      {
+        type: "p",
+        text: "Japanese law (Article 175 of the Penal Code) prohibits distributing uncensored explicit material, and this applies to creators working from Japan even on foreign platforms. Our rule is simple and has no exceptions: for creators based in Japan, explicit content is edited to Japanese censorship standards (mosaic) before it is published anywhere — on the page, in promo, everywhere. We will never ask you to publish uncensored content, and we decline that work even if a fan offers extra money for it.",
+      },
+      {
+        type: "p",
+        text: "日本の刑法175条により、無修正コンテンツの公開はできません。OFMでは日本在住のクリエイターの作品を必ずモザイク処理してから公開します。例外はありません。ファンから高額の報酬を提示されても、無修正での公開は一切行いません。税金については、収入の申告が必要です。確定申告に必要な収支データは、チームがまとめてお渡ししますので、ご安心ください。",
+      },
+      { type: "h2", text: "Simple English is enough — 英語が苦手でも大丈夫" },
+      {
+        type: "p",
+        text: "You never chat with fans yourself — the chat team does it in native-level English, in three shifts, every day. Your only conversations are with your manager, who writes short, simple messages that work well with translator apps. Content plans come as visual references: what to shoot, lighting, angles — more pictures than words. If you can read this article with a translator, your English is already enough.",
+      },
+      {
+        type: "tip",
+        text: "Want to see how managed pages look from the inside first? Our Telegram channel t.me/ofmmAgency shows real page statistics and cases. Following costs nothing and commits you to nothing.",
+      },
+      { type: "h2", text: "What the team does — and what stays yours" },
+      {
+        type: "p",
+        text: "The split of work is simple: the agency runs the business, you create the content and keep control over your boundaries.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Agency: account registration and ID verification, Paxum payout setup, paid traffic and promotion at the agency's expense, fan chats 24/7 in three shifts, DMCA protection, analytics and planning",
+          "You: shooting photos and videos 10–15 hours a week following a ready-made plan — at home, on your schedule",
+          "Your boundaries: what you shoot and what is taboo is your decision alone; the team records it and never pushes past it",
+          "Exit: you can pause or leave at any moment — no penalties, no bureaucracy",
+        ],
+      },
+      {
+        type: "p",
+        text: "The start takes 7–14 days from application to a working page: since 2022 the team has taken 200+ pages through verification, so every step — documents, payouts, first content plan — is a routine we walk you through, not a puzzle you solve alone.",
+      },
+      { type: "h2", text: "Money: honest numbers, no fairy tales — 収入について" },
+      {
+        type: "p",
+        text: "Managed pages at OFM reach $3,000–15,000 gross per month; top pages reach $15,000–50,000. Solo, without a team or paid traffic, most creators stay around $300–700. All numbers are gross page-balance turnover — not a payout in hand and not a promise. The model receives 20–30% of gross; the share depends on the plan, niche and team setup. The rest is not the agency's profit margin — it funds the traffic, promotion and chat team that grow your balance, which is why the percentage looks different from that of agencies that only give advice and leave the work to you.",
+      },
+      {
+        type: "cases",
+        title: "Real OFM model cases — page statistics screenshots",
+        note: "Figures are gross page balance totals, not creator net payout. Published with consent.",
+        linkLabel: "View cases",
+      },
+      {
+        type: "p",
+        text: "Payouts go through Paxum — the industry-standard payment service, which works for creators in Japan. The team sets it up with you during onboarding, and you can check your numbers at any time. Want a realistic estimate for your niche before you apply? The income calculator takes one minute.",
+      },
+      {
+        type: "nav",
+        intro: "Estimate your range before applying:",
+        links: [
+          { href: "/calculator", label: "OnlyFans income calculator" },
+          { href: "/blog/onlyfans-skolko-zarabatyvayut-modeli", label: "How much OnlyFans models earn" },
+        ],
+      },
+      { type: "h2", text: "OnlyFans, Fantia or Myfans: which platform pays more?" },
+      {
+        type: "p",
+        text: "Many Japanese creators start on domestic platforms — Fantia or Myfans — because they feel safer and work in Japanese. The honest comparison: domestic platforms have Japanese-speaking fans but much smaller budgets and heavy competition inside Japan; OnlyFans has the largest paying audience in the world (US and Europe), dollar prices and custom-content culture — but it needs English and Western promotion, which is exactly what an agency covers. A detailed comparison of the three platforms is coming in this series; the short answer: the ceiling on OnlyFans is several times higher, and with a team the language barrier disappears.",
+      },
+      { type: "h2", text: "FAQ — よくある質問" },
+      { type: "h3", text: "Is this legal for a creator living in Japan? 合法ですか？" },
+      {
+        type: "p",
+        text: "Yes, under two conditions we treat as standard: explicit content is censored to Japanese norms (mosaic) before publishing, and income is declared for taxes. We never publish uncensored content for creators based in Japan — no exceptions — and the team prepares the income data you need for tax filing.",
+      },
+      { type: "h3", text: "Will people in Japan find my page? 日本の知り合いにバレませんか？" },
+      {
+        type: "p",
+        text: "The page is geo-blocked in Japan from day one, and promotion targets only the US, Canada, Australia and Western Europe — your page is not visible to the Japanese audience at all. A 100% guarantee does not exist anywhere (VPNs exist), but geo-block + far-away audience + a careful visual style + DMCA takedowns is the strongest protection the industry has, and it is our default, not an extra.",
+      },
+      { type: "h3", text: "My English is weak. Is that a problem?" },
+      {
+        type: "p",
+        text: "No. Fans are answered by the chat team, not by you. Your manager writes simple, translator-friendly English, and content plans are mostly visual references. Many of our creators work through a translator app every day.",
+      },
+      { type: "h3", text: "How do I get paid? 報酬の受け取り方法は？" },
+      {
+        type: "p",
+        text: "Through Paxum, the industry-standard payout service that works for creators in Japan. The team sets it up with you during onboarding — it is one of the steps of the 7–14 day start, together with registration and ID verification.",
+      },
+      { type: "h3", text: "Can I stop whenever I want?" },
+      {
+        type: "p",
+        text: "Yes. There are no lock-ins and no penalties: you can pause or stop working with us at any moment, and the page stays verified under your own documents. A team that grows your balance month over month does not need to force anyone to stay.",
+      },
+      {
+        type: "quote",
+        text: "I asked every uncomfortable question first — about leaks, censorship, geo-block, taxes. I got direct answers instead of promises, and that is why I stayed.",
+        author: "OFM creator based in Japan",
+      },
+      {
+        type: "nav",
+        intro: "Next steps:",
+        links: [
+          { href: "/join", label: "Apply to OFM — 2 minutes, anonymous" },
+          { href: "/calculator", label: "OnlyFans income calculator" },
+          { href: "/blog/onlyfans-modeli-kto-eto", label: "What is an OF model" },
+          { href: "/blog/rabota-modelyu-onlyfans", label: "OnlyFans model job with an agency" },
+          { href: "/blog/onlyfans-anonimnost-i-bezopasnost", label: "Anonymity and safety on OnlyFans" },
+        ],
+      },
+      {
+        type: "cta",
+        title: "Based in Japan and want a safe, managed start?",
+        body: "Write to the manager on Telegram @ofmm_agency — simple English or Japanese with a translator is fine. You will get straight answers about geo-block, censorship and honest numbers for your situation. Or send the 2-minute anonymous application.",
+        buttonHref: "/#contact",
+        buttonLabel: "Apply",
+        note: "18+ only. Income figures are gross page-balance turnover and market examples, not a guarantee.",
       },
     ],
   },

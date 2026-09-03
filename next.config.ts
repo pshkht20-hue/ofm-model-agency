@@ -33,6 +33,9 @@ const nextConfig: NextConfig = {
     inlineCss: true,
   },
   images: {
+    // BlogCoverImage использует quality={90}; без явного списка Next 16 шлёт
+    // dev-предупреждение и грозит в будущем откатить качество к дефолту.
+    qualities: [75, 90],
     remotePatterns: [
       {
         protocol: 'https',

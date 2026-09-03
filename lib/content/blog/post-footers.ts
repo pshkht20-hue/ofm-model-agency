@@ -10,13 +10,17 @@ export function blogNav(intro: string, links: { href: string; label: string }[])
 export function blogApplyCta(
   title: string,
   body: string,
-  options?: { buttonLabel?: string; note?: string }
+  options?: { buttonLabel?: string; note?: string; buttonHref?: string }
 ): BlogBlock {
   return {
     type: 'cta',
     title,
     body,
-    buttonHref: '/#contact',
+    // buttonHref-override: например '/?role=chatter#contact' для страниц с чистым
+    // чатер-интентом (форма предвыберет роль, заявка придёт с меткой «ЧАТЕР»).
+    // Двухпутевые CTA (чатер-пиллар) оставляем на модельном дефолте — ошибка
+    // «модель помечена как чатер» дороже обратной (моделей дефицит).
+    buttonHref: options?.buttonHref ?? '/#contact',
     buttonLabel: options?.buttonLabel ?? 'Подать заявку',
     note: options?.note ?? GROSS_NOTE,
   };
@@ -135,6 +139,16 @@ export const LINK = {
   dekret: {
     href: '/blog/rabota-dlya-mam-v-dekrete',
     label: 'Работа для мам в декрете онлайн',
+  },
+  /** Хаб женского jobs-кластера — «работа онлайн для девушек» (городские статьи ссылаются сюда) */
+  devushki: {
+    href: '/blog/rabota-dlya-devushek-onlajn',
+    label: 'Работа онлайн для девушек: 7 форматов',
+  },
+  /** Хаб кластера «Типажи» — 12 ниш-статей (сент–окт 2026) ссылаются сюда */
+  tipazhi: {
+    href: '/blog/tipazhi-modelej-onlyfans',
+    label: 'Типажи моделей OnlyFans: кто и сколько зарабатывает',
   },
   founder: {
     href: '/blog/kto-sozdal-onlyfans',

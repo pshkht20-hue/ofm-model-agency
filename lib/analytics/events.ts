@@ -131,6 +131,7 @@ export type TelegramClickLocation =
   | 'menu_social'
   | 'footer_social'
   | 'article_body'
+  | 'article_body_channel'
   | 'article_channel_teaser';
 
 export type TelegramClickParams = {

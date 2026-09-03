@@ -395,6 +395,33 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://ofmmodels.com',
     unsplashUrl: 'https://ofmmodels.com',
   },
+  // Фирменная fal.ai-обложка (стиль Cinematic Lifestyle, BRAND-IMAGE-STYLE-2026-09)
+  'onlyfans-agency-for-japanese-creators': {
+    localSrc: '/blog/covers/onlyfans-agency-for-japanese-creators.jpg',
+    remoteSrc: '/blog/covers/onlyfans-agency-for-japanese-creators.jpg',
+    alt: 'Kawaii-стол креатора: манэки-нэко, флаг Японии и сакура на фоне ночного города — OnlyFans agency for Japanese creators',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
+  // Фирменная fal.ai-обложка (стиль Silhouette Cosmos, BRAND-IMAGE-STYLE-2026-09)
+  'tipazhi-modelej-onlyfans': {
+    localSrc: '/blog/covers/tipazhi-modelej-onlyfans.jpg',
+    remoteSrc: '/blog/covers/tipazhi-modelej-onlyfans.jpg',
+    alt: 'Три женских силуэта разных типажей на фоне космоса с неоновой подсветкой — типажи моделей OnlyFans',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
+  // Фирменная fal.ai-обложка (стиль Creator Room, BRAND-IMAGE-STYLE-2026-09)
+  'rabota-dlya-devushek-onlajn': {
+    localSrc: '/blog/covers/rabota-dlya-devushek-onlajn.jpg',
+    remoteSrc: '/blog/covers/rabota-dlya-devushek-onlajn.jpg',
+    alt: 'Девушка настраивает кольцевую лампу в уютной неоновой комнате креатора — работа онлайн для девушек из дома',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
   'kto-sozdal-onlyfans': {
     localSrc: '/blog/covers/kto-sozdal-onlyfans.jpg',
     remoteSrc: coverUrl('1543832923-44667a44c804'),

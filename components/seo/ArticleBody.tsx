@@ -11,30 +11,46 @@ const fmtCaseNet = (n: number) =>
   n >= 1_000_000 ? `$${(n / 1_000_000).toFixed(2)}M` : `$${Math.round(n / 1_000)}K`;
 
 const TELEGRAM_URL = 'https://t.me/ofmm_agency';
-const TELEGRAM_RE = /(https?:\/\/t\.me\/ofmm_agency|t\.me\/ofmm_agency|@ofmm_agency)/g;
+const TELEGRAM_CHANNEL_URL = 'https://t.me/ofmmAgency';
+const TELEGRAM_RE =
+  /(https?:\/\/t\.me\/ofmm_agency|t\.me\/ofmm_agency|@ofmm_agency|https?:\/\/t\.me\/ofmmAgency|t\.me\/ofmmAgency)/g;
 
 /**
- * Превращает упоминания Telegram-ника (@ofmm_agency / t.me/ofmm_agency) в
- * кликабельную ссылку прямо в тексте статьи — чтобы читатель мог сразу перейти
- * в чат, а не искать вручную. Точечный матч по нашему нику, без ложных срабатываний.
- * Клик уходит в GA4 как telegram_click{location:'article_body'} (клиентская обёртка).
+ * Превращает упоминания Telegram-адресов в кликабельные ссылки прямо в тексте
+ * статьи: @ofmm_agency / t.me/ofmm_agency → чат менеджера, t.me/ofmmAgency →
+ * канал (директива владельца 03.09: канал кликабелен во всех статьях).
+ * Точечный матч по нашим никам, без ложных срабатываний. Клики уходят в GA4
+ * как telegram_click{location:'article_body' | 'article_body_channel'}.
  */
 function linkifyTelegram(text: string) {
-  if (!text.includes('ofmm_agency')) return text;
-  return text.split(TELEGRAM_RE).map((part, i) =>
-    part === '@ofmm_agency' || part.includes('t.me/ofmm_agency') ? (
-      <TrackedTelegramLink
-        key={i}
-        href={TELEGRAM_URL}
-        location="article_body"
-        className="link-hover-line text-accent-pink hover:text-accent-cyan transition-colors"
-      >
-        {part}
-      </TrackedTelegramLink>
-    ) : (
-      part
-    ),
-  );
+  if (!text.includes('ofmm_agency') && !text.includes('ofmmAgency')) return text;
+  return text.split(TELEGRAM_RE).map((part, i) => {
+    if (part === '@ofmm_agency' || part.includes('t.me/ofmm_agency')) {
+      return (
+        <TrackedTelegramLink
+          key={i}
+          href={TELEGRAM_URL}
+          location="article_body"
+          className="link-hover-line text-accent-pink hover:text-accent-cyan transition-colors"
+        >
+          {part}
+        </TrackedTelegramLink>
+      );
+    }
+    if (part.includes('t.me/ofmmAgency')) {
+      return (
+        <TrackedTelegramLink
+          key={i}
+          href={TELEGRAM_CHANNEL_URL}
+          location="article_body_channel"
+          className="link-hover-line text-accent-pink hover:text-accent-cyan transition-colors"
+        >
+          {part}
+        </TrackedTelegramLink>
+      );
+    }
+    return part;
+  });
 }
 
 /**
