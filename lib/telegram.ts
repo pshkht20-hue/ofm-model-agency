@@ -80,9 +80,13 @@ export function formatApplicationMessage(data: ApplicationPayload): string {
   return lines.filter((line) => line !== null).join('\n');
 }
 
-export async function sendTelegramMessage(text: string): Promise<void> {
+/**
+ * chatIdOverride — для сообщений не в чат заявок (например, план-напоминания
+ * в группу TELEGRAM_PLAN_CHAT_ID); по умолчанию — TELEGRAM_CHAT_ID.
+ */
+export async function sendTelegramMessage(text: string, chatIdOverride?: string): Promise<void> {
   const token = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_CHAT_ID;
+  const chatId = chatIdOverride || process.env.TELEGRAM_CHAT_ID;
 
   if (!token || !chatId) {
     throw new Error('Telegram is not configured');
