@@ -12,9 +12,14 @@ export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
   const url = new URL(request.url);
+  // Без CRON_SECRET эндпоинт закрыт полностью — иначе любой сможет слать
+  // сообщения ботом в наш чат. Vercel Cron сам передаёт Bearer CRON_SECRET.
   const secret = process.env.CRON_SECRET;
+  if (!secret) {
+    return NextResponse.json({ ok: false, error: 'not_configured' }, { status: 503 });
+  }
   const auth = request.headers.get('authorization');
-  const keyOk = !secret || auth === `Bearer ${secret}` || url.searchParams.get('key') === secret;
+  const keyOk = auth === `Bearer ${secret}` || url.searchParams.get('key') === secret;
   if (!keyOk) {
     return NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 });
   }
