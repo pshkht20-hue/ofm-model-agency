@@ -150,6 +150,16 @@ export const LINK = {
     href: '/blog/tipazhi-modelej-onlyfans',
     label: 'Типажи моделей OnlyFans: кто и сколько зарабатывает',
   },
+  /** Сегмент студенток женского кластера — «работа для студенток» 480/мес */
+  studentki: {
+    href: '/blog/rabota-dlya-studentok',
+    label: 'Работа для студенток: 8 вариантов',
+  },
+  /** Посадочная для опытных моделей с действующей страницей (+бесплатный аудит) */
+  withAccount: {
+    href: '/vacancies/model/with-account',
+    label: 'Для моделей с действующей страницей — бесплатный аудит',
+  },
   founder: {
     href: '/blog/kto-sozdal-onlyfans',
     label: 'Кто создал OnlyFans: история платформы',

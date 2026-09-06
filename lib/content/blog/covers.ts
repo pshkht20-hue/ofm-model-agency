@@ -395,6 +395,15 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://ofmmodels.com',
     unsplashUrl: 'https://ofmmodels.com',
   },
+  // Фирменная fal.ai-обложка (стиль Creator Room, BRAND-IMAGE-STYLE-2026-09)
+  'rabota-dlya-studentok': {
+    localSrc: '/blog/covers/rabota-dlya-studentok.jpg',
+    remoteSrc: '/blog/covers/rabota-dlya-studentok.jpg',
+    alt: 'Учебники и кольцевая лампа на вечернем столе студентки у окна с ночным городом — работа для студенток онлайн',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
   // Фирменная fal.ai-обложка (стиль Cinematic Lifestyle, BRAND-IMAGE-STYLE-2026-09)
   'onlyfans-agency-for-japanese-creators': {
     localSrc: '/blog/covers/onlyfans-agency-for-japanese-creators.jpg',

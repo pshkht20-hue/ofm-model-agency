@@ -986,6 +986,7 @@ export const moneyPosts: BlogPost[] = [
         { href: '/blog/onlyfans-vs-fansly-loyalfans', label: 'Fansly и LoyalFans vs OnlyFans' },
         { href: '/blog/stoit-li-nachinat-onlyfans', label: 'Стоит ли вообще начинать OnlyFans' },
         { href: '/vacancies/model/ukraine', label: 'Вакансия OnlyFans-модели в Украине' },
+        { href: '/vacancies/model/with-account', label: 'Для моделей с действующей страницей — бесплатный аудит' },
         LINK.safety,
         LINK.calc,
       ]),

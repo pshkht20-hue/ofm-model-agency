@@ -59,7 +59,7 @@ const RU: ModelGeoContent = {
     'Твоя страница получает промо-бюджет агентства: платный трафик, размещения и продвижение — за наш счёт.',
     'Достойный доход: многие наши модели зарабатывают от $3 000 до $15 000 в месяц.',
     'Переписку с подписчиками круглосуточно ведёт обученная чат-команда — тебе остаётся только контент.',
-    'Персональный менеджер и разбор твоей текущей страницы: что усилить в контенте, ценах и подаче.',
+    'Бесплатный аудит твоей страницы до старта: менеджер разберёт контент, цены и подачу и покажет точки роста — без обязательств.',
     'Опытная команда с более чем тремя годами практики — мы знаем, как снимать потолок дохода.',
     'Конфиденциальность: бережно относимся к твоей личной информации и настраиваем уровень приватности под тебя.',
   ],
@@ -71,8 +71,8 @@ const RU: ModelGeoContent = {
     'Готовность к сотрудничеству и открытому общению с командой.',
   ],
   closingHtml:
-    'Напиши нам — посмотрим твою страницу и покажем, где именно спрятан рост. Детали обсудим в переписке или на созвоне, как тебе удобнее.',
-  chips: ['Действующий аккаунт', 'Промо-бюджет команды', 'Чат ведёт команда', 'Удалённо'],
+    'Напиши нам — сделаем бесплатный аудит: посмотрим твою страницу и покажем, где именно спрятан рост. Детали обсудим в переписке или на созвоне, как тебе удобнее.',
+  chips: ['Бесплатный аудит страницы', 'Действующий аккаунт', 'Промо-бюджет команды', 'Чат ведёт команда', 'Удалённо'],
   specs: [
     { label: 'График', value: 'Гибкий, 2–3 часа в день' },
     { label: 'Опыт', value: 'Действующая страница OnlyFans' },
@@ -81,6 +81,10 @@ const RU: ModelGeoContent = {
     { label: 'Старт', value: 'В первые дни после онлайн-кастинга' },
   ],
   faq: [
+    {
+      q: 'Что такое бесплатный аудит страницы?',
+      a: 'Менеджер смотрит твою страницу до любых договорённостей: контент, цены, подачу, работу с подписчиками — и присылает короткий разбор, где именно теряется рост. Это бесплатно и ни к чему не обязывает: разбор остаётся у тебя, даже если решишь работать сама.',
+    },
     {
       q: 'У меня небольшая аудитория — этого достаточно?',
       a: 'Да. Мы работаем и со страницами на старте, и с теми, у кого уже есть подписчики. Главное — твоё желание развиваться, остальное подтянем промо и командой.',
@@ -115,7 +119,7 @@ const UK: ModelGeoContent = {
     'Твоя сторінка отримує промо-бюджет агенції: платний трафік, розміщення та просування — нашим коштом.',
     'Гідний дохід: багато наших моделей заробляють від $3 000 до $15 000 на місяць.',
     'Листування з підписниками цілодобово веде навчена чат-команда — тобі залишається лише контент.',
-    'Персональний менеджер і розбір твоєї теперішньої сторінки: що підсилити в контенті, цінах і подачі.',
+    'Безплатний аудит твоєї сторінки до старту: менеджер розбере контент, ціни й подачу і покаже точки зростання — без зобовʼязань.',
     'Досвідчена команда з понад трьома роками практики — ми знаємо, як зняти стелю доходу.',
     'Конфіденційність: дбайливо ставимося до твоєї особистої інформації та налаштовуємо рівень приватності під тебе.',
   ],
@@ -127,8 +131,8 @@ const UK: ModelGeoContent = {
     'Готовність до співпраці та відкритого спілкування з командою.',
   ],
   closingHtml:
-    'Напиши нам — подивимось твою сторінку й покажемо, де саме сховане зростання. Деталі обговоримо в листуванні або на дзвінку, як тобі зручніше.',
-  chips: ['Чинний акаунт', 'Промо-бюджет команди', 'Чат веде команда', 'Віддалено'],
+    'Напиши нам — зробимо безплатний аудит: подивимось твою сторінку й покажемо, де саме сховане зростання. Деталі обговоримо в листуванні або на дзвінку, як тобі зручніше.',
+  chips: ['Безплатний аудит сторінки', 'Чинний акаунт', 'Промо-бюджет команди', 'Чат веде команда', 'Віддалено'],
   specs: [
     { label: 'Графік', value: 'Гнучкий, 2–3 години на день' },
     { label: 'Досвід', value: 'Чинна сторінка OnlyFans' },
@@ -137,6 +141,10 @@ const UK: ModelGeoContent = {
     { label: 'Старт', value: 'У перші дні після онлайн-кастингу' },
   ],
   faq: [
+    {
+      q: 'Що таке безплатний аудит сторінки?',
+      a: 'Менеджер дивиться твою сторінку до будь-яких домовленостей: контент, ціни, подачу, роботу з підписниками — і надсилає короткий розбір, де саме губиться зростання. Це безплатно і ні до чого не зобовʼязує: розбір залишається в тебе, навіть якщо вирішиш працювати сама.',
+    },
     {
       q: 'У мене невелика аудиторія — цього достатньо?',
       a: 'Так. Ми працюємо і зі сторінками на старті, і з тими, у кого вже є підписники. Головне — твоє бажання розвиватися, решту підтягнемо промо й командою.',
@@ -171,7 +179,7 @@ const EN: ModelGeoContent = {
     'Your page gets the agency promo budget: paid traffic, placements and promotion — on us.',
     'A solid income: many of our models earn from $3 000 to $15 000 a month.',
     'A trained chat team handles subscriber messaging around the clock — you only create content.',
-    'A personal manager and a review of your current page: what to strengthen in content, pricing and positioning.',
+    'A free audit of your page before you start: the manager reviews content, pricing and positioning and shows your growth points — no strings attached.',
     'An experienced team with 3+ years of practice — we know how to lift the income ceiling.',
     'Confidentiality: we treat your personal information with care and tune the privacy level to what feels right for you.',
   ],
@@ -183,8 +191,8 @@ const EN: ModelGeoContent = {
     'Openness to teamwork and easy communication.',
   ],
   closingHtml:
-    'Message us — we will look at your page and show you exactly where the growth is hiding. Details are discussed in chat or on a call, whichever suits you best.',
-  chips: ['Existing account', 'Team promo budget', 'Team-run chat', 'Remote'],
+    'Message us for a free page audit — we will look at your page and show you exactly where the growth is hiding. Details are discussed in chat or on a call, whichever suits you best.',
+  chips: ['Free page audit', 'Existing account', 'Team promo budget', 'Team-run chat', 'Remote'],
   specs: [
     { label: 'Schedule', value: 'Flexible, 2–3 hours a day' },
     { label: 'Experience', value: 'An active OnlyFans page' },
@@ -193,6 +201,10 @@ const EN: ModelGeoContent = {
     { label: 'Start', value: 'Within days after the online casting' },
   ],
   faq: [
+    {
+      q: 'What is the free page audit?',
+      a: 'Before any commitments, the manager reviews your page — content, pricing, positioning, subscriber work — and sends you a short breakdown of where the growth is leaking. It is free and non-binding: the breakdown stays yours even if you decide to keep working solo.',
+    },
     {
       q: 'My audience is small — is that enough?',
       a: 'Yes. We work both with pages at the very start and with those that already have subscribers. What matters is your wish to grow; promotion and the team cover the rest.',
@@ -227,7 +239,7 @@ const ES: ModelGeoContent = {
     'Tu página recibe el presupuesto de promoción de la agencia: tráfico de pago, colocaciones y difusión — a nuestro cargo.',
     'Ingresos sólidos: muchas de nuestras modelos ganan de $3 000 a $15 000 al mes.',
     'Un equipo de chat formado atiende los mensajes de los suscriptores las 24 horas — tú solo creas contenido.',
-    'Manager personal y una revisión de tu página actual: qué reforzar en contenido, precios y posicionamiento.',
+    'Auditoría gratuita de tu página antes de empezar: el manager revisa contenido, precios y posicionamiento y te muestra los puntos de crecimiento — sin compromiso.',
     'Un equipo con más de 3 años de práctica — sabemos cómo levantar el techo de ingresos.',
     'Confidencialidad: cuidamos tu información personal y ajustamos el nivel de privacidad a lo que te resulte cómodo.',
   ],
@@ -239,8 +251,8 @@ const ES: ModelGeoContent = {
     'Apertura a la colaboración y a una comunicación fluida con el equipo.',
   ],
   closingHtml:
-    'Escríbenos: miramos tu página y te mostramos dónde está escondido el crecimiento. Los detalles los vemos por chat o en una llamada, como prefieras.',
-  chips: ['Cuenta activa', 'Promo a cargo del equipo', 'Chat del equipo', 'Remoto'],
+    'Escríbenos para una auditoría gratuita: miramos tu página y te mostramos dónde está escondido el crecimiento. Los detalles los vemos por chat o en una llamada, como prefieras.',
+  chips: ['Auditoría gratuita', 'Cuenta activa', 'Promo a cargo del equipo', 'Chat del equipo', 'Remoto'],
   specs: [
     { label: 'Horario', value: 'Flexible, 2–3 horas al día' },
     { label: 'Experiencia', value: 'Página de OnlyFans activa' },
@@ -249,6 +261,10 @@ const ES: ModelGeoContent = {
     { label: 'Inicio', value: 'En los primeros días tras el casting online' },
   ],
   faq: [
+    {
+      q: '¿Qué es la auditoría gratuita de la página?',
+      a: 'Antes de cualquier acuerdo, el manager revisa tu página — contenido, precios, posicionamiento, trabajo con suscriptores — y te envía un análisis breve de dónde se pierde el crecimiento. Es gratis y sin compromiso: el análisis es tuyo aunque decidas seguir por tu cuenta.',
+    },
     {
       q: 'Mi audiencia es pequeña, ¿es suficiente?',
       a: 'Sí. Trabajamos tanto con páginas que empiezan como con las que ya tienen suscriptores. Lo importante es tu ganas de crecer; la promoción y el equipo hacen el resto.',

@@ -67,7 +67,7 @@ export const JOIN_EN: JoinContent = {
       {
         title: 'Application — 2 minutes',
         description:
-          'Name, age and Telegram handle — no photos or portfolio. Applying commits you to nothing.',
+          'Name, age and Telegram handle — no photos needed at this step. The manager will ask for a few shots later in chat, to match your type. Applying commits you to nothing.',
       },
       {
         title: 'A call with a manager on Telegram',

@@ -67,7 +67,7 @@ export const JOIN_ES: JoinContent = {
       {
         title: 'Solicitud — 2 minutos',
         description:
-          'Nombre, edad y tu Telegram — sin fotos ni portfolio. Enviarla no te compromete a nada.',
+          'Nombre, edad y tu Telegram — sin fotos en este paso. El mánager pedirá algunas fotos más adelante por chat, para definir tu tipo. Enviarla no te compromete a nada.',
       },
       {
         title: 'Llamada con un mánager por Telegram',
