@@ -3,12 +3,15 @@
  * в Telegram-группу (app/api/plan-reminder, Vercel Cron 06:00 UTC = 09:00 Киев).
  * Документ-истина плана: docs/SEPTEMBER-PLAN-2026-09.md. Даты — ISO (Europe/Kyiv).
  * who: owner — владелец, agent — Claude, both — вместе/контрольная точка.
+ * Правка 07.09: Одесса/Киев в формате статьи сняты (выдача — доски вакансий),
+ * слоты W2 отданы фиксу EN «OF model», пакету /uk, перелинковке и замерам
+ * (обоснование: docs/SEO-WEEKLY-2026-09-07.md, разделы 5–6).
  */
 export type PlanWho = 'owner' | 'agent' | 'both';
 export type PlanItem = { who: PlanWho; text: string };
 
 export const PLAN_WEEK_FOCUS: Record<string, string> = {
-  '2026-W37': 'W2 — городской кластер (Одесса, Киев) + первые ниш-статьи типажей + запуск TG-канала',
+  '2026-W37': 'W2 — фикс EN «OF model» + пакет /uk + перелинковка «онліфанс робота»/декрет + ниш-статьи типажей + запуск TG-канала (Одесса/Киев сняты 07.09 — выдача досок, гео закрывают /vacancies/model/ukraine/*)',
   '2026-W38': 'W3 — Харьков, «Фото для OnlyFans», AIO-пас пиллара, альт/фитнес, ES-дуэт',
   '2026-W39': 'W4 — рефреш jobs-хаба, японские №2–3, старт EN/ES волны ссылок',
   '2026-W40': 'Финиш сентября — KPI-замер 30.09 и план октября',
@@ -17,48 +20,65 @@ export const PLAN_WEEK_FOCUS: Record<string, string> = {
 export const PLAN_CALENDAR: Record<string, PlanItem[]> = {
   '2026-09-07': [
     { who: 'agent', text: 'Понедельничный замер позиций: все ключи + 5 новых статей; контроль дипа декрет-статьи и «онліфанс агенція»' },
-    { who: 'agent', text: 'Старт статьи «Работа для девушек в Одессе» (RU+UK)' },
+    { who: 'agent', text: 'Фикс EN-статьи «OF model» (/en/blog/onlyfans-modeli-kto-eto): FAQ «What does OF model mean?», лид «An OF model is an OnlyFans model…», description — деплой сегодня; тайтл не трогать' },
+    { who: 'agent', text: 'Пакет /uk: 4 замены «агентство→агенція» в uk.json, анкоры «Онліфанс агенція OFM» на /uk из /uk/vacancies и /uk/join, ссылки на 4 хаба с главных, футер-ссылка RU→/uk — деплой сегодня' },
+    { who: 'agent', text: 'Перелинковка «онліфанс робота» (анкор-блок на UK-хаб из гео-статей и /uk/vacancies) и «онлифанс вакансии» (тайтл/H1 /vacancies + точные анкоры) + H2/FAQ «Як заробити в декреті» в обеих декрет-статьях; ссылка на /uk/blog/kogda-nuzhno-onlyfans-agentstvo (не в индексе) из «как выбрать агентство»' },
     { who: 'agent', text: 'TG-канал: тексты первых 14 постов + план публикаций на 3 недели' },
+    { who: 'owner', text: 'Решения по отчёту 07.09: города W2 сняты ✅; тайтл EN-статьи; KPI «онліфанс агенція» — оставить/заменить; Indexing API для не-JobPosting URL' },
+    { who: 'owner', text: 'После деплоя — ручной Request Indexing в GSC: /uk, /uk/blog, /uk/research, /uk/vacancies, /uk/calculator, /blog, /en/blog, /en/research/onlyfans-creator-safety-2026' },
     { who: 'owner', text: 'Request Indexing в GSC: студентки RU/UK + with-account RU/UK (если ещё не сделал)' },
     { who: 'owner', text: 'Проверить почту: mv.org.ua (публикация), Михаил (2 статьи), Максим (претензия), reporter — переслать ответы' },
   ],
   '2026-09-08': [
-    { who: 'agent', text: '«Работа для девушек в Одессе» — вычитка RU/UK, обложка, перелинковка → готова к деплою' },
+    { who: 'agent', text: 'Прод-контроль деплоя 07.09: анкоры на /uk, футер RU→/uk, EN FAQ «OF model», декрет-FAQ — рендер, hreflang/canonical целы; Indexing API по изменённым URL с JobPosting' },
+    { who: 'agent', text: 'uk-inspect: lastCrawlTime /uk (ежедневно до 14.09); после сдвига — тест подмены /→/uk: SERP hl=uk «онліфанс агенція ofm»' },
     { who: 'agent', text: 'Отдать 14 постов TG-канала + инструкцию упаковки (название, закреп «начни отсюда», веб-превью)' },
     { who: 'owner', text: 'TG-канал: переименовать в «OFM Models — работа моделью онлайн», поставить закреп-пост, опубликовать пост №1' },
+    { who: 'owner', text: 'Request Indexing пакета /uk (8 URL), если не сделал 07.09' },
   ],
   '2026-09-09': [
-    { who: 'agent', text: '«Работа для девушек в Киеве» (RU+UK)' },
     { who: 'agent', text: 'CTR-замер модельной волны реврайтов (окно 09–12.09)' },
+    { who: 'agent', text: 'uk-inspect: lastCrawlTime /uk; сдвинулся → тест подмены /→/uk (SERP hl=uk «онліфанс агенція ofm»)' },
+    { who: 'agent', text: 'UA-20: письма/напоминания донорам под ≥3 публикации (буфер 5–6) до 20–23.09; анкоры только на модельные цели (/blog и /uk/blog/rabota-modelyu-onlyfans, /vacancies, «как стать с нуля», декрет/девушки-хабы), не на чатер-статью' },
     { who: 'owner', text: 'TG-канал: пост №2' },
-    { who: 'owner', text: 'mv.org.ua: если опубликовали — прислать ссылку на проверку ДО оплаты' },
+    { who: 'owner', text: 'mv.org.ua: если опубликовали — прислать ссылку на проверку ДО оплаты (агент: публикация + IP/хостинг донора + DR через DataForSEO)' },
   ],
   '2026-09-10': [
     { who: 'agent', text: 'Рефреш «Сколько зарабатывают модели» (поз. 8) + первые инлайн-фото' },
     { who: 'agent', text: 'Партия обложек №1 (5–7 статей со стока → фирменные, 4K-конвейер)' },
+    { who: 'agent', text: 'uk-inspect: lastCrawlTime /uk; сдвинулся → тест подмены /→/uk (SERP hl=uk «онліфанс агенція ofm»)' },
     { who: 'owner', text: 'TG-канал: пост №3' },
   ],
   '2026-09-11': [
     { who: 'agent', text: 'Индекс-чек всех сентябрьских размещений: startjob, studway, 1tv, tsystem, odysseus, sumski UA+RU, tods №2' },
     { who: 'agent', text: 'Статья типажей: «Mature 30+/40+» (RU+UK) — старт' },
+    { who: 'agent', text: 'uk-inspect: lastCrawlTime /uk; сдвинулся → тест подмены /→/uk (SERP hl=uk «онліфанс агенція ofm»)' },
     { who: 'owner', text: 'TG-канал: пост №4' },
-    { who: 'owner', text: 'Переслать ответы вебмастеров, если пришли' },
+    { who: 'owner', text: 'Переслать ответы вебмастеров, если пришли; оплаты новых размещений — только после проверки агентом (публикация, IP/хостинг: не 91.203.4.44 и не 148.251.233.218, DR через DataForSEO)' },
   ],
   '2026-09-12': [
     { who: 'agent', text: '«Mature 30+» — вычитка, обложка → готова; tods №2 — индекс-чек' },
+    { who: 'agent', text: 'uk-inspect: lastCrawlTime /uk; сдвинулся → тест подмены /→/uk (SERP hl=uk «онліфанс агенція ofm»)' },
     { who: 'owner', text: 'TG-канал: опрос/Q&A-пост (выходной формат)' },
   ],
   '2026-09-13': [
     { who: 'agent', text: 'Статья типажей: «Plus-size / BBW» (RU+UK)' },
+    { who: 'agent', text: 'uk-inspect: lastCrawlTime /uk; сдвинулся → тест подмены /→/uk (SERP hl=uk «онліфанс агенція ofm»)' },
     { who: 'agent', text: 'Недельная сводка: позиции, ссылки, что готово к деплою' },
   ],
   '2026-09-14': [
-    { who: 'both', text: 'Деплой недели W2 (Одесса, Киев, рефреш, mature, plus-size) → Indexing API + список для ручного Request Indexing' },
+    { who: 'both', text: 'Деплой недели W2 (рефреш «Сколько зарабатывают», mature, plus-size) → Indexing API + список для ручного Request Indexing' },
     { who: 'agent', text: 'Понедельничный замер позиций' },
+    { who: 'agent', text: 'Контрольный замер «of models» (США): доля показов /en/blog/onlyfans-modeli-kto-eto по дням, country=usa/deu — эффект фикса 07.09' },
+    { who: 'agent', text: 'Перезамер японской статьи тем же запросом, что 07.09 (тайтл не трогать)' },
+    { who: 'agent', text: 'uk-inspect: итог недели по lastCrawlTime /uk; сдвинулся → тест подмены /→/uk (SERP hl=uk «онліфанс агенція ofm»)' },
+    { who: 'agent', text: 'RD-контроль №1 (DataForSEO): RD 37 → цель 50 к 30.09; сколько UA-20 в индексе, сколько публикаций ещё нужно до 20–23.09' },
     { who: 'owner', text: 'Request Indexing по списку W2; TG-канал: пост №5' },
   ],
   '2026-09-15': [
     { who: 'agent', text: '«Работа для девушек в Харькове» (RU+UK)' },
+    { who: 'agent', text: 'Контроль темпа (GSC): тревога, если на остаток месяца <126 кликов/день или <4 616 показов/день' },
+    { who: 'both', text: 'Тайтл /en с обеими сущностями («OnlyFans Agency OFM — Become an OF Model…») — по итогам замера 14.09, одна правка за раз, с одобрения владельца; /en/join и /en/vacancies/model не трогать' },
     { who: 'agent', text: 'Подача в листиклы feedspot/aruna + EN-каталоги агентств для японского присутствия' },
     { who: 'owner', text: 'TG-канал: пост №6' },
   ],
@@ -89,6 +109,8 @@ export const PLAN_CALENDAR: Record<string, PlanItem[]> = {
   '2026-09-21': [
     { who: 'both', text: 'Деплой недели W3 (Харьков, Фото, AIO-пас, альт, фитнес, ES-дуэт, LatAm-вакансия) → индексация' },
     { who: 'agent', text: 'Понедельничный замер позиций; статусы Михаил/Максим/reporter' },
+    { who: 'agent', text: 'Оценка новых хабов (девушки/декрет/студентки/типажи) и женского кластера по статейным слотам (декрет: цель #6–13); второе окно замера «of models» США/Германия' },
+    { who: 'agent', text: 'RD-контроль №2 (DataForSEO): RD → 50; UA-20 в индексе; последние публикации — до 23.09' },
     { who: 'owner', text: 'Request Indexing по списку W3; TG-канал: пост №10' },
   ],
   '2026-09-22': [
@@ -97,7 +119,7 @@ export const PLAN_CALENDAR: Record<string, PlanItem[]> = {
   ],
   '2026-09-23': [
     { who: 'agent', text: 'Японская №2: «OnlyFans vs Fantia vs Myfans» (EN+JA)' },
-    { who: 'agent', text: 'Отбор ES/EN доноров через DataForSEO под волну ~$1 000' },
+    { who: 'agent', text: 'Отбор ES/EN доноров через DataForSEO под волну ~$1 000 (DR + IP/хостинг каждого домена, без сеток)' },
     { who: 'owner', text: 'TG-канал: пост №12' },
   ],
   '2026-09-24': [
@@ -108,7 +130,7 @@ export const PLAN_CALENDAR: Record<string, PlanItem[]> = {
   '2026-09-25': [
     { who: 'agent', text: 'UA-статья по PAA инфо-ядра; письма первым 3–4 EN/ES донорам' },
     { who: 'agent', text: 'Партия обложек №3' },
-    { who: 'owner', text: 'TG-канал: пост №14; оплаты EN/ES размещений — только после моей проверки' },
+    { who: 'owner', text: 'TG-канал: пост №14; оплаты EN/ES размещений — только после проверки агентом (публикация, IP/хостинг донора, DR через DataForSEO, анкоры на модельные цели)' },
   ],
   '2026-09-26': [
     { who: 'agent', text: '+2 архетипа калькулятора: plus-size и mature 30+' },
@@ -120,11 +142,12 @@ export const PLAN_CALENDAR: Record<string, PlanItem[]> = {
   '2026-09-28': [
     { who: 'both', text: 'Деплой недели W4 → индексация' },
     { who: 'agent', text: 'Финальный замер позиций перед KPI' },
+    { who: 'agent', text: 'RD-контроль №3 (DataForSEO): RD 50 — финал перед KPI 30.09' },
     { who: 'owner', text: 'Request Indexing по списку W4' },
   ],
   '2026-09-29': [
     { who: 'agent', text: 'Полная сверка живости всех купленных ссылок (20+)' },
-    { who: 'agent', text: 'Черновик плана октября: типажи (рост, транс, cosplay, asian/kawaii, girl next door, вебкам→OF — без инвалидности) + EN-версии, Днепр/Кривой Рог, EN/ES волна' },
+    { who: 'agent', text: 'Черновик плана октября: типажи (рост, транс, cosplay, asian/kawaii, girl next door, вебкам→OF — без инвалидности) + EN-версии, Днепр/Кривой Рог (только если решение по городам изменится — та же выдача досок), EN/ES волна' },
   ],
   '2026-09-30': [
     { who: 'both', text: 'KPI-замер 30.09: показы 170K+, клики 4 000+, RD 50+, чатер №1, «онлифанс работа» топ-5, «онліфанс агенція» топ-10 — итоговый отчёт месяца' },

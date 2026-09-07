@@ -149,6 +149,25 @@ export function SiteFooter() {
               >
                 {t('apply')}
               </Link>
+              {/* Только ru → /uk. Все внешние ссылки на домен приходят в ru-кластер,
+                  а /uk с 21.06.2026 без показов: по «онліфанс агенція» Google отдаёт
+                  ru-главную (SEO-WEEKLY-2026-09-07, §3). Sitewide-ссылка с текстовым
+                  анкором — единственный видимый мост ru → uk, кроме переключателя.
+                  locale="uk" у next-intl принудительно ставит префикс — для uk это
+                  и есть канонический /uk (проблема /ru/ из LanguageSwitcher
+                  не касается). */}
+              {locale === 'ru' && (
+                <Link
+                  href="/"
+                  locale="uk"
+                  hrefLang="uk"
+                  lang="uk"
+                  prefetch={false}
+                  className="link-hover-line hover:text-accent-pink transition-colors w-fit"
+                >
+                  Українською: онліфанс агенція OFM
+                </Link>
+              )}
             </div>
           </motion.div>
 

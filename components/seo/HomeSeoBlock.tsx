@@ -52,6 +52,26 @@ export function HomeSeoBlock() {
           <Link prefetch={false} href="/blog/rabota-modelyu-onlyfans" className="btn-secondary !py-2.5 !px-5">
             {t('linkVacancy')}
           </Link>
+          {/* Хабы женского кластера + типажи (сентябрь 2026) есть только в ru/uk;
+              ключей linkGirls/linkMoms/linkStudents/linkTypes в en/es нет —
+              t() для них не вызываем. Ссылки с главной — единственный sitewide-вес
+              на новые хабы (SEO-WEEKLY-2026-09-07, §6 п.3). */}
+          {(locale === 'ru' || locale === 'uk') && (
+            <>
+              <Link prefetch={false} href="/blog/rabota-dlya-devushek-onlajn" className="btn-secondary !py-2.5 !px-5">
+                {t('linkGirls')}
+              </Link>
+              <Link prefetch={false} href="/blog/rabota-dlya-mam-v-dekrete" className="btn-secondary !py-2.5 !px-5">
+                {t('linkMoms')}
+              </Link>
+              <Link prefetch={false} href="/blog/rabota-dlya-studentok" className="btn-secondary !py-2.5 !px-5">
+                {t('linkStudents')}
+              </Link>
+              <Link prefetch={false} href="/blog/tipazhi-modelej-onlyfans" className="btn-secondary !py-2.5 !px-5">
+                {t('linkTypes')}
+              </Link>
+            </>
+          )}
           {(locale === 'ru' || locale === 'uk') && (
             <Link prefetch={false} href="/blog/chto-takoe-onlyfans" className="btn-secondary !py-2.5 !px-5">
               {locale === 'uk' ? 'Що таке OnlyFans' : 'Что такое OnlyFans'}

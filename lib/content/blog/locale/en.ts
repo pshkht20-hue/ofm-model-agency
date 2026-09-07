@@ -3256,17 +3256,23 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
   // деньги», FAQ сокращён с 7 до 6 живых вопросов, соцпруф-цитата у финального CTA,
   // интернациональный тон (EN-воронка = русско/украиноязычные модели по всему миру;
   // юнит-экономика: 1 модель с EN-версии = $2 500 — кейс модели из Японии).
+  // 07.09.2026 — возврат сущности «OF model» в title/лид/description/FAQ: показы по «of models»
+  // упали 335→132/день ровно с 31.08 (docs/SEO-WEEKLY-2026-09-07.md, §3); тайтл аддитивный,
+  // остальное рерайта сохранено.
   "onlyfans-modeli-kto-eto": {
-    title: "OnlyFans Models: Who They Are, Pay & How to Start",
+    title: "OF Models (OnlyFans Models): Who They Are, Pay & How to Start",
     description:
-      "How much OnlyFans models make — from $300 solo to $15K–50K/mo gross with an agency. Remote, no experience, start in 7–14 days, anonymous application. 18+.",
+      "An OF model is an OnlyFans model earning from a paid page: $300 solo to $15K–50K/mo gross with an agency. Remote, no experience, anonymous, start in 7–14 days. 18+.",
     keywords: [
+      "of models",
+      "of model",
+      "of model meaning",
+      "what is an of model",
+      "how much do of models make",
+      "how to become an of model",
       "onlyfans models",
       "onlyfans model",
       "what is an onlyfans model",
-      "of model",
-      "of models",
-      "what is an of model",
       "ofm meaning",
       "ofm model",
       "how much do onlyfans models make",
@@ -3275,7 +3281,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     blocks: [
       {
         type: "p",
-        text: "An OnlyFans model is a woman who runs a paid subscription page on OnlyFans and earns from subscriptions, paid messages (PPV) and tips. The money spread is wide: a solo beginner usually makes $300–700 in her first month, while strong pages under agency management run $15,000–50,000 a month in gross balance. The work is remote, needs no experience and no English, launch takes 7–14 days, and the only hard requirement is being 18+. This guide covers what the job actually involves, how the pay really works, and how to start — whether you are reading it from Ukraine, Germany, Spain or anywhere else in the world.",
+        text: "An OF model is an OnlyFans model: a woman who runs a paid subscription page on OnlyFans and earns from subscriptions, paid messages (PPV) and tips. The money spread is wide: a solo beginner usually makes $300–700 in her first month, while strong pages under agency management run $15,000–50,000 a month in gross balance. The work is remote, needs no experience and no English, launch takes 7–14 days, and the only hard requirement is being 18+. This guide covers what the job actually involves, how the pay really works, and how to start — whether you are reading it from Ukraine, Germany, Spain or anywhere else in the world.",
       },
       {
         type: "h2",
@@ -3495,7 +3501,15 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h3",
-        text: "How much do OnlyFans models make?",
+        text: "What does OF model mean?",
+      },
+      {
+        type: "p",
+        text: "OF model means OnlyFans model: a creator who runs a paid page on OnlyFans and earns from subscriptions, paid messages (PPV), tips and custom content. OF is simply the abbreviation of the platform's name — there is no separate service called OF. When she works with a management team such as OFM, she is also called an OFM model: she shoots the content, and the agency runs the promotion, the chats and the account.",
+      },
+      {
+        type: "h3",
+        text: "How much do OF models (OnlyFans models) make?",
       },
       {
         type: "p",
