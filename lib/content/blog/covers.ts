@@ -439,6 +439,24 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://unsplash.com/@rubicon99',
     unsplashUrl: 'https://unsplash.com/photos/tower-bridge-london-J-wEJwSiAbQ',
   },
+  // Фирменная fal.ai-обложка (BRAND-IMAGE-STYLE-2026-09) — ниш-статья №1 кластера «Типажи»
+  'mature-modeli-onlyfans': {
+    localSrc: '/blog/covers/mature-modeli-onlyfans.jpg',
+    remoteSrc: '/blog/covers/mature-modeli-onlyfans.jpg',
+    alt: 'Элегантный силуэт уверенной взрослой женщины в вечернем свете у окна с ночным городом — типаж mature на OnlyFans после 30 и 40',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
+  // Фирменная fal.ai-обложка (BRAND-IMAGE-STYLE-2026-09) — ниш-статья №2 кластера «Типажи»
+  'plus-size-modeli-onlyfans': {
+    localSrc: '/blog/covers/plus-size-modeli-onlyfans.jpg',
+    remoteSrc: '/blog/covers/plus-size-modeli-onlyfans.jpg',
+    alt: 'Уверенный женственный силуэт с мягкими формами в неоновой подсветке на фоне ночного города — плюс сайз модель OnlyFans',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
 };
 
 export function getBlogCover(slug: string): BlogCover | undefined {

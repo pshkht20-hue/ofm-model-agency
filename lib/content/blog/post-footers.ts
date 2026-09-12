@@ -160,6 +160,16 @@ export const LINK = {
     href: '/blog/tipazhi-modelej-onlyfans',
     label: 'Типажи моделей OnlyFans: кто и сколько зарабатывает',
   },
+  /** Ниш-статья №1 кластера «Типажи» — mature 30+/40+ (14.09.2026) */
+  mature: {
+    href: '/blog/mature-modeli-onlyfans',
+    label: 'OnlyFans после 30 и 40: типаж mature и сколько платят',
+  },
+  /** Ниш-статья №2 кластера «Типажи» — plus-size/BBW (14.09.2026) */
+  plussize: {
+    href: '/blog/plus-size-modeli-onlyfans',
+    label: 'Плюс сайз модель OnlyFans: сколько платят и как стать',
+  },
   /** Сегмент студенток женского кластера — «работа для студенток» 480/мес */
   studentki: {
     href: '/blog/rabota-dlya-studentok',
