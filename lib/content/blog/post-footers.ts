@@ -69,6 +69,11 @@ export const LINK = {
   ig: { href: '/blog/onlyfans-instagram-tiktok-bez-bana', label: 'Instagram и TikTok' },
   retention: { href: '/blog/onlyfans-uderzhanie-podpischikov', label: 'Удержание подписчиков' },
   content: { href: '/blog/onlyfans-kontent-plan-i-syomki', label: 'Контент-план и съёмки' },
+  /** Практикум съёмки кластера «как стать» — «Фото для онлифанс» (21.09.2026) */
+  foto: {
+    href: '/blog/foto-dlya-onlyfans',
+    label: 'Фото для OnlyFans: что и как снимать новичку',
+  },
   mistakes: { href: '/blog/onlyfans-oshibki-novichkov', label: '15 ошибок новичков' },
   safety: { href: '/blog/onlyfans-anonimnost-i-bezopasnost', label: 'Анонимность и безопасность' },
   safetyResearch: {
@@ -169,6 +174,11 @@ export const LINK = {
   plussize: {
     href: '/blog/plus-size-modeli-onlyfans',
     label: 'Плюс сайз модель OnlyFans: сколько платят и как стать',
+  },
+  /** Ниш-статья №3 кластера «Типажи» — альт/тату/готика (21.09.2026) */
+  alt: {
+    href: '/blog/alt-modeli-onlyfans',
+    label: 'Альт и тату модель OnlyFans: сколько платят и как стать',
   },
   /** Сегмент студенток женского кластера — «работа для студенток» 480/мес */
   studentki: {

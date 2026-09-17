@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import type { BlogCover } from '@/lib/content/blog/covers';
 
 /**
@@ -23,6 +24,9 @@ export function BlogCoverImage({
   priority = false,
   variant = 'hero',
 }: BlogCoverImageProps) {
+  // Ключи coverPhoto.* лежат во всех 4 локалях с самого начала, но строка
+  // была захардкожена по-русски — на /en и /es подпись выводилась «Фото:».
+  const t = useTranslations('coverPhoto');
   const isCard = variant === 'card';
   // 02.09.2026: фиксированные высоты (h-52/h-72) резали 16:9-обложки на ~40%
   // через object-cover — фирменные композиции теряли края. aspect-video
@@ -56,7 +60,7 @@ export function BlogCoverImage({
       )}
       {!isCard && cover.photographer && (
         <figcaption className="absolute bottom-0 left-0 right-0 px-4 py-3 text-[10px] text-white/50 leading-relaxed">
-          Фото:{' '}
+          {t('photo')}{' '}
           <a
             href={cover.photographerUrl}
             target="_blank"

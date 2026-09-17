@@ -457,6 +457,25 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://ofmmodels.com',
     unsplashUrl: 'https://ofmmodels.com',
   },
+  // Фирменная fal.ai-обложка (стиль Creator Room, BRAND-IMAGE-STYLE-2026-09) —
+  // практикум съёмки кластера «как стать» (21.09.2026)
+  'foto-dlya-onlyfans': {
+    localSrc: '/blog/covers/foto-dlya-onlyfans.jpg',
+    remoteSrc: '/blog/covers/foto-dlya-onlyfans.jpg',
+    alt: 'Смартфон на штативе и кольцевая лампа у кровати с мягким светом из окна — домашняя съёмка фото для OnlyFans на телефон',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
+  // Фирменная fal.ai-обложка (BRAND-IMAGE-STYLE-2026-09) — ниш-статья №3 кластера «Типажи» (21.09.2026)
+  'alt-modeli-onlyfans': {
+    localSrc: '/blog/covers/alt-modeli-onlyfans.jpg',
+    remoteSrc: '/blog/covers/alt-modeli-onlyfans.jpg',
+    alt: 'Женский силуэт со спины с тату-рукавом на фоне неоновых колец розового и синего света — альт и тату модель OnlyFans',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
 };
 
 export function getBlogCover(slug: string): BlogCover | undefined {

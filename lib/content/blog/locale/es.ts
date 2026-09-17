@@ -17,7 +17,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
   "rabota-modelyu-onlyfans": {
     title: "Trabajo de modelo OnlyFans: vacante remota y anónima",
     description:
-      "Cómo ser modelo de OnlyFans con una agencia: trabajo remoto desde cualquier país, sin experiencia y con total privacidad. Facturación de $3000 a $30000/mes.",
+      "Cómo ser modelo de OnlyFans con una agencia: trabajo remoto desde cualquier país, sin experiencia y con total privacidad. Facturación de $3.000 a $15.000/mes.",
     keywords: [
       "trabajo de modelo onlyfans",
       "cómo ser modelo de onlyfans",
@@ -58,7 +58,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Las páginas de nuestras modelos bajo gestión facturan entre $3000 y $30000 al mes: es la facturación total del balance de la página (antes de descontar el porcentaje de la agencia). Cuánto exactamente depende del nicho, del volumen y la calidad del contenido, de la constancia y del nivel de interacción. No hay techo: cuanto más en serio te lo tomes, mayor es el resultado.",
+        text: "Las páginas de nuestras modelos bajo gestión facturan entre $3.000 y $15.000 al mes: es la facturación total del balance de la página (antes de descontar el porcentaje de la agencia). Cuánto exactamente depende del nicho, del volumen y la calidad del contenido, de la constancia y del nivel de interacción. No hay techo: cuanto más en serio te lo tomes, mayor es el resultado.",
       },
       {
         type: "cases",
@@ -1412,13 +1412,13 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           "Arranque sola y sin promoción: normalmente $300–700 el primer mes",
           "Primeros 1–3 meses de trabajo sistemático: $500–3.000",
           "$3.000–10.000: contenido constante + al menos 1–2 canales de tráfico",
-          "$10.000–30.000+: chats fuertes, marketing y un nicho definido",
-          "$30.000+: nicho top, equipo y marca; a menudo 2+ años de sistema",
+          "$10.000–15.000: chats fuertes, marketing y un nicho definido",
+          "$15.000–50.000: nicho top, equipo y marca; a menudo 2+ años de sistema",
         ],
       },
       {
         type: "p",
-        text: "En OFM una parte de las modelos se mueve en el rango de $12.000–35.000+/mes. No es una garantía ni la mediana para todas las solicitudes.",
+        text: "En OFM una parte de las modelos se mueve en el rango de $3.000–15.000/mes. No es una garantía ni la mediana para todas las solicitudes.",
       },
       {
         type: "cases",
@@ -1508,12 +1508,12 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h2",
-        text: "Qué separa a una modelo de $3.000 de una de $30.000",
+        text: "Qué separa a una modelo de $3.000 de una de $15.000",
       },
       {
         type: "ul",
         items: [
-          "Chats: los $30k se hacen en ventas individuales y upsells, no solo con la suscripción",
+          "Chats: los $15k se hacen en ventas individuales y upsells, no solo con la suscripción",
           "Tráfico: un solo canal te pone techo; crecer es tener 2–3 fuentes a la vez",
           "Nicho y precio: un nicho estrecho te deja subir precios sin perder conversión",
         ],
@@ -1552,7 +1552,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "No — la agencia acelera el sistema, no promete un número. El rango de $12.000–35.000+/mes en el que se mueve una parte de las modelos de OFM no es una garantía ni la mediana para todas las solicitudes.",
+        text: "No — la agencia acelera el sistema, no promete un número. El rango de $3.000–15.000/mes en el que se mueve una parte de las modelos de OFM no es una garantía ni la mediana para todas las solicitudes.",
       },
       {
         type: "h3",
@@ -1725,6 +1725,198 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras son facturación bruta del balance de la página de OnlyFans, no un pago neto garantizado. El ingreso depende del nicho, el volumen de contenido y la implicación: es una orientación, no una garantía.",
+      },
+    ],
+  },
+  "kak-stat-onlyfans-modelyu-s-nulya": {
+    title: "Cómo ser modelo de OnlyFans: 5 pasos para empezar desde cero",
+    description:
+      "¿Cómo ser modelo de OnlyFans desde cero, sin experiencia ni seguidores? Guía honesta en 5 pasos: requisitos (18+ y documento), cómo abrir y verificar la cuenta, nicho, contenido, anonimato y plazos reales. Con la agencia OFM empiezas en 7–14 días sin invertir.",
+    keywords: [
+      "cómo ser modelo de onlyfans",
+      "cómo empezar en onlyfans",
+      "cómo abrir un onlyfans",
+      "cómo crear un onlyfans",
+      "cómo hacer onlyfans",
+      "cómo abrir cuenta onlyfans",
+      "requisitos para onlyfans",
+      "cómo trabajar en onlyfans",
+      "empezar en onlyfans sin seguidores",
+      "cómo ganar dinero en onlyfans",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "Para ser modelo de OnlyFans desde cero necesitas cuatro cosas: tener 18+, un documento de identidad para la verificación, un teléfono y 10–15 horas a la semana para el contenido. Con la agencia OFM, de la solicitud a la página funcionando pasan 7–14 días: el equipo gestiona el registro, la verificación, los cobros y la promoción, y la formación desde cero está incluida. Abajo tienes los 5 pasos en orden, los plazos reales hasta el primer ingreso y cifras honestas en cada etapa.",
+      },
+      {
+        type: "nav",
+        intro: "Directo a las condiciones y la solicitud:",
+        links: [
+          { href: "/vacancies/model/spain", label: "Vacante de modelo OnlyFans — España" },
+        ],
+      },
+      { type: "h2", text: "¿Puedo empezar desde cero, sin experiencia ni seguidores?" },
+      {
+        type: "p",
+        text: "Sí. En la agencia OFM la mayoría de nuestras modelos empieza exactamente así: sin experiencia frente a la cámara, sin audiencia previa y sin conocimientos técnicos. Ni la experiencia ni los seguidores son requisitos de entrada — te formamos desde cero en 10–14 días y te mostramos qué hacer y cómo. La única condición innegociable es que tengas 18 años o más.",
+      },
+      { type: "h2", text: "Requisitos para empezar en OnlyFans" },
+      {
+        type: "p",
+        text: "La lista es más corta de lo que imaginas. Para arrancar bastan cosas básicas; el resto llega con la formación y el apoyo del equipo.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Tener 18+ — trabajamos únicamente con personas adultas",
+          "Documento de identidad oficial para la verificación KYC de la plataforma: pasaporte, DNI o licencia de conducir",
+          "Teléfono o cámara e internet estable — no hace falta un estudio profesional",
+          "Tomarte en serio el contenido y seguir las recomendaciones del equipo",
+        ],
+      },
+      {
+        type: "p",
+        text: "Y esto es lo que NO necesitas: experiencia frente a la cámara, inglés, una audiencia grande ni dinero para publicidad. Son los miedos más comunes de las principiantes, y ninguno debería frenarte.",
+      },
+      { type: "h2", text: "Paso 1. Decide cómo trabajar: ¿sola o con agencia?" },
+      {
+        type: "p",
+        text: "Es la primera decisión y la más importante: define casi todo lo demás. Sola te encargas de todo — contenido, promoción, chats 24/7 y ventas —, y el riesgo y la inversión también corren por tu cuenta. Con la agencia tú respondes solo por el contenido, mientras el marketing, los chats y las ventas los lleva el equipo con su propio presupuesto. La comparación completa, con dinero y zonas de responsabilidad, está en la guía «OnlyFans para principiantes: ¿agencia o sola?».",
+      },
+      { type: "h2", text: "Paso 2. Abre tu cuenta de OnlyFans y pasa la verificación (KYC)" },
+      {
+        type: "p",
+        text: "Técnicamente, abrir un OnlyFans son tres pasos: crear la cuenta en onlyfans.com con tu correo, verificar tu identidad con un documento oficial más un selfie (el KYC de la plataforma) y conectar el método de cobro. La revisión suele tardar de 24 a 72 horas, y la plataforma funciona con normalidad en España y en la mayoría de países de Latinoamérica. Con la agencia OFM puedes saltarte este trámite por completo: el equipo gestiona por ti el registro, la verificación y los medios de pago (Paxum/Skrill), normalmente en pocos días.",
+      },
+      { type: "h2", text: "Paso 3. Define tu nicho, tu imagen y tus límites" },
+      {
+        type: "p",
+        text: "El nicho es, en esencia, qué contenido te resulta cómodo crear y qué imagen quieres proyectar. Decide de antemano qué formatos haces y qué es tabú para ti: los límites son la base de un trabajo sano y de tu marca personal. Con la agencia no te quedas sola con esa decisión — te ayudamos a elegir un nicho que te guste a ti y que funcione con la audiencia que más paga.",
+      },
+      {
+        type: "tip",
+        text: "¿No tienes claro cuál es tu nicho? En el canal de Telegram t.me/ofmmAgency hay casos de modelos de distintos perfiles, capturas de estadísticas y las vacantes de la agencia. Suscribirte no te compromete a nada.",
+      },
+      { type: "h2", text: "Paso 4. Prepara tu contenido inicial" },
+      {
+        type: "p",
+        text: "Para lanzar la página basta un paquete pequeño de contenido de calidad: varios sets de fotos y videos para el feed, más un par de piezas para la bienvenida y las primeras ventas. No hace falta grabar «perfecto» desde el día uno; pesan más la regularidad y la naturalidad. Si vas con la agencia, te decimos qué grabar, cómo montar la luz y el encuadre y cómo armar tu primer plan de contenido, para que no vivas el caos de «grabar algo urgente ya».",
+      },
+      { type: "h2", text: "Paso 5. Lanza la promoción y las ventas" },
+      {
+        type: "p",
+        text: "Aquí es donde las modelos que van solas suelen atascarse: el tráfico, los chats con los suscriptores y las ventas se comen todo el tiempo, y sin ellos el ingreso no crece. Con la agencia esta etapa la cierra el equipo: trae tráfico con poder de compra desde las redes sociales, lleva los chats las 24 horas en tres turnos y vende por ti. A ti te queda crear contenido.",
+      },
+      { type: "h2", text: "¿Cuánto tiempo hasta el primer ingreso?" },
+      {
+        type: "p",
+        text: "Con honestidad: la fecha exacta no te la puede dar nadie. La formación básica dura 10–14 días y va en paralelo al lanzamiento de la página; después, mucho depende de la regularidad del contenido y del nicho. Un punto clave: el arranque lo financia la agencia — la publicidad y la promoción hasta tu primer ingreso —, así que no pones dinero tuyo. El equipo solo empieza a ganar cuando ganas tú.",
+      },
+      { type: "h2", text: "¿Cuánto se puede ganar empezando desde cero?" },
+      {
+        type: "p",
+        text: "Referencia, no garantía: las páginas de las modelos de la agencia OFM facturan entre $3.000 y $10.000 gross al mes, las más fuertes llegan a $15.000, y las top a $15.000–50.000 — resultado de meses de trabajo sistemático. Sola, sin equipo ni promoción, una modelo promedio rara vez pasa de $300–700. Todas las cifras son facturación bruta (gross) del balance de la página — antes de repartos y comisiones —, no un pago garantizado «en mano». Así crece el ingreso por etapas:",
+      },
+      {
+        type: "table",
+        caption: "El camino de una principiante con el equipo OFM: etapas y referencias realistas.",
+        headers: ["Etapa", "Qué pasa"],
+        rows: [
+          ["Semanas 1–2", "Registro, verificación, formación y primer plan de contenido — inversión $0"],
+          ["Primer mes", "Arranque del tráfico y los chats, primeras ventas — la base de fans apenas se forma"],
+          ["Meses 1–3", "$500–3.000 gross: entran las promos y las ventas por DM (70–90% del ingreso de la página)"],
+          ["Después", "$3.000–10.000 gross con reinversión, páginas fuertes hasta $15.000, top $15.000–50.000"],
+        ],
+      },
+      {
+        type: "cases",
+        title: "Casos reales de modelos OFM — capturas de estadísticas de páginas",
+        note: "Las cifras son gross total del balance de la página de OnlyFans, no ingreso neto de la modelo. Se publican con consentimiento.",
+        linkLabel: "Ver casos",
+      },
+      {
+        type: "p",
+        text: "El desglose completo de cifras y comisiones está en la guía «Cuánto ganan las modelos de OnlyFans». Y puedes estimar el rango según tu perfil en un minuto con la calculadora — el resultado se comenta directamente con una manager.",
+      },
+      {
+        type: "nav",
+        intro: "Tus números:",
+        links: [
+          { href: "/calculator", label: "Calculadora de ingresos OnlyFans" },
+          { href: "/blog/onlyfans-skolko-zarabatyvayut-modeli", label: "Cuánto ganan las modelos" },
+        ],
+      },
+      { type: "h2", text: "Qué cambió para las principiantes en 2026" },
+      {
+        type: "p",
+        text: "Tres cosas que vemos en las páginas de la agencia en 2026. Primero: la época de «abro la página y crece sola» se acabó — casi no queda crecimiento gratis sin invertir en tráfico, y la distancia entre ir sola y trabajar con equipo se nota más que nunca. Segundo: las ventas por DM ya son la fuente principal — el 70–90% del ingreso de una página sale de las conversaciones, no de la suscripción, así que el equipo de chat pesa más que un feed perfecto. Tercero: el perfil se volvió una palanca — la «belleza normal» y las imágenes de nicho monetizan igual de bien que las de pasarela; la clave está en la presentación del perfil. Desde 2022 el equipo de OFM ha llevado a verificación más de 200 páginas: estas conclusiones salen de sus estadísticas, no de casos ajenos.",
+      },
+      { type: "h2", text: "Anonimato: ¿me encontrarán mis conocidos?" },
+      {
+        type: "p",
+        text: "El anonimato no consiste en esconder la cara, sino en el geo-bloqueo: en la plataforma puedes bloquear España o tu país de residencia en Latinoamérica — y cualquier otro país que elijas —, mientras la promoción va dirigida a la audiencia de Estados Unidos, Canadá y Australia. Tus conocidos simplemente no se cruzarán con tu página. La cara, mientras tanto, sigue siendo tu mayor activo: los fans pagan por ti y por la conversación, no solo por el contenido. El detalle del geo-bloqueo y la protección de datos está en la guía «Anonimato y seguridad».",
+      },
+      { type: "h2", text: "Cómo empezar en OnlyFans ahora mismo" },
+      {
+        type: "p",
+        text: "El primer paso no te compromete a nada y es anónimo. Deja tu solicitud en la web o escribe directamente por Telegram a @ofmm_agency — respondemos todas tus preguntas con calma, te contamos las condiciones y te ayudamos a empezar desde cero, sin presión y sin que inviertas nada.",
+      },
+      { type: "h2", text: "Preguntas frecuentes" },
+      { type: "h3", text: "¿Puedo empezar sin experiencia y sin seguidores?" },
+      {
+        type: "p",
+        text: "Sí. La mayoría de nuestras modelos empieza exactamente desde cero: sin experiencia frente a la cámara, sin audiencia y sin conocimientos técnicos. La formación dura 10–14 días y te mostramos qué hacer y cómo. La única condición innegociable: tener 18+.",
+      },
+      { type: "h3", text: "¿Cómo abrir una cuenta de OnlyFans?" },
+      {
+        type: "p",
+        text: "Tres pasos: registro en onlyfans.com con tu correo, verificación de identidad con documento oficial y selfie (KYC) y conexión del método de cobro. La revisión tarda normalmente de 24 a 72 horas. Con la agencia OFM puedes saltarte este trámite: el equipo abre y verifica la cuenta por ti y configura los cobros con Paxum/Skrill.",
+      },
+      { type: "h3", text: "¿OnlyFans funciona en España y en Latinoamérica?" },
+      {
+        type: "p",
+        text: "Sí. La plataforma opera con normalidad en España y en la mayoría de países de Latinoamérica: México, Colombia, Argentina, Chile, Perú y más. El trabajo es 100% remoto — solo necesitas teléfono e internet —, y los cobros se configuran según tu país. Con OFM trabajan modelos de habla hispana a ambos lados del Atlántico.",
+      },
+      { type: "h3", text: "¿Tengo que pagar algo para empezar?" },
+      {
+        type: "p",
+        text: "No. El arranque lo financia la agencia: la publicidad y la promoción hasta tu primer ingreso corren por nuestra cuenta, así que no inviertes ni un dólar. El equipo solo empieza a ganar cuando ganas tú. Si una «agencia» te pide pagar por entrar, por la formación o por un «puesto garantizado», es una señal de alarma: una agencia real gana con tu ingreso, no cobrándote por adelantado.",
+      },
+      { type: "h3", text: "¿Tengo que mostrar la cara?" },
+      {
+        type: "p",
+        text: "No necesitas esconderla — la cara es tu mayor activo: los suscriptores pagan por la persona y la conexión, y las páginas con rostro suelen facturar más. La privacidad se protege con el geo-bloqueo de tu país de residencia, no ocultándote. El análisis de ambos formatos está en la guía sobre el trabajo sin mostrar el rostro.",
+      },
+      { type: "h3", text: "¿Cuánto puedo ganar el primer mes?" },
+      {
+        type: "p",
+        text: "El primer mes es de arranque: se lanza el tráfico, se forman los chats y llegan las primeras ventas. La referencia de los meses 1–3 con equipo es de $500 a $3.000 gross; después, $3.000–10.000 gross con reinversión, y las páginas top $15.000–50.000 tras meses de trabajo sistemático. Son cifras de facturación del balance (gross), no un pago garantizado — puedes estimar tu rango en la calculadora de ingresos.",
+      },
+      {
+        type: "nav",
+        intro: "Antes de empezar, lee los detalles:",
+        links: [
+          { href: "/join", label: "Casting en OFM — enviar solicitud" },
+          { href: "/vacancies/model/spain", label: "Vacante de modelo OnlyFans — España" },
+          { href: "/vacancies", label: "Todas las vacantes de la agencia OFM" },
+          { href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih", label: "¿Agencia o sola? Guía para principiantes" },
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans con agencia" },
+          { href: "/blog/onlyfans-skolko-zarabatyvayut-modeli", label: "Cuánto ganan las modelos de OnlyFans" },
+          { href: "/blog/onlyfans-oshibki-novichkov", label: "Errores típicos de las principiantes" },
+          { href: "/blog/onlyfans-anonimnost-i-bezopasnost", label: "Anonimato y seguridad en OnlyFans" },
+          { href: "/blog/onlyfans-agentstvo-latinskaya-amerika", label: "Agencia OnlyFans en Latinoamérica" },
+          { href: "/blog/chto-takoe-onlyfans", label: "Qué es OnlyFans y cómo funciona" },
+          { href: "/calculator", label: "Calculadora de ingresos OnlyFans" },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Lista para empezar desde cero?",
+        body: "Deja tu solicitud anónima o escribe por Telegram a @ofmm_agency — te acompañamos de la mano desde el primer paso hasta tu primer ingreso. Formación desde cero y promoción a cargo de la agencia.",
+        buttonHref: "/#contact",
+        buttonLabel: "Enviar solicitud",
+        note: "Las cifras son facturación bruta (gross) del balance, no un pago garantizado. Formación y arranque con el apoyo del equipo. Solo 18+.",
       },
     ],
   },
@@ -2509,6 +2701,310 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         buttonHref: "/#contact",
         buttonLabel: "Enviar solicitud",
         note: "Las cifras de los casos del sitio son la facturación bruta (gross) del balance de la página de OnlyFans, no un pago neto garantizado. Solo +18.",
+      },
+    ],
+  },
+  "onlyfans-modeli-kto-eto": {
+    // НОВЫЙ ES-ОВЕРЛЕЙ 16.09.2026 — ES-дуэт ч.1, фундамент октябрьской ES-волны.
+    // Написан сразу по золотому стандарту (docs/CONTENT-GOLD-STANDARD-2026-09.md)
+    // по образцу RU-реврайта 30.08 (CTR-эксперимент) и EN-оверлея.
+    // DataForSEO 16.09.2026, Испания (2724), es: «modelos onlyfans» 480,
+    // «modelo onlyfans» 480, «modelos de onlyfans» 140, «cuanto se gana en onlyfans» 260,
+    // «como ganar dinero en onlyfans» 110, «trabajar en onlyfans» 30; хвосты
+    // «que es una modelo de onlyfans» / «como ser modelo de onlyfans» ~0–10 (кластерный
+    // лонгтейл). «agencia onlyfans» 1300 и «como funciona onlyfans» 1300 — цели ДРУГИХ
+    // ES-статей (rabota-modelyu / chto-takoe), сюда не тянем. Тайтл — формула
+    // роль-статьи «[ключ]: кто это, сколько платят и как стать» (CTR ×11); сущность
+    // «modelos OnlyFans» в тайтле и первом предложении лида (урок реврайта 31.08 —
+    // сущность главного запроса только добавлять). Гипотеза: вход в ES-выдачу по
+    // сущности + перелинковка на 23 существующих ES-оверлея. Сверка — ноябрь 2026.
+    title: "Modelos OnlyFans: quiénes son, cuánto ganan y cómo empezar",
+    description:
+      "Quién es una modelo OnlyFans y cuánto gana: balances de $3.000–15.000 gross/mes con equipo, 10–15 horas semanales, inicio en 7–14 días, sin experiencia. 18+.",
+    keywords: [
+      "modelos onlyfans",
+      "modelo onlyfans",
+      "modelos de onlyfans",
+      "que es una modelo de onlyfans",
+      "como trabajan las modelos de onlyfans",
+      "cuanto ganan las modelos de onlyfans",
+      "cuánto ganan las modelos de onlyfans",
+      "cuanto se gana en onlyfans",
+      "como ser modelo de onlyfans",
+      "trabajar en onlyfans",
+      "agencia de modelos onlyfans",
+    ],
+    blocks: [
+      {
+        type: "p",
+        text: "Una modelo de OnlyFans es una creadora mayor de 18 años que gestiona una página de suscripción de pago: publica fotos y videos, y gana con las suscripciones, los mensajes de pago y el contenido personalizado. Las cifras, siempre sobre el balance de la página: las páginas en marcha de las modelos de la agencia OFM facturan $3.000–10.000 gross al mes, las más fuertes llegan a $3.000–15.000, y una novata en solitario suele quedarse en $300–700 el primer mes.",
+      },
+      {
+        type: "p",
+        text: "Esta guía es para la chica que se imagina en este papel. Sin mitos: qué hace una modelo en realidad (son 10–15 horas a la semana, no «vivir frente a la cámara»), qué perfiles se buscan, de dónde sale el dinero y cómo es el inicio con un equipo en 7–14 días. El trabajo es 100% remoto, así que da igual si lees esto desde España, México, Colombia, Argentina o cualquier otro país. Si es la primera vez que oyes hablar de la plataforma, empieza por la guía básica y vuelve.",
+      },
+      {
+        type: "nav",
+        intro: "¿Primera vez que oyes hablar de la plataforma? Empieza aquí:",
+        links: [{ href: "/blog/chto-takoe-onlyfans", label: "Qué es OnlyFans y cómo funciona" }],
+      },
+      { type: "h2", text: "Qué es una modelo de OnlyFans, en palabras simples" },
+      {
+        type: "p",
+        text: "Una modelo de OnlyFans (en la plataforma se le llama creadora o creator) es la autora de una página de pago: publica contenido para sus suscriptores, conversa con los fans y cobra por el acceso, los mensajes de pago y los pedidos personalizados. Las medidas y la estatura aquí no le importan a nadie: la profesión se parece más a la de una creadora de contenido que a la de una modelo de pasarela, porque la página vende personalidad y conversación, no un físico de portada.",
+      },
+      {
+        type: "p",
+        text: "La diferencia clave con el webcam: la modelo de OnlyFans no hace directos con horario fijo. El contenido se graba con antelación y a su ritmo, y la página vende las 24 horas — la suscripción de $5–15 es solo la entrada, porque el 70–90% del ingreso llega por los mensajes privados. Con una agencia, esas conversaciones las lleva un equipo de chat, no la propia modelo.",
+      },
+      {
+        type: "nav",
+        intro: "¿Dudas entre los dos formatos? La comparación completa:",
+        links: [{ href: "/blog/vebkam-ili-onlyfans", label: "¿Modelo webcam u OnlyFans? Diferencias reales" }],
+      },
+      { type: "h2", text: "Mitos sobre las modelos de OnlyFans — y la realidad" },
+      {
+        type: "p",
+        text: "Alrededor de esta profesión todavía circulan más mitos que datos. Un contraste rápido con la realidad, según la experiencia del equipo de OFM, que desde 2022 ha llevado a verificación más de 200 páginas:",
+      },
+      {
+        type: "ul",
+        items: [
+          "«Subes unas fotos y el dinero llega solo». No: una página sin tráfico y sin conversaciones factura cerca de cero. El dinero lo hace el sistema — contenido, promoción y chats —, y por eso el 70–90% del ingreso sale de los mensajes privados.",
+          "«Necesitas un físico de modelo». No: los suscriptores pagan por la personalidad y la cercanía, y «la chica de al lado» es uno de los perfiles que más venden en toda la plataforma.",
+          "«Todo el mundo se va a enterar». La audiencia de la página está en Estados Unidos, Canadá y Australia, y tu propio país queda bloqueado con el geobloqueo.",
+          "«Es para toda la vida». La página se puede cerrar en cualquier momento, y la colaboración con la agencia se termina sin penalizaciones: lo que retiene es el resultado, no el papeleo.",
+          "«Tendrás que estar conectada 24/7». Las conversaciones las lleva el equipo de chat día y noche — la modelo dedica a su página 10–15 horas a la semana.",
+        ],
+      },
+      {
+        type: "tip",
+        text: "¿Prefieres ver primero cómo funciona por dentro? En el canal de Telegram t.me/ofmmAgency publicamos casos reales, capturas de estadísticas de páginas y las vacantes de la agencia. Suscribirte no te compromete a nada.",
+      },
+      { type: "h2", text: "Cómo trabajan las modelos de OnlyFans: una semana normal" },
+      {
+        type: "p",
+        text: "La semana laboral de una modelo con agencia son 10–15 horas, con su propio horario y desde casa. Normalmente son dos días de sesión: luz de ventana, el teléfono en un trípode y varios sets de fotos y videos cortos siguiendo un plan de contenido ya preparado. El resto de los días, 1–2 horas: formatos tipo stories, un par de audios para los fans y la coordinación del plan con su manager.",
+      },
+      {
+        type: "p",
+        text: "Todo lo demás es trabajo del equipo. Las conversaciones con los suscriptores las lleva el equipo de chat en tres turnos, del tráfico se encarga el departamento de marketing, y de la cuenta y las finanzas, un manager personal. Una modelo en solitario hace todo eso ella sola — y justo por eso tantas páginas se quedan estancadas en unos cientos de dólares: el día no alcanza para los chats en horario de Estados Unidos y para el marketing a la vez.",
+      },
+      {
+        type: "nav",
+        intro: "Quién hace el resto del trabajo en la página:",
+        links: [
+          { href: "/blog/chto-delaet-onlyfans-agentstvo", label: "Qué hace una agencia de OnlyFans: 12 servicios" },
+          { href: "/blog/onlyfans-chaty-dm-prodazhi", label: "Chats y DM: dónde está el ingreso principal" },
+        ],
+      },
+      { type: "h2", text: "Qué chicas se convierten en modelos: los perfiles que venden" },
+      {
+        type: "p",
+        text: "Las modelos de OnlyFans que funcionan no responden a un único tipo de chica: hay decenas de nichos — y el «físico de modelo» no figura entre los requisitos de ninguno. Los nichos más estables según las estadísticas de páginas de OFM:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Girl next door — «la chica de al lado»: naturalidad sin retoques; de forma constante, uno de los perfiles que más venden",
+          "Fitness y deporte — la audiencia valora la forma física y la disciplina; los formatos de entrenamiento y lifestyle venden bien",
+          "Estética alternativa — tatuajes, piercings, pelo de colores; una comunidad fiel y muy activa en los chats",
+          "Nicho 30+ — audiencia más adulta, más leal y con mayor poder adquisitivo, con bastante menos competencia",
+          "Cosplay y gaming — los fans llegan por los personajes y se quedan por la conversación",
+        ],
+      },
+      {
+        type: "p",
+        text: "Lo decisivo no son los rasgos de la cara, sino tres cosas: cuidado personal, carisma y constancia para grabar. Una página viva y que conversa le gana de forma estable a una página con fotos «perfectas» publicadas una vez al mes — se ve en las estadísticas de cualquier equipo.",
+      },
+      {
+        type: "p",
+        text: "¿Te has reconocido en alguno de los perfiles? Escríbele a la manager de OFM en Telegram @ofmm_agency: te dirá por dónde empezar y evaluará con franqueza el potencial de tu nicho. Preguntar no te compromete a nada.",
+      },
+      {
+        type: "nav",
+        intro: "Las mismas condiciones en formato de vacante:",
+        links: [{ href: "/vacancies/model", label: "Vacante de modelo OnlyFans — condiciones" }],
+      },
+      { type: "h2", text: "¿Cuánto ganan las modelos de OnlyFans?" },
+      {
+        type: "p",
+        text: "Hablemos de dinero con honestidad, siempre sobre el balance de la página: una página típica de modelo con el equipo de OFM factura $3.000–10.000 gross al mes, las páginas fuertes llegan a $3.000–15.000, las páginas top del mercado alcanzan $15.000–50.000 — resultado de meses de trabajo sistemático —, y una novata sola, sin promoción, suele hacer $300–700 el primer mes. La diferencia no está en el físico, sino en el sistema: el tráfico, el equipo de chat y la analítica convierten la página en un negocio.",
+      },
+      {
+        type: "table",
+        caption: "Niveles de modelos y referencias de balance gross de la página al mes.",
+        headers: ["Nivel", "Balance de la página al mes"],
+        rows: [
+          ["Novata en solitario, sin equipo", "$300–700 el primer mes; techo habitual: $1.000–2.000"],
+          ["Inicio con agencia, 1–3 meses", "subida hasta $3.000: tráfico, base de fans, primeras ventas PPV"],
+          ["Página en marcha con equipo", "$3.000–10.000 gross"],
+          ["Páginas fuertes: perfil sólido + equipo completo", "$3.000–15.000 gross"],
+          ["Top del mercado: meses de trabajo sistemático", "$15.000–50.000 gross"],
+        ],
+      },
+      {
+        type: "p",
+        text: "La modelo recibe el 20–30% del balance gross; el porcentaje exacto depende del plan de trabajo, del perfil y del equipo detrás de la página. El resto la agencia lo reinvierte en lo que hace crecer ese balance: tráfico, equipo de chat en tres turnos y promoción. Gracias a esa reinversión los balances suben mes a mes, y la modelo no pone ni un dólar de su bolsillo.",
+      },
+      {
+        type: "cases",
+        title: "Casos reales de modelos de OFM — capturas de estadísticas de páginas",
+        note: "Las cifras son gross total del balance de la página de OnlyFans, no el ingreso neto de la modelo. Se publican con su consentimiento.",
+        linkLabel: "Ver casos",
+      },
+      {
+        type: "p",
+        text: "Todas las cifras son rangos y referencias, no una garantía: el resultado depende del nicho, de la constancia del contenido y de la calidad de los chats. ¿Quieres un número para tu perfil y no «el promedio»? Abre la calculadora de ingresos: un minuto, tres preguntas y una referencia para tu nicho. El resultado puedes comentarlo directamente con la manager en Telegram @ofmm_agency.",
+      },
+      {
+        type: "nav",
+        intro: "Calcula tu rango y mira el desglose del ingreso por etapas:",
+        links: [
+          { href: "/calculator", label: "Calculadora de ingresos OnlyFans" },
+          { href: "/blog/onlyfans-skolko-zarabatyvayut-modeli", label: "Cuánto se gana en OnlyFans: cifras realistas" },
+        ],
+      },
+      { type: "h2", text: "Cómo ser modelo de OnlyFans: inicio en 7–14 días" },
+      {
+        type: "p",
+        text: "El camino desde la solicitud hasta una página funcionando con agencia lleva 7–14 días, sin experiencia previa. Desde 2022 el equipo de OFM ha llevado a verificación más de 200 páginas, así que el proceso está pulido paso a paso:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Solicitud. El formulario de la web — 2 minutos, anónimo — o un mensaje por Telegram; la manager responde en menos de 24 horas",
+          "Análisis del perfil. Llamada o chat: nicho, formato de contenido y tus límites — qué grabas y qué es tabú lo decides solo tú, y el equipo deja ese marco por escrito en tu plan",
+          "Registro y verificación. Cuenta, documentos, medios de pago Paxum/Skrill — todo lo tramita la agencia",
+          "Primer plan de contenido. Qué grabar y cómo en las dos primeras semanas: luz, ángulos, referencias — la formación desde cero está incluida en el inicio",
+          "Arranque de ventas. La página empieza a recibir tráfico y el equipo de chat entra en las conversaciones — las primeras ventas suelen llegar en las primeras semanas",
+        ],
+      },
+      {
+        type: "p",
+        text: "Inicio sin burocracia: si lo pruebas y no es lo tuyo, sales libremente en cualquier momento. Si es lo tuyo, creces junto con tu página siguiendo el plan de contenido y las estadísticas.",
+      },
+      {
+        type: "nav",
+        intro: "El inicio, paso a paso:",
+        links: [
+          { href: "/join", label: "Enviar tu solicitud a la agencia OFM" },
+          { href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih", label: "Principiantes: ¿con agencia o sola?" },
+        ],
+      },
+      { type: "h2", text: "Modelo y agencia: quién hace qué" },
+      {
+        type: "p",
+        text: "La fórmula de trabajo es simple: la agencia lo lleva todo menos el contenido. La cuenta y la verificación, el tráfico y la publicidad, los chats 24/7 en tres turnos, la analítica, las finanzas y los pagos (Paxum, Skrill) — todo eso corre a cargo de la agencia; el acceso de la modelo a la página se define de común acuerdo. De la modelo: las sesiones según el plan y sus propios límites — qué graba y qué es tabú lo decide solo ella, y el equipo fija ese marco y no lo mueve.",
+      },
+      {
+        type: "p",
+        text: "¿Qué retiene a una modelo en la agencia? Solo el resultado. Puede irse en cualquier momento: un equipo que hace crecer el balance mes a mes no necesita penalizaciones para retener a nadie. Por eso la duda «¿y si no me gusta?» se resuelve fácil: lo pruebas, miras las primeras cifras y decides tú.",
+      },
+      {
+        type: "nav",
+        intro: "Qué significa OFM y cómo funciona el management:",
+        links: [{ href: "/blog/chto-takoe-ofm", label: "Qué es OFM (OnlyFans Management)" }],
+      },
+      { type: "h2", text: "Anonimato: ¿y si se entera alguien conocido?" },
+      {
+        type: "p",
+        text: "La privacidad de la modelo se apoya en el geobloqueo: bloqueas tu país — y cualquier otro que elijas —, y la promoción se dirige a Estados Unidos, Canadá y Australia, así que en tu entorno la página no aparecerá en las recomendaciones. Cuánto mostrar el rostro y cómo construir tu imagen lo decides junto con tu manager, según tu situación.",
+      },
+      {
+        type: "p",
+        text: "Una aclaración honesta: nadie puede dar una garantía absoluta — las VPN y las capturas de pantalla existen. Pero la combinación de geobloqueo, audiencia lejana y una imagen bien pensada reduce el riesgo al mínimo; la mecánica de la privacidad, paso a paso, está en las guías dedicadas.",
+      },
+      {
+        type: "nav",
+        intro: "La privacidad, en detalle:",
+        links: [
+          { href: "/blog/onlyfans-anonimnost-i-bezopasnost", label: "Anonimato y seguridad en OnlyFans" },
+          { href: "/blog/onlyfans-rabota-bez-lica", label: "Tu rostro en OnlyFans y el anonimato" },
+        ],
+      },
+      { type: "h2", text: "¿Es legal ser modelo de OnlyFans?" },
+      {
+        type: "p",
+        text: "Sí: en la mayoría de países — España y los países de Latinoamérica incluidos — crear contenido 18+ es legal; la cuestión es declarar los ingresos donde eres residente fiscal, normalmente como trabajadora independiente o autónoma. La plataforma trabaja solo con personas adultas: en el registro cada modelo verifica su identidad con un documento, y en ese paso la agencia acompaña a la modelo de principio a fin.",
+      },
+      {
+        type: "nav",
+        intro: "Y para no caer en manos equivocadas por el camino:",
+        links: [{ href: "/blog/onlyfans-agentstvo-moshennichestvo", label: "Agencia OnlyFans: 10 señales de estafa" }],
+      },
+      { type: "h2", text: "Cómo es en la vida real: el camino de una modelo de OFM" },
+      {
+        type: "p",
+        text: "El camino de una chica nueva en OFM lleva unos dos meses desde la solicitud hasta las primeras cifras estables. Un ejemplo de la práctica del equipo (el nicho y los balances son reales; los detalles, modificados): solicitud un viernes por la noche, respuesta de la manager en menos de un día y media hora de llamada — perfil girl next door, límites de contenido fijados, inicio acordado.",
+      },
+      {
+        type: "p",
+        text: "Después, todo según el plan: una semana para el registro, la verificación y los medios de pago — todo lo tramitó el equipo —; en paralelo, el primer plan de contenido y dos días de sesión. El día 12 se abrió la página y llegó el primer tráfico. El primer mes cerró con cifras modestas: la base de fans apenas se estaba formando. El segundo, $2.900 gross: entraron el equipo de chat y la promoción. El cuarto, $7.400 gross con los mismos dos días de sesión a la semana.",
+      },
+      {
+        type: "p",
+        text: "Aquí no hay magia, hay reinversión: la modelo recibía su 20–30% y el resto la agencia lo invertía en tráfico y chats, así que el balance subía mes a mes. Esa es la diferencia entre «subí unas fotos y a esperar» y trabajar con un sistema.",
+      },
+      { type: "h2", text: "Preguntas frecuentes" },
+      { type: "h3", text: "¿Qué es una modelo de OnlyFans, en pocas palabras?" },
+      {
+        type: "p",
+        text: "Es una mujer mayor de 18 años que gestiona una página de pago en OnlyFans: graba fotos y videos, los publica por suscripción y gana con las suscripciones, los mensajes de pago y el contenido personalizado. En la agencia OFM la modelo solo se ocupa de grabar — los chats, el tráfico, la cuenta y las finanzas los lleva el equipo —, y las páginas en marcha facturan $3.000–10.000 gross al mes.",
+      },
+      { type: "h3", text: "¿Necesito experiencia o un físico de modelo?" },
+      {
+        type: "p",
+        text: "No. OnlyFans no es una pasarela: los fans pagan por la personalidad, la conversación y la sensación de cercanía, no por las medidas. Hay decenas de perfiles demandados — de la chica de al lado a la estética alternativa o el nicho 30+ —, y la formación desde cero (plan de contenido, luz, ángulos) está incluida en el inicio con la agencia. La constancia y el carisma rinden más que un físico «perfecto».",
+      },
+      { type: "h3", text: "¿Cuánto tiempo ocupa el trabajo de modelo?" },
+      {
+        type: "p",
+        text: "10–15 horas a la semana: normalmente dos días de sesión más 1–2 horas el resto de los días — stories, audios y coordinación del plan. Las conversaciones con los fans las lleva el equipo de chat de la agencia día y noche, así que la página es compatible con los estudios, otro trabajo o la maternidad: el horario lo eliges tú.",
+      },
+      { type: "h3", text: "¿Qué pasa si mis conocidos descubren la página?" },
+      {
+        type: "p",
+        text: "El riesgo se reduce al mínimo con la configuración: bloqueas tu país con el geobloqueo — y cualquier otro que quieras — y la promoción va a Estados Unidos, Canadá y Australia, donde tu entorno no verá tu página. Nadie da garantías absolutas (las VPN y las capturas existen), pero la combinación de geobloqueo, audiencia lejana y una imagen pensada funciona: es el estándar de la industria, no algo exótico.",
+      },
+      { type: "h3", text: "¿Cuánto recibe la modelo en la práctica?" },
+      {
+        type: "p",
+        text: "La modelo recibe el 20–30% del balance gross de la página; el porcentaje depende del plan, del perfil y de la composición del equipo. El resto la agencia lo reinvierte en tráfico, equipo de chat y promoción — así el balance crece sin que la modelo invierta nada. Por ejemplo, con un balance de $10.000 gross hablamos de $2.000–3.000 al mes.",
+      },
+      { type: "h3", text: "¿En qué se diferencia una modelo de OnlyFans de una modelo webcam?" },
+      {
+        type: "p",
+        text: "El webcam son directos con horario: el ingreso corre solo mientras estás frente a la cámara. La modelo de OnlyFans graba el contenido con antelación y a su ritmo, y la página vende las 24 horas — en el feed y en los mensajes, que con la agencia lleva el equipo de chat. La comparación completa está en la guía de webcam vs OnlyFans.",
+      },
+      {
+        type: "quote",
+        text: "Llegué sin experiencia y con un teléfono normal. Las dos primeras semanas se fueron en la verificación y el primer plan de contenido, y al cuarto mes el balance de la página llegó a $7.400 gross. Grabo dos días a la semana y las conversaciones las lleva el equipo: yo ni siquiera entro en los chats.",
+        author: "Modelo de OFM, nicho girl next door, cuarto mes con el equipo",
+      },
+      {
+        type: "nav",
+        intro: "¿Te imaginas en este papel? Los siguientes pasos:",
+        links: [
+          { href: "/join", label: "Enviar tu solicitud a la agencia OFM" },
+          { href: "/vacancies/model", label: "Vacante de modelo OnlyFans — condiciones" },
+          { href: "/calculator", label: "Calculadora de ingresos OnlyFans" },
+          { href: "/blog/rabota-modelyu-onlyfans", label: "Trabajo de modelo OnlyFans: la vacante en detalle" },
+          { href: "/blog/chto-takoe-onlyfans", label: "Qué es OnlyFans y cómo funciona" },
+          { href: "/blog/onlyfans-skolko-zarabatyvayut-modeli", label: "Cuánto se gana en OnlyFans: cifras realistas" },
+          { href: "/blog/chto-takoe-ofm", label: "Qué es OFM (OnlyFans Management)" },
+          { href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih", label: "Principiantes: ¿con agencia o sola?" },
+          { href: "/blog/onlyfans-agentstvo-latinskaya-amerika", label: "Agencia OnlyFans en Latinoamérica" },
+          { href: "/blog/onlyfans-oshibki-novichkov", label: "15 errores de novata en OnlyFans" },
+        ],
+      },
+      {
+        type: "cta",
+        title: "¿Quieres lo mismo: una página gestionada por un equipo?",
+        body: "Escríbele a la manager en Telegram @ofmm_agency: te dirá por dónde empezar y analizará con franqueza tu perfil, tu nicho y tus expectativas. O envía el formulario de la web: anónimo, sin compromiso, y la decisión siempre es tuya.",
+        buttonHref: "/join",
+        buttonLabel: "Enviar solicitud anónima — 2 minutos",
+        note: "Las cifras de ingresos son facturación gross de balances y referencias, no pagos garantizados. Solo 18+.",
       },
     ],
   },
