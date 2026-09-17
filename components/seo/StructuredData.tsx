@@ -2,6 +2,13 @@ import { getSiteUrl, siteConfig } from '@/lib/site';
 import { stripAnswerLinks } from '@/lib/content/faq/answer-links';
 import type { FaqItem } from '@/lib/content/faq';
 import type { BlogPost } from '@/lib/content/blog';
+// Не через бочку '@/lib/content/blog': author.ts — маленький standalone-модуль,
+// бочка тянет за собой все статьи блога.
+import {
+  BLOG_AUTHOR,
+  BLOG_AUTHOR_PATH,
+  getBlogAuthorContent,
+} from '@/lib/content/blog/author';
 import type { Locale } from '@/i18n/routing';
 import { pathForLocale } from '@/lib/i18n/paths';
 
@@ -39,6 +46,7 @@ export function FaqPageJsonLd({ items }: { items: FaqItem[] }) {
 export function ArticleJsonLd({ post, locale }: { post: BlogPost; locale: Locale }) {
   const siteUrl = getSiteUrl();
   const canonicalPath = pathForLocale(`/blog/${post.slug}`, locale);
+  const author = getBlogAuthorContent(locale);
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -48,9 +56,13 @@ export function ArticleJsonLd({ post, locale }: { post: BlogPost; locale: Locale
     datePublished: post.publishedAt,
     dateModified: post.updatedAt ?? post.publishedAt,
     inLanguage: HTML_LANG[locale],
+    // 18.09.2026: автор — Person (Оксана Ткаченко, та же персона, что в WaPo),
+    // а не Organization: E-E-A-T-сигнал «у статей есть живой автор с био».
+    // url ведёт на страницу автора этой локали, publisher остаётся Organization.
     author: {
-      '@type': 'Organization',
-      name: siteConfig.name,
+      '@type': 'Person',
+      name: author.name,
+      url: `${siteUrl}${pathForLocale(BLOG_AUTHOR_PATH, locale)}`,
     },
     publisher: {
       '@type': 'Organization',
@@ -63,6 +75,38 @@ export function ArticleJsonLd({ post, locale }: { post: BlogPost; locale: Locale
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${siteUrl}${canonicalPath}`,
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/**
+ * ProfilePage + Person для страницы автора блога (/blog/author/oksana-tkachenko).
+ * worksFor ссылается на единственный глобальный узел Organization (#organization
+ * из components/JsonLd.tsx) — вторую сущность бренда не заводим (правило 29.07.2026).
+ */
+export function AuthorProfileJsonLd({ locale }: { locale: Locale }) {
+  const siteUrl = getSiteUrl();
+  const author = getBlogAuthorContent(locale);
+  const authorUrl = `${siteUrl}${pathForLocale(BLOG_AUTHOR_PATH, locale)}`;
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    inLanguage: HTML_LANG[locale],
+    mainEntity: {
+      '@type': 'Person',
+      name: author.name,
+      jobTitle: author.role,
+      description: author.bio,
+      image: `${siteUrl}${BLOG_AUTHOR.avatar}`,
+      url: authorUrl,
+      worksFor: { '@id': `${siteUrl}/#organization` },
     },
   };
 

@@ -1,7 +1,9 @@
 /**
- * Обложки блога: фото с Unsplash (лицензия Unsplash — бесплатное использование).
- * Локальные копии: /public/blog/covers/{slug}.jpg (npm run blog:covers)
- * @see https://unsplash.com/license
+ * Обложки блога. С 09.2026 основная практика — фирменные fal.ai-обложки
+ * (docs/BRAND-IMAGE-STYLE-2026-09.md: генерация → clarity-апскейл ×2 → 1600×900 q92),
+ * файл кладётся в /public/blog/covers/{slug}.jpg, кредит photographer 'OFM Models'.
+ * Старые записи — фото с Unsplash (лицензия Unsplash, @see https://unsplash.com/license),
+ * их локальные копии исторически собирал npm run blog:covers.
  */
 export type BlogCover = {
   /**

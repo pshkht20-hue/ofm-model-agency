@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
@@ -17,6 +18,11 @@ import {
   getBlogPostLocales,
   type BlogPost,
 } from '@/lib/content/blog';
+import {
+  BLOG_AUTHOR,
+  BLOG_AUTHOR_PATH,
+  getBlogAuthorContent,
+} from '@/lib/content/blog/author';
 import {
   BLOG_COVER_OG_HEIGHT,
   BLOG_COVER_OG_WIDTH,
@@ -149,6 +155,7 @@ export default async function BlogPostPage({ params }: Props) {
   const tCommon = await getTranslations({ locale, namespace: 'common' });
   const post = getBlogPost(slug, blogLocale);
   if (!post) notFound();
+  const author = getBlogAuthorContent(blogLocale);
   const categoryLabels = getBlogCategoryLabels(blogLocale);
   const faqItems = extractFaqItems(post.blocks);
 
@@ -242,6 +249,27 @@ export default async function BlogPostPage({ params }: Props) {
           {formatDate(publishedDate)}
         </time>
       )}
+
+      {/* Байлайн автора (18.09.2026): та же персона, что в Article JSON-LD и на
+          странице автора. Аватар — иллюстрация, alt честный (см. author.ts). */}
+      <Link
+        href={BLOG_AUTHOR_PATH}
+        className="group mb-6 inline-flex items-center gap-3"
+      >
+        <Image
+          src={BLOG_AUTHOR.avatar}
+          alt={author.avatarAlt}
+          width={40}
+          height={40}
+          className="h-10 w-10 shrink-0 rounded-full border border-white/10 object-cover"
+        />
+        <span className="text-sm leading-snug">
+          <span className="text-white/85 group-hover:text-accent-pink transition-colors">
+            {author.name}
+          </span>
+          <span className="text-white/40"> · {author.role}</span>
+        </span>
+      </Link>
 
       <BlogArticleLikeBar slug={post.slug} />
 

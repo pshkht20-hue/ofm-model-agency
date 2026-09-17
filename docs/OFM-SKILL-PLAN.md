@@ -97,6 +97,10 @@ npx skills add vercel-labs/agent-skills
 | `ofm-conversion-audit` | CTA, форма, калькулятор, воронка заявок |
 | `ofm-premium-motion` | Hero GSAP, ScrollTrigger, mobile lite |
 | `ofm-animation-mastery` | Сложные адаптивные анимации, 3D — главный роутер |
+| `ofm-article-gold` | Статья блога по золотому стандарту: новая, рефреш, оверлей UK/EN/ES (добавлен 17.09.2026) |
+| `ofm-linkbuilding` | Донор/прайс/торг/письмо площадке, проверка до и после оплаты (17.09.2026) |
+| `ofm-press` | Журналисты и СМИ: верификация, интервью, тексты наружу без тире (17.09.2026) |
+| `ofm-youtube-research` | Разбор YouTube-видео: транскрипт → конспект → тактики (17.09.2026, без сторонних API) |
 
 ### 🎬 Анимация и 3D (новые)
 

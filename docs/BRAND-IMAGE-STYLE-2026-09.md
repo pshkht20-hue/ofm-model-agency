@@ -21,7 +21,7 @@
 
 ## SEO-пайплайн каждой картинки (по золотому стандарту §5)
 
-1. Файл: `public/blog/covers/{slug}.jpg`, 1600×900, JPEG q82–85, ≤350KB (og:image живёт по этим размерам — BLOG_COVER_OG_WIDTH/HEIGHT в covers.ts).
+1. Файл: `public/blog/covers/{slug}.jpg`, 1600×900, JPEG q92 с шагом −3 при превышении ≤350KB (единое значение с 4K-пайплайном выше; ранее здесь стояло q82–85 — устарело), og:image живёт по этим размерам — BLOG_COVER_OG_WIDTH/HEIGHT в covers.ts.
 2. covers.ts: `localSrc` И `remoteSrc` = `/blog/covers/{slug}.jpg`; alt — описательный на русском (базовая локаль), с органичным ключом, ≤125 знаков; кредиты: photographer 'OFM Models', photographerUrl/unsplashUrl → https://ofmmodels.com (бренд-подпись вместо Unsplash).
 3. URL картинки после индексации не менять.
 4. Инлайновые изображения в теле: ≤100KB, всегда width/height, подпись-caption = микро-продажа.
