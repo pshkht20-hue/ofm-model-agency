@@ -149,7 +149,9 @@ export default async function JoinPage({ params }: Props) {
       <p className="eyebrow-bright mb-4">{content.eyebrow}</p>
       <h1 className="heading-section text-[clamp(2rem,5vw,3rem)] mb-6">{content.h1}</h1>
       <p className="text-lead mb-8">{content.lead}</p>
-      <JoinApplyCta label={content.applyCta} location="join_hero" className="mb-14" />
+      <JoinApplyCta label={content.applyCta} location="join_hero" className="mb-4" />
+      {/* Анти-FUD под главным CTA: анкета ни к чему не обязывает (18.09.2026) */}
+      <p className="text-sm text-white/50 mb-14">{content.antiFud}</p>
 
       {/* Направления набора */}
       <section aria-labelledby="join-directions">
@@ -280,6 +282,11 @@ export default async function JoinPage({ params }: Props) {
           {content.form.description}
         </p>
         <ContactForm />
+        {/* Анти-FUD под формой сознательно НЕ дублируется: сама форма уже несёт
+            строку «100% конфиденциально · анонимно · ни к чему не обязывает»,
+            а свобода выйти раскрыта в hero этой страницы и в FAQ «Кто
+            занимается выплатами?». Три почти одинаковые строки в одном экране
+            читались бы как оправдание. */}
         <div className="mt-6 text-center">
           <TelegramCta
             location="contact_primary"

@@ -19,6 +19,8 @@ export const JOIN_EN: JoinContent = {
   h1: 'Become an OF Model — Join OFM Agency',
   lead: "OFM's Model Agency is a full-service management team: 220+ models launched and managed since 2022. We handle marketing, fan chats 24/7 and strategy — you focus on content. The application takes 2 minutes, and a manager replies on Telegram within 24 hours.",
   applyCta: 'Apply now — takes 2 minutes',
+  antiFud:
+    'No paperwork and no obligations: the form commits you to nothing, and you can stop working with us at any time.',
   directions: {
     heading: "Who we're recruiting",
     items: [

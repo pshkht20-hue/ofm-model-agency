@@ -8,6 +8,7 @@ import {
   getResearchReportLocales,
   getResearchLocales,
 } from '@/lib/content/research/reports';
+import { BLOG_AUTHOR_PATH } from '@/lib/content/blog/author';
 import { routing, type Locale } from '@/i18n/routing';
 import { pathForLocale, hreflangAlternates } from '@/lib/i18n/paths';
 import { getSiteUrl } from '@/lib/site';
@@ -110,6 +111,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: { languages: hreflangAlternates(siteUrl, blogPath, postLocales) },
       });
     }
+  }
+
+  // --- Blog author page (all locales) ---
+  // Additive block, approved by the owner 18.09.2026 (author persona E-E-A-T).
+  for (const locale of routing.locales) {
+    entries.push({
+      url: `${siteUrl}${pathForLocale(BLOG_AUTHOR_PATH, locale as Locale)}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+      alternates: { languages: hreflangAlternates(siteUrl, BLOG_AUTHOR_PATH) },
+    });
   }
 
   // /research — original-data hub + reports, in the locales each is published in.

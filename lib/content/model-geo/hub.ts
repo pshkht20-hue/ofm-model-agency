@@ -37,7 +37,11 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
       },
       {
         q: 'Когда придут первые деньги?',
-        a: 'Страницу запускаем в первые дни после онлайн-кастинга, так что ждать месяцами не придётся. Выплаты регулярные, по фиксированному графику. Точные даты под твой план обсудим в переписке.',
+        a: 'Страницу запускаем в первые дни после онлайн-кастинга, так что ждать месяцами не придётся. Выплаты регулярные, по фиксированному графику. Платёжные системы (Paxum, Skrill и другие доступные методы) подключает и верифицирует команда агентства. Точные даты под твой план обсудим в переписке.',
+      },
+      {
+        q: 'Кто занимается выплатами и верификацией?',
+        a: 'Команда агентства: регистрация и верификация страницы (платформа проверяет возраст, строго 18+), подключение платёжных систем — Paxum, Skrill и другие доступные методы, — контроль поступлений и выплаты по фиксированному графику. Страница оформлена на твои документы, и ты знаешь все данные своей анкеты.',
       },
       {
         q: 'Из какой страны можно работать моделью OnlyFans?',
@@ -93,7 +97,11 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
       },
       {
         q: 'Коли прийдуть перші гроші?',
-        a: 'Сторінку запускаємо в перші дні після онлайн-кастингу, тож чекати місяцями не доведеться. Виплати регулярні, за фіксованим графіком. Точні дати під твій план обговоримо в листуванні.',
+        a: 'Сторінку запускаємо в перші дні після онлайн-кастингу, тож чекати місяцями не доведеться. Виплати регулярні, за фіксованим графіком. Платіжні системи (Paxum, Skrill та інші доступні методи) підключає та верифікує команда агенції. Точні дати під твій план обговоримо в листуванні.',
+      },
+      {
+        q: 'Хто займається виплатами та верифікацією?',
+        a: 'Команда агенції: реєстрація та верифікація сторінки (платформа перевіряє вік, суворо 18+), підключення платіжних систем — Paxum, Skrill та інші доступні методи, — контроль надходжень і виплати за фіксованим графіком. Сторінка оформлена на твої документи, і ти знаєш усі дані своєї анкети.',
       },
       {
         q: 'З якої країни можна працювати моделлю OnlyFans?',
@@ -149,7 +157,11 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
       },
       {
         q: 'When does the first money come in?',
-        a: 'Your page goes live within the first days after the online casting, so there’s no waiting around for months. Payouts are regular and follow a fixed schedule. We’ll walk you through the exact dates for your plan in the chat.',
+        a: 'Your page goes live within the first days after the online casting, so there’s no waiting around for months. Payouts are regular and follow a fixed schedule. The payment systems (Paxum, Skrill and other available methods) are set up and verified by the agency team. We’ll walk you through the exact dates for your plan in the chat.',
+      },
+      {
+        q: 'Who handles payouts and verification?',
+        a: 'The agency team: registering and verifying the page (the platform checks your age, strictly 18+), setting up the payment systems — Paxum, Skrill and other available methods — tracking incoming payments and paying out on a fixed schedule. The page is registered with your documents, and you know every detail of your profile.',
       },
       {
         q: 'Which country can you work as an OnlyFans model from?',
@@ -205,7 +217,11 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
       },
       {
         q: '¿Cuándo llega el primer dinero?',
-        a: 'La página se lanza en los primeros días después del casting online, así que no hay que esperar meses. Los pagos son regulares y siguen un calendario fijo. Las fechas exactas para tu plan las vemos en el chat.',
+        a: 'La página se lanza en los primeros días después del casting online, así que no hay que esperar meses. Los pagos son regulares y siguen un calendario fijo. Los sistemas de pago (Paxum, Skrill y otros métodos disponibles) los da de alta y verifica el equipo de la agencia. Las fechas exactas para tu plan las vemos en el chat.',
+      },
+      {
+        q: '¿Quién se encarga de los pagos y la verificación?',
+        a: 'El equipo de la agencia: el registro y la verificación de la página (la plataforma verifica la edad, estrictamente 18+), el alta de los sistemas de pago — Paxum, Skrill y otros métodos disponibles —, el control de los ingresos y los pagos con calendario fijo. La página está creada con tus documentos y conoces todos los datos de tu perfil.',
       },
       {
         q: '¿Desde qué país se puede trabajar como modelo de OnlyFans?',
@@ -261,6 +277,7 @@ export const MODEL_GEO_UI: Record<Locale, ModelGeoUi> = {
     applyHeading: 'Заполнить анкету модели',
     applyButton: 'Заполнить анкету',
     telegramLabel: 'Или напишите сразу в Telegram',
+    antiFud: 'Без бюрократии — анкета ни к чему не обязывает, выйти можно в любой момент.',
   },
   uk: {
     breadcrumbHome: 'Головна',
@@ -290,6 +307,7 @@ export const MODEL_GEO_UI: Record<Locale, ModelGeoUi> = {
     applyHeading: 'Заповнити анкету моделі',
     applyButton: 'Заповнити анкету',
     telegramLabel: 'Або напишіть одразу в Telegram',
+    antiFud: 'Без бюрократії — анкета ні до чого не зобов’язує, і піти можна будь-якої миті.',
   },
   en: {
     breadcrumbHome: 'Home',
@@ -319,6 +337,7 @@ export const MODEL_GEO_UI: Record<Locale, ModelGeoUi> = {
     applyHeading: 'Fill in the model application',
     applyButton: 'Fill in the application',
     telegramLabel: 'Or message us on Telegram',
+    antiFud: 'No paperwork — the form commits you to nothing, and you can walk away at any time.',
   },
   es: {
     breadcrumbHome: 'Inicio',
@@ -348,5 +367,6 @@ export const MODEL_GEO_UI: Record<Locale, ModelGeoUi> = {
     applyHeading: 'Rellenar la solicitud de modelo',
     applyButton: 'Rellenar la solicitud',
     telegramLabel: 'O escríbenos por Telegram',
+    antiFud: 'Sin papeleo: el formulario no te compromete a nada y puedes dejarlo cuando quieras.',
   },
 };

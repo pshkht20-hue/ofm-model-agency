@@ -28,6 +28,12 @@ export type JoinContent = {
   lead: string;
   /** Кнопка-якорь к анкете (#apply). */
   applyCta: string;
+  /**
+   * Анти-FUD строка под CTA (18.09.2026): «анкета ни к чему не обязывает,
+   * выйти можно в любой момент». Кодирует операционную модель агентства
+   * (контрактов нет) в точке решения. ⛔ Слова «договор/контракт» — запрещены.
+   */
+  antiFud: string;
   directions: {
     heading: string;
     items: JoinDirection[];

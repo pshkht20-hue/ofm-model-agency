@@ -14,6 +14,7 @@ export const HOME_SECTIONS: HomeSection[] = [
   { id: 'models', accent: 'violet' },
   { id: 'reviews', accent: 'cyan' },
   { id: 'services', accent: 'pink' },
+  { id: 'payouts', accent: 'violet' },
   { id: 'contact', accent: 'pink' },
 ];
 

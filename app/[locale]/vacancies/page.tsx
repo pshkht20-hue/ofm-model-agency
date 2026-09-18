@@ -198,6 +198,13 @@ export default async function VacanciesHubPage({ params }: Props) {
         <h2 className="font-serif text-2xl md:text-3xl text-white mb-4">{hub.cta.heading}</h2>
         <p className="text-body mb-8 max-w-lg mx-auto">{hub.cta.text}</p>
         <TelegramCta location="contact_primary" label={hub.cta.primaryLabel} />
+        {/* Анти-FUD под CTA (18.09.2026). Значение bridgeNote заполнено во всех
+            4 локалях — иначе на части языков был бы пустой <p>. */}
+        {hub.cta.bridgeNote && (
+          <p className="text-sm text-white/50 mt-6 max-w-xl mx-auto">
+            <RichText text={hub.cta.bridgeNote} />
+          </p>
+        )}
       </div>
     </SeoPageShell>
   );

@@ -19,6 +19,8 @@ export const JOIN_ES: JoinContent = {
   h1: 'Hazte modelo de OnlyFans — únete a la agencia OFM',
   lead: "OFM's Model Agency es una agencia de gestión integral: desde 2022 hemos lanzado y gestionamos más de 220 modelos. El equipo se ocupa del marketing, los chats con suscriptores 24/7 y la estrategia — tú te centras solo en el contenido. La solicitud toma 2 minutos y un mánager te responde por Telegram en un plazo de 24 horas.",
   applyCta: 'Enviar solicitud — 2 minutos',
+  antiFud:
+    'Sin papeleo ni compromisos: el formulario no te compromete a nada y puedes dejar la colaboración cuando quieras.',
   directions: {
     heading: 'A quién buscamos',
     items: [

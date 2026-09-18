@@ -193,6 +193,8 @@ export default async function ModelGeoCountryPage({ params }: Props) {
         </Link>
         <TelegramCta location="contact_primary" label={ui.telegramLabel} />
       </div>
+      {/* Анти-FUD под верхним CTA: анкета ни к чему не обязывает (18.09.2026) */}
+      <p className="mb-3 text-sm text-white/50">{ui.antiFud}</p>
       <div className="mb-2">
         <QuickApply vacancyLabel={`${content.countryName} · ${content.title}`} />
       </div>
@@ -301,6 +303,7 @@ export default async function ModelGeoCountryPage({ params }: Props) {
           </Link>
           <TelegramCta location="contact_primary" label={ui.telegramLabel} />
         </div>
+        <p className="mx-auto mt-4 max-w-lg text-sm text-white/50">{ui.antiFud}</p>
         <div className="mt-4 flex justify-center">
           <QuickApply vacancyLabel={`${content.countryName} · ${content.title}`} />
         </div>

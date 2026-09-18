@@ -95,6 +95,19 @@ export function HomeSeoBlock() {
               {t('linkDiaspora')}
             </Link>
           )}
+          {/* Статья о выводе денег есть только в ru/uk (оверлеев en/es нет,
+              dynamicParams=false → на en/es был бы 404), поэтому ключ
+              seoHome.linkPayouts добавлен ТОЛЬКО в ru.json и uk.json.
+              ⚠️ Не выносить кнопку из-под locale-гарда — en/es упадут на
+              отсутствующем ключе. */}
+          {(locale === 'ru' || locale === 'uk') && (
+            <Link prefetch={false}
+              href="/blog/onlyfans-kak-vyvesti-dengi-ukraina"
+              className="btn-secondary !py-2.5 !px-5"
+            >
+              {t('linkPayouts')}
+            </Link>
+          )}
           <Link prefetch={false} href="/blog/onlyfans-agentstvo-ukraina" className="btn-secondary !py-2.5 !px-5">
             {t('linkUkraine')}
           </Link>

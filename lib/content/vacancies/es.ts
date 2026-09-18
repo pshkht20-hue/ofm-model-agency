@@ -92,6 +92,23 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
       ],
     },
     {
+      // 18.09.2026: ver el comentario en ru.ts. Regla de escaparate respetada:
+      // sin porcentajes, sin gross/net, sin enlace a la calculadora. La guía de
+      // retiros solo existe en ru/uk (dynamicParams=false → 404), por eso aquí
+      // no hay enlace en el outro.
+      heading: 'Cómo y cuándo llegan los pagos',
+      paragraphs: [
+        'OnlyFans paga a sistemas de pago — Paxum, Skrill y otros métodos disponibles. En la agencia esta parte la lleva el equipo:',
+      ],
+      bullets: [
+        'El registro y la verificación de la página los hacemos contigo — la plataforma verifica la edad (estrictamente 18+), y los requisitos y ajustes corren por nuestra cuenta',
+        'Los sistemas de pago (Paxum, Skrill y otros métodos disponibles) los damos de alta y verificamos nosotros; el control de los ingresos es cosa del equipo',
+        'El primer dinero suele llegar en las primeras semanas tras el lanzamiento de la página',
+        'Los pagos son regulares y siguen un calendario fijo — las fechas las acordamos antes del inicio',
+        'La página está creada con tus documentos y conoces todos los datos de tu perfil',
+      ],
+    },
+    {
       heading: 'Trabajo en OnlyFans para hombres',
       paragraphs: [
         'El rol de chatter no depende del género: se contrata por igual a mujeres y hombres como operadores de chat. En el chat el suscriptor ve la página de la modelo, no a quien escribe — deciden las habilidades de redacción y venta. Por la experiencia del sector, una parte importante de los chatters fuertes son hombres: más fríos en la negociación del precio y más sistemáticos con los informes.',
@@ -139,6 +156,11 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
         'Chatter — tarifa base + % de las ventas de tu propio chat (rango en la entrevista tras la prueba). Modelo — de $3 000 a $10 000/mes; las páginas top de la agencia alcanzan saldos de $15 000–50 000/mes. Tu rango personal y el plan te los mostramos por Telegram.',
     },
     {
+      question: '¿Cuándo llega el primer pago?',
+      answer:
+        'Normalmente en las primeras semanas tras el lanzamiento de la página. Los sistemas de pago (Paxum, Skrill y otros métodos disponibles) los da de alta y verifica el equipo de la agencia, y los pagos llegan con regularidad según un calendario fijo — las fechas las acordamos antes del inicio.',
+    },
+    {
       question: '¿Es trabajo remoto?',
       answer:
         'Sí, todos los roles son totalmente remotos. Hace falta una conexión a internet estable y horas acordadas en línea; la ciudad y el país no importan.',
@@ -161,6 +183,7 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
     heading: '¿No encontraste tu rol?',
     text: 'Escríbenos por Telegram unas palabras sobre ti y sobre lo que sabes hacer: el equipo crece, y parte de los roles se abren antes de llegar al listado.',
     primaryLabel: 'Escribir por Telegram',
+    bridgeNote: 'Sin papeleo: postularte no te compromete a nada y puedes dejarlo cuando quieras.',
   },
 };
 

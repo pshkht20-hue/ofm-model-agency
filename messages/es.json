@@ -56,6 +56,7 @@
       "incomeHighlight": "$15,000–$50,000",
       "ctaPrimary": "Ser modelo",
       "ctaSecondary": "Historias de éxito",
+      "antiFud": "Sin papeleo: el formulario no te compromete a nada y puedes dejarlo cuando quieras.",
       "statModels": "modelos",
       "statIncome": "Balances",
       "balanceNote": "Todas las cifras del sitio son gross total del balance OnlyFans — no el ingreso neto de la modelo tras comisiones.",
@@ -406,6 +407,7 @@
       "telegramAlt": "¿Prefieres no rellenar el formulario?",
       "telegramCta": "Escríbenos por Telegram",
       "whatsappCta": "Escríbenos por WhatsApp",
+      "antiFud": "Sin papeleo ni compromisos: el formulario no te compromete a nada y puedes dejar la colaboración cuando quieras.",
       "careersLead": "¿Buscas trabajo en el equipo de la agencia?",
       "careersLink": "Vacantes abiertas"
     }
@@ -501,6 +503,35 @@
     "linkMarketing": "Marketing y promoción",
     "linkEarnings": "Cuánto ganan las modelos",
     "linkSafety": "Anonimato y seguridad"
+  },
+  "payouts": {
+    "eyebrow": "Dinero",
+    "title": "Pagos y verificación: cómo recibes tu dinero",
+    "lead": "OnlyFans paga a sistemas de pago — Paxum, Skrill y otros métodos disponibles. El mínimo de retiro en la plataforma es de $20 y lo ganado queda disponible en unos 7 días. En OFM el equipo lleva toda esa parte: desde la verificación hasta el calendario de pagos.",
+    "items": [
+      {
+        "title": "El registro y la verificación corren por nuestra cuenta",
+        "desc": "Creamos la página con tus documentos: la plataforma verifica la edad, estrictamente 18+. Pasamos la verificación contigo, así que no necesitas estudiar los requisitos de la plataforma."
+      },
+      {
+        "title": "Configuramos los sistemas de pago",
+        "desc": "Paxum, Skrill y otros métodos disponibles: alta, verificación del monedero y control de los ingresos. Las comisiones y las reglas de los proveedores son cosa nuestra, no tuya."
+      },
+      {
+        "title": "El primer dinero, en las primeras semanas",
+        "desc": "Lanzamos la página en los primeros días tras el casting online. La plataforma retiene lo ganado unos 7 días y después se hace el retiro; el mínimo es de $20."
+      },
+      {
+        "title": "Pagos con calendario fijo",
+        "desc": "Acordamos el calendario antes del lanzamiento para que conozcas las fechas de antemano. Los informes de la página llegan con regularidad, por Telegram."
+      },
+      {
+        "title": "La página y los datos son tuyos",
+        "desc": "La cuenta está a tu nombre y conoces todos los datos de tu perfil. La privacidad se configura de forma individual: geobloqueo y nivel de anonimato a tu medida."
+      }
+    ],
+    "linkLabel": "Qué hace realmente una agencia de OnlyFans",
+    "linkHref": "/blog/chto-delaet-onlyfans-agentstvo"
   },
   "creator": {
     "badge": "Agencia para plataformas creator",

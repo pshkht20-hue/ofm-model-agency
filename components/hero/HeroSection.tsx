@@ -263,6 +263,17 @@ export function HeroSection() {
           </a>
         </div>
 
+        {/* Анти-FUD под главными CTA: снимает страх «подпишусь — не выберусь»
+            в точке решения. Операционная модель агентства (контрактов нет,
+            свобода выйти) — та же формулировка, что в articleBridge. */}
+        <p
+          data-hero-note
+          data-hero-reveal
+          className="mx-auto -mt-6 mb-12 max-w-lg text-center text-[13px] leading-relaxed text-white/50"
+        >
+          {t('hero.antiFud')}
+        </p>
+
         <HeroTrustStrip />
 
         <div className="flex flex-wrap justify-center gap-x-12 gap-y-3 text-xs tracking-[0.2em] uppercase text-white/55">

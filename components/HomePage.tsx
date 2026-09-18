@@ -62,6 +62,11 @@ const ServicesSection = dynamic(
   { loading: () => <div className="min-h-[760px]" aria-hidden /> },
 );
 
+const PayoutsSection = dynamic(
+  () => import('@/components/PayoutsSection').then((m) => ({ default: m.PayoutsSection })),
+  { loading: () => <div className="min-h-[560px]" aria-hidden /> },
+);
+
 const HomeSeoBlock = dynamic(
   () => import('@/components/seo/HomeSeoBlock').then((m) => ({ default: m.HomeSeoBlock })),
   { loading: () => <div className="min-h-[640px]" aria-hidden /> },
@@ -130,6 +135,11 @@ export function HomePage() {
 
         <ServicesSection />
 
+        {/* «Выплаты и верификация» — трастовый блок перед SEO-полотном и формой:
+            Paxum/Skrill, верификация и график выплат на поверхности, которую
+            Google реально отдаёт (18.09.2026) */}
+        <PayoutsSection />
+
         <HomeSeoBlock />
 
         <section id="contact" ref={contactRef} className="relative py-16 md:py-22 overflow-hidden">
@@ -185,6 +195,10 @@ export function HomePage() {
             )}
 
             <div className="mt-9 flex flex-col items-center gap-3">
+              {/* Анти-FUD прямо под анкетой — в точке решения */}
+              <p className="max-w-lg text-sm leading-relaxed text-white/50">
+                {t('contact.antiFud')}
+              </p>
               <p className="text-sm text-white/45">{t('contact.telegramAlt')}</p>
               <TelegramCta location="contact_primary" label={t('contact.telegramCta')} />
               <WhatsAppCta label={t('contact.whatsappCta')} />

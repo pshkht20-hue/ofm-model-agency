@@ -312,6 +312,8 @@ export default async function ModelGeoHubPage({ params }: Props) {
           {hub.cta.primaryLabel}
           <ArrowRight className="w-5 h-5" />
         </Link>
+        {/* Анти-FUD под CTA: анкета ни к чему не обязывает (18.09.2026) */}
+        <p className="mx-auto mt-4 max-w-lg text-sm text-white/50">{ui.antiFud}</p>
       </div>
     </SeoPageShell>
   );

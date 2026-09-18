@@ -56,6 +56,7 @@
       "incomeHighlight": "$15,000–$50,000",
       "ctaPrimary": "Become a model",
       "ctaSecondary": "Success stories",
+      "antiFud": "No paperwork — the form commits you to nothing, and you can walk away at any time.",
       "statModels": "creators",
       "statIncome": "Page balances",
       "balanceNote": "All figures on this site are gross OnlyFans page totals — not the creator's net payout after fees.",
@@ -406,6 +407,7 @@
       "telegramAlt": "Prefer not to fill out the form?",
       "telegramCta": "Message us on Telegram",
       "whatsappCta": "Message us on WhatsApp",
+      "antiFud": "No paperwork and no obligations: the form commits you to nothing, and you can stop working with us at any time.",
       "careersLead": "Looking to join the agency team?",
       "careersLink": "Open positions"
     }
@@ -501,6 +503,35 @@
     "linkMarketing": "Marketing & promotion",
     "linkEarnings": "How much models earn",
     "linkSafety": "Anonymity & safety"
+  },
+  "payouts": {
+    "eyebrow": "Money",
+    "title": "Payouts and verification: how you get paid",
+    "lead": "OnlyFans pays out to payment systems — Paxum, Skrill and other available methods. The platform minimum is $20 and earnings become available after roughly 7 days. At OFM the team runs this whole part, from verification to the payout schedule.",
+    "items": [
+      {
+        "title": "We handle registration and verification",
+        "desc": "The page is registered with your documents — the platform checks your age, strictly 18+. We go through verification with you, so you never have to learn the platform's requirements."
+      },
+      {
+        "title": "We set up the payment systems",
+        "desc": "Paxum, Skrill and other available methods: sign-up, wallet verification, tracking incoming payments. Fees and provider rules are our job, not yours."
+      },
+      {
+        "title": "First money in the first weeks",
+        "desc": "We launch the page within days of the online casting. The platform holds earnings for about 7 days, then the payout goes out — the minimum is $20."
+      },
+      {
+        "title": "Payouts on a fixed schedule",
+        "desc": "We agree the schedule before launch so you know the dates in advance. Page reports come regularly, in Telegram."
+      },
+      {
+        "title": "The page and the data are yours",
+        "desc": "The account is in your name and you know every detail of your profile. Privacy is configured individually: geo-block and anonymity level to suit you."
+      }
+    ],
+    "linkLabel": "What an OnlyFans agency actually does",
+    "linkHref": "/blog/chto-delaet-onlyfans-agentstvo"
   },
   "creator": {
     "badge": "Agency for creator platforms",

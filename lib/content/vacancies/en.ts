@@ -94,6 +94,23 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
       ],
     },
     {
+      // 18.09.2026: see the comment in ru.ts — the hub carried no payout
+      // wording at all. Showcase rule kept: no percentages, no gross/net,
+      // no calculator link. The RU/UK payout guide has no en overlay, so the
+      // outro link is omitted here (dynamicParams=false → 404).
+      heading: 'How and when payouts arrive',
+      paragraphs: [
+        'OnlyFans pays out to payment systems — Paxum, Skrill and other available methods. At the agency this part is run by the team:',
+      ],
+      bullets: [
+        'We go through the page registration and verification with you — the platform checks your age (strictly 18+), while the requirements and settings are on us',
+        'The payment systems (Paxum, Skrill and other available methods) are set up and verified by us, and tracking incoming payments is on the team',
+        'The first money usually arrives within the first weeks after the page launch',
+        'Payouts are regular and follow a fixed schedule — we agree the dates before the start',
+        'The page is registered with your documents, and you know every detail of your profile',
+      ],
+    },
+    {
       heading: 'OnlyFans work for men',
       paragraphs: [
         'The chatter role doesn’t depend on gender: women and men are hired equally as chat operators. In chat the subscriber sees the model’s page, not the person typing — writing and sales skills are what matter. From industry experience, a large share of strong chatters are men: they stay cooler in price negotiations and are more systematic with reporting.',
@@ -141,6 +158,11 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
         'Chatter — base rate + % of your own chat’s sales (range named at the interview after the test task). Model — $3 000–10 000/mo; the agency’s top pages reach balances of $15 000–50 000/mo. We’ll share your personal range and plan on Telegram.',
     },
     {
+      question: 'When does the first payout arrive?',
+      answer:
+        'Usually within the first weeks after the page launch. The payment systems (Paxum, Skrill and other available methods) are set up and verified by the agency team, and payouts run regularly on a fixed schedule — we agree the dates before the start.',
+    },
+    {
       question: 'Is this remote work?',
       answer:
         'Yes, all roles are fully remote. You need a stable internet connection and agreed hours online; city and country don’t matter.',
@@ -163,6 +185,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
     heading: 'Didn’t find your role?',
     text: 'Message us on Telegram with a few words about yourself and what you can do: the team is growing, and some roles open before they hit the listing.',
     primaryLabel: 'Message us on Telegram',
+    bridgeNote: 'No paperwork — applying commits you to nothing, and you can walk away at any time.',
   },
 };
 

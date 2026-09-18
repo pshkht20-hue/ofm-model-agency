@@ -38,6 +38,7 @@ const RU: ModelGeoContent = {
     'Рядом опытная команда: больше трёх лет практики и сотни запущенных страниц.',
     'Конфиденциальность: бережно относимся к твоей личной информации и настраиваем уровень приватности под тебя.',
     'Украина — наш приоритетный рынок: самый быстрый старт после заявки и украиноязычная поддержка на каждом шаге.',
+    'Верификацию страницы и платёжные системы (Paxum, Skrill и другие доступные методы) настраивает команда — тебе не нужно разбираться в комиссиях и требованиях платёжек.',
   ],
   expectations: [
     'Тебе уже есть 18 лет.',
@@ -54,6 +55,7 @@ const RU: ModelGeoContent = {
     { label: 'Локация', value: 'Удалённо · вся Украина' },
     { label: 'Выплаты', value: 'Регулярно, по фиксированному графику' },
     { label: 'Старт', value: 'В первые дни после онлайн-кастинга' },
+    { label: 'Верификация', value: 'Проходим вместе с тобой' },
   ],
   faq: [
     {
@@ -70,7 +72,11 @@ const RU: ModelGeoContent = {
     },
     {
       q: 'Когда будет первая выплата?',
-      a: 'Страницу запускаем в первые дни после онлайн-кастинга, а выплаты приходят регулярно по фиксированному графику. Точные даты под твой план расскажем в переписке. Реальные результаты страниц агентства — [кейсы со скриншотами статистики](/#models).',
+      a: 'Страницу запускаем в первые дни после онлайн-кастинга, а выплаты приходят регулярно по фиксированному графику. Платёжные системы (Paxum, Skrill и другие доступные методы) подключает и верифицирует команда агентства. Точные даты под твой план расскажем в переписке. Реальные результаты страниц агентства — [кейсы со скриншотами статистики](/#models).',
+    },
+    {
+      q: 'Кто занимается выплатами и верификацией?',
+      a: 'Команда агентства: регистрация и верификация страницы (платформа проверяет возраст, строго 18+), подключение платёжных систем — Paxum, Skrill и другие доступные методы, — контроль поступлений и выплаты по фиксированному графику. Страница оформлена на твои документы, и ты знаешь все данные своей анкеты.',
     },
     {
       q: 'Можно ли совмещать с учёбой или основной работой?',
@@ -93,6 +99,7 @@ const UK: ModelGeoContent = {
     'Поруч досвідчена команда: понад три роки практики й сотні запущених сторінок.',
     'Конфіденційність: дбайливо ставимося до твоєї особистої інформації та налаштовуємо рівень приватності під тебе.',
     'Україна — наш пріоритетний ринок: найшвидший старт після заявки та україномовна підтримка на кожному кроці.',
+    'Верифікацію сторінки та платіжні системи (Paxum, Skrill та інші доступні методи) налаштовує команда — тобі не потрібно розбиратися в комісіях і вимогах платіжок.',
   ],
   expectations: [
     'Тобі вже виповнилося 18 років.',
@@ -109,6 +116,7 @@ const UK: ModelGeoContent = {
     { label: 'Локація', value: 'Віддалено · вся Україна' },
     { label: 'Виплати', value: 'Регулярні, за фіксованим графіком' },
     { label: 'Старт', value: 'У перші дні після онлайн-кастингу' },
+    { label: 'Верифікація', value: 'Проходимо разом із тобою' },
   ],
   faq: [
     {
@@ -125,7 +133,11 @@ const UK: ModelGeoContent = {
     },
     {
       q: 'Коли буде перша виплата?',
-      a: 'Сторінку запускаємо в перші дні після онлайн-кастингу, а виплати надходять регулярно за фіксованим графіком. Точні дати під твій план розповімо в листуванні. Реальні результати сторінок агентства — [кейси зі скріншотами статистики](/#models).',
+      a: 'Сторінку запускаємо в перші дні після онлайн-кастингу, а виплати надходять регулярно за фіксованим графіком. Платіжні системи (Paxum, Skrill та інші доступні методи) підключає та верифікує команда агенції. Точні дати під твій план розповімо в листуванні. Реальні результати сторінок агентства — [кейси зі скріншотами статистики](/#models).',
+    },
+    {
+      q: 'Хто займається виплатами та верифікацією?',
+      a: 'Команда агенції: реєстрація та верифікація сторінки (платформа перевіряє вік, суворо 18+), підключення платіжних систем — Paxum, Skrill та інші доступні методи, — контроль надходжень і виплати за фіксованим графіком. Сторінка оформлена на твої документи, і ти знаєш усі дані своєї анкети.',
     },
     {
       q: 'Чи можна поєднувати з навчанням або основною роботою?',
@@ -148,6 +160,7 @@ const EN: ModelGeoContent = {
     'An experienced team by your side: 3+ years of practice and hundreds of launched pages.',
     'Confidentiality: we treat your personal information with care and tune the privacy level to what feels right for you.',
     'Ukraine is our priority market: the fastest start after your application and Ukrainian-speaking support at every step.',
+    'Page verification and the payment systems (Paxum, Skrill and other available methods) are set up by the team — you never have to work out the fees and provider requirements.',
   ],
   expectations: [
     'You are 18 or older.',
@@ -164,6 +177,7 @@ const EN: ModelGeoContent = {
     { label: 'Location', value: 'Remote · all of Ukraine' },
     { label: 'Payouts', value: 'Regular, on a fixed schedule' },
     { label: 'Start', value: 'Within days after the online casting' },
+    { label: 'Verification', value: 'We go through it with you' },
   ],
   faq: [
     {
@@ -180,7 +194,11 @@ const EN: ModelGeoContent = {
     },
     {
       q: 'When is the first payout?',
-      a: 'The page launches within days after the online casting, and payouts arrive regularly on a fixed schedule. We will walk you through the exact dates for your plan in chat.',
+      a: 'The page launches within days after the online casting, and payouts arrive regularly on a fixed schedule. The payment systems (Paxum, Skrill and other available methods) are set up and verified by the agency team. We will walk you through the exact dates for your plan in chat.',
+    },
+    {
+      q: 'Who handles payouts and verification?',
+      a: 'The agency team: registering and verifying the page (the platform checks your age, strictly 18+), setting up the payment systems — Paxum, Skrill and other available methods — tracking incoming payments and paying out on a fixed schedule. The page is registered with your documents, and you know every detail of your profile.',
     },
     {
       q: 'Can I combine it with studies or a main job?',
@@ -203,6 +221,7 @@ const ES: ModelGeoContent = {
     'Un equipo con experiencia a tu lado: más de 3 años de práctica y cientos de páginas lanzadas.',
     'Confidencialidad: cuidamos tu información personal y ajustamos el nivel de privacidad a lo que te resulte cómodo.',
     'Ucrania es nuestro mercado prioritario: el arranque más rápido tras la candidatura y soporte en ucraniano en cada paso.',
+    'La verificación de la página y los sistemas de pago (Paxum, Skrill y otros métodos disponibles) los configura el equipo — no tienes que lidiar con comisiones ni requisitos de los proveedores.',
   ],
   expectations: [
     'Tienes 18 años o más.',
@@ -219,6 +238,7 @@ const ES: ModelGeoContent = {
     { label: 'Ubicación', value: 'Remoto · toda Ucrania' },
     { label: 'Pagos', value: 'Regulares, con calendario fijo' },
     { label: 'Inicio', value: 'En los primeros días tras el casting online' },
+    { label: 'Verificación', value: 'La hacemos contigo' },
   ],
   faq: [
     {
@@ -235,7 +255,11 @@ const ES: ModelGeoContent = {
     },
     {
       q: '¿Cuándo llega el primer pago?',
-      a: 'La página se lanza en los primeros días tras el casting online, y los pagos llegan con regularidad según un calendario fijo. Las fechas exactas para tu plan te las contamos por chat.',
+      a: 'La página se lanza en los primeros días tras el casting online, y los pagos llegan con regularidad según un calendario fijo. Los sistemas de pago (Paxum, Skrill y otros métodos disponibles) los da de alta y verifica el equipo de la agencia. Las fechas exactas para tu plan te las contamos por chat.',
+    },
+    {
+      q: '¿Quién se encarga de los pagos y la verificación?',
+      a: 'El equipo de la agencia: el registro y la verificación de la página (la plataforma verifica la edad, estrictamente 18+), el alta de los sistemas de pago — Paxum, Skrill y otros métodos disponibles —, el control de los ingresos y los pagos con calendario fijo. La página está creada con tus documentos y conoces todos los datos de tu perfil.',
     },
     {
       q: '¿Puedo combinarlo con los estudios o con otro trabajo?',
