@@ -274,6 +274,170 @@
     "recruit_queries_top10_0803": 56
    },
    "notes": "Первый снимок после 6-недельного разрыва (03.08→14.09). К 03.08: 40 найм-запросов выросли, 8 просели, 31 новый в ТОП-10, ТОП-3 4→18; «чаттер это» 8.6→2.6, «онлифанс агентство» 9.7→3.1, «онлифанс работа» 7.5→5.5 (живая органика №9), «робота онліфанс» 9.4→4.9. Просела только «онліфанс агенція»: 8.6→22.8 в GSC, живая органика №12 — ТОП-10 заняли 10 украинских агентств/джобордов. Сайт 1 183→1 576 кликов за неделю (+33%), найм-кластер 338→477 (+41%). Ранг домена 79→134. Мейнстрим-гэпы (оператор чата удаленно, робота для дівчат, работа моделью, онлайн для девушек) и EN/ES-головы (onlyfans agency, webcam model job, modelo webcam) — по-прежнему вне выдачи."
+  },
+  {
+   "date": "2026-09-21",
+   "source": "GSC через сервис-аккаунт (MCP gsc не подключился; окно 13.09–18.09 = 6 дней, последний день GSC 19.09 ещё пуст, против 06.09–12.09; плюс 28 дней 23.08–19.09) + DataForSEO live/advanced SERP (13 приоритетных запросов, органический ранг) + backlinks_bulk_ranks. Стоимость DataForSEO $0.18.",
+   "positions": {
+    "онлифанс работа": 5.8,
+    "модель онліфанс": 2.3,
+    "онлифанс модель это": 6.7,
+    "чаттер это": 2.7,
+    "онліфанс агенція": 21.3,
+    "модель онлифанс вакансии": 4.9,
+    "онлифанс агентство": 1.6,
+    "работа онлифанс модель": 4.3,
+    "чатер работа": 6.7,
+    "работа чаттером": 6.1,
+    "чаттер онлифанс вакансии": 5.4,
+    "робота онліфанс": 6.1,
+    "онліфанс робота відгуки": 1,
+    "onlyfans job": 10,
+    "onlyfans chatter": 20,
+    "of models": 2.4,
+    "ofm agency": 4.8,
+    "онлифанс вакансии": 7.2,
+    "чатер онлифанс": 2.9,
+    "onlyfans jobs": 14.8,
+    "работа онлифанс": 5.5,
+    "оператор чата онлифанс": 3,
+    "модель онлифанс": null,
+    "работа моделью": null,
+    "робота для дівчат": null,
+    "робота моделлю": null,
+    "оператор чата": null,
+    "оператор чата удаленно": null,
+    "вебкам модель": null,
+    "onlyfans agency": 10,
+    "webcam model job": null,
+    "modelo webcam": null
+   },
+   "live_organic_rank": {
+    "онлифанс работа": 8,
+    "онліфанс агенція": null,
+    "модель онлифанс вакансии": 6,
+    "онлифанс вакансии": null,
+    "чатер онлифанс": 4,
+    "onlyfans jobs": null,
+    "onlyfans agency": 26,
+    "оператор чата удаленно": null,
+    "робота для дівчат": null,
+    "работа моделью": null,
+    "работа онлайн для девушек": null,
+    "webcam model job": null,
+    "modelo webcam": null
+   },
+   "competitor_ranks": {
+    "_scale": "DataForSEO backlinks rank 0–1000; 0 = беклинков не обнаружено",
+    "ofmmodels.com": 134,
+    "forumonly.fun": 66,
+    "only-boost.agency": 82,
+    "x.layboard.com": 149,
+    "girlswork.com.ua": 292,
+    "layboard.in": 312,
+    "milanuncios.com": 484,
+    "robota.ua": 546,
+    "work.ua": 648,
+    "indeed.com": 729,
+    "xjobber.com": 0,
+    "ofmodels.com.ua": 0,
+    "royalmodelagency.com": 0,
+    "ofmarketing.net": 0,
+    "only-plus.me": 0,
+    "spiritagency.space": 0
+   },
+   "live_serp_top3": {
+    "онлифанс работа": [
+     "xjobber.com",
+     "girlswork.com.ua",
+     "datingforum.com.ua"
+    ],
+    "онліфанс агенція": [
+     "royalmodelagency.com",
+     "instagram.com/ofmarketingnet",
+     "spiritagency.space"
+    ],
+    "оператор чата удаленно": [
+     "robota.ua",
+     "work.ua",
+     "m.olx.ua"
+    ],
+    "робота для дівчат": [
+     "ua.jooble.org",
+     "work.ua",
+     "robota.ua"
+    ],
+    "модель онлифанс вакансии": [
+     "xjobber.com",
+     "x.layboard.com",
+     "datingforum.com.ua"
+    ],
+    "онлифанс вакансии": [
+     "xjobber.com",
+     "datingforum.com.ua",
+     "girlswork.com.ua"
+    ],
+    "чатер онлифанс": [
+     "xjobber.com",
+     "datingforum.com.ua",
+     "reddit.com"
+    ],
+    "работа моделью": [
+     "robota.ua",
+     "work.ua",
+     "m.olx.ua"
+    ],
+    "работа онлайн для девушек": [
+     "ua.jooble.org",
+     "m.olx.ua",
+     "ua.jooble.org"
+    ],
+    "onlyfans agency": [
+     "tdmmanagement.com",
+     "reddit.com",
+     "teasyagency.com"
+    ],
+    "onlyfans jobs": [
+     "uk.linkedin.com",
+     "indeed.com",
+     "onlyfanschatters.com"
+    ],
+    "webcam model job": [
+     "indeed.com",
+     "chattimenow.com",
+     "internetmodeling.com"
+    ],
+    "modelo webcam": [
+     "models1a.com",
+     "es.wikipedia.org",
+     "toky.co"
+    ]
+   },
+   "traffic": {
+    "window_days": 6,
+    "prev_window_days": 7,
+    "recruitment_clicks_7d": 512,
+    "recruitment_clicks_prev_7d": 477,
+    "recruitment_clicks_per_day": 85.3,
+    "recruitment_clicks_per_day_prev": 68.1,
+    "recruitment_impressions_7d": 9731,
+    "recruitment_impressions_prev_7d": 12189,
+    "site_clicks_7d": 1511,
+    "site_clicks_prev_7d": 1576,
+    "site_clicks_per_day": 251.8,
+    "site_clicks_per_day_prev": 225.1,
+    "site_impressions_7d": 60801,
+    "site_impressions_prev_7d": 60936,
+    "recruit_queries_top3": 28,
+    "recruit_queries_top3_prev": 18,
+    "recruit_queries_top10": 108,
+    "recruit_queries_top10_prev": 93,
+    "recruit_queries_up": 37,
+    "recruit_queries_down": 16,
+    "recruit_queries_new_top10": 6,
+    "vacancy_pages_clicks": 441
+   },
+   "notes": "Неделя 13–18.09 (6 дней) к 06–12.09: клики сайта 225 → 252/день (+12%), найм-кластер 68 → 85 кликов/день (+25%); найм-запросов в ТОП-3 18 → 28, в ТОП-10 93 → 108; 37 ↑ / 16 ↓. Рост: «онлифанс агентство» 3.1 → 1.6, «of models» 4.1 → 2.4 (149 кликов), «ofm agency» 8.4 → 4.8, «онлифанс вакансии» 8.4 → 7.2 (ранжируется хаб /vacancies 5.0), «модель онлифанс вакансии» 5.3 → 4.9 (живая №6), флагман «онлифанс работа» в живой органике №9 → №8 (GSC 5.5 → 5.8 — шум). Просадки: «работа чаттером» 4.9 → 6.1, «робота онліфанс» 4.9 → 6.1, «агентство онлифанс» 3.2 → 11, «onlyfans jobs» 12.9 → 14.8 (живая №22 → вне ТОП-100). Тревога: «онліфанс агенція» — живая органика №12 → вне ТОП-100 (GSC 21.3, 12 показов), ТОП-10 держат 10 украинских агентств/Instagram/girlswork. «онлифанс вакансии» в живом срезе не найден при GSC 7.2 — вероятно шум среза, перепроверить. Ранги доменов без изменений (мы 134). Мейнстрим-гэпы и EN/ES-головы — без сдвига."
   }
  ]
 }
