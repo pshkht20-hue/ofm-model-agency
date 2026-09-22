@@ -12,7 +12,10 @@ export type Archetype =
   | 'blonde'
   | 'tattoo'
   | 'ebony'
-  | 'babyface';
+  | 'babyface'
+  // новые ниши кластера «Типажи» (сент. 2026): mature 30+/40+ и fitness
+  | 'mature'
+  | 'fitness';
 
 export type CalculatorAnswers = {
   experience: Experience;
@@ -54,6 +57,15 @@ const ARCHETYPE_BANDS: Record<
   blonde: { low: [10_000, 18_000], high: [32_000, 50_000] },
   tattoo: { low: [11_000, 19_000], high: [34_000, 48_000] },
   ebony: { low: [11_000, 20_000], high: [35_000, 52_000] },
+  // Mature 30+/40+: рекордное удержание и полупустой RU-сегмент, но без
+  // мега-китов — вилка между natural и blonde. Зеркалит таблицу денег
+  // mature-modeli-onlyfans (система $3–15K gross, топ $15–50K): net 20–30%
+  // при полном профиле = $3,200–12,000.
+  mature: { low: [9_000, 16_000], high: [24_000, 40_000] },
+  // Fitness: физическая ниша с премиальными кастомами (кейс рынка ~$10K/мес
+  // на кастомах — fitness-modeli-onlyfans), потолок ниже blonde (50K).
+  // Net 20–30% при полном профиле = $3,600–13,800 — внутри «$3 000–15 000».
+  fitness: { low: [10_000, 18_000], high: [28_000, 46_000] },
 };
 
 const ARCHETYPE_INSIGHT: Record<Archetype, string> = {
@@ -66,6 +78,8 @@ const ARCHETYPE_INSIGHT: Record<Archetype, string> = {
   tattoo: 'archetypeTattoo',
   ebony: 'archetypeEbony',
   babyface: 'archetypeBabyface',
+  mature: 'archetypeMature',
+  fitness: 'archetypeFitness',
 };
 
 function roundToHundred(value: number): number {

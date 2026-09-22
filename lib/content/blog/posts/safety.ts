@@ -520,6 +520,7 @@ export const safetyPosts: BlogPost[] = [
       },
       blogNav('Разберись в деталях перед стартом:', [
         LINK.join,
+        LINK.uaInfo,
         LINK.payout,
         LINK.worth,
         LINK.legal,

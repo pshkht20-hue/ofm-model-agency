@@ -180,6 +180,16 @@ export const LINK = {
     href: '/blog/alt-modeli-onlyfans',
     label: 'Альт и тату модель OnlyFans: сколько платят и как стать',
   },
+  /** Ниш-статья №4 кластера «Типажи» — фитнес/спорт (W4, сент. 2026) */
+  fitness: {
+    href: '/blog/fitness-modeli-onlyfans',
+    label: 'Фитнес модель OnlyFans: сколько платят и как стать',
+  },
+  /** Первая подстраница хаба инфо-ядра — гео-интент «онлифанс в украине» (W4, сент. 2026) */
+  uaInfo: {
+    href: '/blog/onlyfans-v-ukraine',
+    label: 'Онлифанс в Украине: можно ли, законно ли и сколько платят',
+  },
   /** Сегмент студенток женского кластера — «работа для студенток» 480/мес */
   studentki: {
     href: '/blog/rabota-dlya-studentok',

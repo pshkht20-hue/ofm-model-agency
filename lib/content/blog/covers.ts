@@ -478,6 +478,28 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://ofmmodels.com',
     unsplashUrl: 'https://ofmmodels.com',
   },
+  // Фирменная fal.ai-обложка (BRAND-IMAGE-STYLE-2026-09, Silhouette Cosmos) —
+  // ниш-статья №4 кластера «Типажи» (W4, 21.09.2026). ⚠ Файл генерирует владелец
+  // процесса до деплоя (public/blog/covers/fitness-modeli-onlyfans.jpg).
+  'fitness-modeli-onlyfans': {
+    localSrc: '/blog/covers/fitness-modeli-onlyfans.jpg',
+    remoteSrc: '/blog/covers/fitness-modeli-onlyfans.jpg',
+    alt: 'Спортивный женский силуэт на фоне звёздного неба в неоновой подсветке — фитнес модель OnlyFans',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
+  // Фирменная fal.ai-обложка (BRAND-IMAGE-STYLE-2026-09) — первая подстраница
+  // хаба инфо-ядра «Онлифанс в Украине» (W4, 21.09.2026). ⚠ Файл генерирует
+  // владелец процесса до деплоя (public/blog/covers/onlyfans-v-ukraine.jpg).
+  'onlyfans-v-ukraine': {
+    localSrc: '/blog/covers/onlyfans-v-ukraine.jpg',
+    remoteSrc: '/blog/covers/onlyfans-v-ukraine.jpg',
+    alt: 'Онлифанс в Украине — силуэт девушки с телефоном на фоне ночного города',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
 };
 
 export function getBlogCover(slug: string): BlogCover | undefined {

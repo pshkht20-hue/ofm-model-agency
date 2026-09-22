@@ -517,6 +517,16 @@ export type ResearchHubUi = {
   pressHeading: string;
   pressBody: string;
   contactLabel: string;
+  /** — Расширение хаба (W4, 22.09.2026): 400+ слов, citation-магнит для СМИ и AI — */
+  aboutHeading: string;
+  aboutBody: string[];
+  methodHeading: string;
+  methodItems: string[];
+  whyHeading: string;
+  whyBody: string[];
+  curatorHeading: string;
+  /** Текст до имени куратора; имя и роль подставляет страница из getBlogAuthorContent. */
+  curatorBody: string;
 };
 
 const HUB_UI: Record<string, ResearchHubUi> = {
@@ -530,6 +540,27 @@ const HUB_UI: Record<string, ResearchHubUi> = {
     pressHeading: 'Для прессы и исследователей',
     pressBody: 'Можно свободно цитировать наши данные со ссылкой. Запросы и комментарии — через',
     contactLabel: 'форму связи',
+    aboutHeading: 'Что такое OFM Research',
+    aboutBody: [
+      'OFM Research — открытая база данных OFM Model Agency о безопасности и экономике creator-индустрии: кураторские своды рецензируемых и институциональных источников, приведённые к единому формату, с графиками, датасетами в CSV/JSON и лицензией CC BY 4.0. Каждая цифра прослеживается до первоисточника — от рецензируемых исследований (CHI, USENIX Security) до отчётов FBI IC3, FTC, Eurostat и SWGfL.',
+      'Мы не проводим собственных опросов и не публикуем внутренние показатели агентства. Наш формат — курирование данных: мы находим, проверяем и сводим уже опубликованные цифры, которые в индустрии разбросаны по десяткам разрозненных источников. Первый отчёт — «Безопасность авторов 18+ в 2026» — сводит 23 источника, включая многонациональное исследование 16 693 взрослых в 10 странах, и закрывает задокументированный пробел: консолидированной статистики по взрослым платным авторам до него не существовало.',
+    ],
+    methodHeading: 'Методология',
+    methodItems: [
+      'Иерархия источников. Приоритет — рецензируемые работы и институциональные данные: CHI 2025, USENIX Security 2024, FBI IC3, FTC, Eurostat, SWGfL. Вендорская статистика публикуется только с явной пометкой «вендор» и не используется как доказательство распространённости.',
+      'Прослеживаемость. Каждая цифра снабжена ссылкой на источник; полный список публикуется на странице отчёта рядом с данными, а не в сноске.',
+      'Разделение выборок. Данные о взрослых и несовершеннолетних не смешиваются: статистика NCMEC и Thorn относится к несовершеннолетним и на взрослых авторов не переносится.',
+      'Честные ограничения. Если репрезентативного замера не существует — например, по доле краденого платного контента, — мы прямо называем цифру экспертной оценкой, а не фактом.',
+      'Открытые данные. Датасеты доступны в CSV и JSON, графики и выводы — по лицензии CC BY 4.0 с обязательной ссылкой на источник.',
+      'Даты и правки. У каждого отчёта указаны даты публикации и обновления; изменения вносятся только с обновлением dateModified.',
+    ],
+    whyHeading: 'Зачем индустрии эти данные',
+    whyBody: [
+      'Взрослые платные авторы — слепая зона публичной статистики: профильные исследования безопасности сосредоточены на несовершеннолетних, а корпоративные отчёты вендоров — на fraud-метриках платформ. При этом законы вроде TAKE IT DOWN Act и политики платформ принимаются именно на этих неполных данных. Проверяемые цифры, сведённые в одном месте, нужны журналистам для фактчека, исследователям — как карта источников, а самим моделям — чтобы отличать реальные риски от маркетинга страха.',
+      'Поэтому OFM Research устроен как ресурс, готовый к цитированию: стабильные URL, открытая лицензия, машиночитаемые датасеты и блок «процитировать» с готовой HTML-ссылкой и embed-кодом на каждом отчёте. Данные можно использовать в публикациях, исследованиях и AI-продуктах со ссылкой на ofmmodels.com/research.',
+    ],
+    curatorHeading: 'Кто отвечает за данные',
+    curatorBody: 'Отчёты готовит команда OFM Model Agency. Отбор источников и редакцию ведёт',
   },
   uk: {
     eyebrow: 'OFM Research',
@@ -541,6 +572,27 @@ const HUB_UI: Record<string, ResearchHubUi> = {
     pressHeading: 'Для преси та дослідників',
     pressBody: 'Можна вільно цитувати наші дані з посиланням. Запити та коментарі — через',
     contactLabel: 'форму зв’язку',
+    aboutHeading: 'Що таке OFM Research',
+    aboutBody: [
+      'OFM Research — відкрита база даних OFM Model Agency про безпеку та економіку creator-індустрії: кураторські зведення рецензованих та інституційних джерел, приведені до єдиного формату, з графіками, датасетами у CSV/JSON і ліцензією CC BY 4.0. Кожна цифра простежується до першоджерела — від рецензованих досліджень (CHI, USENIX Security) до звітів FBI IC3, FTC, Eurostat і SWGfL.',
+      'Ми не проводимо власних опитувань і не публікуємо внутрішніх показників агентства. Наш формат — курування даних: ми знаходимо, перевіряємо та зводимо вже опубліковані цифри, які в індустрії розкидані по десятках розрізнених джерел. Перший звіт — «Безпека авторів 18+ у 2026» — зводить 23 джерела, зокрема багатонаціональне дослідження 16 693 дорослих у 10 країнах, і закриває задокументовану прогалину: консолідованої статистики щодо дорослих платних авторів до нього не існувало.',
+    ],
+    methodHeading: 'Методологія',
+    methodItems: [
+      'Ієрархія джерел. Пріоритет — рецензовані роботи та інституційні дані: CHI 2025, USENIX Security 2024, FBI IC3, FTC, Eurostat, SWGfL. Вендорська статистика публікується лише з явною позначкою «вендор» і не використовується як доказ поширеності.',
+      'Простежуваність. Кожна цифра має посилання на джерело; повний список публікується на сторінці звіту поруч із даними, а не у виносці.',
+      'Розділення вибірок. Дані про дорослих і неповнолітніх не змішуються: статистика NCMEC і Thorn стосується неповнолітніх і на дорослих авторів не переноситься.',
+      'Чесні обмеження. Якщо репрезентативного заміру не існує — наприклад, щодо частки краденого платного контенту, — ми прямо називаємо цифру експертною оцінкою, а не фактом.',
+      'Відкриті дані. Датасети доступні у CSV і JSON, графіки та висновки — за ліцензією CC BY 4.0 з обовʼязковим посиланням на джерело.',
+      'Дати та правки. У кожного звіту зазначені дати публікації й оновлення; зміни вносяться лише з оновленням dateModified.',
+    ],
+    whyHeading: 'Навіщо індустрії ці дані',
+    whyBody: [
+      'Дорослі платні автори — сліпа зона публічної статистики: профільні дослідження безпеки зосереджені на неповнолітніх, а корпоративні звіти вендорів — на fraud-метриках платформ. Водночас закони на кшталт TAKE IT DOWN Act і політики платформ ухвалюються саме на цих неповних даних. Перевірювані цифри, зведені в одному місці, потрібні журналістам для фактчеку, дослідникам — як мапа джерел, а самим моделям — щоб відрізняти реальні ризики від маркетингу страху.',
+      'Тому OFM Research побудований як ресурс, готовий до цитування: стабільні URL, відкрита ліцензія, машинозчитувані датасети і блок «процитувати» з готовим HTML-посиланням та embed-кодом на кожному звіті. Дані можна використовувати в публікаціях, дослідженнях та AI-продуктах із посиланням на ofmmodels.com/research.',
+    ],
+    curatorHeading: 'Хто відповідає за дані',
+    curatorBody: 'Звіти готує команда OFM Model Agency. Відбір джерел і редакцію веде',
   },
   en: {
     eyebrow: 'OFM Research',
@@ -552,6 +604,27 @@ const HUB_UI: Record<string, ResearchHubUi> = {
     pressHeading: 'For press and researchers',
     pressBody: 'You are free to cite our data with a link. Requests and comments via the',
     contactLabel: 'contact form',
+    aboutHeading: 'What OFM Research is',
+    aboutBody: [
+      'OFM Research is OFM Model Agency’s open data resource on safety and economics in the creator industry: curated roundups of peer-reviewed and institutional sources, brought into a single format with charts, CSV/JSON datasets and a CC BY 4.0 license. Every figure traces back to a primary source — from peer-reviewed studies (CHI, USENIX Security) to reports by FBI IC3, the FTC, Eurostat and SWGfL.',
+      'We do not run surveys of our own and we do not publish the agency’s internal metrics. Our format is data curation: we find, verify and consolidate already-published figures that the industry keeps scattered across dozens of unconnected sources. The first report — Adult creator safety in 2026 — draws on 23 sources, including a multinational study of 16,693 adults in 10 countries, and closes a documented gap: no consolidated statistics on adult paid creators existed before it.',
+    ],
+    methodHeading: 'Methodology',
+    methodItems: [
+      'Source hierarchy. Peer-reviewed work and institutional data come first: CHI 2025, USENIX Security 2024, FBI IC3, the FTC, Eurostat, SWGfL. Vendor statistics are published only with an explicit “vendor” flag and are never used as evidence of prevalence.',
+      'Traceability. Every figure carries a link to its source; the full list is published on the report page next to the data, not in a footnote.',
+      'Separated samples. Data on adults and minors are never mixed: NCMEC and Thorn statistics concern minors and are not projected onto adult creators.',
+      'Honest limitations. Where no representative measurement exists — for example, the share of stolen paid content — we label the figure an expert estimate, not a fact.',
+      'Open data. Datasets are available in CSV and JSON; charts and findings are licensed under CC BY 4.0 with attribution required.',
+      'Dates and corrections. Every report shows its publication and update dates; changes are made only with an updated dateModified.',
+    ],
+    whyHeading: 'Why the industry needs this data',
+    whyBody: [
+      'Adult paid creators are a blind spot in public statistics: dedicated safety research focuses on minors, while vendor reports focus on platform fraud metrics. Yet laws like the TAKE IT DOWN Act and platform policies are written on exactly this incomplete data. Verifiable figures gathered in one place serve journalists for fact-checking, researchers as a map of sources, and creators themselves — to tell real risks from fear marketing.',
+      'That is why OFM Research is built citation-ready: stable URLs, an open license, machine-readable datasets and a “cite this” block with a ready HTML link and embed code on every report. The data may be used in publications, research and AI products with a link to ofmmodels.com/research.',
+    ],
+    curatorHeading: 'Who is behind the data',
+    curatorBody: 'Reports are produced by the OFM Model Agency team. Source selection and editing are led by',
   },
   es: {
     eyebrow: 'OFM Research',
@@ -563,6 +636,27 @@ const HUB_UI: Record<string, ResearchHubUi> = {
     pressHeading: 'Para prensa e investigadores',
     pressBody: 'Puedes citar nuestros datos con un enlace. Consultas y comentarios a través del',
     contactLabel: 'formulario de contacto',
+    aboutHeading: 'Qué es OFM Research',
+    aboutBody: [
+      'OFM Research es la base de datos abierta de OFM Model Agency sobre seguridad y economía de la industria creator: recopilaciones curadas de fuentes revisadas por pares e institucionales, unificadas en un solo formato, con gráficos, datasets en CSV/JSON y licencia CC BY 4.0. Cada cifra se remonta a una fuente primaria: desde estudios revisados por pares (CHI, USENIX Security) hasta informes del FBI IC3, la FTC, Eurostat y SWGfL.',
+      'No realizamos encuestas propias ni publicamos las métricas internas de la agencia. Nuestro formato es la curación de datos: encontramos, verificamos y consolidamos cifras ya publicadas que en la industria están dispersas en decenas de fuentes desconectadas. El primer informe — Seguridad de creadoras adultas en 2026 — reúne 23 fuentes, incluido un estudio multinacional de 16 693 adultos en 10 países, y cierra una brecha documentada: antes no existían estadísticas consolidadas sobre las creadoras adultas de pago.',
+    ],
+    methodHeading: 'Metodología',
+    methodItems: [
+      'Jerarquía de fuentes. Primero el trabajo revisado por pares y los datos institucionales: CHI 2025, USENIX Security 2024, FBI IC3, la FTC, Eurostat, SWGfL. Las estadísticas de proveedores se publican solo con la marca explícita de “proveedor” y nunca se usan como evidencia de prevalencia.',
+      'Trazabilidad. Cada cifra lleva un enlace a su fuente; la lista completa se publica en la página del informe, junto a los datos y no en una nota al pie.',
+      'Muestras separadas. Los datos de adultos y menores nunca se mezclan: las estadísticas de NCMEC y Thorn se refieren a menores y no se proyectan sobre las creadoras adultas.',
+      'Limitaciones honestas. Cuando no existe una medición representativa — por ejemplo, la proporción de contenido de pago robado —, señalamos la cifra como estimación experta, no como hecho.',
+      'Datos abiertos. Los datasets están disponibles en CSV y JSON; los gráficos y hallazgos se publican bajo licencia CC BY 4.0 con atribución obligatoria.',
+      'Fechas y correcciones. Cada informe muestra sus fechas de publicación y actualización; los cambios se hacen solo con un dateModified actualizado.',
+    ],
+    whyHeading: 'Por qué la industria necesita estos datos',
+    whyBody: [
+      'Las creadoras adultas de pago son un punto ciego de la estadística pública: la investigación específica de seguridad se centra en menores, mientras los informes de proveedores se centran en métricas de fraude de las plataformas. Sin embargo, leyes como la TAKE IT DOWN Act y las políticas de las plataformas se escriben justo sobre estos datos incompletos. Cifras verificables reunidas en un solo lugar sirven a los periodistas para el fact-checking, a los investigadores como mapa de fuentes y a las propias modelos para distinguir los riesgos reales del marketing del miedo.',
+      'Por eso OFM Research está construido listo para citar: URL estables, licencia abierta, datasets legibles por máquina y un bloque de «cómo citar» con enlace HTML y código embed listos en cada informe. Puedes usar los datos en publicaciones, investigaciones y productos de IA con un enlace a ofmmodels.com/research.',
+    ],
+    curatorHeading: 'Quién está detrás de los datos',
+    curatorBody: 'Los informes los produce el equipo de OFM Model Agency. La selección de fuentes y la edición corren a cargo de',
   },
 };
 

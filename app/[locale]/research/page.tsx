@@ -9,6 +9,8 @@ import {
   getResearchReportsForLocale,
 } from '@/lib/content/research/reports';
 import { createPageMetadata } from '@/lib/seo';
+import { ResearchHubJsonLd } from '@/components/research/ResearchHubJsonLd';
+import { BLOG_AUTHOR_PATH, getBlogAuthorContent } from '@/lib/content/blog/author';
 import type { Locale } from '@/i18n/routing';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -35,6 +37,7 @@ export default async function ResearchHubPage({ params }: Props) {
   setRequestLocale(locale);
   const ui = getResearchHubUi(locale);
   const reports = getResearchReportsForLocale(locale);
+  const author = getBlogAuthorContent(locale);
 
   return (
     <SeoPageShell showCta={false} breadcrumbs={[{ label: ui.eyebrow }]}>
@@ -45,6 +48,7 @@ export default async function ResearchHubPage({ params }: Props) {
           { name: ui.title, path: '/research' },
         ]}
       />
+      <ResearchHubJsonLd locale={locale as Locale} ui={ui} reports={reports} />
 
       <p className="eyebrow-bright mb-4">{ui.eyebrow}</p>
       <h1 className="heading-section text-[clamp(2rem,5vw,3rem)] mb-6">{ui.title}</h1>
@@ -61,6 +65,17 @@ export default async function ResearchHubPage({ params }: Props) {
         </a>
         .
       </p>
+
+      {/* W4 22.09.2026: хаб расширен до 400+ слов — определение answer-first,
+          методология, «зачем данные», куратор. Citation-магнит для СМИ и AI. */}
+      <section className="mb-12">
+        <h2 className="heading-section text-xl md:text-2xl mb-4">{ui.aboutHeading}</h2>
+        {ui.aboutBody.map((p) => (
+          <p key={p} className="text-body mb-4 last:mb-0">
+            {p}
+          </p>
+        ))}
+      </section>
 
       <div className="space-y-5">
         {reports.map((report) => (
@@ -82,6 +97,42 @@ export default async function ResearchHubPage({ params }: Props) {
           </Link>
         ))}
       </div>
+
+      <section className="mt-12">
+        <h2 id="methodology" className="heading-section text-xl md:text-2xl mb-4">
+          {ui.methodHeading}
+        </h2>
+        <ul className="list-disc pl-5 space-y-2 text-body">
+          {ui.methodItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="heading-section text-xl md:text-2xl mb-4">{ui.whyHeading}</h2>
+        {ui.whyBody.map((p) => (
+          <p key={p} className="text-body mb-4 last:mb-0">
+            {p}
+          </p>
+        ))}
+      </section>
+
+      {/* Куратор данных: имя/роль из единого источника персоны (author.ts),
+          внутренняя ссылка на страницу автора — E-E-A-T-мост хаб → персона. */}
+      <section className="mt-12 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+        <h2 className="font-serif text-lg text-white mb-2">{ui.curatorHeading}</h2>
+        <p className="text-body text-sm">
+          {ui.curatorBody}{' '}
+          <Link
+            href={BLOG_AUTHOR_PATH}
+            className="text-accent-pink hover:text-accent-cyan transition-colors"
+          >
+            {author.name}
+          </Link>
+          , {author.role}.
+        </p>
+      </section>
 
       <div className="mt-12 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
         <h2 className="font-serif text-lg text-white mb-2">{ui.pressHeading}</h2>

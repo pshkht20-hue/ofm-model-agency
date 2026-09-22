@@ -272,6 +272,14 @@
               "label": "My own style, no fixed niche",
               "desc": "We'll build a brand around you: content, pricing, and positioning — no copy-paste templates"
             },
+            "mature": {
+              "label": "Mature / 30+ & 40+",
+              "desc": "Age niche with top retention — natural confidence and GFE for an adult 30–60 audience"
+            },
+            "fitness": {
+              "label": "Fitness / athletic",
+              "desc": "Your physique as an asset — premium customs and challenges, explicit content optional"
+            },
             "cosplay": {
               "label": "Cosplay / roleplay",
               "desc": "Anime, games, characters — top monetization niche; focus on the persona, not a \"perfect\" body"
@@ -370,7 +378,9 @@
           "blonde": "Blonde",
           "tattoo": "Alt / Tattoo",
           "ebony": "Ebony",
-          "babyface": "Babyface"
+          "babyface": "Babyface",
+          "mature": "Mature 30+",
+          "fitness": "Fitness"
         },
         "ctaRange": "Reserve my {low}–{high} plan",
         "ctaDiscuss": "Discuss my plan with a manager",
@@ -393,7 +403,9 @@
         "archetypeBlonde": "Girl-next-door is competitive but stable: lives, photosets, and personal DMs deliver predictable growth.",
         "archetypeTattoo": "Alt looks stand out in the feed: edgy roleplay and customs can add +250% to average spend from engaged fans.",
         "archetypeEbony": "Ethnic niche is growing globally: dance, curves, and GFE build a strong base for repeat purchases.",
-        "archetypeBabyface": "Babyface is one of the most in-demand archetypes: GFE and soft roleplay drive high LTV. Even starting from zero with no audience, a realistic benchmark is $16K+/mo with the OFM team."
+        "archetypeBabyface": "Babyface is one of the most in-demand archetypes: GFE and soft roleplay drive high LTV. Even starting from zero with no audience, a realistic benchmark is $16K+/mo with the OFM team.",
+        "archetypeMature": "Mature is the retention champion: fans 30–60 pay steadily and rarely churn, and the niche is still half-empty. Age here is a strategy, not a disclaimer — the market's most famous case started at 53.",
+        "archetypeFitness": "Fitness is the one major niche where serious money is made even without explicit content: a known market case earns ~$10K/mo on athletic customs. Your physique is a ready asset — flexing, challenges, and custom programs become the premium line of your price list."
       }
     },
     "contact": {

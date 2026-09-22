@@ -814,6 +814,7 @@ export const agencyPosts: BlogPost[] = [
         intro: 'Другие материалы OFM:',
         links: [
           { href: '/blog/onlyfans-zakon-nalogi-ukraina', label: 'OnlyFans в Украине: закон и налоги' },
+          { href: '/blog/onlyfans-v-ukraine', label: 'Онлифанс в Украине: можно ли, законно ли и сколько платят' },
           { href: '/blog/onlyfans-agentstvo-moldova', label: 'Агентство Молдова' },
           { href: '/blog/chto-delaet-onlyfans-agentstvo', label: '12 услуг management' },
           { href: '/', label: 'Онлифанс агентство OFM — кейсы и заявка' },

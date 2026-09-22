@@ -1,5 +1,6 @@
 import { getSiteUrl, siteConfig } from '@/lib/site';
 import { pathForLocale } from '@/lib/i18n/paths';
+import { BLOG_AUTHOR_PATH, getBlogAuthorContent } from '@/lib/content/blog/author';
 import type { Locale } from '@/i18n/routing';
 import type { ResearchReport } from '@/lib/content/research/reports';
 
@@ -19,8 +20,12 @@ export function ReportJsonLd({ report, locale }: { report: ResearchReport; local
   const siteUrl = getSiteUrl();
   const url = `${siteUrl}${pathForLocale(`/research/${report.slug}`, locale)}`;
   const csvUrl = `${siteUrl}${report.csv}`;
+  const author = getBlogAuthorContent(locale);
   const publisher = {
     '@type': 'Organization',
+    // @id сливает этот узел с глобальным #organization (components/JsonLd.tsx) —
+    // через publisher его получают и Dataset.creator, и Report.author/publisher.
+    '@id': `${siteUrl}/#organization`,
     name: siteConfig.name,
     url: siteUrl,
     logo: { '@type': 'ImageObject', url: `${siteUrl}/icon.svg` },
@@ -64,6 +69,15 @@ export function ReportJsonLd({ report, locale }: { report: ResearchReport; local
         dateModified: report.updatedAt,
         inLanguage: HTML_LANG[locale],
         author: publisher,
+        // W4 22.09.2026: editor — та же Person, что в байлайнах блога и
+        // AuthorProfileJsonLd; author остаётся Organization (данные — от организации).
+        editor: {
+          '@type': 'Person',
+          name: author.name,
+          jobTitle: author.role,
+          url: `${siteUrl}${pathForLocale(BLOG_AUTHOR_PATH, locale)}`,
+          worksFor: { '@id': `${siteUrl}/#organization` },
+        },
         publisher,
         mainEntityOfPage: { '@type': 'WebPage', '@id': url },
         about: 'Creator safety, image-based abuse, and exploitative agencies',

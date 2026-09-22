@@ -9,6 +9,11 @@ export type BlogBlock =
   | { type: 'tip'; text: string }
   | { type: 'quote'; text: string; author?: string }
   | { type: 'nav'; intro?: string; links: { href: string; label: string }[] }
+  /**
+   * Инлайн-иллюстрация в теле статьи (W4 21.09.2026, аддитивно): next/image,
+   * lazy, стиль как у обложек. Файлы — public/blog/inline/, ≤100KB.
+   */
+  | { type: 'img'; src: string; alt: string; caption?: string; width: number; height: number }
   /** Тизер реальных кейсов: миниатюры скринов + суммарный NET, ведёт на /#models. */
   | { type: 'cases'; title: string; note: string; linkLabel: string }
   | {

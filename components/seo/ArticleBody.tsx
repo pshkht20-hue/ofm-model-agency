@@ -241,6 +241,31 @@ function renderBlock(block: BlogBlock, i: number) {
       </div>
     );
   }
+  if (block.type === 'img') {
+    // Инлайн-иллюстрация (W4 21.09.2026): explicit width/height против CLS,
+    // lazy по умолчанию (инлайны всегда ниже первого экрана), рамка и радиус —
+    // как у обложек (BlogCoverImage). Отсутствие файла не ломает билд/рендер.
+    return (
+      <figure key={i} className="my-7">
+        <div className="relative w-full overflow-hidden rounded-2xl border border-white/[0.08]">
+          <Image
+            src={block.src}
+            alt={block.alt}
+            width={block.width}
+            height={block.height}
+            sizes="(max-width: 768px) 100vw, 900px"
+            quality={90}
+            className="h-auto w-full object-cover"
+          />
+        </div>
+        {block.caption ? (
+          <figcaption className="px-1 pt-2.5 text-[11px] leading-relaxed text-white/40">
+            {block.caption}
+          </figcaption>
+        ) : null}
+      </figure>
+    );
+  }
   if (block.type === 'table') {
     return (
       <figure
