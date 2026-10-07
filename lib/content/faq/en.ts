@@ -137,7 +137,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'Do I need OnlyFans experience before applying?',
         answer:
-          'No. We work with beginners and active models. For newcomers: launch, verification, and a first content plan. For experienced creators: funnel, pricing, and marketing audit focused on growth.',
+          'No. We work with beginners and active models. For newcomers: launch, verification, and a first content plan. For experienced creators: funnel, pricing, and marketing audit focused on growth. Browse the [open OnlyFans agency jobs](/vacancies) to see current roles and terms.',
       },
       {
         question: 'What are the requirements for models (age, documents)?',

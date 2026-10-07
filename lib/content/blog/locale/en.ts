@@ -626,6 +626,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             href: "/faq",
             label: "OFM agency FAQ",
           },
+          {
+            href: "/",
+            label: "OFM Agency — official site: cases and application",
+          },
         ],
       },
       {
@@ -1929,6 +1933,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             href: "/blog/onlyfans-instagram-tiktok-bez-bana",
             label: "Instagram & TikTok without bans",
           },
+          {
+            href: "/vacancies",
+            label: "Agency jobs for creators — current openings",
+          },
         ],
       },
       {
@@ -2951,6 +2959,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/vacancies/chatter-onlyfans",
             label: "Vacancy: OnlyFans chat operator (chatter) at OFM",
+          },
+          {
+            href: "/vacancies",
+            label: "OFM jobs: all open roles at the agency",
           },
         ],
       },
