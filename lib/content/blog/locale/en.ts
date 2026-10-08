@@ -142,8 +142,16 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Apply to the OFM agency — model application",
           },
           {
+            href: "/blog/onlyfans-agency-for-beginners",
+            label: "New to OnlyFans? The zero-follower agency start",
+          },
+          {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
             label: "How much OnlyFans models earn",
+          },
+          {
+            href: "/blog/mature-modeli-onlyfans",
+            label: "OnlyFans after 40: the mature niche explained",
           },
           {
             href: "/blog/onlyfans-anonimnost-i-bezopasnost",
@@ -168,6 +176,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/vacancies",
             label: "OnlyFans agency jobs — all open positions",
+          },
+          {
+            href: "/blog/how-to-join-onlyfans-agency",
+            label: "How to join an OnlyFans agency: 3 steps to start",
           },
           {
             href: "/calculator",
@@ -277,8 +289,20 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Agency scams: 10 red flags",
           },
           {
+            href: "/blog/kak-smenit-onlyfans-agentstvo",
+            label: "How to switch OnlyFans agencies without losing your page",
+          },
+          {
             href: "/blog/kogda-nuzhno-onlyfans-agentstvo",
             label: "When to hire an agency",
+          },
+          {
+            href: "/blog/how-to-join-onlyfans-agency",
+            label: "Application, interview, onboarding: joining explained",
+          },
+          {
+            href: "/blog/onlyfans-agency-for-beginners",
+            label: "What a first-time creator gets from an agency",
           },
           {
             href: "/blog/onlyfans-uderzhanie-podpischikov",
@@ -790,6 +814,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/kak-vybrat-onlyfans-agentstvo",
             label: "How to choose an agency",
+          },
+          {
+            href: "/blog/kak-smenit-onlyfans-agentstvo",
+            label: "Leaving a bad OnlyFans agency: the 5-step exit plan",
           },
           {
             href: "/blog/onlyfans-anonimnost-i-bezopasnost",
@@ -1801,6 +1829,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "Become an OnlyFans model",
           },
           {
+            href: "/blog/fitness-modeli-onlyfans",
+            label: "Fitness model on OnlyFans: pay rates and how to start",
+          },
+          {
             href: "/faq",
             label: "FAQ: what OFM is",
           },
@@ -1906,6 +1938,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         intro: "Start without the chaos - keep reading:",
         links: [
           {
+            href: "/blog/onlyfans-agency-for-beginners",
+            label: "Agency for beginners: launch with 0 followers",
+          },
+          {
             href: "/blog/rabota-modelyu-onlyfans",
             label: "Become an OnlyFans model",
           },
@@ -1920,6 +1956,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/kak-vybrat-onlyfans-agentstvo",
             label: "How to choose an agency",
+          },
+          {
+            href: "/blog/how-to-join-onlyfans-agency",
+            label: "The 3-step path into an agency",
           },
           {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
@@ -2213,6 +2253,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
             label: "Getting started for beginners",
+          },
+          {
+            href: "/blog/onlyfans-agency-for-beginners",
+            label: "Starting from zero with an agency team",
           },
           {
             href: "/blog/onlyfans-marketing-strategiya-2026",
@@ -2681,6 +2725,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/onlyfans-instagram-tiktok-bez-bana",
             label: "Instagram & TikTok without bans (TikTok BR)",
+          },
+          {
+            href: "/blog/plus-size-modeli-onlyfans",
+            label: "Plus size OnlyFans models: pay and start",
           },
           {
             href: "/blog/onlyfans-agentstvo-moldova",
@@ -3243,6 +3291,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             label: "An agency for beginners: how to start",
           },
           {
+            href: "/blog/how-to-join-onlyfans-agency",
+            label: "Joining an agency: what happens after you apply",
+          },
+          {
             href: "/join",
             label: "Apply to the OFM agency — model application",
           },
@@ -3448,6 +3500,24 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         text: "Successful OF models are not one type — they are dozens of niches. Girl next door: natural, unpolished, familiar. Fitness and sport. Alt aesthetics: tattoos, piercings, bright hair. The 30+ niche, where the audience tends to be more loyal and spends more. Cosplay and gaming. What decides the outcome is not facial features but grooming, warmth and the willingness to shoot regularly: a page that is alive and talking beats a page with perfect photos posted once a month.",
       },
       {
+        type: "nav",
+        intro: "Deep dives into the niches that pay:",
+        links: [
+          {
+            href: "/blog/mature-modeli-onlyfans",
+            label: "Mature models on OnlyFans: the 30+ and 40+ niche",
+          },
+          {
+            href: "/blog/plus-size-modeli-onlyfans",
+            label: "Plus size models: how the niche pays",
+          },
+          {
+            href: "/blog/alt-modeli-onlyfans",
+            label: "Alt and goth models: tattoos as an asset",
+          },
+        ],
+      },
+      {
         type: "p",
         text: "English is not a barrier either. With a chat team, conversations with subscribers are handled by people writing in native English 24/7 — one of the main reasons models join OFM from Ukraine, Germany, Poland, Spain, the US and as far away as Japan, and compete for a US and Canadian audience from day one. Where you live matters far less than whether the page is run well.",
       },
@@ -3590,6 +3660,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           {
             href: "/blog/rabota-modelyu-onlyfans",
             label: "Become an OnlyFans model: the agency job",
+          },
+          {
+            href: "/blog/fitness-modeli-onlyfans",
+            label: "The fitness niche on OnlyFans: what athletic pages earn",
           },
           {
             href: "/blog/onlyfans-skolko-zarabatyvayut-modeli",
@@ -4474,5 +4548,2151 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         note: "18+ only. Income figures are gross page-balance turnover and market examples, not a guarantee.",
       },
     ],
+  },
+  "alt-modeli-onlyfans": {
+    "title": "Alt Model OnlyFans: Goth & Tattooed Pay, How to Start",
+    "description": "Alt, goth and tattoo models own one of OnlyFans' most loyal niches: 'goth onlyfans' ~5,400 searches/mo, OFM pages $3,000–15,000 gross. Start in 7–14 days. 18+.",
+    "keywords": [
+      "alt model onlyfans",
+      "goth onlyfans",
+      "tattooed onlyfans models",
+      "alt onlyfans agency",
+      "tattoo model onlyfans",
+      "goth girl onlyfans",
+      "pierced model onlyfans",
+      "alt girl onlyfans"
+    ],
+    "blocks": [
+      {
+        "type": "p",
+        "text": "An alt model on OnlyFans — a creator with tattoos, piercings, colored hair or a dark aesthetic — works in the niche with one of the platform's most devoted audiences: alt-culture fans subscribe to \"their own\" and stay for years. The OFM Models agency recruits alt and goth models deliberately and builds pages for this type end to end — strategy, traffic, conversations: such pages reach $3,000–15,000 gross per month on 10–15 hours of shooting a week. Below: the economics of the niche and calm answers to three ingrained fears — \"I'm too non-standard,\" \"the tattoos will ruin everything\" and \"subculture doesn't sell\"."
+      },
+      {
+        "type": "p",
+        "text": "This page is for the woman whose look strangers have commented on all her life: school demanded she \"dye it back,\" job interviews hinted at sleeves over the tattoos, and the family still sighs about the piercings. The platform runs on the opposite logic: the thing you were asked for years to tone down is the main working asset here — and the demand for it is measurable. Let's lay it out in numbers, not slogans."
+      },
+      {
+        "type": "nav",
+        "intro": "If the decision is almost made — the vacancy is open:",
+        "links": [
+          {
+            "href": "/vacancies/model",
+            "label": "OnlyFans model vacancy at OFM — alt and goth welcome"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What an alt model is — and why fans search for her"
+      },
+      {
+        "type": "p",
+        "text": "An alt model (from alternative) is a model with an alternative look: tattoos, piercings, colored or shaved hair, goth, punk or rock aesthetics. On OnlyFans this is an established niche of its own, not a \"non-standard they will put up with\": English-speaking fans type \"goth onlyfans\" about 5,400 times a month, and alongside it sit steady queries for tattooed models and alt girls. Interest in this aesthetic is a background constant, not a spike of fashion."
+      },
+      {
+        "type": "p",
+        "text": "The structure of the demand matters more than its size. An alt-niche fan is not choosing between you and a glossy page — he came for the aesthetic itself: ink on skin, a dark persona, being unlike anyone else. Gloss is background for him, not an alternative. That is why competition inside the niche is a fraction of the platform's general stream, and the subscription lives longer: the aesthetic a fan came for does not leave his life in a month."
+      },
+      {
+        "type": "h2",
+        "text": "What alt and tattooed models get paid: numbers without gloss"
+      },
+      {
+        "type": "p",
+        "text": "The reference points: a solo start in the niche brings $300–700 in the first month, pages of OFM Models creators reach $3,000–15,000 gross per month, and the top pages sit at $15,000–50,000 — the result of months of systematic work, not of week one. For contrast: the median page with no niche and no team is stuck at $150–180 a month — the price of blending in, and the alt type insures against exactly that."
+      },
+      {
+        "type": "table",
+        "caption": "Monthly income benchmarks for alt and tattoo pages: from a solo start to a full system with a team (2026).",
+        "headers": [
+          "Level",
+          "Money per month"
+        ],
+        "rows": [
+          [
+            "Median page with no niche and no team",
+            "$150–180 — the price of blending in"
+          ],
+          [
+            "Solo start in the alt niche",
+            "$300–700 in the first month"
+          ],
+          [
+            "First months with the OFM team",
+            "$500–3,000"
+          ],
+          [
+            "The system: niche + traffic + chat team",
+            "$3,000–15,000 gross"
+          ],
+          [
+            "Top pages of the agency",
+            "$15,000–50,000 — months of systematic work"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Honestly, about how these numbers are built: $3,000–15,000 is the page's gross turnover, not a payout in hand. The model receives 20–30% of gross — the share depends on the plan, the niche, and the team setup — and the agency reinvests the rest into the traffic, promotion and chat team that keep growing that same balance. Even the minimum share at the bottom of the range is noticeably above a typical office salary — and the top of the range is not something an office can match at all."
+      },
+      {
+        "type": "cases",
+        "title": "Real cases of OFM models — screenshots of page statistics",
+        "note": "Amounts are gross total page balances on OnlyFans, not the model's net income. Published with consent.",
+        "linkLabel": "See the cases"
+      },
+      {
+        "type": "p",
+        "text": "You can estimate your range in a minute: the income calculator takes the niche and your experience into account and shows a realistic bracket, not an advertising figure. The result goes straight to the manager on Telegram @ofmm_agency."
+      },
+      {
+        "type": "nav",
+        "intro": "Numbers for your own case:",
+        "links": [
+          {
+            "href": "/calculator",
+            "label": "Income calculator: a realistic bracket in 1 minute"
+          },
+          {
+            "href": "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            "label": "How much models earn across niches"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "\"I'm too non-standard\": the niche's main fear"
+      },
+      {
+        "type": "p",
+        "text": "\"Too non-standard\" is a fear from the world of offices and runways, where you are paid for matching a template. OnlyFans pays for the opposite: money consistently goes to precise types, not to a \"correct\" look. Neighboring niches proved it with documents: a mature model who started at 53 earned $630,000 in two years, and a plus-size page makes $45,000 a month — both cases verified by Business Insider, both models someone else's, not ours, but the laws of niches are shared. What loses out on this platform is not \"non-standard\" — it is facelessness: those median $150–180 a month."
+      },
+      {
+        "type": "p",
+        "text": "For the alt type, being unlike anyone else is literally built into the product. The platform's feed is an endless stream of similar pages, and a profile with tattoo sleeves or a goth look catches the eye without a single dollar of advertising: the recognizability other niches pay stylists and promo for, you already have. The question at the application review is not \"am I standard enough\" but \"where is my audience and how do we bring it\" — and the manager answers that one, not the mirror."
+      },
+      {
+        "type": "nav",
+        "intro": "Neighboring types — the same niche laws:",
+        "links": [
+          {
+            "href": "/blog/mature-modeli-onlyfans",
+            "label": "OnlyFans after 30 and 40: inside the mature niche"
+          },
+          {
+            "href": "/blog/plus-size-modeli-onlyfans",
+            "label": "Plus size model on OnlyFans: the niche's economics"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Will tattoos get in the way: how the platform and fans see them"
+      },
+      {
+        "type": "p",
+        "text": "They will not: the platform has no casting and no restrictions on tattoos, piercings or hair color. There are two hard requirements: 18+ and identity verification with a document. From there, tattoos work for the model, not against her. A recognizable look is remembered faster and sells customs more easily, and every new session at the artist's is a ready-made content event: \"before and after\" shoots and the stories behind individual pieces are a genre alt fans buy in its own right."
+      },
+      {
+        "type": "p",
+        "text": "The one thing tattoos genuinely change is the privacy math: distinctive work is a marker that makes a page easier to connect to a person. We say this at the start directly, with no promises of magical invisibility: how to build the persona around distinctive ink — what to show close up and what to keep out of frame — is decided together with the manager. More on that below, in the section on anonymity."
+      },
+      {
+        "type": "h2",
+        "text": "\"Subculture doesn't sell\": loyalty as economics"
+      },
+      {
+        "type": "p",
+        "text": "It sells — and more steadily than mass-market gloss: the alt niche has some of the highest fan-retention numbers on the platform, consistently near the top across all types. The reason is the audience's habits: people from alt culture have paid for belonging for years — band merch, gigs, supporting artists and musicians. Subscribing to \"their\" model is a continuation of that norm, not an impulse buy, so it does not fall off after a week."
+      },
+      {
+        "type": "p",
+        "text": "The second pillar is the geography of the money. The paying core of the alt audience lives where the platform's purchasing power lives: the US, Canada, Britain, Germany, Scandinavia — countries with big rock and goth scenes and the habit of paying for content. An alt page's promotion aims exactly there, and the niche has channels of its own: communities and tags where the audience is already gathered and looking for \"their own\" — traffic from them is cheaper and converts better than cold ads."
+      },
+      {
+        "type": "nav",
+        "intro": "Where the type fits — and what to do with an existing page:",
+        "links": [
+          {
+            "href": "/blog/tipazhi-modelej-onlyfans",
+            "label": "OnlyFans model types: the hub guide"
+          },
+          {
+            "href": "/vacancies",
+            "label": "OFM agency jobs: all current openings"
+          }
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Want a look from the outside first? The Telegram channel t.me/ofmmAgency has cases of models of different types, screenshots of page statistics and the agency's openings. Subscribing commits you to nothing."
+      },
+      {
+        "type": "h2",
+        "text": "How the agency builds a page for the alt type"
+      },
+      {
+        "type": "p",
+        "text": "A niche is a working plan, not a \"girl with tattoos\" label. Reviewing the application, the manager and the model pick the branch of the aesthetic — goth, punk, rock, e-girl or an original mix — and the boundaries: what she shoots and what is off the table is her decision alone, fixed at the start. The rest is built around the branch: the fan profile, a content plan two weeks ahead, light and angles for the look — training from zero is part of the start — and the tone of the chats in the niche's language: the chat team learns to talk to the fan without the fakeness an alt audience reads instantly."
+      },
+      {
+        "type": "p",
+        "text": "The agency takes the operations completely: account registration and verification, documents, Paxum/Skrill payouts, traffic at the team's expense, conversations in three shifts, analytics. Since 2022 the team has taken 200+ pages through verification, and 70–90% of a page's income comes from private messages — the chat team's work, not endless shoots. What stays with the model is the content: 10–15 hours a week at her own rhythm."
+      },
+      {
+        "type": "h2",
+        "text": "Will your own scene find out: privacy when the circle is small"
+      },
+      {
+        "type": "p",
+        "text": "For an alt woman the fear of exposure is more specific than for most: the scene is small, everyone knows everyone, and distinctive tattoos cannot be hidden. So privacy is built from day one, not \"later\": your home country is geo-blocked, promotion goes to the US, Canada, Australia and Western Europe — the page will not surface in recommendations for people you know. The persona is finished with the distinctive work in mind, and how far to separate the page from your \"daytime\" life is decided together with the manager."
+      },
+      {
+        "type": "p",
+        "text": "One reservation we state plainly: one-hundred-percent anonymity does not exist anywhere — VPNs and screenshots are real. But the combination of geo-blocking, a distant audience and a carefully built persona cuts the risk to a minimum — and it is the standard for every page at the agency, not a paid option."
+      },
+      {
+        "type": "nav",
+        "intro": "Privacy, step by step:",
+        "links": [
+          {
+            "href": "/blog/onlyfans-anonimnost-i-bezopasnost",
+            "label": "Anonymity on OnlyFans: the safety system"
+          },
+          {
+            "href": "/blog/onlyfans-rabota-bez-lica",
+            "label": "A page without your face: pros, cons, methods"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "How to become an alt or tattoo model: 5 steps in 7–14 days"
+      },
+      {
+        "type": "p",
+        "text": "From application to a working page takes 7–14 days, and the team does almost everything along the way:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Application. The form on the site — 2 minutes, anonymous — or a message on Telegram; the manager replies within 24 hours",
+          "Situation review. The branch of the aesthetic, the niche and the boundaries: what you shoot and what is off the table is fixed at the start — and nobody pushes those lines afterwards",
+          "Registration and verification. The account, documents, Paxum/Skrill payouts — the agency handles all the paperwork",
+          "First content plan. What and how to shoot for two weeks: light and angles for your look, the niche's references — training from zero is part of the start",
+          "Launch. The page gets traffic from alt communities, the chat team takes over the conversations — sales usually begin within the first weeks"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A start without bureaucracy: if you try it and it is not for you, you leave freely at any moment, with no penalties and no strings attached. The page can be paused — the content you have already made keeps selling while you live your life."
+      },
+      {
+        "type": "nav",
+        "intro": "Step-by-step guides to the start:",
+        "links": [
+          {
+            "href": "/join",
+            "label": "OFM Models application form — anonymous, 2 minutes"
+          },
+          {
+            "href": "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            "label": "Agency for beginners: a no-experience start"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A story from OFM practice"
+      },
+      {
+        "type": "p",
+        "text": "One of the team's stories is about a 24-year-old administrator at a tattoo studio, with two full sleeves and fuchsia hair. She opened her application with \"I have too many tattoos — does that even work for you?\": before that she had twice been turned down for \"respectable\" jobs over dress codes. The manager built the strategy around the tattoos rather than in spite of them: the persona grew out of her own aesthetic, shoots after every new session went into the content plan as a recurring feature, traffic was aimed at alt communities, and the boundaries were fixed on the first call. Then the system did its work — traffic, the chat team, reinvestment: within the first months the page reached $500–3,000 a month, with a visible share coming from customs bought by regular fans. Her own wording is sharper than any of ours: \"In the office my arms were a problem; here they are my signature.\""
+      },
+      {
+        "type": "h2",
+        "text": "FAQ: alt and tattoo models on OnlyFans"
+      },
+      {
+        "type": "h3",
+        "text": "Does OnlyFans accept models with tattoos?"
+      },
+      {
+        "type": "p",
+        "text": "Yes: the platform has no casting and no appearance restrictions. There are two hard requirements: 18+ and identity verification with a document. At OFM Models, alt and tattoo is a targeted recruiting direction, not an exception: the type gets its own strategy, from persona and content plan to traffic channels in alt communities."
+      },
+      {
+        "type": "h3",
+        "text": "How much does a tattoo model earn on OnlyFans?"
+      },
+      {
+        "type": "p",
+        "text": "Solo — usually $300–700 in the first month. Pages of OFM Models creators reach $3,000–15,000 gross per month, the top ones $15,000–50,000 after months of systematic work. All sums are page-balance turnovers, not payouts in hand: the model receives 20–30% of gross, and the rest is reinvested into the traffic and team that grow her own page."
+      },
+      {
+        "type": "h3",
+        "text": "I'm not a \"real\" goth, I just love the aesthetic. Is that a problem?"
+      },
+      {
+        "type": "p",
+        "text": "No. Nobody runs an exam on subculture membership: the fan pays for the aesthetic, the personal contact and the consistency of the persona, not for ideological purity. The persona is a working frame the manager helps assemble around the formats you are comfortable with; what matters is consistency of delivery — fakeness the audience can feel, \"depth of immersion\" it never checks."
+      },
+      {
+        "type": "h3",
+        "text": "Won't distinctive tattoos give me away to people I know?"
+      },
+      {
+        "type": "p",
+        "text": "The risk is factored in from day one: your home country is geo-blocked, promotion goes only to a distant audience — the US, Canada, Australia, Western Europe — and the persona is built around the distinctive work: what to show close up and what to keep out of frame, you decide with the manager. Nobody gives a hundred-percent guarantee, but this combination is the maximum protection in the industry, and it is on by default."
+      },
+      {
+        "type": "h3",
+        "text": "What if I change my image — recolor my hair or remove a tattoo?"
+      },
+      {
+        "type": "p",
+        "text": "Nothing dramatic: fans are subscribed to a person, not to a particular hair color, and they go through all her changes with her — for an alt audience a change of image is an organic part of life, not a rupture. The team adjusts the content plan and positioning without relaunching the page; the audience and the income carry over."
+      },
+      {
+        "type": "h3",
+        "text": "Piercings and colored hair with zero tattoos — does that count as alt?"
+      },
+      {
+        "type": "p",
+        "text": "Yes. Alt is a spectrum, not a checklist: colored hair, piercings, goth make-up, stage-like looks — any visible step away from the \"standard\" presentation already makes a page stand out in the feed and finds its audience. Which branch of the aesthetic is yours and how to monetize it is defined at a free application review, with no obligations."
+      },
+      {
+        "type": "quote",
+        "text": "All my life I heard \"nobody will hire you with arms like that\". Now those arms are the most recognizable thing on my page: fans are the first to ask when the next session is, and they buy out every shoot with a new tattoo.",
+        "author": "OFM model, alt direction"
+      },
+      {
+        "type": "nav",
+        "intro": "Tried the type on? The next steps:",
+        "links": [
+          {
+            "href": "/join",
+            "label": "Apply to OFM Models — anonymous, no strings"
+          },
+          {
+            "href": "/vacancies/model",
+            "label": "Model vacancy at the OFM agency"
+          },
+          {
+            "href": "/calculator",
+            "label": "Your income bracket — calculate it in a minute"
+          },
+          {
+            "href": "/blog/tipazhi-modelej-onlyfans",
+            "label": "All OnlyFans model types in one guide"
+          },
+          {
+            "href": "/blog/mature-modeli-onlyfans",
+            "label": "Mature niche: pay after 30 and 40"
+          },
+          {
+            "href": "/blog/plus-size-modeli-onlyfans",
+            "label": "Plus size models on OnlyFans: the full guide"
+          },
+          {
+            "href": "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            "label": "Real earnings of OnlyFans models"
+          },
+          {
+            "href": "/blog/rabota-modelyu-onlyfans",
+            "label": "Become an OnlyFans model remotely"
+          }
+        ]
+      },
+      {
+        "type": "cta",
+        "title": "Your aesthetic is a ready-made strategy",
+        "body": "Message the manager on Telegram @ofmm_agency — they will review your situation, name an honest range for the type and answer the questions that are awkward to ask out loud. Or fill in the form on the site: 2 minutes, anonymous, no obligations.",
+        "buttonHref": "/join",
+        "buttonLabel": "Apply to OFM Models",
+        "note": "Income figures are gross page-balance turnovers; market cases are public, attributed examples, not a guarantee. 18+."
+      }
+    ]
+  },
+  "fitness-modeli-onlyfans": {
+    "title": "Fitness Model on OnlyFans: Pay Rates and How to Start",
+    "description": "A fitness model on OnlyFans turns years in the gym into income: agency pages do $3,000–15,000 gross a month. Remote, launch in 7–14 days, anonymous form. 18+.",
+    "keywords": [
+      "fitness model onlyfans",
+      "fitness onlyfans",
+      "onlyfans fitness",
+      "fitness onlyfans agency",
+      "how to become a fitness model on onlyfans",
+      "fitness girl onlyfans",
+      "gym girl onlyfans",
+      "fitness creator onlyfans"
+    ],
+    "blocks": [
+      {
+        "type": "p",
+        "text": "A fitness model on OnlyFans — an athlete, a coach, or simply a girl who has spent years building her physique in the gym — owns the platform's rarest asset: a shape that filters can't fake. In one well-known market case, a creator earns around $10,000 a month on custom training and strength videos. The OFM Models agency recruits fitness models and builds pages around this exact type with a full team — strategy, traffic, chats: such pages reach $3,000–15,000 gross a month on 10–15 hours of shooting a week. Below: the economics of the niche and calm answers to the three questions every athletic girl asks — what fitness creators actually shoot, whether you need competition-level shape, and whether anyone at your gym will find out."
+      },
+      {
+        "type": "p",
+        "text": "This article is for the girl whose life has been half training for years while the sport gives almost nothing back in money: membership, supplements, years of discipline — and the return is Instagram likes that won't even cover protein. The platform's math runs the other way: the shape you have already invested in becomes a working asset with measurable paying demand. Let's lay it out in numbers, not slogans."
+      },
+      {
+        "type": "nav",
+        "intro": "If the decision is almost made — the openings are live:",
+        "links": [
+          {
+            "href": "/vacancies/model",
+            "label": "OnlyFans model opening at OFM — terms"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What a fitness model is on OnlyFans — and why the demand is real"
+      },
+      {
+        "type": "p",
+        "text": "A fitness model on OnlyFans is a woman with an athletic physique who monetizes her shape, her training, and the athletic aesthetic directly — through a paid subscription and custom videos. It's a different profession from commercial fitness modeling with its castings and brand shoots, and from bikini competitions with their prize money: here the one paying is not a judge or an advertiser but your own audience — every single month."
+      },
+      {
+        "type": "p",
+        "text": "The imbalance is easy to see: gym culture is massive across the English-speaking world, yet inside the platform itself an athletic female physique is still a rarity — the feed holds an order of magnitude more gloss than athleticism, and the fan who wants real sport — definition, strength, discipline — finds only a handful of pages. A rare type means low competition and a premium check: the classic economics of a narrow niche."
+      },
+      {
+        "type": "p",
+        "text": "The niche's second pillar is the geography of money. The paying core of the fitness audience lives exactly where the platform's paying core lives: the US, Canada, the UK, Germany, Australia — countries with a mass gym culture and the habit of paying for training content, coaching, and 'their' athletes. A fitness page's promotion aims straight at them, and the niche comes with ready-made channels: sports communities, strength-sport tags and fan hubs where the audience is already gathered and already looking for athletic girls — that traffic costs less and converts better than cold ads."
+      },
+      {
+        "type": "h2",
+        "text": "How much a fitness model earns: the numbers without the gloss"
+      },
+      {
+        "type": "p",
+        "text": "The reference points: a solo start in the fitness niche brings $300–700 in the first month, pages run by the OFM agency reach $3,000–15,000 gross a month, and the top pages hit $15,000–50,000 after months of systematic work. For contrast: offline fitness modeling pays an average of about $23 an hour, according to the job platform Indeed — and demands castings, travel, and middlemen, while a page is run from home and earns every day."
+      },
+      {
+        "type": "table",
+        "caption": "Monthly income benchmarks for fitness pages: from a solo start to systematic work with a team (2026).",
+        "headers": [
+          "Level",
+          "Money per month"
+        ],
+        "rows": [
+          [
+            "Median page with no type and no team",
+            "$150–180 — the price of blending in"
+          ],
+          [
+            "Solo start in the fitness niche",
+            "$300–700 in the first month"
+          ],
+          [
+            "First months with the OFM team",
+            "$500–3,000"
+          ],
+          [
+            "The system: type + traffic + chat team",
+            "$3,000–15,000 gross"
+          ],
+          [
+            "Top agency pages",
+            "$15,000–50,000 — months of systematic work"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Now, how those numbers are built — no varnish. $3,000–15,000 is the page's gross turnover, not a payout in hand: the model keeps 20–30% of gross — the exact share depends on the plan, the type, and the team on the page — while the rest the agency reinvests into the traffic, promo, and chat team that keep growing that same balance. Even the minimum share at the bottom of the range clearly beats a typical trainer's hourly rate — and the top of the range is a league offline work can't reach at all."
+      },
+      {
+        "type": "cases",
+        "title": "Real OFM model cases — page statistics screenshots",
+        "note": "Figures are gross page balance totals, not creator net payout. Published with consent.",
+        "linkLabel": "View cases"
+      },
+      {
+        "type": "p",
+        "text": "You can sanity-check a range for your own starting point in a minute: the income calculator factors in type and experience and shows a realistic bracket, not an advertising number. The result goes straight into a conversation with a manager on Telegram @ofmm_agency."
+      },
+      {
+        "type": "nav",
+        "intro": "Run your own numbers:",
+        "links": [
+          {
+            "href": "/calculator",
+            "label": "OnlyFans income calculator"
+          },
+          {
+            "href": "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            "label": "How much OnlyFans models earn"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What fitness creators shoot: the formats fans pay for"
+      },
+      {
+        "type": "p",
+        "text": "The core of the niche is content only an athlete can make: training with real working weights, flexing and displays of strength, before-and-after progress, customs filmed to a fan's request — plus the more personal formats that make an OnlyFans page an OnlyFans page. A telling market case covered by the British press: an arm-wrestling athlete earns around $10,000 a month on custom videos — arm-wrestling on demand, strength displays, training clips. She's not our model — she's a public example of how highly the platform prices strength as a genre. The exact content mix for your page is put together with your manager before launch — the boundaries are fixed up front, and only you decide them."
+      },
+      {
+        "type": "p",
+        "text": "The mechanics: fitness fans pay for what a regular feed can't give them — flexing on request, strength challenges, 'try and repeat this,' a workout in specific gear. Customs like that sell at a premium precisely because only someone with a real physique can film them. The platform's official terms don't stand in the way: the rules on onlyfans.com contain no requirement about how revealing content must be — the two hard conditions are 18+ and ID verification, and what gets published on the page is the creator's call."
+      },
+      {
+        "type": "p",
+        "text": "Boundaries, meanwhile, are not an ad slogan but a working agreement: at the start the manager fixes, together with the model, what she shoots and what is off-limits for her — and afterwards nobody moves those lines. Some fitness models add a bolder layer of content over time and grow their check; others work in the athletic format for years — both strategies pay, and the choice stays with the girl."
+      },
+      {
+        "type": "nav",
+        "intro": "Neighboring types — the same laws of the niche:",
+        "links": [
+          {
+            "href": "/blog/mature-modeli-onlyfans",
+            "label": "OnlyFans after 30 and 40: the mature type and its pay"
+          },
+          {
+            "href": "/blog/plus-size-modeli-onlyfans",
+            "label": "Plus-size model on OnlyFans: pay and how to start"
+          },
+          {
+            "href": "/blog/alt-modeli-onlyfans",
+            "label": "Alt and tattoo model on OnlyFans: pay and how to start"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Do you need competition shape? What level is 'enough'"
+      },
+      {
+        "type": "p",
+        "text": "Competition-level conditioning is not required: a fitness fan pays for living athleticism and personal contact, not for peak stage shape. A bikini-division judge scores proportions against a rulebook — a subscriber picks a person: a real workout with working weights and month-to-month progress interests him more than a perfect but impersonal shot. There are several entry levels into the niche — from 'I train regularly and stay toned' to competitive athleticism — and each one has its audience."
+      },
+      {
+        "type": "p",
+        "text": "The road to shape is itself a ready-made content genre: a before-and-after series, a prep diary, honest slumps and comebacks hold a subscriber for months, because the story has no finale. Neighboring niches have proven the same law with money: a mature model who started at 53 earned $630,000 in two years (a case verified by Business Insider), and a plus-size page makes $45,000 a month — the platform pays again and again for hitting your exact audience, not for matching a glossy standard. The only loser here is facelessness: the median $150–180 a month of pages that look like everyone else's."
+      },
+      {
+        "type": "h2",
+        "text": "Will your gym find out? Privacy for coaches and athletes"
+      },
+      {
+        "type": "p",
+        "text": "In the fitness world the fear of exposure has concrete faces: personal-training clients, colleagues at the gym, the coaches' group chat, and — for competitors — the federation. That's why privacy is built from day one, not 'later': your home country and region are closed off with a geo-block, and promotion targets the US, Canada, Australia, and Western Europe — the page won't surface in recommendations among people who know you. How far to separate the page from your 'daytime' sports life — recognizable gear, your gym's interior, competition photos — you decide with your manager at the start."
+      },
+      {
+        "type": "p",
+        "text": "One caveat we say out loud: one-hundred-percent anonymity doesn't exist anywhere — VPNs and screenshots are real. But the combination of a geo-block, a far-away audience, and a thought-through on-page persona cuts the risk to a minimum — and at the agency that's the standard for every page, not a paid option."
+      },
+      {
+        "type": "nav",
+        "intro": "Privacy, step by step:",
+        "links": [
+          {
+            "href": "/blog/onlyfans-anonimnost-i-bezopasnost",
+            "label": "Anonymity and safety on the platform"
+          },
+          {
+            "href": "/blog/onlyfans-rabota-bez-lica",
+            "label": "OnlyFans and your face: staying unrecognized"
+          }
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Want to watch from the sidelines first? The Telegram channel t.me/ofmmAgency posts model cases across different types, page statistics screenshots, and the agency's openings. Subscribing commits you to nothing."
+      },
+      {
+        "type": "h2",
+        "text": "How the agency builds a page around the fitness type"
+      },
+      {
+        "type": "p",
+        "text": "The type is a working plan, not a 'girl from the gym' label. Reviewing the application, the manager picks the niche branch together with the model — athletic lifestyle and aesthetics, bikini-style gloss, or strength and definition — and builds around it a portrait of the fan, a content plan two weeks ahead, and customs as a separate price line: in the fitness niche they carry the highest check. A separate perk of the type: content production is built into your normal week — the workouts you already do become shooting days, no extra shifts."
+      },
+      {
+        "type": "p",
+        "text": "The operations side the agency takes over completely: account registration and verification, documents, Paxum/Skrill payment rails, traffic at the team's expense, chats in three shifts, analytics. Since 2022 the team has taken 200+ pages through verification, and 70–90% of a page's income comes from private messages — that is, from the chat team's work, not from endless shooting. What stays with the model is the content: 10–15 hours a week at her own pace, compatible with a coaching schedule or with studies."
+      },
+      {
+        "type": "h2",
+        "text": "How to become a fitness model on OnlyFans: 5 steps in 7–14 days"
+      },
+      {
+        "type": "p",
+        "text": "From application to a working page takes 7–14 days, and the team does almost everything along the way:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Application. The on-site form takes 2 minutes, anonymously — or a message on Telegram; a manager replies within 24 hours",
+          "Situation review. The niche branch, the content format, and the boundaries: what you shoot and what's off-limits is fixed at the start — and nobody pushes on those lines afterwards",
+          "Registration and verification. The account, the documents, Paxum/Skrill payment rails — the agency sets up all of it",
+          "Your first content plan. What to shoot and how for the next two weeks: light, angles, and presentation for the athletic persona — training from zero is part of the launch",
+          "Launch. The page gets traffic from fitness communities and targeted channels, the chat team joins the conversations — sales usually start within the first weeks"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The start comes with no bureaucracy: if you try it and it's not for you, you leave freely at any moment, with no penalties and no obligations. The page can also be paused — during competitions, exams, or a holiday the finished content keeps selling."
+      },
+      {
+        "type": "nav",
+        "intro": "Step-by-step launch guides:",
+        "links": [
+          {
+            "href": "/join",
+            "label": "Apply to the OFM agency — the model form"
+          },
+          {
+            "href": "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            "label": "An agency for beginners: starting from zero"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A story from OFM practice"
+      },
+      {
+        "type": "p",
+        "text": "One of the team's stories is about a 26-year-old group-class coach who had lived in the gym since her teens. The main question in her application read: 'who would even want content from an ordinary gym coach?' The manager built the strategy around her strongest side: a page about strength and discipline, content from her real training sessions plus personal formats tuned to the page's audience, customs as a separate price line — flexing on request, strength challenges, programs built to a fan's request — traffic aimed at a far-away English-speaking audience, boundaries fixed on the first call. Then the system did its work — traffic, chat team, reinvestment: within the first months the page reached $500–3,000 a month, and most of it came from regular fans' customs. The shape the gym used to praise for free is now something people pay for — the best possible outcome of a page's first season."
+      },
+      {
+        "type": "h2",
+        "text": "FAQ: fitness models on OnlyFans"
+      },
+      {
+        "type": "h3",
+        "text": "What does a fitness page's content include?"
+      },
+      {
+        "type": "p",
+        "text": "Sport sets the foundation: training, physique, flexing, customs to a fan's request — plus the personal formats you pick with your manager for your page. The platform has two hard requirements: 18+ and ID verification. The market case from the British press — around $10,000 a month on arm-wrestling customs (not our model). What you shoot and what's off-limits is fixed at the start and isn't revisited without your decision."
+      },
+      {
+        "type": "h3",
+        "text": "How much does a fitness model earn on OnlyFans?"
+      },
+      {
+        "type": "p",
+        "text": "Solo — usually $300–700 in the first month. Pages run by the OFM agency reach $3,000–15,000 gross a month; the top ones hit $15,000–50,000 after months of systematic work. All sums are page-balance turnover, not take-home pay: the model keeps 20–30% of gross, and the rest is reinvested into the traffic and team that grow her own page."
+      },
+      {
+        "type": "h3",
+        "text": "How is an OnlyFans fitness model different from a bikini competitor?"
+      },
+      {
+        "type": "p",
+        "text": "Bikini is a competitive division: a stage, a rulebook, judges, prize money a few times a year. A fitness model on OnlyFans monetizes her shape directly with her own audience — through subscriptions and customs, every month and with no judging criteria. A competitive background isn't required, but it works as an accelerator: existing shape, discipline, and a photo archive are launch assets."
+      },
+      {
+        "type": "h3",
+        "text": "What do you need to become a fitness model on OnlyFans?"
+      },
+      {
+        "type": "p",
+        "text": "There are two hard requirements: 18+ and ID verification. Beyond that you need living athleticism — anywhere from 'I train regularly and stay toned' to competitive shape; there's an audience at every level. There's no casting: your type, niche branch, and starting content plan are defined at a free application review with a manager, and shooting is taught from zero as part of the launch."
+      },
+      {
+        "type": "h3",
+        "text": "Does it fit alongside coaching or an athletic career?"
+      },
+      {
+        "type": "p",
+        "text": "Yes — better than most side jobs: the page takes 10–15 hours a week, and the workouts you already run become the content. The page is hidden from clients and colleagues by a geo-block on your home region, and promotion targets a far-away audience. If you compete and have public athletic profiles, how to keep them separate from the page is worked out with your manager individually, before launch."
+      },
+      {
+        "type": "h3",
+        "text": "What are customs, and why do they earn so much in the fitness niche?"
+      },
+      {
+        "type": "p",
+        "text": "A custom is a video shot to a specific fan's order: in the fitness niche that's flexing, arm-wrestling, strength challenges, a workout in chosen gear, or a program built to his request. They're paid at a premium because only a girl with real shape can film them — supply is limited by the niche itself. In the market case from the British press, customs brought around $10,000 a month; on agency pages customs are the top line of the price list inside the $3,000–15,000 gross range."
+      },
+      {
+        "type": "tip",
+        "text": "The paradox of the niche: the muscles that earn you a 'why would a girl need those?' at the gym become the page's main asset on the platform — training customs rank among the fitness niche's best-selling formats, and the market case of ~$10,000 a month is built on exactly them."
+      },
+      {
+        "type": "nav",
+        "intro": "Tried the type on for size? The next steps:",
+        "links": [
+          {
+            "href": "/join",
+            "label": "Apply to OFM — the anonymous model form"
+          },
+          {
+            "href": "/vacancies/model",
+            "label": "Model openings at OFM — terms and pay"
+          },
+          {
+            "href": "/calculator",
+            "label": "Income calculator — your range in a minute"
+          },
+          {
+            "href": "/blog/mature-modeli-onlyfans",
+            "label": "The mature type: OnlyFans after 30 and 40"
+          },
+          {
+            "href": "/blog/plus-size-modeli-onlyfans",
+            "label": "The plus-size type: pay and the way in"
+          },
+          {
+            "href": "/blog/alt-modeli-onlyfans",
+            "label": "The alt and tattoo type: pay and the way in"
+          },
+          {
+            "href": "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            "label": "How much models actually earn"
+          },
+          {
+            "href": "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            "label": "Agency for beginners: how the start works"
+          }
+        ]
+      },
+      {
+        "type": "cta",
+        "title": "Your shape is already a strategy",
+        "body": "Message a manager on Telegram @ofmm_agency — they'll look at your situation, give you an honest range for your type, and answer the questions that feel awkward to ask out loud. Or fill in the form on the site: 2 minutes, anonymous, no obligations.",
+        "buttonHref": "/#contact",
+        "buttonLabel": "Apply now",
+        "note": "Income figures are gross page-balance turnover; market cases are public, attributed examples, not a guarantee. 18+ only."
+      }
+    ]
+  },
+  "kak-smenit-onlyfans-agentstvo": {
+    "title": "How to Switch OnlyFans Agencies: 5 Steps, No Downtime",
+    "description": "Switching your OnlyFans agency takes 1–2 weeks: regain logins, back up content, give written notice, relaunch. 5 steps, red flags and a no-downtime move to OFM.",
+    "keywords": [
+      "how to switch onlyfans agency",
+      "leave onlyfans agency",
+      "how to leave an onlyfans agency",
+      "change onlyfans agency",
+      "switch onlyfans management",
+      "onlyfans agency holding my account"
+    ],
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Switching your OnlyFans agency takes one to two weeks and is possible at any stage: the page belongs to the model whose documents passed verification — not to the team that runs it. The short plan: regain control of your logins, save your content and statistics, give the old team written notice, and only then launch with the new crew. Below, the OFM Models team breaks down every step and the traps where creators lose the most money and nerves."
+      },
+      {
+        "type": "p",
+        "text": "The situation is anything but rare: roughly half of the models who come to OFM have already worked with another agency. They rarely leave over a single argument — it's the accumulation: payouts you can't verify, a dead balance, pressure on your limits. The good news: the switch almost always goes more calmly than you expect."
+      },
+      {
+        "type": "h2",
+        "text": "When it's time to leave your OnlyFans agency: 6 red flags"
+      },
+      {
+        "type": "p",
+        "text": "Separate working friction from systemic failure. One delayed reply is a reason to message your manager. These, however, are signs the team is no longer working for you:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Payouts arrive late and there's no way to verify how they're calculated: page statistics are hidden or shown as 'screenshots on request.'",
+          "The page balance has been flat for three months or longer, and the team proposes no new plan.",
+          "You're being talked into formats you marked as a hard no — your boundary has started to 'drift.'",
+          "The manager replies once every few days; communication has shrunk to a bot or canned replies.",
+          "Any question about leaving is met with threats: 'walk away and you'll lose the page and all the money.'",
+          "Promotion was promised — but in months you haven't seen a single ad campaign or an inflow of new fans."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "One item from the list is a reason for a frank conversation with the team. Three or more — a reason to start preparing the switch."
+      },
+      {
+        "type": "h2",
+        "text": "What to check before you leave: access and ownership"
+      },
+      {
+        "type": "p",
+        "text": "The golden rule of switching: control first, notice second. While the old team holds your access, you're negotiating from a weak position. Check five things:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "The page's login and email — whose inbox the account is registered to, and whether you can get into that inbox.",
+          "Two-factor authentication — whose phone number receives the codes.",
+          "Payment rails (Paxum, Skrill) — whose name the wallets are in and where the payouts actually land.",
+          "Verification — whether the page passed review with your documents (the norm: always the model's own documents).",
+          "Written terms — what you actually accepted and what it says about ending the collaboration. Verbal promises and verbal threats carry no weight."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The key fact that defuses most of the fear: the platform treats the person whose documents passed verification as the page's owner. Even if the agency changes the passwords, access is restored through OnlyFans support based on that same verification. A page verified with your ID cannot be 'taken' from you."
+      },
+      {
+        "type": "h2",
+        "text": "How to leave the right way: 5 steps"
+      },
+      {
+        "type": "h3",
+        "text": "Step 1. Take back control of your access"
+      },
+      {
+        "type": "p",
+        "text": "Calmly, with no announcements: change the page password and link the account to your own email, update that email's password, switch two-factor codes to your own number. If the wallets were set up 'through the agency' — open your own and check that withdrawals point at them."
+      },
+      {
+        "type": "h3",
+        "text": "Step 2. Save your content and statistics"
+      },
+      {
+        "type": "p",
+        "text": "Download your content archive and copy the last few months of statistics: balances, subscribers, sales. That's your material for talks with the new team — the relaunch plan is built on it."
+      },
+      {
+        "type": "h3",
+        "text": "Step 3. Give the team written notice"
+      },
+      {
+        "type": "p",
+        "text": "Short and neutral, no accusations: 'I'm ending our collaboration as of this date — please hand over the accounts.' Two to three weeks is a normal wind-down period. A hostile exit buys you nothing except the risk that, on the way out, someone 'forgets' to hand back your access."
+      },
+      {
+        "type": "h3",
+        "text": "Step 4. Don't delete the page"
+      },
+      {
+        "type": "p",
+        "text": "Even a neglected page with history, reviews, and a fan base is an asset. A new team revives an existing page faster than it builds momentum on a fresh one: there are already subscribers, a payment history, and a standing in the platform's recommendations."
+      },
+      {
+        "type": "h3",
+        "text": "Step 5. If the agency is holding the page"
+      },
+      {
+        "type": "p",
+        "text": "Don't panic and don't pay any 'ransom.' Write to the platform's support with the documents used for verification — access is returned to the documents' owner. Threats of 'penalties' with nothing in writing behind them are a scare tactic: check what you actually accepted before taking them seriously."
+      },
+      {
+        "type": "h2",
+        "text": "The new agency: how not to step on the same rake"
+      },
+      {
+        "type": "p",
+        "text": "Switching only makes sense if the new team is stronger than the old one. Before agreeing, ask the candidates five questions — their reactions will tell you everything:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Will you show statistics from real launches? (A solid team shows numbers, not promises.)",
+          "How are my limits and boundaries recorded? (A written yes/no content list before launch is the standard.)",
+          "What happens if I decide to leave? (A clear answer without threats is the marker of a healthy team.)",
+          "Whose name goes on the access and the payment rails? (Verification runs on your documents, full stop.)",
+          "Are there any payments from my side? (Any 'entry fee' asked of the model is a red flag.)"
+        ]
+      },
+      {
+        "type": "nav",
+        "intro": "How to vet agencies — the detailed guides:",
+        "links": [
+          {
+            "href": "/blog/onlyfans-agentstvo-moshennichestvo",
+            "label": "10 signs of a scam agency — the full list"
+          },
+          {
+            "href": "/blog/kak-vybrat-onlyfans-agentstvo",
+            "label": "Choosing an OnlyFans agency: what to compare"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Switching to OFM: no paperwork, leave anytime, no downtime"
+      },
+      {
+        "type": "p",
+        "text": "Half of our models came from other agencies, so at OFM the transfer is a practiced routine, not an improvisation. We help you close out the old collaboration correctly, regain your access, and re-secure the page: the email, the two-factor codes, the payment rails — everything ends up in your hands. There's no paperwork at the start, you're free to leave at any moment, and your existing limits and boundaries are preserved and written down again before the relaunch."
+      },
+      {
+        "type": "p",
+        "text": "Then comes a page audit, a fresh content plan built around your type, and a traffic relaunch — the page keeps working through the handover, so there's no downtime. The balance usually comes back to life within the first month after the switch: no guarantees of specific sums — the result depends on type and consistency — but stagnation is almost always cured by exactly this, a promotion restart."
+      },
+      {
+        "type": "h2",
+        "text": "FAQ: switching OnlyFans agencies"
+      },
+      {
+        "type": "h3",
+        "text": "Who owns an OnlyFans page — the model or the agency?"
+      },
+      {
+        "type": "p",
+        "text": "The model. The page is verified with a specific person's documents, and the platform treats that person as the owner. The agency gets operational access to do its work, but it never becomes the 'proprietor.'"
+      },
+      {
+        "type": "h3",
+        "text": "Can I leave if the agency threatens me with penalties?"
+      },
+      {
+        "type": "p",
+        "text": "Check the written terms you actually accepted: most of the time there's nothing behind the threats. Verbal 'penalty clauses' have no legal force, and holding someone else's verified page hostage is a direct violation of the platform's rules."
+      },
+      {
+        "type": "h3",
+        "text": "Will I lose subscribers when I switch agencies?"
+      },
+      {
+        "type": "p",
+        "text": "No — the page stays the same, and the subscribers go nowhere. A short dip in sales for a week or two is possible while the new chat team studies the audience and settles into the conversations."
+      },
+      {
+        "type": "h3",
+        "text": "How long does the switch take?"
+      },
+      {
+        "type": "p",
+        "text": "Usually one to two weeks: regain access, hand over the accounts, run the page audit, and agree on the new plan. The direction of the trend is already visible in the first month after the relaunch."
+      },
+      {
+        "type": "h3",
+        "text": "What if the agency won't hand back my access?"
+      },
+      {
+        "type": "p",
+        "text": "First try to recover access through the page's email. If the email is under the agency's control too — write to the platform's support with the documents used for verification: access is returned to the documents' owner."
+      },
+      {
+        "type": "h3",
+        "text": "What if I already have an agency — can I still talk to OFM?"
+      },
+      {
+        "type": "p",
+        "text": "Yes — that's exactly the situation of about half of our incoming models. Message a manager, describe where things stand, and get a free audit of your page: you'll see what a relaunch could change before deciding anything. Nobody will rush you to quit — you compare the plans first and choose after; the transfer itself takes one to two weeks with no downtime."
+      },
+      {
+        "type": "nav",
+        "intro": "Related reading on the OFM site:",
+        "links": [
+          {
+            "href": "/research/onlyfans-creator-safety-2026",
+            "label": "Creator Safety 2026: the research behind the red flags"
+          },
+          {
+            "href": "/blog/kak-vybrat-onlyfans-agentstvo",
+            "label": "How to choose your next agency"
+          },
+          {
+            "href": "/blog/onlyfans-agentstvo-ukraina",
+            "label": "OFM in Ukraine: the agency page"
+          },
+          {
+            "href": "/vacancies/model/with-account",
+            "label": "Already have a page? Free audit for working models"
+          },
+          {
+            "href": "/faq",
+            "label": "Agency FAQ: percentage and terms"
+          },
+          {
+            "href": "/join",
+            "label": "Apply to OFM — the application form"
+          }
+        ]
+      },
+      {
+        "type": "cta",
+        "title": "Switch with the OFM team at your back",
+        "body": "Tell a manager where things stand: we'll suggest how to close out the old agency cleanly and build the relaunch plan for your page. We reply on Telegram within 24 hours — no pressure.",
+        "buttonHref": "/join",
+        "buttonLabel": "Discuss the switch",
+        "note": "Your existing limits and boundaries carry over. No payments from your side."
+      }
+    ]
+  },
+  "mature-modeli-onlyfans": {
+    "title": "Mature OnlyFans Agency: Pay After 30, 40 & How to Start",
+    "description": "Mature models 30+ and 40+ are a top-paying OnlyFans niche: pages with the OFM team hit $3,000–15,000 gross/mo. Remote, no experience, start in 7–14 days. 18+.",
+    "keywords": [
+      "mature onlyfans agency",
+      "onlyfans after 40",
+      "onlyfans after 30",
+      "mature onlyfans models",
+      "onlyfans over 40",
+      "how to start onlyfans at 40",
+      "onlyfans for older women",
+      "mature model agency"
+    ],
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Mature — the OnlyFans niche for models 30+, 40+ and older — is one of the platform's highest-paying segments, and the OFM Models agency recruits mature creators worldwide and runs their pages end to end: strategy, traffic, conversations. Pages built this way reach $3,000–15,000 gross per month on 10–15 hours of shooting a week. The niche's most famous market case is $630,000 in two years by a model who started at 53 (documents verified by Business Insider; not our model — a verified example of what the market pays). Below are calm answers to the two big questions: why age is an asset here, and what the start looks like when you are 32, 38 or 45."
+      },
+      {
+        "type": "p",
+        "text": "This page is for a woman whose life is already built — and who wants to rebuild it on her own terms. The kids are older, and for the first time in years there is time for yourself. Or a divorce is behind you, and the money now has to be yours — not an allowance. Or it is year fifteen of a stable job you can no longer stand. And on top of it all sit two ingrained fears: \"it's too late for me\" and \"who would choose me over the twenty-year-olds\". We will take both apart — with numbers, not pep talks."
+      },
+      {
+        "type": "nav",
+        "intro": "If the decision is almost made — the vacancy is open:",
+        "links": [
+          {
+            "href": "/vacancies/model",
+            "label": "OnlyFans model vacancy at OFM — remote, worldwide"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What a mature model is — and why the demand is real"
+      },
+      {
+        "type": "p",
+        "text": "A mature model is a woman 30+, 40+ or older who runs her page inside her own age niche instead of competing with twenty-year-olds on their turf. The demand is simply structured: the platform has a huge audience of men aged 30–60, and a visible share of them deliberately looks for women their own age — natural, confident, adult. For these fans the model's age is not a concession; it is the reason they subscribe."
+      },
+      {
+        "type": "p",
+        "text": "The niche has a property that converts straight into money: retention. Fans of mature pages stay subscribed longer and pay more steadily — the audience is adult, has income and is used to paying for what it likes, without impulsive unsubscribes a week later. Competition, meanwhile, stays minimal: most women simply do not believe that \"after 30\" is still possible — so the niche that pays most willingly stands half-empty."
+      },
+      {
+        "type": "h2",
+        "text": "What mature models get paid: numbers without gloss"
+      },
+      {
+        "type": "p",
+        "text": "The reference points: a solo start brings $300–700 in the first month, pages of OFM Models creators reach $3,000–15,000 gross per month, and the agency's top pages sit at $15,000–50,000 — the result of months of systematic work, not of week one. The ceiling of the niche was set by the market itself: those $630,000 in two years by a model who started at 53 — a case with verified documents, but someone else's, so we treat it as the niche's ceiling, not as a promise."
+      },
+      {
+        "type": "table",
+        "caption": "Monthly income benchmarks for mature pages: from a solo start to systematic work with a team (2026).",
+        "headers": [
+          "Level",
+          "Money per month"
+        ],
+        "rows": [
+          [
+            "Median page with no niche and no team",
+            "$150–180 — the price of blending in"
+          ],
+          [
+            "Solo start in the mature niche",
+            "$300–700 in the first month"
+          ],
+          [
+            "First months with the OFM team",
+            "$500–3,000"
+          ],
+          [
+            "The system: niche + traffic + chat team",
+            "$3,000–15,000 gross"
+          ],
+          [
+            "Top pages of the agency",
+            "$15,000–50,000 — months of systematic work"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Now honestly, about how these numbers are built. $3,000–15,000 is the page's gross turnover, not a payout in hand: the model receives 20–30% of gross — the share depends on the plan, the niche, and the team setup — and the agency reinvests the rest into the traffic, promotion and chat team that keep growing that same balance. Even the minimum share at the bottom of the range beats a typical office salary — and the top of the range is not something an office can match at all."
+      },
+      {
+        "type": "cases",
+        "title": "Real cases of OFM models — screenshots of page statistics",
+        "note": "Amounts are gross total page balances on OnlyFans, not the model's net income. Published with consent.",
+        "linkLabel": "See the cases"
+      },
+      {
+        "type": "p",
+        "text": "You can estimate your own range in a minute: the income calculator takes the niche and your experience into account and shows a realistic bracket, not an advertising figure. The result goes straight into a conversation with the manager on Telegram @ofmm_agency."
+      },
+      {
+        "type": "nav",
+        "intro": "Numbers for your own case:",
+        "links": [
+          {
+            "href": "/calculator",
+            "label": "OnlyFans income calculator — your bracket in a minute"
+          },
+          {
+            "href": "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            "label": "What OnlyFans models actually earn by level"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "\"It's too late for me\": taking the main fear apart"
+      },
+      {
+        "type": "p",
+        "text": "It is not too late — and that is not a motivational line, it is a description of the market: demand for mature is consistently high, the niche pays better than many \"young\" ones, and its most public case was built by a woman who started at 53 — ten to twenty years older than the reader of this article right now. In most professions age narrows your options; here it is the opposite: the more precisely a page lands in its own age audience, the cheaper the traffic and the more loyal the fans."
+      },
+      {
+        "type": "p",
+        "text": "The second fear: \"there are millions of twenty-year-olds on the platform — who would pick me?\" The answer is in how niches work: a mature fan does not choose between you and a twenty-year-old — he came for a woman his own age, and the glossy pages are background for him, not an alternative. Inside the niche, competition is a fraction of the platform's general stream, while loyalty and average spend are higher. What loses out on this platform is not age — it is facelessness: the median $150–180 a month is earned by \"same as everyone\" pages, at any age."
+      },
+      {
+        "type": "h2",
+        "text": "Will colleagues and family find out: how privacy works"
+      },
+      {
+        "type": "p",
+        "text": "For an adult woman the fear of exposure weighs more than for a student: a reputation at work, a circle of friends, a family. That is why privacy is built from day one, not \"later\": your home country — and any country where people know you — is geo-blocked, while promotion targets paying audiences in the US, Canada, Australia and Western Europe; if you live inside those regions yourself, the manager tightens the geo-blocks further and builds the persona separately from your daily life. How visible you are and how the persona is shaped is decided together with the manager: some models run pages that never intersect with their \"daytime\" life at all."
+      },
+      {
+        "type": "p",
+        "text": "One reservation we state plainly: one-hundred-percent anonymity does not exist anywhere — VPNs and screenshots are real. But the combination of geo-blocking, a distant audience and a carefully built persona cuts the risk to a minimum — and it is the standard for every page at the agency, not a paid option."
+      },
+      {
+        "type": "nav",
+        "intro": "Privacy, step by step:",
+        "links": [
+          {
+            "href": "/blog/onlyfans-anonimnost-i-bezopasnost",
+            "label": "Anonymity and safety on OnlyFans: the full setup"
+          },
+          {
+            "href": "/blog/onlyfans-rabota-bez-lica",
+            "label": "Running a page without showing your face"
+          }
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Want to watch from the sidelines first? The Telegram channel t.me/ofmmAgency has cases of models of different niches and ages, screenshots of page statistics and the agency's openings. Subscribing commits you to nothing."
+      },
+      {
+        "type": "h2",
+        "text": "Jobs for women over 40: how a page compares with the other options"
+      },
+      {
+        "type": "p",
+        "text": "If you look at a model's page simply as a job for a woman over 40, the comparison is short: it is the only format available without a degree, relocation or upfront money where income is not tied to hours worked. The options a job search usually offers look like this:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Admin, retail, an office with no career ladder — a rigid full-time schedule where every dollar is capped by the hour",
+          "Care or cleaning work abroad — relocation, separation from family and work that wears you down",
+          "Your own micro-business — a higher ceiling, but savings at risk from day one",
+          "A model's page with the OFM team — $3,000–15,000 gross on 10–15 hours of shooting a week, from home, on your own schedule"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The core difference is the mechanics. In an office or on shifts, every dollar is paid for with an hour of your life: if you do not show up, you do not earn. A page works differently: content keeps selling while you live your life, and 70–90% of the income comes from private messages, which the agency's chat team runs around the clock — in the niche's language and in a tone you approved at the start."
+      },
+      {
+        "type": "nav",
+        "intro": "Where this niche fits in the bigger picture:",
+        "links": [
+          {
+            "href": "/blog/tipazhi-modelej-onlyfans",
+            "label": "OnlyFans model types: the niches that actually pay"
+          },
+          {
+            "href": "/blog/onlyfans-modeli-kto-eto",
+            "label": "Who OnlyFans models are and how they get paid"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "How to start: 5 steps in 7–14 days"
+      },
+      {
+        "type": "p",
+        "text": "From application to a working page takes 7–14 days, and the team does almost everything along the way:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Application. The form on the site — 2 minutes, anonymous — or a message on Telegram; the manager replies within 24 hours",
+          "Situation review. Niche and boundaries: what you shoot and what is off the table is your call alone — and the rhythm is agreed around your life from the start",
+          "Registration and verification. The account, documents, Paxum/Skrill payouts — the agency handles all the paperwork",
+          "First content plan. What and how to shoot for two weeks ahead: light, angles, references — training from zero is part of the start",
+          "Launch. The page gets traffic, the chat team takes over the conversations — sales usually begin within the first weeks"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A start without bureaucracy: if you try it and it is not for you, you leave freely at any moment, with no penalties and no strings attached. The page can be paused — a holiday, family matters, a busy month: the content you have already made keeps selling without you."
+      },
+      {
+        "type": "nav",
+        "intro": "Step-by-step guides for the start:",
+        "links": [
+          {
+            "href": "/join",
+            "label": "Fill in the OFM Models application — anonymous"
+          },
+          {
+            "href": "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            "label": "Starting from zero with an agency: the beginner's guide"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A story from OFM practice"
+      },
+      {
+        "type": "p",
+        "text": "One of the team's stories is about a 41-year-old clinic administrator: after a divorce the money had to be her own, and she opened her application with \"I probably don't fit — I'm over forty.\" The manager proposed the mature niche and built the strategy around her age rather than in spite of it: boundaries were fixed on the first call, the persona was built separately from her daytime life, and shooting settled into two evenings a week. Then the system did its work — traffic, the chat team, reinvestment: within the first months her page reached $500–3,000 a month, matching her office salary at the bottom of the range and pulling away from it after that. In her own words: the fans in this niche turned out to be more grown-up and more polite than she had feared."
+      },
+      {
+        "type": "h2",
+        "text": "FAQ: mature models on OnlyFans"
+      },
+      {
+        "type": "h3",
+        "text": "Is it too late to start OnlyFans after 40?"
+      },
+      {
+        "type": "p",
+        "text": "No: mature is one of the platform's highest-paying niches, and its most public case — $630,000 in two years — was built by a model who started at 53 (documents verified by Business Insider; not our model). At OFM Models, mature is a priority direction: the niche's audience pays steadily, and competition inside it is still low."
+      },
+      {
+        "type": "h3",
+        "text": "Do you take women over 45?"
+      },
+      {
+        "type": "p",
+        "text": "Yes. The platform has one hard limit — 18+ with document verification; an upper age line does not exist. Age in the application is an input for strategy, not a filter: the manager looks at the niche, the formats you are comfortable with and your goals, and builds the page plan around them."
+      },
+      {
+        "type": "h3",
+        "text": "Do I need a model's figure?"
+      },
+      {
+        "type": "p",
+        "text": "No. Mature fans pay for naturalness, confidence and personal contact, not for billboard measurements. The median $150–180 a month is the fate of faceless pages, not of \"non-model\" ones: the neighboring plus-size niche, with a verified case of $45,000 a month, is direct proof that the market pays for a precise niche, not for a standard."
+      },
+      {
+        "type": "h3",
+        "text": "How much time does it take?"
+      },
+      {
+        "type": "p",
+        "text": "10–15 hours a week of shooting, on your own schedule. The content plan is built two weeks ahead, and 70–90% of the income comes from the conversations the agency's chat team runs around the clock. The format fits alongside a day job and a family calendar — many models combine them for the first months."
+      },
+      {
+        "type": "h3",
+        "text": "I've never modeled and can't pose. Is that a dealbreaker?"
+      },
+      {
+        "type": "p",
+        "text": "No: training from zero is part of the start. The manager helps with the persona, light and angles for your conditions, and the first content plan spells out what, how and when to shoot. Since 2022 the team has taken 200+ pages through verification, and most of those models started with no shooting experience at all."
+      },
+      {
+        "type": "h3",
+        "text": "How do I hide the page from colleagues and people I know?"
+      },
+      {
+        "type": "p",
+        "text": "Geo-blocking closes your home country from day one, promotion goes only to a distant audience — the US, Canada, Australia, Western Europe — and the persona is built separately from your \"daytime\" life. Nobody can give an absolute guarantee, but this combination is the maximum protection the industry has, and it is on by default."
+      },
+      {
+        "type": "quote",
+        "text": "At 39 I wrote to the agency expecting a polite no. Six months later the page makes more in a month than I used to bring home in a quarter — and the fans of the mature niche turned out to be more courteous than some office colleagues.",
+        "author": "OFM model, mature direction"
+      },
+      {
+        "type": "nav",
+        "intro": "Tried the niche on for size? The next steps:",
+        "links": [
+          {
+            "href": "/join",
+            "label": "Send your application to OFM Models — anonymous"
+          },
+          {
+            "href": "/vacancies/model",
+            "label": "OnlyFans model vacancy — from $3,000/mo, worldwide"
+          },
+          {
+            "href": "/vacancies",
+            "label": "All OFM agency jobs in one place"
+          },
+          {
+            "href": "/calculator",
+            "label": "Estimate your income range in 1 minute"
+          },
+          {
+            "href": "/blog/tipazhi-modelej-onlyfans",
+            "label": "OnlyFans model types: the full niche guide"
+          },
+          {
+            "href": "/blog/plus-size-modeli-onlyfans",
+            "label": "Plus size on OnlyFans: pay and how to start"
+          },
+          {
+            "href": "/blog/alt-modeli-onlyfans",
+            "label": "Alt and tattooed models: the dark-aesthetic niche"
+          },
+          {
+            "href": "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            "label": "How much OnlyFans models earn by level"
+          },
+          {
+            "href": "/blog/rabota-modelyu-onlyfans",
+            "label": "Become an OnlyFans model with the OFM team"
+          }
+        ]
+      },
+      {
+        "type": "cta",
+        "title": "In this niche, age is the strategy — not the disclaimer",
+        "body": "Message the manager on Telegram @ofmm_agency — they will review your situation, name an honest range for your niche and answer the questions that feel awkward to ask out loud. Or fill in the form on the site: 2 minutes, anonymous, no obligations.",
+        "buttonHref": "/join",
+        "buttonLabel": "Apply to OFM Models",
+        "note": "Income figures are gross page-balance turnovers; market cases are public, attributed examples, not a guarantee. 18+."
+      }
+    ]
+  },
+  "plus-size-modeli-onlyfans": {
+    "title": "Plus Size OnlyFans Agency: Niche Pay & How to Start",
+    "description": "Plus size models earn on a loyal OnlyFans niche: market cases up to $45,000/mo, OFM team pages $3,000–15,000 gross. No experience, start in 7–14 days. 18+.",
+    "keywords": [
+      "plus size onlyfans agency",
+      "plus size onlyfans",
+      "bbw onlyfans",
+      "plus size onlyfans models",
+      "how to become a plus size model on onlyfans",
+      "curvy model onlyfans",
+      "plus size model jobs online"
+    ],
+    "blocks": [
+      {
+        "type": "p",
+        "text": "A plus size model on OnlyFans works in one of the platform's most profitable niches, and the OFM Models agency recruits plus size creators deliberately — not as an exception: pages run with the team reach $3,000–15,000 gross per month regardless of dress size, because fans pay for a precise match with their taste, not for \"measurements\". The market backs this with money: a plus-size page makes $45,000 a month (another model's case, documents verified by Business Insider), and the niche's top names have quoted up to $99,000 in public interviews. Below: the economics of the niche, a calm look at the fears \"they will laugh at me\" and \"I don't have a model's figure,\" and a start that takes 7–14 days."
+      },
+      {
+        "type": "p",
+        "text": "This page is for the woman who has been eyeing the platform for a long time and stops herself with the same thought every time: \"not with my figure.\" Practice says the opposite. The query \"bbw onlyfans\" — from big beautiful women, the name the niche gave itself in the English-speaking world — is searched around 4,400 times a month in that direct phrasing alone, according to Google Ads. Fans of this niche do not \"tolerate\" curves — they look for them, and they pay the women who do not hide."
+      },
+      {
+        "type": "nav",
+        "intro": "Already decided — straight to the point:",
+        "links": [
+          {
+            "href": "/vacancies/model",
+            "label": "OnlyFans model vacancy at OFM — apply from anywhere"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Why curves are an asset on this platform, not a barrier"
+      },
+      {
+        "type": "p",
+        "text": "The plus-size niche earns on three things: live demand, fan loyalty and low competition. The demand is steady and global, yet most women with curves never reach the platform — because of that same \"not for me\". As a result, inside the niche each active page gets a larger share of the paying audience than in the overheated glossy segment, where thousands of identical profiles split the same subscribers."
+      },
+      {
+        "type": "p",
+        "text": "The second pillar is retention. A niche fan comes for a specific type of look and does not drift off to a \"standard\" model: the subscription lives longer, and regulars make up a bigger share of income — the people who renew month after month and buy personal content. The third pillar is the overlap with girl next door, the platform's biggest type of all: the fan buys the feeling of personal contact with a real woman, not a cover image. Naturalness sells better than retouching here."
+      },
+      {
+        "type": "h2",
+        "text": "How much a plus size model earns"
+      },
+      {
+        "type": "p",
+        "text": "The range depends on the system of work, not on the figure: a solo start usually brings $300–700 in the first month, a page with a team reaches $3,000–15,000 gross, and agencies' top pages sit at $15,000–50,000 after months of systematic work. For contrast: the median page with no niche and no team is stuck at $150–180 a month. The difference between these levels is traffic, chats and a content plan — exactly the work the agency takes on."
+      },
+      {
+        "type": "table",
+        "caption": "The economics of the plus-size niche: monthly income levels of a page (market, 2026).",
+        "headers": [
+          "Level",
+          "Money per month"
+        ],
+        "rows": [
+          [
+            "Median page with no niche and no team",
+            "$150–180 — the price of blending in"
+          ],
+          [
+            "Solo start in the plus-size niche",
+            "$300–700 in the first month"
+          ],
+          [
+            "Plus-size page with the OFM team",
+            "$3,000–15,000 gross"
+          ],
+          [
+            "Top agency pages",
+            "$15,000–50,000 gross — months of systematic work"
+          ],
+          [
+            "Market peaks of the niche (not our models)",
+            "$45,000–99,000 — Business Insider and public interviews"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Honestly, about the numbers: $3,000–15,000 is the page's gross balance — turnover, not a payout in hand. The model receives 20–30% of gross — the share depends on the plan, the niche, and the team setup — and the agency reinvests the rest into the traffic, promotion and chat team that grow that balance. The $45,000–99,000 cases are the peaks of the market, public examples of other people's models: we cite them as proof of the niche's ceiling, not as a promise."
+      },
+      {
+        "type": "cases",
+        "title": "Real cases of OFM models — screenshots of page statistics",
+        "note": "Amounts are gross total page balances on OnlyFans, not the model's net income. Published with consent.",
+        "linkLabel": "See the cases"
+      },
+      {
+        "type": "nav",
+        "intro": "Looking wider — or already running a page:",
+        "links": [
+          {
+            "href": "/blog/tipazhi-modelej-onlyfans",
+            "label": "OnlyFans model types: who earns what"
+          },
+          {
+            "href": "/vacancies",
+            "label": "OFM agency jobs — every open role"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "\"They will laugh at me\": the niche's main fear, taken apart"
+      },
+      {
+        "type": "p",
+        "text": "The most common fear in this niche is not about money — it is about mockery. Let's take it apart calmly: a subscription page is not reached by a random crowd from recommendations but by a person who searched for this exact type of look and paid for access. Paying money in order to laugh is a scenario born of fear, not of practice: a niche fan comes to admire, and every chat thread says so."
+      },
+      {
+        "type": "p",
+        "text": "The second layer of protection: the model is never alone with the chats at all. The agency's chat team runs the conversations around the clock: the rare rude one is blocked before the model ever sees him, and what reaches her is sales and compliments, not negativity. The third layer is geo-blocking: your home country is closed from day one, while promotion goes to the US, Canada, Australia and Western Europe — and distant audiences have historically been far kinder to curves than hometown social media."
+      },
+      {
+        "type": "h2",
+        "text": "\"I don't have a model's figure\" — so which one is needed?"
+      },
+      {
+        "type": "p",
+        "text": "None: on this platform the word \"model\" describes a role, not measurements — the person whose content people subscribe to. There is no casting with a measuring tape here. A fan picks a page by one criterion — \"is she my taste\" — and there are exactly as many tastes on the platform as there are people. The application question is not \"does the figure qualify\" but \"where is your audience and how do we bring it to you\" — and that one is answered by the manager, not the mirror."
+      },
+      {
+        "type": "p",
+        "text": "The market case Business Insider covered makes the point: that $45,000-a-month page grew 15x after the model stopped hiding and began running the page openly and confidently. Confidence here is a working tool, and it arrives not before the start but after the first sales: once you see your look being chosen and paid for, the question \"will they accept me\" is closed by the statistics."
+      },
+      {
+        "type": "nav",
+        "intro": "Privacy and persona — the detailed guides:",
+        "links": [
+          {
+            "href": "/blog/onlyfans-anonimnost-i-bezopasnost",
+            "label": "Anonymity and safety: geo-blocks and persona"
+          },
+          {
+            "href": "/blog/onlyfans-rabota-bez-lica",
+            "label": "Pages without showing your face: how models do it"
+          }
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Want to see the niche from the inside first? The Telegram channel t.me/ofmmAgency shows cases of models of different types, screenshots of page statistics and the agency's openings. Subscribing commits you to nothing."
+      },
+      {
+        "type": "h2",
+        "text": "How the agency builds a page for the plus-size niche"
+      },
+      {
+        "type": "p",
+        "text": "A niche is a working plan, not a label. Reviewing the application, the manager and the model define the niche and the boundaries together: what she shoots and what is off the table is her decision alone. Everything else is then built around the type — the fan profile, a content plan two weeks ahead, light and angles chosen for comfort and for the strengths of her particular figure (the team teaches this from zero; shooting experience is not required), the tone of the chats in the niche's own language, and the traffic channels, which in plus-size are specific: niche communities and tags where the audience is already gathered and waiting."
+      },
+      {
+        "type": "p",
+        "text": "The agency takes the operations completely: account registration and verification, documents, Paxum/Skrill payouts, traffic at the team's expense, chats in three shifts, analytics. Since 2022 the team has taken 200+ pages through verification, and 70–90% of a page's income comes from private messages — the chat team's work, not endless shoots. What stays with the model is the content: 10–15 hours a week on her own schedule."
+      },
+      {
+        "type": "p",
+        "text": "You can estimate your range in a minute: the income calculator takes the niche and your experience into account and shows a realistic bracket, not an advertising number. The result goes straight to the manager on Telegram @ofmm_agency."
+      },
+      {
+        "type": "nav",
+        "intro": "Numbers for your type:",
+        "links": [
+          {
+            "href": "/calculator",
+            "label": "Income calculator for your niche"
+          },
+          {
+            "href": "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            "label": "What OnlyFans models make, level by level"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "How to become a plus size model: 5 steps in 7–14 days"
+      },
+      {
+        "type": "p",
+        "text": "From application to a working page takes 7–14 days, and the team does almost everything along the way:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Application. The form on the site — 2 minutes, anonymous — or a message on Telegram; the manager replies within 24 hours",
+          "Situation review. Niche, persona and boundaries: what you shoot and what is off the table is fixed at the start and never pushed afterwards",
+          "Registration and verification. The account, documents, Paxum/Skrill payouts — the agency handles all the paperwork",
+          "First content plan. What and how to shoot for two weeks: light, angles for your figure, the niche's references — training from zero is part of the start",
+          "Launch. The page gets traffic from niche communities, the chat team takes over the conversations — sales usually begin within the first weeks"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A start without bureaucracy: if you try it and it is not for you, you leave freely at any moment, with no penalties and no strings attached. The page can be paused — the content you have already made keeps selling while you are busy with other things."
+      },
+      {
+        "type": "nav",
+        "intro": "Step-by-step start guides:",
+        "links": [
+          {
+            "href": "/join",
+            "label": "Fill in the OFM Models application — 2 minutes"
+          },
+          {
+            "href": "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            "label": "Starting with an agency when you are brand new"
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A story from OFM practice"
+      },
+      {
+        "type": "p",
+        "text": "One of the team's stories is about a 27-year-old who read our blog for a year and a half without sending the form: she was certain \"they don't take girls like me,\" and a friend \"supported\" her with a line about being laughed at in the comments. In the end she wrote from a second account — \"just to ask\". At the review the manager showed her the niche's statistics and public market cases, the boundaries were fixed straight away, and the persona was built around her strengths, not \"in spite of\" anything. Then the system did its work: traffic from niche communities, the chat team, reinvestment — and within the first months her page reached $500–3,000 a month. The most telling part she put into words herself: in all that time, not a single insult in the chats — because the only messages that reach her come from fans who have already paid to subscribe."
+      },
+      {
+        "type": "h2",
+        "text": "FAQ: plus size models on OnlyFans"
+      },
+      {
+        "type": "h3",
+        "text": "Will the agency take me with my figure?"
+      },
+      {
+        "type": "p",
+        "text": "Yes. Plus-size is one of the directions OFM Models recruits for deliberately — it is not \"an exception being made\". The application gathers inputs for strategy — it doesn't measure you: comfortable formats, boundaries, time for content. There are two hard requirements, and neither concerns the figure: 18+ and identity verification with a document."
+      },
+      {
+        "type": "h3",
+        "text": "How much does a plus size model really earn?"
+      },
+      {
+        "type": "p",
+        "text": "Solo — usually $300–700 in the first month. Pages of OFM Models creators reach $3,000–15,000 gross per month, top pages $15,000–50,000 after months of systematic work. The market peaks of the niche — $45,000–99,000 a month — are public cases of other people's models (Business Insider, interviews): proof of the ceiling, not a promise. All sums are page-balance turnovers, not payouts in hand."
+      },
+      {
+        "type": "h3",
+        "text": "Will people write nasty things about my body in the chats?"
+      },
+      {
+        "type": "p",
+        "text": "Such messages do not reach the model: the agency's chat team runs the conversations around the clock, and the rude ones are blocked on the spot. But the main point is that the niche's paying audience arrives through its own search and pays for access to exactly your type of look: buying a subscription for the sake of a joke is a scenario from fear — in actual chat practice it almost never happens."
+      },
+      {
+        "type": "h3",
+        "text": "Do I have to show my face?"
+      },
+      {
+        "type": "p",
+        "text": "How visible to be is decided together with the manager at the start: some models separate the page and their \"daytime\" life so they never intersect. The market is honest at the same time: open pages grow faster — in the Business Insider case, income grew 15x after the model stopped hiding. There is no need to rush this decision, and it can be changed along the way."
+      },
+      {
+        "type": "h3",
+        "text": "Will people I know find out?"
+      },
+      {
+        "type": "p",
+        "text": "The page is geo-blocked for your home country from day one, and promotion goes only to a distant audience — the US, Canada, Australia and Western Europe. It will not surface in recommendations for people around you. An absolute guarantee does not exist anywhere: VPNs and screenshots are real — but geo-blocking, a distant audience and a carefully built persona together are the maximum protection in the industry, and they are on by default."
+      },
+      {
+        "type": "h3",
+        "text": "What happens if I lose or gain weight?"
+      },
+      {
+        "type": "p",
+        "text": "Nothing dramatic: fans are subscribed to a person, not to a dress size, and they go through all her changes with her. The team adjusts the content plan and positioning calmly, without relaunching the page — the audience and the income carry over. Postponing the start out of fear of \"what if I change\" is not worth it: the system handles that too."
+      },
+      {
+        "type": "quote",
+        "text": "For a year and a half I was sure \"they don't take girls like me,\" and never sent the form. It's funny now: my audience was on the platform that whole time, paying other women. Not one nasty message in six months — only sales and people waiting for my content.",
+        "author": "OFM model, plus-size direction, 6th month with the team"
+      },
+      {
+        "type": "nav",
+        "intro": "Recognized yourself? The next steps:",
+        "links": [
+          {
+            "href": "/join",
+            "label": "Apply to OFM Models — anonymous form"
+          },
+          {
+            "href": "/vacancies/model",
+            "label": "OnlyFans model vacancy — terms and ranges"
+          },
+          {
+            "href": "/calculator",
+            "label": "Check your bracket in the income calculator"
+          },
+          {
+            "href": "/blog/tipazhi-modelej-onlyfans",
+            "label": "Model types on OnlyFans: the full map"
+          },
+          {
+            "href": "/blog/mature-modeli-onlyfans",
+            "label": "Mature models: why 30+ and 40+ pay well"
+          },
+          {
+            "href": "/blog/alt-modeli-onlyfans",
+            "label": "Alt, goth and tattoo pages: what they earn"
+          },
+          {
+            "href": "/blog/rabota-modelyu-onlyfans",
+            "label": "Become an OnlyFans model: the agency route"
+          },
+          {
+            "href": "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            "label": "OnlyFans earnings: real numbers by level"
+          },
+          {
+            "href": "/vacancies",
+            "label": "Every open role at the OFM agency"
+          }
+        ]
+      },
+      {
+        "type": "cta",
+        "title": "Your audience is already on the platform — the page is the missing piece",
+        "body": "Message the manager on Telegram @ofmm_agency — they will review your situation, show the niche's cases and name an honest range, with no strings attached. Or fill in the form on the site: 2 minutes, anonymous.",
+        "buttonHref": "/join",
+        "buttonLabel": "Apply to OFM Models",
+        "note": "Income figures are gross page-balance turnovers; market cases are public examples of other models, not a guarantee. 18+."
+      }
+    ]
+  },
+  "how-to-join-onlyfans-agency": {
+    "title": "How to Join an OnlyFans Agency: 3 Steps to Launch (2026)",
+    "description": "How to join an OnlyFans agency in 3 steps: application, interview, onboarding in 7–14 days. What OFM Models asks new creators — and what to ask any agency.",
+    "keywords": [
+      "how to join an onlyfans agency",
+      "join onlyfans agency",
+      "onlyfans agency application",
+      "onlyfans agency interview",
+      "onlyfans agency onboarding"
+    ],
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Joining an OnlyFans agency takes three steps: a short application, a conversation with a manager, and onboarding. At OFM Models the full path — from the first Telegram message to a live, earning page — takes 7–14 days, costs nothing to enter, and the application itself is anonymous and non-binding. Here's what happens at each step, what the agency will ask you, and what you should ask back before saying yes to anyone."
+      },
+      {
+        "type": "h2",
+        "text": "Step 1. The application: two minutes, zero commitments"
+      },
+      {
+        "type": "p",
+        "text": "The OFM Models application is a short anonymous form on the site or a direct message to @ofmm_agency on Telegram: a name or alias, 18+ confirmation, a couple of lines about yourself and how much time you can give the page. No portfolio, no \"professional photos,\" no payment. A manager replies within 24 hours."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "What speeds up the reply: 2–3 regular smartphone photos — the team needs natural shots, not a studio set",
+          "An honest time estimate: 2–3 hours a day is the working minimum the plan is built on",
+          "A line about your goal: side income or main income — it changes the pace the team proposes"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Step 2. The interview: what agencies ask — and what it's really for"
+      },
+      {
+        "type": "p",
+        "text": "The casting is a conversation, not an exam. At OFM Models it usually happens in a Telegram text chat; a call only if you prefer one. The manager's job is to build a plan for your profile, not to \"judge\" you. Here's what any decent team will ask:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Age and readiness for verification — under the platform's official rules (onlyfans.com/terms) every creator goes through it, no exceptions",
+          "Time: how many hours a day you can realistically give content and communication",
+          "Comfort zone: which formats feel right for you — you set the boundaries, and they're fixed before launch",
+          "Goals: a side income or a main one — the plans differ",
+          "Your type and niche — they define the promo channels, the pricing and the content plan"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "After the conversation the OFM team proposes a work plan and a split — openly, in plain numbers, before launch. Take all the time you need to think: a legitimate offer doesn't expire overnight."
+      },
+      {
+        "type": "h2",
+        "text": "Step 3. Onboarding: your first 14 days inside the agency"
+      },
+      {
+        "type": "p",
+        "text": "Onboarding at OFM Models means the team takes over the entire technical side: registration, verification, page and payout setup, the content plan and the traffic launch. Your side of it is content shot to the team's guidance and staying in touch with your manager."
+      },
+      {
+        "type": "table",
+        "caption": "From \"yes\" to launch — typical onboarding at OFM (pace varies by niche)",
+        "headers": [
+          "Days",
+          "What the team does"
+        ],
+        "rows": [
+          [
+            "Days 1–2",
+            "Plan and split agreed in plain numbers; accounts and payout rails prepared"
+          ],
+          [
+            "Days 3–7",
+            "Page setup and verification; first content batch shot to the team's guidance"
+          ],
+          [
+            "Days 8–14",
+            "Launch: traffic switched on, the 24/7 chat team picks up the DMs"
+          ],
+          [
+            "Weeks 3–4",
+            "First payouts — a typical first month closes at $400–700 gross"
+          ]
+        ]
+      },
+      {
+        "type": "cta",
+        "title": "Ready to take the first of the three steps?",
+        "body": "The application is anonymous, takes two minutes and commits you to nothing. A manager replies on Telegram within 24 hours.",
+        "buttonHref": "/join",
+        "buttonLabel": "Fill in the application",
+        "note": "Figures on the site are gross page balance turnover, not creator net payout. 18+ only."
+      },
+      {
+        "type": "h2",
+        "text": "What to ask the agency before you say yes"
+      },
+      {
+        "type": "p",
+        "text": "An honest team answers five questions without dancing around them. Run any agency through this list — including us:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Who pays for promotion? At OFM — the agency, fully: you don't invest a dollar",
+          "What exactly is the split and why? The model keeps 20–30% of the page's gross balance; the agency funds traffic, chatters and management and reinvests part of the page's income into its growth — without that reinvestment a balance doesn't grow",
+          "Can I see case statistics? A real team shows screenshots of live pages, not promises",
+          "What happens if I want to leave? You leave — the page is verified on your documents and stays yours, with no \"exit fees\"",
+          "Who runs the account day to day and how do I stay informed? At OFM the team fully runs the accounts and the finances — registration, verification, payouts; your access to the page and the reporting format are agreed with your manager"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Privacy from the very first message"
+      },
+      {
+        "type": "p",
+        "text": "Anonymity starts with the application, not after launch: an alias is enough for the form, and the conversation happens on Telegram. From there the platform's geo-tools take over — you can block your page from showing in your home country and any other region — while OFM's promotion targets a paying audience in the US, Canada and Australia. The traffic department separately makes sure a model's personal data never leaks."
+      },
+      {
+        "type": "cta",
+        "title": "Want to see the agency from the inside first?",
+        "body": "The OFM Telegram channel has model cases with statistics screenshots, vacancy posts and Q&A breakdowns. Subscribing commits you to nothing.",
+        "buttonHref": "https://t.me/ofmmAgency",
+        "buttonLabel": "Browse the channel",
+        "note": "Case figures are gross page balance turnover, not creator net payout."
+      },
+      {
+        "type": "h2",
+        "text": "What a start with OFM Models looks like"
+      },
+      {
+        "type": "p",
+        "text": "The path is always the same and always short: application on the site or a message to @ofmm_agency → a manager's reply within 24 hours → plan and split in plain numbers → onboarding in 7–14 days → launch. The team has worked in the niche for 3+ years: managers, marketers, a content manager and chatters in 2–3 shifts. A typical first month is $400–700 gross, the stable $3,000–5,000 level arrives by months two to four, and top pages reach $15,000–$50,000 gross balances after months of systematic work. All figures are estimates from live pages, not a guarantee."
+      },
+      {
+        "type": "cases",
+        "title": "OFM model cases: page statistics screenshots",
+        "note": "Figures are gross page balance turnover, not creator net payout. Published with consent.",
+        "linkLabel": "View cases"
+      },
+      {
+        "type": "h2",
+        "text": "FAQ: joining an OnlyFans agency"
+      },
+      {
+        "type": "h3",
+        "text": "How long does it take from application to launch?"
+      },
+      {
+        "type": "p",
+        "text": "At OFM Models — 7–14 days: a day or two for the conversation and the plan, a week for setup, verification and the first content, then the traffic launch. First payouts usually arrive within the first month."
+      },
+      {
+        "type": "h3",
+        "text": "Does joining cost anything?"
+      },
+      {
+        "type": "p",
+        "text": "No. The agency earns only a share of what the page makes — after you, not before. Being asked to pay for \"training,\" a \"photo test\" or to \"reserve a spot\" is a scam marker: a real team funds the launch itself."
+      },
+      {
+        "type": "h3",
+        "text": "What documents will I need?"
+      },
+      {
+        "type": "p",
+        "text": "An ID for the platform's mandatory verification — an official OnlyFans requirement for every creator, no exceptions. The team walks you through the process step by step; your data is protected and used for verification only."
+      },
+      {
+        "type": "h3",
+        "text": "Will I get in with no experience and no followers?"
+      },
+      {
+        "type": "p",
+        "text": "Yes. OFM Models trains from scratch in 10–14 days, and the agency brings traffic from its own funnels — a starting audience isn't needed. For the full picture, we have a separate breakdown of a beginner's start with zero followers."
+      },
+      {
+        "type": "h3",
+        "text": "What if I change my mind after onboarding?"
+      },
+      {
+        "type": "p",
+        "text": "You can stop at any stage: the start is bureaucracy-free, and the page is verified on your documents, so it stays yours. No holdbacks and no \"exit fees\" — the freedom to walk away is itself the mark of a decent team."
+      },
+      {
+        "type": "h3",
+        "text": "Do I have to get on a call for the casting?"
+      },
+      {
+        "type": "p",
+        "text": "No. At OFM Models the casting usually happens in a Telegram text chat — many find it calmer that way. A call happens only if you want one, when it's easier to ask questions out loud."
+      },
+      {
+        "type": "nav",
+        "intro": "Your next steps on the way in:",
+        "links": [
+          {
+            "href": "/join",
+            "label": "Fill in the anonymous application"
+          },
+          {
+            "href": "/vacancies",
+            "label": "Current model vacancies at OFM"
+          },
+          {
+            "href": "/blog/onlyfans-agency-for-beginners",
+            "label": "Agency for a first-timer: start with 0 followers"
+          },
+          {
+            "href": "/blog/kak-vybrat-onlyfans-agentstvo",
+            "label": "Choosing the right agency: a checklist"
+          },
+          {
+            "href": "/blog/kak-smenit-onlyfans-agentstvo",
+            "label": "Switching agencies without losing your page"
+          },
+          {
+            "href": "/blog/rabota-modelyu-onlyfans",
+            "label": "The OnlyFans model job: full description"
+          }
+        ]
+      },
+      {
+        "type": "cta",
+        "title": "Three steps — and the page works for you",
+        "body": "Submit the anonymous application or message the manager on Telegram @ofmm_agency: you'll get every question answered, plus the plan and the split in plain numbers — calmly and with no pressure.",
+        "buttonHref": "/#contact",
+        "buttonLabel": "Apply",
+        "note": "Income depends on niche, content volume and engagement. Figures are gross page balance turnover, not a guaranteed net payout. 18+ only."
+      }
+    ]
+  },
+  "onlyfans-agency-for-beginners": {
+    "title": "OnlyFans Agency for Beginners: Zero-Follower Start (2026)",
+    "description": "OnlyFans agency for beginners: what OFM Models does for a first-time creator, launch in 7–14 days with zero followers, $400–700 in month one, split explained.",
+    "keywords": [
+      "onlyfans agency for beginners",
+      "best onlyfans agency for beginners",
+      "onlyfans management for beginners",
+      "start onlyfans with no followers",
+      "onlyfans agency no experience"
+    ],
+    "blocks": [
+      {
+        "type": "p",
+        "text": "OFM Models works with complete beginners: you can join the agency with zero followers, zero content experience and zero budget — the team builds the page, the promotion and the DM sales for you, and funds all of it. Launch takes 7–14 days; a typical first month closes at $400–700 gross, and with consistent work pages reach a stable $3,000–5,000 a month within two to four months. Here is exactly what an agency does for a first-timer, what you actually need to start, and how to tell a real team from a fake one."
+      },
+      {
+        "type": "h2",
+        "text": "What an OnlyFans agency actually does for a beginner"
+      },
+      {
+        "type": "p",
+        "text": "An agency replaces the audience a beginner doesn't have yet. OFM Models sets up and verifies the page, builds the content plan, brings paying traffic from Tier-1 social media (the US, Canada, Australia) and runs the chats 24/7 — the part of the job where 70–90% of the income actually lives. You create the content; everything else is the team's workload."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Page setup and verification under the platform's official rules (onlyfans.com/terms) — in our practice that's 200+ pages taken through verification",
+          "Promotion and ads fully funded by the agency — you don't put in a single dollar",
+          "A 24/7 chat team that answers DMs and sells PPV while you sleep",
+          "A content plan plus shooting guidance for a regular smartphone",
+          "Weekly analytics: what sells, what to drop, and where the next $1,000 comes from"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "What you need to start — and what you don't"
+      },
+      {
+        "type": "p",
+        "text": "The real entry list is short: you're 18+, you have a smartphone with a decent camera, and you can give the page 2–3 hours a day. That's it. Everything beginners usually panic about — followers, pro equipment, \"model looks,\" marketing skills — is either not needed at all or covered by the team."
+      },
+      {
+        "type": "table",
+        "caption": "The beginner's checklist: what matters at the start and what doesn't",
+        "headers": [
+          "You need",
+          "You don't need"
+        ],
+        "rows": [
+          [
+            "18+ and ID for the platform's verification",
+            "Followers or an existing audience"
+          ],
+          [
+            "A smartphone with a good camera",
+            "Professional photo equipment"
+          ],
+          [
+            "2–3 hours a day, consistently",
+            "Experience on content platforms"
+          ],
+          [
+            "Readiness to follow the team's plan",
+            "A budget — promo is funded by the agency"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Your first month with an agency: a realistic timeline"
+      },
+      {
+        "type": "p",
+        "text": "At OFM Models the path from application to a live page takes 7–14 days, and the first payouts usually land within the first month. A typical first month closes at $400–700 gross — not life-changing yet, but it proves the funnel works; a stable $3,000–5,000 usually takes two to four months of regular content and traffic."
+      },
+      {
+        "type": "table",
+        "caption": "First weeks with the OFM team — a typical schedule (pace varies by niche)",
+        "headers": [
+          "Period",
+          "What happens"
+        ],
+        "rows": [
+          [
+            "Days 1–2",
+            "Application, chat with a manager, plan and split agreed openly in plain numbers"
+          ],
+          [
+            "Days 3–7",
+            "Page setup, verification, first content batch shot on your phone"
+          ],
+          [
+            "Days 8–14",
+            "Launch: traffic switched on, the chat team takes over the DMs"
+          ],
+          [
+            "Weeks 3–4",
+            "First sales and first payout — typically $400–700 in month one"
+          ],
+          [
+            "Months 2–4",
+            "Scaling to a stable $3,000–5,000 with regular content"
+          ]
+        ]
+      },
+      {
+        "type": "cta",
+        "title": "Want this timeline to start this week?",
+        "body": "Fill in the application — it's anonymous and commits you to nothing. A manager replies on Telegram within 24 hours with a launch plan for your profile.",
+        "buttonHref": "/join",
+        "buttonLabel": "Start the application",
+        "note": "Figures on the site are gross page balance turnover, not creator net payout. 18+ only."
+      },
+      {
+        "type": "h2",
+        "text": "How the split works — and why 20–30% of gross is fair"
+      },
+      {
+        "type": "p",
+        "text": "The model keeps 20–30% of the page's gross balance; the exact figure depends on the work plan, your type and the team on the page, and it's agreed openly before launch. Why the agency keeps the larger share is simple arithmetic: it pays for everything — ads, paid traffic, 24/7 chatter shifts, management — and reinvests part of the page's income into more promotion. Without that reinvestment a balance simply doesn't grow: 25% of a growing page six months in is more money than 100% of a solo page stuck at $300."
+      },
+      {
+        "type": "tip",
+        "text": "Compare like a grown-up: not \"what percent do I get\" but \"what sum do I take home\". The split is covered openly in the casting chat — with real numbers from live pages."
+      },
+      {
+        "type": "h2",
+        "text": "Red flags: how beginners get scammed — and how to check any agency"
+      },
+      {
+        "type": "p",
+        "text": "A real agency earns a percentage of what your page makes — so it only gets paid after you do. Any scheme that asks for your money upfront is a red flag. Before you say yes to anyone (including us), run the team through this list:"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Entry fees, \"training packages\" or paid \"photo tests\" — a real team funds the launch itself",
+          "A guaranteed exact income before anyone has seen your profile — honest teams give ranges and call them estimates",
+          "No proof: a real agency shows page statistics screenshots, not just pretty pictures",
+          "Vague answers about the split and about who pays for promotion — both should be explained in plain numbers before launch",
+          "Pressure and countdowns (\"the slot closes today\") — a legitimate offer survives a day of thinking"
+        ]
+      },
+      {
+        "type": "cta",
+        "title": "Not ready to message anyone yet?",
+        "body": "The agency's Telegram channel has model cases with statistics screenshots, vacancy posts and Q&A. Subscribe and watch from the sidelines first. No commitment.",
+        "buttonHref": "https://t.me/ofmmAgency",
+        "buttonLabel": "Open the channel",
+        "note": "Case figures are gross page balance turnover, not creator net payout."
+      },
+      {
+        "type": "h2",
+        "text": "The fears every beginner has — answered straight"
+      },
+      {
+        "type": "h3",
+        "text": "What if people I know find out?"
+      },
+      {
+        "type": "p",
+        "text": "Promotion targets a paying audience in the US, Canada and Australia — not your home region — and on the platform itself you can block any country you choose, your own included: geo-blocking is a built-in OnlyFans feature. OFM's traffic department separately makes sure a model's personal data never leaks: anonymity rests on geo-blocking and promo geography, not on luck."
+      },
+      {
+        "type": "h3",
+        "text": "What if I try it and realize it's not for me?"
+      },
+      {
+        "type": "p",
+        "text": "You can stop at any moment: the start is bureaucracy-free, and the page is verified on your documents, so it stays yours. Models leave and come back — nobody is locked in."
+      },
+      {
+        "type": "h3",
+        "text": "What exactly will I be shooting?"
+      },
+      {
+        "type": "p",
+        "text": "Formats are a personal story, and they're agreed with your manager before launch: you set the boundaries, the team builds the content plan inside them. Aesthetics, lifestyle and personal formats all have their place; the exact mix is discussed one-on-one in the casting chat."
+      },
+      {
+        "type": "cases",
+        "title": "Real OFM pages: statistics screenshots",
+        "note": "Figures are gross page balance turnover, not creator net payout. Published with consent.",
+        "linkLabel": "View cases"
+      },
+      {
+        "type": "h2",
+        "text": "FAQ: OnlyFans agency for beginners"
+      },
+      {
+        "type": "h3",
+        "text": "Do I need followers to join an OnlyFans agency?"
+      },
+      {
+        "type": "p",
+        "text": "No. OFM Models takes on complete beginners with zero followers: the agency brings traffic from its own social media funnels, so the size of your starting audience doesn't matter. What matters is consistency — 2–3 hours a day and content shot on schedule."
+      },
+      {
+        "type": "h3",
+        "text": "Do I need to show my face?"
+      },
+      {
+        "type": "p",
+        "text": "Your face is your main asset on the platform: fans subscribe to individuality. Privacy is handled with geo-tools: you can block your home country and any other region on the platform, and promo targets the US, Canada and Australia. How to balance recognizability and privacy in your specific case is exactly what the manager works out with you before launch."
+      },
+      {
+        "type": "h3",
+        "text": "How much does it cost to join?"
+      },
+      {
+        "type": "p",
+        "text": "Nothing. There are no entry fees, no paid training and no \"photo test\" charges: the agency funds the promotion and earns only as a share of what the page makes. If someone asks you for money to \"get started\" — that's a scam marker, walk away."
+      },
+      {
+        "type": "h3",
+        "text": "How fast will I see the first money?"
+      },
+      {
+        "type": "p",
+        "text": "First payouts usually arrive within the first month; a typical first month closes at $400–700 gross. These are working estimates from live pages, not a guarantee — the pace depends on your niche, content volume and consistency."
+      },
+      {
+        "type": "h3",
+        "text": "Is $15,000+ a month realistic for a beginner?"
+      },
+      {
+        "type": "p",
+        "text": "Not in month one — and anyone promising that is lying. Top pages at the agency reach $15,000–$50,000 gross balances after months of systematic work: regular content, daily chats, scaled traffic. The realistic beginner ladder is $400–700 in month one and a stable $3,000–5,000 by months two to four."
+      },
+      {
+        "type": "h3",
+        "text": "Agency or solo — what's better for a first-timer?"
+      },
+      {
+        "type": "p",
+        "text": "Solo you learn everything yourself — promotion, chats, pricing — and a typical solo first month rarely clears $300–700. With a team, the path from zero to a live page takes 7–14 days, and chats and traffic work from day one. If you'd rather compare both paths step by step first, we have a separate agency-or-solo breakdown."
+      },
+      {
+        "type": "nav",
+        "intro": "Starting from zero? Go step by step:",
+        "links": [
+          {
+            "href": "/join",
+            "label": "The anonymous OFM application"
+          },
+          {
+            "href": "/vacancies",
+            "label": "Open vacancies for models"
+          },
+          {
+            "href": "/blog/how-to-join-onlyfans-agency",
+            "label": "How to join an agency: application to launch"
+          },
+          {
+            "href": "/blog/kak-smenit-onlyfans-agentstvo",
+            "label": "Already with an agency? How to switch teams"
+          },
+          {
+            "href": "/blog/onlyfans-agentstvo-dlya-nachinayushchih",
+            "label": "Agency or solo: a beginner's roadmap"
+          },
+          {
+            "href": "/blog/onlyfans-skolko-zarabatyvayut-modeli",
+            "label": "Model income by level: real ranges"
+          },
+          {
+            "href": "/blog/rabota-modelyu-onlyfans",
+            "label": "The OnlyFans model job at OFM — remote"
+          }
+        ]
+      },
+      {
+        "type": "cta",
+        "title": "Zero followers today — a live page in 14 days",
+        "body": "Submit the anonymous application or message the manager on Telegram @ofmm_agency: you'll get a launch plan for your profile, the split in plain numbers and answers with no pressure.",
+        "buttonHref": "/#contact",
+        "buttonLabel": "Apply",
+        "note": "Income depends on niche, content volume and engagement. Figures are gross page balance turnover, not a guaranteed net payout. 18+ only."
+      }
+    ]
   },
 };
