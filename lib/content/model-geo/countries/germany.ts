@@ -11,6 +11,11 @@
  * Красные линии: без процентов/gross/реинвеста, без «договор/контракт» и
  * триггер-слов; вилка дохода — только record.incomeUsd ($3 000–10 000);
  * только OnlyFans; эмодзи не используем — иконки рендерит шаблон страницы.
+ *
+ * E1-фактура (09.10.2026, гейт Publisuites-EN): выплаты SEPA/Paxum, Gewerbe,
+ * Kleinunternehmer 25 000 € (§ 19 UStG, ред. 2025), комьюнити 1,3 млн — все
+ * цифры проверены, источники: docs/GERMANY-FACTPACK-2026-10-08.md.
+ * Skrill сознательно не упоминаем (источники противоречат).
  */
 import type { Locale } from '@/i18n/routing';
 import type { ModelGeoContent, ModelGeoCountry } from '../types';
@@ -39,6 +44,7 @@ const RU: ModelGeoContent = {
     'Порядок по-немецки: чёткий контент-план, прозрачный график выплат и понятные правила — ты всегда знаешь, что происходит с твоей страницей.',
     'Конфиденциальность: бережно относимся к твоей личной информации и настраиваем приватность так, как комфортно тебе.',
     'Без языкового барьера: контент рассчитан на международную аудиторию, переписку ведёт команда, а с тобой говорят по-русски и по-украински.',
+    'Выплаты по-европейски: в евро на твой банковский счёт (SEPA) или на электронный кошелёк — регулярно и без лишних формальностей.',
   ],
   expectations: [
     'Тебе исполнилось 18 — это обязательное условие.',
@@ -53,7 +59,7 @@ const RU: ModelGeoContent = {
     { label: 'График', value: 'Гибкий, 2–3 часа в день' },
     { label: 'Опыт', value: 'Не требуется — обучаем с нуля' },
     { label: 'Локация', value: 'Удалённо · вся Германия' },
-    { label: 'Выплаты', value: 'Регулярно, по фиксированному графику' },
+    { label: 'Выплаты', value: 'В евро (SEPA / e-wallet), по фиксированному графику' },
     { label: 'Старт', value: 'В первые дни после онлайн-кастинга' },
   ],
   faq: [
@@ -72,6 +78,18 @@ const RU: ModelGeoContent = {
     {
       q: 'Я недавно переехала в Германию — подойдёт ли мне эта работа?',
       a: 'Да, это один из самых частых сценариев в нашей команде. Не нужны ни немецкий, ни местный опыт: мы общаемся по-русски и по-украински, помогаем с первых шагов, а первые выплаты обычно приходят уже в первый месяц.',
+    },
+    {
+      q: 'Как приходят выплаты в Германии?',
+      a: 'В евро на твой немецкий банковский счёт через SEPA — обычно 3–5 банковских дней, без комиссии платформы. Есть и более быстрый вариант — электронный кошелёк Paxum, куда деньги приходят примерно за сутки. Вывод доступен уже от ~$20: можно запрашивать его в любой момент или настроить автоматические выплаты каждую неделю. Команда помогает всё настроить при старте.',
+    },
+    {
+      q: 'Это легально в Германии? Что с налогами?',
+      a: 'Да, полностью легально: платформа работает официально, строго 18+ и с верификацией личности. Доход оформляется как обычная самозанятость — регистрация (Gewerbe) стоит 30–60 € и оформляется быстро, а до 25 000 € оборота в год действует упрощённый режим малого предпринимателя без НДС-бюрократии. Команда подскажет, с чего начать оформление.',
+    },
+    {
+      q: 'Я буду в Германии одна такая?',
+      a: 'Точно нет. В Германии живёт более 1,3 миллиона украинцев — это самая быстрорастущая община иностранцев в стране, а русскоязычных здесь около 2,5 миллиона. Крупнейшие центры — Берлин, Мюнхен и Гамбург. Начинать среди своих всегда проще: вокруг огромное комьюнити, а команда всегда на связи — и говорит на твоём языке.',
     },
     {
       q: 'Я не из Германии — могу ли начать?',
@@ -94,6 +112,7 @@ const UK: ModelGeoContent = {
     'Порядок по-німецьки: чіткий контент-план, прозорий графік виплат і зрозумілі правила — ти завжди знаєш, що відбувається з твоєю сторінкою.',
     'Конфіденційність: дбайливо ставимося до твоєї особистої інформації та налаштовуємо приватність так, як зручно тобі.',
     'Без мовного бар’єра: контент розрахований на міжнародну аудиторію, листування веде команда, а з тобою спілкуються українською.',
+    'Виплати по-європейськи: у євро на твій банківський рахунок (SEPA) або на електронний гаманець — регулярно й без зайвих формальностей.',
   ],
   expectations: [
     'Тобі виповнилося 18 — це обов’язкова умова.',
@@ -108,7 +127,7 @@ const UK: ModelGeoContent = {
     { label: 'Графік', value: 'Гнучкий, 2–3 години на день' },
     { label: 'Досвід', value: 'Не потрібен — навчимо з нуля' },
     { label: 'Локація', value: 'Віддалено · вся Німеччина' },
-    { label: 'Виплати', value: 'Регулярні, за фіксованим графіком' },
+    { label: 'Виплати', value: 'У євро (SEPA / e-wallet), за фіксованим графіком' },
     { label: 'Старт', value: 'У перші дні після онлайн-кастингу' },
   ],
   faq: [
@@ -127,6 +146,18 @@ const UK: ModelGeoContent = {
     {
       q: 'Я нещодавно переїхала до Німеччини — чи підійде мені ця робота?',
       a: 'Так, це один із найчастіших сценаріїв у нашій команді. Не потрібні ні німецька, ні місцевий досвід: ми спілкуємося українською, допомагаємо з перших кроків, а перші виплати зазвичай приходять уже в перший місяць.',
+    },
+    {
+      q: 'Як приходять виплати в Німеччині?',
+      a: 'У євро на твій німецький банківський рахунок через SEPA — зазвичай 3–5 банківських днів, без комісії платформи. Є і швидший варіант — електронний гаманець Paxum, куди гроші надходять приблизно за добу. Вивід доступний уже від ~$20: можна замовляти його будь-коли або налаштувати автоматичні виплати щотижня. Команда допомагає все налаштувати на старті.',
+    },
+    {
+      q: 'Це легально в Німеччині? Що з податками?',
+      a: 'Так, повністю легально: платформа працює офіційно, суворо 18+ і з верифікацією особи. Дохід оформлюється як звичайна самозайнятість — реєстрація (Gewerbe) коштує 30–60 € і оформлюється швидко, а до 25 000 € обороту на рік діє спрощений режим малого підприємця без ПДВ-бюрократії. Команда підкаже, з чого почати оформлення.',
+    },
+    {
+      q: 'Я буду в Німеччині одна така?',
+      a: 'Точно ні. У Німеччині живе понад 1,3 мільйона українців — це громада іноземців, що зростає найшвидше в країні, а російськомовних тут близько 2,5 мільйона. Найбільші центри — Берлін, Мюнхен і Гамбург. Починати серед своїх завжди простіше: довкола величезне ком’юніті, а команда завжди на зв’язку — і говорить твоєю мовою.',
     },
     {
       q: 'Я не з Німеччини — чи можу почати?',
@@ -149,6 +180,7 @@ const EN: ModelGeoContent = {
     'Order, the German way: a clear content plan, a transparent payout schedule and simple rules — you always know what is happening with your page.',
     'Confidentiality: we treat your personal information with care and set up privacy the way you feel comfortable.',
     'No language barrier: the content targets an international audience, the team handles the messaging — and speaks Ukrainian and Russian with you.',
+    'European-style payouts: in euros to your bank account (SEPA) or an e-wallet — regular and with no extra formalities.',
   ],
   expectations: [
     'You have turned 18 — this one is non-negotiable.',
@@ -163,7 +195,7 @@ const EN: ModelGeoContent = {
     { label: 'Schedule', value: 'Flexible, 2–3 hours a day' },
     { label: 'Experience', value: 'Not needed — we train from scratch' },
     { label: 'Location', value: 'Remote · all of Germany' },
-    { label: 'Payouts', value: 'Regular, on a fixed schedule' },
+    { label: 'Payouts', value: 'In euros (SEPA / e-wallet), on a fixed schedule' },
     { label: 'Start', value: 'Within days after the online casting' },
   ],
   faq: [
@@ -182,6 +214,22 @@ const EN: ModelGeoContent = {
     {
       q: 'I moved to Germany recently — is this job right for me?',
       a: 'Yes — it is one of the most common stories on our team. You need neither German nor local experience: we speak Ukrainian and Russian, help from the very first steps, and the first payouts usually arrive within the first month.',
+    },
+    {
+      q: 'How will I receive payouts in Germany?',
+      a: 'In euros, straight to your German bank account via SEPA — usually 3–5 business days, with no platform fee. There is also a faster option: the Paxum e-wallet, where the money arrives in about a day. You can withdraw from ~$20 whenever you like, or set up automatic weekly payouts. The team helps you set everything up at the start.',
+    },
+    {
+      q: 'Is it legal in Germany? What about taxes?',
+      a: 'Yes, fully legal: the platform operates officially, strictly 18+ and with identity verification. The income is declared as regular self-employment — the trade registration (Gewerbe) costs €30–60 at the local trade office, and with up to €25,000 in yearly turnover you fall under the simplified small-business scheme, with no VAT bureaucracy. The team walks you through the first steps.',
+    },
+    {
+      q: 'I keep seeing "OnlyFans Agentur jobs" in German search — is this the same thing?',
+      a: 'Yes. "OnlyFans Agentur" is simply the German word for an OnlyFans agency, so OnlyFans Agentur jobs, OnlyFans management Germany and this page describe the same role: you create the content, and the agency team runs the page for you — in English, Ukrainian or Russian.',
+    },
+    {
+      q: 'Will I be the only one doing this in Germany?',
+      a: 'Far from it. Over 1.3 million Ukrainians live in Germany — the fastest-growing foreign community in the country — plus around 2.5 million Russian speakers. The biggest hubs are Berlin, Munich and Hamburg. Starting among your own people is simply easier: there is a huge community around you, and the team is always available in your language.',
     },
     {
       q: 'I am not from Germany — can I still start?',
@@ -204,6 +252,7 @@ const ES: ModelGeoContent = {
     'Orden a la alemana: un plan de contenido claro, un calendario de pagos transparente y reglas sencillas — siempre sabes qué pasa con tu página.',
     'Confidencialidad: cuidamos tu información personal y configuramos la privacidad como a ti te resulte cómodo.',
     'Sin barrera idiomática: el contenido se dirige a una audiencia internacional y el equipo lleva la mensajería — contigo hablan en tu idioma.',
+    'Pagos a la europea: en euros, a tu cuenta bancaria (SEPA) o a un monedero electrónico — regulares y sin formalidades extra.',
   ],
   expectations: [
     'Has cumplido los 18 — es condición imprescindible.',
@@ -218,7 +267,7 @@ const ES: ModelGeoContent = {
     { label: 'Horario', value: 'Flexible, 2–3 horas al día' },
     { label: 'Experiencia', value: 'No hace falta — te formamos desde cero' },
     { label: 'Ubicación', value: 'Remoto · toda Alemania' },
-    { label: 'Pagos', value: 'Regulares, con calendario fijo' },
+    { label: 'Pagos', value: 'En euros (SEPA / e-wallet), con calendario fijo' },
     { label: 'Inicio', value: 'En los primeros días tras el casting online' },
   ],
   faq: [
@@ -237,6 +286,18 @@ const ES: ModelGeoContent = {
     {
       q: 'Llegué hace poco a Alemania — ¿me conviene este trabajo?',
       a: 'Sí — es uno de los casos más habituales en nuestro equipo. No necesitas ni alemán ni experiencia local: hablamos ucraniano y ruso, te ayudamos desde los primeros pasos y los primeros pagos suelen llegar ya en el primer mes.',
+    },
+    {
+      q: '¿Cómo recibiré los pagos en Alemania?',
+      a: 'En euros, en tu cuenta bancaria alemana vía SEPA — normalmente en 3–5 días hábiles y sin comisión de la plataforma. También hay una opción más rápida: el monedero electrónico Paxum, donde el dinero llega en un día aproximadamente. Puedes retirar desde ~$20 cuando quieras o programar pagos automáticos semanales. El equipo te ayuda a configurarlo todo al empezar.',
+    },
+    {
+      q: '¿Es legal en Alemania? ¿Qué pasa con los impuestos?',
+      a: 'Sí, totalmente legal: la plataforma opera de forma oficial, estrictamente 18+ y con verificación de identidad. Los ingresos se declaran como autoempleo normal — el registro (Gewerbe) cuesta 30–60 € en la oficina local, y con una facturación anual de hasta 25 000 € se aplica el régimen simplificado de pequeño empresario, sin burocracia de IVA. El equipo te orienta en los primeros pasos.',
+    },
+    {
+      q: '¿Estaré sola en Alemania?',
+      a: 'Para nada. En Alemania viven más de 1,3 millones de ucranianos — la comunidad extranjera que más crece del país — y cerca de 2,5 millones de personas rusohablantes. Los principales centros son Berlín, Múnich y Hamburgo. Empezar rodeada de los tuyos siempre es más fácil: tienes una comunidad enorme alrededor y un equipo siempre disponible en tu idioma.',
     },
     {
       q: 'No soy de Alemania — ¿puedo empezar igualmente?',
