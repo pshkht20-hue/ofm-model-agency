@@ -751,6 +751,8 @@ export const startPosts: BlogPost[] = [
       blogNav("Контент-план в системе OFM:", [
         LINK.pillar,
         LINK.beginners,
+        // IL «Сироты» §4.4 (09.10.2026): съёмочный сосед — практикум фото без подпитки
+        { href: "/blog/foto-dlya-onlyfans", label: "Фото для OnlyFans: что снимать новичку" },
         LINK.chats,
         LINK.pricing,
         LINK.services,
@@ -1000,6 +1002,8 @@ export const startPosts: BlogPost[] = [
       },
       blogNav("Открытые вакансии агентства — подробности и заявка:", [
         LINK.vacancyModelUa,
+        // IL «Сироты» §4.4 (09.10.2026): /vacancies/model — перевёрнутый хаб (100+ исходящих, 3–5 входящих)
+        { href: "/vacancies/model", label: "Каталог вакансий модели: форматы и гео" },
         LINK.vacancyChatter,
         LINK.vacanciesKw,
       ]),
@@ -2439,7 +2443,11 @@ export const startPosts: BlogPost[] = [
       {
         type: "nav",
         intro: "Уже знаешь, что ищешь максимальный доход, — сразу к делу:",
-        links: [{ href: "/vacancies/model/ukraine", label: "Вакансия модели OnlyFans — Украина" }],
+        links: [
+          { href: "/vacancies/model/ukraine", label: "Вакансия модели OnlyFans — Украина" },
+          // IL «Сироты» §4.4 (09.10.2026): /vacancies/for-girls — почти-сирота (2 входящих)
+          { href: "/vacancies/for-girls", label: "Онлайн-вакансия для девушек: гибкий график" },
+        ],
       },
       { type: "h2", text: "Какая работа подходит маме в декрете: четыре условия" },
       {
@@ -2767,7 +2775,11 @@ export const startPosts: BlogPost[] = [
       {
         type: "nav",
         intro: "Уже знаешь, что ищешь максимальный доход, — сразу к делу:",
-        links: [{ href: "/vacancies/model/ukraine", label: "Вакансия модели OnlyFans — Украина" }],
+        links: [
+          { href: "/vacancies/model/ukraine", label: "Вакансия модели OnlyFans — Украина" },
+          // IL «Сироты» §4.4 (09.10.2026): блоговый хаб женского кластера → его вакансия-лендинг
+          { href: "/vacancies/for-girls", label: "Вакансия «Онлайн-работа для девушек» — условия и заявка" },
+        ],
       },
       { type: "h2", text: "Как выбрать формат: четыре фильтра до отклика" },
       {
@@ -3074,7 +3086,11 @@ export const startPosts: BlogPost[] = [
       {
         type: "nav",
         intro: "Уже знаешь свой типаж — сразу к делу:",
-        links: [{ href: "/vacancies/model/ukraine", label: "Вакансия модели OnlyFans — Украина" }],
+        links: [
+          { href: "/vacancies/model/ukraine", label: "Вакансия модели OnlyFans — Украина" },
+          // IL «Сироты» §4.4 (09.10.2026): второй вход в каталог /vacancies/model
+          { href: "/vacancies/model", label: "Вакансии модели по форматам — каталог" },
+        ],
       },
       { type: "h2", text: "Почему типаж решает больше, чем внешность" },
       {
@@ -3429,7 +3445,11 @@ export const startPosts: BlogPost[] = [
       {
         type: "nav",
         intro: "Уже ищешь максимальный доход — сразу к делу:",
-        links: [{ href: "/vacancies/model/ukraine", label: "Вакансия модели OnlyFans — Украина" }],
+        links: [
+          { href: "/vacancies/model/ukraine", label: "Вакансия модели OnlyFans — Украина" },
+          // IL «Сироты» §4.4 (09.10.2026): третий вход в /vacancies/for-girls (анкор-вариация)
+          { href: "/vacancies/for-girls", label: "Вакансия для девушек онлайн — удалённо" },
+        ],
       },
       { type: "h2", text: "Главный фильтр: совместимость с расписанием" },
       {

@@ -1225,6 +1225,11 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
             href: "/vacancies/chatter-onlyfans",
             label: "Vacante de chatter OnlyFans",
           },
+          // IL «Деньги» §4.5б (09.10.2026): исходящая ИЗ чатер-статьи на хаб вакансий (разрешено)
+          {
+            href: "/vacancies",
+            label: "Empleos de la agencia — todas las vacantes",
+          },
           {
             href: "/",
             label: "Agencia OnlyFans OFM — página principal",
@@ -1754,6 +1759,8 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
         intro: "Directo a las condiciones y la solicitud:",
         links: [
           { href: "/vacancies/model/spain", label: "Vacante de modelo OnlyFans — España" },
+          // IL «Деньги» §4.5б (09.10.2026): /es/vacancies — 3 editorial-входящих при money-потенциале
+          { href: "/vacancies", label: "Vacantes de la agencia OFM" },
         ],
       },
       { type: "h2", text: "¿Puedo empezar desde cero, sin experiencia ni seguidores?" },

@@ -183,6 +183,8 @@ export const safetyPosts: BlogPost[] = [
       },
       blogNav('Безопасность, легальность и выбор команды:', [
         LINK.safetyResearch,
+        // IL «Сироты» §4.4 (09.10.2026): хаб /research был полным сиротой (0 editorial-входящих)
+        { href: '/research', label: 'Все исследования OFM: данные и методология' },
         LINK.legal,
         { href: '/blog/rabota-modelyu-onlyfans', label: 'Как устроена работа моделью OnlyFans' },
         LINK.scam,
@@ -310,6 +312,8 @@ export const safetyPosts: BlogPost[] = [
         LINK.legal,
         { href: '/blog/rabota-modelyu-onlyfans', label: 'Работа моделью OnlyFans: условия и старт' },
         LINK.safety,
+        // IL «Сироты» §4.4 (09.10.2026): подпитка микро-топа foto-dlya-onlyfans
+        { href: '/blog/foto-dlya-onlyfans', label: 'Фото для онлифанс: 8 сюжетов первой недели' },
         LINK.ua,
         LINK.faq,
       ]),
@@ -397,6 +401,8 @@ export const safetyPosts: BlogPost[] = [
       blogNav('Разберись в деталях перед заявкой:', [
         LINK.safety,
         LINK.research2026,
+        // IL «Сироты» §4.4 (09.10.2026): второй вход в хаб /research (анкор-вариация)
+        { href: '/research', label: 'Исследования рынка 18+ — раздел Research' },
         LINK.noface,
         LINK.diaspora,
         { href: '/blog/rabota-modelyu-onlyfans', label: 'Условия работы моделью OnlyFans с агентством' },

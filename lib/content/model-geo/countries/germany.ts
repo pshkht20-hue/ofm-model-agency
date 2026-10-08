@@ -148,8 +148,8 @@ const UK: ModelGeoContent = {
       a: 'Так, це один із найчастіших сценаріїв у нашій команді. Не потрібні ні німецька, ні місцевий досвід: ми спілкуємося українською, допомагаємо з перших кроків, а перші виплати зазвичай приходять уже в перший місяць.',
     },
     {
-      q: 'Як приходять виплати в Німеччині?',
-      a: 'У євро на твій німецький банківський рахунок через SEPA — зазвичай 3–5 банківських днів, без комісії платформи. Є і швидший варіант — електронний гаманець Paxum, куди гроші надходять приблизно за добу. Вивід доступний уже від ~$20: можна замовляти його будь-коли або налаштувати автоматичні виплати щотижня. Команда допомагає все налаштувати на старті.',
+      q: 'Як надходять виплати в Німеччині?',
+      a: 'У євро на твій німецький банківський рахунок через SEPA — зазвичай 3–5 банківських днів, без комісії платформи. Є і швидший варіант — електронний гаманець Paxum, куди гроші надходять приблизно за добу. Виведення доступне вже від ~$20: можна замовляти його будь-коли або налаштувати автоматичні виплати щотижня. Команда допомагає все налаштувати на старті.',
     },
     {
       q: 'Це легально в Німеччині? Що з податками?',
@@ -217,7 +217,7 @@ const EN: ModelGeoContent = {
     },
     {
       q: 'How will I receive payouts in Germany?',
-      a: 'In euros, straight to your German bank account via SEPA — usually 3–5 business days, with no platform fee. There is also a faster option: the Paxum e-wallet, where the money arrives in about a day. You can withdraw from ~$20 whenever you like, or set up automatic weekly payouts. The team helps you set everything up at the start.',
+      a: 'In euros, straight to your German bank account via SEPA — usually 3–5 business days, with no platform fee. There is also a faster option: the Paxum e-wallet, where the money arrives in about a day. Withdrawals start at ~$20 — request one whenever you like, or set up automatic weekly payouts. The team helps you set everything up at the start.',
     },
     {
       q: 'Is it legal in Germany? What about taxes?',
@@ -296,7 +296,7 @@ const ES: ModelGeoContent = {
       a: 'Sí, totalmente legal: la plataforma opera de forma oficial, estrictamente 18+ y con verificación de identidad. Los ingresos se declaran como autoempleo normal — el registro (Gewerbe) cuesta 30–60 € en la oficina local, y con una facturación anual de hasta 25 000 € se aplica el régimen simplificado de pequeño empresario, sin burocracia de IVA. El equipo te orienta en los primeros pasos.',
     },
     {
-      q: '¿Estaré sola en Alemania?',
+      q: '¿Seré la única en Alemania?',
       a: 'Para nada. En Alemania viven más de 1,3 millones de ucranianos — la comunidad extranjera que más crece del país — y cerca de 2,5 millones de personas rusohablantes. Los principales centros son Berlín, Múnich y Hamburgo. Empezar rodeada de los tuyos siempre es más fácil: tienes una comunidad enorme alrededor y un equipo siempre disponible en tu idioma.',
     },
     {

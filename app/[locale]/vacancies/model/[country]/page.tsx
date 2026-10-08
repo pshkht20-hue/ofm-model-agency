@@ -65,6 +65,28 @@ const SUPPORT_SLUGS = [
   'onlyfans-agentstvo-dlya-nachinayushchih',
 ];
 
+/**
+ * E2-гео-слой (09.10.2026, SEO-DIASPORA §5.2): страница страны/города первой
+ * ссылается на «свою» гео-статью + общий гид «за кордоном» — связь блог↔витрина
+ * становится двусторонней. Статьи существуют только в ru/uk; на en/es их
+ * отфильтрует UsefulReading (как и весь пул). Реестр статичен → SSR-стабильно.
+ */
+const GEO_ARTICLE_SLUGS: Record<string, string[]> = {
+  ukraine: ['onlyfans-v-ukraine'],
+  // Городские страницы приходят сюда с составным слагом реестра ('ukraine/kyiv').
+  'ukraine/kyiv': ['onlyfans-rabota-kiev'],
+  'ukraine/kharkiv': ['onlyfans-rabota-harkov'],
+  'ukraine/lviv': ['onlyfans-rabota-lvov'],
+  poland: ['onlyfans-rabota-polsha', 'robota-dlya-ukrainok-za-kordonom'],
+  germany: ['onlyfans-rabota-germaniya', 'robota-dlya-ukrainok-za-kordonom'],
+  france: ['robota-dlya-ukrainok-za-kordonom'],
+  italy: ['robota-dlya-ukrainok-za-kordonom'],
+  netherlands: ['robota-dlya-ukrainok-za-kordonom'],
+  spain: ['robota-dlya-ukrainok-za-kordonom'],
+  'united-kingdom': ['robota-dlya-ukrainok-za-kordonom'],
+  'united-states': ['robota-dlya-ukrainok-za-kordonom'],
+};
+
 /** Сдвиг списка по кругу: rotate([a,b,c], 1) → [b,c,a]. Чистая функция → SSR-стабильно. */
 function rotate<T>(list: T[], offset: number): T[] {
   if (list.length === 0) return list;
@@ -120,6 +142,7 @@ export default async function ModelGeoCountryPage({ params }: Props) {
   // Чередование «пиллар → саппорт»: пул с запасом (9 слагов), рендерятся первые 4
   // из тех, что реально существуют в текущей локали (фильтр внутри UsefulReading).
   const usefulSlugs = [
+    ...(GEO_ARTICLE_SLUGS[country] ?? []),
     ...pillars.flatMap((slug, i) => (i < support.length ? [slug, support[i]] : [slug])),
     ...support.slice(pillars.length),
   ];

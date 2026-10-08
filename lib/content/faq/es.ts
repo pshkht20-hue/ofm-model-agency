@@ -137,7 +137,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Hace falta experiencia en OnlyFans antes de solicitar?',
         answer:
-          'No. Trabajamos con principiantes y modelos activas. A las nuevas: lanzamiento, verificación y primer plan de contenido. A las experimentadas: auditoría de embudo, precios y marketing orientada al crecimiento.',
+          'No. Trabajamos con principiantes y modelos activas. A las nuevas: lanzamiento, verificación y primer plan de contenido. A las experimentadas: auditoría de embudo, precios y marketing orientada al crecimiento. Consulta las [vacantes abiertas de la agencia](/vacancies) para ver los puestos y condiciones actuales.',
       },
       {
         question: '¿Qué requisitos hay para la modelo (edad, documentos)?',

@@ -12,6 +12,11 @@
  * Красные линии: без процентов/gross/реинвеста, без «договор/контракт» и
  * триггер-слов; вилка дохода — только record.incomeUsd ($3 000–10 000);
  * только OnlyFans; эмодзи не используем — иконки рендерит шаблон страницы.
+ *
+ * E1-фактура (09.10.2026): выплаты (банковский перевод/Paxum, валюту конвертации
+ * сознательно не фиксируем — источники противоречат), незарегистрированная
+ * деятельность/JDG без цифр лимита, комьюнити 1,5+ млн — источники:
+ * docs/POLAND-FACTPACK-2026-10-09.md. Skrill не упоминаем.
  */
 import type { Locale } from '@/i18n/routing';
 import type { ModelGeoContent, ModelGeoCountry } from '../types';
@@ -40,6 +45,7 @@ const RU: ModelGeoContent = {
     'Старт без польского: вся коммуникация с командой — на украинском или русском, а переписку с подписчиками ведём мы.',
     'Конфиденциальность: бережно относимся к твоей личной информации и настраиваем приватность так, как комфортно тебе.',
     'Мы понимаем твою ситуацию: многие девушки команды тоже начинали на новом месте — поможем выйти на стабильный доход без лишнего стресса.',
+    'Выплаты по-европейски: банковский перевод прямо на твой счёт или электронный кошелёк — регулярно и без лишних формальностей.',
   ],
   expectations: [
     'Тебе исполнилось 18 лет.',
@@ -54,13 +60,25 @@ const RU: ModelGeoContent = {
     { label: 'График', value: 'Гибкий, 2–3 часа в день' },
     { label: 'Опыт', value: 'Не требуется — обучаем с нуля' },
     { label: 'Локация', value: 'Удалённо · вся Польша' },
-    { label: 'Выплаты', value: 'Регулярно, по фиксированному графику' },
+    { label: 'Выплаты', value: 'Банковский перевод / e-wallet, по фиксированному графику' },
     { label: 'Старт', value: 'В первые дни после онлайн-кастинга' },
   ],
   faq: [
     {
       q: 'Насколько это анонимно и приватно?',
       a: 'Приватность настраиваем индивидуально, а аудиторию страницы направляем на дальние рынки — знакомые в Польше или в Украине на неё практически не наткнутся. Кому рассказывать о работе, выбираешь только ты.',
+    },
+    {
+      q: 'Как приходят выплаты в Польше?',
+      a: 'Банковским переводом прямо на твой счёт — обычно 3–5 банковских дней, без комиссии платформы. Есть и более быстрый вариант — электронный кошелёк Paxum, который давно работает с Польшей: деньги приходят примерно за сутки. Вывод доступен уже от ~$20, можно настроить автоматические выплаты каждую неделю. Команда помогает всё подключить при старте.',
+    },
+    {
+      q: 'Это легально в Польше? Что с налогами?',
+      a: 'Да, полностью легально: платформа работает официально, строго 18+ и с верификацией личности, а доход — обычный налогооблагаемый заработок. Для первых шагов в Польше есть упрощённый режим деятельности без регистрации фирмы, дальше — обычный ИП (JDG). Команда подскажет, с чего начать оформление.',
+    },
+    {
+      q: 'Я буду в Польше одна такая?',
+      a: 'Точно нет. В Польше живёт более полутора миллионов украинцев — это вторая по размеру украинская община в ЕС, и большинство взрослых в ней — женщины. Крупнейшие комьюнити — Варшава, Вроцлав, Краков и Гданьск. Начинать среди своих всегда проще: вокруг огромное сообщество, а команда всегда на связи — и говорит на твоём языке.',
     },
     {
       q: 'Нужен ли опыт, чтобы начать?',
@@ -95,6 +113,7 @@ const UK: ModelGeoContent = {
     'Старт без польської: уся комунікація з командою — українською, а листування з підписниками ведемо ми.',
     'Конфіденційність: дбайливо ставимося до твоєї особистої інформації та налаштовуємо приватність так, як зручно тобі.',
     'Ми розуміємо твою ситуацію: багато дівчат команди теж починали на новому місці — допоможемо вийти на стабільний дохід без зайвого стресу.',
+    'Виплати по-європейськи: банківський переказ прямо на твій рахунок або електронний гаманець — регулярно й без зайвих формальностей.',
   ],
   expectations: [
     'Тобі виповнилося 18 років.',
@@ -109,13 +128,25 @@ const UK: ModelGeoContent = {
     { label: 'Графік', value: 'Гнучкий, 2–3 години на день' },
     { label: 'Досвід', value: 'Не потрібен — навчимо з нуля' },
     { label: 'Локація', value: 'Віддалено · вся Польща' },
-    { label: 'Виплати', value: 'Регулярні, за фіксованим графіком' },
+    { label: 'Виплати', value: 'Банківський переказ / e-wallet, за фіксованим графіком' },
     { label: 'Старт', value: 'У перші дні після онлайн-кастингу' },
   ],
   faq: [
     {
       q: 'Наскільки це анонімно і приватно?',
       a: 'Приватність налаштовуємо індивідуально, а аудиторію сторінки спрямовуємо на далекі ринки — знайомі в Польщі чи в Україні на неї практично не натраплять. Кому розповідати про роботу, обираєш лише ти.',
+    },
+    {
+      q: 'Як надходять виплати в Польщі?',
+      a: 'Банківським переказом прямо на твій рахунок — зазвичай 3–5 банківських днів, без комісії платформи. Є і швидший варіант — електронний гаманець Paxum, який давно працює з Польщею: гроші надходять приблизно за добу. Виведення доступне вже від ~$20, можна налаштувати автоматичні виплати щотижня. Команда допомагає все підключити на старті.',
+    },
+    {
+      q: 'Це легально в Польщі? Що з податками?',
+      a: 'Так, повністю легально: платформа працює офіційно, суворо 18+ і з верифікацією особи, а дохід — звичайний оподатковуваний заробіток. Для перших кроків у Польщі є спрощений режим діяльності без реєстрації фірми, далі — звичайний ФОП (JDG). Команда підкаже, з чого почати оформлення.',
+    },
+    {
+      q: 'Я буду в Польщі одна така?',
+      a: 'Точно ні. У Польщі живе понад півтора мільйона українців — це друга за розміром українська громада в ЄС, і більшість дорослих у ній — жінки. Найбільші ком’юніті — Варшава, Вроцлав, Краків і Ґданськ. Починати серед своїх завжди простіше: довкола величезна спільнота, а команда завжди на зв’язку — і говорить твоєю мовою.',
     },
     {
       q: 'Чи потрібен досвід, щоб почати?',
@@ -150,6 +181,7 @@ const EN: ModelGeoContent = {
     'Start with zero Polish: all communication with the team is in Ukrainian or Russian, and subscriber messaging is run by us.',
     'Confidentiality: we treat your personal information with care and set up privacy the way you feel comfortable.',
     'We understand your situation: many women on the team also started over in a new place — we will help you reach a stable income without extra stress.',
+    'European-style payouts: a bank transfer straight to your account or an e-wallet — regular and with no extra formalities.',
   ],
   expectations: [
     'You are 18 or older.',
@@ -164,7 +196,7 @@ const EN: ModelGeoContent = {
     { label: 'Schedule', value: 'Flexible, 2–3 hours a day' },
     { label: 'Experience', value: 'Not needed — we train from scratch' },
     { label: 'Location', value: 'Remote · all of Poland' },
-    { label: 'Payouts', value: 'Regular, on a fixed schedule' },
+    { label: 'Payouts', value: 'Bank transfer / e-wallet, on a fixed schedule' },
     { label: 'Start', value: 'Within days after the online casting' },
   ],
   faq: [
@@ -183,6 +215,18 @@ const EN: ModelGeoContent = {
     {
       q: 'When do I get my first payout?',
       a: 'The first payout usually lands within the first month, then on a fixed schedule. We will discuss at the start how it is most convenient to receive money while living in Poland.',
+    },
+    {
+      q: 'How will I receive payouts in Poland?',
+      a: 'By bank transfer straight to your account — usually 3–5 business days, with no platform fee. There is also a faster option: the Paxum e-wallet, which has worked with Poland for years — money arrives in about a day. Withdrawals start at ~$20, and you can set up automatic weekly payouts. The team helps you connect everything at the start.',
+    },
+    {
+      q: 'Is it legal in Poland? What about taxes?',
+      a: 'Yes, fully legal: the platform operates officially, strictly 18+ and with identity verification, and the income is regular taxable earnings. For the first steps Poland has a simplified regime with no company registration, and later a standard sole proprietorship (JDG). The team walks you through the first steps.',
+    },
+    {
+      q: 'Will I be the only one doing this in Poland?',
+      a: 'Far from it. Over one and a half million Ukrainians live in Poland — the second-largest Ukrainian community in the EU, and most of its adults are women. The biggest hubs are Warsaw, Wrocław, Kraków and Gdańsk. Starting among your own people is simply easier: there is a huge community around you, and the team is always available in your language.',
     },
     {
       q: 'I am not from Poland — can I still start?',
@@ -205,6 +249,7 @@ const ES: ModelGeoContent = {
     'Empieza sin polaco: toda la comunicación con el equipo es en ucraniano o ruso, y la mensajería con suscriptores la llevamos nosotros.',
     'Confidencialidad: cuidamos tu información personal y configuramos la privacidad como a ti te resulte cómodo.',
     'Entendemos tu situación: muchas chicas del equipo también empezaron de cero en un lugar nuevo — te ayudamos a lograr un ingreso estable sin estrés añadido.',
+    'Pagos a la europea: transferencia bancaria directa a tu cuenta o monedero electrónico — regulares y sin formalidades extra.',
   ],
   expectations: [
     'Tienes 18 años o más.',
@@ -219,13 +264,25 @@ const ES: ModelGeoContent = {
     { label: 'Horario', value: 'Flexible, 2–3 horas al día' },
     { label: 'Experiencia', value: 'No hace falta — te formamos desde cero' },
     { label: 'Ubicación', value: 'Remoto · toda Polonia' },
-    { label: 'Pagos', value: 'Regulares, con calendario fijo' },
+    { label: 'Pagos', value: 'Transferencia bancaria / e-wallet, con calendario fijo' },
     { label: 'Inicio', value: 'En los primeros días tras el casting online' },
   ],
   faq: [
     {
       q: '¿Es anónimo y privado?',
       a: 'La privacidad se configura individualmente y la audiencia de la página se dirige a mercados lejanos — tus conocidos en Polonia o Ucrania casi nunca se toparán con ella. A quién se lo cuentas lo eliges solo tú.',
+    },
+    {
+      q: '¿Cómo recibiré los pagos en Polonia?',
+      a: 'Por transferencia bancaria directa a tu cuenta — normalmente en 3–5 días hábiles y sin comisión de la plataforma. También hay una opción más rápida: el monedero electrónico Paxum, que lleva años trabajando con Polonia — el dinero llega en un día aproximadamente. Puedes retirar desde ~$20 y programar pagos automáticos semanales. El equipo te ayuda a conectarlo todo al empezar.',
+    },
+    {
+      q: '¿Es legal en Polonia? ¿Qué pasa con los impuestos?',
+      a: 'Sí, totalmente legal: la plataforma opera de forma oficial, estrictamente 18+ y con verificación de identidad, y los ingresos son ganancias imponibles normales. Para los primeros pasos Polonia tiene un régimen simplificado sin registrar empresa, y más adelante una actividad por cuenta propia estándar (JDG). El equipo te orienta en los primeros pasos.',
+    },
+    {
+      q: '¿Seré la única en Polonia?',
+      a: 'Para nada. En Polonia viven más de un millón y medio de ucranianos — la segunda comunidad ucraniana más grande de la UE, y la mayoría de sus adultos son mujeres. Los principales centros son Varsovia, Breslavia, Cracovia y Gdansk. Empezar rodeada de los tuyos siempre es más fácil: tienes una comunidad enorme alrededor y un equipo siempre disponible en tu idioma.',
     },
     {
       q: '¿Necesito experiencia para empezar?',
