@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SeoPageShell } from '@/components/layout/SeoPageShell';
 import { ArticleBody } from '@/components/seo/ArticleBody';
+import { getArticleVideoEmbed } from '@/lib/content/blog/video-embeds';
 import { ChannelTeaser } from '@/components/seo/ChannelTeaser';
 import {
   ArticleJsonLd,
@@ -158,6 +159,9 @@ export default async function BlogPostPage({ params }: Props) {
   const author = getBlogAuthorContent(blogLocale);
   const categoryLabels = getBlogCategoryLabels(blogLocale);
   const faqItems = extractFaqItems(post.blocks);
+  // Видео-карточка волны 1 (10.10.2026): рендерная вставка по карте, контент
+  // статьи и updatedAt не меняются; на en/es карта пуста — ролики есть RU/UK.
+  const videoEmbed = getArticleVideoEmbed(post.slug, blogLocale);
 
   /**
    * Видимая дата обновления (только для статей блога, JobPosting здесь больше нет
@@ -273,7 +277,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <BlogArticleLikeBar slug={post.slug} />
 
-      <ArticleBody blocks={post.blocks} />
+      <ArticleBody blocks={post.blocks} video={videoEmbed} />
       {/* Видели ли читатели программные мосты статьи (section_view в GA4);
           в коротких статьях блоков нет — трекер просто не найдёт id. */}
       <SectionViewTracker

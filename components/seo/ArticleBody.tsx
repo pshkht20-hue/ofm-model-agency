@@ -6,6 +6,8 @@ import { caseShots } from '@/lib/results/cases';
 import { TrackedCtaLink, TrackedTelegramLink } from '@/components/analytics/TrackedLinks';
 import { ArticleCalcTeaser } from '@/components/seo/ArticleCalcTeaser';
 import { ArticleInlineCta } from '@/components/seo/ArticleInlineCta';
+import { ArticleVideo } from '@/components/seo/ArticleVideo';
+import type { ArticleVideoPlacement } from '@/lib/content/blog/video-embeds';
 
 const fmtCaseNet = (n: number) =>
   n >= 1_000_000 ? `$${(n / 1_000_000).toFixed(2)}M` : `$${Math.round(n / 1_000)}K`;
@@ -317,7 +319,19 @@ function renderBlock(block: BlogBlock, i: number) {
   );
 }
 
-export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
+/**
+ * video — видео-карточка (W5 10.10.2026, аддитивно): вставляется на рендере
+ * ПОСЛЕ блока video.afterIndex по карте lib/content/blog/video-embeds.ts.
+ * Контент статей не меняется, bridgeIndices считается по тем же blocks —
+ * мосты не сдвигаются; FAQPage собирается в page.tsx тоже по blocks.
+ */
+export function ArticleBody({
+  blocks,
+  video,
+}: {
+  blocks: BlogBlock[];
+  video?: ArticleVideoPlacement | null;
+}) {
   const { inlineIdx, calcIdx } = bridgeIndices(blocks);
 
   return (
@@ -327,6 +341,7 @@ export function ArticleBody({ blocks }: { blocks: BlogBlock[] }) {
           {i === inlineIdx && <ArticleInlineCta />}
           {i === calcIdx && <ArticleCalcTeaser />}
           {renderBlock(block, i)}
+          {video && i === video.afterIndex && <ArticleVideo data={video.data} />}
         </Fragment>
       ))}
     </article>

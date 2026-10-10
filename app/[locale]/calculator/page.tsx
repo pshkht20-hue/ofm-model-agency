@@ -10,6 +10,8 @@ import { createPageMetadata } from '@/lib/seo';
 import { getSiteUrl, siteConfig } from '@/lib/site';
 import { pathForLocale } from '@/lib/i18n/paths';
 import { CalculatorPageCta } from './CalculatorPageCta';
+import { ArticleVideo } from '@/components/seo/ArticleVideo';
+import { getEarnVideoData } from '@/lib/content/blog/video-embeds';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -76,6 +78,7 @@ export default async function CalculatorPage({ params }: Props) {
   setRequestLocale(locale);
   const pageLocale = locale as Locale;
   const content = getCalculatorPageContent(pageLocale);
+  const videoData = getEarnVideoData(pageLocale);
 
   const sectionHeading = 'font-serif text-2xl md:text-3xl text-white mb-6';
   const card = 'rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6';
@@ -119,7 +122,14 @@ export default async function CalculatorPage({ params }: Props) {
             </div>
           ))}
         </div>
-        <p className="text-body mb-14">{content.how.streams}</p>
+        <p className="text-body mb-7">{content.how.streams}</p>
+        {/* Видео-карточка (10.10.2026): ролик «из чего складывается баланс» —
+            наглядный ответ на вопрос секции; только ru/uk, en/es-версий нет. */}
+        {videoData && (
+          <div className="mb-14">
+            <ArticleVideo data={videoData} analyticsPage="calculator" />
+          </div>
+        )}
       </section>
 
       {/* Дисклеймер: оценка ≠ гарантия, суммы = gross-балансы */}

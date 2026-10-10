@@ -18,6 +18,8 @@ import {
   type TelegramClickParams,
   type WhatsappClickParams,
   type EmailClickParams,
+  type VideoProgressParams,
+  type VideoStartParams,
 } from '@/lib/analytics/events';
 
 function gtagSafe(...args: unknown[]) {
@@ -178,6 +180,25 @@ export function trackSectionView(params: SectionViewParams) {
 export function trackFaqOpen(params: FaqOpenParams) {
   gtagSafe('event', ANALYTICS_EVENTS.FAQ_OPEN, {
     question: clamp(params.question),
+    locale: params.locale,
+    ...(params.page_path ? { page_path: clamp(params.page_path) } : {}),
+  });
+}
+
+/** Первый запуск видео-карточки в статье (повторные нажатия не шлются). */
+export function trackVideoStart(params: VideoStartParams) {
+  gtagSafe('event', ANALYTICS_EVENTS.VIDEO_START, {
+    video_id: params.video_id,
+    locale: params.locale,
+    ...(params.page_path ? { page_path: clamp(params.page_path) } : {}),
+  });
+}
+
+/** Квартили просмотра ролика: 25/50/75, 100 — по ended. */
+export function trackVideoProgress(params: VideoProgressParams) {
+  gtagSafe('event', ANALYTICS_EVENTS.VIDEO_PROGRESS, {
+    video_id: params.video_id,
+    percent: params.percent,
     locale: params.locale,
     ...(params.page_path ? { page_path: clamp(params.page_path) } : {}),
   });

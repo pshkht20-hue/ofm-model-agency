@@ -19,6 +19,8 @@ export const ANALYTICS_EVENTS = {
   SCROLL_DEPTH: 'scroll_depth',
   SECTION_VIEW: 'section_view',
   FAQ_OPEN: 'faq_open',
+  VIDEO_START: 'video_start',
+  VIDEO_PROGRESS: 'video_progress',
 } as const;
 
 export type CtaLocation =
@@ -33,6 +35,7 @@ export type CtaLocation =
   | 'seo_shell'
   | 'article_cta'
   | 'article_inline'
+  | 'article_video'
   | 'article_calc_teaser'
   | 'footer'
   | 'join_hero'
@@ -174,4 +177,16 @@ export type FaqOpenParams = {
   question: string;
   locale: string;
   page_path?: string;
+};
+
+/** Запуск видео-карточки в статье (components/seo/ArticleVideo). */
+export type VideoStartParams = {
+  video_id: string;
+  locale: string;
+  page_path?: string;
+};
+
+/** Квартиль просмотра того же ролика; 100 шлётся по событию ended. */
+export type VideoProgressParams = VideoStartParams & {
+  percent: 25 | 50 | 75 | 100;
 };
