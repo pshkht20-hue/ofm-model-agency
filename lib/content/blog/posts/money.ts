@@ -1130,6 +1130,10 @@ export const moneyPosts: BlogPost[] = [
             href: '/blog/kak-stat-onlyfans-modelyu-s-nulya',
             label: 'Как стать моделью OnlyFans с нуля: 5 шагов',
           },
+          {
+            href: '/blog/onlyfans-modeli-kto-eto',
+            label: 'OnlyFans-модели: кто это и сколько получают',
+          },
         ],
       },
       {
