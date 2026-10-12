@@ -438,6 +438,195 @@
     "vacancy_pages_clicks": 441
    },
    "notes": "Неделя 13–18.09 (6 дней) к 06–12.09: клики сайта 225 → 252/день (+12%), найм-кластер 68 → 85 кликов/день (+25%); найм-запросов в ТОП-3 18 → 28, в ТОП-10 93 → 108; 37 ↑ / 16 ↓. Рост: «онлифанс агентство» 3.1 → 1.6, «of models» 4.1 → 2.4 (149 кликов), «ofm agency» 8.4 → 4.8, «онлифанс вакансии» 8.4 → 7.2 (ранжируется хаб /vacancies 5.0), «модель онлифанс вакансии» 5.3 → 4.9 (живая №6), флагман «онлифанс работа» в живой органике №9 → №8 (GSC 5.5 → 5.8 — шум). Просадки: «работа чаттером» 4.9 → 6.1, «робота онліфанс» 4.9 → 6.1, «агентство онлифанс» 3.2 → 11, «onlyfans jobs» 12.9 → 14.8 (живая №22 → вне ТОП-100). Тревога: «онліфанс агенція» — живая органика №12 → вне ТОП-100 (GSC 21.3, 12 показов), ТОП-10 держат 10 украинских агентств/Instagram/girlswork. «онлифанс вакансии» в живом срезе не найден при GSC 7.2 — вероятно шум среза, перепроверить. Ранги доменов без изменений (мы 134). Мейнстрим-гэпы и EN/ES-головы — без сдвига."
+  },
+  {
+   "date": "2026-10-12",
+   "source": "GSC через сервис-аккаунт (MCP gsc не подключился по таймауту, OAuth-токен скрипта протух — invalid_grant; окно 04.10–09.10 = 6 дней, 10.10 в GSC ещё пуст, против 27.09–03.10 и против окна прошлого снимка 13.09–18.09; плюс 28 дней 13.09–10.10) + DataForSEO live/advanced SERP (13 приоритетных запросов, органический ранг, один десктопный срез) + backlinks_bulk_ranks. Стоимость DataForSEO $0.26. Прогонов 28.09 и 05.10 в истории нет — разрыв 3 недели.",
+   "positions": {
+    "онлифанс работа": 5.7,
+    "модель онліфанс": 2.4,
+    "онлифанс модель это": 4.2,
+    "чаттер это": 2.4,
+    "онліфанс агенція": 12,
+    "модель онлифанс вакансии": 5.6,
+    "онлифанс агентство": 2.2,
+    "агентство онлифанс": 2.2,
+    "работа онлифанс модель": 4.6,
+    "чатер работа": 5.2,
+    "работа чаттером": 4.1,
+    "чаттер онлифанс вакансии": 4.5,
+    "чаттер вакансии": 6.2,
+    "робота онліфанс": 4.7,
+    "онліфанс робота": 3.3,
+    "онліфанс робота відгуки": null,
+    "onlyfans job": 5.4,
+    "onlyfans chatter": 10.3,
+    "of models": 4.1,
+    "of model": 2.5,
+    "ofm agency": 6.3,
+    "ofm jobs": 5.6,
+    "онлифанс вакансии": 7.3,
+    "чатер онлифанс": 2.2,
+    "чаттер онлифанс": 1.6,
+    "onlyfans jobs": 10.1,
+    "onlyfans agency jobs": 5.5,
+    "onlyfans agency hiring": 4.6,
+    "работа онлифанс": 6,
+    "onlyfans работа": 4.4,
+    "онли фанс работа": 4.9,
+    "онлифанс робота": 9.7,
+    "оператор чата онлифанс": 4.4,
+    "модель онлифанс": 7.3,
+    "онлифанс харьков": 1.8,
+    "как стать моделью онлифанс": 2,
+    "online chatter job": 2.7,
+    "modelo onlyfans": 9.9,
+    "работа моделью": null,
+    "робота для дівчат": null,
+    "робота моделлю": null,
+    "оператор чата": null,
+    "оператор чата удаленно": null,
+    "вебкам модель": null,
+    "onlyfans agency": 22.4,
+    "webcam model job": null,
+    "modelo webcam": null
+   },
+   "live_organic_rank": {
+    "онлифанс работа": 15,
+    "онліфанс агенція": 10,
+    "модель онлифанс вакансии": 7,
+    "онлифанс вакансии": 23,
+    "чатер онлифанс": 5,
+    "onlyfans jobs": 14,
+    "onlyfans agency": null,
+    "оператор чата удаленно": null,
+    "робота для дівчат": null,
+    "работа моделью": null,
+    "работа онлайн для девушек": null,
+    "webcam model job": null,
+    "modelo webcam": null
+   },
+   "competitor_ranks": {
+    "_scale": "DataForSEO backlinks rank 0–1000; 0 = беклинков не обнаружено",
+    "ofmmodels.com": 147,
+    "forumonly.fun": 65,
+    "only-boost.agency": 82,
+    "datingforum.com.ua": 111,
+    "x.layboard.com": 145,
+    "girlswork.com.ua": 292,
+    "layboard.in": 352,
+    "milanuncios.com": 484,
+    "robota.ua": 545,
+    "work.ua": 648,
+    "indeed.com": 730,
+    "xjobber.com": 0,
+    "ofmodels.com.ua": 0,
+    "royalmodelagency.com": 0,
+    "ofmarketing.net": 0,
+    "only-plus.me": 0,
+    "spiritagency.space": 0
+   },
+   "live_serp_top3": {
+    "онлифанс работа": [
+     "x.layboard.com",
+     "forumonly.fun",
+     "robota.ua"
+    ],
+    "онліфанс агенція": [
+     "royalmodelagency.com",
+     "spiritagency.space",
+     "instagram.com/ofmarketingnet"
+    ],
+    "оператор чата удаленно": [
+     "robota.ua",
+     "robota.ua",
+     "work.ua"
+    ],
+    "робота для дівчат": [
+     "m.olx.ua",
+     "m.olx.ua",
+     "ua.jooble.org"
+    ],
+    "модель онлифанс вакансии": [
+     "xjobber.com",
+     "datingforum.com.ua",
+     "x.layboard.com"
+    ],
+    "онлифанс вакансии": [
+     "xjobber.com",
+     "girlswork.com.ua",
+     "reddit.com"
+    ],
+    "чатер онлифанс": [
+     "xjobber.com",
+     "datingforum.com.ua",
+     "reddit.com"
+    ],
+    "работа моделью": [
+     "jobs.ua",
+     "work.ua",
+     "robota.ua"
+    ],
+    "работа онлайн для девушек": [
+     "layboard.com",
+     "ua.jooble.org",
+     "ua.jooble.org"
+    ],
+    "onlyfans agency": [
+     "xcreatormgmt.com",
+     "theboutiquecoo.com",
+     "reddit.com"
+    ],
+    "onlyfans jobs": [
+     "uk.linkedin.com",
+     "ofmjobs.com",
+     "onlyfanschatters.com"
+    ],
+    "webcam model job": [
+     "ziprecruiter.com",
+     "quora.com",
+     "studio20.live"
+    ],
+    "modelo webcam": [
+     "tiktok.com",
+     "onprivatestudio.com",
+     "youtube.com"
+    ]
+   },
+   "traffic": {
+    "window_days": 6,
+    "prev_window_days": 7,
+    "recruitment_clicks_7d": 577,
+    "recruitment_clicks_prev_7d": 747,
+    "recruitment_clicks_per_day": 96.2,
+    "recruitment_clicks_per_day_prev": 106.7,
+    "recruitment_clicks_per_day_last_snapshot": 85.3,
+    "recruitment_impressions_7d": 11698,
+    "recruitment_impressions_prev_7d": 13106,
+    "site_clicks_7d": 1680,
+    "site_clicks_prev_7d": 1929,
+    "site_clicks_per_day": 280,
+    "site_clicks_per_day_prev": 275.6,
+    "site_clicks_per_day_last_snapshot": 251.8,
+    "site_impressions_7d": 140896,
+    "site_impressions_prev_7d": 97548,
+    "recruit_queries_top3": 23,
+    "recruit_queries_top3_prev": 25,
+    "recruit_queries_top3_last_snapshot_recalc": 27,
+    "recruit_queries_top10": 123,
+    "recruit_queries_top10_prev": 116,
+    "recruit_queries_top10_last_snapshot_recalc": 101,
+    "recruit_queries_up": 48,
+    "recruit_queries_down": 30,
+    "recruit_queries_new_top10": 17,
+    "recruit_queries_up_vs_last_snapshot": 45,
+    "recruit_queries_down_vs_last_snapshot": 21,
+    "recruit_queries_new_top10_vs_last_snapshot": 36,
+    "vacancy_pages_clicks": 591,
+    "vacancy_pages_clicks_prev_7d": 596,
+    "_method": "ТОП-3/ТОП-10 и ↑/↓ — найм-запросы с ≥10 показами за окно; окно 13–18.09 пересчитано тем же фильтром (27/101 вместо 28/108 в прошлом снимке — фильтр запросов чуть отличается)."
+   },
+   "notes": "Три недели с прошлого снимка (21.09 → 12.10). Неделя 04–09.10 (6 дней) к 27.09–03.10: сайт 276 → 280 кликов/день (к 21.09 +11%), найм-кластер 107 → 96 кликов/день (−10% за неделю, +13% к 21.09) — просадку дал один запрос: «of models» 2.1 → 4.1, 234 → 126 кликов. Рост: «onlyfans job» 10.0 → 5.4 (92 клика — второй вход сайта), «онліфанс агенція» 21.3 → 12.0 и живая органика вне ТОП-100 → №10, «onlyfans jobs» живая вне ТОП-100 → №14, «онлифанс агентство» отыграл провал 7.6 → 2.2, «работа чаттером» 6.1 → 4.1, «онлифанс харьков» 4.8 → 1.8. Просадки: «of models» 2.4 → 4.1, «ofm agency» 4.8 → 6.3, «onlyfans careers» 2.0 → 7.7, «onlyfans agency» выпал из живого ТОП-100 (был №26; GSC 22.4). Тревога: флагман «онлифанс работа» в живом срезе №8 → №15 и сменил URL на /uk/vacancies/chatter-onlyfans при стабильной GSC-позиции 5.7 — выдача пересобрана (x.layboard №1, forumonly №2, robota.ua №3, ofmarketing.net №9–10; xjobber №1 → №7, girlswork №2 → №26), перепроверить в следующий прогон. Ранг домена 134 → 147. Мейнстрим-гэпы и ES-головы — без сдвига десятую неделю."
   }
  ]
 }
