@@ -815,6 +815,8 @@ export const moneyPosts: BlogPost[] = [
       },
       blogNav('Деньги и старт — разберись до первой выплаты:', [
         LINK.join,
+        // ТЗ-0 хаб C3 (13.10.2026): обратная ссылка листа на пиллар инфо-ядра.
+        { href: '/blog/chto-takoe-onlyfans', label: 'Что такое онлифанс: базовый разбор платформы' },
         LINK.legalTax,
         LINK.worth,
         LINK.income,
@@ -1183,6 +1185,13 @@ export const moneyPosts: BlogPost[] = [
           {
             href: '/blog/onlyfans-chaty-dm-prodazhi',
             label: 'Чаты и DM-продажи на OnlyFans: воронка по фазам',
+          },
+          // ТЗ-0 хаб C3 (13.10.2026): входящая ссылка на новый лист механики
+          // (kak-rabotaet-onlyfans). Видео-карточка afterIndex:1 не задета —
+          // индексы блоков не сдвигались, ссылка добавлена внутрь nav.
+          {
+            href: '/blog/kak-rabotaet-onlyfans',
+            label: 'Как технически устроен OnlyFans: подписка, PPV, выплаты',
           },
         ],
       },

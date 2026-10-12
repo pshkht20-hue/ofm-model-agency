@@ -540,6 +540,20 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://ofmmodels.com',
     unsplashUrl: 'https://ofmmodels.com',
   },
+  // Подстраница хаба инфо-ядра «Как работает OnlyFans» (поезд C3, 13.10.2026).
+  // ⚠ Файл — процедурная обложка в фирменной палитре (схема «подписка → PPV →
+  // баланс → выплата», без лиц/текста/лого): fal-аккаунт 13.10 заблокирован
+  // («Exhausted balance»), NanoBanana недоступна. При пополнении баланса заменить
+  // артом по ТЗ-W3 §2.9 (NanoBanana, стеклянная схема-поток + 4K-пайплайн) —
+  // тот же путь файла, правок кода не нужно.
+  'kak-rabotaet-onlyfans': {
+    localSrc: '/blog/covers/kak-rabotaet-onlyfans.jpg',
+    remoteSrc: '/blog/covers/kak-rabotaet-onlyfans.jpg',
+    alt: 'Стеклянная неоновая схема потока денег OnlyFans: подписка, PPV и чаевые собираются в баланс и уходят в выплату',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
   'onlyfans-nalogi-i-legalnost-v-es': {
     localSrc: '/blog/covers/onlyfans-nalogi-i-legalnost-v-es.jpg',
     remoteSrc: '/blog/covers/onlyfans-nalogi-i-legalnost-v-es.jpg',
