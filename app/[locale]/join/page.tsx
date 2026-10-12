@@ -14,6 +14,8 @@ import { getSiteUrl, siteConfig } from '@/lib/site';
 import { pathForLocale } from '@/lib/i18n/paths';
 import { htmlParagraphs, htmlList } from '@/lib/seo/job-posting-html';
 import { JoinApplyCta } from './JoinApplyCta';
+import { ArticleVideo } from '@/components/seo/ArticleVideo';
+import { getEarnVideoData } from '@/lib/content/blog/video-embeds';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -121,6 +123,7 @@ export default async function JoinPage({ params }: Props) {
   setRequestLocale(locale);
   const joinLocale = locale as Locale;
   const content = getJoinContent(joinLocale);
+  const videoData = getEarnVideoData(joinLocale);
 
   const sectionHeading = 'font-serif text-2xl md:text-3xl text-white mb-6';
   const card = 'rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6';
@@ -235,6 +238,17 @@ export default async function JoinPage({ params }: Props) {
           <JoinApplyCta label={content.applyCta} location="join_income" />
         </div>
       </section>
+
+      {/* Видео-карточка (13.10.2026, «го» владельца): ролик «из чего складывается
+          баланс» — наглядный ответ секции «Доход»; самая горячая точка воронки
+          (192 заявки/28д). Только ru/uk — en/es-версий ролика нет. В ролике
+          net-цифры примера, на странице gross-вилки — это разные метрики
+          (канон 11.10), карточка несёт свою оговорку «пример · не гарантия». */}
+      {videoData && (
+        <div className="mb-14">
+          <ArticleVideo data={videoData} analyticsPage="join" />
+        </div>
+      )}
 
       {/* BOFU-блок «что такое OnlyFans-агентство» (~770/мес KD0, C1.4):
           определение первым предложением (AI Overview), перелинковка на пиллары агентского кластера */}
