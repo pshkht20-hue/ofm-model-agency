@@ -549,7 +549,16 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
   'kak-rabotaet-onlyfans': {
     localSrc: '/blog/covers/kak-rabotaet-onlyfans.jpg',
     remoteSrc: '/blog/covers/kak-rabotaet-onlyfans.jpg',
-    alt: 'Стеклянная неоновая схема потока денег OnlyFans: подписка, PPV и чаевые собираются в баланс и уходят в выплату',
+    alt: 'Стеклянный смартфон с неоновыми монетами на экране - как работает заработок на OnlyFans',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
+  // Фирменная fal.ai-обложка (Glass 3D, BRAND-IMAGE-STYLE-2026-09), 15.10.2026
+  'ofm-models-washington-post': {
+    localSrc: '/blog/covers/ofm-models-washington-post.jpg',
+    remoteSrc: '/blog/covers/ofm-models-washington-post.jpg',
+    alt: 'Стеклянная печатная машинка с чистым листом в неоновой подсветке - The Washington Post пишет об агентстве OFM Models',
     photographer: 'OFM Models',
     photographerUrl: 'https://ofmmodels.com',
     unsplashUrl: 'https://ofmmodels.com',
