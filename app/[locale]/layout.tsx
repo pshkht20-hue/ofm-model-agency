@@ -42,19 +42,31 @@ const playfairHeadline = Playfair_Display({
 });
 
 // All other serif text (heading-display, section titles, font-serif) — normal
-// 400 only, NOT preloaded (not in the LCP path). Italic is deliberately NOT
-// declared here: it would emit @font-face rules for the same italic files the
-// preloaded headline instance already loads under its .p. URLs, and the
-// browser then downloads the identical font twice (seen live: the 22KB latin
-// italic fetched under both URLs during the LCP window). Italic serif accents
-// use .font-serif-italic (the headline family) instead.
+// 400 only. Italic is deliberately NOT declared here: it would emit @font-face
+// rules for the same italic files the preloaded headline instance already
+// loads under its .p. URLs, and the browser then downloads the identical font
+// twice (seen live: the 22KB latin italic fetched under both URLs during the
+// LCP window). Italic serif accents use .font-serif-italic (the headline
+// family) instead.
+//
+// subsets+preload here control ONLY the <link rel=preload> — next/font emits
+// @font-face for every subset regardless, and the browser fetches whichever
+// unicode-ranges the page uses. The CYRILLIC normal file is first-screen on
+// ru/uk (h1 line1 «Работа моделью» / «Робота моделлю» uses heading-display):
+// without a preload it is discovered only from CSS after first layout, which
+// put a late sequential font chain (~560-600ms) into the mobile LCP critical
+// path (trace 16.10: 5 layout passes before first paint as fonts trickled in).
+// Preload is kept to this ONE 12KB file: preloading more Playfair variants
+// regressed LCP before by stealing 4G bandwidth, and the latin normal file is
+// not used in the ru/uk first screen (line2 «OnlyFans» is the separately
+// preloaded 400-italic instance above).
 const playfairRest = Playfair_Display({
   variable: '--font-playfair-rest',
-  subsets: ['latin'],
+  subsets: ['cyrillic'],
   weight: ['400'],
   style: ['normal'],
   display: 'swap',
-  preload: false,
+  preload: true,
 });
 
 type Props = {
