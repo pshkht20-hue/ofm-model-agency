@@ -109,7 +109,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const content = getModelGeoContent(country, locale as Locale);
   if (!content) return {};
   return createPageMetadata({
-    title: content.title,
+    // seoTitle - отдельный <title> поезда J (вариант А решения №8): H1 и
+    // JobPosting.title ниже продолжают браться из content.title.
+    title: content.seoTitle ?? content.title,
     description: content.description,
     path: `/vacancies/model/${country}`,
     locale: locale as Locale,

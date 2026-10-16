@@ -204,6 +204,18 @@ export default async function VacancyPage({ params }: Props) {
       <p className="eyebrow-bright mb-4">{ui.eyebrow}</p>
       <h1 className="heading-section text-[clamp(1.8rem,4.4vw,2.7rem)] mb-5">{content.h1}</h1>
 
+      {/* CRO-мост поезда J (21.10): модельный интент со страницы чатера уходит
+          на вакансию модели и хаб вакансий - над сгибом, title не меняется */}
+      {content.bridge && (
+        <div className="mb-5 space-y-1.5 rounded-2xl border border-accent-pink/25 bg-accent-pink/[0.06] p-5">
+          {content.bridge.map((line) => (
+            <p key={line} className="text-sm text-white/85">
+              <RichText text={line} />
+            </p>
+          ))}
+        </div>
+      )}
+
       {/* Hero-бейдж: формат оплаты чатера (= salaryLabel плашки, = incentiveCompensation) */}
       <div className="mb-5 flex flex-wrap items-center gap-3">
         <span className="inline-flex items-center rounded-full border border-accent-cyan/35 bg-accent-cyan/[0.09] px-5 py-2 font-sans text-lg md:text-xl font-semibold tracking-tight text-white tabular-nums shadow-[0_0_22px_-10px_rgba(34,211,238,0.7)]">

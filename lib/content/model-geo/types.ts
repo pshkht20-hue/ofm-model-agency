@@ -80,6 +80,12 @@ export type ModelGeoContent = {
   countryName: string;
   /** <title>/H1-якорь (RU: «онлифанс работа»; UK: «робота для дівчат/моделлю»). */
   title: string;
+  /**
+   * Отдельный <title> ТОЛЬКО для generateMetadata (поезд J 21.10, вариант А
+   * решения №8 docs/KEYWORD-GAP-2026-10-15.md): H1 страницы и JobPosting.title
+   * продолжают браться из title. Не задан - <title> = title.
+   */
+  seoTitle?: string;
   /** Meta description = видимому смыслу интро (для JSON-LD description). */
   description: string;
   /**

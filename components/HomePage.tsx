@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { Shield, Heart, Zap } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { TelegramCta } from '@/components/TelegramCta';
 import { Link } from '@/i18n/navigation';
 import { Navbar } from '@/components/Navbar';
@@ -98,6 +98,7 @@ function ContactGlow({ reduced }: { reduced: boolean | null }) {
 
 export function HomePage() {
   const t = useTranslations('home');
+  const locale = useLocale();
   const reduced = useReducedMotion();
   const contactRef = useRef<HTMLElement>(null);
 
@@ -214,6 +215,32 @@ export function HomePage() {
                 {t('contact.careersLink')}
               </Link>
             </p>
+
+            {/* Поезд J (15.10.2026, KEYWORD-GAP §4.2): контентные ссылки на модельные
+                вакансии с главной (до этого главная не ссылалась на /vacancies/model
+                и .../ukraine вовсе). Анкоры только ru/uk, поэтому locale-гард с
+                инлайн-текстами, как в HomeSeoBlock. */}
+            {(locale === 'ru' || locale === 'uk') && (
+              <p className="mt-2 text-sm text-white/40">
+                <Link
+                  href="/vacancies/model"
+                  prefetch={false}
+                  className="text-accent-pink/90 underline decoration-accent-pink/30 underline-offset-4 transition-colors hover:text-accent-pink hover:decoration-accent-pink"
+                >
+                  {locale === 'uk' ? 'Вакансії моделі онліфанс' : 'Вакансии моделей онлифанс'}
+                </Link>{' '}
+                ·{' '}
+                <Link
+                  href="/vacancies/model/ukraine"
+                  prefetch={false}
+                  className="text-accent-pink/90 underline decoration-accent-pink/30 underline-offset-4 transition-colors hover:text-accent-pink hover:decoration-accent-pink"
+                >
+                  {locale === 'uk'
+                    ? 'Онліфанс робота моделлю в Україні'
+                    : 'Онлифанс работа моделью в Украине'}
+                </Link>
+              </p>
+            )}
 
             {reduced ? (
               <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-10 text-xs tracking-[0.15em] uppercase text-white/40">

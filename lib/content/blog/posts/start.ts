@@ -1005,8 +1005,9 @@ export const startPosts: BlogPost[] = [
       },
       blogNav("Открытые вакансии агентства — подробности и заявка:", [
         LINK.vacancyModelUa,
-        // IL «Сироты» §4.4 (09.10.2026): /vacancies/model — перевёрнутый хаб (100+ исходящих, 3–5 входящих)
-        { href: "/vacancies/model", label: "Каталог вакансий модели: форматы и гео" },
+        // IL «Сироты» §4.4 (09.10.2026): /vacancies/model — перевёрнутый хаб (100+ исходящих, 3–5 входящих).
+        // Поезд J (15.10.2026, KEYWORD-GAP §4.2): анкор с точным «онлифанс модель» под каталог моделей.
+        { href: "/vacancies/model", label: "Онлифанс модель: открытые вакансии" },
         LINK.vacancyChatter,
         LINK.vacanciesKw,
       ]),

@@ -16,7 +16,40 @@ import {
   getVacancyHubContent,
   getVacancyUi,
 } from '@/lib/content/vacancies';
+import {
+  getModelGeoContent,
+  getModelGeoCountry,
+  getModelGeoUi,
+} from '@/lib/content/model-geo';
 import { RichText } from './RichText';
+
+/**
+ * Листинг «Вакансии моделей онлифанс по странам и форматам» (поезд J 21.10,
+ * docs/KEYWORD-GAP-2026-10-15.md §4.2.1): 12 ссылок-карточек на существующие
+ * гео- и формат-страницы /vacancies/model/* - хаб становится листингом, а
+ * именно такой формат Google ставит в топ-3 по вакансийным запросам. Вилка
+ * карточки = record.incomeUsd (= baseSalary JobPosting соответствующей
+ * страницы). Рендерится только при hub.modelGeoListHeading (сейчас ru/uk).
+ */
+const MODEL_GEO_LINK_SLUGS = [
+  'ukraine',
+  'ukraine/kyiv',
+  'ukraine/kharkiv',
+  'ukraine/lviv',
+  'poland',
+  'germany',
+  'spain',
+  'italy',
+  'no-experience',
+  'part-time',
+  'premium-25-plus',
+  'with-account',
+];
+
+/** «$3 000» - группировка тысяч узкими пробелами (прецедент model/page.tsx). */
+function groupThousands(value: number): string {
+  return String(Math.round(value)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+}
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -83,6 +116,31 @@ export default async function VacanciesHubPage({ params }: Props) {
     },
   ];
 
+  // Порядок отрисовки (поезд J, решение №3 владельца): модель, онлайн-работа
+  // для девушек, чатер. ItemListJsonLd ниже строится из НЕтронутого массива
+  // cards - JSON-LD не меняется, порядок только визуальный.
+  const renderOrder: Record<string, number> = { model: 0, 'for-girls': 1, chatter: 2 };
+  const displayCards = [...cards].sort((a, b) => renderOrder[a.key] - renderOrder[b.key]);
+
+  // Карточки листинга моделей: имя и вилка из гео-реестра model-geo (вилка =
+  // baseSalary JobPosting целевой страницы - витринное правило 25.07).
+  const geoUi = getModelGeoUi(loc);
+  const modelGeoCards = hub.modelGeoListHeading
+    ? MODEL_GEO_LINK_SLUGS.flatMap((slug) => {
+        const geo = getModelGeoContent(slug, loc);
+        const record = getModelGeoCountry(slug);
+        if (!geo || !record) return [];
+        return [
+          {
+            slug,
+            href: `/vacancies/model/${slug}`,
+            name: geo.countryName,
+            income: `$${groupThousands(record.incomeUsd.min)}-${groupThousands(record.incomeUsd.max)}${geoUi.perMonth}`,
+          },
+        ];
+      })
+    : [];
+
   const trustLine = hub.trustLine
     .replace('{count}', String(cards.length))
     .replace('{date}', getLatestVacancyUpdatedAt());
@@ -116,9 +174,9 @@ export default async function VacanciesHubPage({ params }: Props) {
         </p>
       ))}
 
-      {/* Листинг ролей — первым экраном (чатер + модель) */}
+      {/* Листинг ролей первым экраном (модель первой, поезд J 21.10) */}
       <div className="mt-8 grid gap-5 sm:grid-cols-2">
-        {cards.map((card) => (
+        {displayCards.map((card) => (
           <Link
             key={card.key}
             href={card.href}
@@ -159,6 +217,31 @@ export default async function VacanciesHubPage({ params }: Props) {
           </Link>
         ))}
       </div>
+
+      {/* Листинг моделей (поезд J 21.10): карточки-ссылки на гео- и
+          формат-страницы /vacancies/model/*, вилка из данных целевой страницы */}
+      {hub.modelGeoListHeading && modelGeoCards.length > 0 && (
+        <section className="mt-14">
+          <h2 className={sectionHeading}>{hub.modelGeoListHeading}</h2>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {modelGeoCards.map((card) => (
+              <Link
+                key={card.slug}
+                href={card.href}
+                className="group flex items-center justify-between gap-3 rounded-xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 hover:border-accent-pink/30 hover:bg-white/[0.04] transition-colors"
+              >
+                <span className="min-w-0">
+                  <span className="block font-medium text-white leading-snug">{card.name}</span>
+                  <span className="mt-0.5 block text-sm text-white/55 tabular-nums">
+                    {card.income}
+                  </span>
+                </span>
+                <ArrowRight className="h-4 w-4 shrink-0 text-accent-pink transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* SEO-полотно: PAA-вопросы дословно в H2, блок «для мужчин», блок городов */}
       <div className="mt-16 space-y-12">

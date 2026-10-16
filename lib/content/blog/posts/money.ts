@@ -1129,8 +1129,10 @@ export const moneyPosts: BlogPost[] = [
             label: 'Что такое OnlyFans и как работает платформа',
           },
           {
+            // Поезд J (15.10.2026, KEYWORD-GAP §4.2): точный анкор «как стать моделью онлифанс»
+            // снимает каннибализацию «как стать» между этой статьёй и kak-stat.
             href: '/blog/kak-stat-onlyfans-modelyu-s-nulya',
-            label: 'Как стать моделью OnlyFans с нуля: 5 шагов',
+            label: 'Как стать моделью онлифанс с нуля: 5 шагов',
           },
           {
             href: '/blog/onlyfans-modeli-kto-eto',

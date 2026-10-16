@@ -121,6 +121,12 @@ export type VacancyContent = {
   formatLabel: string;
   /** Гео-строка карточки. */
   locationLabel: string;
+  /**
+   * CRO-мост сразу после H1 (поезд J 21.10, чатер-страницы): 1-2 строки с
+   * inline-ссылками [анкор](/path) на вакансию модели и хаб вакансий.
+   * Не задан - плашка не рендерится.
+   */
+  bridge?: string[];
   intro: string[];
   sections: VacancySection[];
   hiringHeading: string;
@@ -154,6 +160,13 @@ export type VacancyHubContent = {
   intro: string[];
   /** Карточка «Модель» (вторая роль хаба, ведёт на гео-хаб /vacancies/model). */
   modelCard: VacancyHubCard;
+  /**
+   * Заголовок листинга «Вакансии моделей онлифанс по странам и форматам»
+   * (поезд J 21.10). Карточки-ссылки собирает страница из гео-реестра
+   * model-geo (вилка карточки = incomeUsd записи = baseSalary её JobPosting).
+   * Не задан - блок не рендерится (en/es пока без листинга).
+   */
+  modelGeoListHeading?: string;
   /** SEO-полотно: PAA-вопросы дословно в H2, блок «для мужчин», блок городов. */
   sections: VacancySection[];
   faqHeading: string;
