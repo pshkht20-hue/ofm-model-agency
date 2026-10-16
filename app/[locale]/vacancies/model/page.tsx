@@ -196,8 +196,12 @@ export default async function ModelGeoHubPage({ params }: Props) {
                         H3 → позиция 1). Без заголовочного тега Google не видит
                         листинг вакансий, а видит абзац со ссылками. */}
                     <h3 className="font-semibold text-white leading-snug">
+                      {/* prefetch={false} на ссылках каталога (лента, теги,
+                          карточки стран): хаб тянул 54 RSC-префетча на 0.24 МБ
+                          idle-сети (спид-тест 16.10, П1.2); паттерн HomePage:212. */}
                       <Link
                         href={position.href}
+                        prefetch={false}
                         className="after:absolute after:inset-0 after:content-['']"
                       >
                         {position.title}
@@ -211,6 +215,7 @@ export default async function ModelGeoHubPage({ params }: Props) {
                           <Link
                             key={tag.href + tag.label}
                             href={tag.href}
+                            prefetch={false}
                             className="rounded-full border border-white/[0.09] bg-white/[0.03] px-2.5 py-0.5 text-xs text-white/65 transition-colors hover:border-accent-cyan/40 hover:bg-accent-cyan/[0.07] hover:text-white"
                           >
                             {tag.label}
@@ -254,6 +259,7 @@ export default async function ModelGeoHubPage({ params }: Props) {
               <Link
                 key={slug}
                 href={`/vacancies/model/${slug}`}
+                prefetch={false}
                 className="group block rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 hover:border-accent-pink/30 hover:bg-white/[0.04] transition-colors"
               >
                 <div className="flex items-center gap-3 mb-3 text-xs uppercase tracking-wide text-white/45">

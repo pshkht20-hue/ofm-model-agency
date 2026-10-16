@@ -56,9 +56,13 @@ export function GeoLinkBar({
             {item.name}
           </span>
         ) : (
+          // prefetch={false}: кольцо из ~12 гео-чипов на каждой из 72 страниц
+          // раздела = столько же RSC-префетчей на idle-сети (спид-тест 16.10,
+          // П1.2, model/ukraine: 42 лишних запроса); переход по клику не меняется.
           <Link
             key={item.slug}
             href={`/vacancies/model/${item.slug}`}
+            prefetch={false}
             className="shrink-0 whitespace-nowrap rounded-full border border-white/[0.1] bg-white/[0.03] px-3.5 py-1.5 text-sm text-white/70 transition-colors hover:border-accent-pink/35 hover:bg-accent-pink/[0.06] hover:text-white"
           >
             {item.name}

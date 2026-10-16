@@ -225,9 +225,12 @@ export default async function VacanciesHubPage({ params }: Props) {
           <h2 className={sectionHeading}>{hub.modelGeoListHeading}</h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {modelGeoCards.map((card) => (
+              // prefetch={false}: 12 карточек = 12 RSC-префетчей на idle-сети
+              // мобильного хаба (спид-тест 16.10, П1.2); паттерн HomePage:212.
               <Link
                 key={card.slug}
                 href={card.href}
+                prefetch={false}
                 className="group flex items-center justify-between gap-3 rounded-xl border border-white/[0.08] bg-white/[0.02] px-5 py-4 hover:border-accent-pink/30 hover:bg-white/[0.04] transition-colors"
               >
                 <span className="min-w-0">

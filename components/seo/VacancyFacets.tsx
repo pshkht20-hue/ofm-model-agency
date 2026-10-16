@@ -157,8 +157,11 @@ export function VacancyFacets({
             <ul className="mt-2.5 flex flex-wrap gap-2">
               {group.facets.map((facet) => (
                 <li key={facet.slug}>
+                  {/* prefetch={false}: до 18 чипов = 18 RSC-префетчей на idle-сети
+                      хаба (спид-тест 16.10, П1.2); переход по клику не меняется. */}
                   <Link
                     href={`${BASE_PATH}${facet.slug}`}
+                    prefetch={false}
                     className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.03] px-3.5 py-1.5 text-sm text-white/75 transition-colors hover:border-accent-pink/40 hover:bg-accent-pink/[0.06] hover:text-white"
                   >
                     {facet.name}

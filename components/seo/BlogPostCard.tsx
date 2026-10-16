@@ -33,7 +33,20 @@ const DATE_LOCALE: Record<Locale, string> = {
  * это и есть разница между 996 КБ и ~370 КБ на /blog. Подробности и цифры —
  * в blog-card-post.ts.
  */
-export function BlogPostCard({ post, locale }: { post: BlogCardPost; locale: Locale }) {
+export function BlogPostCard({
+  post,
+  locale,
+  coverPriority = false,
+}: {
+  post: BlogCardPost;
+  locale: Locale;
+  /**
+   * true ТОЛЬКО у первой карточки листинга /blog: её обложка — кандидат в LCP,
+   * priority даёт preload + eager вместо lazy (спид-тест 16.10, П1.3).
+   * «Читайте также» и остальные карточки остаются lazy (дефолт).
+   */
+  coverPriority?: boolean;
+}) {
   const t = useTranslations('blogUi');
   const tCommon = useTranslations('common');
   const categoryLabels = getBlogCategoryLabels(locale);
@@ -49,7 +62,7 @@ export function BlogPostCard({ post, locale }: { post: BlogCardPost; locale: Loc
       <Link href={`/blog/${post.slug}`} className="group block flex-1">
         {post.cover && (
           <div className="p-3 pb-0">
-            <BlogCoverImage cover={post.cover} variant="card" />
+            <BlogCoverImage cover={post.cover} variant="card" priority={coverPriority} />
           </div>
         )}
         <div className="p-6 md:p-7 pb-4">

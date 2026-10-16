@@ -37,6 +37,13 @@ export default async function BlogIndexPage({ params }: Props) {
   const categoryLabels = getBlogCategoryLabels(blogLocale);
   const totalMinutes = posts.reduce((s, p) => s + p.readMinutes, 0);
 
+  // Обложка самой первой карточки листинга — кандидат в LCP (/blog mobile
+  // LCP 3.5 c при lazy-обложках, спид-тест 16.10 П1.3): ей priority/preload,
+  // остальные остаются lazy.
+  const firstCardSlug = BLOG_CATEGORIES_ORDER.map(
+    (category) => getPostsByCategory(category, blogLocale)[0]?.slug,
+  ).find(Boolean);
+
   return (
     <SeoPageShell breadcrumbs={[{ label: tCommon('blog') }]} showCta>
       <BreadcrumbJsonLd
@@ -73,6 +80,7 @@ export default async function BlogIndexPage({ params }: Props) {
                     key={post.slug}
                     post={toBlogCardPost(post)}
                     locale={blogLocale}
+                    coverPriority={post.slug === firstCardSlug}
                   />
                 ))}
               </ul>

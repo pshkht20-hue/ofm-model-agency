@@ -31,8 +31,13 @@ export function BlogCoverImage({
   // 02.09.2026: фиксированные высоты (h-52/h-72) резали 16:9-обложки на ~40%
   // через object-cover — фирменные композиции теряли края. aspect-video
   // показывает кадр целиком в обоих вариантах.
+  // Карточка листинга НЕ рендерится во всю ширину вьюпорта: контейнер
+  // SeoPageShell даёт px-5 (20px), сама карточка p-3 (12px) — итого 64px полей.
+  // «100vw» заставлял мобильный Lighthouse-вьюпорт (412px, DPR 1.75) качать
+  // w=750 вместо w=640 на каждую из 6+ обложек /blog — ~0.3 МБ картинок
+  // (спид-тест 16.10, П1.3). calc честно описывает реальную ширину рендера.
   const sizes = isCard
-    ? '(max-width: 768px) 100vw, 400px'
+    ? '(max-width: 768px) calc(100vw - 64px), 400px'
     : '(max-width: 768px) 100vw, 900px';
   const isOwnPhoto = !cover.unsplashUrl || !cover.unsplashUrl.includes('unsplash.com');
 
