@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Logo } from '@/components/Logo';

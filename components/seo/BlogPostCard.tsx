@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
 import type { BlogCardPost } from '@/components/seo/blog-card-post';
 // Ярлыки категорий берём из модуля с ярлыками, а НЕ из бочки '@/lib/content/blog':

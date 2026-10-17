@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, type FocusEvent, type FormEvent } from 'react';
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { AnimatePresence, m as motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Check, Loader2, Send, ShieldCheck, Sparkles } from 'lucide-react';
 import { SuccessCheckmark } from '@/components/ui/SuccessCheckmark';
 import { ClickSpark } from '@/components/ui/ClickSpark';
@@ -521,7 +521,10 @@ export function ContactForm() {
         </a>
       </p>
 
-      <ClickSpark color="#ff5bb5" className="mt-3 block">
+      <ClickSpark
+        color="#ff5bb5"
+        className={`mt-3 block ${allReady && status === 'idle' ? '' : 'throb-wrap'}`}
+      >
         <button
           type="submit"
           disabled={status === 'loading'}

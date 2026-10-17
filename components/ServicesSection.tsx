@@ -9,7 +9,7 @@ import {
   Shield,
   type LucideIcon,
 } from 'lucide-react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { m as motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { hoverLift, SPRING_CARD } from '@/lib/motion';
 import { useSpotlight } from '@/hooks/useSpotlight';

@@ -1,7 +1,7 @@
 'use client';
 
 import { Heart } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import type { LikeKind } from '@/lib/likes/storage';
 import { useLike } from '@/hooks/useLike';

@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowRight, Check, ChevronLeft, Clock, RefreshCw, Sparkles } from 'lucide-react';
 import {
   AnimatePresence,
-  motion,
+  m as motion,
   useReducedMotion,
   useMotionValue,
   useTransform,

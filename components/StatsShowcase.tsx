@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { useGSAP } from '@gsap/react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { m as motion, useReducedMotion } from 'framer-motion';
 import { Clock, DollarSign, TrendingUp, Users } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { AnimatedStat } from '@/components/AnimatedStat';

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { TrendingUp } from 'lucide-react';
 import type { ResultTier } from '@/lib/results/cases';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useLocale } from 'next-intl';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';

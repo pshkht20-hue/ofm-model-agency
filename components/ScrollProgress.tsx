@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useReducedMotion, useScroll, useSpring } from 'framer-motion';
+import { m as motion, useReducedMotion, useScroll, useSpring } from 'framer-motion';
 import { useSectionContext } from '@/context/SectionContext';
 import { SECTION_GRADIENT } from '@/lib/sections';
 

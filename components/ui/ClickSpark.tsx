@@ -32,16 +32,19 @@ export function ClickSpark({ children, color = '#ff5bb5', className = '' }: Clic
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     let w = 0;
     let h = 0;
-    const resize = () => {
-      const r = wrap.getBoundingClientRect();
-      w = r.width;
-      h = r.height;
+    // No sync getBoundingClientRect on mount (it forced a layout during the
+    // hydration commit): ResizeObserver fires right after observe() with the
+    // laid-out size (entry.contentRect — the wrap has no padding/border) and
+    // long before the first click can land, so the canvas is always sized.
+    const ro = new ResizeObserver((entries) => {
+      const rect = entries[entries.length - 1]?.contentRect;
+      if (!rect) return;
+      w = rect.width;
+      h = rect.height;
       canvas.width = Math.max(1, w * dpr);
       canvas.height = Math.max(1, h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    };
-    resize();
-    const ro = new ResizeObserver(resize);
+    });
     ro.observe(wrap);
 
     type Spark = { x: number; y: number; a: number; born: number };

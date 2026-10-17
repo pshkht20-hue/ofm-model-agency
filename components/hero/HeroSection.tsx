@@ -154,6 +154,27 @@ export function HeroSection() {
     };
   }, []);
 
+  // hero-accent-flow (background-position на LCP-спане) — paint-анимация без
+  // transform-эквивалента. Пока hero вне вьюпорта, ставим её на паузу классом
+  // (.hero-offscreen в globals.css) — ноль визуальной разницы, пока элемент
+  // виден, минус постоянный repaint при скролле остальной страницы.
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[entries.length - 1];
+        section.classList.toggle('hero-offscreen', !(entry?.isIntersecting ?? true));
+      },
+      { threshold: 0 },
+    );
+    io.observe(section);
+    return () => {
+      io.disconnect();
+      section.classList.remove('hero-offscreen');
+    };
+  }, []);
+
   return (
     <section
       ref={sectionRef}
@@ -236,18 +257,26 @@ export function HeroSection() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <ClickSpark color="#ff5bb5" className="w-full sm:w-auto">
-            <a
-              href="#contact"
+            {/* data-hero-cta/-reveal живут на обёртке .throb-wrap, а не на <a>:
+                композитный throb-glow рисуется её псевдослоями, и при
+                десктопном GSAP-ревиле он гаснет/появляется вместе с кнопкой —
+                как раньше гасла box-shadow самой кнопки. */}
+            <span
               data-hero-cta="primary"
               data-hero-reveal
-              className="btn-primary throb group w-full sm:w-auto"
-              onClick={() => trackCtaClick({ location: 'hero_primary', locale })}
+              className="throb-wrap flex w-full sm:w-auto"
             >
-              <span ref={ctaMagnetRef} className="inline-flex items-center gap-3">
-                {t('hero.ctaPrimary')}
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
-              </span>
-            </a>
+              <a
+                href="#contact"
+                className="btn-primary throb group w-full sm:w-auto"
+                onClick={() => trackCtaClick({ location: 'hero_primary', locale })}
+              >
+                <span ref={ctaMagnetRef} className="inline-flex items-center gap-3">
+                  {t('hero.ctaPrimary')}
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
+                </span>
+              </a>
+            </span>
           </ClickSpark>
           <a
             href="#models"

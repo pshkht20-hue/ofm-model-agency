@@ -30,6 +30,16 @@ const nextConfig: NextConfig = {
     // Inlines page CSS into the HTML <head>: removes both render-blocking
     // stylesheet requests (~27KB gz) and lets @font-face be discovered from the
     // document itself, cutting one hop off the font critical chain.
+    //
+    // ⚠️ A/B-замер 17.10.2026 (localhost prod-build, mobile 412px, 4x CPU,
+    // Slow 4G, по 3 прогона на вариант): выключение флага РЕГРЕССИРУЕТ LCP
+    // главной — медианы 2093ms (флаг on) vs 2301ms (off) в соседних по времени
+    // прогонах той же машины (в более ранней серии on давал 1804ms), хотя HTML
+    // худеет 748K -> 366K chars (уходит двойной Tailwind-CSS: <style> + дубль
+    // в RSC flight). Причина структурная: без флага появляются два внешних
+    // render-blocking CSS-файла, которым DevTools атрибутирует ~1.1s FCP/LCP
+    // (доп. RTT + скачивание на Slow 4G) — дороже, чем экономия парсинга
+    // дубля. НЕ выключать без нового замера по тому же протоколу.
     inlineCss: true,
   },
   images: {

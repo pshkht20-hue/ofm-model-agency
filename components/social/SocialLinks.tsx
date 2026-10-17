@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { getSocialLinks, type SocialLink, type SocialPlatform } from '@/lib/social';

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { useIsMobileViewport, useReducedMotion } from '@/hooks/useMotionPreferences';
 import {
   EASE_SMOOTH,

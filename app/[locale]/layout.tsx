@@ -10,6 +10,7 @@ import { GoogleConsentDefaults } from '@/components/analytics/GoogleConsentDefau
 import { ScrollDepthTracker } from '@/components/analytics/ScrollDepthTracker';
 import { CookieConsent } from '@/components/consent/CookieConsent';
 import { JsonLd } from '@/components/JsonLd';
+import { MotionProvider } from '@/components/MotionProvider';
 import { routing, openGraphLocale, type Locale } from '@/i18n/routing';
 import { getSiteUrl, siteConfig } from '@/lib/site';
 import { pathForLocale, hreflangAlternates } from '@/lib/i18n/paths';
@@ -154,14 +155,18 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <body className="min-h-full font-sans antialiased bg-[#050508] text-[#f4f2ef]">
         <GoogleConsentDefaults />
-        <NextIntlClientProvider messages={messages}>
-          <JsonLd locale={locale as Locale} description={tMeta('siteDescription')} />
-          {children}
-          <CookieConsent />
-          <AnalyticsLoader />
-          <ClarityLoader />
-          <ScrollDepthTracker />
-        </NextIntlClientProvider>
+        {/* LazyMotion-скоуп для всех m.*-компонентов (см. MotionProvider).
+            Рендерит только контекст, ни одного DOM-узла — SSR-HTML не меняется. */}
+        <MotionProvider>
+          <NextIntlClientProvider messages={messages}>
+            <JsonLd locale={locale as Locale} description={tMeta('siteDescription')} />
+            {children}
+            <CookieConsent />
+            <AnalyticsLoader />
+            <ClarityLoader />
+            <ScrollDepthTracker />
+          </NextIntlClientProvider>
+        </MotionProvider>
       </body>
     </html>
   );

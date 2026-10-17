@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { useSpotlight } from '@/hooks/useSpotlight';

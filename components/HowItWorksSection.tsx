@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Clock } from 'lucide-react';
 import {
-  motion,
+  m as motion,
   useReducedMotion,
   useScroll,
   useSpring,
@@ -208,10 +208,12 @@ export function HowItWorksSection() {
         className="mt-12 flex flex-col items-center gap-3 text-center"
       >
         <p className="max-w-md text-sm text-white/40">{t('how.footerNote')}</p>
-        <a href="#contact" className="btn-primary throb group inline-flex">
-          {t('how.cta')}
-          <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-        </a>
+        <span className="throb-wrap inline-flex">
+          <a href="#contact" className="btn-primary throb group inline-flex">
+            {t('how.cta')}
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+          </a>
+        </span>
       </motion.div>
     </SectionShell>
   );

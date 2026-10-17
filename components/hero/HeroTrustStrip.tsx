@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import {
-  motion,
+  m as motion,
   animate,
   useInView,
   useMotionValue,

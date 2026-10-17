@@ -3,7 +3,7 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Check, ChevronDown, Globe } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import NextLink from 'next/link';
 import { usePathname } from '@/i18n/navigation';
 import { localeLabels, localeShort, routing, type Locale } from '@/i18n/routing';

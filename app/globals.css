@@ -116,6 +116,15 @@ input[type="number"] {
   }
 }
 
+/* background-position on background-clip:text is a paint-only animation (PSI
+   "non-composited"). There is no pixel-exact transform equivalent, so instead
+   the gradient drift simply pauses while the hero is off-screen (IO toggles
+   the class in HeroSection) — zero visual difference while it is visible,
+   minus a constant repaint while scrolling the rest of the page. */
+.hero-offscreen .hero-accent-shimmer {
+  animation-play-state: paused;
+}
+
 .hero-scan-beam {
   background: linear-gradient(
     90deg,
@@ -874,29 +883,74 @@ input[type="number"] {
 }
 
 /* ——— Throb: a brand-gradient glow that pulses around a CTA to draw the eye.
-   Implemented as box-shadow directly on the button — so it is NOT clipped by
-   .btn-primary's overflow:hidden, needs no wrapper element, and never touches
-   the button's text or layout. Clearly visible at rest, blooming to a bright
-   white-cored brand halo at the peak. (Ref: simeydotme "throb" BaeZJqd.) */
-.throb {
-  animation: throb-glow 2.6s ease-in-out infinite both;
+   Composited implementation: the old box-shadow keyframes (paint on every
+   frame, PSI "non-composited animation") are replaced by TWO static shadow
+   layers cross-faded with opacity — rest shadow on ::before, peak shadow on
+   ::after, same 2.6s ease-in-out curve. The 0%/50%/100% frames are identical
+   to the old interpolation; mid-cycle differs imperceptibly (alpha cross-fade
+   vs radius interpolation). The layers live on a WRAPPER (.throb-wrap) because
+   .btn-primary has overflow:hidden and would clip its own pseudo-elements;
+   outer box-shadow paints strictly outside the pseudo's border-box, so the
+   glow never covers the button itself. The button keeps the .throb class: it
+   suppresses .btn-primary's own static/hover shadows, which the old box-shadow
+   animation used to override at all times (incl. :hover).
+   (Ref: simeydotme "throb" BaeZJqd.) */
+.throb-wrap {
+  position: relative;
 }
 
-@keyframes throb-glow {
-  0%,
-  100% {
+@media (prefers-reduced-motion: no-preference) {
+  .btn-primary.throb,
+  .btn-primary.throb:hover {
+    box-shadow: none;
+  }
+
+  .throb-wrap::before,
+  .throb-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    pointer-events: none;
+  }
+
+  .throb-wrap::before {
     box-shadow:
       0 0 0 0 rgba(255, 255, 255, 0),
       0 0 11px -3px rgba(255, 91, 181, 0.36),
       0 0 18px -5px rgba(168, 85, 247, 0.21),
       0 0 0 0 rgba(0, 212, 255, 0);
+    animation: throb-rest-fade 2.6s ease-in-out infinite both;
   }
-  50% {
+
+  .throb-wrap::after {
     box-shadow:
       0 0 6px 0 rgba(255, 255, 255, 0.3),
       0 0 13px 1px rgba(255, 91, 181, 0.54),
       0 0 24px 5px rgba(168, 85, 247, 0.39),
       0 0 36px 10px rgba(0, 212, 255, 0.24);
+    opacity: 0;
+    animation: throb-peak-fade 2.6s ease-in-out infinite both;
+  }
+}
+
+@keyframes throb-rest-fade {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes throb-peak-fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
@@ -1455,12 +1509,16 @@ input[type="number"] {
     animation: none;
   }
 
+  /* .throb needs no entry here: the glow layers (.throb-wrap::before/::after)
+     and the button-shadow suppression are both scoped to
+     prefers-reduced-motion: no-preference, so under reduce the button simply
+     keeps the default .btn-primary shadows — same as the old `animation: none`
+     fallback. */
   .animate-marquee,
   .animate-scroll-hint,
   .animate-glow-pulse,
   .animate-float-soft,
-  .btn-ready,
-  .throb {
+  .btn-ready {
     animation: none;
   }
 

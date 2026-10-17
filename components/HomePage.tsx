@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { Shield, Heart, Zap } from 'lucide-react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { m as motion, useReducedMotion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import { TelegramCta } from '@/components/TelegramCta';
 import { Link } from '@/i18n/navigation';

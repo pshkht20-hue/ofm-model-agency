@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { m as motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { TelegramCta } from '@/components/TelegramCta';

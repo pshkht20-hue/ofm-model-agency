@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { BadgeCheck, ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { m as motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { caseShots, type CaseShot, type ResultTier } from '@/lib/results/cases';
 import { EASE_SOFT } from '@/lib/motion';

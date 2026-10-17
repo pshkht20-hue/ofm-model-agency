@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { useLocale, useTranslations } from 'next-intl';
 import { trackCtaClick } from '@/lib/analytics/gtag';
@@ -73,7 +73,7 @@ export function Navbar() {
         initial={false}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0 }}
-        className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 border-b ${
+        className={`fixed top-0 left-0 right-0 z-[60] transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 border-b ${
           scrolled
             ? 'bg-[#050508]/95 backdrop-blur-xl border-accent-pink/20 shadow-[0_8px_32px_-12px_rgba(255,91,181,0.2),0_1px_0_0_rgba(255,91,181,0.15)]'
             : 'bg-[#050508]/70 backdrop-blur-md border-transparent'

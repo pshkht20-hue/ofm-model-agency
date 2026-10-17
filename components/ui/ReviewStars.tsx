@@ -1,7 +1,7 @@
 'use client';
 
 import { Star } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { EASE_SNAPPY, VIEWPORT_TIGHT, scaleReveal, staggerContainer } from '@/lib/motion';
