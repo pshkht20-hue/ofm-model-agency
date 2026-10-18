@@ -563,6 +563,23 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://ofmmodels.com',
     unsplashUrl: 'https://ofmmodels.com',
   },
+  // Реализм-стиль по выбору владельца 18.10.2026 (flux-pro ultra raw, фотореализм)
+  'cosplay-modeli-onlyfans': {
+    localSrc: '/blog/covers/cosplay-modeli-onlyfans.jpg',
+    remoteSrc: '/blog/covers/cosplay-modeli-onlyfans.jpg',
+    alt: 'Фиолетовая комната анимешницы с неоновой подсветкой и геймерским креслом - косплей-модели OnlyFans начинают отсюда',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
+  'vysokie-modeli-onlyfans': {
+    localSrc: '/blog/covers/vysokie-modeli-onlyfans.jpg',
+    remoteSrc: '/blog/covers/vysokie-modeli-onlyfans.jpg',
+    alt: 'Профессиональная студия с кольцевой лампой и неоновым светом готова к съёмке - рост как преимущество модели OnlyFans',
+    photographer: 'OFM Models',
+    photographerUrl: 'https://ofmmodels.com',
+    unsplashUrl: 'https://ofmmodels.com',
+  },
   'onlyfans-nalogi-i-legalnost-v-es': {
     localSrc: '/blog/covers/onlyfans-nalogi-i-legalnost-v-es.jpg',
     remoteSrc: '/blog/covers/onlyfans-nalogi-i-legalnost-v-es.jpg',

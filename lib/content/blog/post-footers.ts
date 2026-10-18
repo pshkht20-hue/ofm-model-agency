@@ -185,6 +185,16 @@ export const LINK = {
     href: '/blog/fitness-modeli-onlyfans',
     label: 'Фитнес модель OnlyFans: сколько платят и как стать',
   },
+  /** Ниш-статья №5 кластера «Типажи» — высокий рост/tall (W3-хвост, 18.10.2026) */
+  tall: {
+    href: '/blog/vysokie-modeli-onlyfans',
+    label: 'Высокая модель OnlyFans: сколько платят и как стать',
+  },
+  /** Ниш-статья №6 кластера «Типажи» — косплей (W3-хвост, 18.10.2026) */
+  cosplay: {
+    href: '/blog/cosplay-modeli-onlyfans',
+    label: 'Косплей модель OnlyFans: сколько платят и как стать',
+  },
   /** Первая подстраница хаба инфо-ядра — гео-интент «онлифанс в украине» (W4, сент. 2026) */
   uaInfo: {
     href: '/blog/onlyfans-v-ukraine',
