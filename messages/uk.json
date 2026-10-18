@@ -689,7 +689,8 @@
     "starsLabel": "Оцінка {rating} з {max}"
   },
   "coverPhoto": {
-    "photo": "Фото:"
+    "photo": "Фото:",
+    "illustration": "Ілюстрація:"
   },
   "likes": {
     "like": "Подобається",

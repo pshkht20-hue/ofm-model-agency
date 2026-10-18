@@ -689,7 +689,8 @@
     "starsLabel": "Оценка {rating} из {max}"
   },
   "coverPhoto": {
-    "photo": "Фото:"
+    "photo": "Фото:",
+    "illustration": "Иллюстрация:"
   },
   "likes": {
     "like": "Нравится",

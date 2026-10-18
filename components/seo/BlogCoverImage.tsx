@@ -65,7 +65,10 @@ export function BlogCoverImage({
       )}
       {!isCard && cover.photographer && (
         <figcaption className="absolute bottom-0 left-0 right-0 px-4 py-3 text-[10px] text-white/50 leading-relaxed">
-          {t('photo')}{' '}
+          {/* Свои генерации честно подписываем «Иллюстрация» (дока Google 05.10.2026
+              о вводящих в заблуждение визуалах); «Фото» остаётся только настоящим
+              Unsplash-снимкам. */}
+          {t(isOwnPhoto ? 'illustration' : 'photo')}{' '}
           <a
             href={cover.photographerUrl}
             target="_blank"

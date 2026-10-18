@@ -684,7 +684,8 @@
     "starsLabel": "Rating {rating} out of {max}"
   },
   "coverPhoto": {
-    "photo": "Photo:"
+    "photo": "Photo:",
+    "illustration": "Illustration:"
   },
   "likes": {
     "like": "Like",
