@@ -63,6 +63,6 @@ export function buildReminder(dateKey: string): string {
     text += `\n🔜 <b>Завтра от тебя:</b>\n${ownerTomorrow.map((i) => `• ${escapeTelegramHtml(i.text)}`).join('\n')}\n`;
   }
 
-  text += '\n<i>Полный план: docs/SEPTEMBER-PLAN-2026-09.md</i>';
+  text += '\n<i>Планы: docs/PLAN-NOVEMBER-2026-SKELETON.md + lib/content/plan-calendar.ts</i>';
   return text;
 }
