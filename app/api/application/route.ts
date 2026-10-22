@@ -198,12 +198,18 @@ export async function POST(request: Request) {
     const baseText = formatApplicationMessage(baseMessage);
     let text = baseText;
     if (attribution) {
-      for (const options of COMPRESSION_STEPS) {
-        const candidate = formatApplicationMessage({ ...baseMessage, attribution, device }, options);
-        if (visibleLength(candidate) <= TELEGRAM_SAFE_LENGTH) {
-          text = candidate;
-          break;
+      // Сбой в сборке истории не должен стоить заявки: тогда уходит заявка без истории.
+      try {
+        for (const options of COMPRESSION_STEPS) {
+          const candidate = formatApplicationMessage({ ...baseMessage, attribution, device }, options);
+          if (visibleLength(candidate) <= TELEGRAM_SAFE_LENGTH) {
+            text = candidate;
+            break;
+          }
         }
+      } catch (error) {
+        console.error('Attribution format error:', error);
+        text = baseText;
       }
     }
     try {

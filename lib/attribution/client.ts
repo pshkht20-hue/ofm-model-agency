@@ -1,4 +1,5 @@
 import { getStoredConsent, hasAnalyticsConsent } from '@/lib/cookies/consent';
+import { blockLabel } from './blocks';
 import type { AttributionPayload, ClientHints, JourneyEvent, JourneyKind, PageVisit, Touch, Utm } from './shared';
 
 // Без согласия на аналитику визит живёт только в памяти вкладки (переживает
@@ -264,20 +265,6 @@ export function recordJourneyEvent(kind: JourneyKind, detail: string, opts: { fo
   }
 }
 
-const SECTION_LABELS: Record<string, string> = {
-  about: 'О нас',
-  how: 'Как мы работаем',
-  services: 'Услуги',
-  models: 'Кейсы',
-  results: 'Результаты',
-  calculator: 'Калькулятор',
-  reviews: 'Отзывы',
-  faq: 'FAQ',
-  contact: 'Форма заявки',
-  payouts: 'Выплаты',
-  'article-video': 'видео в статье',
-};
-
 /** Блок страницы попал на экран: копится в самой странице, а не в списке действий. */
 function recordBlock(label: string): void {
   try {
@@ -321,7 +308,7 @@ export function journeyFromAnalytics(name: string, params: Record<string, unknow
       break;
     case 'section_view': {
       const id = String(params.section ?? '');
-      if (id) recordBlock(SECTION_LABELS[id] ?? id);
+      if (id) recordBlock(blockLabel(id));
       break;
     }
     case 'form_start':

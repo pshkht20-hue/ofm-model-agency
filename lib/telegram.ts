@@ -6,6 +6,7 @@ import {
   type Touch,
   type Utm,
 } from '@/lib/attribution/shared';
+import { blockLabel } from '@/lib/attribution/blocks';
 import { getSiteUrl } from '@/lib/site';
 
 const TELEGRAM_API = 'https://api.telegram.org';
@@ -147,6 +148,62 @@ function findTrigger(attr: AttributionPayload): string | null {
   return null;
 }
 
+type Session = NonNullable<AttributionPayload['session']>;
+
+/**
+ * Блоки каждой строки пути (повторный заход на тот же путь — своя строка),
+ * с читаемыми названиями; события 'section' — формат вкладок до обновления.
+ */
+function pageBlocks(session: Session): string[][] {
+  const result = session.pages.map((page) => [...new Set((page.b ?? []).map(blockLabel))]);
+  for (const e of session.events) {
+    if (e.k !== 'section') continue;
+    const index = session.pages.findIndex((page) => page.p === e.p);
+    const label = blockLabel(e.x);
+    if (index >= 0 && !result[index].includes(label)) result[index].push(label);
+  }
+  return result;
+}
+
+const PERSUASION_BLOCKS = ['Отзывы', 'Кейсы', 'Результаты', 'Выплаты', 'Сколько это приносит'];
+
+/**
+ * Короткая сводка вовлечённости: что из «убеждающего» девушка увидела до заявки.
+ * Считается по всей истории, поэтому видна и когда длинный таймлайн сжат.
+ */
+function engagementSummary(session: Session): string | null {
+  const parts: string[] = [];
+  const events = session.events;
+
+  const calcResult = [...events].reverse().find((e) => e.k === 'calc' && e.x.startsWith('калькулятор: результат'));
+  if (calcResult) parts.push(`прошла калькулятор (${calcResult.x.replace('калькулятор: результат ', '')})`);
+  else if (events.some((e) => e.k === 'calc')) parts.push('начала калькулятор, но не досчитала');
+
+  const videoEvents = events.filter((e) => e.k === 'video');
+  if (videoEvents.length > 0) {
+    const watched = Math.max(0, ...videoEvents.map((e) => Number(/до (\d+)%/.exec(e.x)?.[1] ?? 0)));
+    parts.push(watched > 0 ? `смотрела видео (до ${watched}%)` : 'запустила видео');
+  }
+
+  // Разные вопросы, а не раскрытия: повторно открытый вопрос не считается дважды.
+  const faq = new Set(events.filter((e) => e.k === 'faq').map((e) => `${e.p}|${e.x}`)).size;
+  if (faq > 0) parts.push(`открывала вопросы FAQ (${faq})`);
+
+  const unique = (re: RegExp) => new Set(session.pages.map((page) => page.p).filter((p) => re.test(p))).size;
+  const vacancies = unique(/\/vacancies\/./);
+  if (vacancies > 0) parts.push(`смотрела вакансии (${vacancies})`);
+  const articles = unique(/\/blog\/(?!author\/)[^/]+$/);
+  if (articles > 0) parts.push(`читала статьи (${articles})`);
+
+  const seen = new Set(pageBlocks(session).flat());
+  const persuasion = PERSUASION_BLOCKS.filter((label) => seen.has(label));
+  if (persuasion.length > 0) parts.push(`видела блоки: ${persuasion.join(', ')}`);
+
+  if (events.some((e) => e.k === 'tg')) parts.push('нажимала Telegram');
+
+  return parts.length > 0 ? escapeTelegramHtml(parts.join(' · ')) : null;
+}
+
 function deviceLabel(device: DeviceInfo, screen: string | undefined): string {
   // iPadOS Safari по умолчанию представляется как Mac: выдаёт только ширина экрана.
   const name = device.device === 'Mac' && screen && screen !== 'desktop' ? 'iPad' : device.device;
@@ -208,12 +265,7 @@ function formatAttribution(
 
     // Блоки хранятся в самой странице (повторный заход на тот же путь — своя
     // строка со своими блоками); события 'section' — формат вкладок до обновления.
-    const blocksByIndex = session.pages.map((page) => [...(page.b ?? [])]);
-    for (const e of session.events) {
-      if (e.k !== 'section') continue;
-      const index = session.pages.findIndex((page) => page.p === e.p);
-      if (index >= 0 && !blocksByIndex[index].includes(e.x)) blocksByIndex[index].push(e.x);
-    }
+    const blocksByIndex = pageBlocks(session);
 
     const total = session.pages.length;
     const maxPages = options.maxPages ?? total;
@@ -243,8 +295,11 @@ function formatAttribution(
     }
   }
 
+  const summary = session ? engagementSummary(session) : null;
   const trigger = findTrigger(attr);
-  if (trigger) lines.push('', `🎯 <b>Что подтолкнуло к заявке:</b> ${trigger}`);
+  if (summary || trigger) lines.push('');
+  if (summary) lines.push(`💡 <b>До заявки:</b> ${summary}`);
+  if (trigger) lines.push(`🎯 <b>Что подтолкнуло к заявке:</b> ${trigger}`);
   if (attr.formPage) lines.push(`📝 <b>Заявка отправлена со страницы:</b> ${pageLink(attr.formPage)}`);
 
   return lines;
