@@ -23,6 +23,7 @@ import {
   trackEmailClick,
 } from '@/lib/analytics/gtag';
 import { siteConfig } from '@/lib/site';
+import { readAttribution } from '@/lib/attribution/client';
 import type { FormErrorType } from '@/lib/analytics/events';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
@@ -244,6 +245,7 @@ export function ContactForm() {
           ageConfirmed: formData.get('ageConfirmed') === 'on',
           website: formData.get('website'),
           hasCalcPrefill: withPrefill,
+          attribution: readAttribution(),
         }),
       });
 

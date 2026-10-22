@@ -14,6 +14,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     paragraphs: [
       'Datos de la solicitud (los proporciona voluntariamente): nombre, edad (si se indica), contacto de Telegram o número de teléfono, intereses (si se completan), confirmación de edad 18+.',
       'Datos técnicos al enviar la solicitud: ubicación aproximada (país y ciudad) basada en la dirección IP — solo para procesamiento interno; la IP completa no se incluye en las notificaciones.',
+      'Datos de la visita al enviar la solicitud: la página por la que entraste al sitio, el sitio de origen (solo el dominio, por ejemplo google.com), las etiquetas del enlace (UTM) y las páginas de nuestro sitio abiertas en esta pestaña. Sin consentimiento para cookies analíticas, estos datos se guardan solo en la memoria de la pestaña abierta y nos llegan únicamente junto con la solicitud enviada; con consentimiento, también se guarda tu primera visita de los últimos 30 días.',
       'Datos de visita: idioma de la interfaz, tipo de navegador y dispositivo, páginas vistas — solo con su consentimiento a cookies analíticas (Google Analytics 4).',
       'Cookies necesarias: guardar el idioma elegido y su decisión sobre cookies.',
     ],
@@ -32,6 +33,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     paragraphs: [
       'Tramitar su solicitud y contactarle — ejecución de su petición / medidas precontractuales.',
       'Geolocalización aproximada por IP al solicitar — interés legítimo para evaluar solicitudes y organizar el trabajo del equipo.',
+      'Datos de la visita al solicitar (página de entrada, origen, etiquetas del enlace): interés legítimo para entender qué materiales del sitio son útiles para las candidatas y mejorarlos.',
       'Analítica de visitas — su consentimiento (para usuarios de la UE/EEE y otras jurisdicciones donde sea obligatorio).',
       'Seguridad del sitio y cumplimiento legal — interés legítimo y obligaciones legales.',
     ],

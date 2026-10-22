@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { formatVisitorGeo, getVisitorGeo } from '@/lib/geo/request';
 import { getApiErrors } from '@/lib/i18n/api-errors';
 import { trackContactSubmitServer } from '@/lib/analytics/server';
+import { sanitizeAttribution, sourceCode } from '@/lib/attribution/shared';
 import {
   formatApplicationMessage,
   sendTelegramMessage,
@@ -167,9 +168,19 @@ export async function POST(request: Request) {
 
     const location = formatVisitorGeo(getVisitorGeo(request));
     const geo = getVisitorGeo(request);
-    const text = formatApplicationMessage({ ...result.data, locale, location: location ?? undefined });
+    const attribution = sanitizeAttribution(body.attribution);
+    const analyticsConsent =
+      (body.attribution as { analyticsConsent?: unknown } | undefined)?.analyticsConsent === true;
+    const baseMessage = { ...result.data, locale, location: location ?? undefined };
     recordSubmission(ip);
-    await sendTelegramMessage(text);
+    try {
+      await sendTelegramMessage(formatApplicationMessage({ ...baseMessage, attribution }));
+    } catch (error) {
+      // Источник — необязательная часть: при отказе Telegram (например, лимит
+      // длины) заявку отправляем без него, а не теряем.
+      if (!attribution) throw error;
+      await sendTelegramMessage(formatApplicationMessage(baseMessage));
+    }
 
     // await, а не void: на serverless инстанс замораживается сразу после ответа
     // и fire-and-forget-запрос не успевает уйти — так терялось ~35% серверных
@@ -179,6 +190,12 @@ export async function POST(request: Request) {
       locale,
       has_calc_prefill: body.hasCalcPrefill === true,
       ...(geo?.countryCode ? { country: geo.countryCode } : {}),
+      // В GA4 источник уходит только при согласии на аналитику (см. /privacy).
+      ...(analyticsConsent &&
+        attribution?.session && {
+          landing_page: attribution.session.landing.slice(0, 100),
+          traffic_source: sourceCode(attribution.session),
+        }),
     });
 
     return NextResponse.json({ success: true });

@@ -1,3 +1,6 @@
+import { describeReferrer, type AttributionPayload, type Touch, type Utm } from '@/lib/attribution/shared';
+import { getSiteUrl } from '@/lib/site';
+
 const TELEGRAM_API = 'https://api.telegram.org';
 
 export function escapeTelegramHtml(text: string): string {
@@ -26,6 +29,8 @@ export type ApplicationPayload = {
   location?: string;
   /** Роль из переключателя формы: сортировка лидов (модели в приоритете). */
   role?: 'model' | 'chatter';
+  /** Источник заявки, уже прошедший sanitizeAttribution. */
+  attribution?: AttributionPayload;
 };
 
 const ROLE_LABELS: Record<'model' | 'chatter', string> = {
@@ -52,6 +57,63 @@ function formatTelegramContact(raw: string): string {
   return safe;
 }
 
+// Раскодированный путь не должен вставлять в уведомление переносы строк и
+// невидимые символы направления текста — тогда показываем путь как есть.
+function readablePath(path: string): string {
+  try {
+    const decoded = decodeURIComponent(path);
+    return /[\p{Cc}\p{Cf}\p{Zl}\p{Zp}]/u.test(decoded) ? path : decoded;
+  } catch {
+    return path;
+  }
+}
+
+function pageLink(path: string): string {
+  const href = `${getSiteUrl()}${path}`;
+  return `<a href="${escapeTelegramHtml(href)}">${escapeTelegramHtml(readablePath(path))}</a>`;
+}
+
+function formatUtm(utm: Utm): string {
+  return Object.entries(utm)
+    .map(([key, value]) => `${key}=${escapeTelegramHtml(value)}`)
+    .join(' · ');
+}
+
+function kyivDate(iso: string): string {
+  return new Date(iso).toLocaleDateString('ru-RU', {
+    timeZone: 'Europe/Kyiv',
+    day: '2-digit',
+    month: '2-digit',
+  });
+}
+
+function formatAttribution(attr: AttributionPayload): (string | null)[] {
+  const session = attr.session;
+  const lines: (string | null)[] = ['', '🔎 <b>Источник заявки</b>'];
+
+  if (session) {
+    lines.push(`↪️ <b>Откуда пришла:</b> ${escapeTelegramHtml(describeReferrer(session.referrer))}`);
+    if (session.utm) lines.push(`🏷 <b>Метка:</b> ${formatUtm(session.utm)}`);
+    lines.push(`🛬 <b>Первая страница:</b> ${pageLink(session.landing)}`);
+    if (session.path.length > 1) {
+      lines.push(`🧭 <b>Путь:</b> ${session.path.map((p) => escapeTelegramHtml(readablePath(p))).join(' → ')}`);
+    }
+  } else {
+    lines.push('↪️ <b>Откуда пришла:</b> нет данных (браузер не сохранил визит)');
+  }
+
+  if (attr.formPage) lines.push(`📝 <b>Заявка отправлена со страницы:</b> ${pageLink(attr.formPage)}`);
+
+  const first: Touch | undefined = attr.firstTouch;
+  if (first) {
+    lines.push(
+      `🕰 <b>Первый визит:</b> ${kyivDate(first.at)}, ${escapeTelegramHtml(describeReferrer(first.referrer))}, ${pageLink(first.landing)}`,
+    );
+  }
+
+  return lines;
+}
+
 export function formatApplicationMessage(data: ApplicationPayload): string {
   const localeLabel = data.locale ? LOCALE_LABELS[data.locale] ?? data.locale : null;
   const submittedAt = new Date().toLocaleString('ru-RU', {
@@ -75,6 +137,7 @@ export function formatApplicationMessage(data: ApplicationPayload): string {
     data.message
       ? `\n✨ <b>Интересы:</b>\n${escapeTelegramHtml(data.message)}`
       : null,
+    ...(data.attribution ? formatAttribution(data.attribution) : []),
   ];
 
   return lines.filter((line) => line !== null).join('\n');

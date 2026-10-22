@@ -14,6 +14,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     paragraphs: [
       'Application data (you provide voluntarily): name, age (if provided), Telegram contact or phone number, interests (if filled in), 18+ age confirmation.',
       'Technical data when submitting an application: approximate location (country and city) based on IP address — for internal processing by our team only; full IP addresses are not included in notifications.',
+      'Visit details when you apply: the page where you entered the site, the referring website (domain only, for example google.com), link tags (UTM) and the pages of our site opened in this tab. Without consent to analytics cookies, these details are kept only in the memory of the open tab and reach us only together with a submitted application; with consent, your first visit within the last 30 days is also stored.',
       'Website visit data: interface language, browser and device type, pages viewed — only if you consent to analytics cookies (Google Analytics 4).',
       'Necessary cookies: storing your language preference and your cookie consent choice.',
     ],
@@ -32,6 +33,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     paragraphs: [
       'Processing your application and contacting you — performance of your request / pre-contractual steps.',
       'Approximate IP-based geolocation when you apply — legitimate interest to evaluate applications and organize manager workflows.',
+      'Visit details when you apply (entry page, referring source, link tags): legitimate interest in understanding which site materials are useful to candidates and improving them.',
       'Visit analytics — your consent (for users in the EU/EEA and other jurisdictions where required).',
       'Website security and legal compliance — legitimate interest and legal obligations.',
     ],

@@ -41,10 +41,14 @@ export async function trackContactSubmitServer(params: {
   locale: string;
   has_calc_prefill: boolean;
   country?: string;
+  landing_page?: string;
+  traffic_source?: string;
 }) {
   await trackServerEvent(ANALYTICS_EVENTS.CONTACT_SUBMIT_SERVER, {
     locale: params.locale,
     has_calc_prefill: params.has_calc_prefill,
     ...(params.country ? { country: params.country } : {}),
+    ...(params.landing_page ? { landing_page: params.landing_page } : {}),
+    ...(params.traffic_source ? { traffic_source: params.traffic_source } : {}),
   });
 }

@@ -6,6 +6,7 @@ import { useLocale } from 'next-intl';
 import { usePathname } from '@/i18n/navigation';
 import { ArrowRight, CheckCircle2, X, Zap } from 'lucide-react';
 import { trackFormStart, trackFormSubmit, trackFormSubmitError } from '@/lib/analytics/gtag';
+import { readAttribution } from '@/lib/attribution/client';
 
 /**
  * Quick-apply: мини-заявка из селектов (роль · желаемый доход · опыт · Telegram)
@@ -219,6 +220,7 @@ export function QuickApply({
             `Желаемый доход: ${t.incomes[income]}`,
             `Опыт: ${t.experiences[experience]}`,
           ].join('\n'),
+          attribution: readAttribution(),
         }),
       });
       if (!res.ok) {

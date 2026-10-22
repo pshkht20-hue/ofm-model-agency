@@ -5,6 +5,7 @@ import { hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { Geist, Playfair_Display } from 'next/font/google';
 import { AnalyticsLoader } from '@/components/analytics/AnalyticsLoader';
+import { AttributionCapture } from '@/components/analytics/AttributionCapture';
 import { ClarityLoader } from '@/components/analytics/ClarityLoader';
 import { GoogleConsentDefaults } from '@/components/analytics/GoogleConsentDefaults';
 import { ScrollDepthTracker } from '@/components/analytics/ScrollDepthTracker';
@@ -165,6 +166,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <AnalyticsLoader />
             <ClarityLoader />
             <ScrollDepthTracker />
+            <AttributionCapture />
           </NextIntlClientProvider>
         </MotionProvider>
       </body>
