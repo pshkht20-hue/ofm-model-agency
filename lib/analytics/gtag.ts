@@ -26,7 +26,12 @@ import { journeyFromAnalytics } from '@/lib/attribution/client';
 function gtagSafe(...args: unknown[]) {
   if (typeof window === 'undefined') return;
   if (args[0] === 'event') {
-    journeyFromAnalytics(String(args[1]), (args[2] ?? {}) as Record<string, unknown>);
+    // История визита — дополнение: её сбой не должен терять событие аналитики.
+    try {
+      journeyFromAnalytics(String(args[1]), (args[2] ?? {}) as Record<string, unknown>);
+    } catch {
+      // ничего: событие ниже всё равно уходит в GA
+    }
   }
   window.gtag?.(...args);
 }

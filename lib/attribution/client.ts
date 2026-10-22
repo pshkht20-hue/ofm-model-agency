@@ -143,6 +143,9 @@ function activeSession(now: number): Session | null {
   if (session.hiddenAt === undefined && now - session.lastSeen > SESSION_IDLE_MS) {
     const resumed = newSession(window.location.pathname, now, 'resume');
     countVisit(resumed);
+    // Сразу делаем новый визит текущим: иначе каждый следующий кадр прокрутки
+    // заводил бы ещё один визит и завышал их счёт.
+    persist(resumed);
     return resumed;
   }
   return session;
@@ -172,6 +175,9 @@ export function recordPageview(pathname: string): void {
   }
 }
 
+const SCROLL_PERSIST_MS = 15_000;
+let lastScrollPersistMs = 0;
+
 /** Максимальная прокрутка текущей страницы, %. */
 export function recordScroll(percent: number): void {
   try {
@@ -182,11 +188,17 @@ export function recordScroll(percent: number): void {
     // Пока страница догружается (и при переходе по якорю), высота документа
     // ещё неверная — первые полторы секунды прокрутку не считаем.
     if (now - session.pageEnterMs < SCROLL_SETTLE_MS) return;
-    // Шаг 5%, у самого низа 100%: меньше записей в хранилище при прокрутке.
+    // Шаг 5%, у самого низа 100%. Запись в хранилище только когда прокрутка
+    // выросла (до 21 записи на страницу), иначе раз в 15 с, чтобы не писать
+    // на каждом кадре прокрутки.
     const value = percent >= 97 ? 100 : Math.min(100, Math.max(0, Math.floor(percent / 5) * 5));
     session.lastSeen = now;
-    if (value > current.s) current.s = value;
-    persist(session);
+    const grew = value > current.s;
+    if (grew) current.s = value;
+    if (grew || session !== memorySession || now - lastScrollPersistMs > SCROLL_PERSIST_MS) {
+      lastScrollPersistMs = now;
+      persist(session);
+    }
   } catch {
     // см. recordPageview
   }
