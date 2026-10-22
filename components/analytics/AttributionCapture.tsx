@@ -13,13 +13,22 @@ import {
   syncAttributionConsent,
 } from '@/lib/attribution/client';
 
-/** Подпись элемента: aria-label или первая видимая строка (у карточек-вариантов это сам ответ). */
+/** Короткая строка капсом — значок карточки («ОТКРЫТА», «СТАРТ И КОНТЕНТ»), а не её название. */
+function isBadge(line: string): boolean {
+  return line.length <= 30 && line === line.toUpperCase() && line !== line.toLowerCase();
+}
+
+/**
+ * Подпись элемента: aria-label или первая видимая строка (у карточек-вариантов
+ * это сам ответ); значки капсом над заголовком карточки пропускаются.
+ */
 function labelOf(el: Element): string {
   const aria = el.getAttribute('aria-label');
   if (aria) return aria.replace(/\s+/g, ' ').trim().slice(0, 60);
   const text = el instanceof HTMLElement ? el.innerText : el.textContent ?? '';
-  const firstLine = text.split('\n').map((line) => line.trim()).find((line) => line.length > 0) ?? '';
-  return firstLine.replace(/\s+/g, ' ').slice(0, 60);
+  const lines = text.split('\n').map((line) => line.trim()).filter((line) => line.length > 0);
+  const label = lines.find((line) => !isBadge(line)) ?? lines[0] ?? '';
+  return label.replace(/\s+/g, ' ').slice(0, 60);
 }
 
 /** Клик по ссылке или кнопке → запись в историю визита с подписью элемента. */
