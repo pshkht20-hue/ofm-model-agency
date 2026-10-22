@@ -1,4 +1,11 @@
-import { describeReferrer, type AttributionPayload, type Touch, type Utm } from '@/lib/attribution/shared';
+import {
+  describeReferrer,
+  type AttributionPayload,
+  type DeviceInfo,
+  type JourneyEvent,
+  type Touch,
+  type Utm,
+} from '@/lib/attribution/shared';
 import { getSiteUrl } from '@/lib/site';
 
 const TELEGRAM_API = 'https://api.telegram.org';
@@ -31,6 +38,20 @@ export type ApplicationPayload = {
   role?: 'model' | 'chatter';
   /** Источник заявки, уже прошедший sanitizeAttribution. */
   attribution?: AttributionPayload;
+  /** Устройство по User-Agent запроса. */
+  device?: DeviceInfo;
+};
+
+/**
+ * Сжатие истории под лимит Telegram (4096 символов): источник, устройство и
+ * причина остаются всегда, урезаются блоки, ранние действия и середина пути.
+ */
+export type FormatOptions = {
+  showBlocks?: boolean;
+  /** Сколько последних действий показать (undefined — все). */
+  maxEvents?: number;
+  /** Сколько страниц показать: первая + последние (undefined — все). */
+  maxPages?: number;
 };
 
 const ROLE_LABELS: Record<'model' | 'chatter', string> = {
@@ -73,9 +94,11 @@ function pageLink(path: string): string {
   return `<a href="${escapeTelegramHtml(href)}">${escapeTelegramHtml(readablePath(path))}</a>`;
 }
 
+// В <code> Telegram не делает ссылки кликабельными: чужая метка вида
+// utm_source=t.me/fake не превратится в ссылку в уведомлении.
 function formatUtm(utm: Utm): string {
   return Object.entries(utm)
-    .map(([key, value]) => `${key}=${escapeTelegramHtml(value)}`)
+    .map(([key, value]) => `${key}=<code>${escapeTelegramHtml(value)}</code>`)
     .join(' · ');
 }
 
@@ -87,34 +110,147 @@ function kyivDate(iso: string): string {
   });
 }
 
-function formatAttribution(attr: AttributionPayload): (string | null)[] {
+function duration(seconds: number): string {
+  if (seconds < 60) return `${seconds} с`;
+  if (seconds < 3600) {
+    const s = seconds % 60;
+    return `${Math.floor(seconds / 60)} мин${s ? ` ${s} с` : ''}`;
+  }
+  return `${Math.floor(seconds / 3600)} ч ${Math.floor((seconds % 3600) / 60)} мин`;
+}
+
+function clock(seconds: number): string {
+  const m = Math.floor(seconds / 60);
+  return `${m}:${String(seconds % 60).padStart(2, '0')}`;
+}
+
+const SCREEN_LABELS = { mobile: 'телефон', tablet: 'планшет', desktop: 'компьютер' } as const;
+
+/** Что подтолкнуло к заявке: последний клик, ведущий к форме, иначе последнее действие до начала заполнения. */
+function findTrigger(attr: AttributionPayload): string | null {
   const session = attr.session;
-  const lines: (string | null)[] = ['', '🔎 <b>Источник заявки</b>'];
+  if (!session) return null;
+  const cutoff = session.formStart ?? Number.POSITIVE_INFINITY;
+  const candidates = session.events.filter((e) => e.k !== 'section' && e.k !== 'form' && e.t <= cutoff);
+  const form = attr.formPage;
+  const reversed = [...candidates].reverse();
+  // Кнопка, которая сама открыла анкету (быстрая заявка): клик за 2 с до начала заполнения.
+  const formStart = session.formStart;
+  const opener =
+    formStart !== undefined ? reversed.find((e) => e.k === 'click' && e.t >= formStart - 2) : undefined;
+  const toForm = reversed.find(
+    (e) => e.k === 'click' && ((form && e.x.endsWith(`→ ${form}`)) || e.x.includes('#contact')),
+  );
+  const chosen = opener ?? toForm ?? candidates[candidates.length - 1];
+  if (chosen) return `${escapeTelegramHtml(chosen.x)} (на ${escapeTelegramHtml(readablePath(chosen.p))})`;
+  if (form && session.landing === form) return 'форма прямо на странице входа, без других действий';
+  return null;
+}
+
+function deviceLabel(device: DeviceInfo, screen: string | undefined): string {
+  // iPadOS Safari по умолчанию представляется как Mac: выдаёт только ширина экрана.
+  const name = device.device === 'Mac' && screen && screen !== 'desktop' ? 'iPad' : device.device;
+  return `${name}, ${device.browser}`;
+}
+
+function formatAttribution(
+  attr: AttributionPayload,
+  device: DeviceInfo | undefined,
+  options: FormatOptions,
+): (string | null)[] {
+  const showBlocks = options.showBlocks !== false;
+  const session = attr.session;
+  const lines: (string | null)[] = ['', '🔎 <b>Источник и история заявки</b>'];
 
   if (session) {
-    lines.push(`↪️ <b>Откуда пришла:</b> ${escapeTelegramHtml(describeReferrer(session.referrer))}`);
+    // Мессенджеры и приложения часто не передают реферер: тогда источник называет метка ссылки.
+    const source =
+      session.referrer === '' && session.utm?.source
+        ? `по ссылке с меткой «${session.utm.source}» (сайт-источник не передан)`
+        : describeReferrer(session.referrer);
+    lines.push(`↪️ <b>Откуда пришла:</b> ${escapeTelegramHtml(source)}`);
     if (session.utm) lines.push(`🏷 <b>Метка:</b> ${formatUtm(session.utm)}`);
-    lines.push(`🛬 <b>Первая страница:</b> ${pageLink(session.landing)}`);
-    if (session.path.length > 1) {
-      lines.push(`🧭 <b>Путь:</b> ${session.path.map((p) => escapeTelegramHtml(readablePath(p))).join(' → ')}`);
-    }
   } else {
     lines.push('↪️ <b>Откуда пришла:</b> нет данных (браузер не сохранил визит)');
   }
+  if (device?.inApp) {
+    lines.push(`📲 <b>Открыла сайт во встроенном браузере ${escapeTelegramHtml(device.inApp)}</b>`);
+  }
 
-  if (attr.formPage) lines.push(`📝 <b>Заявка отправлена со страницы:</b> ${pageLink(attr.formPage)}`);
+  const hints = attr.hints;
+  const deviceParts = [
+    device ? deviceLabel(device, hints?.screen) : hints?.screen ? SCREEN_LABELS[hints.screen] : null,
+    hints?.lang ? `язык ${escapeTelegramHtml(hints.lang)}` : null,
+    hints?.tz ? `пояс ${escapeTelegramHtml(hints.tz)}` : null,
+  ].filter(Boolean);
+  if (deviceParts.length > 0) lines.push(`📱 <b>Устройство:</b> ${deviceParts.join(' · ')}`);
 
   const first: Touch | undefined = attr.firstTouch;
-  if (first) {
+  if (attr.visitNo && attr.visitNo > 1) {
+    const firstPart = first
+      ? `, первый ${kyivDate(first.at)}: ${escapeTelegramHtml(describeReferrer(first.referrer))}, ${pageLink(first.landing)}`
+      : '';
+    lines.push(`🔁 <b>Визит:</b> ${attr.visitNo}-й за 30 дней${firstPart}`);
+  } else if (first) {
     lines.push(
       `🕰 <b>Первый визит:</b> ${kyivDate(first.at)}, ${escapeTelegramHtml(describeReferrer(first.referrer))}, ${pageLink(first.landing)}`,
     );
   }
 
+  if (session) {
+    const timing = [
+      session.elapsed !== undefined ? `на сайте до заявки ${duration(session.elapsed)}` : null,
+      session.elapsed !== undefined && session.formStart !== undefined
+        ? `заполняла анкету ${duration(Math.max(0, session.elapsed - session.formStart))}`
+        : null,
+    ].filter(Boolean);
+    if (timing.length > 0) lines.push(`⏱ ${timing.join(' · ')}`);
+
+    // Блоки хранятся в самой странице (повторный заход на тот же путь — своя
+    // строка со своими блоками); события 'section' — формат вкладок до обновления.
+    const blocksByIndex = session.pages.map((page) => [...(page.b ?? [])]);
+    for (const e of session.events) {
+      if (e.k !== 'section') continue;
+      const index = session.pages.findIndex((page) => page.p === e.p);
+      if (index >= 0 && !blocksByIndex[index].includes(e.x)) blocksByIndex[index].push(e.x);
+    }
+
+    const total = session.pages.length;
+    const maxPages = options.maxPages ?? total;
+    const shown =
+      total <= maxPages
+        ? session.pages.map((page, i) => ({ page, i }))
+        : [
+            { page: session.pages[0], i: 0 },
+            ...session.pages.slice(total - (maxPages - 1)).map((page, j) => ({ page, i: total - (maxPages - 1) + j })),
+          ];
+    lines.push('', `🧭 <b>Страницы (${total}):</b>`);
+    shown.forEach(({ page, i }, k) => {
+      if (k === 1 && i > 1) lines.push(`… ещё ${i - 1} стр. пропущено`);
+      const meta = [page.d > 0 ? duration(page.d) : null, page.s > 0 ? `прокрутка ${page.s}%` : null].filter(Boolean);
+      const blocks = blocksByIndex[i];
+      const blocksPart = showBlocks && blocks.length ? ` · блоки: ${blocks.map(escapeTelegramHtml).join(', ')}` : '';
+      lines.push(`${i + 1}. ${pageLink(page.p)}${meta.length ? ` · ${meta.join(' · ')}` : ''}${blocksPart}`);
+    });
+
+    const actions: JourneyEvent[] = session.events.filter((e) => e.k !== 'section');
+    const maxEvents = options.maxEvents ?? actions.length;
+    if (actions.length > 0 && maxEvents > 0) {
+      const visible = actions.slice(-maxEvents);
+      lines.push('', `🎬 <b>Действия (${actions.length}):</b>`);
+      if (visible.length < actions.length) lines.push(`… ${actions.length - visible.length} ранних действий скрыто`);
+      for (const e of visible) lines.push(`${clock(e.t)} ${escapeTelegramHtml(e.x)}`);
+    }
+  }
+
+  const trigger = findTrigger(attr);
+  if (trigger) lines.push('', `🎯 <b>Что подтолкнуло к заявке:</b> ${trigger}`);
+  if (attr.formPage) lines.push(`📝 <b>Заявка отправлена со страницы:</b> ${pageLink(attr.formPage)}`);
+
   return lines;
 }
 
-export function formatApplicationMessage(data: ApplicationPayload): string {
+export function formatApplicationMessage(data: ApplicationPayload, options: FormatOptions = {}): string {
   const localeLabel = data.locale ? LOCALE_LABELS[data.locale] ?? data.locale : null;
   const submittedAt = new Date().toLocaleString('ru-RU', {
     timeZone: 'Europe/Kyiv',
@@ -137,7 +273,7 @@ export function formatApplicationMessage(data: ApplicationPayload): string {
     data.message
       ? `\n✨ <b>Интересы:</b>\n${escapeTelegramHtml(data.message)}`
       : null,
-    ...(data.attribution ? formatAttribution(data.attribution) : []),
+    ...(data.attribution ? formatAttribution(data.attribution, data.device, options) : []),
   ];
 
   return lines.filter((line) => line !== null).join('\n');

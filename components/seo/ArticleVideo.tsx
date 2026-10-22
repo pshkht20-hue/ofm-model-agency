@@ -221,6 +221,7 @@ export function ArticleVideo({
         <div className="grid grid-cols-[122px_1fr] items-start gap-4 sm:grid-cols-[150px_1fr] sm:gap-5 md:grid-cols-[210px_1fr] md:items-center md:gap-7">
           <button
             type="button"
+            data-journey-ignore
             onClick={(e) => start(e.currentTarget)}
             aria-label={data.videoAriaLabel}
             aria-haspopup="dialog"
@@ -279,6 +280,7 @@ export function ArticleVideo({
             <p className="mt-3 text-[11.5px] leading-snug text-white/45">{data.note}</p>
             <button
               type="button"
+              data-journey-ignore
               onClick={(e) => start(e.currentTarget)}
               aria-haspopup="dialog"
               className="btn-primary mt-4 inline-flex min-h-10 px-5 text-sm"

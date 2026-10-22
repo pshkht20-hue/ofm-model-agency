@@ -42,6 +42,7 @@ export function CookieConsent() {
       {visible && (
         <motion.div
           role="dialog"
+          data-journey-ignore
           aria-labelledby="cookie-consent-title"
           aria-describedby="cookie-consent-desc"
           initial={reduced ? { opacity: 0 } : { opacity: 0, y: 16 }}

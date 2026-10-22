@@ -2,11 +2,12 @@ import { NextResponse } from 'next/server';
 import { formatVisitorGeo, getVisitorGeo } from '@/lib/geo/request';
 import { getApiErrors } from '@/lib/i18n/api-errors';
 import { trackContactSubmitServer } from '@/lib/analytics/server';
-import { sanitizeAttribution, sourceCode } from '@/lib/attribution/shared';
+import { parseUserAgent, sanitizeAttribution, sourceCode } from '@/lib/attribution/shared';
 import {
   formatApplicationMessage,
   sendTelegramMessage,
   type ApplicationPayload,
+  type FormatOptions,
 } from '@/lib/telegram';
 
 const MAX_LENGTH = {
@@ -15,6 +16,23 @@ const MAX_LENGTH = {
   telegram: 64,
   message: 2000,
 };
+
+const TELEGRAM_SAFE_LENGTH = 3900;
+
+/** Ступени сжатия истории визита: от полной к минимальной. */
+const COMPRESSION_STEPS: FormatOptions[] = [
+  {},
+  { showBlocks: false },
+  { showBlocks: false, maxEvents: 20 },
+  { showBlocks: false, maxEvents: 10, maxPages: 6 },
+  { showBlocks: false, maxEvents: 5, maxPages: 3 },
+  { showBlocks: false, maxEvents: 0, maxPages: 2 },
+];
+
+/** Длина текста так, как её считает Telegram: без HTML-тегов, сущность = 1 символ. */
+function visibleLength(html: string): number {
+  return html.replace(/<[^>]+>/g, '').replace(/&(amp|lt|gt|quot|#39);/g, '_').length;
+}
 
 const ALLOWED_LOCALES = ['ru', 'uk', 'en', 'es'] as const;
 type AllowedLocale = (typeof ALLOWED_LOCALES)[number];
@@ -172,14 +190,29 @@ export async function POST(request: Request) {
     const analyticsConsent =
       (body.attribution as { analyticsConsent?: unknown } | undefined)?.analyticsConsent === true;
     const baseMessage = { ...result.data, locale, location: location ?? undefined };
+    const device = parseUserAgent(request.headers.get('user-agent'));
     recordSubmission(ip);
+    // Лимит Telegram 4096 видимых символов: историю сжимаем по ступеням (сначала
+    // блоки, потом ранние действия и середина пути). Источник, устройство и
+    // причина заявки остаются до последней ступени; не влезло — заявка без истории.
+    const baseText = formatApplicationMessage(baseMessage);
+    let text = baseText;
+    if (attribution) {
+      for (const options of COMPRESSION_STEPS) {
+        const candidate = formatApplicationMessage({ ...baseMessage, attribution, device }, options);
+        if (visibleLength(candidate) <= TELEGRAM_SAFE_LENGTH) {
+          text = candidate;
+          break;
+        }
+      }
+    }
     try {
-      await sendTelegramMessage(formatApplicationMessage({ ...baseMessage, attribution }));
+      await sendTelegramMessage(text);
     } catch (error) {
-      // Источник — необязательная часть: при отказе Telegram (например, лимит
-      // длины) заявку отправляем без него, а не теряем.
-      if (!attribution) throw error;
-      await sendTelegramMessage(formatApplicationMessage(baseMessage));
+      // История визита — необязательная часть: при отказе Telegram заявку
+      // отправляем без неё, а не теряем. Без истории повторять нечего.
+      if (text === baseText) throw error;
+      await sendTelegramMessage(baseText);
     }
 
     // await, а не void: на serverless инстанс замораживается сразу после ответа
