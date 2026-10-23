@@ -1,0 +1,458 @@
+[
+ {
+  "sources": [
+   {
+    "url": "https://developers.google.com/search/docs/appearance/google-images",
+    "title": "Google image SEO best practices",
+    "publisher": "Google Search Central",
+    "evidence_type": "google-documentation",
+    "date": "Last updated 2026-03-02",
+    "key_facts": [
+     "Google does not index CSS background images. Images should be in <img src> (a <picture> fallback img is fine). srcset is OK, but always keep a src fallback.",
+     "Supported formats: BMP, GIF, JPEG, PNG, WebP, SVG, AVIF.",
+     "Exact quote: \"High-quality photos appeal to users more than blurry, unclear images.\" Sharp thumbnails \"can increase the likelihood of getting traffic\".",
+     "Preferred image is set via schema.org primaryImageOfPage, image on the mainEntity (e.g. BlogPosting.image), or og:image. Selection is \"completely automated\"; these are hints only.",
+     "Preferred-image rules: relevant and representative; avoid a generic image (e.g. logo) or \"an image with text\"; avoid extreme aspect ratios; use high resolution.",
+     "Google uses alt text \"along with computer vision algorithms and the contents of the page\" to understand an image. Keyword stuffing in alt \"may cause your site to be seen as spam\".",
+     "Filenames give \"very light clues\". If images are localized, translate the filenames too (URL-encode non-Latin characters).",
+     "Place images near relevant text. Captions and image titles are used. Reference the same image with the same URL across pages (crawl budget, caching).",
+     "SafeSearch section: make sure Google understands the nature of your site so filters apply correctly."
+    ],
+    "applies_to_us": "Это основной регламент. Для обложек и инлайн-картинок блога: только <img> (не CSS-фон), один og:image и BlogPosting.image без текста и логотипа, alt пишем по смыслу на языке локали, имена файлов переводим под uk/en/es. Компьютерное зрение Google сверяет картинку с alt и текстом, так что «атмосферная» картинка, не связанная с темой абзаца, даёт слабый сигнал. Нужны релевантные кадры рядом с текстом."
+   },
+   {
+    "url": "https://developers.google.com/search/docs/appearance/google-discover",
+    "title": "Discover and your website (Get on Discover)",
+    "publisher": "Google Search Central",
+    "evidence_type": "google-documentation",
+    "date": "Last updated 2026-03-09",
+    "key_facts": [
+     "\"No special tags or structured data are required\" for Discover eligibility. Discover uses the same helpful-content signals as Search.",
+     "Images: \"compelling, high-quality images... especially large images\". Spec: at least 1200 px wide, more than 300,000 total pixels, 16x9 aspect ratio.",
+     "Large previews need the max-image-preview:large setting (or AMP). Robots meta doc (updated 2026-03-24): large = \"A larger image preview, up to the width of the viewport\"; it applies to web search, Google Images, Discover and Assistant.",
+     "If you crop a vertical image to 16x9 yourself, keep the important details in the version you put in og:image. Avoid generic images (logo) and \"text-heavy images\" in og:image or schema.",
+     "Avoid clickbait, i.e. misleading or exaggerated preview images. Avoid \"sensationalism tactics that manipulate appeal by catering to morbid curiosity, titillation, or outrage\".",
+     "Discover \"might not recommend job applications, petitions, forms\". It \"makes use of SafeSearch but beyond that filters out content that might be seen as shocking or unexpected\"."
+    ],
+    "applies_to_us": "Шанс на Discover есть только у статей блога, не у вакансий: Google прямо исключает job applications. Обложка должна быть 16:9, не меньше 1200 px в ширину, без текста на картинке, плюс max-image-preview:large. Вертикальная эстетика «селфи с телефона» подходит для инлайна. Для og:image нужен отдельный горизонтальный кроп 16:9, где лицо и смысловая деталь остаются в кадре. Любая «откровенность» в превью (titillation) — прямой риск фильтра Discover и SafeSearch."
+   },
+   {
+    "url": "https://developers.google.com/search/blog/2026/02/discover-core-update",
+    "title": "Google's February 2026 Discover Core Update",
+    "publisher": "Google Search Central Blog (John Mueller)",
+    "evidence_type": "google-documentation",
+    "date": "2026-02-05",
+    "key_facts": [
+     "First announced Discover-only core update. Goals: more locally relevant content from sites based in the user's country, \"Reducing sensational content and clickbait\", and more in-depth, original, timely content from sites with expertise.",
+     "Expertise is judged \"on a topic-by-topic basis\".",
+     "Rolled out to English-language users in the US first, \"will expand it to all countries and languages in the months ahead\"."
+    ],
+    "applies_to_us": "Discover в 2026 году режет кликбейт и сенсационность, в том числе в превью-картинках, и награждает тематическую экспертизу и местную привязку. Для украинской аудитории плюс дают узнаваемо локальные и правдивые кадры (реальные места и процессы), а не глянцевый «журнальный» сток."
+   },
+   {
+    "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+    "title": "Google Search's guidance on using generative AI content on your website",
+    "publisher": "Google Search Central",
+    "evidence_type": "google-documentation",
+    "date": "2025 (page current as of 2026-10)",
+    "key_facts": [
+     "Generating many pages with gen AI \"without adding value for users may violate Google's spam policy on scaled content abuse\".",
+     "Factchecking also applies to metadata: title, meta description, structured data, and alt text for images (\"alternate texts for images\").",
+     "Under 'Give users context': if you are automatically generating content, consider explaining how it was created, \"such as by providing more background information on how automation was used and adding image metadata\".",
+     "For ecommerce, Merchant Center: \"AI-generated images must contain metadata using the IPTC DigitalSourceType TrainedAlgorithmicMedia\".",
+     "Merchant Center 'AI-generated content' help page (support.google.com/merchants/answer/14743464): \"All images created using generative AI must contain meta data indicating that the image was AI-generated\". Don't strip DigitalSourceType tags."
+    ],
+    "applies_to_us": "Нигде не сказано, что AI-картинки понижаются. Google рекомендует контекст: раскрытие плюс метаданные. Если вставляем AI-иллюстрации, сохраняем или прописываем IPTC DigitalSourceType = trainedAlgorithmicMedia и вычитываем alt, как текст. Проверить гипотезу: оптимизатор next/image (sharp) по умолчанию, вероятно, срезает IPTC/EXIF. Нужно проверить на проде, доходят ли метаданные до Googlebot (либо размечать через структурированные данные)."
+   },
+   {
+    "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "title": "Creating helpful, reliable, people-first content",
+    "publisher": "Google Search Central",
+    "evidence_type": "google-documentation",
+    "date": "Last updated 2026-10-05",
+    "key_facts": [
+     "NEW 2026 'Main content' section: main content includes \"The main text, articles, images, audio, or video files on the page\". Images are part of the quality-evaluated MC.",
+     "Rated MC attributes: Effort, Originality, Talent or skill (\"clear writing, well-produced video, or functional page tools\"), Accuracy. Low effort = \"using generative AI to produce large amounts of text without manual oversight or curation\".",
+     "Exact quote: \"Fabricating creator profiles (such as by using AI-generated headshots, made-up names, or false credentials...) is a form of deception.\" Deception is called \"a signal of a low-quality page\".",
+     "'How' section: trust grows when the work is shown with \"evidence of the work involved, such as photographs\" (product-review example).",
+     "AI disclosure question: \"Is the use of automation, including AI-generation, self-evident to visitors through disclosures or in other ways?\"",
+     "Self-check: \"Is the content produced well, or does it appear sloppy or hastily produced?\"; \"Would you expect to see this content in or referenced by a printed magazine...?\"",
+     "\"Of these aspects, trust is most important.\""
+    ],
+    "applies_to_us": "Главный свежий документ (05.10.2026). Он официально подтверждает наше табу: AI-лицо у автора, менеджера или «команды» = обман и сигнал низкого качества. Картинки теперь явно входят в MC, который оценивают по усилию и оригинальности. Лучший сигнал доверия: фото-доказательства реальной работы (процесс, рабочее место, обезличенные артефакты с согласия). Дешёвая генерация «для красоты» сигнала не даёт. AI-атмосферу раскрываем подписью."
+   },
+   {
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata",
+    "title": "Image metadata in Google Images (licensing, IPTC, C2PA)",
+    "publisher": "Google Search Central",
+    "evidence_type": "google-documentation",
+    "date": "C2PA section added Nov 2024; page current 2026",
+    "key_facts": [
+     "Image metadata can be given through ImageObject structured data or embedded IPTC. If they conflict, \"Google will use the structured data information\".",
+     "ImageObject requires contentUrl plus one of creator / creditText / copyrightNotice / license. The Licensable badge requires license (or IPTC Web Statement of Rights).",
+     "IPTC Digital Source Type values Google supports: trainedAlgorithmicMedia, compositeSynthetic, algorithmicMedia, compositeWithTrainedAlgorithmicMedia.",
+     "IPTC vocabulary (cv.iptc.org): trainedAlgorithmicMedia = \"Created using Generative AI\"; compositeWithTrainedAlgorithmicMedia = \"Edited using Generative AI\" (inpainting/outpainting); digitalCreation = \"Media created by a human using non-generative tools\"; digitalCapture = real-life camera capture; minorHumanEdits retired in favour of humanEdits (2024-09-17).",
+     "C2PA: Google can show C2PA data in \"About this image\" (\"how the image was created or if it was edited with AI tools\") if the signer uses C2PA 2.1+ and a certificate on the C2PA Trust List.",
+     "Google recommends that you \"retain critical metadata related to image rights\" (creator, credit line, copyright notice), and notes that removing it \"may be illegal in certain jurisdictions\"."
+    ],
+    "applies_to_us": "Это способ выглядеть «как медиа». Для своих фото и рендеров размечаем ImageObject с creditText «OFM Models» и copyrightNotice. Тип источника: 3D-рендеры, сделанные человеком в 3D-редакторе, = digitalCreation; кадры Nano Banana = trainedAlgorithmicMedia; AI-доработка реального фото = compositeWithTrainedAlgorithmicMedia. Прописывать честно. В Google Images это видно только через «About this image», не баннером на выдаче."
+   },
+   {
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/article",
+    "title": "Article (Article, NewsArticle, BlogPosting) structured data",
+    "publisher": "Google Search Central",
+    "evidence_type": "google-documentation",
+    "date": "current 2026",
+    "key_facts": [
+     "image: \"Use images that are relevant to the article, rather than logos or captions\". The URLs must be crawlable and indexable, and the images \"must represent the marked up content\".",
+     "\"For best results, we recommend providing multiple high-resolution images (minimum of 50K pixels when multiplying width and height) with the following aspect ratios: 16x9, 4x3, and 1x1.\"",
+     "Author markup: use Person or Organization with url or sameAs. Put only the name in author.name; job title goes in jobTitle, publisher in publisher.",
+     "If url points to an internal profile page, mark that page up with ProfilePage structured data."
+    ],
+    "applies_to_us": "Для BlogPosting отдаём массив обложки в 3 кропах (16:9, 4:3, 1:1). Это дополнение, не трогает скелет схем. Автор должен быть реальным (Person с url на страницу автора) или Organization. Никаких выдуманных персон с AI-фото: это прямо противоречит документу о helpful content."
+   },
+   {
+    "url": "https://developers.google.com/search/blog/2023/02/google-search-and-ai-content",
+    "title": "Google Search's guidance about AI-generated content (+FAQ)",
+    "publisher": "Google Search Central Blog (Danny Sullivan, Chris Nelson)",
+    "evidence_type": "google-documentation",
+    "date": "2023-02-08 (still linked as canonical AI guidance in 2026)",
+    "key_facts": [
+     "Google focuses on \"the quality of content, rather than how content is produced\".",
+     "FAQ: \"Using AI doesn't give content any special gains. It's just content.\"",
+     "FAQ: AI disclosures \"are useful for content where someone might think 'How was this created?'\", so add them \"when it would be reasonably expected\".",
+     "FAQ: \"Giving AI an author byline is probably not the best way\" to make clear that AI was part of creation."
+    ],
+    "applies_to_us": "Это официальный ответ на вопрос «понижают ли AI-картинки»: само происхождение не штрафуется и не даёт бонуса. Решает качество и уместность. Раскрытие для иллюстраций (подпись «иллюстрация») уместно там, где читательница спросит «это реальное фото?»."
+   },
+   {
+    "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "title": "Optimizing your website for generative AI features on Google Search",
+    "publisher": "Google Search Central",
+    "evidence_type": "google-documentation",
+    "date": "Published 2026-05-15",
+    "key_facts": [
+     "\"Add high-quality images and video... our generative AI search features can bring in relevant images and video, which means more opportunities for your website to appear beyond web page links.\"",
+     "\"If you're already following our image SEO best practices and video SEO documentation, you're already optimizing for generative AI search.\"",
+     "Unique POV: \"a first-hand review provides a unique perspective\". Don't recycle what \"could easily be produced by a generative AI model\".",
+     "Page experience: make it easy for people \"to distinguish your main content from other elements\".",
+     "Mythbusting: no special markup, llms.txt or chunking is needed. Structured data is not required for AI features but is still useful.",
+     "Related blog (2025-05-21, John Mueller): \"support your textual content with high-quality images and videos on your pages\" for multimodal search success."
+    ],
+    "applies_to_us": "Картинки — отдельный вход в AI Overviews и AI Mode. Статья, «где одни стены текста», упускает этот канал. Особая ценность у уникальных кадров, которые модель не может сгенерировать сама: реальный процесс и наши инфографики с цифрами."
+   },
+   {
+    "url": "https://developers.google.com/search/blog/2026/09/web-multimodal-in-sc",
+    "title": "Announcing web multimodal Search performance reporting in Search Console",
+    "publisher": "Google Search Central Blog (Google Lens & Search Console PMs)",
+    "evidence_type": "google-documentation",
+    "date": "2026-09-24",
+    "key_facts": [
+     "New \"multimodal\" search type filter in the Performance and Generative AI reports.",
+     "Covers searches with Lens, Circle to Search on Android, image uploads to Google Search, and Chrome's right-click \"Search this image\".",
+     "Rolling out globally from 2026-09-24. Data shows once a site gets this traffic."
+    ],
+    "applies_to_us": "Наш инструмент замера: после внедрения инлайн-изображений смотреть в GSC фильтр multimodal и отчёт по Google Images. Решения о картинках так становятся проверяемой гипотезой, а не вкусовщиной."
+   },
+   {
+    "url": "https://developers.google.com/search/docs/specialty/explicit/guidelines",
+    "title": "SafeSearch and your website",
+    "publisher": "Google Search Central",
+    "evidence_type": "google-documentation",
+    "date": "Last updated 2026-09-17",
+    "key_facts": [
+     "SafeSearch relies on \"automated systems that use machine learning and a variety of signals\".",
+     "It is designed to \"filter out pages that contain images or videos that contain exposed breasts or genitals\". Links, pop-ups or ads pointing to explicit content can also get a page filtered.",
+     "Without separation, \"our systems might determine that your entire site seems explicit in nature\" and filter the whole site.",
+     "Recommendation: group explicit pages on a separate domain or subdomain, and use the rating meta tag (adult) on explicit pages.",
+     "Age gates must let Googlebot through; otherwise \"there is a higher chance that this content or even the whole site gets classified automatically as explicit\"."
+    ],
+    "applies_to_us": "Это самое критичное ограничение для нашей ниши. Одна откровенная картинка (даже AI-шная) может пометить страницу, а при накоплении и весь домен как explicit. Тогда сайт невидим с включённым SafeSearch. Визуал строим на эстетике без обнажения. Это совпадает с правилом сайта «не писать ни в откровенную, ни в отрицающую сторону» и с SafeSearch-чеком из плана."
+   },
+   {
+    "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf",
+    "title": "Search Quality Evaluator Guidelines (General Guidelines)",
+    "publisher": "Google",
+    "evidence_type": "google-documentation",
+    "date": "2025-09-11 (current version)",
+    "key_facts": [
+     "§7.1 High originality: \"Original photos or video footage produced by the website or content creator\". Low originality: \"Photos or videos come from other sources\".",
+     "§4.5.3 Lowest/deceptive: a website with \"fake\" owner or creator profiles, e.g. \"made up 'author' profiles (AI generated images or deceptive creator descriptions)\". Also deceptive: a \"fake photo\" of a physical store.",
+     "§4.6.6 Lowest applies if all or almost all MC \"(including text, images, audio, videos, etc)\" is copied, paraphrased, \"auto or AI generated\" with little effort, originality and added value.",
+     "§4.6.6: \"the use of Generative AI tools alone does not determine the level of effort or Page Quality rating\". \"a high level of effort may be involved in creating high quality original artwork using Generative AI tools\".",
+     "Medium-not-High examples (entertainment/recipe pages) lack \"effort in the form of... original images\".",
+     "Raters must flag an image if \"you cannot tell that the person in the image is over 18\"."
+    ],
+    "applies_to_us": "Это прямое подтверждение нашей иерархии доверия. Собственные фото и видео = высокая оригинальность. Сток («из других источников») = низкая. AI допустим, если в него вложено авторское усилие (арт-дирекция, единый стиль). Выдуманные авторы с AI-лицами = Lowest. Возраст на любом кадре должен быть однозначно взрослым: это подтверждает табу на «детские» атрибуты."
+   },
+   {
+    "url": "https://blog.google/innovation-and-ai/products/google-gen-ai-content-transparency-c2pa/",
+    "title": "How we're increasing transparency for gen AI content with the C2PA",
+    "publisher": "Google (The Keyword, Laurie Richardson, VP Trust & Safety)",
+    "evidence_type": "google-documentation",
+    "date": "2024-09-17",
+    "key_facts": [
+     "Google joined the C2PA steering committee and co-developed Content Credentials v2.1 (more tamper-resistant).",
+     "Search: if an image has C2PA metadata, \"About this image\" shows whether it was created or edited with AI tools. Available in Google Images, Lens and Circle to Search.",
+     "Ads: \"use C2PA signals to inform how we enforce key policies\". This is the only stated enforcement use, and it is in Ads, not organic Search.",
+     "Shipped in Search Nov 2024 (Search Central image-metadata doc; SERoundtable 2024-11-13)."
+    ],
+    "applies_to_us": "Происхождение изображения видно пользователю только в «About this image» (меню из трёх точек), а не как метка на выдаче. Google говорит о применении C2PA для политик в Ads, не в органике. Если когда-нибудь пойдёт реклама, AI-креативы с C2PA уйдут под отдельный контроль."
+   },
+   {
+    "url": "https://partnershiponai.org/download/12865/?tmstv=1742332672",
+    "title": "Synthetic Media Framework Case Study: Google",
+    "publisher": "Partnership on AI (case study written by Google)",
+    "evidence_type": "case-study",
+    "date": "2025 (file timestamp March 2025)",
+    "key_facts": [
+     "\"About this image\" tells users whether an image was generated by Google AI \"based on its SynthID watermark\", and how it was made or edited based on IPTC metadata and C2PA manifest data.",
+     "Google: knowing content is AI-made answers \"How was this made?\" but \"does not necessarily answer the question 'Is this trustworthy?'\". \"Not all AI-generated content is deceptive\".",
+     "Google uses prominent AI labels \"only in cases with sensitive content in which there is high likelihood of harm from deception (e.g., an election ad)\". Otherwise it uses low-prominence \"learn more\" entry points.",
+     "Google's research: directly disclosing gen-AI origin can in some cases mislead users and \"undermine their ability to determine\" trustworthiness."
+    ],
+    "applies_to_us": "Это позиция самого Google по раскрытию. Мелкая нейтральная подпись («иллюстрация» или «как сделано») лучше крикливой плашки «AI». Это подтверждает нашу схему: раскрытая иллюстрация допустима, обман о реальности (кейсы, люди, дашборды) — нет."
+   },
+   {
+    "url": "https://blog.google/technology/ai/ai-image-verification-gemini-app/",
+    "title": "How we're bringing AI image verification to the Gemini app",
+    "publisher": "Google (The Keyword, Pushmeet Kohli & Laurie Richardson)",
+    "evidence_type": "google-documentation",
+    "date": "2025-11-20",
+    "key_facts": [
+     "\"over 20 billion AI-generated pieces of content have been watermarked using SynthID\" (vs \"Over 10 billion\" in the 2025-05-20 SynthID Detector post).",
+     "Anyone can upload an image to Gemini and ask \"Is this AI-generated?\". Expansion of SynthID verification \"to more surfaces, such as Search\" was announced.",
+     "Images from Nano Banana Pro (Gemini 3 Pro Image) in the Gemini app, Vertex AI and Google Ads \"will have C2PA metadata embedded\".",
+     "DeepMind SynthID page (deepmind.google/models/synthid, 2026): \"Gemini, Search and Chrome will check for a SynthID watermark\". SynthID Detector access is expanding to everyone and detects partners incl. OpenAI, NVIDIA, Kakao, \"soon, Apple\".",
+     "Gemini API image-generation docs (ai.google.dev, 2026): \"All generated images include a SynthID watermark\" (Nano Banana, Nano Banana Pro, Nano Banana 2/2.1)."
+    ],
+    "applies_to_us": "Любой кадр Nano Banana на сайте технически опознаётся как AI в Gemini, Search и Chrome. Сам водяной знак от этого не снимается. Значит, AI-кадр, выданный за реальное фото, легко разоблачить: удар по доверию ЦА, а не по ранжированию. Вывод: AI использовать только как раскрытую редакционную атмосферу. Документа о том, что SynthID или C2PA понижают ранжирование, нет."
+   }
+  ]
+ },
+ {
+  "sources": [
+   {
+    "url": "https://www.nngroup.com/articles/ai-generated-images/",
+    "title": "AI-Generated Images Can Perform as Well as Stock Photography",
+    "publisher": "Nielsen Norman Group (Rachel Banawa)",
+    "date": "2026-08-21",
+    "evidence_type": "controlled-study",
+    "key_facts": [
+     "77 US adults rated 6 versions of a fictional consulting firm's webpage. The pages were identical except for the hero image: 3 were AI-generated with ChatGPT Images 2.0 and 3 were real stock photos from Unsplash+ and iStock. Each page was viewed for 10 seconds and rated 1-7 on trustworthiness, professionalism and authenticity. Participants were not told that AI images were involved.",
+     "They found 'no evidence that the AI-generated images we tested reduced trust.' AI pages scored slightly higher on all 3 measures, but only authenticity was statistically significant, and that gap was just +0.4 points on the 7-point scale. Pairwise t-tests found no significant differences, except in tests involving one image.",
+     "When participants suspected AI, they rated the site less favorably. This also happened when real stock photos were wrongly taken for AI. NN/g: 'Users may still react negatively when they suspect that AI was involved.'",
+     "The study did not test labeled AI images. NN/g points to the EU AI Act labeling rules and to Schilke & Reimann, where trust dropped across 13 experiments once AI use was disclosed.",
+     "What drove perception was the image itself: believable interactions, representation (who leads, diversity), collaboration, and visual quality that fits the brand. Pre-use checklist: purpose, representation, believability, AI errors (text, hands, screens, glass reflections, backgrounds), and a check of the final crop in context."
+    ],
+    "applies_to_us": "This is the newest controlled data (Aug 2026). AI imagery carries no built-in penalty against stock when viewers don't notice it is AI. The cost comes from suspicion and from disclosure, and our covers are disclosed illustrations. The test used a B2B consulting page with US adults, not adult-industry recruiting aimed at young women, so treat it as a ceiling, not a green light. Use the NN/g checklist (hands, reflections, screens, text) as a QA gate for every generated cover or inline image."
+   },
+   {
+    "url": "https://newsroom.gettyimages.com/en/getty-images/nearly-90-of-consumers-want-transparency-on-ai-images-finds-getty-images-report",
+    "title": "Building Trust in the Age of AI (VisualGPS report) - press release + full PDF (reports.gettyimages.com/VisualGPS-Building-Trust-In-AI.pdf)",
+    "publisher": "Getty Images VisualGPS (with MarketCast)",
+    "date": "2024-04-30",
+    "evidence_type": "large-survey",
+    "key_facts": [
+     "Sample: 30,000+ adults in 25 countries, 2022-2024, 7,500 per survey (incl. Germany, France, Italy, Spain, UK, US).",
+     "98% agree that 'authentic' images and videos are pivotal to establishing trust. 87% say it is important for an image to be authentic.",
+     "Nearly 9 in 10 (~90%) want to know whether an image was made with AI. 76% agree 'It's getting to the point where I can't tell if an image is real'. 82% say 'social media can't be trusted to be real or accurate'.",
+     "Concern about how AI images and videos are made rose from 57% to 63% in one year. 47% are nervous about AI (41% in 2022).",
+     "AI images of non-human subjects were seen as less misleading than AI images of people or real products. Sentiment 'skews more negative towards brands that are using AI generated visuals to create people or products.' AI imagery was received best for inanimate subjects such as structures, buildings and landscapes.",
+     "In image testing, the visuals that stood out were camera-made and felt 'real, candid, and personal'. Consumers described what they liked as images that 'feel natural and real, like pictures I might take.'",
+     "Images made by professionals (artists, photographers) are trusted as more authentic. Younger men are most positive about brands using AI images. Europeans, especially in France, Germany and the Nordics, are less confident telling real images from manipulated ones and more skeptical.",
+     "Getty's advice: if AI content features people, consider labeling it."
+    ],
+    "applies_to_us": "Direct support for our trust hierarchy and for the owner's 'from a model's own profile' aesthetic: the winning look is 'like pictures I might take', not glossy perfection. Our faceless 3D covers fall in the less-misleading non-human bucket. AI people are where the penalty sits. Our audience (young women, many in Germany, Poland, Czechia and other EU countries) is the opposite of the most AI-tolerant group (young men), so expect a stronger penalty than the global average."
+   },
+   {
+    "url": "https://www.cxnetwork.com/artificial-intelligence/interviews/ai-generated-images-customer-trust-advertising",
+    "title": "AI generated images and customers (interview with Getty Images' Jacqueline Bourke on VisualGPS findings)",
+    "publisher": "CX Network",
+    "date": "2026-01-12",
+    "evidence_type": "large-survey",
+    "key_facts": [
+     "78% agree an AI-generated image cannot be considered 'authentic' because of its origin.",
+     "66% prefer brands that use real, unedited photos in their ads. 74% agree an AI image can be as realistic as a camera photo.",
+     "In Getty's image testing, respondents accepted AI imagery more when they thought it was real. Acceptance dropped once they learned it was AI-generated.",
+     "Respondents were more than twice as likely to prefer 'real' images (38%) as AI-generated ones (15%) in marketing materials.",
+     "AI imagery was the LEAST preferred type when tested against real images, retouched real images and 3D/CGI images. Healthcare was the least accepted AI use case and financial services the most accepted, though acceptance was 'low across all industries'.",
+     "61% (UK CPG study) distrust all advertising, mostly over AI-generated or manipulated imagery. A YouGov 2024 figure cited in the article: half of consumers say AI-generated ads are a turnoff.",
+     "People are 'hyper aware of images which look too polished or perfect'. They want imagery that feels 'honest, a little imperfect, and recognizably real'. Consumers in Southeast Asia, LatAm, the UAE and Saudi Arabia are more receptive to AI imagery."
+    ],
+    "applies_to_us": "This is the only source found that ranks 3D/CGI against AI: real > retouched real > 3D/CGI > AI-generated. That backs keeping 3D renders (above photoreal AI) and adding real, lightly retouched images wherever possible. The 'too polished' penalty supports phone-distance, slightly imperfect visuals over 4K magazine gloss. Read 'expensive' as craft and art direction, not as synthetic perfection."
+   },
+   {
+    "url": "https://raptive.com/blog/the-ai-stink-is-real-and-its-costing-brands/",
+    "title": "The 'AI stink' is real, and it's costing brands (+ follow-up 'Trust in AI answers study', raptive.com/blog/trust-in-ai-answers-raptive-research/, 2026-10-14)",
+    "publisher": "Raptive (reported by Adweek, PPC Land)",
+    "date": "2025-07-15",
+    "evidence_type": "experiment",
+    "key_facts": [
+     "3,000 nationally representative US adults saw 5 articles (travel, food, finance, parenting), each next to a branded ad. Half were AI-generated and half human-written. In the labeling test, 300 people were told an article was AI-made and 300 were told the identical article was human-written.",
+     "Content perceived as AI-generated was rated 48% less trustworthy, 57% less authentic and 60% lower in emotional connection. This held 'regardless of whether it was really AI-generated or not.'",
+     "Ads next to perceived-AI content were rated 17% less premium, 19% less inspiring, 16% more artificial, 14% less relatable and 11% less trustworthy.",
+     "Purchase consideration and willingness to pay a premium each fell 14% for products advertised next to content perceived as AI-made.",
+     "Follow-up (Sept 2026, n=3,083): 74% say it is extremely or very important to know the source behind an AI answer. 59% say citations would raise their trust. When AI conflicts with a trusted source, only 19% believe the AI, while 33% stick with the trusted publisher or creator."
+    ],
+    "applies_to_us": "The owner's goal of looking expensive is measured here: the 'AI look' costs about 17% of perceived premium-ness and drags down the CTA and brand next to it. The penalty comes from perception, not the real origin. So generic, AI-looking art (and AI-sounding copy) has to be designed out, not just labeled. Use art-directed, consistent, original visuals and visible human authorship. The finding is on US readers and text content, but the spillover onto the adjacent CTA is the relevant mechanism."
+   },
+   {
+    "url": "https://www.sciencedirect.com/science/article/pii/S0749597825000172",
+    "title": "The transparency dilemma: How AI disclosure erodes trust (Organizational Behavior and Human Decision Processes, vol. 188, 104405)",
+    "publisher": "Oliver Schilke & Martin Reimann (University of Arizona) / Elsevier",
+    "date": "2025-05-01",
+    "evidence_type": "controlled-study",
+    "key_facts": [
+     "13 experiments. In a within-paper meta-analysis of 4,093 observations, trust was 'markedly lower in the AI-disclosure condition than in the control condition': θ = 0.81, 95% CI [0.66, 0.96], p < 0.001.",
+     "The effect held across tasks, including 'artistic activities (e.g., advertising creation and graphic design)', and across groups: the general population, legal analysts, hiring managers and students.",
+     "Study 13 (n≈195): trust in the advisor was 4.02 with no disclosure, 3.15 when he disclosed AI use himself, and 2.49 when a third party exposed his AI use (d = 1.66 vs control). Being exposed is worse than disclosing.",
+     "The penalty is smaller for people with positive attitudes to technology and for those who see AI as accurate. Familiarity with AI did not reduce it."
+    ],
+    "applies_to_us": "Disclosing AI imagery costs trust, but being 'caught' costs much more. That validates the current 'disclosed illustration' policy as the lesser evil and rules out passing off AI as real. It also argues for keeping AI out of the trust-critical parts (people, proof, process) and putting real artifacts there instead."
+   },
+   {
+    "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "title": "Creating Helpful, Reliable, People-First Content",
+    "publisher": "Google Search Central",
+    "date": "2026-10-05 (last updated)",
+    "evidence_type": "google-documentation",
+    "key_facts": [
+     "Under 'Who', as deceptive authorship: 'Fabricating creator profiles (such as by using AI-generated headshots, made-up names, or false credentials...'.",
+     "'Do pages carry a byline, where one might be expected?' Google strongly encourages accurate authorship information, and bylines should lead to more information about the author.",
+     "Under 'How': 'Is the use of automation, including AI-generation, self-evident to visitors through disclosures or in other ways?' and 'AI or automation disclosures are useful for content where someone might think \"How was this created?\"'",
+     "Trust is the most important part of E-E-A-T. Content should 'clearly demonstrate first-hand expertise'. The product-review example calls for work 'accompanied by evidence of the work involved, such as photographs'.",
+     "The linked reviews guidance (developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews): 'Provide evidence such as visuals, audio, or other links of your own experience... to support your expertise and reinforce the authenticity'."
+    ],
+    "applies_to_us": "Hard SEO red line, freshly updated this month: never use AI headshots for authors, managers or bylines. That matches our taboo, and Google now names it explicitly. Real first-hand artifacts are what Google cites as trust evidence: the actual manager's workspace, anonymized real screenshots of the real process, real event or office photos. The visible illustration disclosure on covers is in line with the 'How' guidance."
+   },
+   {
+    "url": "https://developers.google.com/search/docs/appearance/google-images",
+    "title": "Google image SEO best practices",
+    "publisher": "Google Search Central",
+    "date": "current (accessed 2026-10-23)",
+    "evidence_type": "google-documentation",
+    "key_facts": [
+     "'High-quality photos appeal to users more than blurry, unclear images. Also, sharp images are more appealing to users in the result thumbnail and can increase the likelihood of getting traffic from users.'",
+     "'Wherever possible, make sure images are placed near relevant text and on pages that are relevant to the image subject matter.'",
+     "For the preferred image (primaryImageOfPage / BlogPosting image / og:image): 'Choose an image that's relevant and representative of the page', and 'Avoid using a generic image (for example, your site logo) or an image with text'. Avoid extreme aspect ratios and use high resolution.",
+     "Google doesn't index CSS images, so use <img> with src (and srcset/picture with an img fallback). Supported formats include WebP and AVIF.",
+     "Use short descriptive filenames and translate them when localizing. Alt text is 'the most important attribute' for image metadata; no keyword stuffing. Reference reused images with the same URL."
+    ],
+    "applies_to_us": "Only 2 of our 32 articles have inline images, so most of the site gives up Google Images, Discover and image-thumbnail surface. Inline explanatory images should sit next to the paragraph they illustrate. og:image and covers should not have baked-in text. For uk/en/es overlays, translate image filenames and alt text."
+   },
+   {
+    "url": "https://static.googleusercontent.com/media/guidelines.raterhub.com/en/en/searchqualityevaluatorguidelines.pdf",
+    "title": "Search Quality Rater Guidelines (Sept 11, 2025 version; GenAI sections added Jan 23, 2025)",
+    "publisher": "Google (summarized by Search Engine Land / SERoundtable)",
+    "date": "2025-09-11",
+    "evidence_type": "google-documentation",
+    "key_facts": [
+     "Generative AI is defined as creating 'new content, such as text, images, music, and code'. It 'can be a helpful tool for content creation, but like any tool, it can also be misused.'",
+     "Section 4.6.6: 'The Lowest rating applies if all or almost all of the MC on the page (including text, images, audio, videos, etc) is copied, paraphrased, embedded, auto or AI generated, or reposted from other sources with little to no effort, little to no originality, and little to no added value'.",
+     "'The use of Generative AI tools alone does not determine the level of effort or Page Quality rating... a high level of effort may be involved in creating high quality original artwork using Generative AI tools.'",
+     "Section 3.2: main-content quality is judged by effort, originality, talent/skill and accuracy. Raters are told to 'examine the pictures' before rating.",
+     "Scaled content abuse example: 'Using automated tools (generative AI or otherwise) as a low-effort way to produce many pages that add little-to-no value'."
+    ],
+    "applies_to_us": "Art-directed, original 3D/AI illustration is acceptable to Google. Templated, look-alike AI images repeated across all 32 articles would read as low effort. Each article's visuals should be specific to that article (unique diagrams, real artifacts), which also fixes the 'paper-like' problem."
+   },
+   {
+    "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+    "title": "Transparency obligations under Article 50 of the AI Act (official EU FAQ; Commission news 2026-08-02 'Safer and more transparent AI') - REGULATION, not a study",
+    "publisher": "European Commission",
+    "date": "2026-08-02",
+    "evidence_type": "expert-opinion",
+    "key_facts": [
+     "Article 50 has applied since 2 August 2026. Deployers (professional, revenue-generating use) must 'clearly label deepfakes'. Disclosure must happen 'upon first exposure at the latest' with visible or perceivable labels, and relying only on the provider's machine-readable watermark is not enough.",
+     "A deepfake is AI-generated or manipulated image, audio or video that resembles existing persons, objects, places, entities or events and would falsely appear authentic. Three cumulative criteria apply: resemblance; something that exists or 'can plausibly exist'; and a false appearance of authenticity, judged by context and audience expectations.",
+     "For 'evidently artistic, creative, satirical, fictional' works, disclosure only has to be made 'in an appropriate manner that does not hamper the display or enjoyment of the work'.",
+     "Fines go up to €15M or 3% of global annual turnover, with proportionality for SMEs. The EU published 3 optional labeling icons. Content generated before 2 Aug 2026 doesn't need retroactive labels, though labeling is encouraged. Providers' marking grace period runs to 2 Dec 2026.",
+     "Interactive AI (chatbots, avatars) must tell users they are not talking to a person."
+    ],
+    "applies_to_us": "A large share of our audience lives in the EU (Germany, Poland, Czechia, Spain, Italy, the Baltics). A photoreal AI woman who 'could plausibly exist', shown to EU visitors as if real, falls into deepfake-label territory. Stylized, faceless 3D renders with a visible 'illustration' note are low-risk and fit the artistic exception. Keep visible disclosure on any photoreal AI 'atmosphere' image. Not legal advice; Ukraine itself is outside the EU."
+   },
+   {
+    "url": "https://doi.org/10.1080/23736992.2023.2295942",
+    "title": "True or False? Viewer Perceptions of Emotional Staff and Stock Photos in the News",
+    "publisher": "Journal of Media Ethics (Mortensen, Piacentine, Wen, Bost, McDermott)",
+    "date": "2024-01-01",
+    "evidence_type": "controlled-study",
+    "key_facts": [
+     "2×2 quasi-experiment (stock vs staff/genuine photo × positive vs negative valence) measuring credibility, arousal, perceived valence and eye-tracking fixation duration and count.",
+     "'Participants viewed staff photos as more credible in both positive and negative valences.'",
+     "Stock and staff photos were 'similarly arousing, received similar valence perceptions, and had similar gaze fixations and durations.'",
+     "Participants read genuine emotion as truthful, as opposed to 'the faux emotion acted out in stock photos.' (Sample size not stated in the abstract.)"
+    ],
+    "applies_to_us": "Eye-tracking shows stock gets the same attention but less credibility. The gap is believability, not visibility. Real images from the agency's actual world beat posed stock or AI on trust even when they don't draw more gaze. Supports the stock taboo."
+   },
+   {
+    "url": "https://www.nngroup.com/articles/7-tips-memorable-imagery/",
+    "title": "7 Tips for Memorable and Easy-to-Understand Imagery",
+    "publisher": "Nielsen Norman Group (Sara Paul)",
+    "date": "2024-05-03",
+    "evidence_type": "expert-opinion",
+    "key_facts": [
+     "'Our eyetracking research shows that users focus more on images that strengthen text content.'",
+     "'Irrelevant visuals are a missed opportunity and they may decrease the memorability of your message.'",
+     "Tip #2 'Avoid Stock Photos': stock is generic and may be used by competitors. Users are 'likely to overlook photos they have seen previously' and are 'less likely to remember them'.",
+     "A few relevant, high-quality visuals placed next to the text they belong to boost comprehension and memorability. Software businesses should show real screenshots of the product, as Notion does, instead of stock."
+    ],
+    "applies_to_us": "Prescription for the 'paper-like' articles: add a few explanatory visuals per article (step schemes, real anonymized interface screenshots, comparison cards) next to the matching paragraph, not decorative filler. Real screenshots only, in line with the fake-dashboard taboo."
+   },
+   {
+    "url": "https://www.nngroup.com/articles/photos-as-web-content/",
+    "title": "Photos as Web Content (eyetracking) - classic baseline, 2010",
+    "publisher": "Nielsen Norman Group (Jakob Nielsen)",
+    "date": "2010-11-01",
+    "evidence_type": "case-study",
+    "key_facts": [
+     "Eye-tracking: 'big feel-good images that are purely decorative' are completely ignored. 'Photos of products and real people (as opposed to stock photos of models)' are scrutinized as content.",
+     "FreshBooks team page: the user spent 10% more time on the real team portraits than on the bios, even though the bios took 316% more space.",
+     "Author photos are 'a key usability guideline for blogs'. 'On the web, jazzed-up = ignored.'"
+    ],
+    "applies_to_us": "An old but still-cited baseline (pre-AI). A real, named human face (e.g. the manager, if the owner agrees) is scrutinized and trusted, while decorative imagery is skipped. Outside the 2024-2026 window; use it as context, not new evidence."
+   },
+   {
+    "url": "https://www.searchenginejournal.com/beyond-seo-john-mueller-on-ai-generated-images-stock-photography/504793/",
+    "title": "Beyond SEO: John Mueller On AI-Generated Images, Stock Photos",
+    "publisher": "Search Engine Journal (quoting Google's John Mueller)",
+    "date": "2023-12-31",
+    "evidence_type": "expert-opinion",
+    "key_facts": [
+     "For purely decorative imagery, Mueller sees no significant difference between stock photography and AI images. Where users expect the real thing (e.g. a product), use a real photo.",
+     "'If I noticed a recipe site were using AI-generated images, I'd assume all of the content is scraped spam and just go somewhere else.'",
+     "An obvious 'team' stock photo is less deceptive than an AI-made one. Decorative or conceptual illustrations signal the level of effort put into content.",
+     "Explicitly 'not an SEO tip' or a ranking-update reference."
+    ],
+    "applies_to_us": "A Google voice backing the split rule. Where readers expect reality (team, managers, office, results, the process), AI kills trust site-wide. For conceptual article decoration, AI or 3D is roughly equal to stock. A borderline date (end of 2023), but still the main Google statement on this."
+   },
+   {
+    "url": "https://www.dove.com/us/en/stories/campaigns/keep-beauty-real.html",
+    "title": "Keep Beauty Real / The Real State of Beauty 2024 (20th-anniversary global study)",
+    "publisher": "Dove (Unilever)",
+    "date": "2024-04",
+    "evidence_type": "large-survey",
+    "key_facts": [
+     "Study of 33,000 people across 20 countries (2024).",
+     "'1 in 3 women feel pressure to alter their appearance because of what they see online, even when they know the images are fake or AI-generated.'",
+     "Dove commits 'to never using AI to create or distort women's images' and published a 'Real Beauty Prompt Playbook'.",
+     "Per CX Network/Getty (2026), brands with 'untouched' imagery positioning include Dove, Aerie, Target and CVS. Aerie saw a 9% quarter-on-quarter sales increase after adopting it in 2014."
+    ],
+    "applies_to_us": "Our audience is women 18-35. The largest beauty brand built its trust positioning on refusing AI-made women. Idealized AI female faces or bodies risk reading as manipulative to this exact audience. Candid, real, lightly retouched imagery fits the female trust signal (and our 'no child-like attributes' and anti-fake taboos)."
+   },
+   {
+    "url": "https://www.pnas.org/doi/10.1073/pnas.2120481119",
+    "title": "AI-synthesized faces are indistinguishable from real faces and more trustworthy",
+    "publisher": "PNAS (Nightingale & Farid)",
+    "date": "2022-02-14",
+    "evidence_type": "controlled-study",
+    "key_facts": [
+     "315 participants classifying real vs StyleGAN2 faces: 48.2% accuracy (chance is 50%). 219 new participants with training and trial-by-trial feedback: 59.0%.",
+     "223 participants rated trustworthiness on a 1-7 scale: real faces 4.48 vs synthetic faces 4.82, so synthetic were '7.7% more trustworthy' (significant). The top 3 most trustworthy faces were synthetic and the bottom 4 were real.",
+     "Female faces were rated more trustworthy than male faces (4.94 vs 4.36). The authors warn this enables 'more convincing online fake profiles'."
+    ],
+    "applies_to_us": "This is why AI faces must never stand in for identity (managers, models, reviews, cases): viewers can't detect them and rate them as trustworthy, which is the definition of deception, now covered by the EU deepfake label and Google's 'AI-generated headshots' rule. 2022, outside the window, included as mechanism background. COVERAGE GAP: no 2024-2026 recruitment or career-page image studies and no fresh real-vs-stock A/B tests were found. The session's WebSearch budget ran out, Exa search hit its rate limit, and Serper returned 403. Those topics need a follow-up search run."
+   }
+  ]
+ }
+]

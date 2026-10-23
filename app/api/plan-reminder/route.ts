@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { sendTelegramMessage } from '@/lib/telegram';
-import { buildReminder, kyivDateKey } from '@/lib/plan-reminder';
+import { buildReminder, kyivDateKey, splitForTelegram } from '@/lib/plan-reminder';
 
 /**
  * Ежедневное напоминание по плану месяца в Telegram-группу.
@@ -28,12 +28,14 @@ export async function GET(request: Request) {
   const text = buildReminder(dateKey);
 
   if (url.searchParams.get('dry') === '1') {
-    return NextResponse.json({ ok: true, date: dateKey, text });
+    return NextResponse.json({ ok: true, date: dateKey, text, parts: splitForTelegram(text).length });
   }
 
   try {
-    await sendTelegramMessage(text, process.env.TELEGRAM_PLAN_CHAT_ID);
-    return NextResponse.json({ ok: true, date: dateKey, sent: true });
+    // Telegram режет сообщения длиннее 4096 символов: длинный план уходит частями.
+    const parts = splitForTelegram(text);
+    for (const part of parts) await sendTelegramMessage(part, process.env.TELEGRAM_PLAN_CHAT_ID);
+    return NextResponse.json({ ok: true, date: dateKey, sent: true, parts: parts.length });
   } catch (error) {
     console.error('plan-reminder send failed:', error);
     return NextResponse.json({ ok: false, date: dateKey, error: 'send_failed' }, { status: 500 });

@@ -42,6 +42,29 @@ function renderGroup(title: string, items: PlanItem[]): string {
   return `\n${title}\n${items.map((i) => `• ${escapeTelegramHtml(i.text)}`).join('\n')}\n`;
 }
 
+const TELEGRAM_SAFE = 3800;
+
+/**
+ * Делит текст на части по границам строк, каждая короче лимита Telegram.
+ * Теги в напоминании открываются и закрываются в пределах одной строки,
+ * поэтому разрез по строкам не ломает HTML.
+ */
+export function splitForTelegram(text: string, limit = TELEGRAM_SAFE): string[] {
+  const parts: string[] = [];
+  let current = '';
+  for (const line of text.split('\n')) {
+    const chunk = line.length > limit ? line.slice(0, limit) : line;
+    if (current && current.length + 1 + chunk.length > limit) {
+      parts.push(current);
+      current = chunk;
+    } else {
+      current = current ? `${current}\n${chunk}` : chunk;
+    }
+  }
+  if (current.trim()) parts.push(current);
+  return parts;
+}
+
 export function buildReminder(dateKey: string): string {
   const today = PLAN_CALENDAR[dateKey] ?? [];
   const tomorrow = PLAN_CALENDAR[addDays(dateKey, 1)] ?? [];

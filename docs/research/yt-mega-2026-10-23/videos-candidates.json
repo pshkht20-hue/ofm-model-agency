@@ -1,0 +1,4162 @@
+[
+ {
+  "id": "Bm1TJ-euaRY",
+  "lang": "en",
+  "title": "Google's August 2026 Spam Update - Case Studies and Analysis From Glenn Gabe of GSQi",
+  "channel": "Glenn Gabe",
+  "published": "2026-09",
+  "duration_min": 16,
+  "why": "Four real site-level case studies (GSC/visibility drops) from the August 2026 spam update by the top update analyst: what patterns actually got hit, beyond our Sep-update date notes (N41).",
+  "score": 20.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Xnxo1P-b_oA",
+  "lang": "en",
+  "title": "Winning AI Citations Isn't the Same as Winning in Search | With Cyrus Shepard",
+  "channel": "SearchPilot",
+  "published": "2026-10",
+  "duration_min": 44,
+  "why": "Cyrus Shepard went through every published AI-citation experiment, study and patent he could find and boils down which citation factors actually hold up and where they part ways from ranking factors. That is a meta-check on our AIO/LLM rules П.7.x and П.3.13.",
+  "score": 20.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "hDva5VoZJsE",
+  "lang": "en",
+  "title": "Do sitemaps still matter?",
+  "channel": "Google Search Central",
+  "published": "2026-10",
+  "duration_min": 26,
+  "why": "Fresh Search Off the Record episode giving Google's current view on how sitemaps are used for discovery, recrawl and lastmod compared with internal links. This bears directly on our multi-locale sitemap logic and extends rule Н27.",
+  "score": 20.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "hJoe4x97NXI",
+  "lang": "en",
+  "title": "It's New 8/31: Google Search spam quality, AI Overviews morphing into AI Mode, site reputation abuse...",
+  "channel": "RustyBrick Barry Schwartz Search Engine Roundtable",
+  "published": "2026-09",
+  "duration_min": 12,
+  "why": "Authoritative news that Google's site reputation abuse policy will not be enforced in several European countries. This directly changes our donor stop-factor rule П.5.10 for EU and UA-diaspora donors, and it is not in the codex.",
+  "score": 20.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "EG5QcTirpNs",
+  "lang": "en",
+  "title": "The Winners and Losers of AI Search and AEO 2026 with Kevin Indig | AirOps Webinar",
+  "channel": "AirOps",
+  "published": "2026-09",
+  "duration_min": 51,
+  "why": "Kevin Indig covers 20+ months of data, 1M+ analysed AI answers and 100K+ citations: which site types and formats win or lose citations. It is a large dataset beyond the Ahrefs and Semrush studies we already have.",
+  "score": 20.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "yxWYGqvw6cc",
+  "lang": "en",
+  "title": "AI Overviews Are Eating 58% of Clicks | Louise Linehan (Ahrefs)",
+  "channel": "Ahrefs Podcast",
+  "published": "2026-10",
+  "duration_min": 42,
+  "why": "Ahrefs' newest AIO click-loss data (58%) and the shift in AI-search demand, with methodology. It updates our zero-click economics (П.7.1, Н35) with Oct-2026 numbers.",
+  "score": 20.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "OvCdu0Uiil8",
+  "lang": "en",
+  "title": "Google Poisoning Tracking Tools, Google AI Results Updates, Discover To Change, Ads, ChatGPT & SEO",
+  "channel": "RustyBrick Barry Schwartz Search Engine Roundtable",
+  "published": "2026-10-17",
+  "duration_min": 14,
+  "why": "Weekly recap with Barry Schwartz's sources on the 15 Oct 2026 change to AI Overviews and AI Mode (more links, official-link boxes, carousels) and on Google feeding fake data and paywalls to rank trackers. That hits how we measure AIO visibility.",
+  "score": 20.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "R1Wr2fpJKQ0",
+  "lang": "uk",
+  "title": "GuruConf 2026. Online Edition. Conference N1 in Ukraine about SEO, PPC, CPA and SMM.",
+  "channel": "Gutako",
+  "published": "2026-10-22",
+  "duration_min": 507.7,
+  "why": "Freshest Ukrainian conference stream (yesterday): multiple Ukrainian practitioners on Google SEO after the Sep-Oct 2026 spam update and AIO in UA SERPs, the most current local-market data available.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "FIHOUQ_3svM",
+  "lang": "uk",
+  "title": "Апдейт Google 2026 feat. Анастасія Казакова",
+  "channel": "SEO BAZA",
+  "published": "2026-10-14",
+  "duration_min": 41.4,
+  "why": "Ukrainian practitioners' read of four spam updates in 2026 and what to expect from the next core update, as seen on Ukrainian SERPs; complements our Sep 24 - Oct 8 spam-update notes (Н41) with a local view.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "h_wXgmvR_C0",
+  "lang": "ru",
+  "title": "«Рабочие методы линкбилдинга в 2027» - SEO-конференция «Высоко в ТОП!» в Волгограде 26.09.2026",
+  "channel": "Vysokoff SEO (Михаил Шакин)",
+  "published": "2026-10-20",
+  "duration_min": 45.7,
+  "why": "A conference talk (recorded 26.09.2026) on link-building methods that work for Google now and into 2027. It can be applied directly to purchase tranche 2 and the donor-check rules, and goes past the earlier Shakin RD-pacing rule (Н14).",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Af9rvlVPQCQ",
+  "lang": "en",
+  "title": "Google's Ranking Secret? Julian Goldie Interviews Koray Tugberk Gubur on Visual Semantics",
+  "channel": "Koray Tuğberk GÜBÜR",
+  "published": "2026-10-10",
+  "duration_min": 32,
+  "why": "Requeue ID. Per the chapters: a click-test case going from 50 to 8,000 daily clicks with zero content change, above-the-fold evaluation and centerpiece annotation from the leak, about 22 semantic labels in the Content Warehouse API, and GSC AI Overview impressions. A concrete CTR and first-screen experiment we can copy on vacancy and landing pages.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "cfIQ_ksB61U",
+  "lang": "en",
+  "title": "Should you block your Search result pages? (Search Off the Record)",
+  "channel": "Google Search Central",
+  "published": "2026-07-30",
+  "duration_min": 29,
+  "why": "Splitt and Mueller on internal search vs real category/listing pages: robots.txt vs noindex trade-offs, infinite crawl spaces, why 500s to bots cut crawl rate site-wide, and when an indexable listing page is legitimate. This is the official line for our /vacancies filter and category design. The spam-vector part overlaps N30, the rest is new.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "NztIlVnndy0",
+  "lang": "en",
+  "title": "Google's AI Content-Killing Algorithm Is Coming (15-Year Recovery Expert Explains)",
+  "channel": "Edward Sturm (guest Kristine Schachinger)",
+  "published": "2026-10-22",
+  "duration_min": 122,
+  "why": "Recovery specialist's newest view on how Google will classify and demote AI-assisted/scaled content and what recovered sites changed; directly tests our hybrid AI-draft pipeline (P.3.18) beyond the Oct-1 AI-content guide already logged.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "VxVv8zwvbDE",
+  "lang": "ru",
+  "title": "Семантический кокон v.4.0: от силоса до графа сущностей - DrMax",
+  "channel": "Михаил Шакин SEO",
+  "published": "2026-09",
+  "duration_min": 82,
+  "why": "DrMax's 2026 rebuild of the semantic cocoon around an entity graph instead of keyword silos; Google-focused RU method for hub/spoke and internal-link structure we can map onto the blog + vacancies cluster.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "j7LpacUouTI",
+  "lang": "en",
+  "title": "Webinar Recap: 5 Data-Backed Traits for Google & AEO with Cyrus Shepard",
+  "channel": "AirOps",
+  "published": "2026-08",
+  "duration_min": 54,
+  "why": "Zyppy's winners-vs-losers dataset turned into 5 measurable page/site traits after the 2025-26 updates; gives a concrete checklist to audit our articles and landing pages against.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "yjyOm77nOHw",
+  "lang": "en",
+  "title": "SEO Split Testing Examples: What Works & What Doesn't",
+  "channel": "seoClarity",
+  "published": "2026-10-13",
+  "duration_min": 46.4,
+  "why": "Fresh webinar with SEOTesting.com: real split-test results (clear wins, losses and inconclusive results) for title, meta and on-page changes. Helps us decide which changes to test first on our vacancy and blog pages.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "1-PcVLHplwc",
+  "lang": "en",
+  "title": "How to read the Indexing Report",
+  "channel": "Google Search Central",
+  "published": "2026-07",
+  "duration_min": 32,
+  "why": "A Googler walks through each Page Indexing status and what to act on, which helps diagnose /uk pages that are invisible and BOFU pages that are crawled but not indexed. It may partly overlap finding Н29, so check whether that finding was sourced from this video.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "XPAgD0DoeSY",
+  "lang": "en",
+  "title": "The Link Building Graveyard: What to Bury & What Still Wins in 2027 | SEJ Webinar",
+  "channel": "Resolve Marketing (SEJ webinar)",
+  "published": "2026-10-22",
+  "duration_min": 64,
+  "why": "Freshest full audit of link tactics (Oct 2026): which paid/outreach tactics to drop vs. keep, likely set against the Aug and Sep 2026 spam updates. Useful for re-ranking the tranche-2 tactic mix.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "NsptdY_L85A",
+  "lang": "en",
+  "title": "Google Just Dropped the Parasite SEO Penalty in Europe. Here's the Catch",
+  "channel": "Edward Sturm",
+  "published": "2026-09",
+  "duration_min": 10,
+  "why": "EU-specific outcome of the site reputation abuse policy (EU challenge, what changed for parasite pages in Europe): directly affects our EU ranking landscape and donor vetting rule P.5.10.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "uzi2JAlYZVk",
+  "lang": "en",
+  "title": "Link Building vs Buying Mentions in AI Search | Vince Nero (BuzzStream)",
+  "channel": "SE Ranking",
+  "published": "2026-10-13",
+  "duration_min": 12,
+  "why": "Direct debate on whether buying brand mentions is replacing link building. Adds the practitioner side to our Н12 rule (Google treats bought AI mentions like paid links).",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "26JS6SyJUmA",
+  "lang": "en",
+  "title": "Google's September 2026 Spam Update Phase 2 Hits (And Reddit's AI Translations Are Winning Again)",
+  "channel": "Edward Sturm",
+  "published": "2026-10",
+  "duration_min": 16.6,
+  "why": "Вторая фаза спам-апдейта и возврат AI-переводных страниц Reddit после падения в мае-июне: свежая эмпирика о том, как Google сейчас оценивает машинный перевод. Это прямо касается наших оверлеев uk/en/es.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "roTPZBj4JSc",
+  "lang": "en",
+  "title": "I Asked a 15-Year SEO Veteran How to Rank in ChatGPT | Dan Petrovic (DEJAN AI)",
+  "channel": "Ahrefs Podcast",
+  "published": "2026-08",
+  "duration_min": 60,
+  "why": "Dan Petrovic's technical model of how LLMs ground answers and pick sources (training data vs live retrieval, selection-rate mechanics). It gives a mechanism-level basis for writing pages that get cited.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "zUfwkh3eybM",
+  "lang": "en",
+  "title": "How to Improve LLM SEO: What Makes ChatGPT Recommend Your Brand (DMEXCO 2026)",
+  "channel": "Peec AI",
+  "published": "2026-10",
+  "duration_min": 30,
+  "why": "Malte Landwehr (Peec AI, Berlin) at a European conference: reading ChatGPT's actual fan-out queries and writing self-contained, fact-dense chunks, using EU tracking data. These are concrete steps for our answer blocks.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "FZ7YMxd92PA",
+  "lang": "en",
+  "title": "It's New 10/6: Google spam update, fake authors, Search Console, Google Demand Gen & ChatGPT labels",
+  "channel": "RustyBrick Barry Schwartz Search Engine Roundtable",
+  "published": "2026-10",
+  "duration_min": 11,
+  "why": "Google's early-October warning about deceptive or fabricated authors, plus the last phase of the spam update. Primary context for author-entity and byline rules beyond Н18.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "YvXJdMZNCiE",
+  "lang": "en",
+  "title": "International SEO Expert Aleyda Solis: Myths, Failures, and Future Predictions",
+  "channel": "Search Engine Land",
+  "published": "2026-08",
+  "duration_min": 68,
+  "why": "Алейда Солис о мифах и провалах международного SEO в 2026: ошибки hreflang, перевод против локализации, как выбирать рынки. Это дополнение к нашим правилам по ru/uk/en/es и по гео-страницам ЕС.",
+  "score": 19.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "QtUWzqq_PM0",
+  "lang": "ru",
+  "title": "Как обновлять статьи для поиска и ИИ ответов: SEO конференция BDD 2026",
+  "channel": "Илья Карбышев: SEO для бренд-медиа",
+  "published": "2026-09",
+  "duration_min": 26,
+  "why": "Conference talk from a brand-media SEO on a refresh protocol for both Google and AI answers; can sharpen our refresh pipeline (P.3.14-3.16) with RU-market practice.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "AlHiLfYah74",
+  "lang": "en",
+  "title": "How to Rank in AI Search with Semantic SEO and Topical Authority: Navneet Interviews Koray GUBUR",
+  "channel": "Koray Tuğberk GÜBÜR",
+  "published": "2026-07",
+  "duration_min": 88,
+  "why": "Koray's reading of the API-leak attributes for topical authority, content effort and cannibalization; maps to our cannibalization ladder (P.4.8) and the one-intent-one-URL rule. Re-upload of the Feb 2026 Navneet Kaushal interview mSHq_HxOyTA, so take only one.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "uz6D4do_r-c",
+  "lang": "en",
+  "title": "Google Doesn't Need Your Content Anymore. 400-Site Study Shows What It Wants Instead | Cyrus Shepard",
+  "channel": "Odys Podcast: The High Stakes Growth Show",
+  "published": "2026-06",
+  "duration_min": 23,
+  "why": "A 400-site study of what separated the sites that gained 300-500% from those that were decimated; quantified site-level signals beyond the content itself. Partly overlaps j7LpacUouTI.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "aHd4Sdll-xM",
+  "lang": "en",
+  "title": "Core Roars Back - Google's May 2026 Broad Core Update - Interesting Cases and Findings",
+  "channel": "Glenn Gabe",
+  "published": "2026-06",
+  "duration_min": 18.3,
+  "why": "Data-backed winner/loser cases from the latest broad core update (May 21-Jun 2, 2026). It is the last core update before the next one expected soon, so its quality signals are what the next update will build on.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "iBlzrrBQaqQ",
+  "lang": "en",
+  "title": "Is SEO Dead in 2026? Will Critchlow Has 3 Years of Split Test Data That Says No",
+  "channel": "MeasureU - The CLEAN Data Company",
+  "published": "2026-05",
+  "duration_min": 27.4,
+  "why": "SearchPilot CEO summarises three years of controlled split tests: which classic on-page changes still give statistically measurable lifts in the AI-Overview era, and which are noise.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "swpwBTBzZCw",
+  "lang": "en",
+  "title": "I Revisited 200 Sites Google Penalised",
+  "channel": "Kasra Dash",
+  "published": "2026-10",
+  "duration_min": 13,
+  "why": "Longitudinal follow-up of ~200 penalised sites: which recovered, which stayed dead and why. Real recovery data we lack.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "syE6fe4lIr4",
+  "lang": "en",
+  "title": "SEO Testing Secrets from SearchPilot's Will Critchlow | Enterprise A/B Testing That Actually Works",
+  "channel": "The Page 2 Podcast / SearchPilot",
+  "published": "2026-03",
+  "duration_min": 63,
+  "why": "Will Critchlow (SearchPilot) shares real controlled SEO A/B results, including title-tag tests and a breadcrumb-schema test that reduced traffic. Measured evidence for which title and snippet changes win, so we don't rely on rules of thumb.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "W8Hb1GuAfdI",
+  "lang": "en",
+  "title": "International SEO insight with Alizée Baudez at Google Search Central Live - Europe 2026",
+  "channel": "thelostagency",
+  "published": "2026-10-20",
+  "duration_min": 10.4,
+  "why": "Международное SEO и GEO в Европе, озвученное на Search Central Live Europe 2026: мульти-локали, разные рынки и как Google выбирает версию. Это наш сценарий «Украина плюс диаспора в ЕС».",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "yTI1BbWlMQE",
+  "lang": "en",
+  "title": "Google Just Wiped Out Local Microsites",
+  "channel": "Kasra Dash",
+  "published": "2026-10",
+  "duration_min": 9,
+  "why": "Three sites hit in the September 2026 spam update for local/geo microsite patterns. A direct risk check for our geo vacancy pages and programmatic rule P.4.11.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "bfec9cV8XCc",
+  "lang": "en",
+  "title": "Attribution Is Dead. Now What? w/ Rand Fishkin, CEO & Co-Founder of SparkToro",
+  "channel": "97th Floor",
+  "published": "2026-10-16",
+  "duration_min": 39,
+  "why": "New SparkToro/Similarweb-style data on how much search and AI activity never produces a click, and how to measure influence without attribution. This bears directly on our Telegram-conversion setup, where AI influence is invisible.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "7mBJmFQ84aU",
+  "lang": "en",
+  "title": "7 AI search beliefs, tested against a control group | VizzEx AI Citation Study, Mid-Study Findings",
+  "channel": "VizzEx AI - The Architecture of AI Authority",
+  "published": "2026-09",
+  "duration_min": 75,
+  "why": "A rare controlled experiment (test vs control sites, 8 checkpoints) testing popular GEO beliefs. One example: a site with 96K linking domains was never cited by ChatGPT. It gives causal evidence on what does and does not move citations.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "cLvz05s4vSc",
+  "lang": "en",
+  "title": "How to Grow Your Brand Authority for AI Search (GEO, AEO)",
+  "channel": "Crawling Mondays by Aleyda",
+  "published": "2026-09",
+  "duration_min": 39,
+  "why": "Aleyda Solis's AI Search Roadmap episode 7, a step-by-step plan for building the brand-entity authority LLMs pick up (mentions, co-occurrence, third-party presence). We have not processed it yet, and it extends П.6.1 for a small brand like OFM.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Mfvw43BbHy0",
+  "lang": "en",
+  "title": "What can you actually put in a URL 🐔?",
+  "channel": "Google Search Central",
+  "published": "2026-10",
+  "duration_min": 13,
+  "why": "Official October 2026 guidance on what URLs may contain (non-ASCII and Cyrillic characters, parameters, fragments, length). This matters for our ru/uk/en/es URL patterns and for new geo or vacancy slugs.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "-jHONLQgE-s",
+  "lang": "en",
+  "title": "What can you actually put in a robots.txt?",
+  "channel": "Google Search Central",
+  "published": "2026-10",
+  "duration_min": 10,
+  "why": "Brand-new (around Oct 22) official explainer on robots.txt directive limits and edge cases, as distinct from the robots-at-scale BigQuery episode we already processed. Useful for checking our robots rules for AI bots and Googlebot.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "QeFVf1IG2eQ",
+  "lang": "en",
+  "title": "Why JavaScript Is Costing You Visibility And What To Use Instead - with Jono Alderson",
+  "channel": "Sitebulb",
+  "published": "2026-08",
+  "duration_min": 60,
+  "why": "Hour-long technical webinar on the real visibility cost of JS-heavy pages and alternatives. It applies to our GSAP, Framer and three.js pages, and covers what to server-render or keep static for Googlebot and for AI crawlers that don't render.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "biy8lLxTzqc",
+  "lang": "en",
+  "title": "The $50,000 Internal Linking Experiment: Links That Get Clicked Carry More Weight",
+  "channel": "Edward Sturm",
+  "published": "2026-09",
+  "duration_min": 11.5,
+  "why": "Paid experiment suggesting that internal links users actually click pass more ranking weight (Navboost-style). Our codex lacks this rule: put hub and vacancy links where people click, not in footer link lists.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "xRwXzOPkvxk",
+  "lang": "en",
+  "title": "SearchNorwich talks - Automating SEO (Seb Atkinson) & Google Exploit Insights (Mark Williams-Cook)",
+  "channel": "Candour Agency",
+  "published": "2026-09",
+  "duration_min": 49.6,
+  "why": "Mark Williams-Cook's SearchNorwichXL talk (24.09.2026) on what Google's exposed internal data shows about page and site classification and quality scoring. These are directly observed signals, not opinion.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "RppASMjdwr0",
+  "lang": "en",
+  "title": "It's New 3/3: Image selection for Google Search & Discover, Google Ads UCP help & AI Mode referrers",
+  "channel": "RustyBrick Barry Schwartz Search Engine Roundtable",
+  "published": "2026-03-03",
+  "duration_min": null,
+  "why": "Covers Google's 02.03.2026 docs change, 'Specify a preferred image with metadata'. Google picks the preview image for Search and Discover using schema primaryImageOfPage, mainEntity.image and og:image. This applies directly to our article covers (one deliberate hero per article, plus matching og:image and schema) and also to the new AI Mode link thumbnails.",
+  "score": 18.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "A1KLWy6csuA",
+  "lang": "ru",
+  "title": "SEO и GEO: ответы на вопросы - часть 4",
+  "channel": "Михаил Шакин SEO",
+  "published": "2026-10-15",
+  "duration_min": 136.7,
+  "why": "Recent Q&A by a top Russian-language Google practitioner: what works in Google and GEO right now, plus a digest of fall-2026 conference takeaways.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "YqjVIIOwlt8",
+  "lang": "ru",
+  "title": "SEO в эпоху AI: Google, нейросети и новые уязвимости | Олег Шестаков | G GATE CONF 2026",
+  "channel": "G GATE | AFFILIATE COMMUNITY",
+  "published": "2026-10",
+  "duration_min": 23.5,
+  "why": "Rush Agency founder on how AI search trusts manipulated sources; covers threats to brand facts in AIO/LLMs and black-hat vectors competitors may use against us. Newest of his 2026 talk series (also yNKMvxycaxM SIC, aZT5Iv2EgrI MAC'26).",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "3I_OXyb7oak",
+  "lang": "en",
+  "title": "AI development hits the brakes? Anthropic, Google & AI Search | September 2026 SEO Update",
+  "channel": "Yoast",
+  "published": "2026-10",
+  "duration_min": 63,
+  "why": "REQUEUE: Yoast monthly briefing (Alex Moss, Carolyn Shelby) covering the September 2026 spam update and AI Mode traffic effects, a structured recap of the latest update cycle.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "wsoC8MBcN2g",
+  "lang": "en",
+  "title": "About that Google for Jobs Indexing API | Nick Leroy, SEOjobs.com",
+  "channel": "JobBoardSecrets",
+  "published": "2026-08",
+  "duration_min": 31,
+  "why": "A job-board operator who spent hours on the Indexing API code and server responses, plus a free checker tool. This is practical 2026 detail on how JobPosting URL submissions actually behave, building past rule N21 for our seo-request-indexing flow.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "wNtiygMsRfg",
+  "lang": "en",
+  "title": "Can You Launch 100,000 Pages and Survive Google?",
+  "channel": "Edward Sturm",
+  "published": "2026-08",
+  "duration_min": 65,
+  "why": "A long 2026 case discussion of launching a new site with a huge templated page set and what Google tolerates. Directly tests our rule P.4.11 (programmatic only with value-changing data) against fresh evidence.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "x0D_JsZoBqM",
+  "lang": "en",
+  "title": "Product-Led SEO and What AI Search Changed: Eli Schwartz, Author of Product-Led SEO",
+  "channel": "Prerender.io",
+  "published": "2026-10",
+  "duration_min": 41,
+  "why": "The author of the product-led and programmatic page-set method, in Oct 2026, on what AI search changed for templated, data-driven pages. It gives a framework for building /vacancies as a product rather than as articles.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "AErClsYh79s",
+  "lang": "en",
+  "title": "Rethinking SEO Structure: Entities, Internal Links, and Topic Hubs | Dixon Jones",
+  "channel": "Advanced Web Ranking (The Search Session)",
+  "published": "2026-04",
+  "duration_min": 44,
+  "why": "InLinks founder on structuring entity-based topic hubs and internal links; gives a second, non-Koray model for site architecture to compare with our pyramid rule P.4.1-4.5.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "rnLbyvn3L2s",
+  "lang": "en",
+  "title": "Google Lied About Click Data — Here's What Actually Drives Rankings in 2026 with Cyrus Shepard",
+  "channel": "Near Media",
+  "published": "2026-04",
+  "duration_min": 28.5,
+  "why": "Cyrus Shepard (Zyppy, known for data studies) explains how Google really uses click data despite years of denial, and how that click layer interacts with AI search in 2026. Gives a practical model of Navboost-style signals for our titles and SERP presence.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "FA_B-xC0C_U",
+  "lang": "en",
+  "title": "SEO Experiments That Prove Everyone Wrong - Google Leaks, AI Myths & Ranking Signals",
+  "channel": "Edward Sturm",
+  "published": "2026-02",
+  "duration_min": 99.9,
+  "why": "Mark Williams-Cook's experiment-backed myth busting (leak claims, AI myths, specific ranking signals). Useful to drop rules that have no causal evidence.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "aiB8PzQ0tM8",
+  "lang": "en",
+  "title": "How Do You A/B Test SEO and AEO? Title Tags, Traffic, and the Truth | Outperform",
+  "channel": "Datadog Community",
+  "published": "2026-03",
+  "duration_min": 37.7,
+  "why": "Will Critchlow on which title-tag changes win or lose in controlled tests and how to test AEO/AI visibility. Directly informs our title formula and how we run title rewrites.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "wu6NNgiPnvQ",
+  "lang": "en",
+  "title": "64% of AI citations come from here (not your website), HARO CEO Brett Farmiloe",
+  "channel": "The Nick Standlea Show",
+  "published": "2026-10-14",
+  "duration_min": 59,
+  "why": "HARO CEO's data on where AI citations come from and how journalist-request PR earns editorial links and mentions in 2026. A route to editorial links that fits a niche with few willing donors.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "BvT0XexlHNY",
+  "lang": "uk",
+  "title": "SEO GUILD 02 | Яна Шульга про зміни в лінкбілдингу, видимість у LLM, управління та побудову команд",
+  "channel": "SEO Guild",
+  "published": "2026-09",
+  "duration_min": 88,
+  "why": "Long interview with a Ukrainian head of link building on what changed in UA link building in 2026 (donor quality, LLM visibility, pricing). Gives local-market evidence for our Ukrainian donor pipeline.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "WS-7NrmP19I",
+  "lang": "en",
+  "title": "How Digital PR Actually Gets You Into AI Answers with Ross Hudgens",
+  "channel": "BuzzStream",
+  "published": "2026-10",
+  "duration_min": 43,
+  "why": "Siege Media founder on which digital-PR link and mention types actually reach AI answers and which do not. Helps choose PR formats for the info core («онлифанс это»).",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "W4D8U4DLNOs",
+  "lang": "en",
+  "title": "Modern Link Building with Bibi Raven and Boban Ilik",
+  "channel": "Internet Marketing Gold | SEO Courses & more",
+  "published": "2026-10",
+  "duration_min": 53,
+  "why": "Respected outreach practitioners on 2026 editorial outreach, vetting and pricing. Likely gives concrete donor-quality and pitch tactics for our outreach letters.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "1GYdyxgTi8M",
+  "lang": "uk",
+  "title": "Як обирати сайти-донори, щоб не \"зливати\" бюджет: чекліст 2026 | Ігор Рудник",
+  "channel": "SEO-академія Collaborator",
+  "published": "2026-06",
+  "duration_min": 38,
+  "why": "Ukrainian 2026 donor-selection checklist from the Collaborator ecosystem (the main UA link marketplace). Can be compared item by item with our ofm-linkbuilding donor check (П.5.9–5.11, Н13).",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "dM81Irr1vmk",
+  "lang": "ru",
+  "title": "SpamBrain и многоуровневые ссылки: за что Google выпишет санкции",
+  "channel": "Михаил Шакин SEO",
+  "published": "2026-10",
+  "duration_min": 6,
+  "why": "Short, focused explanation of which tiered-link manipulations SpamBrain nullifies or demotes. This bears directly on the angle of how Google detects paid links.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "-70To9bGXVQ",
+  "lang": "en",
+  "title": "Google's August Spam Update Just Crushed Scaled Content - SaaS Is Winning",
+  "channel": "Edward Sturm",
+  "published": "2026-08",
+  "duration_min": 17.5,
+  "why": "Post-rollout patterns of who got hit (scaled content) and who won in the August 2026 spam update. Helps draw the line between legitimate templated pages and scaled-content abuse.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "CC0scmBSUtw",
+  "lang": "uk",
+  "title": "SEO в iGaming перетворилось на арбітраж. Євген Бондар, Kosmo (Boosta) | ПАЛИВО",
+  "channel": "Паливо | подкаст про трафік та онлайн-бізнес",
+  "published": "2026-10-16",
+  "duration_min": 80,
+  "why": "CEO of Boosta's Kosmo on how Ukrainian gray-niche (iGaming) SEO teams rank in 2026. Closest practitioner analog to adult-niche competition in UA/EU Google.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Fx-keWc36BA",
+  "lang": "en",
+  "title": "SEO Algorithm Updates Just Got Exposed by New Study",
+  "channel": "Sterling Sky Inc",
+  "published": "2026-10-22",
+  "duration_min": 9.2,
+  "why": "Brand-new study (Oct 22) on how 2026 algorithm updates actually moved results, from a data-driven agency. Likely adds measured effects beyond anecdotes.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "5mlSZCt9Xsk",
+  "lang": "en",
+  "title": "The Truth About AI Visibility Tracking | Greg Gifford (SearchLabs)",
+  "channel": "SE Ranking",
+  "published": "2026-10",
+  "duration_min": 14,
+  "why": "Greg Gifford and Mordy Oberstein argue that LLM prompt tracking works only as a directional signal and never as a KPI, and cover how to set up and read it. This calibrates the prompt-library approach in Н3 before we pay for a tracker.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Lnz7-eU5_ec",
+  "lang": "en",
+  "title": "Making Google's Gen AI Visibility Report Useful",
+  "channel": "Harry Clarkson-Bennett",
+  "published": "2026-09",
+  "duration_min": 6,
+  "why": "A respected analyst shows how to turn the new GSC Generative AI performance report (Н1) into usable analysis: segmentation and comparisons beyond raw AIO impressions. It applies directly to our GSC AI data.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "nv1wB4IJWS0",
+  "lang": "en",
+  "title": "How to rank in LLMS in 2026 & 2027 ft. Josh Blyskal (Profound)",
+  "channel": "LLM Mastery",
+  "published": "2026-10-13",
+  "duration_min": 23,
+  "why": "Profound's Josh Blyskal, who works from millions of tracked AI answers, on going past earning citations to shaping how LLMs describe and recommend a brand. It is the newest Profound data take, after the 10M-result audit era.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Ez1Tn36IaaQ",
+  "lang": "en",
+  "title": "How Enterprises Track AI Brand Visibility: What Actually Works (Expert Panel)",
+  "channel": "Peec AI",
+  "published": "2026-09",
+  "duration_min": 59,
+  "why": "Expert panel on building a prompt set from real customer language and choosing metrics (visibility, share of voice, position, sentiment). It is a practical template for our AI-visibility measurement layer.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "sRZizu5mi_c",
+  "lang": "en",
+  "title": "How Long Does SEO Take? Google Finally Shares the Real Numbers",
+  "channel": "Edward Sturm",
+  "published": "2026-10-10",
+  "duration_min": 8.8,
+  "why": "Конкретные сроки от Гэри Иллиеса: краулинг, индексация, смена тайтла, эффект правок. По ним можно откалибровать окна замеров после деплоев и KPI по кварталу.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "PbPWYuZbtIM",
+  "lang": "en",
+  "title": "Entity AI SEO: Are Entities Important for AEO and LLM Visibility? | James Dooley ft Dixon Jones",
+  "channel": "James Dooley",
+  "published": "2026-10",
+  "duration_min": 24,
+  "why": "Dixon Jones (InLinks) on how Google and LLMs resolve organization and author entities. Could refine our entity-home / sameAs / profile-loop rules (П.6.6).",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Nt5MByTvbTE",
+  "lang": "en",
+  "title": "How to Run a Full Content Audit with Claude Code and Semrush MCP",
+  "channel": "Semrush",
+  "published": "2026-09",
+  "duration_min": 45.7,
+  "why": "Пошаговый контент-аудит через Claude Code и MCP: решения о прунинге, рефреше и слиянии на данных. Этот воркфлоу переносится на наш блог через наши GSC и DataForSEO MCP.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "o1-M6-bWG6E",
+  "lang": "en",
+  "title": "Why AI Content Stops Ranking: What 10,937 Pages Revealed | Kyle Roof",
+  "channel": "Odys Podcast: The High Stakes Growth Show and PageOptimizer Pro",
+  "published": "2026-09",
+  "duration_min": 31.7,
+  "why": "Kyle Roof's analysis of 10,937 pages: AI content fails for mechanical reasons (term coverage, structure), not because it is AI. A concrete checklist for our hybrid article pipeline.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "SGdsTAyCtEw",
+  "lang": "en",
+  "title": "SEO & AI Content : Why Your Articles Don't Rank on Google (Kyle Roof)",
+  "channel": "Webinar Linkavista",
+  "published": "2026-10-17",
+  "duration_min": 44.4,
+  "why": "Kyle Roof's October 2026 webinar with his latest single-variable on-page test findings on why articles fail to rank. May add newer test results to the 10,937-page study.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Z5MaMv0hv-g",
+  "lang": "en",
+  "title": "Hreflang in the AI Era",
+  "channel": "International Web Mastery (IWEP podcast, Bill Hunt & Bill Scully)",
+  "published": "2026-02",
+  "duration_min": 51,
+  "why": "How hreflang/language-version selection behaves in AI Overviews, AI Mode and LLM answers. This directly tests whether our ru-base + uk/en/es hreflang cluster still routes the right version to UA and diaspora users in the AI era.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "ZF74RDwFdTs",
+  "lang": "en",
+  "title": "AI Search & translated content. How ChatGPT, Perplexity, Gemini & more handle multilingual queries",
+  "channel": "Glenn Gabe",
+  "published": "2025-12",
+  "duration_min": 13,
+  "why": "Glenn Gabe's tests of whether AI platforms cite the translated/hreflang version or the original. Tells us if our UK/RU overlays can get AI citations for 'онліфанс це' type queries.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "_Ldhm8qB_JU",
+  "lang": "en",
+  "title": "A 24 Year Old AI Creative Director Gives Away Her Playbook (Ep. 80 / Jamey Gannon)",
+  "channel": "Fast Hours",
+  "published": "~2026-09",
+  "duration_min": 102,
+  "why": "The most complete and most recent long-form interview with Jamey Gannon, an AI creative director who builds consistent brand imagery for e-commerce brands. It covers design fundamentals, tool choice and repeatable workflows, which is what an art-direction system for blog covers needs. Has the most views of the Gannon videos found.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "ftugIJ-NPEs",
+  "lang": "ru",
+  "title": "Самый мощный навык для ИИ-креатора | Визуальные стили",
+  "channel": "ELIZAVETA LIVADA",
+  "published": "2026-10-14",
+  "duration_min": 15,
+  "why": "Fresh Russian-language video arguing that the industry race for photorealism is the wrong goal and that a recognizable visual style is the real skill. This supports our current disclosed-illustration covers, pushed toward a stronger signature style rather than fake photos. Useful for briefing Russian-speaking executors.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "5bpXSMHekXM",
+  "lang": "en",
+  "title": "The Fashion Industry Has an AI Slop Problem",
+  "channel": "The Sam Sanders Show and Back Row with Amy Odell",
+  "published": "2026-10-21",
+  "duration_min": 32,
+  "why": "Two days old: a respected fashion journalist (Amy Odell) on how fashion brands' AI imagery is eroding audience trust. Our target audience is style-aware women 18-35, so this is the most relevant current read on where their tolerance for AI faces and bodies ends.",
+  "score": 17.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "N-6LCrvxHIs",
+  "lang": "en",
+  "title": "AI Creative Direction Is Here: Jamey Gannon",
+  "channel": "Tommy Geoco",
+  "published": "~2026-06",
+  "duration_min": 57,
+  "why": "A respected UX/design channel interviews Gannon. The core idea is directing AI like a creative director (references, taste, iterative editing) instead of prompt tricks. It is the antidote to the generic 'AI look' and maps directly onto building a premium visual identity for ofmmodels.",
+  "score": 16.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "5Rd_gYaUktk",
+  "lang": "en",
+  "title": "Google 7/11 Update, Bing Penalties, Google Images, AI Overviews AI Images, ChatGPT Ads & Apple Maps",
+  "channel": "RustyBrick Barry Schwartz Search Engine Roundtable",
+  "published": "2026-07-17",
+  "duration_min": 13,
+  "why": "Covers the Google Images 25th-anniversary redesign (gallery home page), Nano Banana image generation moving into AI Overviews (it competes with publisher images for clicks; the test was paused in August), and Google on 'discovered vs crawled-not-indexed' quality and AI-generated content. Context on where image-search clicks are going in 2026.",
+  "score": 16.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "QWcfSmyj988",
+  "lang": "uk",
+  "title": "Google запустив AI Overviews в Україні. Як медіа не втратити читачів у 2026?",
+  "channel": "SEO for Media",
+  "published": "2026-05",
+  "duration_min": 134.7,
+  "why": "Only long-form session found on the AI Overviews rollout in Ukrainian-language Google; likely CTR/traffic-loss data on UA informational queries, which hits our 'онліфанс це' info core.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Cd3c09TJ84g",
+  "lang": "ru",
+  "title": "Как изменился iGaming SEO в 2026 году | SEO PANEL | G GATE CONF 2026",
+  "channel": "G GATE | AFFILIATE COMMUNITY",
+  "published": "2026-10",
+  "duration_min": 41.4,
+  "why": "Panel on Google SEO in a grey niche (closest analog to adult/OnlyFans): budgets, link and content tactics that survived the 2026 spam updates, how competitors in YMYL-like niches operate.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "LNGpwI_LJ7I",
+  "lang": "ru",
+  "title": "Накрутка ПФ в Google, Bing и Google Business Profile",
+  "channel": "Михаил Шакин SEO",
+  "published": "2026-09",
+  "duration_min": 75.6,
+  "why": "Explains NavBoost and five Google click types with the risks of CTR manipulation; useful for title/CTR work on positions 4-15 and for spotting competitors manipulating clicks.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "u8mFUUGsLmM",
+  "lang": "pl",
+  "title": "Czy SEO jeszcze ma sens? Senuto o spadkach ruchu, AI Mode i widoczności w ChatGPT | Artur Jabłoński",
+  "channel": "Artur Jabłoński",
+  "published": "2026-09",
+  "duration_min": 52.4,
+  "why": "Senuto (Poland's main SEO data tool) on measured traffic drops and AI Mode impact in the Polish market, the EU diaspora market we target.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "WW8BRe_Jgf8",
+  "lang": "uk",
+  "title": "Як отримувати трафік у 2026: нове SEO, AI-пошук і аудит сайтів | Семінар з Сергієм Кокшаровим",
+  "channel": "Академія інтернет-маркетингу WebPromoExperts",
+  "published": "2026-06",
+  "duration_min": 94,
+  "why": "Devaka/Kokšharov (the top Ukrainian Google SEO authority) on a 2026 audit methodology and getting traffic alongside AI search, in Ukrainian with UA examples.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "_6Qgr9NUZ1g",
+  "lang": "ru",
+  "title": "SEO в 2026: апдейты Google, AI, ссылки и новые стратегии | Александр Флинт × Алекс SEO Nomad",
+  "channel": "FlintGroup",
+  "published": "2026-09",
+  "duration_min": 77.5,
+  "why": "Russian-speaking practitioners on adapting to the constant 2026 Google updates, including link strategy under spam updates. Relevant to the RU-speaking market and our link purchases.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "-pUMNtq8Bp0",
+  "lang": "en",
+  "title": "Google's 2026 Crackdown: Lily Ray Says Your SEO Strategy is Failing",
+  "channel": "Sterling Sky Inc",
+  "published": "2026-04",
+  "duration_min": 57.7,
+  "why": "REQUEUE (mandatory re-include): Lily Ray on harsher 2026 core/spam enforcement.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "UC67EY4U744",
+  "lang": "en",
+  "title": "Crawling Challenges: What the 2025 Year-End Report Tells Us.",
+  "channel": "Google Search Central",
+  "published": "2026-02",
+  "duration_min": 28,
+  "why": "Google's own data on the top sources of crawl waste (faceted navigation, action parameters, irrelevant URLs). It is a checklist before we scale vacancy, geo or listing pages.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "gMw6V88Kkoc",
+  "lang": "en",
+  "title": "The 4 Types of Directories Winning in 2026 (And Which One Fits You)",
+  "channel": "Frey Chu",
+  "published": "2026-09",
+  "duration_min": 24,
+  "why": "A directory/listing-site specialist on which listing formats still rank in late 2026. It is useful for deciding why girlswork/layboard-style listings beat articles and which listing format we should copy or outdo.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "NcN_AkqiP7A",
+  "lang": "en",
+  "title": "Beyond the Job Board: Building a Career Site That Attracts More Candidates",
+  "channel": "HireClix",
+  "published": "2026-10",
+  "duration_min": 53,
+  "why": "The employer side of job SEO in Oct 2026: how a direct-hiring career site wins candidates from search against aggregators. That is exactly our position as a direct agency competing with job boards.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "IpgekVROznI",
+  "lang": "en",
+  "title": "Google Hates These 2 Types of SEO Pages",
+  "channel": "Kasra Dash",
+  "published": "2026-10-11",
+  "duration_min": 9.6,
+  "why": "Два типа страниц, которые Google сейчас понижает (вероятно, шаблонные doorway и programmatic). Проверка наших гео-страниц вакансий и пограничных по Мюллеру programmatic-шаблонов.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "uYwI3YyaB-E",
+  "lang": "en",
+  "title": "Why Deleting 40% of Your Content Fixes SEO | Marten Saar",
+  "channel": "Navneet Kaushal",
+  "published": "2026-10-16",
+  "duration_min": 64,
+  "why": "Fresh long-form talk on large-scale pruning and consolidation: thresholds for deleting or merging, and how site-level quality recovers. Extends our pruning rule P.4.10.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "mD51uM8v_bw",
+  "lang": "en",
+  "title": "Topical Authority and Semantic SEO for Local Rankings (Law and Beyond)",
+  "channel": "Koray Tuğberk GÜBÜR",
+  "published": "2026-08",
+  "duration_min": 53,
+  "why": "Koray on historical data, click behavior, visual semantics and page design for local/geo intent; relevant to our country/city vacancy pages and how geo nodes gain authority.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Df3EHdgm6zA",
+  "lang": "en",
+  "title": "Google Update Volatility, AI Spam, and the Listicle Crackdown: What SEOs Are Missing with Lily Ray",
+  "channel": "AI SEO Show",
+  "published": "2026-03",
+  "duration_min": 45,
+  "why": "Specific on Google's crackdown on self-promotional 'best X' listicles and AI spam; directly checks our listicle format (P.3.8) and our 'best agencies'-type content against the risk.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "wbSavynl0S4",
+  "lang": "en",
+  "title": "Entity SEO: How to Track Google's Confidence Score",
+  "channel": "The Page 2 Podcast: An SEO Podcast",
+  "published": "2026-09",
+  "duration_min": 43,
+  "why": "Lidia Infante's method for measuring Google's entity confidence in a brand (Knowledge Graph API scores); a measurable KPI for our entity-home and brand rules (P.6.6).",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "mYwU1eyUm3s",
+  "lang": "en",
+  "title": "What if user satisfaction is all that matters for ranking on Google?",
+  "channel": "Marie Haynes",
+  "published": "2026-02",
+  "duration_min": 41.4,
+  "why": "Marie Haynes argues Google re-ranks results with AI trained on user data and quality-rater scores (Navboost plus the RankEmbed/DOJ evidence). This frames user satisfaction after the click as the lever for our job and info pages, against the job boards.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "XibTV01dpL0",
+  "lang": "en",
+  "title": "Cyrus Shepard: What \"Local Brand\" Actually Means to Google and AI",
+  "channel": "Near Media",
+  "published": "2026-07",
+  "duration_min": 50,
+  "why": "Part 2 of Near Memo's brand-building series: which signals make Google treat a site as a brand rather than a generic SEO site. Directly relevant to beating aggregator job boards in Ukraine and the diaspora with brand signals.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "ufq0f4CdGKY",
+  "lang": "ru",
+  "title": "Как Trustpilot влияет на SEO, репутацию и конверсию | Александр Флинт | G GATE CONF 2026",
+  "channel": "G GATE | AFFILIATE COMMUNITY",
+  "published": "2026-10",
+  "duration_min": 25,
+  "why": "Trustpilot increasingly takes positions in Google for branded queries. Talk on controlling the brand SERP and reviews, which applies directly to 'ofm models отзывы/развод' (П.6.7/П.8.11).",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "_mqFhKLSutg",
+  "lang": "ru",
+  "title": "Как получить максимальный ROI от iGaming SEO в 2026 | Андрей Буйлов | SIC Conference 2026",
+  "channel": "SIC (Search iGaming Conference)",
+  "published": "2026-08",
+  "duration_min": 35.1,
+  "why": "A respected Russian-speaking Google SEO on what actually pays off in a gray, link-heavy niche in 2026 (budget split between links and content, timelines). iGaming is the closest analog to adult-agency SEO.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "9o3zEmWFFwc",
+  "lang": "other",
+  "title": "Regulate This: A Two-Speed Google - SEONauts #16 (September 2026)",
+  "channel": "SEOnauts",
+  "published": "2026-09",
+  "duration_min": 88.5,
+  "why": "Covers the DMA-driven European version of Google that Google itself calls a quality downgrade: how EU SERPs now differ from non-EU ones. Key for ranking in PL/DE/CZ/ES. Language not verified (Spanish-community hosts, English titles).",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "qMUAU7E3dCA",
+  "lang": "en",
+  "title": "Google Just Defined \"Low-Effort\" Content (Big Deal for SEO)",
+  "channel": "Matt Kenyon",
+  "published": "2026-10",
+  "duration_min": 21,
+  "why": "Walks through Google's Oct 1, 2026 rewrite of the helpful-content guide: the four listed low-effort patterns and how quality and trust get judged at page level. Turns Н19 into an article checklist.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "NSICNv0fOU4",
+  "lang": "ru",
+  "title": "«Построение PBN сети сайтов НЕ под ссылки» - SEO-конференция «Высоко в ТОП!» (Илья Ростокин)",
+  "channel": "Vysokoff SEO",
+  "published": "2026-10-20",
+  "duration_min": 44,
+  "why": "How PBN operators avoid footprints in 2026. Doubles as a guide to spotting PBN donors in broker price lists (our П.5.11 network-detection rule).",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "K5Q4GxWdzzI",
+  "lang": "en",
+  "title": "AI SEO & GEO Online Summit | October 7, 2026",
+  "channel": "Chris Raulf",
+  "published": "2026-10",
+  "duration_min": 124,
+  "why": "The third summit edition, built around two original research studies presented in October 2026, one on how a zero-visibility brand gained AI citations. That is fresh primary data from practitioners.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "cPGT5bxCjB4",
+  "lang": "en",
+  "title": "The Dark Reality of Link Building in iGaming, Crypto & Restricted Niches",
+  "channel": "Edward Sturm (w/ Charles Floate)",
+  "published": "2026-01",
+  "duration_min": 45,
+  "why": "Unique coverage of link building in restricted niches (prices, donor refusals, PBN and paid-link risk), the closest analogue to our adult/OnlyFans niche, from a known grey-hat practitioner.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "jw_dkCsyCKA",
+  "lang": "pl",
+  "title": "Wydałem 600k na linki - wiem co działa - Link Building - Kulisy Wzrostu Marki",
+  "channel": "Kulisy wzrostu marki | Agencja KS",
+  "published": "2026-09",
+  "duration_min": 41,
+  "why": "Polish agency's spend-based lessons (600k PLN on links) for the PL/EU market. Useful for Polish diaspora donors and for checking what EU link prices actually buy.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Hd_6SuEtkkY",
+  "lang": "en",
+  "title": "Chris Panteli: Digital PR, Brand Signals and the Zero-Risk Link (Full Video)",
+  "channel": "Unscripted SEO Podcast",
+  "published": "2026-10-18",
+  "duration_min": 44,
+  "why": "Linkifi co-founder's case for zero-risk editorial links and brand signals over bought links. Likely gives campaign economics we can test against the brand-demand pairing rule (П.5.5, П.6.3).",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "E8YrU7v57f4",
+  "lang": "en",
+  "title": "The New Thing To Check Before Getting A Backlink",
+  "channel": "COLLINSEO",
+  "published": "2026-10",
+  "duration_min": 10,
+  "why": "A new 2026 pre-purchase donor check, probably tied to the spam updates or AI. Candidate extra layer for the donor checklist (Н13).",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "kRZpoABVj1E",
+  "lang": "en",
+  "title": "5 Sites Destroyed by the Google September Spam Update",
+  "channel": "Kasra Dash",
+  "published": "2026-10",
+  "duration_min": 11,
+  "why": "Concrete site examples destroyed by the Sep 2026 spam update. Adds site-level tactics-to-avoid to our N41 timeline.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "zT0tSqwCk60",
+  "lang": "en",
+  "title": "Google Spam Update: 10 Things That Survived",
+  "channel": "Kasra Dash",
+  "published": "2026-10",
+  "duration_min": 14,
+  "why": "Common traits of sites that survived the September 2026 spam update. A positive checklist to compare against our site and donors.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "ahx1ykEuPIg",
+  "lang": "en",
+  "title": "When \"Mt. AI\" crumbles and sites drop in Google Search, ChatGPT citations drop as well [Case Study]",
+  "channel": "Glenn Gabe",
+  "published": "2026-05",
+  "duration_min": 10,
+  "why": "Case study: sites that scaled AI content surged, then crashed, and lost ChatGPT citations at the same time. Shows that Google rank losses carry over to LLM visibility.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "9Ms9vJGKQFY",
+  "lang": "de",
+  "title": "SEO-Monatsrückblick September 2026: Die wichtigsten SEO-News",
+  "channel": "SISTRIX DE",
+  "published": "unknown",
+  "duration_min": 23,
+  "why": "SISTRIX visibility-index recap of September 2026 for the German market (winners/losers of the spam update in DE). EU-market data for the diaspora target in Germany; title dates it to the Sept 2026 recap.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "c8HOEJvbtTk",
+  "lang": "en",
+  "title": "SEO & GEO News Week 42 - Update Brewing? How GEMINI citations works & AIO ≠ more satisfaction",
+  "channel": "Drost SEO",
+  "published": "2026-10-21",
+  "duration_min": 10,
+  "why": "Digest of research from the week of 21 Oct 2026: how Gemini chooses citations, evidence that AIO does not raise user satisfaction, ChatGPT changing how referral traffic gets tracked, and Google serving fake SERPs to scrapers.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "PViLqvQz4e0",
+  "lang": "ru",
+  "title": "Google ОБНОВИЛИ ИИ поиск! Что нового в AI Mode и AI Overviews — 5 изменений и больше ссылок на оригиналы",
+  "channel": "Yevgeniy Kovalenko",
+  "published": "2026-10-18",
+  "duration_min": 8,
+  "why": "Russian-language breakdown of the 15 Oct 2026 Google AI Overviews and AI Mode update: 5 changes and more prominent links to original sources. It tells us what changed for click-through from AIO in our RU/UA SERPs.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "7lmuLU3OPxM",
+  "lang": "en",
+  "title": "ChatGPT Traffic Drop May Be a Tracking Problem | Ignite Friday",
+  "channel": "IgniteVisibility",
+  "published": "2026-10-17",
+  "duration_min": 9,
+  "why": "Explains the October 2026 ChatGPT referral change: referral traffic seemed to fall because tracking changed, not demand. It affects how we read AI referrals in GA4 versus the self-report channel (Н7).",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "X3247fEltPg",
+  "lang": "en",
+  "title": "Data On Soft Navigations In Core Web Vitals by Annie Sullivan of Google",
+  "channel": "Henri Helvetica",
+  "published": "2026-06",
+  "duration_min": 10,
+  "why": "Chrome's CWV lead presents data on measuring soft (client-side) navigations. This is critical for a Next.js App Router site where most page-to-page moves are soft navigations, and it could change INP and LCP field data.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "JpweMBnpS4Q",
+  "lang": "en",
+  "title": "Google crawlers behind the scenes",
+  "channel": "Google Search Central",
+  "published": "2026-03",
+  "duration_min": 25,
+  "why": "Googlers explain how the crawler fleet, host load and crawl scheduling actually work in 2026. That gives a basis for crawl-rate expectations on Vercel and for the Discovered-not-indexed backlog.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "lbuYYxYamSM",
+  "lang": "en",
+  "title": "Jono Alderson: DSCRI, IndexNow, MCP, and the WebMCP Question | Kalicube Summit 2026",
+  "channel": "Kalicube and Jason Barnard",
+  "published": "2026-07",
+  "duration_min": 24,
+  "why": "A respected technical SEO frames the discovery-crawl-render-index pipeline and argues push indexing (IndexNow) versus pull. That informs whether to add IndexNow for Bing/Copilot on Vercel.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "s151KHu6Cc0",
+  "lang": "en",
+  "title": "Technical SEO for AI Search: What to Keep, Start, and Stop Doing",
+  "channel": "The Search Signal by Victorious",
+  "published": "2026-10",
+  "duration_min": 41,
+  "why": "October 2026 agency talk that sorts technical practices into keep, start and stop for the AI-search era. Useful for pruning our technical backlog and adding anything missing.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "wUhUX5XCK74",
+  "lang": "en",
+  "title": "Google Not Indexing Your Website Content? Fix Non Indexed Page Reasons in Google Search Console",
+  "channel": "Daniel Foley Carter",
+  "published": "2026-07",
+  "duration_min": 52,
+  "why": "A data-driven practitioner works through real GSC cases of non-indexed pages and the fixes that worked. It adds field cases to our crawled-not-indexed ladder (П.4.7).",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "p7TQ6og3jLE",
+  "lang": "en",
+  "title": "Google Is Killing Pages (Here's How to Fix It)",
+  "channel": "Caleb Ulku",
+  "published": "2026-09",
+  "duration_min": 15,
+  "why": "September 2026 analysis of a wave of deindexed pages and how to bring them back. Relevant if our BOFU or blog pages start dropping out of the index after the Sep-Oct spam update.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "9dONdby7dDU",
+  "lang": "en",
+  "title": "You Are What You EEAT | How to Build a Prompt Set for AI Search (2026) | Lily Ray",
+  "channel": "Niklas Buschner",
+  "published": "2026-04",
+  "duration_min": 60,
+  "why": "Lily Ray's E-E-A-T-focused talk: original research as the main trust differentiator, plus a GSC/PAA/fan-out prompt set. Helps decide what first-hand data our agency pages should publish.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "6aXc8J2ltes",
+  "lang": "en",
+  "title": "Lily Ray on The #1 Thing That Survives Every Google Update (Even AI)",
+  "channel": "The Page 2 Podcast: An SEO Podcast",
+  "published": "2026-04",
+  "duration_min": 51,
+  "why": "Lily Ray on what works in practice, from E-E-A-T to AEO. Likely concrete trust-signal priorities for brand and author pages.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "MQmGjLVGKtM",
+  "lang": "en",
+  "title": "Aleyda Solís on Building a Brand Reputation LLMs Trust",
+  "channel": "SE Ranking",
+  "published": "2026-05",
+  "duration_min": 15,
+  "why": "Argues reputation, not content or technical work, decides LLM and AIO trust. Gives concrete reputation-building steps for a new brand.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "D6cRaGeNzHI",
+  "lang": "en",
+  "title": "iGaming SEO: Google Rankings Aren't Enough Anymore",
+  "channel": "Big Pond Digital",
+  "published": "2026-10-16",
+  "duration_min": 44,
+  "why": "Fresh look at how a restricted vertical diversifies beyond Google rankings into AI answers and other surfaces. Useful for whether restricted-topic sites get cited in AIO/LLMs.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "RfgxOtWvREo",
+  "lang": "en",
+  "title": "It's New 6/5: Google indexing drop, explicit ranking update and more",
+  "channel": "RustyBrick Barry Schwartz Search Engine Roundtable",
+  "published": "2025-06",
+  "duration_min": 10,
+  "why": "The only item in the pool on Google updating how explicit content is ranked and filtered (the SafeSearch mechanics). It is older than the cutoff but the most specific source available on SafeSearch classification risk for adult-adjacent pages.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "GSKy0mJZxBo",
+  "lang": "en",
+  "title": "Google Spam Update Is Over. Here's What It Hit.",
+  "channel": "Kasra Dash",
+  "published": "2026-10-10",
+  "duration_min": 12.3,
+  "why": "Final wrap-up of the Sept 24-Oct 8 spam update with examples of affected site types. Adds the 'what was hit' layer to the dates already in our codex (H41).",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "EkgJQlWtyFI",
+  "lang": "en",
+  "title": "Google's September 2026 Spam Update Is Here (And It Came With a Secret AI Spam Detector)",
+  "channel": "Edward Sturm",
+  "published": "2026-09",
+  "duration_min": 14.5,
+  "why": "Early analysis of why the Sept 2026 update differs from earlier 2026 spam updates (AI-spam detection claims, 2-week rollout). Context for the AI-content risk in our content pipeline.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "AR0eh_djCQU",
+  "lang": "en",
+  "title": "This Google Spam Update Demolished Rankings",
+  "channel": "Semrush",
+  "published": "2026-09",
+  "duration_min": 4.9,
+  "why": "Semrush Sensor data on the August 2026 spam update (82% jump in pages falling out of the top results). Short but hard quantitative numbers.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "DOOV8LbC97I",
+  "lang": "en",
+  "title": "SEO vs. GEO: What Actually Matters Now? | Glenn Gabe (G-Squared Interactive)",
+  "channel": "SE Ranking",
+  "published": "2026-10",
+  "duration_min": 10.8,
+  "why": "Позиция Гленна Гейба: SEO остаётся фундаментом, GEO надстройка над ним. Короткое подтверждение или уточнение нашей приоритизации «органика первой».",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "q3zknvoFuNc",
+  "lang": "en",
+  "title": "9,249 SEO Case Studies Reveal the Weirdest Tactics That Work",
+  "channel": "Edward Sturm",
+  "published": "2026-10",
+  "duration_min": 15,
+  "why": "Meta-analysis of 9,249 case studies, narrowed from 30,000+ documents, ranking tactics by how often they actually worked. A ready backlog of unusual tactics for our before/after tests.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "CSIf-98t9RU",
+  "lang": "en",
+  "title": "Nofollow Backlinks Do Boost Rankings (The Tests Google Doesn't Talk About)",
+  "channel": "Edward Sturm",
+  "published": "2026-10-16",
+  "duration_min": 10.2,
+  "why": "Collects tests by Rand Fishkin, Kyle Roof and Joy Hawkins showing ranking lifts from nofollow links. Relevant to valuing nofollow placements in our Ukrainian donor purchases.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "eMjQDKY1yjQ",
+  "lang": "en",
+  "title": "TLC: Bringing an experimentation mindset to AI search with Will Critchlow",
+  "channel": "TLC - Test & Learn Community",
+  "published": "2026-10-17",
+  "duration_min": 57.3,
+  "why": "Newest Critchlow session on applying causal testing to AI search/GEO: how to measure whether a change actually raised AI visibility rather than relying on prompt tracking.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "eVpSXiVKQzQ",
+  "lang": "en",
+  "title": "Localise, Don't Just Translate: International SEO With Laura Smith",
+  "channel": "Unscripted SEO Podcast",
+  "published": "2026-09",
+  "duration_min": 34,
+  "why": "ICS-digital runs campaigns in 100+ languages. Practical localization rules (per-market keyword intent, not 1:1 translation) for deciding how far our uk/en/es overlays must diverge from the RU base to rank on their own.",
+  "score": 16.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "2RD3FP5iWJY",
+  "lang": "en",
+  "title": "5 steps to generate consistent brand images with Midjourney",
+  "channel": "How I AI",
+  "published": "~2026-03",
+  "duration_min": 50,
+  "why": "A concrete 5-step process for a consistent brand image system: style references, moodboard, locked parameters. This targets the owner's 'paper-like' complaint, since one coherent visual language across 32 articles reads as expensive. Gannon walkthrough on a known AI-practice podcast.",
+  "score": 15.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "_r7NUcM41Kc",
+  "lang": "en",
+  "title": "How to Make AI Product Photography That Doesn't Look Fake (Nano Banana Pro & GPT Image 2)",
+  "channel": "Motion (Creative Analytics)",
+  "published": "~2026-07",
+  "duration_min": 27,
+  "why": "A live workshop by Gannon, hosted by Motion, a creative-analytics company that studies which ad creatives perform. It shows how to turn a basic phone photo into studio-grade images with Nano Banana Pro and GPT Image 2 without the fake look. That fits a 'real artifact first, AI as enhancement' approach (e.g. real phones, payouts UI, workspace objects).",
+  "score": 15.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "44CGUiCeQFU",
+  "lang": "en",
+  "title": "This Photo Tanked My Local SEO! (FIX It in 2026)",
+  "channel": "Sterling Sky Inc",
+  "published": "unknown (est. late 2025–2026, title says 2026)",
+  "duration_min": null,
+  "why": "Sterling Sky (Joy Hawkins' agency, which runs real tests) shows a widely reused stock photo costing a client its Google Images visibility, because Google already indexes copies elsewhere. Evidence against stock images and for unique originals.",
+  "score": 15.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "hkmGyAtvKvM",
+  "lang": "en",
+  "title": "Image SEO Secrets: 241,000 Impressions from Optimizing Alt Text",
+  "channel": "Edward Sturm",
+  "published": "2026-05-16",
+  "duration_min": 8,
+  "why": "Recent practical case: 241K impressions and 7K clicks from image optimization. Covers descriptive filenames by subfolder and slug, WebP, contextual alt text written from page content, original screenshots and real photos over stock or 'abstract AI', separate uploads per landing page, and placing images next to relevant headings. A ready workflow for our 30 text-only articles.",
+  "score": 15.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "f_X90_281Mw",
+  "lang": "en",
+  "title": "Google Updates AI Content Guidance: Effort, Originality & Human Review",
+  "channel": "Sara Taher",
+  "published": "unknown (est. 2026-10)",
+  "duration_min": null,
+  "why": "Analyst breakdown of Google's October 2026 guidance on generative-AI content (effort, originality, human review). Use it to decide how AI-generated editorial visuals should be made and disclosed so they read as 'effort/original' and not scaled filler. Not verified whether it covers images specifically.",
+  "score": 15.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "NUCZuSJRGe4",
+  "lang": "ru",
+  "title": "SEO для нейросетей и нейросети для SEO",
+  "channel": "Михаил Шакин SEO",
+  "published": "2026-10-20",
+  "duration_min": 92,
+  "why": "Brand knowledge base (excel/mind map), positioning and off-site publications for LLM visibility; practical brand-fact work for the AI layer.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "T0hi5muCwaQ",
+  "lang": "en",
+  "title": "How to Use Claude for SEO: 5 Advanced Use-Cases (Skills, MCPs, Claude Code)",
+  "channel": "Semrush",
+  "published": "2026-09-03",
+  "duration_min": 73,
+  "why": "REQUEUE. Includes an internal-linking audit at scale in Claude Code and a forensic ranking-drop audit. These can be applied directly to auditing the vacancy-to-category-to-geo linking web (N24) with our own tooling.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "T1y3_BLGqg8",
+  "lang": "en",
+  "title": "E-commerce SEO for AI Search: Faceted Navigation, Bottom-of-Funnel Pages & Scaling w/out Getting Hit",
+  "channel": "Edward Sturm",
+  "published": "2026-07",
+  "duration_min": 75,
+  "why": "A 2026 practitioner discussion of which facet or filter URLs deserve indexing, how AI search surfaces filtered pages, and how to scale BOFU listing pages without a spam hit. It maps onto our category x geo vacancy silo.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "4JkiMyBNBmM",
+  "lang": "en",
+  "title": "How to Build Topical Authority in 2026 (Koray Method + Claude Code) | Featuring @DamirBilalovSEO",
+  "channel": "Patrick Rice",
+  "published": "2026-07",
+  "duration_min": 63,
+  "why": "Hands-on build of a Koray-style topical map and content briefs with Claude Code; directly reusable in our own Claude Code workflow for the RU/UK topical map.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "mqvAaLahNTQ",
+  "lang": "en",
+  "title": "Unicorn Clicks, NavBoost & Google's Real Ranking Signals",
+  "channel": "Edward Sturm",
+  "published": "2026-03",
+  "duration_min": 95,
+  "why": "E980 with Alejandro (likely Meyerhans, known for core-update winner/loser data). Covers 'unicorn clicks' and Navboost mechanics: which click patterns move rankings, and how to earn them legitimately through intent-matched titles and pages.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "YRN9xDKoQhk",
+  "lang": "en",
+  "title": "You're Reading Google Search Console WRONG (Here's Why)",
+  "channel": "Edward Sturm",
+  "published": "2026-08",
+  "duration_min": 76.4,
+  "why": "E1126 with David Quaid on misreading GSC impressions, CTR and position. Directly improves how we diagnose CTR gaps and title-rewrite candidates from our GSC data.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Q_ZIT_ZPdeY",
+  "lang": "ru",
+  "title": "Поведенческие факторы: мифы и реальность",
+  "channel": "Михаил Шакин SEO",
+  "published": "2026-06",
+  "duration_min": 55.1,
+  "why": "Breakdown of what behavioral factors really are in 2026 and which parts work in Google versus Yandex. Useful to separate myth from mechanism for the RU/UA market, where competitors may manipulate clicks.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "o_5oc-O1B8k",
+  "lang": "en",
+  "title": "AI Visibility vs Google Ranking: Rand Fishkin & the Future of Search, Zero Click & Brand Measurement",
+  "channel": "Near Media",
+  "published": "2026-02",
+  "duration_min": 40.4,
+  "why": "Rand Fishkin on measuring brand demand in a zero-click world, and why branded search and audience are the durable lever. Can sharpen our rule П.6.3 (branded demand as a measurable metric) with his methods.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "9DIGRWDCN6I",
+  "lang": "en",
+  "title": "Google Is Rewriting Your Headlines: How to Keep Control",
+  "channel": "SUSO Digital",
+  "published": "2026-07",
+  "duration_min": 5.9,
+  "why": "Covers Google's 2026 test of AI-generated, unlabelled title rewrites in results and how to keep your title link from being replaced. Matters for our CTR formula titles (П.3.3/П.3.16).",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "ed-PCC0ZM0k",
+  "lang": "en",
+  "title": "How Much Keyword Anchor Text Is Safe? A Google Patent and the Ratios SEOs Use",
+  "channel": "Link Builders",
+  "published": "2026-10",
+  "duration_min": 8,
+  "why": "Patent-based explanation of anchor-text risk plus the ratios practitioners use. Gives concrete numbers for our anchor-mix rule (П.5.6, П.4.6). Sibling episodes on link timing and PBNs: qoYZDaQtb2w, GI_sk0NYiWM.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "1iCUbG5oV80",
+  "lang": "uk",
+  "title": "\"Тобі потрібно х3 абсолютно на все\". SEO в iGaming у 2026. Олександр Лисак, SETAFF, OVERNEO | ПАЛИВО",
+  "channel": "Паливо | подкаст про трафік та онлайн-бізнес",
+  "published": "2026-06",
+  "duration_min": 89,
+  "why": "Ukrainian gray-niche SEO operators on what it takes to rank in 2026 (budgets, links, content velocity). Real-market benchmarks for restricted niches.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "kXqpohqhmbg",
+  "lang": "en",
+  "title": "How AI Content Kills Your SEO (16-Month Experiment)",
+  "channel": "SE Ranking",
+  "published": "2026-05",
+  "duration_min": 8,
+  "why": "16-month controlled experiment tracking AI-generated pages over time (initial rankings, then decay). Gives a long-term risk curve that our AI-draft rule (P.3.18) does not cover yet.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "FcPNJOTvhYM",
+  "lang": "en",
+  "title": "How ChatGPT Chooses Which YouTube Videos to Show | David Konitzny, Peec AI",
+  "channel": "Niklas Buschner",
+  "published": "2026-10-16",
+  "duration_min": 46,
+  "why": "Peec AI's query fan-out researcher on how ChatGPT picks YouTube videos to cite. It is relevant to our explainer-video series as a second route into AI answers.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "GIFaOXUwedc",
+  "lang": "en",
+  "title": "Google September 2026 Spam Update: Why 1,000 Reviews Won't Save You",
+  "channel": "Let's Talk SEO with Bilal Kureishi",
+  "published": "2026-10",
+  "duration_min": 8,
+  "why": "Reviews and UGC as a trust signal versus spam under the Sept 2026 spam update. Relevant before we add reviews or testimonials to /join or /cases.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "yR7pvhqE0S0",
+  "lang": "en",
+  "title": "13K AI Citations, E-E-A-T Tips & 2026 Local Discovery Index | E47 The Whitespark Local Update",
+  "channel": "Whitespark",
+  "published": "2026-09",
+  "duration_min": 16,
+  "why": "E-E-A-T tips and a 13K-citation study of which trust and review sources AI cites. Useful for our Ukraine and diaspora geo pages.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "qfwRgjoyvvo",
+  "lang": "en",
+  "title": "It's New 10/12: Google Tracking Tools, UGC, AI Overviews knows all, Google AI for ads & Demand Gen",
+  "channel": "RustyBrick Barry Schwartz Search Engine Roundtable",
+  "published": "2026-10",
+  "duration_min": 15,
+  "why": "A fresh Google statement on UGC handling (forums and comments) in October 2026. Relevant because forums are among our SERP competitors.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Z-0ZvUwagjQ",
+  "lang": "en",
+  "title": "Google September 2026 Spam Update: What It Did NOT Hit (3 SEO Myths Busted With Data)",
+  "channel": "Let's Talk SEO with Bilal Kureishi",
+  "published": "2026-10-11",
+  "duration_min": 15.4,
+  "why": "Data from test sites on what the Sept update did NOT penalise. Useful for not over-reacting with risky changes to our skeleton.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Ot7NrepHQSE",
+  "lang": "en",
+  "title": "August 2026 Spam Update: Who Won, Who Lost (Real Data)",
+  "channel": "Kasra Dash",
+  "published": "2026-08",
+  "duration_min": 16.9,
+  "why": "Winner/loser data on the August 2026 spam update (Aug 18-21). Pairs with Glenn Gabe's case studies to triangulate which site types were hit.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "JruqCSIVLvU",
+  "lang": "en",
+  "title": "Google Just Deleted 90% of Their Traffic… And It's Getting Worse",
+  "channel": "Sterling Sky Inc",
+  "published": "2026-06",
+  "duration_min": 12.2,
+  "why": "Case breakdown of small-business sites losing up to 90% in the 2026 core updates and the shared causes. Small-brand vulnerability is exactly our profile.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Gt5Ay8Zku18",
+  "lang": "en",
+  "title": "Is Google Cracking Down on Self-Promotional Listicles? Our Data Says No",
+  "channel": "The Grow and Convert Marketing Show",
+  "published": "2026-06",
+  "duration_min": 36.8,
+  "why": "Client data testing whether the 2026 updates demoted self-promotional 'best X' listicles. Directly informs whether our 'top agencies' and comparison pages are safe.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "uEleih2QoSE",
+  "lang": "en",
+  "title": "SEO for Paws 6: AI Search, Google Updates & SEO in 2026 by SEO Charity",
+  "channel": "SEOcharity",
+  "published": "2026-09",
+  "duration_min": 221.6,
+  "why": "Multi-speaker online conference whose first session is devoted to 2026 Google updates. Likely expert practitioner talks (only the update session needs processing).",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "-dRzcl2yq8s",
+  "lang": "en",
+  "title": "SEO vs GEO: Which Traditional SEO Tactics Still Work for AI Search? (with @whitworthseo)",
+  "channel": "Candour Agency (Search with Candour)",
+  "published": "2026-10",
+  "duration_min": 72.3,
+  "why": "Подкаст агентства Марка Уильямса-Кука: какие классические SEO-тактики переносятся в AI-поиск, а какие нет. Практический взгляд британского агентства, полезен для приоритизации.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "9CJ9CqIC0xI",
+  "lang": "en",
+  "title": "Mastering SEO Testing in the Era of AI Search | Ryan Jones",
+  "channel": "Advanced Web Ranking",
+  "published": "2026-04",
+  "duration_min": 50.6,
+  "why": "SEOTesting's approach to Search Console-based time-series tests for sites too small for bucket splits (test windows, controls, seasonality). Fits our before/after-only rule (P.1.14).",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "jW8hYUn99Uk",
+  "lang": "en",
+  "title": "James Dooley & David Quaid: The SEO \"Best Practices\" We Ignore",
+  "channel": "Edward Sturm",
+  "published": "2026-08",
+  "duration_min": 188.1,
+  "why": "Two test-driven practitioners list the mainstream best practices their own experiments showed to be useless. Gives us candidates to drop from the codex.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "-diODWM6Bqc",
+  "lang": "en",
+  "title": "Nick Swan Reveals the Future of SEO Testing, AI Workflows & MCP Servers",
+  "channel": "The Page 2 Podcast: An SEO Podcast",
+  "published": "2026-05",
+  "duration_min": null,
+  "why": "SEOTesting founder on where SEO experimentation is heading and how to automate test logging and analysis with AI/MCP. Applicable to our GSC-API experiment log.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "OnZuQH6xjR0",
+  "lang": "en",
+  "title": "Should You Rewrite Pages That Already Rank? (We Tested 881 AI Rewrites)",
+  "channel": "PushLeads",
+  "published": "2026-09",
+  "duration_min": 5,
+  "why": "Small-agency test of 881 AI rewrites on pages that already ranked: how often rewriting a ranking page helps or hurts. Tests our entity-preservation rule for refreshes.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "XyHpjB7L3c4",
+  "lang": "uk",
+  "title": "SEO-конференція Collaborator | 22 травня 2026",
+  "channel": "Коллаборатор (Collaborator)",
+  "published": "2026-05",
+  "duration_min": 593,
+  "why": "Full recording of the 9th Collaborator conference: 10 talks by Ukrainian practitioners on AIO/LLM traffic, Reddit marketing, LLM link building and SEO analytics. Ukrainian-market case data from the same donor ecosystem we buy links in.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "QowSaUBOmJc",
+  "lang": "en",
+  "title": "How to Use SEO, AI & Bilingual Content to Reach Multicultural Audiences | Angel Sopena",
+  "channel": "WordPress",
+  "published": "2026-08",
+  "duration_min": 37,
+  "why": "Closest diaspora analog: ranking Spanish-language content for US Latinos inside a non-Spanish country. Transferable to RU/UK-speaking women in Poland/Germany/Czechia (language vs country targeting, bilingual content).",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "JKrrG4RHSfI",
+  "lang": "uk",
+  "title": "Як підібрати тематичні донори для лінкбілдингу через API Collaborator + Claude або Codex",
+  "channel": "Коллаборатор (Collaborator) / Ігор Рудник",
+  "published": "2026-06",
+  "duration_min": null,
+  "why": "Step-by-step workflow for pulling thematic, budget-filtered donor shortlists from the 39K-site Ukrainian Collaborator catalog via API + Claude/Codex, which turns our UA link buying (transh 2) into a repeatable process.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "ktLXwS46DIo",
+  "lang": "en",
+  "title": "Did AI Kill International SEO? - Veruska Anconitano",
+  "channel": "Search With Sean",
+  "published": "unknown",
+  "duration_min": null,
+  "why": "International SEO consultant shows that sites with correct hreflang and localization still get the wrong market or language version of their brand in AI answers. This matters for our ru-base/uk/en/es setup serving the diaspora.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "X9K18tIQ8Mc",
+  "lang": "en",
+  "title": "Why Images Might Be Hurting Your SEO (Lessons from 6M Visitors)",
+  "channel": "Edward Sturm (The Edward Show)",
+  "published": "~2025-08 (estimated; exact date not confirmed)",
+  "duration_min": null,
+  "why": "Answers the layout question behind the owner's 'expensive, not paper' goal. On top-of-funnel articles, a big hero image pushes the answer below the fold and increases pogo-sticking; a fast-growing publisher (300K to ~6M visits) shows no header image, just breadcrumbs, author, date and a summary. Better: put the image beside the H1. On bottom-of-funnel pages the hero image must work as proof (office, team, real screenshots), not mood. Maps straight onto the OFM article template versus the /join and vacancy pages.",
+  "score": 15.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "qrVvrtJjf9I",
+  "lang": "en",
+  "title": "This AI Pizza Photo Put People Off Ordering",
+  "channel": "Anna @ Digisparq Media",
+  "published": "2026-10-09",
+  "duration_min": 9,
+  "why": "A recent case where one 'too perfect' AI photo pushed customers away from ordering. It is direct evidence that polished AI imagery can cost conversions, which backs our trust hierarchy (real artifacts > disclosed illustration > photoreal AI). Small channel, so treat it as a hypothesis-grade anecdote.",
+  "score": 14.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "pC5R1nPUMC4",
+  "lang": "en",
+  "title": "Why Your Photos Look Like AI (And How to Fix It)",
+  "channel": "Prince Meyson",
+  "published": "2026-10-22",
+  "duration_min": 11,
+  "why": "Covers the reverse problem: real photos read as AI because of over-retouching, plastic skin and over-smoothing. Directly useful because any real or model-supplied photos used in articles must avoid these markers to keep the 'phone-distance profile content' authenticity the owner preferred.",
+  "score": 14.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "a62SOSzAS2c",
+  "lang": "en",
+  "title": "Unlock Cinematic Photography in Midjourney",
+  "channel": "Thaeyne",
+  "published": "2026-10-13",
+  "duration_min": 14,
+  "why": "Shows how photographic style variables (grain, shadow, color grading) make invented images believable and editorial. Relevant to giving covers and inline images a coherent, film-like premium grade instead of glossy 4K, in line with the owner's taste.",
+  "score": 14.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "zixKyXjDEHs",
+  "lang": "uk",
+  "title": "SEO Подкаст #182 | SEO новини 7-11 вересня 2026",
+  "channel": "Devaka",
+  "published": "2026-09",
+  "duration_min": 45.3,
+  "why": "Latest Devaka/Shulezhko weekly Ukrainian SEO news episode surfaced; a Ukrainian-practitioner take on early-September Google changes (later episodes #183+ did not surface in search).",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "5FHaGd75__k",
+  "lang": "uk",
+  "title": "SEO-плато після 3-х років: як зростати, коли все вже оптимізовано | Олександр Захода",
+  "channel": "SEO-академія Collaborator",
+  "published": "2026-06",
+  "duration_min": 42,
+  "why": "Collaborator conference (May 2026) talk on breaking a growth plateau once on-page work is done: topical expansion, new page types, refresh. Fits our 'dominate the niche' goal.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "LKOmbDscJfU",
+  "lang": "ru",
+  "title": "Все, что вы знаете о маркетинге меняется в 2026 | Разговор с экспертом по SEO",
+  "channel": "Антон Хоменок и Олег Шестаков",
+  "published": "2026-09",
+  "duration_min": 52.5,
+  "why": "Shestakov's long-form view on how classic SEO shifts to AI search; strategic framing plus data from Rush Analytics projects.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "pq_kZV4byTs",
+  "lang": "uk",
+  "title": "SynthID",
+  "channel": "SEO BAZA",
+  "published": "2026-10-07",
+  "duration_min": 39.1,
+  "why": "Ukrainian stream on Google's SynthID watermark detection and what it means for SEO; relevant to our AI-generated covers and video assets.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "6tG362cnb_I",
+  "lang": "uk",
+  "title": "Органічний трафік у 2026: інсайти з десятків агентських проєктів | Анастасія Красюкова",
+  "channel": "Коллаборатор (Collaborator)",
+  "published": "2026-03",
+  "duration_min": 83,
+  "why": "Aggregated 2026 organic-traffic patterns from dozens of UA agency projects; a Ukrainian-market benchmark for which content types grow or decay.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "6xWGUScLMm8",
+  "lang": "en",
+  "title": "From SEO to AIO - Preparing for the New Frontier of Job Search | Jobsync Roundtable",
+  "channel": "JobSync",
+  "published": "2026-06",
+  "duration_min": 60,
+  "why": "A 2026 recruitment-marketing roundtable on how AI Overviews and AI search are changing job-search traffic to job boards and career sites. This is the jobs-vertical slice of AIO, which the Oct 18 findings did not cover.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "agyoWugG030",
+  "lang": "en",
+  "title": "Job Board Owners Meetup | Spring 2026",
+  "channel": "JobBoardSecrets",
+  "published": "2026-04",
+  "duration_min": 59,
+  "why": "Eleven niche job-board owners share what is currently working in Google traffic, Google for Jobs and AI. These are practitioner datapoints from operators like our competitors. The Summer 2026 meetup was already processed, the Spring one was not.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "ZXbGmTesjzs",
+  "lang": "en",
+  "title": "From Product-Led SEO to Agent-Led Search | Eli Schwartz",
+  "channel": "Advanced Web Ranking",
+  "published": "2026-07",
+  "duration_min": 56,
+  "why": "A deeper Fiorelli interview with Schwartz on product-led page sets as AI agents start doing the searching. It complements the Oct talk with more detail on page-type design.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "31jaqXRU2-s",
+  "lang": "en",
+  "title": "Information Gain: What It Is and Where It Actually Helps",
+  "channel": "The SEO Pub",
+  "published": "2026-05",
+  "duration_min": 20,
+  "why": "Practitioner breakdown of where information gain actually moves rankings, and where it does not; refines our information-gain rule P.3.5 beyond 'add unique stats'.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "aVNiN15k8nU",
+  "lang": "en",
+  "title": "Semantic SEO 2026: Content Configuration & Topical Map Mistakes w/ Germans Frolovs",
+  "channel": "Ernesto Ortiz",
+  "published": "2026-05",
+  "duration_min": 143,
+  "why": "Long practitioner session on common topical-map and content-configuration mistakes (macro/micro context, contextual flow); a pre-flight checklist before we expand the info core.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "SLSHSuJ8pQk",
+  "lang": "en",
+  "title": "How to get topical authority in 2026 with Koray Tuğberk and Jesper Nissen - [SEO in 2026]",
+  "channel": "Jesper Nissen SEO",
+  "published": "2026-02",
+  "duration_min": 70,
+  "why": "Koray's 2026 overview of building topical authority (source context, central entity, coverage before links); a framework baseline. Lower novelty if the other Koray items are processed.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "TA8K4PTPLV4",
+  "lang": "en",
+  "title": "The Leak That Exposed Google Search",
+  "channel": "Hacked",
+  "published": "2026-08",
+  "duration_min": 41.7,
+  "why": "Rand Fishkin retrospective on the Google Search leak: clicks, Chrome data, site-level signals, and what still holds in 2026. A good consolidated briefing on how the leak bears on rankings.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "cDUaqrb4--8",
+  "lang": "en",
+  "title": "The New Reality of Organic Search: What Google Shows, Customers Say and LLMs Think About Your Brand",
+  "channel": "Distinctly",
+  "published": "2026-10",
+  "duration_min": 55.5,
+  "why": "Webinar on mapping brand standing across Google results, customer reviews and LLM answers before choosing tactics. Offers a brand-SERP audit framework for ofmmodels.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "QlBUxRl_mCo",
+  "lang": "other",
+  "title": "SEONAUTS Episode 17",
+  "channel": "SEOnauts",
+  "published": "2026-10-14",
+  "duration_min": 85.9,
+  "why": "The October episode, ranked #1 on YouTube for 'Search Central Deep Dive Europe Barcelona', so it probably recaps what Illyes/Splitt/Prommawin said in Barcelona (crawl/index timing, i18n day). Language and content not verified (no description).",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "yNKMvxycaxM",
+  "lang": "ru",
+  "title": "Black Hat SEO в эпоху ИИ: как манипулировать Google и LLM в 2026 | Oleg Shestakov | Запись SIC 2026",
+  "channel": "SIC (Search iGaming Conference)",
+  "published": "2026-08",
+  "duration_min": 27.8,
+  "why": "The most-viewed (5K) gray-niche talk of 2026 on current black-hat vectors against Google and LLMs. Helps explain sudden competitor jumps in the Ukrainian SERP and what to avoid. Likely overlaps the G GATE talk above.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "wJukFIpZybY",
+  "lang": "en",
+  "title": "PDFs in Search: Indexing, AI & Pitfalls (Search Off the Record ep.115)",
+  "channel": "Google Search Central",
+  "published": "2026-10-13",
+  "duration_min": 25.3,
+  "why": "The newest official episode: how Google indexes PDFs, ranks them and uses them in AI features. Matters only if we publish media kits, guides or press PDFs. Low priority but the freshest first-party statements.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "HTRFckTBPTg",
+  "lang": "uk",
+  "title": "Брендові згадки в AI Search: як потрапити у відповіді AI | Євген Саргош — AI SEO Day 2026",
+  "channel": "Phoenix Project",
+  "published": "2026-09",
+  "duration_min": 21.1,
+  "why": "A Ukrainian conference talk on getting the brand mentioned in ChatGPT and AI Overviews for UA queries. Partly overlaps Н6/Н17 but gives local donor and mention tactics for the 'онлифанс агентство' core.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "NU3gQCpRLS4",
+  "lang": "other",
+  "title": "Cobertura completa: Search Central Live Deep Dive Europe 2026 - Otimização Semanal 58",
+  "channel": "Niara",
+  "published": "2026-10",
+  "duration_min": 62.1,
+  "why": "The only full three-day recap of the Barcelona Deep Dive we found (Portuguese): crawling/indexing timing data (Illyes: new URLs found in about 20 h, some never), rendering, canonicalization, i18n. Fills the gap until official recordings exist.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "PcUER8vDS8c",
+  "lang": "uk",
+  "title": "Презентація дослідження newage. Digital Research 2026",
+  "channel": "newage. digital agency",
+  "published": "2026-10-16",
+  "duration_min": 107,
+  "why": "Annual Ukrainian digital market research with real numbers (search and channel behavior in Ukraine, 2026). Market context for Ukraine as priority #1.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Cm87g50Edqw",
+  "lang": "en",
+  "title": "SEO & GEO News week 41 - Fake Stats from LLMs, AI Watermarking, Content Effort and more...",
+  "channel": "Drost SEO",
+  "published": "2026-10-14",
+  "duration_min": 12,
+  "why": "Covers Metehan Yesilyurt's experiment that planted 50,000 fabricated statistics into AI search. It is evidence of how easily LLM answers get poisoned, which matters for protecting our brand facts (Н5, Н17).",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "SPVA6FNX2rw",
+  "lang": "en",
+  "title": "Vibe Coding - yay or nay?",
+  "channel": "Google Search Central",
+  "published": "2026-05",
+  "duration_min": 34,
+  "why": "Googlers on the SEO pitfalls of AI-built sites (JS rendering, semantics, crawlability). Our site is largely AI-agent built, so this is a direct risk check.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "8VArL1BNixA",
+  "lang": "en",
+  "title": "Kevin Indig on Prompt Tracking, AI Visibility Measurement, and Why Trust Has Replaced Rank",
+  "channel": "Kalicube",
+  "published": "2026-07",
+  "duration_min": 27,
+  "why": "Kalicube Summit 2026 talk from Kevin Indig: a data-grounded case that trust and brand perception now matter more than position.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "3okzHvSIkV0",
+  "lang": "en",
+  "title": "Trust Is the New SEO: Marketing in the AI Era with Kevin Indig",
+  "channel": "Amanda Natividad",
+  "published": "2026-07",
+  "duration_min": 30,
+  "why": "Kevin Indig's research on user trust in AI answers and how brands earn it. A complementary angle to the Kalicube talk.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "BWf923BrbBY",
+  "lang": "en",
+  "title": "Measured: Your Website Is Not Dead, Why Google Just Rewarded First-Party Brands Over Aggregators",
+  "channel": "154i",
+  "published": "2026-05",
+  "duration_min": 36.4,
+  "why": "Long analysis of the March 2026 core update favouring first-party brands over aggregators. This is exactly our fight against job-board aggregators (girlswork/xjobber/layboard). Low views, but unique on this point.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "0w66ME9-IRQ",
+  "lang": "en",
+  "title": "Google's Next SEO Apocalypse: The Scaled AI Content Crackdown Is Coming",
+  "channel": "Edward Sturm",
+  "published": "2026-07",
+  "duration_min": 53.5,
+  "why": "Long-form with David Quaid on the coming crackdown on scaled AI content and the signals Google uses. Useful for future-proofing our multi-locale (ru/uk/en/es) content production.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "rOXZdbZ_kM0",
+  "lang": "uk",
+  "title": "SEO Подкаст #178 | SEO новини 17-21 серпня 2026",
+  "channel": "Devaka",
+  "published": "2026-08",
+  "duration_min": 56.8,
+  "why": "Weekly Ukrainian SEO news podcast for the August 2026 spam update week. Shows how the UA SEO community read the update and its local impact.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "FdPIpcEFwl8",
+  "lang": "en",
+  "title": "Google Just Killed SEO Microsites",
+  "channel": "Kasra Dash",
+  "published": "2026-10-17",
+  "duration_min": 12,
+  "why": "Почему Google начал выбивать SEO-микросайты. Это риск-чек для наших отдельных доменов-лендингов (auramodels, MUSE) и для любых сателлитов вокруг ofmmodels.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "eUkUxsgOfYE",
+  "lang": "en",
+  "title": "Nike Has Infinite SEO Authority. Its Blog Gets 1,400 Clicks a Month.",
+  "channel": "Edward Sturm",
+  "published": "2026-09",
+  "duration_min": 28.4,
+  "why": "Real-world case showing that massive domain authority does not carry off-topic content. Supports topical relevance over domain authority when we plan blog expansion beyond the BOFU core.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "qdZWp1fqW0k",
+  "lang": "en",
+  "title": "Stacking Signals: How International SEO Comes Together (And Falls Apart) - Max Prin",
+  "channel": "Tech SEO Connect",
+  "published": "2025-12",
+  "duration_min": 21,
+  "why": "Conference talk on how Google combines hreflang, canonical, content language, internal links and local links into version selection, and where it breaks. Useful for diagnosing our /uk invisibility without touching the skeleton.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "lYkumFZGgc4",
+  "lang": "en",
+  "title": "International SEO Secrets That Actually Work in Google AI Overviews ft. Kira Khoroshilova",
+  "channel": "Jitendra Vaswani (Inside a Hustler's Brain)",
+  "published": "2026-05",
+  "duration_min": 24,
+  "why": "Russian-born international SEO practitioner on why AIO shows other countries' pages despite correct hreflang ('cultural nuance mismatch'), her 'cultural compartmentalization' framework, and tiered market expansion. Applicable to UA first, then PL/DE/CZ diaspora.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "O9U2mv6OX04",
+  "lang": "uk",
+  "title": "Мультирегіональні сайти в SEO — як зробити це правильно | Валерія Карпова",
+  "channel": "Коллаборатор (Collaborator)",
+  "published": "2025-05",
+  "duration_min": 45,
+  "why": "The only Ukrainian practitioner talk found that is specifically about multiregional/multilingual site setup (hreflang, regional versions) from a Ukrainian perspective. It is outside the date window (May 2025), included only because nothing else covers this.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "2TDkyjpNKT4",
+  "lang": "uk",
+  "title": "SEO Подкаст #178 | SEO новини 10-14 серпня 2026",
+  "channel": "Сергій Кокшаров (Devaka) & Ігор Шулежко",
+  "published": "2026-08-14",
+  "duration_min": null,
+  "why": "Weekly news digest from leading Ukrainian practitioners, including what to do now that AI vendors watermark generated text (EU AI Act art. 50). Gives a UA-market read on summer 2026 changes.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "2KAFu2xf-Og",
+  "lang": "en",
+  "title": "8.16M Results Reveal What Google Actually Changed",
+  "channel": "Sterling Sky Inc (Joy Hawkins, Yext data)",
+  "published": "2026-09-23",
+  "duration_min": null,
+  "why": "Analysis of 8M+ SERPs shows the May 2026 core update changed what a ranking position means. That affects how we compare GSC and rank-tracker positions across UA vs EU markets (ties to Google's Sep 2026 remark that positions 1-10 are hard to map).",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "LZmwEYCH_mo",
+  "lang": "en",
+  "title": "Fashion's embrace of AI sparks backlash among models, customers",
+  "channel": "NBC News",
+  "published": "~2026-02",
+  "duration_min": 7,
+  "why": "Mainstream news evidence of model and customer backlash against AI-generated people in fashion. This is a reputational risk signal for a model agency in particular: AI 'models' on our site could read as fake recruiting.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "XgBoFNBNVHU",
+  "lang": "en",
+  "title": "Stock Photos vs. Unique Photos: Which Does Google Prefer for Better Rankings?",
+  "channel": "Sterling Sky Inc",
+  "published": "2024-10-03",
+  "duration_min": null,
+  "why": "One of the few real tests on this question. Swapping stock for unique photos barely moved web rankings over 4 weeks, but duplicate stock images lose in Google Images, and a tiny pixelated image hurt a lawn-care page. Data-based framing: originality matters for Images and trust, while web rankings depend on intent match and quality.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "SfC27XgelgE",
+  "lang": "en",
+  "title": "SEO for Google Images",
+  "channel": "Google Search Central",
+  "published": "2021 (approx.)",
+  "duration_min": null,
+  "why": "Official baseline from John Mueller. Covers images near relevant text with captions, no text baked into images, alt text, high-quality sharp previews (they raise CTR), stable image URLs, max-image-preview:large for Discover, licensing metadata and speed. Older, but still the core of the current docs, so a good reference for checking anything else.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "zPlofvlXBvI",
+  "lang": "de",
+  "title": "Neues KI-Gesetz greift ab jetzt! Wann muss man einen KI-Inhalt kennzeichnen?",
+  "channel": "Digitale Profis",
+  "published": "unknown (est. 2026-08)",
+  "duration_min": null,
+  "why": "Covers the EU AI Act Article 50 transparency duties that apply from 02.08.2026: when AI-generated or photoreal content must be labeled. Our audience is partly EU diaspora, so this is the compliance side of 'AI faces as editorial atmosphere' and of the disclosed-illustration covers.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "35pKf3vyJBg",
+  "lang": "en",
+  "title": "Robby Stein, Google's VP of Search, on AI Mode & the Future of Links #2",
+  "channel": "Superintelligence",
+  "published": "2026-05-29",
+  "duration_min": null,
+  "why": "Google's VP of Search Product (AI Overviews, AI Mode, Lens) on multimodal and visual search growth and links in AI answers. Strategic context on why original, recognizable images become entry points via Lens and AI Mode. Indirect for tactics.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "5OccF4g0UKI",
+  "lang": "en",
+  "title": "How to Optimize Content for AI Search Engines (AEO course, module 3)",
+  "channel": "Ahrefs",
+  "published": "unknown (~early 2026)",
+  "duration_min": null,
+  "why": "Ahrefs citation data: word count barely correlates with AI Overview citation (r≈0.04 across 174K pages; 53% of cited pages are under 1,000 words). Freshness matters (most of ChatGPT's top-cited pages were updated recently). Listicles, comparisons and data-driven pages with original stats get cited. Argues for compact, visual articles with original numbers and comparison tables rather than long walls of text.",
+  "score": 14.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "gEHe1-1futI",
+  "lang": "en",
+  "title": "How to Create the Most Realistic AI Images Possible",
+  "channel": "Curious Refuge",
+  "published": "~2026-02",
+  "duration_min": 18,
+  "why": "A practical realism breakdown from a well-known AI filmmaking school (76K views), with a companion real-vs-AI quiz. Useful for learning which cues give AI away (light, texture, imperfections), even though our policy keeps AI faces as atmosphere only. Note: the channel sells courses.",
+  "score": 13.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Ap2GQ8h8HvM",
+  "lang": "ru",
+  "title": "почему все AI-картинки одинаковые — и как найти свой стиль в Midjourney",
+  "channel": "neurodacha",
+  "published": "~2026-05",
+  "duration_min": 19,
+  "why": "Russian-language video on why AI images look interchangeable and how a trained eye, references and moodboards build an ownable style. Complements Livada and the Gannon method for a house visual system.",
+  "score": 13.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "L3saZLsifOo",
+  "lang": "en",
+  "title": "Nano Banana 2.1 vs GPT Image 2.5: Same Prompts, Big Difference",
+  "channel": "Kingy AI",
+  "published": "2026-10-19",
+  "duration_min": 6,
+  "why": "Same-prompt comparison of the two newest models (October 2026, 238K views). Our memory still references Nano Banana Pro, so this updates the tool landscape before any new cover batch.",
+  "score": 13.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "jQE7wvnsHtg",
+  "lang": "en",
+  "title": "Inside Google's First Dedicated Discover Core Update [Feb 2026]",
+  "channel": "Sara Taher",
+  "published": "2026-02 (est.)",
+  "duration_min": null,
+  "why": "Analysis of the February 2026 Discover core update: local relevance, less clickbait, topic-by-topic expertise, and the revised Discover guidelines that call for high-quality images. Note: US English only so far, with a global rollout promised. Relevant to how covers and titles should avoid a clickbait look.",
+  "score": 13.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "1hAMrV901uA",
+  "lang": "uk",
+  "title": "Healthcare проєкти у часи AI Overviews та LLM | Микола Новіков",
+  "channel": "Коллаборатор (Collaborator)",
+  "published": "2026-05",
+  "duration_min": 40.7,
+  "why": "YMYL-style trust building in Ukrainian Google under AI Overviews (Netpeak speaker); E-E-A-T and AIO tactics transferable to our sensitive niche.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "zG7g5gAOZW0",
+  "lang": "uk",
+  "title": "SEO+GEO/AEO. Як змусити ШІ рекомендувати ваш бізнес.",
+  "channel": "UniTalk - Ukraine",
+  "published": "2026-09",
+  "duration_min": 87,
+  "why": "Ukrainian-market session on getting a business recommended by AI assistants; may add UA-specific GEO examples beyond our Н3/Н6 rules.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Uw_dPBO9JiM",
+  "lang": "en",
+  "title": "iGaming SEO in 2025: Real Talk with Kasra Dash",
+  "channel": "Collaborator",
+  "published": "2025-10",
+  "duration_min": 46.5,
+  "why": "Повтор из очереди. SEO в чувствительной нише iGaming (ближайший аналог adult-смежной): ссылки, бренд и риски санкций в высококонкурентной серой тематике.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "7yralfU2e2Q",
+  "lang": "en",
+  "title": "Google Killed My Job Board – Here's How I Rebuilt the Traffic & Revenue",
+  "channel": "JBoard",
+  "published": "unknown",
+  "duration_min": 32,
+  "why": "Published around 2025. Alexander Chukovski, a top Google for Jobs optimization consultant, on a job board that Google nuked and how its traffic was rebuilt. It gives recovery and penalty-avoidance lessons specific to job sites.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "1KROyoPytyU",
+  "lang": "ru",
+  "title": "Как захватывают Google через SEO: AI-фермы, тысячи сайтов и гонка за трафик",
+  "channel": "Роман Мануйлов",
+  "published": "2026-07",
+  "duration_min": 71,
+  "why": "Oleg Shestakov (Rush Agency) on mass, AI-scaled page and site production in Russian-language Google in 2026: what scale tactics competitors in our language market use and where Google draws the line.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "5UR4xTGBxXE",
+  "lang": "uk",
+  "title": "Як оновити старий контент за допомогою AI: Повна SEO-стратегія 2026",
+  "channel": "SEOquick",
+  "published": "2026-02",
+  "duration_min": 52,
+  "why": "UA agency's full workflow for refreshing decayed articles with AI: selection, rewrite and measurement. A UA-market counterpart for our refresh conveyor.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "dfBCYrF8Y2A",
+  "lang": "ru",
+  "title": "SEO в 2026: AI, боты и поведенческие факторы. Подкаст с Денисом Нарижным",
+  "channel": "Денисенко Денис",
+  "published": "2026-07",
+  "duration_min": 23.4,
+  "why": "Russian-language podcast on how behavioral factors and bots work differently in Google and Yandex in 2026, including white versus grey approaches. A local practitioner view on click signals.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "DvRqyQz9eWU",
+  "lang": "en",
+  "title": "Its time to quit the SEMRush Toxic Links Report in SEO",
+  "channel": "David G Quaid",
+  "published": "2026-07",
+  "duration_min": 8,
+  "why": "2026 argument against toxic-score disavow workflows. Backs our 'do not remove links in panic' rule П.5.16 and the disavow part of this angle.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "yugJYRobk4s",
+  "lang": "ru",
+  "title": "Топовысок: дневник SEO-конкурса 2026 — позиции, динамика и результаты",
+  "channel": "SEO частник Влад",
+  "published": "2026-10",
+  "duration_min": 26,
+  "why": "Diary of a 2026 SEO contest: new domains going from zero to top for a fresh keyword, with position dynamics. A pure from-zero ranking experiment (engine mix unverified).",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Dh45Yojn3rg",
+  "lang": "en",
+  "title": "Rank and Rent Websites After the Google Spam Update (3 Sites Still Top 3)",
+  "channel": "WordsAtScale",
+  "published": "2026-10",
+  "duration_min": 8,
+  "why": "Live Search Console data from 4 small lead-gen sites through the Sep 2026 spam update, plus the 5 rules that kept 3 of them in the top 3. Small-site survival evidence.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "x981_vBN5W4",
+  "lang": "en",
+  "title": "Google's June Spam Update Is Brutal The Sites Getting Wiped Out And Why",
+  "channel": "Edward Sturm",
+  "published": "2026-07",
+  "duration_min": 18,
+  "why": "Breakdown of the sites wiped out by the June 2026 spam update and the reasons. Completes the 2026 spam-update case series (June/Aug/Sep).",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "j6wRAIF4p_M",
+  "lang": "ru",
+  "title": "AI SEO 2026: как нейросети выбирают, кого процитировать (разбор на цифрах)",
+  "channel": "Андрей Гусаров",
+  "published": "2026-08",
+  "duration_min": 18,
+  "why": "A Russian-language, numbers-based breakdown of why a Google #1 does not guarantee a ChatGPT citation and how the selection works. It is a CIS-market data point to compare with US studies.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "8d-wFTFQ3-s",
+  "lang": "en",
+  "title": "IndexNow for Job Boards: Get New Listings Indexed Faster",
+  "channel": "Cavuno - AI Job Board Software",
+  "published": "2026-03",
+  "duration_min": 59,
+  "why": "A long session specific to job boards on IndexNow for fast listing discovery, the exact format of our competitors (girlswork, layboard). The channel is small and vendor-led, so authority is low.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "9AVTVXt3Qfc",
+  "lang": "en",
+  "title": "Future-Proofing SEO: Technical Depth and Strategic Clarity in 2026 | Tory Gray",
+  "channel": "Advanced Web Ranking",
+  "published": "2026-03",
+  "duration_min": 57,
+  "why": "A JS SEO and technical specialist sets out her 2026 technical priorities. A good cross-check of our rendering, structured data and crawl hygiene priorities.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "quF5DNNuk04",
+  "lang": "en",
+  "title": "Google's Other Voters: Clicks and Brand Searches (Google Link Patents Series Finale)",
+  "channel": "Link Builders",
+  "published": "2026-10",
+  "duration_min": 8,
+  "why": "Patent-based explanation of how branded searches and click behaviour act as reputation votes next to links. Supports the branded-demand KPI (П.6.3).",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "bw0uBdmEK28",
+  "lang": "en",
+  "title": "AI agents, Google updates & search trust signals | April 2026 SEO Update",
+  "channel": "Yoast",
+  "published": "2026-05",
+  "duration_min": 62,
+  "why": "Yoast monthly update centred on evolving search trust signals in spring 2026. Likely covers authorship and organization schema changes.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "QRBy4O8r4t4",
+  "lang": "en",
+  "title": "Why AI Query Fan Out Has Online Reputation Management 10x Harder? (Karl Hudson ft James Dooley)",
+  "channel": "James Dooley",
+  "published": "2026-07",
+  "duration_min": 13,
+  "why": "Online reputation management under AI fan-out: how negative or forum mentions surface for brand queries. Relevant to our brand-shield and squatter work.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "jWqa6ck6G3Y",
+  "lang": "en",
+  "title": "Are iGaming Affiliates Still Worth It in 2026? | SEO, AI & GEO",
+  "channel": "Big Pond Digital",
+  "published": "2026-09",
+  "duration_min": 65,
+  "why": "Long-form talk on SEO, AI and GEO in a restricted vertical after the 2026 updates, including how AI answers treat gambling-type queries. A proxy for how OnlyFans-type queries are handled.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "RJ3ryht0AhE",
+  "lang": "ru",
+  "title": "Описания товаров реально влияют на SEO? Честный эксперимент без ссылок и рекламы",
+  "channel": "Трафик как актив · Михалицын",
+  "published": "2026-03",
+  "duration_min": 49.8,
+  "why": "Controlled Russian-language experiment on 9,000 listing cards with and without unique descriptions, no links or ads. A direct analog for whether unique text on templated vacancy and geo pages moves Google rankings.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "A2kbOSCrOSQ",
+  "lang": "en",
+  "title": "International SEO Insights from China | Natalia Witczyk (The Search Session ep.25)",
+  "channel": "Advanced Web Ranking",
+  "published": "2025-08",
+  "duration_min": 57,
+  "why": "Covers Google AI Overviews translating English sources into local-language answers even when a native version exists, and why hreflang doesn't help AI. Also argues for the HTML lang attribute and an 'international UX' approach. Directly relevant to RU/UK versions competing with translated English sources.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "2t4Wx75J5nQ",
+  "lang": "en",
+  "title": "Rebuilding a Multilingual Website in the AI Era",
+  "channel": "Acolad Group",
+  "published": "2026-09",
+  "duration_min": 55,
+  "why": "Webinar on multilingual site localization workflows, SEO and GEO under AI translation. May give a quality-gate model for our uk/en/es overlays (human review vs MT).",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "un16J8iZEQE",
+  "lang": "uk",
+  "title": "Тонкощі аналізу ніші для SEO | Ілля Черепинець",
+  "channel": "Коллаборатор (Collaborator)",
+  "published": "2026-03-24",
+  "duration_min": 58,
+  "why": "Checklist for analysing a new geo/niche: picking the real SERP competitors, homepage vs inner-page link analysis, anchor analysis and signals that a leader can be overtaken. Directly applicable to sizing girlswork/xjobber/layboard per country (UA, PL, DE).",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "DU6vjWnH2p0",
+  "lang": "en",
+  "title": "How I design websites with EDITORIAL style layouts (part 1)",
+  "channel": "BONT (Adrian Samosa, ex-Media Monks)",
+  "published": "unknown (~2025-2026)",
+  "duration_min": null,
+  "why": "How a premium editorial look is actually made: remove, don't add. One type family, one or two colors, one grid, images inside clear boxes, disciplined whitespace (a 20/40/80/160 spacing system). Pair a 'place' image with a 'person in place' lifestyle image to tell a story. A direct design recipe for 'expensive, not paper' article pages that does not depend on stock.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "TaPhj4-bxkQ",
+  "lang": "en",
+  "title": "Let's talk image SEO | Search Off the Record",
+  "channel": "Google Search Central",
+  "published": "2022-10-06",
+  "duration_min": null,
+  "why": "Official Google podcast (Mueller and Lizzi Sassman) on image search traffic, alt text and how Google understands images. Older, but first-party on how Google treats image context. Useful as a check on claims from creators.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "q5_PrTvNypY",
+  "lang": "en",
+  "title": "How to Spot Fake AI Photos | Hany Farid | TED",
+  "channel": "TED",
+  "published": "~2025",
+  "duration_min": 12.5,
+  "why": "The leading digital-forensics authority (1.36M views) on how AI photos are detected and why trust in images is collapsing. Background for why undisclosed photoreal AI is the riskiest tier. It is from 2025 but included for its unique authority.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "dEvk7P1xOrs",
+  "lang": "en",
+  "title": "Why brands using A.I still can't get consistent product images",
+  "channel": "Agora",
+  "published": "~2026-08",
+  "duration_min": 3,
+  "why": "Short argument that brand inconsistency comes from missing creative direction and systems, not from the tools. Supports building a written visual spec (palette, light, lens, composition) for all 32 article covers.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "m4EUPh5oCmY",
+  "lang": "en",
+  "title": "The Best AI Image Generator Is NOT What I Expected",
+  "channel": "smallzero",
+  "published": "2026-10-22",
+  "duration_min": 15,
+  "why": "Head-to-head of 12 image models on realism as of October 2026. Useful for picking the current model for editorial atmosphere shots. Small channel, so a hypothesis to verify with our own test sheet.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "dSGzpvtCU_0",
+  "lang": "en",
+  "title": "How Google Discover is Moving Away From Publishers",
+  "channel": "Harry Clarkson-Bennett",
+  "published": "unknown (est. 2025–2026)",
+  "duration_min": null,
+  "why": "A respected publisher SEO on how Discover is shifting (YouTube, social and AI cards squeezing publisher cards). Helps set expectations: for a RU/UK recruitment site, Discover is a bonus, and covers should be built for Search, Images and AI Mode thumbnails first.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "TLimTmR9RPc",
+  "lang": "ru",
+  "title": "Как попасть в ИИ ответы: разбираю Рекомендации Google по AI продвижению (GEO/AI SEO/AEO)",
+  "channel": "Илья Карбышев: SEO для бренд-медиа",
+  "published": "2026-05-17",
+  "duration_min": null,
+  "why": "Russian-language breakdown of the May 2026 Google AI guide for brand media. Structure content visually (heading hierarchy, lists, tables), add video (YouTube), back up expertise with real authors and cases, merge long-tail queries into deep long-reads instead of mass pages. Useful as a ready RU reference for the team or owner.",
+  "score": 13.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "rHLHx1OURWY",
+  "lang": "en",
+  "title": "This Video Proves AI Generated Images are Dying",
+  "channel": "Marketing Against the Grain",
+  "published": "~2026-01",
+  "duration_min": 17,
+  "why": "HubSpot's marketing podcast on the 2026 AI backlash and keeping content human. Useful context on audience fatigue with generic AI visuals, from a credible marketing source.",
+  "score": 12.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "znDMjDDA_w0",
+  "lang": "en",
+  "title": "Google Discover Core Update Done, Search Volatility, Search Serving Bug, AI Prompt Injection & More",
+  "channel": "RustyBrick Barry Schwartz Search Engine Roundtable",
+  "published": "2026-02-27",
+  "duration_min": 13,
+  "why": "Discover core update completed (US English, country-local boost per NewzDash data). Also covers Google testing removal of dates from Discover cards and Circle to Search reading the whole image as context. Background on Discover and visual search in 2026.",
+  "score": 12.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "5cm0svl2xy8",
+  "lang": "en",
+  "title": "Images on Mobile",
+  "channel": "NN/g (Nielsen Norman Group)",
+  "published": "unknown (older, pre-2025)",
+  "duration_min": null,
+  "why": "A top UX research authority: decorative images should not appear on mobile because they lengthen the page and slow loading; use images only when they add information. Critical for an audience of girls 18-35 who read on phones. It argues for informative inline visuals (diagrams, tables, step cards) over mood images.",
+  "score": 12.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "gxc-xEsU-dA",
+  "lang": "en",
+  "title": "5 AI Prompts for Digital PR (Dominate SEO and AI Search)",
+  "channel": "Backlinko (Matt Kenyon)",
+  "published": "unknown (~2026)",
+  "duration_min": null,
+  "why": "How original-data assets (a study page with charts or interactive elements built from proprietary or anonymized data) earn editorial links and positive brand mentions. Examples: Preply (74 referring domains to one study URL), Houzz. A template for OFM data visuals (aggregated, anonymized and compliant, e.g. a timeline of how a new model's month 1 goes) that donors and AI can cite. Must respect the site's claim rules.",
+  "score": 12.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "tZmipU-SBLg",
+  "lang": "en",
+  "title": "From 0 to 500K Clicks: The Exact 7-Step SEO Playbook Behind Remote Rocketship Job Board",
+  "channel": "Artha Job Board",
+  "published": "2025-11",
+  "duration_min": 29,
+  "why": "A job board that grew to about 500K clicks with programmatic landing pages (title x location x type), full JobPosting fields and job-to-category internal linking. It is a concrete template for our vacancy page matrix.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "8trU06HL25k",
+  "lang": "en",
+  "title": "Job Board SEO: The Complete Guide & Best Practices",
+  "channel": "Cavuno - AI Job Board Software",
+  "published": "2026-02",
+  "duration_min": 33,
+  "why": "How job boards structure category, location and listing pages and their internal linking. This is the playbook behind the competitors that beat us on «вакансии моделей», so we can copy what is legitimate. Vendor channel.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "rAF4SDFAmNA",
+  "lang": "en",
+  "title": "REPLAY: Job Board Con 2025",
+  "channel": "JobBoardSecrets",
+  "published": "2026-05",
+  "duration_min": 167,
+  "why": "A full replay of the annual job-board operators' conference, likely with sessions on Google traffic, Google for Jobs and AI. Mine it for job-site-specific SEO datapoints.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "8XbjXagWhAY",
+  "lang": "ru",
+  "title": "Конец SEO? | Как Google убивает трафик сайтов в 2026",
+  "channel": "Антон Хоменок и Александр Флинт",
+  "published": "2026-06",
+  "duration_min": 39.6,
+  "why": "RU discussion of 2026 zero-click and CTR erosion (AIO, SERP features) and how sites adapt. A Russian-speaking market view of the SERP-features squeeze on clicks.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "OACEoohLwuw",
+  "lang": "ru",
+  "title": "Дроп-домены как инструмент ускорения брендового SEO в iGaming — Игорь Воловый | Запись доклада SIC",
+  "channel": "SIC (Search iGaming Conference)",
+  "published": "2026-07",
+  "duration_min": 34.3,
+  "why": "Using expired domains to speed up brand-SERP control in a gray niche. Relevant to the brand-shield problem (squatter ofmodels.com.ua) and to owning more of the 'ofm/ofmmodels' brand SERP.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "wv9uuHTAxbc",
+  "lang": "en",
+  "title": "Why Search Systems Disagree | Tamara Novitović | brightonSEO April 2026",
+  "channel": "Tamara Novitović",
+  "published": "2026-06",
+  "duration_min": 21.8,
+  "why": "Ahrefs data comparing the classic SERP, AI Mode and ChatGPT on the same queries: which source types each system prefers. Refines the AIO-citation findings (Н2) with a cross-system view.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "LZUOy52Lbeg",
+  "lang": "en",
+  "title": "brightonSEO October 2026 - Pi Datametrics",
+  "channel": "Pi Datametrics",
+  "published": "2026-10-15",
+  "duration_min": 18.9,
+  "why": "Probably a talk recording from brightonSEO October 2026 by a SERP-volatility data vendor. Official brightonSEO October uploads aren't out yet, so this is one of the few real October 2026 stage recordings. Content not verified.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "UDc0ro75MM8",
+  "lang": "ru",
+  "title": "Alex Nomad SEO Dream Team | За пределами казино: новая SEO-модель в iGaming | Запись доклада SIC",
+  "channel": "SIC (Search iGaming Conference)",
+  "published": "2026-07",
+  "duration_min": 27.4,
+  "why": "A new gray-niche SEO model beyond the classic money site (media/brand-led). It could inform how an agency site plus satellite content outranks job boards.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "q19tYUrLW5s",
+  "lang": "en",
+  "title": "SEO Cast LIVE from BrightonSEO October",
+  "channel": "SEO bureau Onder",
+  "published": "2026-10-09",
+  "duration_min": 88.1,
+  "why": "Live floor interviews with October 2026 brightonSEO speakers: the freshest unscripted practitioner takes from the event. The other two parts (_ol0kIlx6G0, gcqRISFZaqw) are 5 h each and were not included.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Qs_p21vLp1A",
+  "lang": "en",
+  "title": "How I'd Get Traffic to a New Website if I Had to Start Over (2026)",
+  "channel": "Ahrefs",
+  "published": "2026-01",
+  "duration_min": 10,
+  "why": "Ahrefs' 2026 from-zero playbook for a brand-new site. Useful as a baseline to check our new-page/new-locale launches against.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "yIU9ir3omUM",
+  "lang": "en",
+  "title": "Log Files, AI Bots, and the Real Mechanics of AI Search | Metehan Yeşilyurt",
+  "channel": "Advanced Web Ranking",
+  "published": "2026-02",
+  "duration_min": 54,
+  "why": "A deep dive into what server logs reveal about Googlebot and AI-bot behaviour, extending Н8 with concrete methods we could apply to Vercel log drains.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "FDb4aKLIVsI",
+  "lang": "en",
+  "title": "How I made the web more responsive— real-world case studies of INP optimizations —",
+  "channel": "We Love Speed",
+  "published": "2025-10",
+  "duration_min": 43,
+  "why": "A performance-conference talk with real INP optimisation case studies, relevant to our heavy animation stack and mobile INP. It is older, so watch only for the techniques.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "TZvZiEcx0QY",
+  "lang": "en",
+  "title": "129: Helpful Content Update Recovery and More w/Kristine Schachinger",
+  "channel": "Experts on the Wire (SEO Podcast)",
+  "published": "2026-03",
+  "duration_min": 77,
+  "why": "In-depth HCU recovery talk: which site-wide quality and trust signals moved recovering sites. Date is approximate.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "aZT5Iv2EgrI",
+  "lang": "ru",
+  "title": "Олег Шестаков, \"Черное SEO в эпоху AI: как манипулировать Google и LLM в 2026 году\"",
+  "channel": "iGaming & Affiliate Conference MAC’26",
+  "published": "2026-07",
+  "duration_min": 26,
+  "why": "Rush Agency founder lists the black-hat manipulations grey-niche competitors use against Google and LLMs in 2026. Useful for threat-modelling negative SEO and brand-poisoning against us, not for copying.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "y9KRdIrQD54",
+  "lang": "en",
+  "title": "iGaming SEO 2026 (James Dooley Interviews Charles Floate)",
+  "channel": "James Dooley",
+  "published": "2026-05",
+  "duration_min": 13,
+  "why": "Short 2026 update from Floate on what still ranks in a restricted vertical after the March and May 2026 updates.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "9mMF2aeOyKg",
+  "lang": "en",
+  "title": "19 Years in SEO: What Actually Works in 2026 (From iGaming to AI Overviews)",
+  "channel": "Edward Sturm",
+  "published": "2026-03",
+  "duration_min": 76,
+  "why": "James Owen carries lessons from high-competition restricted verticals over to AI Overviews. A long practitioner view on trust, links and brand in sensitive niches.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "O-eu7wDSVg8",
+  "lang": "en",
+  "title": "Adult SEO: How To Rank On Page One Of Google & AI Search in 24 Hours",
+  "channel": "SEO Jesus",
+  "published": "2026-03",
+  "duration_min": 45,
+  "why": "The only adult-specific long-form SEO video in the pool (Reddit ranking, click tactics, AI search for adult). It comes from a course funnel, so expect hype; useful mainly for spotting adult-SERP specifics.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "9rLNAE-u_OA",
+  "lang": "ru",
+  "title": "💊 Медицинский бренд в топе нейросетей? GEO‑кейс, где фарм‑бренд вышел в лидеры за 2 месяца",
+  "channel": "Пиксель Тулс: ИИ, SEO. Проекты & инструменты",
+  "published": "2026-06",
+  "duration_min": 15,
+  "why": "Russian-language case of a YMYL (pharma) brand reaching the top of AI answers in 2 months. Shows which tactics work for sensitive-topic brands in LLM citations.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "H3Nqw9Gr7Ao",
+  "lang": "en",
+  "title": "Wayfair's Framework for Picking SEO Tests",
+  "channel": "SearchPilot",
+  "published": "2026-02",
+  "duration_min": 39.6,
+  "why": "Wayfair's enterprise method for prioritising which SEO hypotheses to test. Can be adapted to rank our refresh and experiment backlog by expected impact.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "2lLsPquEu6c",
+  "lang": "uk",
+  "title": "НаЗахід 27 - Конференція №1 з SEO на західних ринках",
+  "channel": "SeoProfy UA",
+  "published": "2025-11",
+  "duration_min": 715,
+  "why": "Ukrainian SEOs (SeoProfy and others) on entering Western/EU markets: localization, links in foreign markets, AI SERPs. Ukrainian practitioners' playbook for the EU expansion step.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "G6vl1pcNMUk",
+  "lang": "en",
+  "title": "The International SEO Mindset Every Consultant Needs",
+  "channel": "Adrijana Vujadin Podcast",
+  "published": "2026-07",
+  "duration_min": 35,
+  "why": "Why international SEO strategies fail even with big budgets: organizational and prioritization patterns for multi-market rollouts. Useful for sequencing UA → PL/DE/CZ → global.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "SlqUm6IN7oA",
+  "lang": "en",
+  "title": "SEO tips for international and multilingual websites",
+  "channel": "Sara Taher",
+  "published": "2026-02",
+  "duration_min": 10,
+  "why": "Summary of John Mueller's recent statements on multilingual setups: URL structure not required, separating languages, what Google needs to pick versions. A quick official-position check.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "mbGjLbVC0gY",
+  "lang": "en",
+  "title": "Amaze Conference India | Kira Khoroshilova Global SEO Presentation",
+  "channel": "Diary Of An SEO",
+  "published": "2026-02",
+  "duration_min": 26,
+  "why": "Conference version of Khoroshilova's global SEO framework with slides (case numbers on subfolder consolidation and localization). Complements the podcast interview with concrete examples.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "dXMLN4M9nUc",
+  "lang": "ru",
+  "title": "Как мы продвигали мультиязычный сайт Qomek — полный SEO-разбор от Peklo",
+  "channel": "ПЕКЛО — горячий интернет-маркетинг",
+  "published": "unknown",
+  "duration_min": 69,
+  "why": "Real case of a bilingual Russian + local-language site in a post-Soviet market, the closest structural analog to our RU-base + UK setup (which version Google shows, how to split semantics). Date is ambiguous ('1 year ago' = late 2024 to late 2025).",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "xMq5Vbw5MTI",
+  "lang": "ru",
+  "title": "SEO на Западе VS в СНГ: почему все хотят работать с западными клиентами | Александра Тачалова",
+  "channel": "Rush Agency (Олег Шестаков)",
+  "published": "2026-04-25",
+  "duration_min": 79,
+  "why": "Ex-Digital Olympus founder explains how SEO, link building and digital PR work differently in EU/US vs CIS markets. Useful for deciding local EU outlets vs UA link exchanges for diaspora pages.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Sc7HVM87Axs",
+  "lang": "uk",
+  "title": "Огляд Google December Core Update 2025",
+  "channel": "Коллаборатор (Collaborator) / Сергій Кокшаров",
+  "published": "2026-03-17",
+  "duration_min": 11,
+  "why": "Ukrainian recap of SE Ranking data: domains older than 15 years dominate the top-10 and new domains hold under 2%. The Discover update now favours country-local sites and forums/UGC lost ground, which frames our young domain against old UA boards and forums.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "MXmbmNTnl_w",
+  "lang": "en",
+  "title": "New Amazon AI Image Rule  How to Tag AI Generated People in Product Images",
+  "channel": "Commerce with McKay",
+  "published": "~2026-08",
+  "duration_min": 6,
+  "why": "Reports that Amazon now requires tagging photorealistic AI-generated people. A sign that disclosure of AI humans is becoming a platform norm in 2026, which supports our policy of disclosed illustration and no undisclosed photoreal faces.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "sLbXaGu3g-w",
+  "lang": "de",
+  "title": "KI-Inhalte kennzeichnen: Was der EU AI Act ab 2026 verlangt | AppCore Academy",
+  "channel": "AppCore – Powered by Experts",
+  "published": "unknown (2025–2026)",
+  "duration_min": null,
+  "why": "Second explainer on Article 50 labeling (AI images, video, text), cross-checking the one above. Use it with a primary legal source before setting a disclosure format (caption, IPTC digitalSourceType or C2PA kept on export).",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "9-Gvyvs4nbY",
+  "lang": "en",
+  "title": "Google Discover Best Practices for Publishers with WTF is SEO",
+  "channel": "Marfeel",
+  "published": "unknown",
+  "duration_min": null,
+  "why": "Discover best practices from news-SEO specialists (the WTF is SEO team): large, unique, non-text-heavy hero images, max-image-preview:large, and keeping the main subject visible under the full-width crop. Practical cover-composition rules if we chase Discover.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "dCNJBeV_cOY",
+  "lang": "en",
+  "title": "SynthID & C2PA: How Google Marks ALL AI Content Now | Google I/O 2026",
+  "channel": "Gen AI Guru",
+  "published": "2026-05 (est., I/O 2026)",
+  "duration_min": null,
+  "why": "The only video found on the I/O 2026 provenance push: SynthID watermarks and C2PA Content Credentials, now checkable in Search, Lens and AI Mode ('Is this AI generated?'). Low-authority Short, so take only the facts and verify them against SEJ 19.05.2026 and Google's blog.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "PLrmd7_AsEI",
+  "lang": "en",
+  "title": "9 UI/UX Typography Laws EVERY UI/UX Designer MUST KNOW",
+  "channel": "Saptarshi Prakash",
+  "published": "unknown (~2026; discusses AI-generated landing pages)",
+  "duration_min": null,
+  "why": "The typography side of trust: the aesthetic-usability effect (well-set type reads as more trustworthy before any interaction), chunking against walls of text, 45-75 characters per line, tighter leading on large headings, WCAG contrast, and front-loading key information (serial position effect). Notes that AI-generated pages default to safe fonts like Inter and look average. Turns 'not paper-like' into concrete CSS rules.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "ejfuEwm-HtM",
+  "lang": "en",
+  "title": "This is why you shouldn't let ChatGPT run your SEO.",
+  "channel": "Edward Sturm",
+  "published": "2026-05-14",
+  "duration_min": null,
+  "why": "A counterweight. It cites Ahrefs: schema barely moved AI citations (1,885 pages), and the top citation factor across 1.4M prompts was semantic similarity to the AI's query language, not 'publishing original data'. So original visuals and data help links and trust, but the text around them (title, H1, first sentence) still decides AI citation.",
+  "score": 12.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "uPIIJDmq5OU",
+  "lang": "en",
+  "title": "Stop Building AI Slop Websites (Do This Instead)",
+  "channel": "Luke Carter",
+  "published": "~2026-05",
+  "duration_min": 13,
+  "why": "Covers why AI-made sites all look identical and a GPT Image 2 workflow for custom, site-specific imagery. Relevant to making ofmmodels feel bespoke and expensive rather than template-generic.",
+  "score": 11.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "JLqYExWVkfc",
+  "lang": "en",
+  "title": "ZooJobs.com Building a Niche Job Board with Peter Askew",
+  "channel": "JobBoardSecrets",
+  "published": "2026-03",
+  "duration_min": 34,
+  "why": "A niche job board built by a known domain/SEO operator. It shows how a narrow vertical job site outranks generalists, which is close to our adult-niche vs general job boards situation.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "sjAlzPfYAiw",
+  "lang": "en",
+  "title": "The Google Leak Exposed How Search Really Works | Erfan Azimi",
+  "channel": "Odys Podcast: The High Stakes Growth Show",
+  "published": "2026-01",
+  "duration_min": 57,
+  "why": "Interview with Erfan Azimi, the person who surfaced the leak, on what it shows about clicks, site authority and brand. First-hand interpretation of the leak's implications.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "jLQxY5i1y8I",
+  "lang": "en",
+  "title": "Bing Deindexed My Website — Here's How I Got It Back",
+  "channel": "Krittin Kalra",
+  "published": "2026-02",
+  "duration_min": 22,
+  "why": "A real Bing deindex-and-recovery case. Bing's index feeds ChatGPT and Copilot answers, and we have no Bing Webmaster Tools or IndexNow routine yet.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "CVctN2LgvDQ",
+  "lang": "en",
+  "title": "Google is not coming to save you SEO in 2026 - canonical abuse, Parasite, Negative SEO and more",
+  "channel": "SEO Boardroom",
+  "published": "2026-01",
+  "duration_min": 24,
+  "why": "Interview with Berta Rach on canonical abuse, parasite pages and negative SEO in a restricted vertical. These are the attack vectors a #1 site in a grey niche has to watch for.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "-6_Y9trTWfo",
+  "lang": "ru",
+  "title": "Как заработать на SEO в 2026? Андрей \"Тихий час\" — спецтехника, беттинг, AI | Franky4 Podcast #1",
+  "channel": "Franky4Fingers и Тихий час - SEO & Lifestyle",
+  "published": "2026-10",
+  "duration_min": 91,
+  "why": "Fresh Russian-language podcast with a betting-niche SEO practitioner. Possible current observations on grey-niche ranking in Google, but it is lifestyle-heavy.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "MXFu5vhgKik",
+  "lang": "en",
+  "title": "The New Parasite SEO Loophole Hiding Inside Google",
+  "channel": "Alek Borisov",
+  "published": "2026-10-16",
+  "duration_min": 8,
+  "why": "Parasite pages ranking on Google's own properties in October 2026. A vector competitors in the adult-adjacent jobs SERP could use; good for monitoring.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "F4sMv-E-29w",
+  "lang": "en",
+  "title": "AI SEO Myths vs Reality - What 365 Days of Data Reveal",
+  "channel": "Surfer Academy",
+  "published": "2026-03",
+  "duration_min": 62.4,
+  "why": "Surfer's year of tracking data testing popular AI-SEO/GEO 'frameworks' and hacks: which claims failed, so we can filter GEO advice.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "suXuygEk-SI",
+  "lang": "en",
+  "title": "Is AI Scaling the Right Multilingual Content? | AI Search, GEO & Content Governance",
+  "channel": "Locaria",
+  "published": "2026-06",
+  "duration_min": 26,
+  "why": "Localization agency on governing AI-scaled multilingual content so AI systems pick the right language version. Relevant to scaled-content risk for our 4-locale article production.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "UoTfhUr03pg",
+  "lang": "en",
+  "title": "AI Won't Rank You. It Will Retrieve You. Or Ignore You. | Gaetano Romeo | Ep. 215",
+  "channel": "Localization Fireside Chat",
+  "published": "2026-05-20",
+  "duration_min": null,
+  "why": "Speaker at Google's Deep Dive Europe 2026 who runs 6 European language markets. Covers 'evidence engineering' and the cultural nuances of multilingual campaigns, i.e. localization vs translation for AI retrieval.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "rvxNshSXnZY",
+  "lang": "uk",
+  "title": "SEO GUILD 01 | Ксенія Демченко про AI, майбутнє професії, українське SEO-ком'юніті та запуск агенції",
+  "channel": "SEO Guild",
+  "published": "2026-08",
+  "duration_min": null,
+  "why": "Map of the Ukrainian SEO community and product-SEO business metrics from the Brand SEO Hub founder, who speaks at Collaborator X. Helps identify UA community and donor ecosystems.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "hBUuXgR-PSw",
+  "lang": "en",
+  "title": "AI Websites, Crawling and Search Console updates (Q1 '26)",
+  "channel": "Google Search Central",
+  "published": "2026",
+  "duration_min": null,
+  "why": "Official Q1 2026 roundup of crawling and Search Console changes. A baseline from Google itself, not EU-specific.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "SnD1yokX1c8",
+  "lang": "en",
+  "title": "AI Is Killing Consumer Trust — What Small Business Needs to Know Before Using AI in Marketing (2026)",
+  "channel": "GrowthOS",
+  "published": "~2026-07",
+  "duration_min": 19,
+  "why": "Cites a Fractl Q2 2026 survey of 1,008 consumers: trust in AI marketing fell from 82% to 54% in a year, and 39% say heavy AI use reduces brand trust. Only a data pointer: the channel is tiny and the primary report should be checked on the web before citing.",
+  "score": 11.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "50s7U_VSG3c",
+  "lang": "en",
+  "title": "How to Format a Blog Post (So People Actually Read It!)",
+  "channel": "WPBeginner",
+  "published": "~2025 (date not confirmed)",
+  "duration_min": null,
+  "why": "A basic anti-wall-of-text checklist: H2/H3 discipline, table of contents, paragraphs of 1-3 sentences, bullets, roughly one explanatory image (not stock) per 300 words, consistent spacing, line-height of about 1.5. A sanity baseline for the 30 articles that have no inline visuals.",
+  "score": 10.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "zlwYNnXHpJI",
+  "lang": "en",
+  "title": "Job Posting Schema: How to Get Your Jobs on Google for Jobs",
+  "channel": "Cavuno - AI Job Board Software",
+  "published": "2026-02",
+  "duration_min": 35,
+  "why": "A 2026 deep dive on JobPosting properties and Google for Jobs eligibility. Use it to cross-check our current field set (no validThrough, no monthsOfExperience, by design) against how others implement it. Vendor source.",
+  "score": 10.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "dFRNVJHd9n0",
+  "lang": "en",
+  "title": "How to Use MCP Servers for SEO: Practical Use Cases - Gus Pelogia - BrightonSEO - Spring 2026",
+  "channel": "brightonSEO",
+  "published": "2026",
+  "duration_min": null,
+  "why": "Indeed's SEO lead on practical MCP-server workflows (GSC/GA4/crawl data). We already run GSC/GA4/DataForSEO MCPs, so these can become automation recipes for the daily report.",
+  "score": 10.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "yKBd_wHCRBw",
+  "lang": "en",
+  "title": "Wins Woes of AI Answer Tracking by James Wirth of Citation Labs at SMX Advanced 2026 in Boston",
+  "channel": "Citation Labs Tools & Services",
+  "published": "2026-07",
+  "duration_min": 15.4,
+  "why": "An SMX Advanced 2026 session on how far AI-answer tracking can be trusted (variance, sampling). Useful before buying an AI-visibility tool or building the prompt library (Н3).",
+  "score": 10.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "KmRcM_dCRfY",
+  "lang": "en",
+  "title": "iGaming SEO Secrets with Trifon Boyukliyski: Link Building Tactics That Work in Competitive Markets",
+  "channel": "Odys Podcast: The High Stakes Growth Show",
+  "published": "unknown",
+  "duration_min": 43,
+  "why": "Link-manipulation realities in competitive restricted markets from a known iGaming SEO. Publish date only approximate (about a year old).",
+  "score": 10.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "ZZKHTk_31ik",
+  "lang": "en",
+  "title": "MASTER Hierarchy For Non-Amateur Graphic Designs In 2026",
+  "channel": "Satori Graphics",
+  "published": "2025-11-23",
+  "duration_min": null,
+  "why": "Design craft for the visuals themselves (covers, infographics, step cards): visual weight order, the thumbnail-squint test, and avoiding amateur hierarchy. Useful if OFM designs its own infographics instead of relying on AI renders.",
+  "score": 10.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Ml4mQJjgX6g",
+  "lang": "en",
+  "title": "Blogging Tips for Beginners That Actually Work",
+  "channel": "Ahrefs (Sam Oh)",
+  "published": "~2019 (old)",
+  "duration_min": null,
+  "why": "Old but it holds a rare hard number: Ahrefs' custom graphs and illustrations earned about 820 links to JPG files and about 1,600 to PNG files. 'Unique images worth stealing' work as link magnets. Supports investing in branded original charts and diagrams for linkbuilding. Low recency, so use only as supporting evidence.",
+  "score": 9.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "i02odjBxY4g",
+  "lang": "en",
+  "title": "how the new EU legislation is changing search",
+  "channel": "unknown",
+  "published": "2025-10",
+  "duration_min": null,
+  "why": "Background on DMA-driven EEA SERP differences (vertical search units, aggregator chips). Context for Google's 8 Sep 2026 EEA SERP redesign, which changes how diaspora queries render in PL/DE/CZ.",
+  "score": 9.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Ki4HGNnkNsU",
+  "lang": "ru",
+  "title": "SEO‑тренды 2026: что ждёт продвижение в Яндексе и Google? Мнение экспертов",
+  "channel": "Артём Маркелов | Инженеры Продаж",
+  "published": "2026-01-07",
+  "duration_min": null,
+  "why": "Russian-speaking panel (Shakin, Shestakov, Kovalev and others) on parasite SEO via media platforms, SEO+SERM merging, and estimates of how much related-page rankings drive AIO inclusion in Google. A Russian-language market perspective.",
+  "score": 8.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "zU2wMzmCE18",
+  "lang": "uk",
+  "title": "AI Overview Google: як аналізувати згадки, конкурентів і репутацію",
+  "channel": "Serpstat — українська SEO AI платформа",
+  "published": "2026-01-15",
+  "duration_min": 4,
+  "why": "Demo of a Ukrainian tool that finds UA AI Overviews where the brand is absent ('lost opportunities'), shown on Allo.ua. Could be used to audit which UA AIOs cite competitors or .ru sources (an Aug 2026 study found 19.7% of UA AIOs cite only .ru domains).",
+  "score": 8.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "Frv3dgzyvhA",
+  "lang": "uk",
+  "title": "Секрети GOOGLE 2026 . Ось що реально працює. Юрій Пирч та Дмитро Куріс",
+  "channel": "King of Marketplaces Business Club",
+  "published": "unknown",
+  "duration_min": null,
+  "why": "Ukrainian business-club talk on what works in Google in 2026. Low confidence: it may be ads/marketplace-focused rather than organic.",
+  "score": 8.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "QuvzpJgosZc",
+  "lang": "ru",
+  "title": "СЕКРЕТЫ международного SEO. КЕЙС по ПРОДВИЖЕНИЮ САЙТА на 15 стран",
+  "channel": "unknown (ID taken from videohighlight.com mirror URL)",
+  "published": "unknown",
+  "duration_min": null,
+  "why": "Russian-language multi-country case (sites for Poland, Spain, Germany and others). Possibly a Short, so low priority.",
+  "score": 8.0,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "B2rRD6h5V0M",
+  "lang": "en",
+  "title": "4 ways to make your website instantly feel more premium",
+  "channel": "Jesse Showalter (guest: Fabio, German brand/web designer)",
+  "published": "~2025-11-23",
+  "duration_min": null,
+  "why": "Clearest craft-level breakdown of 'premium': whitespace as composition, typography 'is 90% of web design' (one typeface, hierarchy via size first), strict grid rhythm/consistent vertical spacing; live 5-10 min before/after. Directly applicable to fixing 'paper-like' article pages without adding effects or 3D.",
+  "score": 3.0999999999999996,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "ABgv2N2eQxg",
+  "lang": "en",
+  "title": "Stop AI Slop: The Free Fix for Claude Code & Codex Websites",
+  "channel": "Singularity Feed",
+  "published": "2026-10-05",
+  "duration_min": null,
+  "why": "Freshest signal: the 2026 'AI-slop' tell is now 'cream background, fancy serif headline, one picture on the right' (i.e. naive 'editorial luxe' itself reads as AI). Shows the open-source Impeccable skill (61 detector rules: cream palette, nested cards, colored side stripe, italic serif, bounce easing) and /polish, /distill; author reruns the detector and discloses limits. Relevant to the 15.10 'looks AI-made 4/10' verdict. ID taken from a mirror URL (zolotube.com/watch?v=ABgv2N2eQxg).",
+  "score": 3.0500000000000003,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "kUWvKT9Z_Oc",
+  "lang": "en",
+  "title": "Your Brand Photos Might Be Killing Trust",
+  "channel": "Valentine Ohu (photojournalist / brand photographer)",
+  "published": "~2026-02-24",
+  "duration_min": null,
+  "why": "Photo-direction argument matching the owner's 'own-profile, phone-distance' preference: heavy retouch/glossy polish makes people look algorithm-made; clients preferred natural skin texture; 'believable beats polished', and polished stock-like brand shoots read as decoration. Supports avoiding hyper-perfect photoreal AI.",
+  "score": 2.9,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "pAWcYSBQHNc",
+  "lang": "en",
+  "title": "4 Trustworthiness Factors",
+  "channel": "NNgroup",
+  "published": "unknown (NN/g evergreen, ~2023)",
+  "duration_min": null,
+  "why": "Research-grade trust model: (1) design quality incl. high-res graphics that don't look like stock, whitespace, few font styles; (2) upfront disclosure; (3) comprehensive, correct, current content; (4) connection to the rest of the web (external mentions, press, social). Gives the evidence hierarchy for the image/trust decision.",
+  "score": 2.8499999999999996,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "UBVXpvrvuKk",
+  "lang": "en",
+  "title": "How Users Actually Read Websites",
+  "channel": "The Website Architect",
+  "published": "2026-05-04",
+  "duration_min": null,
+  "why": "Summary of NN/g eye-tracking (F, layer-cake, spotted and commitment patterns). Inline elements such as block quotes and tables draw fixations but switch readers from reading to scanning. NN/g's concise + scannable + objective rewrite showed +124% usability. Front-load each paragraph; the 'zoom out and read only the headers' test. Evidence base for designing articles that aren't walls of text.",
+  "score": 2.8499999999999996,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "7p-ZPK3GfI8",
+  "lang": "en",
+  "title": "How To Build a Website SO Premium They Beg You To Buy",
+  "channel": "Sam Crawford | Web Design Expert",
+  "published": "~2026-01-18",
+  "duration_min": null,
+  "why": "Says #1 premium signal is bespoke assets: 'most cheap websites are just text' plus stock photos; custom graphics that break up content and guide the eye, but only if they match the brand (an off-brand graphic is worse than none). Also cohesive palette/fonts, subtle motion (not bouncing), and a clear site structure for SEO. Agency funnel (checklist/booking).",
+  "score": 2.8,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "RjmHrWL8_Ds",
+  "lang": "en",
+  "title": "Designing for Trust - Margot Bloomstein, Author of Trustworthy",
+  "channel": "Evolving Web",
+  "published": "~2025-07-11",
+  "duration_min": null,
+  "why": "Respected content strategist (book 'Trustworthy') on building trust through content and design consistency and giving the audience 'enough' information to decide confidently. Useful for blog trust strategy beyond visuals.",
+  "score": 2.75,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "f2mGqlLLqok",
+  "lang": "en",
+  "title": "The Psychology of Premium Websites",
+  "channel": "Sam Crawford | Web Design Expert",
+  "published": "~2026-02-15",
+  "duration_min": null,
+  "why": "Framework: ~50 ms first impression and halo effect (hero and cover image quality colour everything after), cognitive fluency (whitespace, hierarchy), peak-end rule via micro-interactions; uses Apple, Hermès/Bottega and Stripe as examples. Good for prioritising article hero/cover quality.",
+  "score": 2.7199999999999998,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "3hlrCSQSsWs",
+  "lang": "en",
+  "title": "I Studied 1,000 Websites, Here's What Works in 2026",
+  "channel": "Sam Crawford | Web Design Expert",
+  "published": "~2026-03-29",
+  "duration_min": null,
+  "why": "Counterweight: clarity beats aesthetics, and social proof beats design ('if I had to choose one, trust signals'). Restraint in motion (luxury sites let things breathe); micro-details like custom badges signal care. For us: only REAL proof (no fake reviews per taboo).",
+  "score": 2.6,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "M4DNgmI7MIM",
+  "lang": "en",
+  "title": "How to Avoid AI Slop in Vibe-Coded Landing Pages",
+  "channel": "DesignCode",
+  "published": "2026-06-04",
+  "duration_min": null,
+  "why": "From a respected design-education channel: identify the typical AI mistakes and prompt them away iteratively. A complement to Impeccable for auditing our Next.js pages against 2026 'AI-made' tells.",
+  "score": 2.5500000000000003,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "25UwZDuHfiQ",
+  "lang": "en",
+  "title": "How I design websites with EDITORIAL style layouts (part 2)",
+  "channel": "BONT (Adrian Samosa)",
+  "published": "~2026-02",
+  "duration_min": null,
+  "why": "Translating editorial layouts to mobile in Figma plus developer handoff. Rebuts 'editorial = form over function': hierarchy via type, spacing and composition guides the eye. Relevant since our audience is mobile-first.",
+  "score": 2.55,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "S2DE95bGld0",
+  "lang": "en",
+  "title": "How to Fix AI Slop with CLAUDE DESIGN",
+  "channel": "Tristen O'Brien",
+  "published": "2026-08-09",
+  "duration_min": null,
+  "why": "Five fixes for the AI look: an inspiration board, dropping the Inter font, giving every colour a job, breaking the centred layout, and real images/video. About 22.9K views. Popular tooling video with an affiliate funnel (Higgsfield), so lower authority, but recent. ID taken from a mirror URL (divert.stream/watch/S2DE95bGld0).",
+  "score": 2.5,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "NRdjwou96Vw",
+  "lang": "en",
+  "title": "Brand Photography Trends that will DOMINATE in 2026",
+  "channel": "Emily Kim",
+  "published": "unknown (late 2025, 2026-titled)",
+  "duration_min": null,
+  "why": "Premium brand-photo direction for 2026: UGC-style, spur-of-the-moment compositions (even iPhone frames shot on set), and motifs 'one level deeper' instead of literal props (no laptop+coffee). Movement and short video clips are expected. Maps well to a 'model's own profile' aesthetic for article imagery.",
+  "score": 2.4499999999999997,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "GmxGdOpzD2w",
+  "lang": "en",
+  "title": "6 INSANE Website Design Tricks Luxury Brands Use",
+  "channel": "Ana Denis",
+  "published": "~2025-10",
+  "duration_min": null,
+  "why": "Concrete premium-imagery rule: quality + consistency + uniform colour grading across all images (mismatched sizes and grades cheapen a page). Also: wordmark logos, black/white base, alignment, and telling your story with 'physical evidence' because a new brand must answer 'can I trust you?'. Don't copy Chanel, which has existing demand. Marketing-agency channel.",
+  "score": 2.3499999999999996,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "KNRoQ8EQ-B4",
+  "lang": "en",
+  "title": "Website Conversion Strategy: Irwin Hau on Proof Density in the AI Era",
+  "channel": "SalesPOP!",
+  "published": "2026-04-27",
+  "duration_min": 24,
+  "why": "Concept of 'proof density': in an AI era where testimonials are easy to fake, trust needs several layered proofs across the site, not one block. Notes the site is checked by job candidates too (recruitment). 24-minute interview, about 70K sites analysed (claim).",
+  "score": 2.25,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "4hTujdIwoYk",
+  "lang": "en",
+  "title": "Website Design Secrets: Make Your Site Look Expensive",
+  "channel": "Paige Brunton Business",
+  "published": "2024-03-04",
+  "duration_min": null,
+  "why": "Older but the most specific on photo choice: candid, unposed, off-angle, unusual crops look more high-end than staged straight-on shots. Avoid overused free stock; if an image doesn't add to the look, use whitespace instead. Don't write 'luxury' in copy; one deliberate rule-break only.",
+  "score": 2.1,
+  "angles": [
+   "?"
+  ]
+ },
+ {
+  "id": "2RClh5mtBiY",
+  "lang": "en",
+  "title": "The Rise of Lo-Fi Content: Authenticity in Post Aesthetics",
+  "channel": "Jasmine | The Unseen Majority",
+  "published": "~2025-10",
+  "duration_min": null,
+  "why": "Lo-fi or 'phone' aesthetic only converts if it is still branded, strategic and pretty ('you on your best day off'). Recommends a high-low mix (casual image + polished frame). A guardrail for a selfie-style visual direction so it doesn't look cheap.",
+  "score": 2.0,
+  "angles": [
+   "?"
+  ]
+ }
+]
