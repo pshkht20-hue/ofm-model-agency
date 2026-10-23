@@ -150,6 +150,13 @@ function findTrigger(attr: AttributionPayload): string | null {
 
 type Session = NonNullable<AttributionPayload['session']>;
 
+/** Источник визита: мессенджеры и приложения часто не передают реферер, тогда его называет метка ссылки. */
+function sourceLabel(touch: Touch): string {
+  return touch.referrer === '' && touch.utm?.source
+    ? `по ссылке с меткой «${touch.utm.source}» (сайт-источник не передан)`
+    : describeReferrer(touch.referrer);
+}
+
 /**
  * Блоки каждой строки пути (повторный заход на тот же путь — своя строка),
  * с читаемыми названиями; события 'section' — формат вкладок до обновления.
@@ -190,7 +197,8 @@ function engagementSummary(session: Session): string | null {
   if (faq > 0) parts.push(`открывала вопросы FAQ (${faq})`);
 
   const unique = (re: RegExp) => new Set(session.pages.map((page) => page.p).filter((p) => re.test(p))).size;
-  const vacancies = unique(/\/vacancies\/./);
+  // Конкретные вакансии (страна, город, чатер); списки /vacancies/model и /vacancies/for-girls не считаются.
+  const vacancies = unique(/\/vacancies\/(?!(?:model|for-girls)\/?$)./);
   if (vacancies > 0) parts.push(`смотрела вакансии (${vacancies})`);
   const articles = unique(/\/blog\/(?!author\/)[^/]+$/);
   if (articles > 0) parts.push(`читала статьи (${articles})`);
@@ -220,12 +228,7 @@ function formatAttribution(
   const lines: (string | null)[] = ['', '🔎 <b>Источник и история заявки</b>'];
 
   if (session) {
-    // Мессенджеры и приложения часто не передают реферер: тогда источник называет метка ссылки.
-    const source =
-      session.referrer === '' && session.utm?.source
-        ? `по ссылке с меткой «${session.utm.source}» (сайт-источник не передан)`
-        : describeReferrer(session.referrer);
-    lines.push(`↪️ <b>Откуда пришла:</b> ${escapeTelegramHtml(source)}`);
+    lines.push(`↪️ <b>Откуда пришла:</b> ${escapeTelegramHtml(sourceLabel(session))}`);
     if (session.utm) lines.push(`🏷 <b>Метка:</b> ${formatUtm(session.utm)}`);
   } else {
     lines.push('↪️ <b>Откуда пришла:</b> нет данных (браузер не сохранил визит)');
@@ -245,12 +248,12 @@ function formatAttribution(
   const first: Touch | undefined = attr.firstTouch;
   if (attr.visitNo && attr.visitNo > 1) {
     const firstPart = first
-      ? `, первый ${kyivDate(first.at)}: ${escapeTelegramHtml(describeReferrer(first.referrer))}, ${pageLink(first.landing)}`
+      ? `, первый ${kyivDate(first.at)}: ${escapeTelegramHtml(sourceLabel(first))}, ${pageLink(first.landing)}`
       : '';
     lines.push(`🔁 <b>Визит:</b> ${attr.visitNo}-й за 30 дней${firstPart}`);
   } else if (first) {
     lines.push(
-      `🕰 <b>Первый визит:</b> ${kyivDate(first.at)}, ${escapeTelegramHtml(describeReferrer(first.referrer))}, ${pageLink(first.landing)}`,
+      `🕰 <b>Первый визит:</b> ${kyivDate(first.at)}, ${escapeTelegramHtml(sourceLabel(first))}, ${pageLink(first.landing)}`,
     );
   }
 
