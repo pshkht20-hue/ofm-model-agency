@@ -34,6 +34,10 @@ export const record: ModelGeoCountry = {
 const RU: ModelGeoContent = {
   countryName: 'Польша',
   title: 'Работа моделью OnlyFans в Польше — удалённо, от $3 000/мес',
+  // 19.10.2026, поезд J2 (вариант А решения №8 KEYWORD-GAP §4.3.8): отдельный
+  // <title> только для generateMetadata под формулировку спроса «онлифанс
+  // работа в польше»; H1 и JobPosting.title остаются из title выше.
+  seoTitle: 'Онлифанс работа в Польше: модель OnlyFans удалённо, от $3 000/мес',
   description:
     'От $3 000 до $10 000 в месяц зарабатывают многие наши модели OnlyFans в Польше. Без польского языка: команда говорит по-украински и по-русски. Опыт не нужен.',
   introHtml:

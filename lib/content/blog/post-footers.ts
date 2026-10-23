@@ -130,6 +130,15 @@ export const LINK = {
     href: '/vacancies/model/ukraine',
     label: 'Вакансия модели OnlyFans — Украина',
   },
+  /**
+   * Каталог модельных вакансий /vacancies/model с точным анкором «вакансии
+   * модели онлифанс». Поезд J2 (19.10.2026, KEYWORD-GAP §4.3.9): мост из
+   * денежных статей прямо в воронку каталога.
+   */
+  vacanciesModelKw: {
+    href: '/vacancies/model',
+    label: 'Вакансии модели онлифанс',
+  },
   /** Вакансия оператора чата (чаттера) — роль-страница раздела /vacancies */
   vacancyChatter: {
     href: '/vacancies/chatter-onlyfans',

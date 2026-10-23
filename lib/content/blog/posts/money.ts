@@ -681,6 +681,9 @@ export const moneyPosts: BlogPost[] = [
       },
       blogNav('Реалистичные ожидания — в связке с:', [
         LINK.join,
+        // Поезд J2 (19.10.2026, KEYWORD-GAP §4.3.9): мост из самой читаемой
+        // денежной статьи (2 302 показа) в каталог модельных вакансий.
+        LINK.vacanciesModelKw,
         LINK.calcPage,
         LINK.payout,
         LINK.whatis,
@@ -1476,6 +1479,10 @@ export const moneyPosts: BlogPost[] = [
             href: '/vacancies/model/ukraine',
             label: 'Вакансия модели OnlyFans — Украина',
           },
+          // Поезд J2 (19.10.2026, KEYWORD-GAP §4.3.9): мост заработок -> каталог
+          // модельных вакансий, анкор с точной фразой. Внутри существующего
+          // nav-блока: количество блоков не меняется (видео-карта afterIndex: 1).
+          LINK.vacanciesModelKw,
           {
             href: '/blog/onlyfans-v-ukraine',
             label: 'Онлифанс в Украине: можно ли, законно ли и сколько платят',

@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import Image from 'next/image';
 import type { BlogBlock } from '@/lib/content/blog';
 import { Link } from '@/i18n/navigation';
+import { parseAnswerLinks } from '@/lib/content/faq/answer-links';
 import { caseShots } from '@/lib/results/cases';
 import { TrackedCtaLink, TrackedTelegramLink } from '@/components/analytics/TrackedLinks';
 import { ArticleCalcTeaser } from '@/components/seo/ArticleCalcTeaser';
@@ -53,6 +54,32 @@ function linkifyTelegram(text: string) {
     }
     return part;
   });
+}
+
+/**
+ * Внутренние контекстные ссылки в живом тексте абзаца: [текст](/путь) — тот же
+ * мини-формат и парсер (parseAnswerLinks), что в FAQ и контент-слое вакансий,
+ * рендер локале-aware <Link>. Добавлено поездом J2 (19.10.2026, KEYWORD-GAP
+ * §4.3.7): ссылка из живого текста пиллара передаёт больше веса, чем nav-блок.
+ * Тексты без «](» идут прежним путём нетронутыми. ⚠️ Не использовать разметку
+ * в абзацах-ответах FAQ (h3 с «?» + p): extractFaqItems в page.tsx кладёт их
+ * сырыми в FAQPage JSON-LD.
+ */
+function renderParagraphText(text: string) {
+  if (!text.includes('](')) return linkifyTelegram(text);
+  return parseAnswerLinks(text).map((part, i) =>
+    part.type === 'link' ? (
+      <Link
+        key={i}
+        href={part.href}
+        className="link-hover-line text-accent-pink hover:text-accent-cyan transition-colors"
+      >
+        {part.label}
+      </Link>
+    ) : (
+      <Fragment key={i}>{linkifyTelegram(part.value)}</Fragment>
+    ),
+  );
 }
 
 /**
@@ -314,7 +341,7 @@ function renderBlock(block: BlogBlock, i: number) {
   }
   return (
     <p key={i} className="text-body leading-relaxed">
-      {linkifyTelegram(block.text)}
+      {renderParagraphText(block.text)}
     </p>
   );
 }
