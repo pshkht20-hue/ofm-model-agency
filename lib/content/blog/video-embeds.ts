@@ -104,6 +104,49 @@ const EMBEDS: Record<string, Partial<Record<Locale, ArticleVideoPlacement>>> = {
     ru: { afterIndex: 0, data: RU_EARN },
     uk: { afterIndex: 0, data: UK_EARN },
   },
+  /**
+   * Волна 2 (15.10.2026). Правила волны 1 + проверка дистанции до программных
+   * мостов: у всех четырёх статей мосты ВКЛЮЧЕНЫ (единственный cta — финальный,
+   * bridgeIndices активен), inline-CTA рендерится перед третьим h2, калк-тизер —
+   * перед финальным nav; точки вставки выбраны так, чтобы карточка не вставала
+   * к мостам вплотную. Индексы сверены по реальной структуре КАЖДОЙ локали.
+   *
+   * onlyfans-skolko-zarabatyvayut-modeli (ru и uk): [0] p-лид (answer-first,
+   * вилки) → [1] p «Заголовки…» → [2] h2 «Ориентиры по этапам». Вставка после
+   * [1] — конец двухабзацного лида перед первым h2; inline-CTA на 11 (uk — тоже
+   * 11, структуры начала зеркальны, расходятся глубже).
+   *
+   * tipazhi-modelej-onlyfans: ru [0] p-лид → [1] p «Этот разбор…» → [2] nav;
+   * uk — те же [0]/[1], но дальше ДВА nav ([2] вакансии, [3] «Новенька в
+   * темі — спершу база»). Вставка после [1] в обеих локалях (паттерн волны 1:
+   * карточка после лида перед nav); inline-CTA на 40 (ru) / 41 (uk).
+   *
+   * rabota-dlya-mam-v-dekrete (ru и uk зеркальны): правило чувствительных
+   * сочетаний (docs/BRAND-IMAGE-STYLE-2026-09.md) — карточку не ставить
+   * вплотную к абзацам про ребёнка. Лид [0] заканчивается «под ребёнка»,
+   * [4] p и [5] ul — про режим ребёнка, поэтому вставка после [6] — нейтральный
+   * p про фильтр форматов («не берут денег за вход»), перед h2 [7] «6 форматов»;
+   * соседние блоки [6]/[7] без упоминаний детей, inline-CTA на 24.
+   *
+   * rabota-dlya-devushek-onlajn (ru и uk зеркальны): [0] p-лид → [1] p «Этот
+   * разбор для девушки…» → [2] nav. Вставка после [1]; inline-CTA на 26.
+   */
+  'onlyfans-skolko-zarabatyvayut-modeli': {
+    ru: { afterIndex: 1, data: RU_EARN },
+    uk: { afterIndex: 1, data: UK_EARN },
+  },
+  'tipazhi-modelej-onlyfans': {
+    ru: { afterIndex: 1, data: RU_EARN },
+    uk: { afterIndex: 1, data: UK_EARN },
+  },
+  'rabota-dlya-mam-v-dekrete': {
+    ru: { afterIndex: 6, data: RU_EARN },
+    uk: { afterIndex: 6, data: UK_EARN },
+  },
+  'rabota-dlya-devushek-onlajn': {
+    ru: { afterIndex: 1, data: RU_EARN },
+    uk: { afterIndex: 1, data: UK_EARN },
+  },
 };
 
 export function getArticleVideoEmbed(
