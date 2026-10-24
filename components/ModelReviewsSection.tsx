@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 import { SectionHeader } from '@/components/SectionHeader';
 import { SectionShell } from '@/components/ui/SectionShell';
 import { ReviewCard } from '@/components/ui/ReviewCard';
-import { ReviewsSummary } from '@/components/ui/ReviewsSummary';
 import { StaggerGrid, StaggerItem } from '@/components/ui/Reveal';
 import { getModelReviews } from '@/lib/content/reviews';
 import { Link } from '@/i18n/navigation';
@@ -22,8 +21,6 @@ export function ModelReviewsSection() {
   return (
     <SectionShell id="reviews" variant="elevated" wide innerClassName="max-w-6xl" particles>
       <SectionHeader eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
-
-      <ReviewsSummary />
 
       {featured && (
         <div className="mb-5 md:mb-6">

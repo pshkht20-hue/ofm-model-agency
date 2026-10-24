@@ -20,15 +20,3 @@ export function getModelReviews(locale: Locale): ModelReview[] {
       return MODEL_REVIEWS_RU;
   }
 }
-
-export function getReviewStats(locale: Locale) {
-  const reviews = getModelReviews(locale);
-  const total = reviews.length;
-  const sum = reviews.reduce((acc, r) => acc + r.rating, 0);
-  const average = Math.round((sum / total) * 10) / 10;
-  const distribution = [5, 4, 3, 2, 1].map((star) => ({
-    star,
-    count: reviews.filter((r) => r.rating === star).length,
-  }));
-  return { total, average, distribution };
-}

@@ -1,7 +1,6 @@
 'use client';
 
 import { m as motion } from 'framer-motion';
-import { BadgeCheck } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import type { ModelReview } from '@/lib/content/reviews';
 import { ReviewStars } from '@/components/ui/ReviewStars';
@@ -48,19 +47,13 @@ export function ReviewCard({ review, featured = false }: ReviewCardProps) {
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-2">
             <div className="min-w-0">
-              <div className="flex items-center gap-1.5 flex-wrap">
-                <h3
-                  className={`font-medium text-white/95 ${isFeatured ? 'text-base' : 'text-[15px]'}`}
-                >
-                  {review.name}
-                </h3>
-                <span
-                  className="inline-flex items-center text-accent-cyan/85"
-                  title={t('verifiedTitle')}
-                >
-                  <BadgeCheck className="w-3.5 h-3.5" strokeWidth={2} />
-                </span>
-              </div>
+              {/* Галочка «Реальный отзыв модели агентства» снята 24.10.2026
+                  (решение владельца №5): подтверждение без проверяющего. */}
+              <h3
+                className={`font-medium text-white/95 ${isFeatured ? 'text-base' : 'text-[15px]'}`}
+              >
+                {review.name}
+              </h3>
               <p className="text-[11px] text-white/50 mt-0.5 truncate">{review.meta}</p>
             </div>
             {review.dateLabel && (

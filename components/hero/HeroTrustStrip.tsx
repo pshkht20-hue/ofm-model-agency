@@ -9,7 +9,7 @@ import {
   useTransform,
 } from 'framer-motion';
 import Image from 'next/image';
-import { BadgeCheck, Shield } from 'lucide-react';
+import { CalendarDays, Shield } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import {
@@ -20,8 +20,9 @@ import {
   staggerItem,
 } from '@/lib/motion';
 
+// avatar-1 снят 24.10.2026 (решение владельца №5): в углу был чужой вотермарк
+// LONDONKAI. Бейдж «Проверенное агентство» заменён проверяемым фактом «С 2022 года».
 const AVATARS = [
-  '/avatars/avatar-1.jpg',
   '/avatars/avatar-2.jpg',
   '/avatars/avatar-3.jpg',
   '/avatars/avatar-4.jpg',
@@ -85,7 +86,7 @@ export function HeroTrustStrip() {
 
   const badge = (
     <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-cyan/25 bg-accent-cyan/[0.08] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-accent-cyan/90">
-      <BadgeCheck className="h-3 w-3" aria-hidden />
+      <CalendarDays className="h-3 w-3" aria-hidden />
       {t('hero.trustBadge')}
     </span>
   );

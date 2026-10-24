@@ -60,9 +60,8 @@
       "statModels": "creators",
       "statIncome": "Page balances",
       "balanceNote": "All figures on this site are gross OnlyFans page totals — not the creator's net payout after fees.",
-      "statTop": "Top 1% agencies",
       "trustModels": "models trust OFM",
-      "trustBadge": "Verified agency",
+      "trustBadge": "Since 2022",
       "trustVerified": "Privacy-first and secure onboarding",
       "scroll": "Scroll down"
     },
@@ -432,14 +431,7 @@
     "moreLabel": "More reviews",
     "ctaText": "See yourself in these stories? Apply — we'll discuss your case with no obligation.",
     "ctaButton": "Apply",
-    "disclaimer": "Real reviews from OFM's Model Agency creators. Names changed for privacy at the creators’ request. These are individual experiences, not a guarantee of results.",
-    "summary": {
-      "title": "Collaboration rating",
-      "basedOn": "based on {count} reviews on this site",
-      "consent": "Real creator reviews",
-      "replies": "Names changed for privacy",
-      "faqLink": "FAQ on terms"
-    }
+    "disclaimer": "Real reviews from OFM's Model Agency creators. Names changed for privacy at the creators’ request. These are individual experiences, not a guarantee of results."
   },
   "contactForm": {
     "name": "Name",
@@ -676,7 +668,6 @@
     }
   },
   "reviewCard": {
-    "verifiedTitle": "Real review from an agency creator",
     "honestRating": "honest rating",
     "helpfulOne": "person found this helpful",
     "helpfulFew": "people found this helpful",

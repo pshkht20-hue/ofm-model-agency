@@ -311,11 +311,11 @@ export function HeroSection() {
           </span>
           <span data-hero-stat data-hero-reveal>
             {t('hero.statIncome')}{' '}
-            <strong className="text-accent-cyan font-semibold">$15K–$50K</strong>
+            <strong className="text-accent-cyan font-semibold">$15K-$50K</strong>
           </span>
-          <span data-hero-stat data-hero-reveal>
-            {t('hero.statTop')}
-          </span>
+          {/* «Топ-1% агентств» снят 24.10.2026 (решение владельца №5): превосходная
+              степень без источника. Проверяемые факты на первом экране: «220+ моделей»
+              в этом ряду и «С 2022 года» в бейдже над ним (HeroTrustStrip). */}
         </div>
 
         <p

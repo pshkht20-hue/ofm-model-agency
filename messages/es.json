@@ -60,9 +60,8 @@
       "statModels": "modelos",
       "statIncome": "Balances",
       "balanceNote": "Todas las cifras del sitio son gross total del balance OnlyFans — no el ingreso neto de la modelo tras comisiones.",
-      "statTop": "Top 1% agencias",
       "trustModels": "modelos confían en OFM",
-      "trustBadge": "Agencia verificada",
+      "trustBadge": "Desde 2022",
       "trustVerified": "Privacidad y datos seguros",
       "scroll": "Desplázate"
     },
@@ -432,14 +431,7 @@
     "moreLabel": "Más opiniones",
     "ctaText": "¿Te identificas? Envía solicitud — hablamos de tu caso sin compromiso.",
     "ctaButton": "Solicitud",
-    "disclaimer": "Opiniones reales de las modelos de OFM's Model Agency. Nombres cambiados por privacidad a petición de las modelos. Son experiencias individuales, no una garantía de resultado.",
-    "summary": {
-      "title": "Valoración del trabajo conjunto",
-      "basedOn": "según {count} opiniones en el sitio",
-      "consent": "Opiniones reales de modelos",
-      "replies": "Nombres cambiados por privacidad",
-      "faqLink": "FAQ sobre condiciones"
-    }
+    "disclaimer": "Opiniones reales de las modelos de OFM's Model Agency. Nombres cambiados por privacidad a petición de las modelos. Son experiencias individuales, no una garantía de resultado."
   },
   "contactForm": {
     "name": "Nombre",
@@ -676,7 +668,6 @@
     }
   },
   "reviewCard": {
-    "verifiedTitle": "Opinión real de una modelo de la agencia",
     "honestRating": "valoración honesta",
     "helpfulOne": "persona lo encontró útil",
     "helpfulFew": "personas lo encontraron útil",
