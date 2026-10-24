@@ -13,7 +13,6 @@ import type { BlogCardPost } from '@/components/seo/blog-card-post';
 import { getBlogCategoryLabels } from '@/lib/content/blog/locale/labels';
 import type { Locale } from '@/i18n/routing';
 import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
-import { LikeButton } from '@/components/ui/LikeButton';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { SPRING_HOVER, hoverLift, staggerItem } from '@/lib/motion';
 
@@ -26,8 +25,9 @@ const DATE_LOCALE: Record<Locale, string> = {
 
 /**
  * Карточка статьи в листинге. Клиентская намеренно: hover-подъём на пружине
- * (whileHover) + stagger-варианты для каскада в «Читайте также» + LikeButton
- * с localStorage. Цена клиентской границы — props целиком уезжают в HTML,
+ * (whileHover) + stagger-варианты для каскада в «Читайте также». Кнопки
+ * «Нравится» в карточке нет: убрана совсем (решение владельца №6, вариант Б,
+ * 24.10.2026). Цена клиентской границы — props целиком уезжают в HTML,
  * поэтому на вход идёт BlogCardPost (только поля карточки), а не BlogPost:
  * это и есть разница между 996 КБ и ~370 КБ на /blog. Подробности и цифры —
  * в blog-card-post.ts.
@@ -64,7 +64,7 @@ export function BlogPostCard({
             <BlogCoverImage cover={post.cover} variant="card" priority={coverPriority} />
           </div>
         )}
-        <div className="p-6 md:p-7 pb-4">
+        <div className="p-6 md:p-7">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-2">
             <span className="text-[10px] uppercase tracking-[0.15em] text-accent-pink/80">
               {categoryLabels[post.category]}
@@ -94,13 +94,6 @@ export function BlogPostCard({
           </span>
         </div>
       </Link>
-      <div className="px-6 md:px-7 pb-5 pt-3 border-t border-white/[0.06] flex justify-end">
-        <LikeButton
-          kind="blog"
-          itemId={post.slug}
-          variant="card"
-        />
-      </div>
     </motion.li>
   );
 }

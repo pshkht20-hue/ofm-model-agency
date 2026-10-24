@@ -684,14 +684,6 @@
     "photo": "Фото:",
     "illustration": "Иллюстрация:"
   },
-  "likes": {
-    "like": "Нравится",
-    "liked": "Вам нравится",
-    "helpful": "Полезно",
-    "helpfulLiked": "Отметили полезным",
-    "ariaLike": "Поставить лайк",
-    "ariaUnlike": "Убрать лайк"
-  },
   "cookieConsent": {
     "title": "Cookies",
     "description": "одни нужны для работы сайта, другие для аналитики и записи сессий (Google Analytics, Microsoft Clarity): их мы включаем только с вашего согласия. Подробнее в",

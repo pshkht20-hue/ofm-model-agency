@@ -679,14 +679,6 @@
     "photo": "Foto:",
     "illustration": "Ilustración:"
   },
-  "likes": {
-    "like": "Me gusta",
-    "liked": "Te gustó",
-    "helpful": "Útil",
-    "helpfulLiked": "Marcado útil",
-    "ariaLike": "Dar me gusta",
-    "ariaUnlike": "Quitar me gusta"
-  },
   "cookieConsent": {
     "title": "Cookies",
     "description": "unas son necesarias para que el sitio funcione y otras sirven para analítica y grabaciones de sesión (Google Analytics, Microsoft Clarity); estas solo las activamos con tu consentimiento. Más detalles en la",

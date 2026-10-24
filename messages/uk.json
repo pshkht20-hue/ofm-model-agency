@@ -684,14 +684,6 @@
     "photo": "Фото:",
     "illustration": "Ілюстрація:"
   },
-  "likes": {
-    "like": "Подобається",
-    "liked": "Вам сподобалось",
-    "helpful": "Корисно",
-    "helpfulLiked": "Відмітили корисним",
-    "ariaLike": "Поставити лайк",
-    "ariaUnlike": "Прибрати лайк"
-  },
   "cookieConsent": {
     "title": "Cookies",
     "description": "одні потрібні для роботи сайту, інші для аналітики й запису сесій (Google Analytics, Microsoft Clarity): їх ми вмикаємо лише за вашою згодою. Докладніше в",

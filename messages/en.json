@@ -679,14 +679,6 @@
     "photo": "Photo:",
     "illustration": "Illustration:"
   },
-  "likes": {
-    "like": "Like",
-    "liked": "You liked this",
-    "helpful": "Helpful",
-    "helpfulLiked": "Marked helpful",
-    "ariaLike": "Like",
-    "ariaUnlike": "Remove like"
-  },
   "cookieConsent": {
     "title": "Cookies",
     "description": "some are needed for the site to work, others are for analytics and session recordings (Google Analytics, Microsoft Clarity), and we only turn those on with your consent. Details in our",

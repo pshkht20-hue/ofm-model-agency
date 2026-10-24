@@ -29,7 +29,6 @@ import {
   BLOG_COVER_OG_WIDTH,
 } from '@/lib/content/blog/covers';
 import { SectionViewTracker } from '@/components/analytics/SectionViewTracker';
-import { BlogArticleLikeBar } from '@/components/seo/BlogArticleLikeBar';
 import { RelatedPosts } from '@/components/seo/RelatedPosts';
 import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
 import { Link } from '@/i18n/navigation';
@@ -277,7 +276,9 @@ export default async function BlogPostPage({ params }: Props) {
         </span>
       </Link>
 
-      <BlogArticleLikeBar slug={post.slug} />
+      {/* Черта между шапкой и текстом. До 24.10.2026 над ней стояла кнопка
+          «Нравится»: убрана совсем (решение владельца №6, вариант Б). */}
+      <div className="mt-4 mb-10 border-b border-white/[0.06]" aria-hidden />
 
       <ArticleBody blocks={post.blocks} video={videoEmbed} />
       {/* Видели ли читатели программные мосты статьи (section_view в GA4);

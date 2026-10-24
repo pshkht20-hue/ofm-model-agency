@@ -4,7 +4,7 @@ import type { BlogCoverRenderable } from '@/components/seo/BlogCoverImage';
 /**
  * Данные одной карточки листинга блога — осознанно НЕ BlogPost.
  *
- * BlogPostCard клиентский (hover-подъём на framer + LikeButton), а props любого
+ * BlogPostCard клиентский (hover-подъём и каскад на framer), а props любого
  * клиентского компонента React сериализует в RSC-payload, и этот payload
  * физически лежит в HTML страницы. Пока в карточку уезжал весь объект поста,
  * /blog и /uk/blog отдавали ~996 КБ HTML вместо ~370 КБ: 42 поста × ~15,6 КБ
