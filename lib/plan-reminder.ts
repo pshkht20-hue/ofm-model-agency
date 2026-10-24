@@ -70,11 +70,11 @@ export function buildReminder(dateKey: string): string {
   const tomorrow = PLAN_CALENDAR[addDays(dateKey, 1)] ?? [];
   const focus = PLAN_WEEK_FOCUS[isoWeekKey(dateKey)];
 
-  let text = `📅 <b>${humanDate(dateKey)}</b> — план дня OFM\n`;
+  let text = `📅 <b>${humanDate(dateKey)}</b>: план дня OFM\n`;
   if (focus) text += `<i>Фокус недели: ${escapeTelegramHtml(focus)}</i>\n`;
 
   if (today.length === 0) {
-    text += '\nНа сегодня задач по календарю нет — день на буфер и контроль.\n';
+    text += '\nНа сегодня задач по календарю нет: день на буфер и контроль.\n';
   } else {
     text += renderGroup('👤 <b>Тебе:</b>', today.filter((i) => i.who === 'owner'));
     text += renderGroup('🤝 <b>Вместе / контрольная точка:</b>', today.filter((i) => i.who === 'both'));
@@ -86,6 +86,6 @@ export function buildReminder(dateKey: string): string {
     text += `\n🔜 <b>Завтра от тебя:</b>\n${ownerTomorrow.map((i) => `• ${escapeTelegramHtml(i.text)}`).join('\n')}\n`;
   }
 
-  text += '\n<i>Планы: docs/PLAN-NOVEMBER-2026-SKELETON.md + lib/content/plan-calendar.ts</i>';
+  text += '\n<i>Планы: docs/MASTER-PLAN-Q4-2026-10-24.md (разделы 4, 5.0, 12) + docs/BRIEF-Q4-2026-10-24.md</i>';
   return text;
 }
