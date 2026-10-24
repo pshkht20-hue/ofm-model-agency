@@ -56,6 +56,7 @@ export async function GET(request: Request) {
     code,
     chatId,
     skipStore: true,
+    alarmLabel: 'Тестовая заявка-робот',
   });
   const ms = Date.now() - startedAt;
 

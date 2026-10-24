@@ -42,6 +42,8 @@ export type DeliverApplicationInput = {
   skipStore?: boolean;
   /** HTML не собрался: ступень 1 пропускается, сразу простой текст. */
   plainOnly?: boolean;
+  /** Как назвать заявку в тревоге (синтетика: «Тестовая заявка-робот»). */
+  alarmLabel?: string;
   test?: DeliveryTestFlag;
 };
 
@@ -181,7 +183,7 @@ export async function deliverApplication(input: DeliverApplicationInput): Promis
       const testMark = test ? ` (тест превью: ${test})` : '';
       try {
         await sendTelegramMessage(
-          `⚠️ Заявка ${code} не дошла в чат заявок, доставлена: ${where}${testMark}. Время ${kyivClock()} по Киеву.`,
+          `⚠️ ${input.alarmLabel ?? 'Заявка'} ${code} не дошла в чат заявок, доставлена: ${where}${testMark}. Время ${kyivClock()} по Киеву.`,
           planChat,
           { parseMode: null, timeoutMs: 3000 },
         );
