@@ -87,12 +87,12 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How much do models typically earn with an agency?',
         answer:
-          'The range is wide: from a few hundred dollars for beginners to five-figure months for top accounts. At OFM, some models have reached roughly $12,000 to $35,000+ per month, but that is not a guarantee or a minimum. Results depend on niche, discipline, content, and traffic volume. For a detailed breakdown by level and niche, see [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
+          'The range is wide: from a few hundred dollars for beginners to five-figure months for top accounts. At OFM, the balances of the agency’s top pages run at $15,000 to $50,000 per month (gross), but that is not a guarantee or a minimum. Results depend on niche, discipline, content, and traffic volume. For a detailed breakdown by level and niche, see [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       },
       {
         question: 'Can I stop working with the agency, and how fast?',
         answer:
-          'Any time — and that is a deliberate policy. We don\'t lock models into long contracts with early-exit penalties: you start without paperwork hassle, and everything — percentage, work plan, content boundaries — is agreed transparently at the casting call. What keeps an honest team honest is results, not a signature: if we didn\'t grow balances, models would leave. Your freedom to walk away at any moment is your built-in guarantee.',
+          'Any time, and that is a deliberate policy. You start without red tape: how leaving works and what happens to the balance and the page are discussed before launch, together with the percentage, the work plan and content boundaries. What keeps an honest team honest is results: if we didn’t grow balances, models would leave.',
       },
       {
         question: 'Who owns the OnlyFans account?',

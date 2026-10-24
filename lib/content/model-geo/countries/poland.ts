@@ -74,11 +74,11 @@ const RU: ModelGeoContent = {
     },
     {
       q: 'Как приходят выплаты в Польше?',
-      a: 'Банковским переводом прямо на твой счёт — обычно 3–5 банковских дней, без комиссии платформы. Есть и более быстрый вариант — электронный кошелёк Paxum, который давно работает с Польшей: деньги приходят примерно за сутки. Вывод доступен уже от ~$20, можно настроить автоматические выплаты каждую неделю. Команда помогает всё подключить при старте.',
+      a: 'Банковским переводом прямо на ваш счёт, обычно за 3-5 банковских дней, без комиссии платформы. Есть и более быстрый вариант: электронный кошелёк Paxum, который давно работает с Польшей, туда деньги доходят примерно за сутки. Выплаты приходят по фиксированному графику, способ получения согласуем на старте.',
     },
     {
       q: 'Это легально в Польше? Что с налогами?',
-      a: 'Да, полностью легально: платформа работает официально, строго 18+ и с верификацией личности, а доход — обычный налогооблагаемый заработок. Для первых шагов в Польше есть упрощённый режим деятельности без регистрации фирмы, дальше — обычный ИП (JDG). Команда подскажет, с чего начать оформление.',
+      a: 'OnlyFans официально работает в Польше, строго 18+ и с верификацией личности. Налоги и регистрация по правилам вашей страны, команда подскажет, к какому специалисту обратиться.',
     },
     {
       q: 'Я буду в Польше одна такая?',
@@ -146,11 +146,11 @@ const UK: ModelGeoContent = {
     },
     {
       q: 'Як надходять виплати в Польщі?',
-      a: 'Банківським переказом прямо на твій рахунок — зазвичай 3–5 банківських днів, без комісії платформи. Є і швидший варіант — електронний гаманець Paxum, який давно працює з Польщею: гроші надходять приблизно за добу. Виведення доступне вже від ~$20, можна налаштувати автоматичні виплати щотижня. Команда допомагає все підключити на старті.',
+      a: 'Банківським переказом прямо на ваш рахунок, зазвичай за 3-5 банківських днів, без комісії платформи. Є і швидший варіант: електронний гаманець Paxum, який давно працює з Польщею, туди гроші доходять приблизно за добу. Виплати надходять за фіксованим графіком, спосіб отримання погодимо на старті.',
     },
     {
       q: 'Це легально в Польщі? Що з податками?',
-      a: 'Так, повністю легально: платформа працює офіційно, суворо 18+ і з верифікацією особи, а дохід — звичайний оподатковуваний заробіток. Для перших кроків у Польщі є спрощений режим діяльності без реєстрації фірми, далі — звичайний ФОП (JDG). Команда підкаже, з чого почати оформлення.',
+      a: 'OnlyFans офіційно працює в Польщі, суворо 18+ і з верифікацією особи. Податки й реєстрація за правилами вашої країни, команда підкаже, до якого фахівця звернутися.',
     },
     {
       q: 'Я буду в Польщі одна така?',
@@ -230,11 +230,11 @@ const EN: ModelGeoContent = {
     },
     {
       q: 'How will I receive payouts in Poland?',
-      a: 'By bank transfer straight to your account — usually 3–5 business days, with no platform fee. There is also a faster option: the Paxum e-wallet, which has worked with Poland for years — money arrives in about a day. Withdrawals start at ~$20, and you can set up automatic weekly payouts. The team helps you connect everything at the start.',
+      a: 'By bank transfer straight to your account, usually within 3-5 business days and with no platform fee. There is also a faster option: the Paxum e-wallet, which has worked with Poland for years and gets the money to you in about a day. Payouts come on a fixed schedule, and we agree on how you receive them at the start.',
     },
     {
       q: 'Is it legal in Poland? What about taxes?',
-      a: 'Yes, fully legal: the platform operates officially, strictly 18+ and with identity verification, and the income is regular taxable earnings. For the first steps Poland has a simplified regime with no company registration, and later a standard sole proprietorship (JDG). The team walks you through the first steps.',
+      a: 'OnlyFans operates officially in Poland, strictly 18+ and with identity verification. Taxes and registration follow the rules of your country, and the team will tell you which specialist to contact.',
     },
     {
       q: 'Will I be the only one doing this in Poland?',
@@ -290,11 +290,11 @@ const ES: ModelGeoContent = {
     },
     {
       q: '¿Cómo recibiré los pagos en Polonia?',
-      a: 'Por transferencia bancaria directa a tu cuenta — normalmente en 3–5 días hábiles y sin comisión de la plataforma. También hay una opción más rápida: el monedero electrónico Paxum, que lleva años trabajando con Polonia — el dinero llega en un día aproximadamente. Puedes retirar desde ~$20 y programar pagos automáticos semanales. El equipo te ayuda a conectarlo todo al empezar.',
+      a: 'Por transferencia bancaria directa a tu cuenta, normalmente en 3-5 días hábiles y sin comisión de la plataforma. También hay una opción más rápida: el monedero electrónico Paxum, que lleva años trabajando con Polonia y con el que el dinero llega en un día aproximadamente. Los pagos llegan con un calendario fijo, y la forma de cobro la acordamos al empezar.',
     },
     {
       q: '¿Es legal en Polonia? ¿Qué pasa con los impuestos?',
-      a: 'Sí, totalmente legal: la plataforma opera de forma oficial, estrictamente 18+ y con verificación de identidad, y los ingresos son ganancias imponibles normales. Para los primeros pasos Polonia tiene un régimen simplificado sin registrar empresa, y más adelante una actividad por cuenta propia estándar (JDG). El equipo te orienta en los primeros pasos.',
+      a: 'OnlyFans opera oficialmente en Polonia, estrictamente 18+ y con verificación de identidad. Los impuestos y el registro siguen las normas de tu país, y el equipo te indicará a qué especialista acudir.',
     },
     {
       q: '¿Seré la única en Polonia?',

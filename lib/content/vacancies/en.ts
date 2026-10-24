@@ -68,7 +68,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
         'Two key roles are open at the agency right now — and they’re opposite in the type of work: the model handles content, the chatter handles messaging and sales:',
       ],
       bullets: [
-        'Chatter (chat operator) — messaging subscribers on behalf of the page and selling PPV from ready scripts; pay is a base rate + % of chat sales; training from scratch, men welcome too',
+        'Chatter (chat operator) — messaging subscribers on behalf of the page and selling PPV from ready scripts; pay is a base rate + a bonus on chat sales; training from scratch, men welcome too',
         'OnlyFans model — content for 2–3 hours a day on a ready plan; income $3 000–10 000/mo, with registration, promo, chat and page promotion fully handled by the team. Choose your country on the [“Model work” page](/vacancies/model)',
       ],
     },
@@ -76,7 +76,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
       heading: 'What does OnlyFans work actually involve?',
       paragraphs: [
         'OnlyFans is a paid-subscription platform, and "OnlyFans work" is far from just the models themselves. Paired with the agency, a model only handles content: 2–3 hours of shooting a day on a ready plan. Everything else is done by the agency team: chatters sell content in conversations with subscribers, management builds the content plan and watches the numbers, and promo brings the paying traffic.',
-        'The key fact of the niche: 70–90% of a page’s income comes from chatting, not the subscription — which is why the chatter role is the agency’s second key opening alongside the model. If you’re new to the topic, start with the guide [what OnlyFans is](/blog/chto-takoe-onlyfans), then come back to the roles above.',
+        'The key fact of the niche: the bulk of a page’s money comes from chatting rather than the subscription, which is why the chatter role matters to the agency as much as the model role. If you’re new to the topic, start with the guide [what OnlyFans is](/blog/chto-takoe-onlyfans), then come back to the roles above.',
       ],
     },
     {
@@ -89,7 +89,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
     {
       heading: 'Can you really earn on OnlyFans?',
       paragraphs: [
-        'Yes — but the numbers are honest, no fairy tales. Chatter: a base rate + a percentage of your own chat’s sales (we name the range at the interview after the test task, so we don’t paint an advertising "up to $X"). Model: income of $3 000–10 000/mo, with top models earning $10 000+ — we’ll show your personal range and plan on Telegram.',
+        'Yes, but the numbers are honest, no fairy tales. Chatter: a base rate + a bonus on your own chat’s sales (we name the range at the interview after the test task, so we don’t paint an advertising "up to $X"). Model: income of $3 000-10 000/mo, strong pages reach the top of the range, and we’ll show your personal range and plan on Telegram.',
         'Page benchmarks: the balances of the agency’s top-model pages reach $15 000–50 000 a month — the result of the whole team’s systematic work on promo, chat and management. A full breakdown of the numbers is in the article [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       ],
     },
@@ -155,7 +155,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
     {
       question: 'How much does an OnlyFans agency pay?',
       answer:
-        'Chatter — base rate + % of your own chat’s sales (range named at the interview after the test task). Model — $3 000–10 000/mo; the agency’s top pages reach balances of $15 000–50 000/mo. We’ll share your personal range and plan on Telegram.',
+        'Chatter — base rate + a bonus on your own chat’s sales (range named at the interview after the test task). Model — $3 000–10 000/mo; the agency’s top pages reach balances of $15 000–50 000/mo. We’ll share your personal range and plan on Telegram.',
     },
     {
       question: 'When does the first payout arrive?',
@@ -195,7 +195,7 @@ const CHATTER_EN: VacancyContent = {
   h1: 'OnlyFans chatter job — remote chat operator vacancy',
   seoTitle: 'OnlyFans chatter job — remote, base rate + % of sales',
   seoDescription:
-    'OnlyFans chatter vacancy at OFM Models agency: remote chat work, training from scratch, base rate + % of sales, from 25 h/week. Men welcome too. Apply now!',
+    'OnlyFans chatter vacancy at OFM Models agency: remote chat work, training from scratch, base rate + sales bonus, from 25 h/week. Men welcome too. Apply now!',
   keywords: [
     'onlyfans chatter',
     'onlyfans chatter job',
@@ -211,21 +211,21 @@ const CHATTER_EN: VacancyContent = {
     'Training from scratch',
     'Remote',
     'Flexible shifts',
-    'Base rate + % of sales',
+    'Base rate + sales bonus',
     'English from B1',
     'Men welcome',
   ],
   formatLabel: 'Remote · shifts · from 25 h/week',
   locationLabel: 'Remote · Europe, US, Canada & worldwide',
   intro: [
-    'OFM Models agency is hiring OnlyFans chatters (chat operators) for remote work. The gist: you handle messaging with subscribers of our models’ pages from ready scripts and sell paid content (PPV), while we train you from scratch and pay a base rate + a percentage of your chat’s sales. Fully online, start with no experience, suitable for women and men alike — you need written English from B1 and readiness to commit from 25 hours a week.',
+    'OFM Models agency is hiring OnlyFans chatters (chat operators) for remote work. The gist: you handle messaging with subscribers of our models’ pages from ready scripts and sell paid content (PPV), while we train you from scratch and pay a base rate + a bonus on your chat’s sales. Fully online, start with no experience, suitable for women and men alike — you need written English from B1 and readiness to commit from 25 hours a week.',
     'This isn’t a job board or "work somewhere online": we’re hiring into the agency’s own chat team, and the agency runs model pages on OnlyFans — from content plan to promotion and finances. Chat is the heart of that system: it’s in the messaging that a page earns most of its money, and we need people who can — or want to learn to — sell with words.',
   ],
   sections: [
     {
       heading: 'Who a chatter is and why it’s the key profession in an OnlyFans agency',
       paragraphs: [
-        'A chatter is a specialist who talks to subscribers on behalf of the model’s page: replies to messages, keeps fans engaged and sells paid content in direct messages. On OnlyFans 70–90% of a page’s income comes precisely from messaging, not the subscription — so a good chat operator literally makes the page’s revenue.',
+        'A chatter is a specialist who talks to subscribers on behalf of the model’s page: replies to messages, keeps fans engaged and sells paid content in direct messages. On OnlyFans the bulk of a page’s money comes from messaging rather than the subscription, so a good chat operator literally makes the page’s revenue.',
         'Want to understand the profession more deeply — we have a detailed breakdown: [who an OnlyFans chatter is and how they work](/blog/chatter-onlyfans-kto-eto). And if you’re hearing about the platform for the first time, start with the guide [what OnlyFans is](/blog/chto-takoe-onlyfans).',
       ],
     },
@@ -247,7 +247,7 @@ const CHATTER_EN: VacancyContent = {
       bullets: [
         'Remote work from any city — you only need a laptop and stable internet',
         'Training from scratch: a base of scripts, breakdowns of real conversations, a mentor for the trial period — niche experience isn’t required',
-        'Pay = base rate + % of your chat’s sales: your income has no hard ceiling',
+        'Pay = base rate + a bonus on your chat’s sales: your income has no hard ceiling',
         'A clear career track up to senior chatter and team lead — we grow leads from within',
         'A shift schedule you can genuinely combine with study or another job',
         'A team and support: working chats, breakdowns of tricky conversations, no "figure it out yourself"',
@@ -272,10 +272,10 @@ const CHATTER_EN: VacancyContent = {
       ],
     },
     {
-      heading: 'Pay: base rate + percentage of chat sales',
+      heading: 'Pay: base rate + bonus on chat sales',
       paragraphs: [
-        'The scheme is transparent: a fixed rate for shifts + a percentage of the sales your chat made. The exact figures depend on schedule, experience and test-task results — we state them at the interview so we name your real range, not an advertising "up to $X".',
-        'Why the percentage is serious: top-model pages under our management reach $15 000–50 000 a month, and most of those sales are born in the messaging. The better your chat sells, the larger your percentage in absolute figures. How much the pages themselves earn and what their income is made of — see the breakdown [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
+        'The scheme is transparent: a fixed rate for shifts + a bonus on the sales your chat made. We’ll name the exact figures at the interview after the test task: your real range, not an advertising "up to $X".',
+        'Why the sales bonus matters: top-model pages under our management reach $15 000-50 000 a month, and most of those sales are born in the messaging. The better your chat sells, the bigger your bonus. For how much the pages themselves earn and what their income is made of, see the breakdown [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       ],
     },
     {
@@ -299,7 +299,7 @@ const CHATTER_EN: VacancyContent = {
       title: 'Test task',
       text: 'A short scripted conversation in English: we look at your language and sense for sales.',
     },
-    { title: 'Online interview', text: 'We get to know each other, discuss schedule, rate and percentage.' },
+    { title: 'Online interview', text: 'We get to know each other, discuss schedule, rate and bonus.' },
     { title: 'Training', text: 'Scripts, rules, trial shifts with a mentor.' },
     { title: 'First shift', text: 'You go on schedule with a mentor’s support — and you’re on the team.' },
   ],
@@ -335,7 +335,7 @@ const CHATTER_EN: VacancyContent = {
     {
       question: 'How much does an OnlyFans chatter earn?',
       answer:
-        'Income is made of a fixed rate for shifts and a percentage of your chat’s sales, so there’s no hard ceiling: more sales — a bigger figure. We name the exact range at the interview after the test task — it depends on schedule, shifts and level.',
+        'Income is made of a fixed rate for shifts and a bonus on your chat’s sales, so there’s no hard ceiling: more sales, a bigger figure. We’ll name your exact range at the interview after the test task.',
     },
   ],
   cta: {

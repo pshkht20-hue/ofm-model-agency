@@ -81,11 +81,11 @@ const RU: ModelGeoContent = {
     },
     {
       q: 'Как приходят выплаты в Германии?',
-      a: 'В евро на твой немецкий банковский счёт через SEPA — обычно 3–5 банковских дней, без комиссии платформы. Есть и более быстрый вариант — электронный кошелёк Paxum, куда деньги приходят примерно за сутки. Вывод доступен уже от ~$20: можно запрашивать его в любой момент или настроить автоматические выплаты каждую неделю. Команда помогает всё настроить при старте.',
+      a: 'В евро на ваш немецкий банковский счёт через SEPA, обычно за 3-5 банковских дней, без комиссии платформы. Есть и более быстрый вариант: электронный кошелёк Paxum, туда деньги доходят примерно за сутки. Выплаты приходят по фиксированному графику, способ получения согласуем на старте.',
     },
     {
       q: 'Это легально в Германии? Что с налогами?',
-      a: 'Да, полностью легально: платформа работает официально, строго 18+ и с верификацией личности. Доход оформляется как обычная самозанятость — регистрация (Gewerbe) стоит 30–60 € и оформляется быстро, а до 25 000 € оборота в год действует упрощённый режим малого предпринимателя без НДС-бюрократии. Команда подскажет, с чего начать оформление.',
+      a: 'OnlyFans официально работает в Германии, строго 18+ и с верификацией личности. Налоги и регистрация по правилам вашей страны, команда подскажет, к какому специалисту обратиться.',
     },
     {
       q: 'Я буду в Германии одна такая?',
@@ -153,11 +153,11 @@ const UK: ModelGeoContent = {
     },
     {
       q: 'Як надходять виплати в Німеччині?',
-      a: 'У євро на твій німецький банківський рахунок через SEPA — зазвичай 3–5 банківських днів, без комісії платформи. Є і швидший варіант — електронний гаманець Paxum, куди гроші надходять приблизно за добу. Виведення доступне вже від ~$20: можна замовляти його будь-коли або налаштувати автоматичні виплати щотижня. Команда допомагає все налаштувати на старті.',
+      a: 'У євро на ваш німецький банківський рахунок через SEPA, зазвичай за 3-5 банківських днів, без комісії платформи. Є і швидший варіант: електронний гаманець Paxum, куди гроші доходять приблизно за добу. Виплати надходять за фіксованим графіком, спосіб отримання погодимо на старті.',
     },
     {
       q: 'Це легально в Німеччині? Що з податками?',
-      a: 'Так, повністю легально: платформа працює офіційно, суворо 18+ і з верифікацією особи. Дохід оформлюється як звичайна самозайнятість — реєстрація (Gewerbe) коштує 30–60 € і оформлюється швидко, а до 25 000 € обороту на рік діє спрощений режим малого підприємця без ПДВ-бюрократії. Команда підкаже, з чого почати оформлення.',
+      a: 'OnlyFans офіційно працює в Німеччині, суворо 18+ і з верифікацією особи. Податки й реєстрація за правилами вашої країни, команда підкаже, до якого фахівця звернутися.',
     },
     {
       q: 'Я буду в Німеччині одна така?',
@@ -225,11 +225,11 @@ const EN: ModelGeoContent = {
     },
     {
       q: 'How will I receive payouts in Germany?',
-      a: 'In euros, straight to your German bank account via SEPA — usually 3–5 business days, with no platform fee. There is also a faster option: the Paxum e-wallet, where the money arrives in about a day. Withdrawals start at ~$20 — request one whenever you like, or set up automatic weekly payouts. The team helps you set everything up at the start.',
+      a: 'In euros, straight to your German bank account via SEPA, usually within 3-5 business days and with no platform fee. There is also a faster option: the Paxum e-wallet, where the money arrives in about a day. Payouts come on a fixed schedule, and we agree on how you receive them at the start.',
     },
     {
       q: 'Is it legal in Germany? What about taxes?',
-      a: 'Yes, fully legal: the platform operates officially, strictly 18+ and with identity verification. The income is declared as regular self-employment — the trade registration (Gewerbe) costs €30–60 at the local trade office, and with up to €25,000 in yearly turnover you fall under the simplified small-business scheme, with no VAT bureaucracy. The team walks you through the first steps.',
+      a: 'OnlyFans operates officially in Germany, strictly 18+ and with identity verification. Taxes and registration follow the rules of your country, and the team will tell you which specialist to contact.',
     },
     {
       q: 'I keep seeing "OnlyFans Agentur jobs" in German search — is this the same thing?',
@@ -301,11 +301,11 @@ const ES: ModelGeoContent = {
     },
     {
       q: '¿Cómo recibiré los pagos en Alemania?',
-      a: 'En euros, en tu cuenta bancaria alemana vía SEPA — normalmente en 3–5 días hábiles y sin comisión de la plataforma. También hay una opción más rápida: el monedero electrónico Paxum, donde el dinero llega en un día aproximadamente. Puedes retirar desde ~$20 cuando quieras o programar pagos automáticos semanales. El equipo te ayuda a configurarlo todo al empezar.',
+      a: 'En euros, en tu cuenta bancaria alemana vía SEPA, normalmente en 3-5 días hábiles y sin comisión de la plataforma. También hay una opción más rápida: el monedero electrónico Paxum, donde el dinero llega en un día aproximadamente. Los pagos llegan con un calendario fijo, y la forma de cobro la acordamos al empezar.',
     },
     {
       q: '¿Es legal en Alemania? ¿Qué pasa con los impuestos?',
-      a: 'Sí, totalmente legal: la plataforma opera de forma oficial, estrictamente 18+ y con verificación de identidad. Los ingresos se declaran como autoempleo normal — el registro (Gewerbe) cuesta 30–60 € en la oficina local, y con una facturación anual de hasta 25 000 € se aplica el régimen simplificado de pequeño empresario, sin burocracia de IVA. El equipo te orienta en los primeros pasos.',
+      a: 'OnlyFans opera oficialmente en Alemania, estrictamente 18+ y con verificación de identidad. Los impuestos y el registro siguen las normas de tu país, y el equipo te indicará a qué especialista acudir.',
     },
     {
       q: '¿Seré la única en Alemania?',

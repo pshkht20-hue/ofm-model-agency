@@ -87,12 +87,12 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Cuánto ganan de media las modelos con una agencia?',
         answer:
-          'El rango es muy amplio: desde los primeros cientos de dólares para principiantes hasta cifras de cinco dígitos en cuentas top. En OFM, según la experiencia de parte de las modelos, orientativamente de 12 000 a 35 000+ USD al mes, pero no es garantía ni salario mínimo. El resultado depende del nicho, la disciplina, el contenido y el volumen de tráfico.',
+          'El rango es muy amplio: desde los primeros cientos de dólares para principiantes hasta cifras de cinco dígitos en cuentas top. En OFM, los balances de las páginas top de la agencia son de 15 000 a 50 000 USD brutos al mes, pero no es garantía ni salario mínimo. El resultado depende del nicho, la disciplina, el contenido y el volumen de tráfico.',
       },
       {
         question: '¿Puedo dejar la agencia y con qué rapidez?',
         answer:
-          'En cualquier momento — y es una postura deliberada. No atamos a las modelos con contratos largos ni penalizaciones por «salida anticipada»: empiezas sin papeleo, y todo — porcentaje, plan de trabajo, límites del contenido — se acuerda con transparencia en el casting. A un equipo honesto lo sostienen los resultados, no una firma: si no hiciéramos crecer los balances, las modelos se irían. Tu libertad de irte en cualquier momento es tu garantía incorporada.',
+          'En cualquier momento, y es una postura deliberada. Empiezas sin burocracia: cómo funciona la salida y qué pasa con el balance y la página lo hablamos antes del lanzamiento, junto con el porcentaje, el plan de trabajo y los límites del contenido. A un equipo honesto lo sostienen los resultados: si no hiciéramos crecer los balances, las modelos se irían.',
       },
       {
         question: '¿A quién pertenece la cuenta de OnlyFans?',

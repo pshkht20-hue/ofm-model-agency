@@ -21,25 +21,25 @@ const STATS: Record<Locale, Stat[]> = {
     { value: '3+', label: 'года на рынке' },
     { value: '220+', label: 'запущенных страниц' },
     { value: '24 ч', label: 'срок обработки заявки' },
-    { value: '100%', label: 'приватность под контролем' },
+    { value: 'Свой менеджер', label: 'на связи каждый день' },
   ],
   uk: [
     { value: '3+', label: 'роки на ринку' },
     { value: '220+', label: 'запущених сторінок' },
     { value: '24 год', label: 'строк обробки заявки' },
-    { value: '100%', label: 'приватність під контролем' },
+    { value: 'Свій менеджер', label: 'на зв’язку щодня' },
   ],
   en: [
     { value: '3+', label: 'years in the market' },
     { value: '220+', label: 'pages launched' },
     { value: '24 h', label: 'to process an application' },
-    { value: '100%', label: 'privacy in your control' },
+    { value: 'Your manager', label: 'in touch every day' },
   ],
   es: [
     { value: '3+', label: 'años en el mercado' },
     { value: '220+', label: 'páginas lanzadas' },
     { value: '24 h', label: 'para procesar la solicitud' },
-    { value: '100%', label: 'privacidad bajo control' },
+    { value: 'Tu manager', label: 'en contacto cada día' },
   ],
 };
 

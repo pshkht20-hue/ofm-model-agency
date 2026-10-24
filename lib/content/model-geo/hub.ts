@@ -26,7 +26,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     earningsHeading: 'Сколько зарабатывает модель',
     earningsBody: [
-      'Топ-модели агентства выходят на $10 000+ уже в первые месяцы, а балансы топ-страниц достигают $15 000–50 000/мес.',
+      'Ориентир для модели: $3 000-10 000/мес, сильные страницы выходят на верх вилки, а балансы топ-страниц достигают $15 000-50 000/мес.',
       'Личную вилку и план первого месяца покажем в Telegram — напиши, это ни к чему не обязывает.',
     ],
     listHeading: 'Выбери свою страну',
@@ -50,7 +50,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
       },
       {
         q: 'Сколько получает модель?',
-        a: 'Ориентир — $3 000–10 000/мес. Топ-модели агентства выходят на $10 000+, а балансы топ-страниц достигают $15 000–50 000/мес. Реальные балансы страниц — [кейсы со скриншотами статистики](/#models). Личную вилку и план первого месяца покажем в Telegram — напиши, это ни к чему не обязывает.',
+        a: 'Ориентир: $3 000-10 000/мес. Сильные страницы выходят на верх вилки, а балансы топ-страниц достигают $15 000-50 000/мес. Реальные балансы страниц: [кейсы со скриншотами статистики](/#models). Личную вилку и план первого месяца покажем в Telegram: напишите, это ни к чему не обязывает.',
       },
       {
         q: 'Что делает агентство, а что — модель?',
@@ -86,7 +86,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     earningsHeading: 'Скільки заробляє модель',
     earningsBody: [
-      'Топ-моделі агенції виходять на $10 000+ уже в перші місяці, а баланси топ-сторінок сягають $15 000–50 000/міс.',
+      'Орієнтир для моделі: $3 000-10 000/міс, сильні сторінки виходять на верх вилки, а баланси топ-сторінок сягають $15 000-50 000/міс.',
       'Особисту вилку та план першого місяця покажемо в Telegram — напиши, це ні до чого не зобов’язує.',
     ],
     listHeading: 'Обери свою країну',
@@ -110,7 +110,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
       },
       {
         q: 'Скільки отримує модель?',
-        a: 'Орієнтир — $3 000–10 000/міс. Топ-моделі агенції виходять на $10 000+, а баланси топ-сторінок сягають $15 000–50 000/міс. Реальні баланси сторінок — [кейси зі скріншотами статистики](/#models). Особисту вилку та план першого місяця покажемо в Telegram — напиши, це ні до чого не зобов’язує.',
+        a: 'Орієнтир: $3 000-10 000/міс. Сильні сторінки виходять на верх вилки, а баланси топ-сторінок сягають $15 000-50 000/міс. Реальні баланси сторінок: [кейси зі скріншотами статистики](/#models). Особисту вилку та план першого місяця покажемо в Telegram: напишіть, це ні до чого не зобов’язує.',
       },
       {
         q: 'Що робить агенція, а що — модель?',
@@ -146,7 +146,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     earningsHeading: 'How much a model earns',
     earningsBody: [
-      'Top models at the agency reach $10 000+ within their first months, and top-page balances run at $15 000–50 000/mo.',
+      'The benchmark for a model is $3 000-10 000/mo, strong pages reach the top of the range, and top-page balances run at $15 000-50 000/mo.',
       'We’ll show you your personal range and first-month plan on Telegram — message us, it doesn’t commit you to anything.',
     ],
     listHeading: 'Choose your country',
@@ -170,7 +170,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
       },
       {
         q: 'How much does a model receive?',
-        a: 'The benchmark is $3 000–10 000/mo. Top models at the agency reach $10 000+, and top-page balances run at $15 000–50 000/mo. We’ll show you your personal range and first-month plan on Telegram — message us, it doesn’t commit you to anything.',
+        a: 'The benchmark is $3 000-10 000/mo. Strong pages reach the top of the range, and top-page balances run at $15 000-50 000/mo. We’ll show you your personal range and first-month plan on Telegram: message us, it doesn’t commit you to anything.',
       },
       {
         q: 'What does the agency do, and what does the model do?',
@@ -206,7 +206,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     earningsHeading: 'Cuánto gana una modelo',
     earningsBody: [
-      'Las modelos top de la agencia llegan a $10 000+ ya en sus primeros meses, y los saldos de las páginas top alcanzan $15 000–50 000/mes.',
+      'La referencia para una modelo es $3 000-10 000/mes, las páginas fuertes llegan a la parte alta del rango, y los saldos de las páginas top alcanzan $15 000-50 000/mes.',
       'Tu rango personal y el plan del primer mes te los mostramos por Telegram — escríbenos, sin ningún compromiso.',
     ],
     listHeading: 'Elige tu país',
@@ -230,7 +230,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
       },
       {
         q: '¿Cuánto recibe una modelo?',
-        a: 'La referencia es $3 000–10 000/mes. Las modelos top de la agencia llegan a $10 000+, y los saldos de las páginas top alcanzan $15 000–50 000/mes. Tu rango personal y el plan del primer mes te los mostramos por Telegram — escríbenos, sin ningún compromiso.',
+        a: 'La referencia es $3 000-10 000/mes. Las páginas fuertes llegan a la parte alta del rango, y los saldos de las páginas top alcanzan $15 000-50 000/mes. Tu rango personal y el plan del primer mes te los mostramos por Telegram: escríbenos, sin ningún compromiso.',
       },
       {
         q: '¿Qué hace la agencia y qué hace la modelo?',
