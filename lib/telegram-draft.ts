@@ -231,5 +231,7 @@ export function withTelegramDraft(baseHref: string, text: string): string {
   }
   // Telegram ставит пробел перед ведущим «@» (core.telegram.org/api/links).
   const safe = text.replace(/^@+/, '').trim();
-  return `${baseHref}?text=${encodeURIComponent(safe)}`;
+  // Апостроф encodeURIComponent не кодирует: в HTML-атрибуте он уходит сущностью,
+  // часть мессенджеров обрывает на нём ссылку, поэтому %27 явно.
+  return `${baseHref}?text=${encodeURIComponent(safe).replace(/'/g, '%27')}`;
 }

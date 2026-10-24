@@ -1,4 +1,4 @@
-import { headers } from 'next/headers';
+import { NotFoundTitle } from '@/components/seo/NotFoundTitle';
 import { getSocialHref } from '@/lib/social';
 import { pageDraftText, withTelegramDraft } from '@/lib/telegram-draft';
 
@@ -7,14 +7,21 @@ import { pageDraftText, withTelegramDraft } from '@/lib/telegram-draft';
 // локальному layout/Tailwind). Сюда падают несматченные URL и промахи страниц
 // с dynamicParams = false (статьи, вакансии, исследования).
 //
-// «Окно 1» (W1-27, вариант А): язык берём из заголовка запроса
-// X-NEXT-INTL-LOCALE, который middleware next-intl ставит на каждом запросе;
-// без заголовка русский. <html lang> и <title> по языку (title элементом
-// React 19, поэтому статического metadata здесь нет, иначе два title).
-// Явный meta robots не задаём: Next сам добавляет noindex для not-found.
-// Middleware, роутинг и dynamicParams не тронуты.
+// «Окно 1» (W1-27, вариант Б). Вариант А (язык из заголовка X-NEXT-INTL-LOCALE
+// через headers()) проверен локальной прод-сборкой 24.10 и отклонён: headers()
+// делает /_not-found динамической, и промахи страниц с dynamicParams = false
+// перестают отдаваться этой статической 404, а рендерятся аварийной оболочкой
+// (<html id="__next_error__">) с двумя meta robots. Поэтому 404 остаётся
+// статической: в ней 4 набора текстов, по умолчанию виден русский, а маленький
+// inline-скрипт до отрисовки читает префикс языка из адреса (/uk, /en, /es) и
+// ставит <html lang>, document.title и нужный набор. Страница и так noindex,
+// для поиска разницы нет, для девушки есть. Статического metadata.title нет
+// сознательно: Next после гидрации возвращал бы русский заголовок поверх
+// выставленного скриптом (проверено в браузере). Явный meta robots не задаём: Next
+// сам добавляет noindex для not-found. Middleware, роутинг и dynamicParams не тронуты.
 
 type NotFoundLocale = 'ru' | 'uk' | 'en' | 'es';
+const LOCALES: NotFoundLocale[] = ['ru', 'uk', 'en', 'es'];
 
 const COPY: Record<
   NotFoundLocale,
@@ -62,9 +69,17 @@ const COPY: Record<
   },
 };
 
-function toLocale(value: string | null): NotFoundLocale {
-  return value === 'uk' || value === 'en' || value === 'es' ? value : 'ru';
-}
+const TITLES = Object.fromEntries(LOCALES.map((l) => [l, COPY[l].title])) as Record<NotFoundLocale, string>;
+
+/** До отрисовки: язык из префикса адреса → lang, data-nf (какой набор виден) и title. */
+const LANG_SCRIPT = `(function(){try{var m=/^\\/(uk|en|es)(\\/|$)/.exec(location.pathname);var l=m?m[1]:'ru';var d=document.documentElement;d.lang=l;d.setAttribute('data-nf',l);var t=${JSON.stringify(
+  TITLES,
+)};document.title=t[l];}catch(e){}})();`;
+
+/** По умолчанию (и без JS) виден русский набор; data-nf переключает на нужный. */
+const LANG_CSS = `[data-nf-lang]{display:none}html:not([data-nf]) [data-nf-lang="ru"],${LOCALES.map(
+  (l) => `html[data-nf="${l}"] [data-nf-lang="${l}"]`,
+).join(',')}{display:flex}`;
 
 const wrap: React.CSSProperties = {
   margin: 0,
@@ -73,12 +88,17 @@ const wrap: React.CSSProperties = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: '1.25rem',
   padding: '2rem',
   textAlign: 'center',
   background: 'radial-gradient(circle at 50% 30%, #16121f 0%, #07070b 70%)',
   color: '#f4f4f6',
   fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif',
+};
+
+const block: React.CSSProperties = {
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: '1.25rem',
 };
 
 const link: React.CSSProperties = {
@@ -88,44 +108,53 @@ const link: React.CSSProperties = {
   borderBottom: '1px solid rgba(255,77,141,0.4)',
 };
 
-export default async function NotFound() {
-  const locale = toLocale((await headers()).get('x-next-intl-locale'));
-  const copy = COPY[locale];
+export default function NotFound() {
   const telegramBase = getSocialHref('telegram');
-  // Черновик с кодом страницы 404 той же чистой функцией, что в TelegramCta.
-  const telegramHref = telegramBase ? withTelegramDraft(telegramBase, pageDraftText(locale, '404')) : null;
 
   return (
-    <html lang={locale}>
+    <html lang="ru" suppressHydrationWarning>
       <body style={wrap}>
-        <title>{copy.title}</title>
-        <div
-          style={{
-            fontSize: 'clamp(3.5rem, 12vw, 6rem)',
-            fontWeight: 800,
-            lineHeight: 1,
-            background: 'linear-gradient(90deg, #ff4d8d, #4dd0ff)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }}
-        >
-          404
-        </div>
-        <h1 style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', margin: 0, fontWeight: 700 }}>{copy.h1}</h1>
-        <p style={{ maxWidth: 460, margin: 0, color: '#b9b9c4', lineHeight: 1.6 }}>{copy.text}</p>
-        <nav style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center', marginTop: '0.5rem' }}>
-          <a href={copy.homeHref} style={link}>
-            {copy.home}
-          </a>
-          <a href={copy.vacanciesHref} style={link}>
-            {copy.vacancies}
-          </a>
-          {telegramHref && (
-            <a href={telegramHref} target="_blank" rel="noopener noreferrer" style={link}>
-              {copy.telegram}
-            </a>
-          )}
-        </nav>
+        <style dangerouslySetInnerHTML={{ __html: LANG_CSS }} />
+        <script dangerouslySetInnerHTML={{ __html: LANG_SCRIPT }} />
+        <NotFoundTitle titles={TITLES} />
+        {LOCALES.map((l) => {
+          const copy = COPY[l];
+          // Черновик с кодом страницы 404 той же чистой функцией, что в TelegramCta.
+          const telegramHref = telegramBase ? withTelegramDraft(telegramBase, pageDraftText(l, '404')) : null;
+          return (
+            <div key={l} data-nf-lang={l} lang={l} style={block}>
+              <div
+                style={{
+                  fontSize: 'clamp(3.5rem, 12vw, 6rem)',
+                  fontWeight: 800,
+                  lineHeight: 1,
+                  background: 'linear-gradient(90deg, #ff4d8d, #4dd0ff)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                404
+              </div>
+              <h1 style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', margin: 0, fontWeight: 700 }}>{copy.h1}</h1>
+              <p style={{ maxWidth: 460, margin: 0, color: '#b9b9c4', lineHeight: 1.6 }}>{copy.text}</p>
+              <nav
+                style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center', marginTop: '0.5rem' }}
+              >
+                <a href={copy.homeHref} style={link}>
+                  {copy.home}
+                </a>
+                <a href={copy.vacanciesHref} style={link}>
+                  {copy.vacancies}
+                </a>
+                {telegramHref && (
+                  <a href={telegramHref} target="_blank" rel="noopener noreferrer" style={link}>
+                    {copy.telegram}
+                  </a>
+                )}
+              </nav>
+            </div>
+          );
+        })}
       </body>
     </html>
   );
