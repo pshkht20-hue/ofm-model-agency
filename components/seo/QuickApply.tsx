@@ -2,19 +2,42 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { useLocale } from 'next-intl';
-import { usePathname } from '@/i18n/navigation';
-import { ArrowRight, CheckCircle2, X, Zap } from 'lucide-react';
-import { trackFormStart, trackFormSubmit, trackFormSubmitError } from '@/lib/analytics/gtag';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/i18n/navigation';
+import { ArrowRight, X, Zap } from 'lucide-react';
+import {
+  trackContactSubmit,
+  trackFormStart,
+  trackFormSubmit,
+  trackFormSubmitError,
+} from '@/lib/analytics/gtag';
 import { readAttribution } from '@/lib/attribution/client';
+import { TelegramCta } from '@/components/TelegramCta';
+import {
+  ApplyErrorScreen,
+  ApplySuccessScreen,
+  type ApplyErrorKind,
+} from '@/components/apply/ApplyScreens';
+import {
+  generateApplicationCode,
+  isValidApplicationCode,
+  looksLikeContact,
+} from '@/lib/application-code';
+import { applyScreens, QUICK_CONSENT, readW1TestFlag } from '@/lib/content/apply-screens';
+import { isWorkingHours, RESPONSE_PARTS } from '@/lib/content/response-hours';
+
+const { range: RANGE, from: FROM, to: TO } = RESPONSE_PARTS;
 
 /**
- * Quick-apply: мини-заявка из селектов (роль · желаемый доход · опыт · Telegram)
- * — 30 секунд вместо полной анкеты. Фрейминг «HR напишет первым» переворачивает
- * инициативу и снимает страх первого сообщения (сильнейшая механика ниши).
- * Бьёт в существующий POST /api/application: селекты упаковываются в message,
- * поэтому бесплатно наследуем rate-limit, honeypot, Telegram-уведомление с
- * гео-пометкой и серверный GA4-эвент. Бэкенд не менялся.
+ * Quick-apply: мини-заявка из селектов (роль, желаемый доход, опыт, Telegram)
+ * за 30 секунд вместо полной анкеты. Бьёт в существующий POST /api/application:
+ * селекты упаковываются в message, поэтому наследуем rate-limit, honeypot,
+ * Telegram-уведомление с гео-пометкой и серверный GA4-эвент.
+ *
+ * «Окно 1» (W1-02, W1-03, W1-17): роль и тип формы уходят на сервер (раньше
+ * уведомление всегда было «МОДЕЛЬ»), код заявки, экран успеха с кнопкой
+ * «Написать менеджеру сейчас», экран ошибки с объездом в Telegram, событие
+ * contact_submit, page_path в событиях и строка согласия со ссылкой на политику.
  */
 type L = 'ru' | 'uk' | 'en' | 'es';
 
@@ -35,10 +58,7 @@ const T: Record<
     age: string;
     submit: string;
     sending: string;
-    successTitle: string;
-    successText: string;
     close: string;
-    errorGeneric: string;
     errorTelegram: string;
     errorAge: string;
   }
@@ -46,88 +66,76 @@ const T: Record<
   ru: {
     trigger: 'Быстрая заявка · 30 секунд',
     heading: 'Быстрая заявка',
-    sub: 'Оставь контакт — наш HR напишет тебе первым в течение часа.',
+    sub: `Оставь Telegram, и менеджер ответит в рабочие часы, ${RANGE} по Киеву.`,
     role: 'Кем хочешь работать',
     roles: ['Модель OnlyFans', 'Чатер / оператор чата'],
     income: 'Сколько хочешь зарабатывать',
-    incomes: ['$1 500–3 000/мес', '$3 000–5 000/мес', '$5 000–10 000/мес', '$10 000+/мес'],
+    incomes: ['$1 500-3 000/мес', '$3 000-5 000/мес', '$5 000-10 000/мес', '$10 000+/мес'],
     experience: 'Опыт',
     experiences: ['Без опыта', 'Есть опыт съёмки контента', 'Действующая страница OnlyFans'],
     telegram: 'Твой Telegram',
     telegramPlaceholder: '@username или телефон',
     age: 'Мне есть 18 лет',
-    submit: 'Отправить — HR напишет первым',
+    submit: 'Отправить заявку',
     sending: 'Отправляем…',
-    successTitle: 'Заявка у HR!',
-    successText: 'Мы напишем тебе первыми в Telegram — обычно в течение часа в рабочее время.',
     close: 'Закрыть',
-    errorGeneric: 'Не получилось отправить. Попробуй ещё раз или напиши нам в Telegram.',
     errorTelegram: 'Укажи Telegram или телефон (от 3 символов).',
     errorAge: 'Подтверди, что тебе есть 18 лет.',
   },
   uk: {
     trigger: 'Швидка заявка · 30 секунд',
     heading: 'Швидка заявка',
-    sub: 'Залиш контакт — наш HR напише тобі першим протягом години.',
+    sub: `Залиш Telegram, і менеджер відповість у робочі години, ${RANGE} за Києвом.`,
     role: 'Ким хочеш працювати',
     roles: ['Модель OnlyFans', 'Чатер / оператор чату'],
     income: 'Скільки хочеш заробляти',
-    incomes: ['$1 500–3 000/міс', '$3 000–5 000/міс', '$5 000–10 000/міс', '$10 000+/міс'],
+    incomes: ['$1 500-3 000/міс', '$3 000-5 000/міс', '$5 000-10 000/міс', '$10 000+/міс'],
     experience: 'Досвід',
     experiences: ['Без досвіду', 'Є досвід зйомки контенту', 'Чинна сторінка OnlyFans'],
     telegram: 'Твій Telegram',
     telegramPlaceholder: '@username або телефон',
     age: 'Мені є 18 років',
-    submit: 'Надіслати — HR напише першим',
+    submit: 'Надіслати заявку',
     sending: 'Надсилаємо…',
-    successTitle: 'Заявка вже в HR!',
-    successText: 'Ми напишемо тобі першими в Telegram — зазвичай протягом години в робочий час.',
     close: 'Закрити',
-    errorGeneric: 'Не вдалося надіслати. Спробуй ще раз або напиши нам у Telegram.',
     errorTelegram: 'Вкажи Telegram або телефон (від 3 символів).',
     errorAge: 'Підтверди, що тобі є 18 років.',
   },
   en: {
     trigger: 'Quick apply · 30 seconds',
     heading: 'Quick apply',
-    sub: 'Leave your contact — our HR will message you first within an hour.',
+    sub: `Leave your Telegram and a manager will reply during working hours, ${RANGE} Kyiv time.`,
     role: 'Role you want',
     roles: ['OnlyFans model', 'Chatter / chat operator'],
     income: 'Income you aim for',
-    incomes: ['$1,500–3,000/mo', '$3,000–5,000/mo', '$5,000–10,000/mo', '$10,000+/mo'],
+    incomes: ['$1,500-3,000/mo', '$3,000-5,000/mo', '$5,000-10,000/mo', '$10,000+/mo'],
     experience: 'Experience',
     experiences: ['No experience', 'Some content experience', 'Active OnlyFans page'],
     telegram: 'Your Telegram',
     telegramPlaceholder: '@username or phone',
     age: 'I am 18 or older',
-    submit: 'Send — HR messages you first',
+    submit: 'Send application',
     sending: 'Sending…',
-    successTitle: 'HR has your application!',
-    successText: 'We will message you first on Telegram — usually within an hour during working hours.',
     close: 'Close',
-    errorGeneric: 'Could not send. Try again or message us on Telegram.',
     errorTelegram: 'Enter your Telegram or phone (3+ characters).',
     errorAge: 'Please confirm you are 18 or older.',
   },
   es: {
     trigger: 'Solicitud rápida · 30 segundos',
     heading: 'Solicitud rápida',
-    sub: 'Deja tu contacto — nuestro HR te escribirá primero en una hora.',
+    sub: `Deja tu Telegram y un manager te responderá en horario laboral, de ${FROM} a ${TO} (hora de Kiev).`,
     role: 'Puesto que quieres',
     roles: ['Modelo OnlyFans', 'Chatter / operadora de chat'],
     income: 'Cuánto quieres ganar',
-    incomes: ['$1 500–3 000/mes', '$3 000–5 000/mes', '$5 000–10 000/mes', '$10 000+/mes'],
+    incomes: ['$1 500-3 000/mes', '$3 000-5 000/mes', '$5 000-10 000/mes', '$10 000+/mes'],
     experience: 'Experiencia',
     experiences: ['Sin experiencia', 'Algo de experiencia', 'Página OnlyFans activa'],
     telegram: 'Tu Telegram',
     telegramPlaceholder: '@usuario o teléfono',
     age: 'Tengo 18 años o más',
-    submit: 'Enviar — HR te escribe primero',
+    submit: 'Enviar solicitud',
     sending: 'Enviando…',
-    successTitle: '¡HR ya tiene tu solicitud!',
-    successText: 'Te escribiremos primero por Telegram — normalmente en una hora en horario laboral.',
     close: 'Cerrar',
-    errorGeneric: 'No se pudo enviar. Inténtalo de nuevo o escríbenos por Telegram.',
     errorTelegram: 'Indica tu Telegram o teléfono (3+ caracteres).',
     errorAge: 'Confirma que tienes 18 años o más.',
   },
@@ -135,6 +143,8 @@ const T: Record<
 
 const selectClass =
   'w-full appearance-none rounded-xl border border-white/[0.12] bg-[#141118] px-4 py-3 text-sm text-white outline-none transition-colors focus:border-accent-pink/50';
+
+type Payload = Record<string, unknown>;
 
 export function QuickApply({
   vacancyLabel,
@@ -147,15 +157,29 @@ export function QuickApply({
   defaultRole?: 0 | 1;
   className?: string;
 }) {
-  const locale = (useLocale() as L) in T ? (useLocale() as L) : 'ru';
+  const raw = useLocale();
+  const locale = (raw in T ? raw : 'ru') as L;
   const t = T[locale];
+  const screens = applyScreens(locale);
+  const tForm = useTranslations('contactForm');
   const pathname = usePathname();
 
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [state, setState] = useState<'idle' | 'sending' | 'success'>('idle');
   const [error, setError] = useState<string | null>(null);
+  /** Ошибка проверки от сервера (400): рядом показываем ссылку на менеджера. */
+  const [serverValidation, setServerValidation] = useState(false);
+  const [errorScreen, setErrorScreen] = useState<ApplyErrorKind | null>(null);
+  const [serverText, setServerText] = useState('');
+  const [code, setCode] = useState('');
+  const [night, setNight] = useState(false);
+  const [contactSuspicious, setContactSuspicious] = useState(false);
+  const [telegramWarn, setTelegramWarn] = useState(false);
   const startedRef = useRef(false);
+  const codeRef = useRef<string | null>(null);
+  const payloadRef = useRef<Payload | null>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
 
   const [role, setRole] = useState(defaultRole);
   const [income, setIncome] = useState(1);
@@ -163,22 +187,26 @@ export function QuickApply({
   const [telegram, setTelegram] = useState('');
   const [ageConfirmed, setAgeConfirmed] = useState(false);
 
+  const roleKey = role === 1 ? 'chatter' : 'model';
+
   useEffect(() => setMounted(true), []);
 
   const openModal = useCallback(() => {
     setOpen(true);
     if (!startedRef.current) {
       startedRef.current = true;
-      trackFormStart({ locale });
+      trackFormStart({ locale, page_path: pathname });
     }
-  }, [locale]);
+  }, [locale, pathname]);
 
   const close = useCallback(() => {
     setOpen(false);
+    setErrorScreen(null);
     if (state === 'success') {
       setState('idle');
       setTelegram('');
       setAgeConfirmed(false);
+      setTelegramWarn(false);
     }
   }, [state]);
 
@@ -193,8 +221,53 @@ export function QuickApply({
     };
   }, [open, close]);
 
+  // Экран успеха или ошибки: фокус на его заголовок.
+  useEffect(() => {
+    if (state === 'success' || errorScreen) headingRef.current?.focus();
+  }, [state, errorScreen]);
+
+  async function send(payload: Payload) {
+    setState('sending');
+    trackFormSubmit({ locale, has_calc_prefill: false, page_path: pathname });
+    try {
+      const res = await fetch('/api/application', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...payload, attribution: readAttribution() }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { error?: string; code?: string };
+      if (!res.ok) {
+        const type = res.status === 429 ? 'rate_limit' : res.status >= 500 ? 'server' : 'validation';
+        trackFormSubmitError({ locale, error_type: type, http_status: res.status, page_path: pathname });
+        if (res.status === 400) {
+          setErrorScreen(null);
+          setError(data.error ?? t.errorTelegram);
+          setServerValidation(true);
+        } else {
+          setErrorScreen(res.status === 429 ? 'rate' : 'server');
+          setServerText(data.error ?? '');
+        }
+        setState('idle');
+        return;
+      }
+      trackContactSubmit({ locale, has_calc_prefill: false, form_type: 'quick', role: roleKey });
+      setCode(isValidApplicationCode(data.code) ? data.code : String(payload.code));
+      setContactSuspicious(!looksLikeContact(String(payload.telegram ?? '')));
+      setNight(readW1TestFlag() === 'night' || !isWorkingHours());
+      setErrorScreen(null);
+      setState('success');
+      codeRef.current = null;
+      payloadRef.current = null;
+    } catch {
+      trackFormSubmitError({ locale, error_type: 'network', page_path: pathname });
+      setErrorScreen('network');
+      setState('idle');
+    }
+  }
+
   async function submit() {
     setError(null);
+    setServerValidation(false);
     if (telegram.trim().length < 3) {
       setError(t.errorTelegram);
       return;
@@ -203,40 +276,34 @@ export function QuickApply({
       setError(t.errorAge);
       return;
     }
-    setState('sending');
-    trackFormSubmit({ locale, has_calc_prefill: false });
-    try {
-      const res = await fetch('/api/application', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          locale,
-          name: `⚡ Quick-apply · ${t.roles[role]}`,
-          telegram: telegram.trim(),
-          ageConfirmed,
-          website: '',
-          message: [
-            `Вакансия: ${vacancyLabel} (${pathname})`,
-            `Желаемый доход: ${t.incomes[income]}`,
-            `Опыт: ${t.experiences[experience]}`,
-          ].join('\n'),
-          attribution: readAttribution(),
-        }),
-      });
-      if (!res.ok) {
-        const type = res.status === 429 ? 'rate_limit' : res.status >= 500 ? 'server' : 'validation';
-        trackFormSubmitError({ locale, error_type: type, http_status: res.status });
-        setError(t.errorGeneric);
-        setState('idle');
-        return;
-      }
-      setState('success');
-    } catch {
-      trackFormSubmitError({ locale, error_type: 'network' });
-      setError(t.errorGeneric);
-      setState('idle');
-    }
+    if (!codeRef.current) codeRef.current = generateApplicationCode();
+    setCode(codeRef.current);
+    const payload: Payload = {
+      locale,
+      role: roleKey,
+      formType: 'quick',
+      code: codeRef.current,
+      // Имя быстрая заявка не спрашивает: роль и тип формы сервер показывает отдельными строками.
+      name: 'Быстрая заявка',
+      telegram: telegram.trim(),
+      ageConfirmed,
+      website: '',
+      message: [
+        `Вакансия: ${vacancyLabel} (${pathname})`,
+        `Желаемый доход: ${t.incomes[income]}`,
+        `Опыт: ${t.experiences[experience]}`,
+      ].join('\n'),
+      ...(readW1TestFlag() === 'fail' ? { __test: 'fail_all' } : {}),
+    };
+    payloadRef.current = payload;
+    await send(payload);
   }
+
+  function retry() {
+    if (payloadRef.current) void send(payloadRef.current);
+  }
+
+  const resultScreen = state === 'success' || errorScreen !== null;
 
   return (
     <>
@@ -256,13 +323,15 @@ export function QuickApply({
               onClick={(e) => e.target === e.currentTarget && close()}
             >
               <div
+                id="quick-apply"
                 role="dialog"
                 aria-modal="true"
                 aria-label={t.heading}
-                className="w-full max-w-md rounded-t-2xl border border-white/[0.1] bg-[#0e0b12] p-6 shadow-[0_0_60px_-15px_rgba(236,72,153,0.35)] sm:rounded-2xl"
+                data-clarity-mask="True"
+                className="max-h-[92vh] w-full max-w-md overflow-y-auto rounded-t-2xl border border-white/[0.1] bg-[#0e0b12] p-6 shadow-[0_0_60px_-15px_rgba(236,72,153,0.35)] sm:rounded-2xl"
               >
-                <div className="mb-1 flex items-start justify-between gap-4">
-                  <h3 className="font-serif text-2xl text-white">{t.heading}</h3>
+                <div className={`mb-1 flex items-start gap-4 ${resultScreen ? 'justify-end' : 'justify-between'}`}>
+                  {!resultScreen && <h3 className="font-serif text-2xl text-white">{t.heading}</h3>}
                   <button
                     type="button"
                     onClick={close}
@@ -274,17 +343,41 @@ export function QuickApply({
                 </div>
 
                 {state === 'success' ? (
-                  <div className="py-6 text-center">
-                    <CheckCircle2 className="mx-auto h-12 w-12 text-emerald-400" />
-                    <p className="mt-4 font-serif text-xl text-white">{t.successTitle}</p>
-                    <p className="mt-2 text-sm text-white/65">{t.successText}</p>
-                    <button
-                      type="button"
-                      onClick={close}
-                      className="btn-primary mt-6 inline-flex"
-                    >
-                      {t.close}
-                    </button>
+                  <div className="pb-2">
+                    <ApplySuccessScreen
+                      id="quick-apply-success"
+                      compact
+                      locale={locale}
+                      role={roleKey}
+                      code={code}
+                      night={night}
+                      contactSuspicious={contactSuspicious}
+                      headingRef={headingRef}
+                    />
+                    <div className="mt-5 text-center">
+                      <button
+                        type="button"
+                        onClick={close}
+                        className="text-sm text-white/55 transition-colors hover:text-white"
+                      >
+                        {t.close}
+                      </button>
+                    </div>
+                  </div>
+                ) : errorScreen ? (
+                  <div className="pb-2">
+                    <ApplyErrorScreen
+                      id="quick-apply-error"
+                      compact
+                      locale={locale}
+                      role={roleKey}
+                      code={code}
+                      kind={errorScreen}
+                      serverText={serverText}
+                      onRetry={retry}
+                      retrying={state === 'sending'}
+                      headingRef={headingRef}
+                    />
                   </div>
                 ) : (
                   <>
@@ -338,19 +431,37 @@ export function QuickApply({
                           ))}
                         </select>
                       </label>
-                      <label className="block">
-                        <span className="mb-1.5 block text-xs uppercase tracking-wider text-white/45">
-                          {t.telegram}
-                        </span>
-                        <input
-                          type="text"
-                          value={telegram}
-                          onChange={(e) => setTelegram(e.target.value)}
-                          placeholder={t.telegramPlaceholder}
-                          maxLength={64}
-                          className={selectClass}
-                        />
-                      </label>
+                      <div>
+                        <label className="block">
+                          <span className="mb-1.5 block text-xs uppercase tracking-wider text-white/45">
+                            {t.telegram}
+                          </span>
+                          <input
+                            type="text"
+                            value={telegram}
+                            onChange={(e) => {
+                              setTelegram(e.target.value);
+                              if (telegramWarn) {
+                                setTelegramWarn(e.target.value.trim() !== '' && !looksLikeContact(e.target.value));
+                              }
+                            }}
+                            onBlur={() =>
+                              setTelegramWarn(telegram.trim() !== '' && !looksLikeContact(telegram))
+                            }
+                            placeholder={t.telegramPlaceholder}
+                            maxLength={64}
+                            aria-describedby="quick-apply-telegram-hint"
+                            className={selectClass}
+                          />
+                        </label>
+                        <p
+                          id="quick-apply-telegram-hint"
+                          aria-live="polite"
+                          className={`mt-1.5 text-xs leading-relaxed ${telegramWarn ? 'text-amber-300/90' : 'text-white/40'}`}
+                        >
+                          {telegramWarn ? tForm('telegramWarn') : tForm('telegramHint')}
+                        </p>
+                      </div>
                       <label className="flex cursor-pointer items-center gap-2.5 text-sm text-white/75">
                         <input
                           type="checkbox"
@@ -360,7 +471,20 @@ export function QuickApply({
                         />
                         {t.age}
                       </label>
-                      {error && <p className="text-sm text-red-400">{error}</p>}
+                      {error && (
+                        <div className="space-y-1.5">
+                          <p className="text-sm text-red-400" role="alert">
+                            {error}
+                          </p>
+                          {serverValidation && (
+                            <TelegramCta
+                              variant="inline"
+                              location="quick_apply_error"
+                              label={screens.validationTelegram}
+                            />
+                          )}
+                        </div>
+                      )}
                       <button
                         type="button"
                         onClick={submit}
@@ -370,6 +494,19 @@ export function QuickApply({
                         {state === 'sending' ? t.sending : t.submit}
                         <ArrowRight className="ml-1.5 h-4 w-4" />
                       </button>
+                      <p className="text-center text-xs leading-relaxed text-white/40">
+                        {QUICK_CONSENT[locale].text}{' '}
+                        {/* Новая вкладка: в той же вкладке окно заявки закрылось бы. */}
+                        <Link
+                          href="/privacy"
+                          prefetch={false}
+                          target="_blank"
+                          rel="noopener"
+                          className="underline decoration-white/25 underline-offset-2 transition hover:text-white/70"
+                        >
+                          {QUICK_CONSENT[locale].link}
+                        </Link>
+                      </p>
                     </div>
                   </>
                 )}
