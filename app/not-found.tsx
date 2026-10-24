@@ -1,14 +1,70 @@
-import type { Metadata } from 'next';
+import { headers } from 'next/headers';
+import { getSocialHref } from '@/lib/social';
+import { pageDraftText, withTelegramDraft } from '@/lib/telegram-draft';
 
 // Корневой layout (app/layout.tsx) отдаёт только children без <html>/<body>,
 // поэтому 404 делаем самодостаточной: свой <html>, inline-стили (нет доступа к
-// локальному layout/Tailwind). Сюда падают только несматченные URL — локаль из
-// адреса на сервере недоступна, поэтому текст нейтральный ru+en (локализованная
-// версия — app/[locale]/not-found.tsx). Явный meta robots не задаём: Next сам
-// добавляет noindex для not-found, свой тег давал дубль.
-export const metadata: Metadata = {
-  title: '404 — страница не найдена | OFM Model Agency',
+// локальному layout/Tailwind). Сюда падают несматченные URL и промахи страниц
+// с dynamicParams = false (статьи, вакансии, исследования).
+//
+// «Окно 1» (W1-27, вариант А): язык берём из заголовка запроса
+// X-NEXT-INTL-LOCALE, который middleware next-intl ставит на каждом запросе;
+// без заголовка русский. <html lang> и <title> по языку (title элементом
+// React 19, поэтому статического metadata здесь нет, иначе два title).
+// Явный meta robots не задаём: Next сам добавляет noindex для not-found.
+// Middleware, роутинг и dynamicParams не тронуты.
+
+type NotFoundLocale = 'ru' | 'uk' | 'en' | 'es';
+
+const COPY: Record<
+  NotFoundLocale,
+  { title: string; h1: string; text: string; home: string; homeHref: string; vacancies: string; vacanciesHref: string; telegram: string }
+> = {
+  ru: {
+    title: 'Страница не найдена (404) | OFM Models',
+    h1: 'Страница не найдена',
+    text: 'Такой страницы нет или ссылка устарела. Начни с главной, загляни в вакансии или напиши менеджеру в Telegram.',
+    home: 'На главную',
+    homeHref: '/',
+    vacancies: 'Вакансии',
+    vacanciesHref: '/vacancies',
+    telegram: 'Написать в Telegram',
+  },
+  uk: {
+    title: 'Сторінку не знайдено (404) | OFM Models',
+    h1: 'Сторінку не знайдено',
+    text: 'Такої сторінки немає або посилання застаріло. Почни з головної, зазирни у вакансії або напиши менеджеру в Telegram.',
+    home: 'На головну',
+    homeHref: '/uk',
+    vacancies: 'Вакансії',
+    vacanciesHref: '/uk/vacancies',
+    telegram: 'Написати в Telegram',
+  },
+  en: {
+    title: 'Page not found (404) | OFM Models',
+    h1: 'Page not found',
+    text: "This page doesn't exist or the link is out of date. Start from the homepage, check our vacancies or message the manager on Telegram.",
+    home: 'Back to homepage',
+    homeHref: '/en',
+    vacancies: 'Vacancies',
+    vacanciesHref: '/en/vacancies',
+    telegram: 'Message us on Telegram',
+  },
+  es: {
+    title: 'Página no encontrada (404) | OFM Models',
+    h1: 'Página no encontrada',
+    text: 'Esta página no existe o el enlace está desactualizado. Vuelve al inicio, mira las vacantes o escribe al manager por Telegram.',
+    home: 'Ir al inicio',
+    homeHref: '/es',
+    vacancies: 'Vacantes',
+    vacanciesHref: '/es/vacancies',
+    telegram: 'Escribir por Telegram',
+  },
 };
+
+function toLocale(value: string | null): NotFoundLocale {
+  return value === 'uk' || value === 'en' || value === 'es' ? value : 'ru';
+}
 
 const wrap: React.CSSProperties = {
   margin: 0,
@@ -32,10 +88,17 @@ const link: React.CSSProperties = {
   borderBottom: '1px solid rgba(255,77,141,0.4)',
 };
 
-export default function NotFound() {
+export default async function NotFound() {
+  const locale = toLocale((await headers()).get('x-next-intl-locale'));
+  const copy = COPY[locale];
+  const telegramBase = getSocialHref('telegram');
+  // Черновик с кодом страницы 404 той же чистой функцией, что в TelegramCta.
+  const telegramHref = telegramBase ? withTelegramDraft(telegramBase, pageDraftText(locale, '404')) : null;
+
   return (
-    <html lang="ru">
+    <html lang={locale}>
       <body style={wrap}>
+        <title>{copy.title}</title>
         <div
           style={{
             fontSize: 'clamp(3.5rem, 12vw, 6rem)',
@@ -48,20 +111,20 @@ export default function NotFound() {
         >
           404
         </div>
-        <h1 style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', margin: 0, fontWeight: 700 }}>
-          Страница не найдена · Page not found
-        </h1>
-        <p style={{ maxWidth: 460, margin: 0, color: '#b9b9c4', lineHeight: 1.6 }}>
-          Похоже, такой страницы больше нет или ссылка устарела. Начните с главной или
-          загляните в блог.
-        </p>
-        <p style={{ maxWidth: 460, margin: 0, color: '#8f8f9c', lineHeight: 1.6 }}>
-          This page no longer exists, or the link is out of date. Start from the homepage or
-          browse the blog.
-        </p>
+        <h1 style={{ fontSize: 'clamp(1.25rem, 4vw, 1.75rem)', margin: 0, fontWeight: 700 }}>{copy.h1}</h1>
+        <p style={{ maxWidth: 460, margin: 0, color: '#b9b9c4', lineHeight: 1.6 }}>{copy.text}</p>
         <nav style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center', marginTop: '0.5rem' }}>
-          <a href="/" style={link}>На главную · Home</a>
-          <a href="/blog" style={link}>Блог · Blog</a>
+          <a href={copy.homeHref} style={link}>
+            {copy.home}
+          </a>
+          <a href={copy.vacanciesHref} style={link}>
+            {copy.vacancies}
+          </a>
+          {telegramHref && (
+            <a href={telegramHref} target="_blank" rel="noopener noreferrer" style={link}>
+              {copy.telegram}
+            </a>
+          )}
         </nav>
       </body>
     </html>

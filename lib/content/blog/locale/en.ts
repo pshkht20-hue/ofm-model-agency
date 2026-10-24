@@ -4714,8 +4714,8 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         "intro": "Where the type fits — and what to do with an existing page:",
         "links": [
           {
-            "href": "/blog/tipazhi-modelej-onlyfans",
-            "label": "OnlyFans model types: the hub guide"
+            "href": "/blog/onlyfans-modeli-kto-eto",
+            "label": "OnlyFans models: who they are and which types sell"
           },
           {
             "href": "/vacancies",
@@ -4883,8 +4883,8 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             "label": "Your income bracket — calculate it in a minute"
           },
           {
-            "href": "/blog/tipazhi-modelej-onlyfans",
-            "label": "All OnlyFans model types in one guide"
+            "href": "/blog/fitness-modeli-onlyfans",
+            "label": "Fitness niche on OnlyFans: another type with loyal fans"
           },
           {
             "href": "/blog/mature-modeli-onlyfans",
@@ -5687,8 +5687,8 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         "intro": "Where this niche fits in the bigger picture:",
         "links": [
           {
-            "href": "/blog/tipazhi-modelej-onlyfans",
-            "label": "OnlyFans model types: the niches that actually pay"
+            "href": "/blog/fitness-modeli-onlyfans",
+            "label": "Fitness niche on OnlyFans: how this type works"
           },
           {
             "href": "/blog/onlyfans-modeli-kto-eto",
@@ -5818,8 +5818,8 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             "label": "Estimate your income range in 1 minute"
           },
           {
-            "href": "/blog/tipazhi-modelej-onlyfans",
-            "label": "OnlyFans model types: the full niche guide"
+            "href": "/blog/onlyfans-modeli-kto-eto",
+            "label": "OF models: who they are and how to start"
           },
           {
             "href": "/blog/plus-size-modeli-onlyfans",
@@ -5945,8 +5945,8 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         "intro": "Looking wider — or already running a page:",
         "links": [
           {
-            "href": "/blog/tipazhi-modelej-onlyfans",
-            "label": "OnlyFans model types: who earns what"
+            "href": "/blog/onlyfans-modeli-kto-eto",
+            "label": "OnlyFans models: who they are and which types sell"
           },
           {
             "href": "/vacancies",
@@ -6144,8 +6144,8 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             "label": "Check your bracket in the income calculator"
           },
           {
-            "href": "/blog/tipazhi-modelej-onlyfans",
-            "label": "Model types on OnlyFans: the full map"
+            "href": "/blog/fitness-modeli-onlyfans",
+            "label": "Fitness niche on OnlyFans: how this type works"
           },
           {
             "href": "/blog/mature-modeli-onlyfans",
