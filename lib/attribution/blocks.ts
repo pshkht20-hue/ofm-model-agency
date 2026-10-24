@@ -40,7 +40,7 @@ const BLOCK_LABELS: Record<string, string> = {
   'quick-apply': 'Быстрая заявка',
   'quick-apply-success': 'Экран после быстрой заявки',
   'quick-apply-error': 'Ошибка быстрой заявки',
-  'response-hours': 'Часы ответа менеджера',
+  'response-hours': 'Строка «заявки за 24 часа»',
   'not-found': 'Страница 404',
   // старая подпись видео-карточки (до 23.10)
   'видео в статье': 'видео-карточка',

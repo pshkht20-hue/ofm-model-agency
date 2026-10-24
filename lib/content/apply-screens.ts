@@ -1,5 +1,5 @@
 import type { Locale } from '@/i18n/routing';
-import { RESPONSE_PARTS } from '@/lib/content/response-hours';
+import { RESPONSE_TEXT } from '@/lib/content/response-hours';
 
 /**
  * Экраны после заявки и при сбое отправки («Окно 1», W1-01, W1-02, W1-03, W1-18).
@@ -18,7 +18,13 @@ export const OFFICIAL_ACCOUNT_STRICT = false;
 /** №16 (строка канала на экране после заявки): показываем только при возобновлении канала. */
 export const SHOW_CHANNEL_LINE = false;
 
-const { range: RANGE, from: FROM, to: TO, morning: MORNING } = RESPONSE_PARTS;
+/** Формула владельца «Все заявки обрабатываем в течение 24 часов» из одной константы. */
+const PROMISE = {
+  ru: RESPONSE_TEXT.ru.line,
+  uk: RESPONSE_TEXT.uk.line,
+  en: RESPONSE_TEXT.en.line,
+  es: RESPONSE_TEXT.es.line,
+};
 
 type ApplyScreenTexts = {
   successTitle: string;
@@ -51,8 +57,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     successTitle: 'Заявка отправлена',
     quickSuccessTitle: 'Заявка у менеджера',
     codeLabel: 'Код заявки:',
-    dayLine: `Ответим тебе в Telegram в рабочие часы, ${RANGE} по Киеву.`,
-    nightLine: `Сейчас нерабочее время (по Киеву ночь). Ответим утром, до ${MORNING} по Киеву. Можешь написать уже сейчас: сообщение дойдёт и будет ждать менеджера.`,
+    dayLine: `${PROMISE.ru} Менеджер ответит вам в Telegram.`,
+    nightLine:
+      'Сейчас ночь по Киеву. Менеджер ответит в течение 24 часов, а написать можно уже сейчас: сообщение дождётся менеджера.',
     mainButton: 'Написать менеджеру сейчас',
     underButtonModel: 'Так ответим быстрее: ты пишешь первой, и сообщение точно дойдёт.',
     underButtonChatter: 'Так ответим быстрее: первое сообщение от тебя точно дойдёт.',
@@ -80,8 +87,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     successTitle: 'Заявку надіслано',
     quickSuccessTitle: 'Заявка вже в менеджера',
     codeLabel: 'Код заявки:',
-    dayLine: `Відповімо тобі в Telegram у робочі години, ${RANGE} за Києвом.`,
-    nightLine: `Зараз неробочий час (за Києвом ніч). Відповімо зранку, до ${MORNING} за Києвом. Можеш написати вже зараз: повідомлення дійде й чекатиме на менеджера.`,
+    dayLine: `${PROMISE.uk} Менеджер відповість вам у Telegram.`,
+    nightLine:
+      'Зараз ніч за Києвом. Менеджер відповість протягом 24 годин, а написати можна вже зараз: повідомлення дочекається менеджера.',
     mainButton: 'Написати менеджеру зараз',
     underButtonModel: 'Так відповімо швидше: ти пишеш першою, і повідомлення точно дійде.',
     underButtonChatter: 'Так відповімо швидше: перше повідомлення від тебе точно дійде.',
@@ -109,8 +117,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     successTitle: 'Application sent',
     quickSuccessTitle: 'The manager has your application',
     codeLabel: 'Application code:',
-    dayLine: `We'll reply to you on Telegram during working hours, ${RANGE} Kyiv time.`,
-    nightLine: `It's outside working hours now (night in Kyiv). We'll reply in the morning, by ${MORNING} Kyiv time. You can message us right now: your message will be waiting for the manager.`,
+    dayLine: `${PROMISE.en} The manager will reply to you on Telegram.`,
+    nightLine:
+      "It's night in Kyiv now. The manager will reply within 24 hours, and you can message us right away: your message will be waiting for the manager.",
     mainButton: 'Message the manager now',
     underButtonModel: "It's the fastest way to hear back: when you message first, your message is sure to reach us.",
     underButtonChatter: "It's the fastest way to hear back: when you message first, your message is sure to reach us.",
@@ -138,8 +147,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     successTitle: 'Solicitud enviada',
     quickSuccessTitle: 'El manager ya tiene tu solicitud',
     codeLabel: 'Código de solicitud:',
-    dayLine: `Te responderemos por Telegram en horario laboral, de ${FROM} a ${TO} (hora de Kiev).`,
-    nightLine: `Ahora estamos fuera de horario (es de noche en Kiev). Te responderemos por la mañana, antes de las ${MORNING} (hora de Kiev). Puedes escribirnos ya: tu mensaje llegará y el equipo lo verá a primera hora.`,
+    dayLine: `${PROMISE.es} El manager te responderá por Telegram.`,
+    nightLine:
+      'Ahora es de noche en Kiev. El manager te responderá en un plazo de 24 horas, y ya puedes escribirnos: tu mensaje esperará al manager.',
     mainButton: 'Escribir al manager ahora',
     underButtonModel: 'Así respondemos más rápido: tú escribes primero y el mensaje llega seguro.',
     underButtonChatter: 'Así respondemos más rápido: tú escribes primero y el mensaje llega seguro.',

@@ -57,7 +57,7 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
     '{count} roles abiertos · Actualizado {date} · Europa, EE. UU., Canadá y todo el mundo · remoto',
   intro: [
     'Estas son las vacantes de la propia agencia, no un tablón de anuncios: OFM Models incorpora personas a su propio equipo — desde chatters hasta las modelos cuyas páginas gestionamos de principio a fin desde 2022. Ambos puestos son totalmente remotos: puedes trabajar desde cualquier lugar — Europa, EE. UU., Canadá, Latinoamérica o cualquier otro país del mundo.',
-    'Elige un puesto abajo y postula por Telegram o mediante el formulario: respondemos en horario laboral, de 9:00 a 23:00 (hora de Kiev), y empezar lleva unos días sin papeleo.',
+    'Elige un puesto abajo y postula por Telegram o mediante el formulario: procesamos cada solicitud en un plazo de 24 horas, y empezar lleva unos días sin papeleo.',
   ],
   sections: [
     {
@@ -338,7 +338,7 @@ const CHATTER_ES: VacancyContent = {
   ],
   cta: {
     heading: 'Postular a la vacante',
-    text: 'Escríbenos por Telegram unas palabras sobre ti: tu nivel de inglés, experiencia en ventas o mensajería (si la tienes) y cuántas horas por semana estás dispuesto/a a trabajar. Respondemos en horario laboral, de 9:00 a 23:00 (hora de Kiev).',
+    text: 'Escríbenos por Telegram unas palabras sobre ti: tu nivel de inglés, experiencia en ventas o mensajería (si la tienes) y cuántas horas por semana estás dispuesto/a a trabajar. Respondemos en un plazo de 24 horas.',
     primaryLabel: 'Escribir por Telegram',
     bridgeNote:
       '¿No buscas trabajo en el chat, sino tu propia página? Si eres una chica y piensas en tu propio perfil en OnlyFans — [rellena la solicitud de modelo](/join): la agencia se encarga de la promoción, el chat y las finanzas de la página, y la solicitud lleva 2–3 minutos.',
@@ -464,7 +464,7 @@ const FOR_GIRLS_ES: VacancyContent = {
   ],
   cta: {
     heading: 'Empieza con un mensaje en Telegram',
-    text: 'Escríbenos unas palabras sobre ti: edad, ciudad y qué opción te interesa (modelo u operadora de soporte). Respondemos en horario laboral, de 9:00 a 23:00 (hora de Kiev).',
+    text: 'Escríbenos unas palabras sobre ti: edad, ciudad y qué opción te interesa (modelo u operadora de soporte). Respondemos en un plazo de 24 horas.',
     primaryLabel: 'Escribir por Telegram',
     bridgeNote:
       '¿Ya decidiste que quieres tu propia página? [Rellena la solicitud de modelo](/join) — el equipo asume el registro, la promoción y las finanzas.',

@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
 import type { Locale } from '@/i18n/routing';
-import { RESPONSE_RANGE } from '@/lib/content/response-hours';
 
 /**
  * Трастовая полоса «Почему OFM» на страницах вакансий — наш ответ карточке
@@ -21,25 +20,25 @@ const STATS: Record<Locale, Stat[]> = {
   ru: [
     { value: '3+', label: 'года на рынке' },
     { value: '220+', label: 'запущенных страниц' },
-    { value: RESPONSE_RANGE, label: 'часы ответа в Telegram (по Киеву)' },
+    { value: '24 ч', label: 'срок обработки заявки' },
     { value: '100%', label: 'приватность под контролем' },
   ],
   uk: [
     { value: '3+', label: 'роки на ринку' },
     { value: '220+', label: 'запущених сторінок' },
-    { value: RESPONSE_RANGE, label: 'години відповіді в Telegram (за Києвом)' },
+    { value: '24 год', label: 'строк обробки заявки' },
     { value: '100%', label: 'приватність під контролем' },
   ],
   en: [
     { value: '3+', label: 'years in the market' },
     { value: '220+', label: 'pages launched' },
-    { value: RESPONSE_RANGE, label: 'Telegram reply hours, Kyiv time' },
+    { value: '24 h', label: 'to process an application' },
     { value: '100%', label: 'privacy in your control' },
   ],
   es: [
     { value: '3+', label: 'años en el mercado' },
     { value: '220+', label: 'páginas lanzadas' },
-    { value: RESPONSE_RANGE, label: 'horario de respuesta por Telegram (hora de Kiev)' },
+    { value: '24 h', label: 'para procesar la solicitud' },
     { value: '100%', label: 'privacidad bajo control' },
   ],
 };

@@ -17,7 +17,7 @@ export const JOIN_ES: JoinContent = {
   breadcrumb: 'Casting',
   eyebrow: 'Captación de modelos — 2026',
   h1: 'Hazte modelo de OnlyFans — únete a la agencia OFM',
-  lead: "OFM's Model Agency es una agencia de gestión integral: desde 2022 hemos lanzado y gestionamos más de 220 modelos. El equipo se ocupa del marketing, los chats con suscriptores 24/7 y la estrategia, y tú te centras solo en el contenido. La solicitud toma 2 minutos y un manager te responde por Telegram en horario laboral, de 9:00 a 23:00 (hora de Kiev).",
+  lead: "OFM's Model Agency es una agencia de gestión integral: desde 2022 hemos lanzado y gestionamos más de 220 modelos. El equipo se ocupa del marketing, los chats con suscriptores 24/7 y la estrategia, y tú te centras solo en el contenido. La solicitud toma 2 minutos y un manager te responde por Telegram en un plazo de 24 horas.",
   applyCta: 'Enviar solicitud — 2 minutos',
   antiFud:
     'Sin papeleo ni compromisos: el formulario no te compromete a nada y puedes dejar la colaboración cuando quieras.',
@@ -74,7 +74,7 @@ export const JOIN_ES: JoinContent = {
       {
         title: 'Llamada con un manager por Telegram',
         description:
-          'En horario laboral (de 9:00 a 23:00, hora de Kiev) un manager te escribe: responde a tus preguntas y te explica condiciones y formatos. Sin presión.',
+          'En un plazo de 24 horas un manager te escribe: responde a tus preguntas y te explica condiciones y formatos. Sin presión.',
       },
       {
         title: 'Onboarding y lanzamiento de la página',
@@ -142,7 +142,7 @@ export const JOIN_ES: JoinContent = {
   form: {
     heading: 'Solicitud a la agencia',
     description:
-      'Rellena el formulario: un manager te escribirá por Telegram en horario laboral, de 9:00 a 23:00 (hora de Kiev). Es gratis y no te compromete a nada.',
+      'Rellena el formulario: un manager te escribirá por Telegram en un plazo de 24 horas. Es gratis y no te compromete a nada.',
     telegramLabel: 'O escríbenos directamente por Telegram',
   },
   jobPosting: {

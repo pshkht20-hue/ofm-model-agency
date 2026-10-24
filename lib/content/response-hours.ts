@@ -3,25 +3,22 @@ import type { Locale } from '@/i18n/routing';
 /**
  * Одно обещание по скорости ответа для всего сайта («Окно 1», W1-00a).
  *
- * ⚠️ TODO-ПОДТВЕРДИ ЧАСЫ (решение №22, пакет П1 24.10). 9:00-23:00 по Киеву взяты
- * из прежнего RecruiterStatus.tsx (ONLINE_FROM/ONLINE_TO), владелец их не подтверждал.
- * Поменять часы = поменять только этот объект: все тексты ниже собираются из него.
- * Те же часы вписаны текстом в messages/*.json и lib/content (about, join, faq,
- * model-geo/hub.ts, vacancies): при смене часов пройти grep по «9:00-23:00».
+ * Формула владельца (24.10): «Все заявки обрабатываем в течение 24 часов».
+ * Часы работы цифрами на сайте не показываем нигде. Там, где обещание стоит
+ * внутри живого текста (about, join, faq, model-geo/hub.ts, vacancies, messages),
+ * оно записано словами «в течение 24 часов»: при смене формулы пройти grep по
+ * «24 час», «24 годин», «24 hours», «24 horas».
  */
 export const RESPONSE_HOURS = {
-  from: 9, // начало рабочих часов по Киеву
-  to: 23, // конец рабочих часов по Киеву
-  morningBy: 10, // «ответим утром до 10:00»
+  /**
+   * Граница «день/ночь» по Киеву. На сайт цифрами не выводится: только выбирает
+   * ночной вариант строки (экран после заявки, индикатор на вакансиях) и пометку
+   * «ночная заявка» в уведомлении менеджеру.
+   */
+  from: 9,
+  to: 23,
   timeZone: 'Europe/Kyiv',
 } as const;
-
-const FROM = `${RESPONSE_HOURS.from}:00`;
-const TO = `${RESPONSE_HOURS.to}:00`;
-const MORNING = `${RESPONSE_HOURS.morningBy}:00`;
-
-/** «9:00-23:00»: значение плиток и строк, где часы стоят цифрами. */
-export const RESPONSE_RANGE = `${FROM}-${TO}`;
 
 /** Час по Киеву (0-23). Пояс сам учитывает перевод часов. */
 export function kyivHour(date = new Date()): number {
@@ -42,42 +39,39 @@ export function isWorkingHours(date = new Date()): boolean {
 }
 
 type ResponseTexts = {
-  /** Полная формула. */
+  /** Формула владельца, предложение с точкой. */
   line: string;
-  /** Короткая подпись. */
+  /** Та же формула без точки: трастовые строки и подписи. */
   chip: string;
-  /** Индикатор днём. */
+  /** Индикатор на вакансиях днём. */
   statusDay: string;
-  /** Индикатор ночью. */
+  /** Индикатор ночью: то же обещание, без часов и без «ответим утром». */
   statusNight: string;
 };
 
 export const RESPONSE_TEXT: Record<Locale, ResponseTexts> = {
   ru: {
-    line: `Отвечаем в Telegram в рабочие часы ${RESPONSE_RANGE} по Киеву, ночные заявки разбираем утром.`,
-    chip: `Отвечаем ${RESPONSE_RANGE} по Киеву`,
-    statusDay: `Сейчас рабочие часы: отвечаем до ${TO} по Киеву`,
-    statusNight: `Сейчас нерабочее время: ответим утром, до ${MORNING} по Киеву`,
+    line: 'Все заявки обрабатываем в течение 24 часов.',
+    chip: 'Все заявки обрабатываем в течение 24 часов',
+    statusDay: 'Все заявки обрабатываем в течение 24 часов',
+    statusNight: 'Сейчас ночь по Киеву: менеджер ответит в течение 24 часов',
   },
   uk: {
-    line: `Відповідаємо в Telegram у робочі години ${RESPONSE_RANGE} за Києвом, нічні заявки розбираємо зранку.`,
-    chip: `Відповідаємо ${RESPONSE_RANGE} за Києвом`,
-    statusDay: `Зараз робочі години: відповідаємо до ${TO} за Києвом`,
-    statusNight: `Зараз неробочий час: відповімо зранку, до ${MORNING} за Києвом`,
+    line: 'Усі заявки обробляємо протягом 24 годин.',
+    chip: 'Усі заявки обробляємо протягом 24 годин',
+    statusDay: 'Усі заявки обробляємо протягом 24 годин',
+    statusNight: 'Зараз ніч за Києвом: менеджер відповість протягом 24 годин',
   },
   en: {
-    line: `We reply on Telegram during working hours, ${RESPONSE_RANGE} Kyiv time. Applications sent at night are handled in the morning.`,
-    chip: `Replies ${RESPONSE_RANGE} Kyiv time`,
-    statusDay: `Working hours now: we reply until ${TO} Kyiv time`,
-    statusNight: `Outside working hours: we'll reply in the morning, by ${MORNING} Kyiv time`,
+    line: 'We process every application within 24 hours.',
+    chip: 'We process every application within 24 hours',
+    statusDay: 'We process every application within 24 hours',
+    statusNight: "It's night in Kyiv now: the manager will reply within 24 hours",
   },
   es: {
-    line: `Respondemos por Telegram en horario laboral, de ${FROM} a ${TO} (hora de Kiev). Las solicitudes que llegan de noche las atendemos por la mañana.`,
-    chip: `Respondemos de ${FROM} a ${TO} (Kiev)`,
-    statusDay: `Ahora es horario laboral: respondemos hasta las ${TO} (hora de Kiev)`,
-    statusNight: `Fuera de horario: respondemos por la mañana, antes de las ${MORNING} (hora de Kiev)`,
+    line: 'Procesamos cada solicitud en un plazo de 24 horas.',
+    chip: 'Procesamos cada solicitud en un plazo de 24 horas',
+    statusDay: 'Procesamos cada solicitud en un plazo de 24 horas',
+    statusNight: 'Ahora es de noche en Kiev: el manager responderá en un plazo de 24 horas',
   },
 };
-
-/** Строковые части для экранов после заявки (lib/content/apply-screens.ts). */
-export const RESPONSE_PARTS = { from: FROM, to: TO, morning: MORNING, range: RESPONSE_RANGE } as const;

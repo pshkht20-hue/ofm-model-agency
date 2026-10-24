@@ -22,7 +22,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'What does a typical process of working with an agency look like?',
         answer:
-          'Usually: application → short interview → terms agreed → profile audit or launch → content plan and marketing → daily chats and weekly analytics → scaling. At OFM\'s Model Agency, after you apply, a manager reaches out on Telegram during working hours (9:00-23:00 Kyiv time) and walks you through the steps without pressure.',
+          'Usually: application → short interview → terms agreed → profile audit or launch → content plan and marketing → daily chats and weekly analytics → scaling. At OFM\'s Model Agency, after you apply, a manager reaches out on Telegram within 24 hours and walks you through the steps without pressure.',
       },
       {
         question: 'Is OFM affiliated with the OnlyFans platform?',
@@ -157,7 +157,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How do I apply to OFM\'s Model Agency?',
         answer:
-          'On the [OFM agency](/) homepage, fill out the form: name, Telegram (required), and optionally your age and a few words about yourself. A manager will message you on Telegram during working hours (9:00-23:00 Kyiv time), run an initial review, and suggest next steps. Applying commits you to nothing.',
+          'On the [OFM agency](/) homepage, fill out the form: name, Telegram (required), and optionally your age and a few words about yourself. A manager will message you on Telegram within 24 hours, run an initial review, and suggest next steps. Applying commits you to nothing.',
       },
       {
         question: 'How long from launch to first payouts?',
@@ -197,7 +197,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How is OFM\'s Model Agency different from other teams?',
         answer:
-          'The [OFM agency](/) combines a personal manager, marketing and 24/7 chats, content strategy, transparent reporting, and a focus on confidentiality. We are independent from OnlyFans, do not charge an “entry” fee, and respond to applications during working hours, 9:00-23:00 Kyiv time. The model receives 20-30% of the page\'s total balance, while promotion, traffic, and chatters are funded by the agency. The work plan is discussed at the casting call.',
+          'The [OFM agency](/) combines a personal manager, marketing and 24/7 chats, content strategy, transparent reporting, and a focus on confidentiality. We are independent from OnlyFans, do not charge an “entry” fee, and process every application within 24 hours. The model receives 20-30% of the page\'s total balance, while promotion, traffic, and chatters are funded by the agency. The work plan is discussed at the casting call.',
       },
     ],
   },

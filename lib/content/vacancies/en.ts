@@ -59,7 +59,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
     '{count} open roles · Updated {date} · Europe, US, Canada & worldwide · remote',
   intro: [
     'These are OnlyFans agency jobs from the team itself, not a job board: OFM Models hires straight into its own crew — from chatters to the models whose pages we run end to end since 2022. Every role here is fully remote: work from anywhere — Europe, the US, Canada, Latin America or elsewhere in the world.',
-    'Pick a role below and apply on Telegram or through the form: we reply during working hours, 9:00-23:00 Kyiv time, and getting started takes a few days with no paperwork hassle.',
+    'Pick a role below and apply on Telegram or through the form: we process every application within 24 hours, and getting started takes a few days with no paperwork hassle.',
   ],
   sections: [
     {
@@ -340,7 +340,7 @@ const CHATTER_EN: VacancyContent = {
   ],
   cta: {
     heading: 'Apply for the vacancy',
-    text: 'Message us on Telegram with a few words about yourself: your English level, sales or messaging experience (if any) and how many hours a week you’re ready to work. We reply during working hours, 9:00-23:00 Kyiv time.',
+    text: 'Message us on Telegram with a few words about yourself: your English level, sales or messaging experience (if any) and how many hours a week you’re ready to work. We reply within 24 hours.',
     primaryLabel: 'Message us on Telegram',
     bridgeNote:
       'Looking not for chat work but for your own page? If you’re a woman thinking about your own OnlyFans profile — [fill in the model application](/join): the agency takes on the promotion, chat and finances of the page, and the application takes 2–3 minutes.',
@@ -466,7 +466,7 @@ const FOR_GIRLS_EN: VacancyContent = {
   ],
   cta: {
     heading: 'Start with one Telegram message',
-    text: 'Message us a few words about yourself: your age, city and which track interests you (model or support operator). We reply during working hours, 9:00-23:00 Kyiv time.',
+    text: 'Message us a few words about yourself: your age, city and which track interests you (model or support operator). We reply within 24 hours.',
     primaryLabel: 'Message us on Telegram',
     bridgeNote:
       'Already decided you want your own page? [Fill in the model application](/join) — the team takes on registration, promotion and finances.',

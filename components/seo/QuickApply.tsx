@@ -24,9 +24,7 @@ import {
   looksLikeContact,
 } from '@/lib/application-code';
 import { applyScreens, QUICK_CONSENT, readW1TestFlag } from '@/lib/content/apply-screens';
-import { isWorkingHours, RESPONSE_PARTS } from '@/lib/content/response-hours';
-
-const { range: RANGE, from: FROM, to: TO } = RESPONSE_PARTS;
+import { isWorkingHours, RESPONSE_TEXT } from '@/lib/content/response-hours';
 
 /**
  * Quick-apply: мини-заявка из селектов (роль, желаемый доход, опыт, Telegram)
@@ -66,7 +64,7 @@ const T: Record<
   ru: {
     trigger: 'Быстрая заявка · 30 секунд',
     heading: 'Быстрая заявка',
-    sub: `Оставь Telegram, и менеджер ответит в рабочие часы, ${RANGE} по Киеву.`,
+    sub: `Оставьте Telegram, и менеджер свяжется с вами. ${RESPONSE_TEXT.ru.line}`,
     role: 'Кем хочешь работать',
     roles: ['Модель OnlyFans', 'Чатер / оператор чата'],
     income: 'Сколько хочешь зарабатывать',
@@ -85,7 +83,7 @@ const T: Record<
   uk: {
     trigger: 'Швидка заявка · 30 секунд',
     heading: 'Швидка заявка',
-    sub: `Залиш Telegram, і менеджер відповість у робочі години, ${RANGE} за Києвом.`,
+    sub: `Залиште Telegram, і менеджер зв'яжеться з вами. ${RESPONSE_TEXT.uk.line}`,
     role: 'Ким хочеш працювати',
     roles: ['Модель OnlyFans', 'Чатер / оператор чату'],
     income: 'Скільки хочеш заробляти',
@@ -104,7 +102,7 @@ const T: Record<
   en: {
     trigger: 'Quick apply · 30 seconds',
     heading: 'Quick apply',
-    sub: `Leave your Telegram username and a manager will reply during working hours, ${RANGE} Kyiv time.`,
+    sub: `Leave your Telegram username and a manager will get in touch. ${RESPONSE_TEXT.en.line}`,
     role: 'Role you want',
     roles: ['OnlyFans model', 'Chatter / chat operator'],
     income: 'Income you aim for',
@@ -123,7 +121,7 @@ const T: Record<
   es: {
     trigger: 'Solicitud rápida · 30 segundos',
     heading: 'Solicitud rápida',
-    sub: `Deja tu Telegram y un manager te responderá en horario laboral, de ${FROM} a ${TO} (hora de Kiev).`,
+    sub: `Deja tu Telegram y un manager te escribirá. ${RESPONSE_TEXT.es.line}`,
     role: 'Puesto que quieres',
     roles: ['Modelo OnlyFans', 'Chatter / operadora de chat'],
     income: 'Cuánto quieres ganar',
