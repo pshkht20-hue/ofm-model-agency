@@ -257,7 +257,7 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
   'onlyfans-rabota-bez-lica': {
     localSrc: '/blog/covers/onlyfans-rabota-bez-lica.jpg',
     remoteSrc: '/blog/covers/onlyfans-rabota-bez-lica.jpg',
-    alt: 'Девушка со спины у кольцевой лампы со стеклянным замочком — работа на OnlyFans без лица, приватность',
+    alt: 'Кольцевая лампа и стеклянный замок: приватность модели на OnlyFans',
     photographer: 'OFM Models',
     photographerUrl: 'https://ofmmodels.com',
     unsplashUrl: 'https://ofmmodels.com',
@@ -392,7 +392,7 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
   'rabota-dlya-mam-v-dekrete': {
     localSrc: '/blog/covers/rabota-dlya-mam-v-dekrete.jpg',
     remoteSrc: '/blog/covers/rabota-dlya-mam-v-dekrete.jpg',
-    alt: 'Молодая женщина уютным вечером дома у окна с видом на город — онлайн-работа в декрете по своему графику',
+    alt: 'Молодая мама уютным вечером дома у окна с видом на город: онлайн-работа в декрете по своему графику',
     photographer: 'OFM Models',
     photographerUrl: 'https://ofmmodels.com',
     unsplashUrl: 'https://ofmmodels.com',

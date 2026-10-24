@@ -22,7 +22,7 @@ export const marketingPosts: BlogPost[] = [
       },
       {
         type: 'p',
-        text: 'До трафика определите: кто ваш идеальный подписчик, какой тон (girlfriend experience, dominatrix, girl-next-door, fitness, cosplay), что вы не показываете. Ниша сужает аудиторию, но повышает конверсию и LTV.',
+        text: 'До трафика определите: кто ваш идеальный подписчик, какой тон (girl-next-door, fitness, cosplay, alt), что вы не показываете. Ниша сужает аудиторию, но повышает конверсию и LTV.',
       },
       {
         type: 'h2',
