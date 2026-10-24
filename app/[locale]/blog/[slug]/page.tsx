@@ -256,7 +256,7 @@ export default async function BlogPostPage({ params }: Props) {
       )}
 
       {/* Байлайн автора (18.09.2026): та же персона, что в Article JSON-LD и на
-          странице автора. Аватар — иллюстрация, alt честный (см. author.ts). */}
+          странице автора. Аватар: монограмма «ОТ», только буквы (см. author.ts). */}
       <Link
         href={BLOG_AUTHOR_PATH}
         className="group mb-6 inline-flex items-center gap-3"

@@ -11,9 +11,9 @@ import { resolveLocale } from '@/lib/content/locale';
  * персональный менеджер, помощник, чат-команда и трафик-отдел; в одной команде
  * 3–8 моделей.
  *
- * Аватар — фирменная ИЛЛЮСТРАЦИЯ, а не фотография. В alt честно пишем
- * «иллюстрированный портрет»: выдавать рисунок за фото реального человека
- * нельзя (пресса рядом, фейковая личность = удар по репутации).
+ * Аватар: монограмма «ОТ» (буквы шрифтом заголовков Playfair Display, кольцо
+ * #ff5bb5 -> #a855f7 на #0b0814). Решение 23.10.2026, правило 12: никаких ИИ-лиц,
+ * TRUST-FIXES-SPEC §6. Путь файла прежний, меняется только картинка и alt.
  */
 
 export type BlogAuthorLocaleContent = {
@@ -22,7 +22,7 @@ export type BlogAuthorLocaleContent = {
   role: string;
   /** Биография для страницы автора — текст утверждён дословно, не менять без владельца. */
   bio: string;
-  /** alt аватара: это иллюстрация, НЕ фото. */
+  /** alt аватара: это монограмма (буквы), НЕ фото и не портрет. */
   avatarAlt: string;
   meta: { title: string; description: string };
   ui: {
@@ -49,7 +49,7 @@ const AUTHOR_BY_LOCALE: Record<Locale, BlogAuthorLocaleContent> = {
     name: 'Оксана Ткаченко',
     role: 'руководитель отдела менеджмента OFM Models',
     bio: 'Оксана Ткаченко — руководитель отдела менеджмента OFM Models. В индустрии с 2022 года. Курирует менеджерские команды агентства: за каждой моделью закреплены персональный менеджер, помощник, чат-команда и трафик-отдел, в одной команде — от 3 до 8 моделей. В блоге пишет о том, с чем девушки сталкиваются каждый день: старт с нуля, безопасность и анонимность, налоги и реальные цифры заработка. Все советы — из практики агентства.',
-    avatarAlt: 'Оксана Ткаченко — иллюстрированный портрет',
+    avatarAlt: 'Монограмма Оксаны Ткаченко',
     meta: {
       title: 'Оксана Ткаченко — автор блога OFM Models',
       description:
@@ -65,7 +65,7 @@ const AUTHOR_BY_LOCALE: Record<Locale, BlogAuthorLocaleContent> = {
     name: 'Оксана Ткаченко',
     role: 'керівниця відділу менеджменту OFM Models',
     bio: 'Оксана Ткаченко — керівниця відділу менеджменту OFM Models. В індустрії з 2022 року. Керує менеджерськими командами агентства: за кожною моделлю закріплені персональний менеджер, помічник, чат-команда і трафік-відділ, в одній команді — від 3 до 8 моделей. У блозі пише про те, з чим дівчата стикаються щодня: старт із нуля, безпека й анонімність, податки та реальні цифри заробітку. Усі поради — з практики агентства.',
-    avatarAlt: 'Оксана Ткаченко — ілюстрований портрет',
+    avatarAlt: 'Монограма Оксани Ткаченко',
     meta: {
       title: 'Оксана Ткаченко — авторка блогу OFM Models',
       description:
@@ -81,7 +81,7 @@ const AUTHOR_BY_LOCALE: Record<Locale, BlogAuthorLocaleContent> = {
     name: 'Oksana Tkachenko',
     role: 'Head of Talent Management, OFM Models',
     bio: "Oksana Tkachenko is Head of Talent Management at OFM Models, working in the creator industry since 2022. She oversees the agency's management teams: each model works with a dedicated manager, an assistant, a chat team and a traffic department, with 3 to 8 models per team. On the blog she writes about what creators face every day: starting from zero, safety and anonymity, taxes and real earning numbers. Every guide is based on the agency's hands-on experience.",
-    avatarAlt: 'Oksana Tkachenko — illustrated portrait',
+    avatarAlt: 'Oksana Tkachenko monogram',
     meta: {
       title: 'Oksana Tkachenko — OFM Models Blog Author',
       description:
@@ -97,7 +97,7 @@ const AUTHOR_BY_LOCALE: Record<Locale, BlogAuthorLocaleContent> = {
     name: 'Oksana Tkachenko',
     role: 'Jefa de Management, OFM Models',
     bio: 'Oksana Tkachenko es jefa del departamento de management de OFM Models y trabaja en la industria desde 2022. Supervisa los equipos de la agencia: cada modelo cuenta con un manager personal, un asistente, un equipo de chat y un departamento de tráfico, con 3 a 8 modelos por equipo. En el blog escribe sobre lo que las creadoras enfrentan cada día: empezar desde cero, seguridad y anonimato, impuestos y cifras reales de ingresos. Todos los consejos salen de la práctica de la agencia.',
-    avatarAlt: 'Oksana Tkachenko — retrato ilustrado',
+    avatarAlt: 'Monograma de Oksana Tkachenko',
     meta: {
       title: 'Oksana Tkachenko — autora del blog de OFM Models',
       description:

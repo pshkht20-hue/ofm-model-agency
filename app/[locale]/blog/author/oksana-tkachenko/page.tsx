@@ -83,7 +83,7 @@ export default async function BlogAuthorPage({ params }: Props) {
         ]}
       />
 
-      {/* Шапка профиля: иллюстрированный аватар + имя + роль + счётчик статей */}
+      {/* Шапка профиля: аватар-монограмма + имя + роль + счётчик статей */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-6 mb-8">
         <Image
           src={BLOG_AUTHOR.avatar}
