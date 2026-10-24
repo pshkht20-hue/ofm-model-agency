@@ -43,10 +43,17 @@ export async function trackContactSubmitServer(params: {
   country?: string;
   landing_page?: string;
   traffic_source?: string;
+  /** «Окно 1»: роль, тип формы и ступень, с которой заявка дошла (lib/lead-delivery.ts). */
+  role?: 'model' | 'chatter';
+  form_type?: 'full' | 'quick';
+  delivery?: string;
 }) {
   await trackServerEvent(ANALYTICS_EVENTS.CONTACT_SUBMIT_SERVER, {
     locale: params.locale,
     has_calc_prefill: params.has_calc_prefill,
+    ...(params.role ? { role: params.role } : {}),
+    ...(params.form_type ? { form_type: params.form_type } : {}),
+    ...(params.delivery ? { delivery: params.delivery } : {}),
     ...(params.country ? { country: params.country } : {}),
     ...(params.landing_page ? { landing_page: params.landing_page } : {}),
     ...(params.traffic_source ? { traffic_source: params.traffic_source } : {}),

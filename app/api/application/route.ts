@@ -4,11 +4,24 @@ import { getApiErrors } from '@/lib/i18n/api-errors';
 import { trackContactSubmitServer } from '@/lib/analytics/server';
 import { parseUserAgent, sanitizeAttribution, sourceCode } from '@/lib/attribution/shared';
 import {
+  generateApplicationCode,
+  isValidApplicationCode,
+  looksLikeContact,
+} from '@/lib/application-code';
+import { deliverApplication, type DeliveryTestFlag } from '@/lib/lead-delivery';
+import {
   formatApplicationMessage,
-  sendTelegramMessage,
+  telegramHtmlToPlain,
   type ApplicationPayload,
   type FormatOptions,
 } from '@/lib/telegram';
+
+/**
+ * Худший случай цепочки доставки (lib/lead-delivery.ts) около 25 с: Telegram
+ * не отвечает, затем резервный чат, хранилище и тревога. ⚠️ Проверить лимит
+ * тарифа Vercel (Hobby разрешает до 60 с для Node-функций).
+ */
+export const maxDuration = 30;
 
 const MAX_LENGTH = {
   name: 100,
@@ -18,6 +31,8 @@ const MAX_LENGTH = {
 };
 
 const TELEGRAM_SAFE_LENGTH = 3900;
+/** Простой текст длиннее этого уходит без истории визита (лимит Telegram 4096). */
+const PLAIN_SAFE_LENGTH = 3900;
 
 /** Ступени сжатия истории визита: от полной к минимальной. */
 const COMPRESSION_STEPS: FormatOptions[] = [
@@ -46,7 +61,7 @@ function sanitizeLocale(value: unknown): AllowedLocale {
 
 // --- Rate limit: sliding window по IP, in-memory ---
 // На serverless (Vercel) каждый инстанс держит свою Map, так что это
-// per-instance барьер от спама. Полноценный глобальный лимит — Vercel WAF.
+// per-instance барьер от спама. Полноценный глобальный лимит: Vercel WAF.
 const RATE_WINDOWS = [
   { windowMs: 10 * 60 * 1000, max: 3 },
   { windowMs: 60 * 60 * 1000, max: 10 },
@@ -56,13 +71,6 @@ const CLEANUP_INTERVAL_MS = 10 * 60 * 1000;
 
 const submissionsByIp = new Map<string, number[]>();
 let lastCleanupAt = 0;
-
-const RATE_LIMIT_ERRORS: Record<AllowedLocale, string> = {
-  ru: 'Слишком много заявок с вашего адреса. Попробуйте снова через 10–15 минут.',
-  uk: 'Забагато заявок з вашої адреси. Спробуйте ще раз за 10–15 хвилин.',
-  en: 'Too many applications from your address. Please try again in 10–15 minutes.',
-  es: 'Demasiadas solicitudes desde tu dirección. Inténtalo de nuevo en 10–15 minutos.',
-};
 
 function getClientIp(request: Request): string {
   const forwarded = request.headers.get('x-forwarded-for');
@@ -125,6 +133,7 @@ function validate(
   const ageConfirmed = body.ageConfirmed === true;
   // Роль заявки: только два допустимых значения, всё остальное → model.
   const role = body.role === 'chatter' ? 'chatter' : 'model';
+  const formType = body.formType === 'quick' ? 'quick' : 'full';
 
   if (!name || name.length < 2) {
     return { ok: false, error: e.nameRequired };
@@ -155,49 +164,91 @@ function validate(
       telegram,
       ageConfirmed,
       role,
+      formType,
+      contactLooksValid: looksLikeContact(telegram),
       ...(age && { age }),
       ...(message && { message }),
     },
   };
 }
 
+/** Флаги ручной проверки цепочки: только не в проде (VERCEL_ENV на проде = production). */
+function testFlag(body: Record<string, unknown>): DeliveryTestFlag {
+  if (process.env.VERCEL_ENV === 'production') return null;
+  return body.__test === 'fail_main' || body.__test === 'fail_all' ? body.__test : null;
+}
+
+/** Аварийный текст, если сборка уведомления упала: заявка не должна теряться. */
+function emergencyPlain(data: ApplicationPayload, code: string, locale: string): string {
+  return [
+    `🆕 Новая заявка · код ${code} (уведомление собрано в аварийном виде)`,
+    `Язык формы: ${locale}`,
+    `Роль: ${data.role ?? 'model'}${data.formType === 'quick' ? ' · быстрая заявка' : ''}`,
+    `Имя: ${data.name}`,
+    data.age ? `Возраст: ${data.age}` : null,
+    `Контакт: ${data.telegram}`,
+    data.message ? `Интересы:\n${data.message}` : null,
+  ]
+    .filter((line) => line !== null)
+    .join('\n');
+}
+
 export async function POST(request: Request) {
+  // Язык и код объявлены до try: ответ 500 тоже уходит на языке страницы и с кодом.
+  let locale: AllowedLocale = 'ru';
+  let code = generateApplicationCode();
+  let undelivered: string | null = null;
+
   try {
     const body = (await request.json()) as Record<string, unknown>;
-    const locale = sanitizeLocale(body.locale);
+    locale = sanitizeLocale(body.locale);
+    if (isValidApplicationCode(body.code)) code = body.code;
     const ip = getClientIp(request);
+    const errors = getApiErrors(locale);
 
     if (isRateLimited(ip)) {
-      return NextResponse.json(
-        { error: RATE_LIMIT_ERRORS[locale] },
-        { status: 429 },
-      );
+      return NextResponse.json({ error: errors.rateLimit, code }, { status: 429 });
     }
 
     const result = validate(body, locale);
 
     if (!result.ok) {
-      return NextResponse.json({ error: result.error }, { status: 400 });
+      return NextResponse.json({ error: result.error, code }, { status: 400 });
     }
 
+    // Ловушка для ботов: отвечаем успехом без отправки.
     if (!result.data.name) {
       return NextResponse.json({ success: true });
     }
 
-    const location = formatVisitorGeo(getVisitorGeo(request));
     const geo = getVisitorGeo(request);
+    const location = formatVisitorGeo(geo);
     const attribution = sanitizeAttribution(body.attribution);
     const analyticsConsent =
       (body.attribution as { analyticsConsent?: unknown } | undefined)?.analyticsConsent === true;
-    const baseMessage = { ...result.data, locale, location: location ?? undefined };
+    const baseMessage: ApplicationPayload = {
+      ...result.data,
+      code,
+      locale,
+      location: location ?? undefined,
+      timeZone: attribution?.hints?.tz,
+    };
     const device = parseUserAgent(request.headers.get('user-agent'));
     recordSubmission(ip);
+    undelivered = emergencyPlain(result.data, code, locale);
+
     // Лимит Telegram 4096 видимых символов: историю сжимаем по ступеням (сначала
     // блоки, потом ранние действия и середина пути). Источник, устройство и
-    // причина заявки остаются до последней ступени; не влезло — заявка без истории.
-    const baseText = formatApplicationMessage(baseMessage);
+    // причина заявки остаются до последней ступени; не влезло: заявка без истории.
+    let baseText: string;
+    try {
+      baseText = formatApplicationMessage(baseMessage);
+    } catch (error) {
+      console.error('Application format error:', error);
+      baseText = '';
+    }
     let text = baseText;
-    if (attribution) {
+    if (attribution && baseText) {
       // Сбой в сборке истории не должен стоить заявки: тогда уходит заявка без истории.
       try {
         for (const options of COMPRESSION_STEPS) {
@@ -212,22 +263,38 @@ export async function POST(request: Request) {
         text = baseText;
       }
     }
-    try {
-      await sendTelegramMessage(text);
-    } catch (error) {
-      // История визита — необязательная часть: при отказе Telegram заявку
-      // отправляем без неё, а не теряем. Без истории повторять нечего.
-      if (text === baseText) throw error;
-      await sendTelegramMessage(baseText);
+
+    let plain = undelivered;
+    if (baseText) {
+      const plainFull = telegramHtmlToPlain(text);
+      plain = plainFull.length <= PLAIN_SAFE_LENGTH ? plainFull : telegramHtmlToPlain(baseText);
     }
 
+    // Уведомление не собралось: сразу простой текст (ступень 1 бессмысленна).
+    const delivery = await deliverApplication({
+      html: text,
+      htmlBase: baseText,
+      plain,
+      code,
+      plainOnly: !baseText,
+      test: testFlag(body),
+    });
+
+    if (!delivery.ok) {
+      return NextResponse.json({ error: errors.submitFailed, code }, { status: 500 });
+    }
+    undelivered = null;
+
     // await, а не void: на serverless инстанс замораживается сразу после ответа
-    // и fire-and-forget-запрос не успевает уйти — так терялось ~35% серверных
+    // и fire-and-forget-запрос не успевает уйти: так терялось ~35% серверных
     // событий (client contact_submit 20 vs server 13). Внутри стоит try/catch
     // и таймаут 2.5 с, поэтому заявку это сломать не может.
     await trackContactSubmitServer({
       locale,
       has_calc_prefill: body.hasCalcPrefill === true,
+      role: result.data.role,
+      form_type: result.data.formType,
+      delivery: delivery.delivery,
       ...(geo?.countryCode ? { country: geo.countryCode } : {}),
       // В GA4 источник уходит только при согласии на аналитику (см. /privacy).
       ...(analyticsConsent &&
@@ -237,9 +304,11 @@ export async function POST(request: Request) {
         }),
     });
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, code, delivery: delivery.delivery });
   } catch (error) {
     console.error('Application submit error:', error);
-    return NextResponse.json({ error: getApiErrors().submitFailed }, { status: 500 });
+    // Заявка прошла проверку, но цепочка упала с исключением: данные в журнал.
+    if (undelivered) console.error('LEAD_UNDELIVERED', code, undelivered);
+    return NextResponse.json({ error: getApiErrors(locale).submitFailed, code }, { status: 500 });
   }
 }

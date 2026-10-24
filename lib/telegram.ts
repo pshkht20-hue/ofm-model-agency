@@ -7,6 +7,7 @@ import {
   type Utm,
 } from '@/lib/attribution/shared';
 import { blockLabel } from '@/lib/attribution/blocks';
+import { isWorkingHours } from '@/lib/content/response-hours';
 import { getSiteUrl } from '@/lib/site';
 
 const TELEGRAM_API = 'https://api.telegram.org';
@@ -41,6 +42,16 @@ export type ApplicationPayload = {
   attribution?: AttributionPayload;
   /** Устройство по User-Agent запроса. */
   device?: DeviceInfo;
+  /** «Окно 1»: код заявки (тот же, что видит девушка на экране после отправки). */
+  code?: string;
+  /** Полная анкета или быстрая заявка на вакансиях. */
+  formType?: 'full' | 'quick';
+  /** false: контакт не похож на ник или телефон (lib/application-code.ts). */
+  contactLooksValid?: boolean;
+  /** Часовой пояс браузера девушки (attribution.hints.tz), для её местного времени. */
+  timeZone?: string;
+  /** Ежедневная заявка-робот (/api/cron/synthetic-lead): своя шапка, не лид. */
+  synthetic?: boolean;
 };
 
 /**
@@ -308,25 +319,54 @@ function formatAttribution(
   return lines;
 }
 
+/** Местное время девушки по поясу браузера; неизвестный пояс = строки нет. */
+function visitorLocalTime(timeZone: string | undefined, now: Date): string | null {
+  if (!timeZone) return null;
+  try {
+    const time = new Intl.DateTimeFormat('ru-RU', {
+      timeZone,
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false,
+    }).format(now);
+    return `🕰 <b>У неё сейчас:</b> ${escapeTelegramHtml(time)} (${escapeTelegramHtml(timeZone)})`;
+  } catch {
+    return null;
+  }
+}
+
 export function formatApplicationMessage(data: ApplicationPayload, options: FormatOptions = {}): string {
   const localeLabel = data.locale ? LOCALE_LABELS[data.locale] ?? data.locale : null;
-  const submittedAt = new Date().toLocaleString('ru-RU', {
+  const now = new Date();
+  const submittedAt = now.toLocaleString('ru-RU', {
     timeZone: 'Europe/Kyiv',
     dateStyle: 'short',
     timeStyle: 'short',
   });
+  // Ночные заявки помечаем для замера их доли (план 7.4).
+  const night = isWorkingHours(now) ? '' : ' · ночная заявка';
 
   const roleLabel = ROLE_LABELS[data.role ?? 'model'];
+  const codePart = data.code ? ` · код ${escapeTelegramHtml(data.code)}` : '';
+  const header = data.synthetic
+    ? `🧪 <b>ТЕСТ ЦЕПОЧКИ (робот), не лид${codePart}</b>`
+    : `🆕 <b>Новая заявка · ${roleLabel}${codePart}</b>`;
+  const quick = data.formType === 'quick';
   const lines = [
-    `🆕 <b>Новая заявка — ${roleLabel}</b>`,
+    header,
     `🌐 <b>Сайт:</b> ofmmodels.com`,
+    quick ? '⚡ <b>Быстрая заявка</b> (имя не спрашивали)' : null,
     localeLabel ? `🗣 <b>Язык формы:</b> ${localeLabel}` : null,
     data.location ? `📍 <b>Откуда:</b> ${escapeTelegramHtml(data.location)}` : null,
-    `🕐 <b>Время:</b> ${submittedAt}`,
+    `🕐 <b>Время:</b> ${submittedAt}${night}`,
+    visitorLocalTime(data.timeZone, now),
     '',
-    `👤 <b>Имя:</b> ${escapeTelegramHtml(data.name)}`,
+    quick ? null : `👤 <b>Имя:</b> ${escapeTelegramHtml(data.name)}`,
     data.age ? `🎂 <b>Возраст:</b> ${escapeTelegramHtml(data.age)}` : null,
     `📱 <b>Контакт:</b> ${formatTelegramContact(data.telegram)}`,
+    data.contactLooksValid === false
+      ? `⚠️ Контакт не похож на ник или телефон: жди её сообщения, код ${escapeTelegramHtml(data.code ?? '')}`
+      : null,
     data.ageConfirmed ? '✅ <b>18+:</b> подтверждено' : null,
     data.message
       ? `\n✨ <b>Интересы:</b>\n${escapeTelegramHtml(data.message)}`
@@ -337,35 +377,111 @@ export function formatApplicationMessage(data: ApplicationPayload, options: Form
   return lines.filter((line) => line !== null).join('\n');
 }
 
+/** Ошибка отправки с кодом ответа Telegram и паузой из 429 (parameters.retry_after). */
+export class TelegramSendError extends Error {
+  status?: number;
+  retryAfter?: number;
+  constructor(message: string, status?: number, retryAfter?: number) {
+    super(message);
+    this.name = 'TelegramSendError';
+    this.status = status;
+    this.retryAfter = retryAfter;
+  }
+}
+
+export type SendTelegramOptions = {
+  /** 'HTML' по умолчанию; null = простой текст без parse_mode. */
+  parseMode?: 'HTML' | null;
+  /** Таймаут запроса к Telegram, по умолчанию 6 с. */
+  timeoutMs?: number;
+  /** Другой бот (резервный токен); по умолчанию TELEGRAM_BOT_TOKEN. */
+  token?: string;
+};
+
 /**
- * chatIdOverride — для сообщений не в чат заявок (например, план-напоминания
- * в группу TELEGRAM_PLAN_CHAT_ID); по умолчанию — TELEGRAM_CHAT_ID.
+ * chatIdOverride: для сообщений не в чат заявок (например, план-напоминания
+ * в группу TELEGRAM_PLAN_CHAT_ID); по умолчанию TELEGRAM_CHAT_ID.
  */
-export async function sendTelegramMessage(text: string, chatIdOverride?: string): Promise<void> {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
+export async function sendTelegramMessage(
+  text: string,
+  chatIdOverride?: string,
+  options: SendTelegramOptions = {},
+): Promise<void> {
+  const token = options.token || process.env.TELEGRAM_BOT_TOKEN;
   const chatId = chatIdOverride || process.env.TELEGRAM_CHAT_ID;
 
   if (!token || !chatId) {
-    throw new Error('Telegram is not configured');
+    throw new TelegramSendError('Telegram is not configured');
   }
 
-  const response = await fetch(
-    `${TELEGRAM_API}/bot${token}/sendMessage`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text,
-        parse_mode: 'HTML',
-        disable_web_page_preview: true,
-      }),
-    }
-  );
+  const parseMode = options.parseMode === undefined ? 'HTML' : options.parseMode;
+  const response = await fetch(`${TELEGRAM_API}/bot${token}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text,
+      ...(parseMode ? { parse_mode: parseMode } : {}),
+      disable_web_page_preview: true,
+    }),
+    signal: AbortSignal.timeout(options.timeoutMs ?? 6000),
+  });
 
   if (!response.ok) {
     const body = await response.text();
     console.error('Telegram API error:', response.status, body);
-    throw new Error('Failed to send message');
+    let retryAfter: number | undefined;
+    try {
+      const parsed = JSON.parse(body) as { parameters?: { retry_after?: unknown } };
+      if (typeof parsed.parameters?.retry_after === 'number') retryAfter = parsed.parameters.retry_after;
+    } catch {
+      // тело не JSON: паузы нет
+    }
+    throw new TelegramSendError('Failed to send message', response.status, retryAfter);
   }
+}
+
+/**
+ * Служебный вызов Bot API без отправки сообщений (getMe, getChat) для монитора
+ * цепочки. Возвращает true, если Telegram ответил ok.
+ */
+export async function telegramApiOk(
+  method: 'getMe' | 'getChat',
+  params: Record<string, string> = {},
+  options: { token?: string; timeoutMs?: number } = {},
+): Promise<boolean> {
+  const token = options.token || process.env.TELEGRAM_BOT_TOKEN;
+  if (!token) return false;
+  try {
+    const response = await fetch(`${TELEGRAM_API}/bot${token}/${method}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(params),
+      signal: AbortSignal.timeout(options.timeoutMs ?? 4000),
+    });
+    if (!response.ok) return false;
+    const data = (await response.json()) as { ok?: boolean };
+    return data.ok === true;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * HTML уведомления → простой текст для отправки без parse_mode (частая причина
+ * отказа Telegram: 400 «can't parse entities»). <a href="X">Y</a> → «Y (X)»,
+ * теги убираются, сущности раскодируются.
+ */
+export function telegramHtmlToPlain(html: string): string {
+  return html
+    .replace(/<a\s+href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, (_m, href: string, label: string) => {
+      const text = label.replace(/<[^>]+>/g, '');
+      return text === href ? text : `${text} (${href})`;
+    })
+    .replace(/<[^>]+>/g, '')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
 }

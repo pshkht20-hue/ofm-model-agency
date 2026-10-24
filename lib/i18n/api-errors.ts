@@ -1,6 +1,11 @@
 import type { Locale } from '@/i18n/routing';
 import { routing } from '@/i18n/routing';
 
+/**
+ * Ответы /api/application на языке страницы и на «ты» («Окно 1», W1-04, №36).
+ * submitFailed и rateLimit зовут написать менеджеру: экран ошибки сам даёт
+ * кнопку Telegram с кодом заявки в готовом сообщении.
+ */
 const ERRORS: Record<
   Locale,
   {
@@ -12,50 +17,56 @@ const ERRORS: Record<
     ageConfirmRequired: string;
     messageTooLong: string;
     submitFailed: string;
+    rateLimit: string;
   }
 > = {
   ru: {
-    nameRequired: 'Укажите имя (минимум 2 символа)',
+    nameRequired: 'Укажи имя (минимум 2 буквы)',
     nameTooLong: 'Имя слишком длинное',
-    telegramRequired: 'Укажите Telegram для связи',
-    telegramTooLong: 'Telegram слишком длинный',
-    ageInvalid: 'Укажите корректный возраст (18–99)',
-    ageConfirmRequired: 'Подтвердите, что вам исполнилось 18 лет',
+    telegramRequired: 'Укажи Telegram или телефон для связи',
+    telegramTooLong: 'Ник или телефон слишком длинный',
+    ageInvalid: 'Укажи возраст цифрами, от 18 до 99',
+    ageConfirmRequired: 'Подтверди, что тебе есть 18 лет',
     messageTooLong: 'Сообщение слишком длинное',
     submitFailed:
-      'Не удалось отправить заявку. Попробуйте позже или напишите нам в Telegram.',
+      'Заявка не отправилась из-за сбоя. Напиши менеджеру в Telegram, код заявки уже в сообщении.',
+    rateLimit: 'Слишком много заявок подряд. Подожди 10-15 минут или напиши менеджеру в Telegram.',
   },
   en: {
-    nameRequired: 'Enter your name (at least 2 characters)',
+    nameRequired: 'Enter your name (at least 2 letters)',
     nameTooLong: 'Name is too long',
-    telegramRequired: 'Enter Telegram so we can reach you',
-    telegramTooLong: 'Telegram username is too long',
-    ageInvalid: 'Enter a valid age (18–99)',
-    ageConfirmRequired: 'Confirm that you are 18 or older',
+    telegramRequired: 'Enter your Telegram or phone so we can reach you',
+    telegramTooLong: 'Username or phone is too long',
+    ageInvalid: 'Enter your age in numbers, 18 to 99',
+    ageConfirmRequired: 'Please confirm you are 18 or older',
     messageTooLong: 'Message is too long',
-    submitFailed: 'Could not submit your application. Try again later or message us on Telegram.',
+    submitFailed:
+      "Your application didn't go through because of a glitch. Message the manager on Telegram: your application code is already in the message.",
+    rateLimit: 'Too many applications in a row. Wait 10-15 minutes or message the manager on Telegram.',
   },
   uk: {
-    nameRequired: 'Вкажіть ім\'я (мінімум 2 символи)',
-    nameTooLong: 'Ім\'я занадто довге',
-    telegramRequired: 'Вкажіть Telegram для зв\'язку',
-    telegramTooLong: 'Telegram занадто довгий',
-    ageInvalid: 'Вкажіть коректний вік (18–99)',
-    ageConfirmRequired: 'Підтвердіть, що вам виповнилося 18 років',
-    messageTooLong: 'Повідомлення занадто довге',
+    nameRequired: "Вкажи ім'я (мінімум 2 літери)",
+    nameTooLong: "Ім'я задовге",
+    telegramRequired: "Вкажи Telegram або телефон для зв'язку",
+    telegramTooLong: 'Нік або телефон задовгий',
+    ageInvalid: 'Вкажи вік цифрами, від 18 до 99',
+    ageConfirmRequired: 'Підтверди, що тобі є 18 років',
+    messageTooLong: 'Повідомлення задовге',
     submitFailed:
-      'Не вдалося надіслати заявку. Спробуйте пізніше або напишіть нам у Telegram.',
+      'Заявка не надіслалася через збій. Напиши менеджеру в Telegram, код заявки вже в повідомленні.',
+    rateLimit: 'Забагато заявок поспіль. Зачекай 10-15 хвилин або напиши менеджеру в Telegram.',
   },
   es: {
-    nameRequired: 'Indica tu nombre (mínimo 2 caracteres)',
+    nameRequired: 'Escribe tu nombre (mínimo 2 letras)',
     nameTooLong: 'El nombre es demasiado largo',
-    telegramRequired: 'Indica Telegram para contactarte',
-    telegramTooLong: 'Telegram es demasiado largo',
-    ageInvalid: 'Indica una edad válida (18–99)',
+    telegramRequired: 'Indica tu Telegram o teléfono para contactarte',
+    telegramTooLong: 'El usuario o el teléfono es demasiado largo',
+    ageInvalid: 'Indica tu edad en números, de 18 a 99',
     ageConfirmRequired: 'Confirma que tienes 18 años o más',
     messageTooLong: 'El mensaje es demasiado largo',
     submitFailed:
-      'No se pudo enviar la solicitud. Inténtalo más tarde o escríbenos por Telegram.',
+      'La solicitud no se envió por un fallo. Escribe al manager por Telegram: el código de tu solicitud ya está en el mensaje.',
+    rateLimit: 'Demasiadas solicitudes seguidas. Espera 10-15 minutos o escribe al manager por Telegram.',
   },
 };
 
