@@ -80,6 +80,10 @@ const RU: ModelGeoContent = {
       q: 'Я не из Италии — могу ли начать?',
       a: 'Да. Работа полностью удалённая, поэтому неважно, где ты живёшь сейчас: начать можно из любой страны и города.',
     },
+    {
+      q: 'В какой валюте доход?',
+      a: 'Доход считается в долларах США: так работает платформа. Способ получения в вашей стране согласуем на старте.',
+    },
   ],
 };
 
@@ -139,6 +143,10 @@ const UK: ModelGeoContent = {
       q: 'Я не з Італії — чи можу почати?',
       a: 'Так. Робота повністю віддалена, тож неважливо, де ти живеш зараз: почати можна з будь-якої країни та міста.',
     },
+    {
+      q: 'У якій валюті дохід?',
+      a: 'Дохід рахується в доларах США: так працює платформа. Спосіб отримання у вашій країні узгодимо на старті.',
+    },
   ],
 };
 
@@ -194,6 +202,10 @@ const EN: ModelGeoContent = {
       q: 'I am not from Italy — can I still start?',
       a: 'Yes. The work is fully remote, so it does not matter where you live right now: you can start from any country or city.',
     },
+    {
+      q: 'What currency is the income in?',
+      a: "Income is counted in US dollars: that's how the platform works. We'll agree at the start on how you receive it in your country.",
+    },
   ],
 };
 
@@ -248,6 +260,10 @@ const ES: ModelGeoContent = {
     {
       q: 'No soy de Italia — ¿puedo empezar igualmente?',
       a: 'Sí. El trabajo es totalmente remoto, así que no importa dónde vivas ahora: puedes empezar desde cualquier país o ciudad.',
+    },
+    {
+      q: '¿En qué moneda son los ingresos?',
+      a: 'Los ingresos se calculan en dólares estadounidenses: así funciona la plataforma. Cómo recibirlos en tu país lo acordamos al empezar.',
     },
   ],
 };
