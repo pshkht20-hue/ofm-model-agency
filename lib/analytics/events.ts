@@ -76,6 +76,9 @@ export type CalcResultViewParams = {
 export type ContactSubmitParams = {
   locale: string;
   has_calc_prefill: boolean;
+  /** «Окно 1»: полная анкета или быстрая заявка на вакансиях. */
+  form_type?: 'full' | 'quick';
+  role?: 'model' | 'chatter';
 };
 
 export type CtaClickParams = {
@@ -135,7 +138,15 @@ export type TelegramClickLocation =
   | 'footer_social'
   | 'article_body'
   | 'article_body_channel'
-  | 'article_channel_teaser';
+  | 'article_channel_teaser'
+  // «Окно 1» (28.10): экраны заявки, 404, CTA-блок статьи, липкая кнопка вакансий
+  | 'apply_success'
+  | 'apply_error'
+  | 'quick_apply_success'
+  | 'quick_apply_error'
+  | 'not_found'
+  | 'article_cta'
+  | 'sticky_telegram';
 
 export type TelegramClickParams = {
   location: TelegramClickLocation;
@@ -156,6 +167,7 @@ export type EmailClickParams = {
 export type WhatsappClickParams = {
   location: WhatsappClickLocation;
   locale?: string;
+  page_path?: string;
 };
 
 export type ScrollDepthPercent = 25 | 50 | 75 | 90;

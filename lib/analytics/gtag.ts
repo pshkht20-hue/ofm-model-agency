@@ -125,6 +125,7 @@ export function trackWhatsappClick(params: WhatsappClickParams) {
   gtagSafe('event', ANALYTICS_EVENTS.WHATSAPP_CLICK, {
     location: params.location,
     ...(params.locale ? { locale: params.locale } : {}),
+    ...(params.page_path ? { page_path: clamp(params.page_path) } : {}),
   });
 }
 
@@ -164,6 +165,8 @@ export function trackContactSubmit(params: ContactSubmitParams) {
   gtagSafe('event', ANALYTICS_EVENTS.CONTACT_SUBMIT, {
     locale: params.locale,
     has_calc_prefill: params.has_calc_prefill,
+    ...(params.form_type ? { form_type: params.form_type } : {}),
+    ...(params.role ? { role: params.role } : {}),
   });
 }
 
