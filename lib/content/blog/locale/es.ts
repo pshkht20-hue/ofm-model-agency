@@ -15,9 +15,9 @@ export function getSpanishBlogOverlay(): Record<
 
 const ES_OVERLAY: BlogLocaleOverlayMap = {
   "rabota-modelyu-onlyfans": {
-    title: "Trabajo de modelo OnlyFans: vacante remota y anónima",
+    title: "Trabajo de modelo OnlyFans: vacante remota y discreta",
     description:
-      "Cómo ser modelo de OnlyFans con una agencia: trabajo remoto desde cualquier país, sin experiencia y con total privacidad. Facturación de $3.000 a $15.000/mes.",
+      "Cómo ser modelo de OnlyFans con una agencia: trabajo remoto desde cualquier país, sin experiencia y con privacidad gracias al geobloqueo. Facturación de $3.000 a $15.000/mes.",
     keywords: [
       "trabajo de modelo onlyfans",
       "cómo ser modelo de onlyfans",
@@ -28,7 +28,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
     blocks: [
       {
         type: "p",
-        text: "¿Quieres convertir tu creatividad en un ingreso estable, desde casa, a tu propio ritmo y de forma anónima? OFM's Model Agency invita a chicas mayores de 18 años a trabajar como modelo de OnlyFans en remoto. Tú creas el contenido; la promoción, los chats, la publicidad y las ventas los asumimos nosotros y con nuestro propio dinero. No necesitas mucha experiencia ni una audiencia previa: buscamos nuevas estrellas y ayudamos a cada chica a desarrollar todo su potencial.",
+        text: "¿Quieres convertir tu creatividad en un ingreso estable, desde casa, a tu propio ritmo y con discreción? OFM's Model Agency invita a chicas mayores de 18 años a trabajar como modelo de OnlyFans en remoto. Tú creas el contenido; la promoción, los chats, la publicidad y las ventas los asumimos nosotros y con nuestro propio dinero. No necesitas mucha experiencia ni una audiencia previa: buscamos nuevas estrellas y ayudamos a cada chica a desarrollar todo su potencial.",
       },
       {
         type: "h2",
@@ -94,7 +94,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h2",
-        text: "Confidencialidad y anonimato",
+        text: "Confidencialidad y geobloqueo",
       },
       {
         type: "p",
@@ -227,7 +227,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h2",
-        text: "Condiciones: qué te protege de verdad (pista: no es el papel)",
+        text: "Condiciones: qué te protege de verdad",
       },
       {
         type: "p",
@@ -315,7 +315,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "ul",
         items: [
-          "Estrategia de nicho y posicionamiento (feet, GFE, fitness, cosplay, etc.)",
+          "Estrategia de nicho y posicionamiento (feet, fitness, cosplay, etc.)",
           "Gestión de X/Twitter—a menudo el canal principal de tráfico adult",
           "Reddit: posts nativos, sin spam de enlaces",
           "Instagram / TikTok: embudo SFW, Reels, Stories sin baneos",
@@ -496,7 +496,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
           "Presión: “decide hoy o perdemos tu plaza”",
           "Publican tus fotos en portfolio sin consentimiento escrito",
           "Solo hablan desde cuenta personal, sin marca de empresa",
-          "Reseñas solo en capturas, sin forma de verificar",
+          "Sin capturas de estadísticas con su evolución ni forma de hablar con una modelo actual",
           "No saben explicar qué financia su porcentaje: sin equipo de chat ni presupuesto de anuncios detrás",
           "Permanencia forzada: penalizaciones o amenazas en cuanto dices que quieres parar",
         ],
@@ -708,7 +708,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "Paso 1: Nicho y marca" },
       {
         type: "p",
-        text: "Antes del tráfico, define tu suscriptor ideal, tono (GFE, dominatrix, girl-next-door, fitness, cosplay) y límites. El nicho reduce audiencia pero sube conversión y LTV.",
+        text: "Antes del tráfico, define tu suscriptor ideal, tono (girl-next-door, fitness, cosplay, alt) y límites. El nicho reduce audiencia pero sube conversión y LTV.",
       },
       { type: "h2", text: "Paso 2: Embudo multip plataforma" },
       {
@@ -2625,7 +2625,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "Regiones: qué comparten todas las países" },
       {
         type: "p",
-        text: "Cada país es distinto, pero las expectativas son las mismas: anonimato, pagos claros, marketing sin ban en Instagram/TikTok, chats en tono GFE y comisión transparente. Da igual si estás en Buenos Aires, Medellín, Lima o Santiago—full-service se construye sobre cinco pilares.",
+        text: "Cada país es distinto, pero las expectativas son las mismas: anonimato, pagos claros, marketing sin ban en Instagram/TikTok, chats en un tono cálido y personal y comisión transparente. Da igual si estás en Buenos Aires, Medellín, Lima o Santiago—full-service se construye sobre cinco pilares.",
       },
       {
         type: "ul",
@@ -2933,7 +2933,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "¿Es legal ser modelo de OnlyFans?" },
       {
         type: "p",
-        text: "Sí: en la mayoría de países — España y los países de Latinoamérica incluidos — crear contenido 18+ es legal; la cuestión es declarar los ingresos donde eres residente fiscal, normalmente como trabajadora independiente o autónoma. La plataforma trabaja solo con personas adultas: en el registro cada modelo verifica su identidad con un documento, y en ese paso la agencia acompaña a la modelo de principio a fin.",
+        text: "La cuestión práctica es declarar los ingresos en el país de residencia fiscal, normalmente como trabajadora independiente o autónoma; las normas cambian según el país, así que conviene consultar cada caso con un asesor local. La plataforma trabaja solo con personas adultas: en el registro cada modelo verifica su identidad con un documento, y en ese paso la agencia acompaña a la modelo de principio a fin.",
       },
       {
         type: "nav",
@@ -3345,7 +3345,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Fotos y videos exclusivos, sets temáticos, transmisiones en vivo, audios y customs a pedido. El abanico va desde lifestyle, fitness y cosplay hasta contenido 18+, y el nivel lo decide cada creadora: conviven páginas muy explícitas con páginas que nunca pasan de lencería. Lo prohibido lo marcan las normas de la plataforma, y la verificación garantiza que todas las personas en el contenido sean mayores de edad.",
+        text: "Fotos y videos exclusivos, sets temáticos, transmisiones en vivo, audios y customs a pedido. El abanico es amplio: lifestyle, fitness, cosplay y formatos más personales, siempre solo para mayores de 18. Lo prohibido lo marcan las normas de la plataforma, y la verificación garantiza que todas las personas en el contenido sean mayores de edad.",
       },
       { type: "h3", text: "¿Cómo vender fotos en OnlyFans?" },
       {
@@ -3381,7 +3381,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "Seguridad, anonimato y legalidad" },
       {
         type: "p",
-        text: "La plataforma en sí es legal: una empresa británica registrada, pagos a cuentas bancarias reales y verificación de identidad y edad para cada creadora. Crear contenido para adultos siendo mayor de 18 no está prohibido en la gran mayoría de países hispanohablantes; la parte seria no es el «qué», sino el orden: declarar el ingreso donde corresponda y cuidar la privacidad desde el primer día.",
+        text: "La plataforma en sí es legal: una empresa británica registrada, pagos a cuentas bancarias reales y verificación de identidad y edad para cada creadora. Lo serio aquí es el orden: declarar el ingreso donde corresponda y cuidar la privacidad desde el primer día.",
       },
       {
         type: "p",
@@ -3608,7 +3608,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h3", text: "¿Es legal trabajar en OFM?" },
       {
         type: "p",
-        text: "Sí. Crear contenido para adultos siendo mayor de 18 es legal en la gran mayoría de países hispanohablantes, y colaborar con una agencia es trabajo remoto normal: declaras el ingreso en tu país de residencia fiscal. La plataforma verifica la identidad y la mayoría de edad con documento, sin excepciones. Y un filtro simple contra estafas: una agencia OFM real nunca te cobra por empezar — gana solo cuando ganas tú.",
+        text: "Colaborar con una agencia es trabajo remoto normal: declaras el ingreso en tu país de residencia fiscal. La plataforma verifica la identidad y la mayoría de edad con documento, sin excepciones. Y un filtro simple contra estafas: una agencia OFM real nunca te cobra por empezar — gana solo cuando ganas tú.",
       },
       {
         type: "nav",

@@ -17,7 +17,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
   "rabota-modelyu-onlyfans": {
     title: "Become an OnlyFans Model: Agency Job (Remote)",
     description:
-      "Become an OnlyFans model with OFM agency: remote, no experience needed, fully anonymous. Page turnover $3,000–$30,000/mo, we fund promotion. How to apply.",
+      "Become an OnlyFans model with OFM agency: remote, no experience, privacy via geo-blocking. Page turnover $3,000–$30,000/mo, we fund promotion. How to apply.",
     keywords: [
       "become an onlyfans model",
       "how to become an onlyfans model",
@@ -28,7 +28,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     blocks: [
       {
         type: "p",
-        text: "Want to turn your creativity into steady income — from home, at your own pace, and anonymously? OFM's Model Agency is hiring women 18+ for remote work as OnlyFans models. You create the content; we handle the promotion, the chatting, the advertising, and the sales — all at our own expense. You don't need a big following or years of experience: we're looking for new stars, and we help every one of them unlock her potential.",
+        text: "Want to turn your creativity into steady income — from home, at your own pace, and discreetly? OFM's Model Agency is hiring women 18+ for remote work as OnlyFans models. You create the content; we handle the promotion, the chatting, the advertising, and the sales — all at our own expense. You don't need a big following or years of experience: we're looking for new stars, and we help every one of them unlock her potential.",
       },
       {
         type: "h2",
@@ -94,7 +94,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h2",
-        text: "Privacy and anonymity",
+        text: "Privacy and geo-blocking",
       },
       {
         type: "p",
@@ -243,7 +243,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h2",
-        text: "Terms: what actually protects you (hint — not paperwork)",
+        text: "Terms: what actually protects you",
       },
       {
         type: "p",
@@ -473,7 +473,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           "A proper casting: a call where they ask about your limits, your goals and your content comfort zone before promising anything",
           "Verifiable results: real page statistics screenshots, published with the models' consent — not a vague \"our girls earn a lot\"",
           "A written breakdown of what their share funds: ad budget, chat shifts, management",
-          "You keep access to your page stats at any time — the numbers are never a secret from you",
+          "You get regular reports with your page stats, so the numbers are never a secret from you",
           "Nothing about you is published anywhere without your written OK",
           "Freedom to leave whenever you choose — a team confident in its results doesn't need to trap anyone",
         ],
@@ -596,7 +596,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Custom content and pay-per-view drops sold in DMs: personal videos made to a fan's request, themed photo sets, and long girlfriend-experience conversations. Subscriptions are the smallest layer of income on most pages; the highest-spending fans buy attention and exclusivity, which is exactly what a trained chat team sells.",
+        text: "Custom content and pay-per-view drops sold in DMs: personal videos made to a fan's request, themed photo sets, and long personal conversations. Subscriptions are the smallest layer of income on most pages; the highest-spending fans buy attention and exclusivity, which is exactly what a trained chat team sells.",
       },
       {
         type: "nav",
@@ -778,7 +778,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           "Pressure: “decide today or we give your slot away”",
           "They post your photos in a portfolio without written consent",
           "Communication only from a personal account, no company brand",
-          "Reviews are screenshots only, with no way to verify",
+          "No stats screenshots showing growth over time, and no way to talk to a current model",
           "They can't explain what their share actually funds — no chat team or ad budget behind the percentage",
           "Lock-in: penalties or threats the moment you say you want to stop",
         ],
@@ -960,7 +960,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "Step 1: Niche and brand" },
       {
         type: "p",
-        text: "Before traffic, define your ideal subscriber, tone (GFE, dominatrix, girl-next-door, fitness, cosplay), and hard limits. A niche narrows audience but raises conversion and LTV.",
+        text: "Before traffic, define your ideal subscriber, tone (girl-next-door, fitness, cosplay, alt), and hard limits. A niche narrows audience but raises conversion and LTV.",
       },
       { type: "h2", text: "Step 2: Multi-platform funnel" },
       {
@@ -1668,7 +1668,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Some of our models at OFM sit in the $12,000–35,000+/month range — but that's neither a guarantee nor the median for every application we receive.",
+        text: "Top pages at OFM reach a balance of $15,000-50,000 a month (gross), but that's neither a guarantee nor the median for every application we receive.",
       },
       {
         type: "cases",
@@ -1802,7 +1802,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "No — an agency speeds up the system, it does not promise a number. The $12,000–35,000+/month range some OFM models sit in is neither a guarantee nor the median for every application.",
+        text: "No: an agency speeds up the system, it does not promise a number. The $15,000-50,000 a month (gross) that top OFM pages reach is neither a guarantee nor the median for every application.",
       },
       {
         type: "h3",
@@ -2553,7 +2553,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           "Upfront payments before launch — a real agency invests its own money",
           "Fixed income promises without niche analysis",
           "No verifiable cases or payout proof",
-          "No real casting or manager call before they “sign you”",
+          "No real casting or manager call before they “take you on”",
         ],
       },
       {
@@ -2689,7 +2689,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           "Upfront “advertising” payments before launch — a real agency invests its own money",
           "Fixed income promises without niche review",
           "No verifiable cases or payout proof",
-          "No real casting or manager call before they “sign you”",
+          "No real casting or manager call before they “take you on”",
           "“Decide today” pressure and lock-in instead of the freedom to leave anytime",
         ],
       },
@@ -3603,7 +3603,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "In most countries, creating 18+ content is not itself prohibited — the real question is declaring your income where you are a tax resident. In Ukraine, for example, many creators register as a sole trader (FOP). This is information rather than legal advice: for your own situation, a local tax specialist gives the accurate answer. The platform works only with adults and verifies identity with a document.",
+        text: "The practical question is declaring your income where you are a tax resident. In Ukraine, for example, many creators register as a sole trader (FOP). This is information rather than legal advice: for your own situation, a local tax specialist gives the accurate answer. The platform works only with adults and verifies identity with a document.",
       },
       {
         type: "h3",
@@ -4007,7 +4007,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
           "They ask for money up front — an entry fee, paid training or a guaranteed slot. A real agency earns from your income, not from your wallet.",
           "They promise a guaranteed amount, or a five-figure first month. Nobody in this business can guarantee a number.",
           "They lean on phrases like easy money, passive income, or you will not have to do anything.",
-          "They rush you: start today, decide now — instead of a real casting call with a manager and terms stated openly.",
+          "They rush you to decide right now instead of holding a real casting call with a manager and stating the terms openly.",
           "They cannot show a single verifiable case with payout dynamics.",
         ],
       },
@@ -4021,7 +4021,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "The short answer: creating 18+ content is not in itself prohibited in most countries. Legality turns on paperwork and on declaring your income properly, and that depends on where you are a tax resident.",
+        text: "The short answer: legality turns on paperwork and on declaring your income properly, and that depends on where you are a tax resident.",
       },
       {
         type: "p",
@@ -4341,7 +4341,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h3", text: "Is OFM legal?" },
       {
         type: "p",
-        text: "Yes. Creating 18+ content is legal in most countries, and working with an agency is ordinary remote collaboration: the model declares her income where she is a tax resident. The platform works only with adults and verifies every creator's identity with a document.",
+        text: "Working with an agency is ordinary remote collaboration: the model declares her income where she is a tax resident. The platform works only with adults and verifies every creator's identity with a document.",
       },
       {
         type: "nav",
@@ -4384,13 +4384,13 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     // Целевая версия статьи: EN-база + японские блоки внутри (контент, не локаль).
     // Simple English сознательно — реальная ЦА просила «simple English,
     // translator-friendly» (карта болей из переписки со скаутом-моделью).
-    // ⛔ Железно: гео-блок Японии по умолчанию + мозаика/цензура (ст. 175) —
-    // в каждом разделе о безопасности. Ja-выдача пуста (машинные переводы) —
+    // ⛔ Железно: гео-блок Японии по умолчанию + соблюдение правил Японии (ст. 175) -
+    // в каждом разделе о безопасности; формулировки о характере контента в тексте не используем, только «Japan's rules» / «日本のルール» (A1, 30.10.2026). Ja-выдача пуста (машинные переводы) -
     // гипотеза: топ без покупных ссылок; замер конец сентября, до него ja-ссылки
     // не покупать. Статьи №2–3 кластера (Fantia/Myfans, Anonymity) — W4.
     title: "OnlyFans Agency for Japanese Creators — Safe Remote Start",
     description:
-      "OFM is an OnlyFans agency for Japanese creators: Japan geo-blocked by default, censorship to Japanese standards, DMCA protection, Paxum payouts. Simple English is enough — the team runs chats. 日本人クリエイター向け。18+.",
+      "OFM is an OnlyFans agency for Japanese creators: Japan geo-blocked by default, content that follows Japan's rules, DMCA protection, Paxum payouts. Simple English is enough, the team runs chats. 日本人クリエイター向け。18+.",
     keywords: [
       "onlyfans agency for japanese creators",
       "onlyfans agency japan",
@@ -4404,7 +4404,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     blocks: [
       {
         type: "p",
-        text: "OFM Models is an OnlyFans agency that works with Japanese creators fully remotely — with two safety rules that are always on: your page is geo-blocked in Japan by default, and all content follows Japanese censorship standards before anything is published. Promotion targets the US, Canada, Australia and Western Europe only. The team handles registration, ID verification, Paxum payouts, fan chats around the clock and DMCA takedowns of leaks. You only create content, 10–15 hours a week, and set your own boundaries. Simple English is enough — a translator app is fine too.",
+        text: "OFM Models is an OnlyFans agency that works with Japanese creators fully remotely — with two safety rules that are always on: your page is geo-blocked in Japan by default, and all content is checked against Japan's rules before anything is published. Promotion targets the US, Canada, Australia and Western Europe only. The team handles registration, ID verification, Paxum payouts, fan chats around the clock and DMCA takedowns of leaks. You only create content, 10–15 hours a week, and set your own boundaries. Simple English is enough — a translator app is fine too.",
       },
       {
         type: "p",
@@ -4418,7 +4418,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "Why Japanese creators work with an overseas agency" },
       {
         type: "p",
-        text: "Creators in Japan tell us about the same three fears: being recognized (leaks travel fast in tight social circles), the strict Japanese law on uncensored content, and English chats with foreign fans. An overseas agency removes all three at once. Your page is simply invisible to the Japanese audience. Content is censored to Japanese standards before publishing. And English is the team's job, not yours: chatters answer fans 24/7, and your manager writes to you in simple, translator-friendly English.",
+        text: "Creators in Japan tell us about the same three fears: being recognized (leaks travel fast in tight social circles), Japan's strict content law, and English chats with foreign fans. An overseas agency removes all three at once. Your page is simply invisible to the Japanese audience. Content is checked against Japan's rules before publishing. And English is the team's job, not yours: chatters answer fans 24/7, and your manager writes to you in simple, translator-friendly English.",
       },
       {
         type: "p",
@@ -4433,10 +4433,10 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
         type: "p",
         text: "Honest note: no one can promise 100% — VPNs and screenshots exist everywhere in the world. What we control, we control fully: geo-block from day one, promotion far from Japan, a careful visual style, and DMCA takedowns when a leak or a fake account appears. Takedowns are part of page management, not a paid extra.",
       },
-      { type: "h2", text: "Article 175 and censorship: how we keep it legal — 法律について" },
+      { type: "h2", text: "Article 175 and Japan's rules: how we keep it legal (法律について)" },
       {
         type: "p",
-        text: "Japanese law (Article 175 of the Penal Code) prohibits distributing uncensored explicit material, and this applies to creators working from Japan even on foreign platforms. Our rule is simple and has no exceptions: for creators based in Japan, explicit content is edited to Japanese censorship standards (mosaic) before it is published anywhere — on the page, in promo, everywhere. We will never ask you to publish uncensored content, and we decline that work even if a fan offers extra money for it.",
+        text: "Japanese law (Article 175 of the Penal Code) sets strict rules for content, and they apply to creators working from Japan even on foreign platforms. Our rule is simple and has no exceptions: for creators based in Japan, every piece of content is checked against Japan's rules before it is published anywhere, on the page, in promo, everywhere. We will never ask you to publish anything that breaks those rules, and we decline such requests even if a fan offers extra money.",
       },
       {
         type: "p",
@@ -4501,7 +4501,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h3", text: "Is this legal for a creator living in Japan? 合法ですか？" },
       {
         type: "p",
-        text: "Yes, under two conditions we treat as standard: explicit content is censored to Japanese norms (mosaic) before publishing, and income is declared for taxes. We never publish uncensored content for creators based in Japan — no exceptions — and the team prepares the income data you need for tax filing.",
+        text: "Yes, under two conditions we treat as standard: content follows Japan's rules before publishing, and income is declared for taxes. We never publish anything that breaks those rules for creators based in Japan, no exceptions, and the team prepares the income data you need for tax filing.",
       },
       { type: "h3", text: "Will people in Japan find my page? 日本の知り合いにバレませんか？" },
       {
@@ -4542,7 +4542,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       {
         type: "cta",
         title: "Based in Japan and want a safe, managed start?",
-        body: "Write to the manager on Telegram @ofmm_agency — simple English or Japanese with a translator is fine. You will get straight answers about geo-block, censorship and honest numbers for your situation. Or send the 2-minute anonymous application.",
+        body: "Write to the manager on Telegram @ofmm_agency — simple English or Japanese with a translator is fine. You will get straight answers about geo-block, Japan's rules and honest numbers for your situation. Or send the 2-minute anonymous application.",
         buttonHref: "/#contact",
         buttonLabel: "Apply",
         note: "18+ only. Income figures are gross page-balance turnover and market examples, not a guarantee.",
@@ -5864,7 +5864,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     "blocks": [
       {
         "type": "p",
-        "text": "A plus size model on OnlyFans works in one of the platform's most profitable niches, and the OFM Models agency recruits plus size creators deliberately — not as an exception: pages run with the team reach $3,000–15,000 gross per month regardless of dress size, because fans pay for a precise match with their taste, not for \"measurements\". The market backs this with money: a plus-size page makes $45,000 a month (another model's case, documents verified by Business Insider), and the niche's top names have quoted up to $99,000 in public interviews. Below: the economics of the niche, a calm look at the fears \"they will laugh at me\" and \"I don't have a model's figure,\" and a start that takes 7–14 days."
+        "text": "A plus size model on OnlyFans works in one of the platform's most profitable niches, and the OFM Models agency recruits plus size creators deliberately — not as an exception: pages run with the team reach $3,000–15,000 gross per month regardless of dress size, because fans pay for a precise match with their taste, not for \"measurements\". The market backs this with money: a plus-size page makes $45,000 a month (another model's case, documents verified by Business Insider). Below: the economics of the niche, a calm look at the fears \"they will laugh at me\" and \"I don't have a model's figure,\" and a start that takes 7–14 days."
       },
       {
         "type": "p",
@@ -5925,14 +5925,14 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
             "$15,000–50,000 gross — months of systematic work"
           ],
           [
-            "Market peaks of the niche (not our models)",
-            "$45,000–99,000 — Business Insider and public interviews"
+            "Market peak of the niche (not our model)",
+            "$45,000, case verified by Business Insider"
           ]
         ]
       },
       {
         "type": "p",
-        "text": "Honestly, about the numbers: $3,000–15,000 is the page's gross balance — turnover, not a payout in hand. The model receives 20–30% of gross — the share depends on the plan, the niche, and the team setup — and the agency reinvests the rest into the traffic, promotion and chat team that grow that balance. The $45,000–99,000 cases are the peaks of the market, public examples of other people's models: we cite them as proof of the niche's ceiling, not as a promise."
+        "text": "Honestly, about the numbers: $3,000–15,000 is the page's gross balance — turnover, not a payout in hand. The model receives 20–30% of gross — the share depends on the plan, the niche, and the team setup — and the agency reinvests the rest into the traffic, promotion and chat team that grow that balance. The $45,000-a-month case is the market's peak, a public example of another model: we cite it as proof of the niche's ceiling, not as a promise."
       },
       {
         "type": "cases",
@@ -6088,7 +6088,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         "type": "p",
-        "text": "Solo — usually $300–700 in the first month. Pages of OFM Models creators reach $3,000–15,000 gross per month, top pages $15,000–50,000 after months of systematic work. The market peaks of the niche — $45,000–99,000 a month — are public cases of other people's models (Business Insider, interviews): proof of the ceiling, not a promise. All sums are page-balance turnovers, not payouts in hand."
+        "text": "Solo — usually $300–700 in the first month. Pages of OFM Models creators reach $3,000–15,000 gross per month, top pages $15,000–50,000 after months of systematic work. The niche's market peak, $45,000 a month for another model (case verified by Business Insider), is proof of the ceiling, not a promise. All sums are page-balance turnovers, not payouts in hand."
       },
       {
         "type": "h3",

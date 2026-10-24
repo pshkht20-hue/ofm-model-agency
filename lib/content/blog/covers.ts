@@ -602,6 +602,22 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
   },
 };
 
+/**
+ * Подпись обложки на языке страницы (uk/en/es). Ключ: slug статьи.
+ * Если перевода нет, остаётся русская подпись из BLOG_COVERS.
+ * A1 30.10.2026: две подписи, нарушавшие правила; остальные добавляются в A2 (П2-2).
+ */
+export const BLOG_COVER_ALT_I18N: Record<string, Partial<Record<'uk' | 'en' | 'es', string>>> = {
+  'onlyfans-rabota-bez-lica': {
+    uk: 'Кільцева лампа і скляний замок: приватність моделі на OnlyFans',
+    en: "Ring light and a glass lock: an OnlyFans model's privacy",
+    es: 'Aro de luz y candado de cristal: la privacidad de la modelo en OnlyFans',
+  },
+  'rabota-dlya-mam-v-dekrete': {
+    uk: 'Молода мама затишним вечором удома біля вікна з видом на місто: онлайн-робота в декреті у своєму графіку',
+  },
+};
+
 export function getBlogCover(slug: string): BlogCover | undefined {
   return BLOG_COVERS[slug];
 }

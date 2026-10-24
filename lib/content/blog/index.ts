@@ -1,6 +1,6 @@
 import { routing, type Locale } from '@/i18n/routing';
 import type { BlogCategory, BlogPost } from '@/lib/content/blog/types';
-import { getBlogCover } from '@/lib/content/blog/covers';
+import { BLOG_COVER_ALT_I18N, getBlogCover } from '@/lib/content/blog/covers';
 import { getEnglishBlogOverlay } from '@/lib/content/blog/locale/en';
 import { getSpanishBlogOverlay } from '@/lib/content/blog/locale/es';
 import { getUkrainianBlogOverlay } from '@/lib/content/blog/locale/uk';
@@ -54,6 +54,8 @@ function getOverlay(locale: Locale): Record<string, BlogPostLocaleOverlay> | nul
 function applyLocale(post: BlogPost, locale: Locale): BlogPost {
   const overlay = getOverlay(locale)?.[post.slug];
   if (!overlay) return post;
+  const localizedAlt =
+    locale === 'ru' ? undefined : BLOG_COVER_ALT_I18N[post.slug]?.[locale];
   return {
     ...post,
     title: overlay.title,
@@ -64,6 +66,7 @@ function applyLocale(post: BlogPost, locale: Locale): BlogPost {
     description: overlay.description,
     keywords: overlay.keywords,
     blocks: overlay.blocks,
+    cover: post.cover && localizedAlt ? { ...post.cover, alt: localizedAlt } : post.cover,
   };
 }
 
