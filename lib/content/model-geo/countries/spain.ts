@@ -28,6 +28,10 @@ export const record: ModelGeoCountry = {
 const RU: ModelGeoContent = {
   countryName: 'Испания',
   title: 'OnlyFans-модель в Испании — работа удалённо, от $3 000/мес',
+  // Поезд K 24.10.2026, гео-партия (K-TRAIN-SPEC §4.2): отдельный <title> под
+  // формулу «OnlyFans в <стране>»; H1, JobPosting.title, datePosted и baseSalary
+  // остаются прежними (берутся из title выше). Откат: удалить строку seoTitle.
+  seoTitle: 'OnlyFans в Испании: работа моделью удалённо, от $3 000/мес',
   description:
     'От $3 000 до $10 000 в месяц — доход многих наших моделей OnlyFans в Испании. Снимай при солнечном свете, а продвижение, переписку и финансы ведёт команда.',
   introHtml:
@@ -83,6 +87,10 @@ const RU: ModelGeoContent = {
 const UK: ModelGeoContent = {
   countryName: 'Іспанія',
   title: 'Робота моделлю OnlyFans в Іспанії — від $3 000/міс',
+  // Поезд K 24.10.2026, гео-партія (K-TRAIN-SPEC §4.2): окремий <title> під
+  // формулу «OnlyFans у <країні>»; H1, JobPosting.title, datePosted і baseSalary
+  // лишаються незмінними (з title вище). Відкат: видалити рядок seoTitle.
+  seoTitle: 'OnlyFans в Іспанії: робота моделлю віддалено, від $3 000/міс',
   description:
     'Від $3 000 до $10 000 на місяць — дохід багатьох наших моделей OnlyFans в Іспанії. Знімай при сонячному світлі, а просування, листування й фінанси веде команда.',
   introHtml:
