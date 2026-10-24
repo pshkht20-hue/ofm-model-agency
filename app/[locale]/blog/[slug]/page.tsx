@@ -131,7 +131,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // (подтверждение владельца), прежний костыль с дописыванием openGraph.images
   // поверх готового объекта удалён.
   return createPageMetadata({
-    title: post.title,
+    // Поезд K (24.10.2026): отдельный <title>, если он задан; H1, хлебные
+    // крошки и Article JSON-LD продолжают брать post.title.
+    title: post.seoTitle ?? post.title,
     description: post.description,
     path: `/blog/${post.slug}`,
     locale: locale as Locale,

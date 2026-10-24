@@ -57,6 +57,10 @@ function applyLocale(post: BlogPost, locale: Locale): BlogPost {
   return {
     ...post,
     title: overlay.title,
+    // Поезд K (24.10.2026): seoTitle локали берётся только из её оверлея. Без
+    // явного присваивания русский seoTitle пиллара и статьи о заработке утёк бы
+    // через ...post в <title> страниц /uk/, /en/ и /es/.
+    seoTitle: overlay.seoTitle,
     description: overlay.description,
     keywords: overlay.keywords,
     blocks: overlay.blocks,

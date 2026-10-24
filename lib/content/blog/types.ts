@@ -29,7 +29,15 @@ import type { BlogCover } from '@/lib/content/blog/covers';
 
 export type BlogPost = {
   slug: string;
+  /** H1, headline в Article JSON-LD, хлебные крошки и карточки блога. */
   title: string;
+  /**
+   * Необязательный отдельный <title> (только generateMetadata), как seoTitle
+   * у гео-вакансий с поезда J. Поезд K (24.10.2026, K-TRAIN-SPEC §2.1, §3):
+   * тайтл под спрос без смены H1 и разметки. Нет поля = <title> берётся из title.
+   * Для локалей берётся ТОЛЬКО из оверлея (applyLocale), русский не утекает.
+   */
+  seoTitle?: string;
   description: string;
   publishedAt: string;
   /** Дата обновления для Article.dateModified (freshness). Если нет — берётся publishedAt. */
