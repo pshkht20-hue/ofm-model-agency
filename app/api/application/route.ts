@@ -17,11 +17,12 @@ import {
 } from '@/lib/telegram';
 
 /**
- * Худший случай цепочки доставки (lib/lead-delivery.ts) около 25 с: Telegram
- * не отвечает, затем резервный чат, хранилище и тревога. ⚠️ Проверить лимит
- * тарифа Vercel (Hobby разрешает до 60 с для Node-функций).
+ * Худший случай цепочки доставки (lib/lead-delivery.ts) около 36 с: Telegram
+ * не отвечает 21 с (ступени 1-3), хранилище 2 x 3 с, тревога 3 с плюс повтор
+ * резервным ботом 3 с, затем GA до 2,5 с. 60 с с запасом: это в пределах любого
+ * тарифа Vercel (Hobby с fluid compute до 300 с, без него до 60 с).
  */
-export const maxDuration = 30;
+export const maxDuration = 60;
 
 const MAX_LENGTH = {
   name: 100,
@@ -234,7 +235,6 @@ export async function POST(request: Request) {
       timeZone: attribution?.hints?.tz,
     };
     const device = parseUserAgent(request.headers.get('user-agent'));
-    recordSubmission(ip);
     undelivered = emergencyPlain(result.data, code, locale);
 
     // Лимит Telegram 4096 видимых символов: историю сжимаем по ступеням (сначала
@@ -284,6 +284,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: errors.submitFailed, code }, { status: 500 });
     }
     undelivered = null;
+    // Лимит считает только доставленные заявки: наш сбой не съедает попытки девушки.
+    recordSubmission(ip);
 
     // await, а не void: на serverless инстанс замораживается сразу после ответа
     // и fire-and-forget-запрос не успевает уйти: так терялось ~35% серверных

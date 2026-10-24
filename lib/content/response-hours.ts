@@ -66,13 +66,13 @@ export const RESPONSE_TEXT: Record<Locale, ResponseTexts> = {
     statusNight: `Зараз неробочий час: відповімо зранку, до ${MORNING} за Києвом`,
   },
   en: {
-    line: `We reply on Telegram during working hours, ${RESPONSE_RANGE} Kyiv time. Night applications are handled in the morning.`,
+    line: `We reply on Telegram during working hours, ${RESPONSE_RANGE} Kyiv time. Applications sent at night are handled in the morning.`,
     chip: `Replies ${RESPONSE_RANGE} Kyiv time`,
     statusDay: `Working hours now: we reply until ${TO} Kyiv time`,
     statusNight: `Outside working hours: we'll reply in the morning, by ${MORNING} Kyiv time`,
   },
   es: {
-    line: `Respondemos por Telegram en horario laboral, de ${FROM} a ${TO} (hora de Kiev). Las solicitudes de la noche, por la mañana.`,
+    line: `Respondemos por Telegram en horario laboral, de ${FROM} a ${TO} (hora de Kiev). Las solicitudes que llegan de noche las atendemos por la mañana.`,
     chip: `Respondemos de ${FROM} a ${TO} (Kiev)`,
     statusDay: `Ahora es horario laboral: respondemos hasta las ${TO} (hora de Kiev)`,
     statusNight: `Fuera de horario: respondemos por la mañana, antes de las ${MORNING} (hora de Kiev)`,

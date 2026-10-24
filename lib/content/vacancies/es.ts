@@ -464,7 +464,7 @@ const FOR_GIRLS_ES: VacancyContent = {
   ],
   cta: {
     heading: 'Empieza con un mensaje en Telegram',
-    text: 'Escríbenos unas palabras sobre ti: edad, ciudad y qué dirección te interesa, modelo u operadora de soporte. Respondemos en horario laboral, de 9:00 a 23:00 (hora de Kiev).',
+    text: 'Escríbenos unas palabras sobre ti: edad, ciudad y qué opción te interesa (modelo u operadora de soporte). Respondemos en horario laboral, de 9:00 a 23:00 (hora de Kiev).',
     primaryLabel: 'Escribir por Telegram',
     bridgeNote:
       '¿Ya decidiste que quieres tu propia página? [Rellena la solicitud de modelo](/join) — el equipo asume el registro, la promoción y las finanzas.',

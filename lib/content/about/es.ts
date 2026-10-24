@@ -21,7 +21,7 @@ export const ABOUT_ES: AboutContent = {
   facts: [
     { value: '2022', label: 'año en que empezamos' },
     { value: '220+', label: 'páginas lanzadas y gestionadas' },
-    { value: '9:00-23:00', label: 'horario del manager, hora de Kiev' },
+    { value: '9:00-23:00', label: 'horario del manager (hora de Kiev)' },
     { value: '2–3 horas', label: 'dedicación diaria de la modelo' },
   ],
   who: {

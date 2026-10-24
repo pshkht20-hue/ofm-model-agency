@@ -446,8 +446,8 @@
     "age": "Edad",
     "telegram": "Telegram",
     "telegramPlaceholder": "@username o número de teléfono",
-    "telegramHint": "Usuario de Telegram: letras latinas, números y _ (5 o más caracteres), con o sin @. O un número de teléfono con prefijo del país.",
-    "telegramWarn": "Parece un error: los usuarios de Telegram solo llevan letras latinas, números y _. Revísalo o pon un número de teléfono.",
+    "telegramHint": "Usuario de Telegram: letras de la a a la z (sin tildes ni ñ), números y _ (5 o más caracteres), con o sin @. O un número de teléfono con prefijo del país.",
+    "telegramWarn": "Parece que hay un error: el usuario de Telegram solo admite letras de la a a la z (sin tildes ni ñ), números y _. Revísalo o escribe un número de teléfono.",
     "message": "Mensaje",
     "submit": "Enviar solicitud",
     "privacy": "100% confidencial · anónimo · sin compromiso",
@@ -504,7 +504,7 @@
     "title": "Cómo ser modelo de OnlyFans: trabaja desde casa, ingresos y cómo empezar",
     "p1": "¿Quieres trabajar como modelo de OnlyFans y ganar dinero en remoto? Te buscamos a ti. Nuestra agencia se encarga de todo —marketing, chats 24/7, contenido y estrategia— y financia tu lanzamiento hasta tus primeras ganancias. Tú creas; nosotros hacemos crecer tu página de forma anónima y segura.",
     "p2": "Reclutamos chicas de todo el mundo —100 % en remoto y sin experiencia— y promocionamos tu página ante la audiencia con mayor poder adquisitivo de EE. UU. y Canadá. ¿Buscas trabajo de modelo de OnlyFans en Latinoamérica —México, Colombia, Argentina, Chile, Perú, Brasil— o en Europa? Aquí te explicamos cómo ser modelo de OnlyFans con condiciones claras y casos reales. En las <faq>FAQ</faq> tienes respuestas; en el <blog>blog</blog>, guías por país y región.",
-    "p3": "Aplica en la página principal y una manager te escribirá por Telegram en horario laboral (de 9:00 a 23:00, hora de Kiev) con un plan personal, sin presión y sin compromiso.",
+    "p3": "Envía tu solicitud en la página principal y un manager te escribirá por Telegram en horario laboral (de 9:00 a 23:00, hora de Kiev) con un plan personal, sin presión y sin compromiso.",
     "linkVacancy": "Trabajo de modelo OnlyFans",
     "linkDiaspora": "Trabajo en el extranjero",
     "linkAgency": "Cómo elegir agencia",
@@ -706,7 +706,7 @@
     "necessaryTitle": "Necesarias",
     "necessaryDesc": "idioma y tu preferencia de cookies",
     "analyticsTitle": "Analítica",
-    "analyticsDesc": "Google Analytics y Microsoft Clarity: estadísticas, mapas de calor y grabaciones de acciones en las páginas, con los campos de formularios ocultos. Solo con consentimiento",
+    "analyticsDesc": "Google Analytics y Microsoft Clarity: estadísticas, mapas de calor y grabaciones de acciones en las páginas, con los campos de formularios ocultos. Solo con tu consentimiento",
     "legalNote": "Cambia tu elección cuando quieras en «Configuración de cookies», en el pie de página."
   },
   "languageSwitcher": {

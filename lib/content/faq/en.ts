@@ -197,7 +197,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How is OFM\'s Model Agency different from other teams?',
         answer:
-          'The [OFM agency](/) combines a personal manager, marketing and 24/7 chats, content strategy, transparent reporting, and a focus on confidentiality. We are independent from OnlyFans, do not charge an “entry” fee, and respond to applications during working hours, 9:00-23:00 Kyiv time. The model receives 20–30% of the page\'s total balance, while promotion, traffic, and chatters are funded by the agency — the work plan is discussed at the casting call.',
+          'The [OFM agency](/) combines a personal manager, marketing and 24/7 chats, content strategy, transparent reporting, and a focus on confidentiality. We are independent from OnlyFans, do not charge an “entry” fee, and respond to applications during working hours, 9:00-23:00 Kyiv time. The model receives 20-30% of the page\'s total balance, while promotion, traffic, and chatters are funded by the agency. The work plan is discussed at the casting call.',
       },
     ],
   },

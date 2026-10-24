@@ -5,7 +5,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     title: '1. Disposiciones generales',
     paragraphs: [
       'Esta Política de Privacidad describe cómo OFM\'s Model Agency («nosotros», «la agencia») trata los datos personales al usar ofmmodels.com y enviar una solicitud.',
-      'Responsable del tratamiento: OFM\'s Model Agency. Las consultas de privacidad y las solicitudes sobre datos personales se atienden por Telegram: @ofmm_agency (con el asunto «Solicitud de datos»).',
+      'Responsable del tratamiento: OFM\'s Model Agency. Las consultas de privacidad y las solicitudes sobre datos personales se atienden por Telegram en @ofmm_agency (con un mensaje que empiece por «Solicitud de datos»).',
       'Al usar el sitio tras leer esta política, usted reconoce estas condiciones. Enviar una solicitud implica consentir el tratamiento de los datos indicados para contactarle.',
     ],
   },
@@ -56,7 +56,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     paragraphs: [
       'Los datos de la solicitud se conservan en la correspondencia de gestores y notificaciones de Telegram el tiempo necesario para revisar la solicitud y una posible colaboración.',
       'Los datos analíticos de GA4 se conservan según la configuración de Google Analytics (por defecto hasta 14 meses en informes estándar).',
-      'Las grabaciones de sesión de Microsoft Clarity se guardan hasta 30 días; algunas grabaciones (marcadas a mano o elegidas por el servicio en una muestra aleatoria) hasta 9 meses.',
+      'Las grabaciones de sesión de Microsoft Clarity se guardan hasta 30 días; algunas grabaciones (marcadas a mano o elegidas por el servicio en una muestra aleatoria) se guardan hasta 9 meses.',
       'Si la notificación de una solicitud no se puede entregar, sus datos pueden guardarse brevemente en los registros técnicos del alojamiento (Vercel) para que la solicitud no se pierda.',
       'Aplicamos medidas organizativas y técnicas: HTTPS, acceso restringido a notificaciones, claves secretas en el servidor.',
     ],
@@ -64,7 +64,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     title: '7. Sus derechos',
     paragraphs: [
-      'Se puede solicitar el acceso a los datos, su rectificación o supresión, la limitación del tratamiento u oponerse a él: la solicitud se atiende por Telegram en @ofmm_agency con el asunto «Solicitud de datos».',
+      'Se puede solicitar el acceso a los datos, su rectificación o supresión, la limitación del tratamiento u oponerse a él: la solicitud se atiende por Telegram en @ofmm_agency con un mensaje que empiece por «Solicitud de datos».',
       'Puede retirar el consentimiento a cookies analíticas en cualquier momento mediante «Configuración de cookies» en el pie de página.',
       'Los residentes de la UE/EEE pueden presentar una reclamación ante su autoridad de protección de datos si consideran que el tratamiento infringe el RGPD.',
       'Responderemos en un plazo razonable, normalmente en 30 días.',

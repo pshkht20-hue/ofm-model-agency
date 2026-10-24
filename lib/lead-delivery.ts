@@ -13,9 +13,11 @@ import { sendTelegramMessage, TelegramSendError } from '@/lib/telegram';
  *    TELEGRAM_BACKUP_BOT_TOKEN другим ботом.
  * 4. Хранилище Upstash/Vercel KV по REST (если заданы KV_REST_API_URL +
  *    KV_REST_API_TOKEN или UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN),
- *    срок 30 дней; досылает /api/health/leads.
+ *    срок 30 дней; ключ lead:<код>:<время>, в очередь leads:pending кладётся
+ *    ключ; досылает /api/health/leads.
  * 5. Тревога в план-чат (TELEGRAM_PLAN_CHAT_ID), если доставка прошла не со
- *    ступени 1-2. Без персональных данных.
+ *    ступени 1-2. Без персональных данных. При отказе основного бота повтор
+ *    резервным (TELEGRAM_BACKUP_BOT_TOKEN), если он задан.
  * 6. Последний рубеж: console.error('LEAD_UNDELIVERED', ...), ответ 500.
  *
  * Секреты (токены, URL хранилища) никогда не пишутся в журнал и в ответы.
@@ -94,10 +96,15 @@ export async function storeCommand(
 
 export type StoredLead = { code: string; at: string; plain: string };
 
+/**
+ * Ключ записи с отметкой времени: код задаёт клиент, и две заявки с одним
+ * кодом за 30 дней не должны затирать друг друга. В очередь кладётся ключ.
+ */
 async function storeLead(code: string, plain: string): Promise<void> {
   const record: StoredLead = { code, at: new Date().toISOString(), plain };
-  await storeCommand(['SET', `lead:${code}`, JSON.stringify(record), 'EX', STORE_TTL_SECONDS]);
-  await storeCommand(['LPUSH', 'leads:pending', code]);
+  const key = `lead:${code}:${Date.now()}`;
+  await storeCommand(['SET', key, JSON.stringify(record), 'EX', STORE_TTL_SECONDS]);
+  await storeCommand(['LPUSH', 'leads:pending', key]);
 }
 
 export async function deliverApplication(input: DeliverApplicationInput): Promise<DeliveryResult> {
@@ -176,19 +183,24 @@ export async function deliverApplication(input: DeliverApplicationInput): Promis
   }
 
   // Ступень 5: тревога, если чат заявок не принял заявку. Без персональных данных.
+  // Если основной бот мёртв (например, отозван токен), тревога уходит резервным
+  // ботом: сначала тем, которым прошла доставка, затем другим.
   if (delivery !== 'main' && delivery !== 'main_plain') {
     const planChat = process.env.TELEGRAM_PLAN_CHAT_ID;
     if (planChat) {
       const where = delivery ? CHANNEL_LABELS[delivery] : 'НИКУДА';
       const testMark = test ? ` (тест превью: ${test})` : '';
-      try {
-        await sendTelegramMessage(
-          `⚠️ ${input.alarmLabel ?? 'Заявка'} ${code} не дошла в чат заявок, доставлена: ${where}${testMark}. Время ${kyivClock()} по Киеву.`,
-          planChat,
-          { parseMode: null, timeoutMs: 3000 },
-        );
-      } catch (error) {
-        console.error('lead stage 5 (alarm) failed:', code, (error as Error).message);
+      const alarm = `⚠️ ${input.alarmLabel ?? 'Заявка'} ${code} не дошла в чат заявок, доставлена: ${where}${testMark}. Время ${kyivClock()} по Киеву.`;
+      const backupToken = process.env.TELEGRAM_BACKUP_BOT_TOKEN || undefined;
+      const tokens: (string | undefined)[] =
+        backupToken && delivery === 'backup' ? [backupToken, undefined] : backupToken ? [undefined, backupToken] : [undefined];
+      for (const token of tokens) {
+        try {
+          await sendTelegramMessage(alarm, planChat, { parseMode: null, timeoutMs: 3000, token });
+          break;
+        } catch (error) {
+          console.error('lead stage 5 (alarm) failed:', code, token ? 'backup bot' : 'main bot', (error as Error).message);
+        }
       }
     }
   }

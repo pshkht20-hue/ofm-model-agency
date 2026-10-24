@@ -5,7 +5,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     title: '1. General provisions',
     paragraphs: [
       'This Privacy Policy describes how OFM\'s Model Agency ("we", "the agency") processes personal data when you use ofmmodels.com and submit an application.',
-      'Data controller: OFM\'s Model Agency. Privacy questions and requests about personal data are accepted on Telegram: @ofmm_agency (marked "Data request").',
+      'Data controller: OFM\'s Model Agency. Send privacy questions and personal data requests on Telegram to @ofmm_agency, starting your message with "Data request".',
       'By using the website after reading this policy, you acknowledge these processing terms. Submitting an application constitutes consent to process the data you provide for the purpose of contacting you.',
     ],
   },
@@ -16,7 +16,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
       'Technical data when submitting an application: approximate location (country and city) based on IP address — for internal processing by our team only; full IP addresses are not included in notifications.',
       'Visit details when you apply: the page where you entered the site, the referring website (domain only, for example google.com), link tags (UTM) and the pages of our site opened in this tab, time spent on them, scroll depth and the page sections viewed, actions on the site (button and link clicks, calculator use, video views, opening FAQ questions, starting the application form), device and browser type, browser language and time zone. Without consent to analytics cookies, these details are kept only in the memory of the open tab and reach us only together with a submitted application; with consent, your first visit and the number of visits within the last 30 days are also stored.',
       'Website visit data: interface language, browser and device type, pages viewed — only if you consent to analytics cookies (Google Analytics 4).',
-      'Behaviour data on pages (only with consent to analytics cookies, Microsoft Clarity service): clicks, scrolling, pointer movements, heatmaps and session recordings, that is, a replay of actions on a page. Clarity does not record what is typed into input fields, and we additionally hide the application form, the quick application and the screen shown after sending from recordings.',
+      'Behavior data on pages (only with consent to analytics cookies, Microsoft Clarity service): clicks, scrolling, pointer movements, heatmaps and session recordings, that is, a replay of actions on a page. Clarity does not record what is typed into input fields, and we additionally hide the application form, the quick application and the screen shown after sending from recordings.',
       'Necessary cookies: storing your language preference and your cookie consent choice.',
     ],
   },
@@ -56,7 +56,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     paragraphs: [
       'Application data is retained in manager correspondence and Telegram notifications as long as needed to review your application and potential collaboration, but not beyond a reasonable period without your consent.',
       'GA4 analytics data is retained according to Google Analytics settings (by default up to 14 months for standard reports).',
-      'Microsoft Clarity session recordings are kept for up to 30 days; individual recordings (marked manually or picked by the service in a random sample) for up to 9 months.',
+      'Microsoft Clarity session recordings are kept for up to 30 days; some recordings (marked manually or picked by the service in a random sample) are kept for up to 9 months.',
       'If an application notification cannot be delivered, its data may be kept briefly in the hosting provider\'s technical logs (Vercel) so that the application is not lost.',
       'We apply organizational and technical measures: HTTPS, restricted access to notifications, server-side storage of secret keys.',
     ],
@@ -64,7 +64,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     title: '7. Your rights',
     paragraphs: [
-      'You can request access to your data, its correction or deletion, restriction of processing, or object to processing: send the request on Telegram to @ofmm_agency marked "Data request".',
+      'You can request access to your data, its correction or deletion, restriction of processing, or object to processing: send the request on Telegram to @ofmm_agency, starting your message with "Data request".',
       'You may withdraw consent to analytics cookies at any time via "Cookie settings" in the footer.',
       'EU/EEA residents may lodge a complaint with their local data protection authority if they believe processing violates the GDPR.',
       'We will respond within a reasonable time, typically within 30 days.',

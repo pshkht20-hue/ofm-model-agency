@@ -5,26 +5,28 @@ import { storeCommand, storeConfig, type StoredLead } from '@/lib/lead-delivery'
 /**
  * Монитор цепочки «сайт, бот, чат» («Окно 1», W1-21).
  *
- * GET, закрыт заголовком Authorization: Bearer <HEALTH_CHECK_SECRET> (отдельный
- * ключ от CRON_SECRET: ключ монитора не открывает отправку план-напоминаний).
- * Без переменной 503, без ключа 401. Ответ только флагами, без данных заявок.
+ * GET, закрыт заголовком Authorization: Bearer <HEALTH_CHECK_SECRET> или
+ * Bearer <CRON_SECRET> (его передаёт Vercel Cron). Ключ монитора отдельный от
+ * CRON_SECRET и не открывает отправку план-напоминаний. Без обеих переменных
+ * 503, без ключа 401. Ответ только флагами, без данных заявок.
  *
  * Проверяет: getMe (токен жив), getChat чата заявок (бот всё ещё в нём),
  * резервного чата (если задан), хранилище PING и LLEN leads:pending (если
  * заведено). Если бот и чат заявок в порядке, а в очереди есть отложенные
- * заявки, досылает их в чат заявок и удаляет из очереди.
+ * заявки, досылает их в чат заявок и только после удачной отправки убирает из
+ * очереди (обрыв функции посередине даст повтор, а не потерю).
  *
- * TODO (Р-W1-5, по тарифу Vercel): раннер ещё не настроен. Pro: Vercel Cron
- * каждые 5 минут (vercel.json, Vercel передаёт только CRON_SECRET, поэтому
- * для крона понадобится принять и его). Hobby: Google Apps Script с триггером
- * «каждые 5 минут» и ключом в Script Properties. Запасной: GitHub Actions раз
- * в 30 минут.
+ * Раннер: страховка Vercel Cron раз в сутки (vercel.json, 07:00 UTC, на Hobby
+ * чаще нельзя), так отложенная заявка ждёт не больше суток. TODO (Р-W1-5, по
+ * тарифу Vercel): основной раннер раз в 5 минут. Pro: Vercel Cron в vercel.json.
+ * Hobby: Google Apps Script с триггером «каждые 5 минут» и HEALTH_CHECK_SECRET
+ * в Script Properties. Запасной: GitHub Actions раз в 30 минут.
  */
 export const dynamic = 'force-dynamic';
-export const maxDuration = 30;
+export const maxDuration = 60;
 
 /** Сколько отложенных заявок досылаем за один вызов. */
-const RESTORE_LIMIT = 10;
+const RESTORE_LIMIT = 5;
 
 function kyivClock(iso: string): string {
   const date = new Date(iso);
@@ -38,18 +40,31 @@ function kyivClock(iso: string): string {
   });
 }
 
+/** Убрать ключ из очереди и саму запись (после отправки или если запись пропала). */
+async function dropPending(key: string): Promise<void> {
+  await storeCommand(['LREM', 'leads:pending', 1, key]).catch(() => undefined);
+  await storeCommand(['DEL', key]).catch(() => undefined);
+}
+
 async function restorePending(): Promise<number> {
   let restored = 0;
   for (let i = 0; i < RESTORE_LIMIT; i++) {
-    // LPUSH при сохранении + RPOP здесь = первыми уходят самые старые.
-    const code = await storeCommand(['RPOP', 'leads:pending']);
-    if (typeof code !== 'string' || !code) break;
-    const raw = await storeCommand(['GET', `lead:${code}`]);
-    if (typeof raw !== 'string') continue; // срок хранения истёк
-    let lead: StoredLead;
-    try {
-      lead = JSON.parse(raw) as StoredLead;
-    } catch {
+    // LPUSH при сохранении + чтение с правого конца = первыми уходят самые старые.
+    // Ключ не снимаем до удачной отправки: при обрыве функции заявка останется в очереди.
+    const key = await storeCommand(['LINDEX', 'leads:pending', -1]);
+    if (typeof key !== 'string' || !key) break;
+    const raw = await storeCommand(['GET', key]);
+    let lead: StoredLead | null = null;
+    if (typeof raw === 'string') {
+      try {
+        lead = JSON.parse(raw) as StoredLead;
+      } catch {
+        lead = null;
+      }
+    }
+    if (!lead) {
+      // Срок хранения истёк или запись битая: убираем ключ, иначе очередь встанет.
+      await dropPending(key);
       continue;
     }
     try {
@@ -59,22 +74,24 @@ async function restorePending(): Promise<number> {
         { parseMode: null, timeoutMs: 4000 },
       );
     } catch {
-      // Чат снова не принял: возвращаем в очередь с того же (старого) конца.
-      await storeCommand(['RPUSH', 'leads:pending', code]).catch(() => undefined);
+      // Чат снова не принял: заявка остаётся в очереди до следующего вызова.
       break;
     }
-    await storeCommand(['DEL', `lead:${code}`]).catch(() => undefined);
+    await dropPending(key);
     restored++;
   }
   return restored;
 }
 
 export async function GET(request: Request) {
-  const secret = process.env.HEALTH_CHECK_SECRET;
-  if (!secret) {
+  const secrets = [process.env.HEALTH_CHECK_SECRET, process.env.CRON_SECRET].filter(
+    (value): value is string => Boolean(value),
+  );
+  if (secrets.length === 0) {
     return NextResponse.json({ ok: false, error: 'not_configured' }, { status: 503 });
   }
-  if (request.headers.get('authorization') !== `Bearer ${secret}`) {
+  const auth = request.headers.get('authorization');
+  if (!secrets.some((secret) => auth === `Bearer ${secret}`)) {
     return NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 });
   }
 

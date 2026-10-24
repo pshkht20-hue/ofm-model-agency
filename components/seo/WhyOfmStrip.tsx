@@ -21,25 +21,25 @@ const STATS: Record<Locale, Stat[]> = {
   ru: [
     { value: '3+', label: 'года на рынке' },
     { value: '220+', label: 'запущенных страниц' },
-    { value: RESPONSE_RANGE, label: 'отвечаем в Telegram, по Киеву' },
+    { value: RESPONSE_RANGE, label: 'часы ответа в Telegram (по Киеву)' },
     { value: '100%', label: 'приватность под контролем' },
   ],
   uk: [
     { value: '3+', label: 'роки на ринку' },
     { value: '220+', label: 'запущених сторінок' },
-    { value: RESPONSE_RANGE, label: 'відповідаємо в Telegram, за Києвом' },
+    { value: RESPONSE_RANGE, label: 'години відповіді в Telegram (за Києвом)' },
     { value: '100%', label: 'приватність під контролем' },
   ],
   en: [
     { value: '3+', label: 'years in the market' },
     { value: '220+', label: 'pages launched' },
-    { value: RESPONSE_RANGE, label: 'Telegram replies, Kyiv time' },
+    { value: RESPONSE_RANGE, label: 'Telegram reply hours, Kyiv time' },
     { value: '100%', label: 'privacy in your control' },
   ],
   es: [
     { value: '3+', label: 'años en el mercado' },
     { value: '220+', label: 'páginas lanzadas' },
-    { value: RESPONSE_RANGE, label: 'respuestas por Telegram, hora de Kiev' },
+    { value: RESPONSE_RANGE, label: 'horario de respuesta por Telegram (hora de Kiev)' },
     { value: '100%', label: 'privacidad bajo control' },
   ],
 };

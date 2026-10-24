@@ -197,7 +197,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿En qué se diferencia OFM\'s Model Agency de otros equipos?',
         answer:
-          'Manager personal, marketing y chats 24/7, estrategia de contenido, informes transparentes y foco en confidencialidad. Somos independientes de OnlyFans, no exigimos pago de «entrada» y respondemos a las solicitudes en horario laboral, de 9:00 a 23:00 (hora de Kiev). La modelo recibe el 20–30 % del balance total de la página, y la promoción, el tráfico y los chatters los financia la agencia — el plan de trabajo se habla en el casting.',
+          'Manager personal, marketing y chats 24/7, estrategia de contenido, informes transparentes y foco en confidencialidad. Somos independientes de OnlyFans, no exigimos pago de «entrada» y respondemos a las solicitudes en horario laboral, de 9:00 a 23:00 (hora de Kiev). La modelo recibe el 20-30 % del balance total de la página, y la promoción, el tráfico y los chatters los financia la agencia. El plan de trabajo se habla en el casting.',
       },
     ],
   },

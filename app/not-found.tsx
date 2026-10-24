@@ -50,7 +50,7 @@ const COPY: Record<
   en: {
     title: 'Page not found (404) | OFM Models',
     h1: 'Page not found',
-    text: "This page doesn't exist or the link is out of date. Start from the homepage, check our vacancies or message the manager on Telegram.",
+    text: "This page doesn't exist or the link is out of date. Go to the homepage, browse our vacancies or message our manager on Telegram.",
     home: 'Back to homepage',
     homeHref: '/en',
     vacancies: 'Vacancies',

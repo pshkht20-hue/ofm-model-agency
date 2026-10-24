@@ -79,7 +79,7 @@ const T: Record<
     submit: 'Отправить заявку',
     sending: 'Отправляем…',
     close: 'Закрыть',
-    errorTelegram: 'Укажи Telegram или телефон (от 3 символов).',
+    errorTelegram: 'Укажи ник в Telegram или номер телефона.',
     errorAge: 'Подтверди, что тебе есть 18 лет.',
   },
   uk: {
@@ -98,13 +98,13 @@ const T: Record<
     submit: 'Надіслати заявку',
     sending: 'Надсилаємо…',
     close: 'Закрити',
-    errorTelegram: 'Вкажи Telegram або телефон (від 3 символів).',
+    errorTelegram: 'Вкажи нік у Telegram або номер телефону.',
     errorAge: 'Підтверди, що тобі є 18 років.',
   },
   en: {
     trigger: 'Quick apply · 30 seconds',
     heading: 'Quick apply',
-    sub: `Leave your Telegram and a manager will reply during working hours, ${RANGE} Kyiv time.`,
+    sub: `Leave your Telegram username and a manager will reply during working hours, ${RANGE} Kyiv time.`,
     role: 'Role you want',
     roles: ['OnlyFans model', 'Chatter / chat operator'],
     income: 'Income you aim for',
@@ -117,7 +117,7 @@ const T: Record<
     submit: 'Send application',
     sending: 'Sending…',
     close: 'Close',
-    errorTelegram: 'Enter your Telegram or phone (3+ characters).',
+    errorTelegram: 'Enter your Telegram username or phone number.',
     errorAge: 'Please confirm you are 18 or older.',
   },
   es: {
@@ -136,7 +136,7 @@ const T: Record<
     submit: 'Enviar solicitud',
     sending: 'Enviando…',
     close: 'Cerrar',
-    errorTelegram: 'Indica tu Telegram o teléfono (3+ caracteres).',
+    errorTelegram: 'Indica tu usuario de Telegram o tu número de teléfono.',
     errorAge: 'Confirma que tienes 18 años o más.',
   },
 };
@@ -506,6 +506,7 @@ export function QuickApply({
                         >
                           {QUICK_CONSENT[locale].link}
                         </Link>
+                        .
                       </p>
                     </div>
                   </>

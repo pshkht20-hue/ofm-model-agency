@@ -412,7 +412,7 @@
       "eyebrow": "Next step",
       "title": "Ready to start",
       "titleAccent": "earning for real?",
-      "lead": "Leave your application and a manager will message you on Telegram during working hours, 9:00-23:00 Kyiv time.",
+      "lead": "Send your application and a manager will message you on Telegram during working hours, 9:00-23:00 Kyiv time.",
       "privacy": "Confidential",
       "response": "Replies 9:00-23:00 Kyiv time",
       "support": "24/7 support",
@@ -488,7 +488,7 @@
     "inline": {
       "eyebrow": "No experience or investment needed",
       "title": "Start earning with the OFM team",
-      "body": "Leave a request: a manager will reply on Telegram during working hours (9:00-23:00 Kyiv time), explain everything and help you start. The agency funds your promotion and launch, and you're free to leave at any moment.",
+      "body": "Apply now: a manager will reply on Telegram during working hours (9:00-23:00 Kyiv time), explain everything and help you start. The agency funds your promotion and launch, and you're free to leave at any moment.",
       "button": "Apply now",
       "trust": "220+ pages launched · Replies 9:00-23:00 Kyiv time"
     },
@@ -698,7 +698,7 @@
   },
   "cookieConsent": {
     "title": "Cookies",
-    "description": "some are needed for the site to work, others for analytics and session recordings (Google Analytics, Microsoft Clarity), and those we switch on only with your consent. Details in our",
+    "description": "some are needed for the site to work, others are for analytics and session recordings (Google Analytics, Microsoft Clarity), and we only turn those on with your consent. Details in our",
     "privacyLink": "privacy policy",
     "accept": "Accept",
     "reject": "Essential only",
@@ -706,7 +706,7 @@
     "necessaryTitle": "Essential",
     "necessaryDesc": "language and your cookie preference",
     "analyticsTitle": "Analytics",
-    "analyticsDesc": "Google Analytics and Microsoft Clarity: statistics, heatmaps and recordings of actions on pages, form fields hidden. Only with consent",
+    "analyticsDesc": "Google Analytics and Microsoft Clarity: statistics, heatmaps and session recordings (form fields are hidden). Only with your consent",
     "legalNote": "Change your choice anytime via \"Cookie settings\" in the footer."
   },
   "languageSwitcher": {

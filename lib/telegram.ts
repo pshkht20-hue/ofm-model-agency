@@ -319,8 +319,12 @@ function formatAttribution(
   return lines;
 }
 
-/** Местное время девушки по поясу браузера; неизвестный пояс = строки нет. */
-function visitorLocalTime(timeZone: string | undefined, now: Date): string | null {
+/** Местное время кандидата по поясу браузера; неизвестный пояс = строки нет. */
+function visitorLocalTime(
+  timeZone: string | undefined,
+  now: Date,
+  role: ApplicationPayload['role'],
+): string | null {
   if (!timeZone) return null;
   try {
     const time = new Intl.DateTimeFormat('ru-RU', {
@@ -329,7 +333,9 @@ function visitorLocalTime(timeZone: string | undefined, now: Date): string | nul
       minute: '2-digit',
       hour12: false,
     }).format(now);
-    return `🕰 <b>У неё сейчас:</b> ${escapeTelegramHtml(time)} (${escapeTelegramHtml(timeZone)})`;
+    // Заявки чатеров не всегда от девушек: для них подпись нейтральная.
+    const label = role === 'chatter' ? 'Местное время кандидата:' : 'У неё сейчас:';
+    return `🕰 <b>${label}</b> ${escapeTelegramHtml(time)} (${escapeTelegramHtml(timeZone)})`;
   } catch {
     return null;
   }
@@ -359,13 +365,13 @@ export function formatApplicationMessage(data: ApplicationPayload, options: Form
     localeLabel ? `🗣 <b>Язык формы:</b> ${localeLabel}` : null,
     data.location ? `📍 <b>Откуда:</b> ${escapeTelegramHtml(data.location)}` : null,
     `🕐 <b>Время:</b> ${submittedAt}${night}`,
-    visitorLocalTime(data.timeZone, now),
+    visitorLocalTime(data.timeZone, now, data.role),
     '',
     quick ? null : `👤 <b>Имя:</b> ${escapeTelegramHtml(data.name)}`,
     data.age ? `🎂 <b>Возраст:</b> ${escapeTelegramHtml(data.age)}` : null,
     `📱 <b>Контакт:</b> ${formatTelegramContact(data.telegram)}`,
     data.contactLooksValid === false
-      ? `⚠️ Контакт не похож на ник или телефон: жди её сообщения, код ${escapeTelegramHtml(data.code ?? '')}`
+      ? `⚠️ Контакт не похож на ник или телефон: ${data.role === 'chatter' ? 'жди сообщения от кандидата' : 'жди её сообщения'}, код ${escapeTelegramHtml(data.code ?? '')}`
       : null,
     data.ageConfirmed ? '✅ <b>18+:</b> подтверждено' : null,
     data.message

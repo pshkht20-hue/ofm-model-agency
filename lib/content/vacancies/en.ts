@@ -466,7 +466,7 @@ const FOR_GIRLS_EN: VacancyContent = {
   ],
   cta: {
     heading: 'Start with one Telegram message',
-    text: 'Message us a few words about yourself: your age, city and which track interests you, model or support operator. We reply during working hours, 9:00-23:00 Kyiv time.',
+    text: 'Message us a few words about yourself: your age, city and which track interests you (model or support operator). We reply during working hours, 9:00-23:00 Kyiv time.',
     primaryLabel: 'Message us on Telegram',
     bridgeNote:
       'Already decided you want your own page? [Fill in the model application](/join) — the team takes on registration, promotion and finances.',

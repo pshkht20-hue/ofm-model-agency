@@ -56,8 +56,8 @@ type Labels = Record<DraftLocale, string>;
 
 /** Подписи кодов; для 'blog-<слаг>' общая подпись «статья в блоге». */
 const CODE_LABELS: Record<string, Labels> = {
-  home: { ru: 'главная', uk: 'головна', en: 'home page', es: 'página principal' },
-  join: { ru: 'анкета', uk: 'анкета', en: 'application page', es: 'página de solicitud' },
+  home: { ru: 'главная', uk: 'головна', en: 'home', es: 'inicio' },
+  join: { ru: 'анкета', uk: 'анкета', en: 'application form', es: 'formulario de solicitud' },
   hub: { ru: 'все вакансии', uk: 'усі вакансії', en: 'all vacancies', es: 'todas las vacantes' },
   'hub-model': { ru: 'вакансии моделей', uk: 'вакансії моделей', en: 'model vacancies', es: 'vacantes de modelo' },
   'vac-ua': { ru: 'вакансия Украина', uk: 'вакансія Україна', en: 'Ukraine vacancy', es: 'vacante Ucrania' },
@@ -109,7 +109,7 @@ const CODE_LABELS: Record<string, Labels> = {
   about: { ru: 'о нас', uk: 'про нас', en: 'about us', es: 'sobre nosotros' },
   blog: { ru: 'блог', uk: 'блог', en: 'blog', es: 'blog' },
   'blog-article': { ru: 'статья в блоге', uk: 'стаття в блозі', en: 'blog article', es: 'artículo del blog' },
-  author: { ru: 'страница автора', uk: 'сторінка автора', en: 'author page', es: 'página de la autora' },
+  author: { ru: 'автор блога', uk: 'авторка блогу', en: 'blog author', es: 'autora del blog' },
   research: { ru: 'исследования', uk: 'дослідження', en: 'research', es: 'investigación' },
   'res-safety': { ru: 'исследование безопасности', uk: 'дослідження безпеки', en: 'safety research', es: 'estudio de seguridad' },
   privacy: {
@@ -119,8 +119,8 @@ const CODE_LABELS: Record<string, Labels> = {
     es: 'política de privacidad',
   },
   terms: { ru: 'условия', uk: 'умови', en: 'terms', es: 'términos' },
-  '404': { ru: 'страница 404', uk: 'сторінка 404', en: '404 page', es: 'página 404' },
-  site: { ru: 'сайт', uk: 'сайт', en: 'website', es: 'web' },
+  '404': { ru: 'ошибка 404', uk: 'помилка 404', en: '404 error', es: 'error 404' },
+  site: { ru: 'другая страница', uk: 'інша сторінка', en: 'other page', es: 'otra página' },
 };
 
 /**
@@ -153,7 +153,7 @@ export function pageDraftText(locale: string, code: string): string {
     return {
       ru: 'Привет! Я с сайта OFM Models, по вакансии чатера [chat]. Подскажите, с чего начать?',
       uk: 'Привіт! Я з сайту OFM Models, щодо вакансії чатера [chat]. Підкажіть, з чого почати?',
-      en: "Hi! I'm from the OFM Models website, about the chatter vacancy [chat]. Where do I start?",
+      en: "Hi! I'm writing from the OFM Models website about the chatter vacancy [chat]. Where do I start?",
       es: '¡Hola! Vengo de la web de OFM Models, por la vacante de chatter [chat]. ¿Por dónde empiezo?',
     }[l];
   }
@@ -161,7 +161,7 @@ export function pageDraftText(locale: string, code: string): string {
   return {
     ru: `Привет! Я с сайта OFM Models, страница: ${label} [${code}]. Подскажите, с чего начать?`,
     uk: `Привіт! Я з сайту OFM Models, сторінка: ${label} [${code}]. Підкажіть, з чого почати?`,
-    en: `Hi! I'm from the OFM Models website, page: ${label} [${code}]. Where do I start?`,
+    en: `Hi! I'm writing from the OFM Models website, page: ${label} [${code}]. Where do I start?`,
     es: `¡Hola! Vengo de la web de OFM Models, página: ${label} [${code}]. ¿Por dónde empiezo?`,
   }[l];
 }
@@ -180,25 +180,25 @@ export function applicationDraftText(
   if (kind === 'success') {
     if (role === 'chatter') {
       return {
-        ru: `Здравствуйте! Заявка с сайта OFM Models на вакансию чатера, код ${code}.`,
-        uk: `Добрий день! Заявка з сайту OFM Models на вакансію чатера, код ${code}.`,
-        en: `Hi! Chatter application from the OFM Models website, code ${code}.`,
-        es: `¡Hola! Solicitud de chatter desde la web de OFM Models, código ${code}.`,
+        ru: `Здравствуйте! У меня заявка с сайта OFM Models на вакансию чатера, код ${code}.`,
+        uk: `Добрий день! У мене заявка з сайту OFM Models на вакансію чатера, код ${code}.`,
+        en: `Hi! I've just applied for the chatter vacancy on the OFM Models website. My code is ${code}.`,
+        es: `¡Hola! Acabo de enviar mi solicitud de chatter en la web de OFM Models. Mi código es ${code}.`,
       }[l];
     }
     return {
       ru: `Здравствуйте! Я оставила заявку на сайте OFM Models, мой код ${code}.`,
       uk: `Добрий день! Я залишила заявку на сайті OFM Models, мій код ${code}.`,
-      en: `Hi! I've just applied on the OFM Models website, my code is ${code}.`,
-      es: `¡Hola! Acabo de enviar mi solicitud en la web de OFM Models, mi código es ${code}.`,
+      en: `Hi! I've just applied on the OFM Models website. My code is ${code}.`,
+      es: `¡Hola! Acabo de enviar mi solicitud en la web de OFM Models. Mi código es ${code}.`,
     }[l];
   }
   if (role === 'chatter') {
     return {
-      ru: `Здравствуйте! Заявка с сайта OFM Models (вакансия чатера) не отправилась, код ${code}.`,
-      uk: `Добрий день! Заявка з сайту OFM Models (вакансія чатера) не надіслалася, код ${code}.`,
-      en: `Hi! A chatter application from the OFM Models website didn't go through, code ${code}.`,
-      es: `¡Hola! Una solicitud de chatter desde la web de OFM Models no se envió, código ${code}.`,
+      ru: `Здравствуйте! Не получается отправить заявку на вакансию чатера на сайте OFM Models, мой код ${code}.`,
+      uk: `Добрий день! Не вдається надіслати заявку на вакансію чатера на сайті OFM Models, мій код ${code}.`,
+      en: `Hi! I tried to apply for the chatter vacancy on the OFM Models website, but the form didn't go through. My code is ${code}.`,
+      es: `¡Hola! Intenté enviar mi solicitud de chatter en la web de OFM Models, pero el formulario falló. Mi código es ${code}.`,
     }[l];
   }
   return {

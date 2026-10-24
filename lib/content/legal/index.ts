@@ -74,8 +74,11 @@ export function getPrivacySections(locale: Locale): LegalSection[] {
   const sections = pickPrivacy(locale);
   if (!leadStoreEnabled()) return sections;
   // Раздел 6 «Хранение и защита»: абзац о хранилище после абзацев о сроках.
-  return sections.map((section, i) =>
-    i === 5 ? { ...section, paragraphs: [...section.paragraphs, STORE_PARAGRAPH[locale] ?? STORE_RU] } : section,
+  // Ищем по номеру в заголовке, а не по индексу: перестановка разделов его не сломает.
+  return sections.map((section) =>
+    section.title.startsWith('6.')
+      ? { ...section, paragraphs: [...section.paragraphs, STORE_PARAGRAPH[locale] ?? STORE_RU] }
+      : section,
   );
 }
 

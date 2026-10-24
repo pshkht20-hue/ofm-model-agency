@@ -52,7 +52,7 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     quickSuccessTitle: 'Заявка у менеджера',
     codeLabel: 'Код заявки:',
     dayLine: `Ответим тебе в Telegram в рабочие часы, ${RANGE} по Киеву.`,
-    nightLine: `Сейчас нерабочее время (по Киеву ночь). Ответим утром, до ${MORNING} по Киеву. Можешь написать сама уже сейчас: сообщение дойдёт и будет ждать менеджера.`,
+    nightLine: `Сейчас нерабочее время (по Киеву ночь). Ответим утром, до ${MORNING} по Киеву. Можешь написать уже сейчас: сообщение дойдёт и будет ждать менеджера.`,
     mainButton: 'Написать менеджеру сейчас',
     underButtonModel: 'Так ответим быстрее: ты пишешь первой, и сообщение точно дойдёт.',
     underButtonChatter: 'Так ответим быстрее: первое сообщение от тебя точно дойдёт.',
@@ -81,21 +81,21 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     quickSuccessTitle: 'Заявка вже в менеджера',
     codeLabel: 'Код заявки:',
     dayLine: `Відповімо тобі в Telegram у робочі години, ${RANGE} за Києвом.`,
-    nightLine: `Зараз неробочий час (за Києвом ніч). Відповімо зранку, до ${MORNING} за Києвом. Можеш написати сама вже зараз: повідомлення дійде й чекатиме на менеджера.`,
+    nightLine: `Зараз неробочий час (за Києвом ніч). Відповімо зранку, до ${MORNING} за Києвом. Можеш написати вже зараз: повідомлення дійде й чекатиме на менеджера.`,
     mainButton: 'Написати менеджеру зараз',
     underButtonModel: 'Так відповімо швидше: ти пишеш першою, і повідомлення точно дійде.',
     underButtonChatter: 'Так відповімо швидше: перше повідомлення від тебе точно дійде.',
     stepsTitle: 'Що далі',
     step1: 'Менеджер відкриє твою заявку й відповість у Telegram з офіційного акаунта @ofmm_agency.',
-    step2: 'Знайомство в листуванні: відповімо на твої запитання й розповімо, як проходить старт.',
+    step2: 'Знайомство в листуванні: відповімо на твої запитання й розповімо, як відбувається старт.',
     step3Model:
-      'Якщо все підходить, команда запускає сторінку: реєстрацію та верифікацію веде агенція, запуск зазвичай займає 7-14 днів.',
+      'Якщо все підходить, команда запускає сторінку: реєстрацію та верифікацію веде агенція, запуск зазвичай триває 7-14 днів.',
     step3Chatter: 'Якщо все підходить, далі тестове завдання, співбесіда й навчання.',
     officialStrict: 'Офіційний акаунт менеджера: @ofmm_agency. З інших ніків ми не пишемо.',
     officialSoft: 'Офіційний акаунт менеджера: @ofmm_agency. Звір нік, якщо тобі написали.',
     channel: 'Поки чекаєш: наш канал у Telegram @ofmmAgency',
     nickWarning:
-      "Схоже, в ніку помилка, і ми можемо не знайти тебе самі. Напиши менеджеру кнопкою вище, так ми точно зв'яжемося.",
+      "Схоже, у ніку помилка, і ми можемо не знайти тебе самі. Напиши менеджеру кнопкою вище, так ми точно зв'яжемося.",
     errorTitle: 'Заявка не дійшла',
     errorServer:
       'Збій на нашому боці. Напиши менеджеру в Telegram: код заявки {code} уже в повідомленні, так ми нічого не втратимо. Або спробуй надіслати ще раз.',
@@ -112,19 +112,19 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     dayLine: `We'll reply to you on Telegram during working hours, ${RANGE} Kyiv time.`,
     nightLine: `It's outside working hours now (night in Kyiv). We'll reply in the morning, by ${MORNING} Kyiv time. You can message us right now: your message will be waiting for the manager.`,
     mainButton: 'Message the manager now',
-    underButtonModel: 'This way we reply faster: you write first, so your message is sure to reach us.',
-    underButtonChatter: 'This way we reply faster: you write first, so your message is sure to reach us.',
+    underButtonModel: "It's the fastest way to hear back: when you message first, your message is sure to reach us.",
+    underButtonChatter: "It's the fastest way to hear back: when you message first, your message is sure to reach us.",
     stepsTitle: 'What happens next',
     step1: 'The manager opens your application and replies on Telegram from the official account @ofmm_agency.',
-    step2: 'A short chat to get to know you: we answer your questions and explain how the start works.',
+    step2: 'A short chat to get to know you: we answer your questions and explain how getting started works.',
     step3Model:
-      "If it's a fit, the team launches your page: the agency handles registration and verification, and launch usually takes 7-14 days.",
+      "If it's a fit, the team launches your page: the agency handles registration and verification, and the launch usually takes 7-14 days.",
     step3Chatter: "If it's a fit, next come a test task, an interview and training.",
     officialStrict: "Our manager's official account: @ofmm_agency. We don't message from any other username.",
     officialSoft: "Our manager's official account: @ofmm_agency. If someone messages you, check the username.",
     channel: 'While you wait: our Telegram channel @ofmmAgency',
     nickWarning:
-      'Your username may have a typo, so we might not find you ourselves. Tap the button above to message the manager, so we can surely connect.',
+      "Your username may have a typo, so we might not be able to find you. Tap the button above to message the manager, and we'll be sure to connect.",
     errorTitle: "Your application didn't go through",
     errorServer:
       'Something went wrong on our side. Message the manager on Telegram: your code {code} is already in the message, so nothing gets lost. Or try sending again.',
@@ -143,20 +143,20 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     mainButton: 'Escribir al manager ahora',
     underButtonModel: 'Así respondemos más rápido: tú escribes primero y el mensaje llega seguro.',
     underButtonChatter: 'Así respondemos más rápido: tú escribes primero y el mensaje llega seguro.',
-    stepsTitle: 'Qué pasa ahora',
+    stepsTitle: 'Próximos pasos',
     step1: 'El manager abre tu solicitud y te responde por Telegram desde la cuenta oficial @ofmm_agency.',
-    step2: 'Nos conocemos por chat: respondemos tus preguntas y te contamos cómo es el inicio.',
+    step2: 'Nos conocemos por chat: respondemos a tus preguntas y te contamos cómo es el inicio.',
     step3Model:
       'Si encaja, el equipo lanza tu página: la agencia se encarga del registro y la verificación, y el lanzamiento suele tardar de 7 a 14 días.',
     step3Chatter: 'Si encaja, siguen una prueba, una entrevista y la formación.',
-    officialStrict: 'Cuenta oficial del manager: @ofmm_agency. No escribimos desde otros usuarios.',
+    officialStrict: 'Cuenta oficial del manager: @ofmm_agency. No escribimos desde ninguna otra cuenta.',
     officialSoft: 'Cuenta oficial del manager: @ofmm_agency. Si alguien te escribe, comprueba el usuario.',
     channel: 'Mientras esperas: nuestro canal de Telegram @ofmmAgency',
     nickWarning:
       'Puede que tu usuario tenga un error y no te encontremos. Escribe al manager con el botón de arriba para que podamos contactarte.',
     errorTitle: 'Tu solicitud no se envió',
     errorServer:
-      'Fallo de nuestro lado. Escribe al manager por Telegram: tu código {code} ya está en el mensaje, así no se pierde nada. O intenta enviarla otra vez.',
+      'Hubo un fallo por nuestra parte. Escribe al manager por Telegram: tu código {code} ya está en el mensaje, así no se pierde nada. O intenta enviarla otra vez.',
     errorNetwork:
       'Sin conexión a internet. Revisa la red y vuelve a enviarla, o escribe al manager por Telegram: tu código {code} ya está en el mensaje.',
     errorButton: 'Escribir al manager por Telegram',
@@ -167,10 +167,10 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
 
 /** Согласие у быстрой заявки (W1-17 п.4); у полной анкеты оно в messages (contactForm.consent). */
 export const QUICK_CONSENT: Record<Locale, { text: string; link: string }> = {
-  ru: { text: 'Нажимая кнопку, ты соглашаешься на обработку данных для связи с тобой.', link: 'Политика конфиденциальности' },
-  uk: { text: 'Натискаючи кнопку, ти погоджуєшся на обробку даних для зв\'язку з тобою.', link: 'Політика конфіденційності' },
-  en: { text: 'By sending, you agree we may use your data to contact you.', link: 'Privacy policy' },
-  es: { text: 'Al enviar, aceptas que usemos tus datos para contactarte.', link: 'Política de privacidad' },
+  ru: { text: 'Нажимая кнопку, ты соглашаешься на обработку данных для связи с тобой. Подробнее в', link: 'политике конфиденциальности' },
+  uk: { text: 'Натискаючи кнопку, ти погоджуєшся на обробку даних для зв\'язку з тобою. Докладніше в', link: 'політиці конфіденційності' },
+  en: { text: 'By sending, you agree we may use your data to contact you. Details in our', link: 'privacy policy' },
+  es: { text: 'Al enviar, aceptas que usemos tus datos para contactarte. Más detalles en la', link: 'política de privacidad' },
 };
 
 export function applyScreens(locale: string): ApplyScreenTexts {

@@ -173,19 +173,22 @@ export function ApplyErrorScreen({
         draft={applicationDraftText(locale, role, code, 'error')}
         className="w-full sm:w-auto"
       />
-      <button
-        type="button"
-        onClick={onRetry}
-        disabled={retrying}
-        className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-pink transition hover:text-accent-cyan disabled:opacity-60"
-      >
-        {retrying ? (
-          <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
-        ) : (
-          <RotateCcw className="h-4 w-4" aria-hidden />
-        )}
-        {s.retry}
-      </button>
+      {/* Лимит 429: повтор в течение 10 минут снова упрётся в лимит, поэтому только Telegram. */}
+      {kind !== 'rate' && (
+        <button
+          type="button"
+          onClick={onRetry}
+          disabled={retrying}
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-pink transition hover:text-accent-cyan disabled:opacity-60"
+        >
+          {retrying ? (
+            <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+          ) : (
+            <RotateCcw className="h-4 w-4" aria-hidden />
+          )}
+          {s.retry}
+        </button>
+      )}
     </div>
   );
 }
