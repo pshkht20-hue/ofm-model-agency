@@ -87,7 +87,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Cuánto ganan de media las modelos con una agencia?',
         answer:
-          'El rango es muy amplio: desde los primeros cientos de dólares para principiantes hasta cifras de cinco dígitos en cuentas top. En OFM, los balances de las páginas top de la agencia son de 15 000 a 50 000 USD brutos al mes, pero no es garantía ni salario mínimo. El resultado depende del nicho, la disciplina, el contenido y el volumen de tráfico.',
+          'El rango es muy amplio: desde los primeros cientos de dólares para principiantes hasta cifras de cinco dígitos en cuentas top. En OFM, los balances de las páginas top de la agencia son de 15 000 a 50 000 USD brutos al mes, pero no son una garantía ni un salario mínimo. El resultado depende del nicho, la disciplina, el contenido y el volumen de tráfico.',
       },
       {
         question: '¿Puedo dejar la agencia y con qué rapidez?',

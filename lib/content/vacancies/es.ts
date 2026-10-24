@@ -66,7 +66,7 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
         'Ahora mismo hay dos roles clave abiertos en la agencia — y son opuestos por el tipo de trabajo: la modelo se ocupa del contenido, el chatter de la mensajería y las ventas:',
       ],
       bullets: [
-        'Chatter (operador de chat) — mensajería con los suscriptores en nombre de la página y venta de PPV con guiones listos; el pago es una tarifa base + un bono por las ventas del chat; formación desde cero, también para hombres',
+        'Chatter (operador de chat): mensajería con los suscriptores en nombre de la página y venta de PPV con guiones listos; el pago es una tarifa base + un bono por las ventas del chat; formación desde cero, también para hombres',
         'Modelo de OnlyFans — contenido 2–3 horas al día según un plan listo; ingresos $3 000–10 000/mes, y del registro, la promoción, el chat y el crecimiento de la página se encarga por completo el equipo. Elige tu país en la [página «Trabajo de modelo»](/vacancies/model)',
       ],
     },
@@ -87,7 +87,7 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
     {
       heading: '¿Se puede ganar de verdad en OnlyFans?',
       paragraphs: [
-        'Sí, pero con cifras honestas, sin cuentos. Chatter: tarifa base + un bono por las ventas de tu propio chat (el rango lo decimos en la entrevista tras la prueba, para no pintar un publicitario «hasta $X»). Modelo: ingresos de $3 000 a $10 000/mes, las páginas fuertes llegan a la parte alta del rango, y tu rango personal y el plan te los mostramos por Telegram.',
+        'Sí, pero con cifras honestas, sin cuentos. Chatter: tarifa base + un bono por las ventas de tu propio chat (el rango lo decimos en la entrevista tras la prueba, para no pintar un «hasta $X» de anuncio). Modelo: ingresos de $3 000 a $10 000/mes, y las páginas fuertes llegan a la parte alta del rango. Tu rango personal y el plan te los mostramos por Telegram.',
         'Referencias por páginas: los saldos de las páginas de las top-modelos de la agencia llegan a $15 000–50 000 al mes — detrás de esas cifras está el trabajo sistemático de todo el equipo: promoción, chat y gestión. El desglose completo de las cifras está en el artículo [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       ],
     },
@@ -153,7 +153,7 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
     {
       question: '¿Cuánto paga una agencia de OnlyFans?',
       answer:
-        'Chatter — tarifa base + bono por las ventas de tu propio chat (rango en la entrevista tras la prueba). Modelo — de $3 000 a $10 000/mes; las páginas top de la agencia alcanzan saldos de $15 000–50 000/mes. Tu rango personal y el plan te los mostramos por Telegram.',
+        'Chatter: tarifa base + bono por las ventas de tu propio chat (rango en la entrevista tras la prueba). Modelo: de $3 000 a $10 000/mes, y las páginas top de la agencia alcanzan saldos de $15 000-50 000/mes. Tu rango personal y el plan te los mostramos por Telegram.',
     },
     {
       question: '¿Cuándo llega el primer pago?',
@@ -216,7 +216,7 @@ const CHATTER_ES: VacancyContent = {
   formatLabel: 'Remoto · turnos · desde 25 h/sem',
   locationLabel: 'Remoto · Europa, EE. UU., Canadá y todo el mundo',
   intro: [
-    'La agencia OFM Models incorpora chatters (operadores de chat) de OnlyFans para trabajo remoto. La esencia del trabajo: llevas la mensajería con los suscriptores de las páginas de nuestras modelos con guiones listos y vendes contenido de pago (PPV), mientras nosotros te formamos desde cero y pagamos una tarifa base + un bono por las ventas de tu chat. Totalmente online, empiezas sin experiencia, apto para mujeres y hombres — hace falta inglés escrito desde nivel B1 y disposición a dedicar desde 25 horas por semana.',
+    'La agencia OFM Models incorpora chatters (operadores de chat) de OnlyFans para trabajo remoto. La esencia del trabajo: llevas la mensajería con los suscriptores de las páginas de nuestras modelos con guiones listos y vendes contenido de pago (PPV), mientras nosotros te formamos desde cero y pagamos una tarifa base + un bono por las ventas de tu chat. Totalmente online, empiezas sin experiencia, apto para mujeres y hombres. Hace falta inglés escrito desde nivel B1 y disponibilidad de al menos 25 horas por semana.',
     'No es un tablón de anuncios ni un «trabajo en algún sitio de internet»: contratamos para el propio equipo de chat de la agencia, que gestiona páginas de modelos en OnlyFans — del plan de contenido a la promoción y las finanzas. El chat es el corazón de ese sistema: es en la mensajería donde la página gana la mayor parte del dinero, y necesitamos gente que sepa — o quiera aprender a — vender con palabras.',
   ],
   sections: [
@@ -272,7 +272,7 @@ const CHATTER_ES: VacancyContent = {
     {
       heading: 'Pago: tarifa base + bono por las ventas del chat',
       paragraphs: [
-        'El esquema es transparente: una tarifa fija por turnos + un bono por las ventas que hizo tu chat. Las cifras concretas te las diremos en la entrevista tras la prueba: será tu rango real, no un publicitario «hasta $X».',
+        'El esquema es transparente: una tarifa fija por turnos + un bono por las ventas que hizo tu chat. Las cifras concretas te las diremos en la entrevista tras la prueba: será tu rango real, no un «hasta $X» de anuncio.',
         'Por qué importa el bono por ventas: las páginas de las top-modelos bajo nuestra gestión llegan a $15 000-50 000 al mes, y la mayor parte de esas ventas nacen en la mensajería. Cuanto mejor venda tu chat, mayor es tu bono. Cuánto ganan las propias páginas y de qué se compone su ingreso lo verás en el análisis [cuánto ganan las modelos de OnlyFans](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       ],
     },

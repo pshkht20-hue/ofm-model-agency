@@ -68,7 +68,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
         'Two key roles are open at the agency right now — and they’re opposite in the type of work: the model handles content, the chatter handles messaging and sales:',
       ],
       bullets: [
-        'Chatter (chat operator) — messaging subscribers on behalf of the page and selling PPV from ready scripts; pay is a base rate + a bonus on chat sales; training from scratch, men welcome too',
+        'Chatter (chat operator): messaging subscribers on behalf of the page and selling PPV from ready scripts; pay is a base rate + a bonus on chat sales; training from scratch, men welcome too',
         'OnlyFans model — content for 2–3 hours a day on a ready plan; income $3 000–10 000/mo, with registration, promo, chat and page promotion fully handled by the team. Choose your country on the [“Model work” page](/vacancies/model)',
       ],
     },
@@ -89,7 +89,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
     {
       heading: 'Can you really earn on OnlyFans?',
       paragraphs: [
-        'Yes, but the numbers are honest, no fairy tales. Chatter: a base rate + a bonus on your own chat’s sales (we name the range at the interview after the test task, so we don’t paint an advertising "up to $X"). Model: income of $3 000-10 000/mo, strong pages reach the top of the range, and we’ll show your personal range and plan on Telegram.',
+        'Yes, but the numbers are honest, no fairy tales. Chatter: a base rate + a bonus on your own chat’s sales (we name the range at the interview after the test task, so we don’t paint an advertising "up to $X"). Model: income of $3 000-10 000/mo, and strong pages reach the top of the range. We’ll show your personal range and plan on Telegram.',
         'Page benchmarks: the balances of the agency’s top-model pages reach $15 000–50 000 a month — the result of the whole team’s systematic work on promo, chat and management. A full breakdown of the numbers is in the article [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       ],
     },
@@ -155,7 +155,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
     {
       question: 'How much does an OnlyFans agency pay?',
       answer:
-        'Chatter — base rate + a bonus on your own chat’s sales (range named at the interview after the test task). Model — $3 000–10 000/mo; the agency’s top pages reach balances of $15 000–50 000/mo. We’ll share your personal range and plan on Telegram.',
+        'Chatter: base rate + a bonus on your own chat’s sales (range named at the interview after the test task). Model: $3 000-10 000/mo, and the agency’s top pages reach balances of $15 000-50 000/mo. We’ll share your personal range and plan on Telegram.',
     },
     {
       question: 'When does the first payout arrive?',
@@ -218,7 +218,7 @@ const CHATTER_EN: VacancyContent = {
   formatLabel: 'Remote · shifts · from 25 h/week',
   locationLabel: 'Remote · Europe, US, Canada & worldwide',
   intro: [
-    'OFM Models agency is hiring OnlyFans chatters (chat operators) for remote work. The gist: you handle messaging with subscribers of our models’ pages from ready scripts and sell paid content (PPV), while we train you from scratch and pay a base rate + a bonus on your chat’s sales. Fully online, start with no experience, suitable for women and men alike — you need written English from B1 and readiness to commit from 25 hours a week.',
+    'OFM Models agency is hiring OnlyFans chatters (chat operators) for remote work. The gist: you handle messaging with subscribers of our models’ pages from ready scripts and sell paid content (PPV), while we train you from scratch and pay a base rate + a bonus on your chat’s sales. Fully online, start with no experience, suitable for women and men alike. You need written English at B1 or higher and at least 25 hours a week.',
     'This isn’t a job board or "work somewhere online": we’re hiring into the agency’s own chat team, and the agency runs model pages on OnlyFans — from content plan to promotion and finances. Chat is the heart of that system: it’s in the messaging that a page earns most of its money, and we need people who can — or want to learn to — sell with words.',
   ],
   sections: [

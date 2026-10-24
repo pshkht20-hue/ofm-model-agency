@@ -101,7 +101,7 @@ export const ABOUT_ES: AboutContent = {
       {
         title: 'Formatos y límites, fijados desde el inicio',
         description:
-          'Los acordamos con tu manager antes del lanzamiento y quedan escritos en el plan de contenido. Nada sale publicado por defecto.',
+          'Tu manager los acuerda contigo antes del lanzamiento y quedan escritos en el plan de contenido. Nada sale publicado por defecto.',
       },
       {
         title: 'Datos del formulario',

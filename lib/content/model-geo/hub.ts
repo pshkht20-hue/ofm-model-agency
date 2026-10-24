@@ -146,7 +146,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     earningsHeading: 'How much a model earns',
     earningsBody: [
-      'The benchmark for a model is $3 000-10 000/mo, strong pages reach the top of the range, and top-page balances run at $15 000-50 000/mo.',
+      'The benchmark for a model is $3 000-10 000/mo: strong pages reach the top of the range, and top-page balances run at $15 000-50 000/mo.',
       'We’ll show you your personal range and first-month plan on Telegram — message us, it doesn’t commit you to anything.',
     ],
     listHeading: 'Choose your country',
@@ -206,7 +206,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     earningsHeading: 'Cuánto gana una modelo',
     earningsBody: [
-      'La referencia para una modelo es $3 000-10 000/mes, las páginas fuertes llegan a la parte alta del rango, y los saldos de las páginas top alcanzan $15 000-50 000/mes.',
+      'La referencia para una modelo es $3 000-10 000/mes: las páginas fuertes llegan a la parte alta del rango, y los saldos de las páginas top alcanzan $15 000-50 000/mes.',
       'Tu rango personal y el plan del primer mes te los mostramos por Telegram — escríbenos, sin ningún compromiso.',
     ],
     listHeading: 'Elige tu país',

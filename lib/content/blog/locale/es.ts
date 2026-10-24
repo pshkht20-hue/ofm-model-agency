@@ -2625,7 +2625,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "Regiones: qué comparten todas las países" },
       {
         type: "p",
-        text: "Cada país es distinto, pero las expectativas son las mismas: anonimato, pagos claros, marketing sin ban en Instagram/TikTok, chats en un tono cálido y personal y comisión transparente. Da igual si estás en Buenos Aires, Medellín, Lima o Santiago—full-service se construye sobre cinco pilares.",
+        text: "Cada país es distinto, pero las expectativas son las mismas: anonimato, pagos claros, marketing sin ban en Instagram/TikTok, chats en un tono cálido y personal, y una comisión transparente. Da igual si estás en Buenos Aires, Medellín, Lima o Santiago—full-service se construye sobre cinco pilares.",
       },
       {
         type: "ul",
@@ -2933,7 +2933,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "¿Es legal ser modelo de OnlyFans?" },
       {
         type: "p",
-        text: "La cuestión práctica es declarar los ingresos en el país de residencia fiscal, normalmente como trabajadora independiente o autónoma; las normas cambian según el país, así que conviene consultar cada caso con un asesor local. La plataforma trabaja solo con personas adultas: en el registro cada modelo verifica su identidad con un documento, y en ese paso la agencia acompaña a la modelo de principio a fin.",
+        text: "La cuestión práctica es declarar los ingresos donde eres residente fiscal, normalmente como trabajadora independiente o autónoma; las normas cambian según el país, así que consulta tu caso con un asesor local. La plataforma trabaja solo con personas adultas: en el registro cada modelo verifica su identidad con un documento, y en ese paso la agencia acompaña a la modelo de principio a fin.",
       },
       {
         type: "nav",

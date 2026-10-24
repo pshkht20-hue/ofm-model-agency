@@ -17,7 +17,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
   "rabota-modelyu-onlyfans": {
     title: "Become an OnlyFans Model: Agency Job (Remote)",
     description:
-      "Become an OnlyFans model with OFM agency: remote, no experience, privacy via geo-blocking. Page turnover $3,000–$30,000/mo, we fund promotion. How to apply.",
+      "Become an OnlyFans model with OFM agency: remote, no experience needed, privacy via geo-blocking. Page turnover $3,000–$30,000/mo, we fund promotion. How to apply.",
     keywords: [
       "become an onlyfans model",
       "how to become an onlyfans model",
@@ -4390,7 +4390,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     // не покупать. Статьи №2–3 кластера (Fantia/Myfans, Anonymity) — W4.
     title: "OnlyFans Agency for Japanese Creators — Safe Remote Start",
     description:
-      "OFM is an OnlyFans agency for Japanese creators: Japan geo-blocked by default, content that follows Japan's rules, DMCA protection, Paxum payouts. Simple English is enough, the team runs chats. 日本人クリエイター向け。18+.",
+      "OFM is an OnlyFans agency for Japanese creators: Japan geo-blocked by default, content that follows Japan's rules, DMCA protection, Paxum payouts. Simple English is enough: the team runs chats. 日本人クリエイター向け。18+.",
     keywords: [
       "onlyfans agency for japanese creators",
       "onlyfans agency japan",
@@ -4436,7 +4436,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "Article 175 and Japan's rules: how we keep it legal (法律について)" },
       {
         type: "p",
-        text: "Japanese law (Article 175 of the Penal Code) sets strict rules for content, and they apply to creators working from Japan even on foreign platforms. Our rule is simple and has no exceptions: for creators based in Japan, every piece of content is checked against Japan's rules before it is published anywhere, on the page, in promo, everywhere. We will never ask you to publish anything that breaks those rules, and we decline such requests even if a fan offers extra money.",
+        text: "Japanese law (Article 175 of the Penal Code) sets strict rules for content, and they apply to creators working from Japan even on foreign platforms. Our rule is simple and has no exceptions: for creators based in Japan, every piece of content is checked against Japan's rules before it is published anywhere: on the page, in promo, everywhere. We will never ask you to publish anything that breaks those rules, and we decline such requests even if a fan offers extra money.",
       },
       {
         type: "p",
@@ -4501,7 +4501,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h3", text: "Is this legal for a creator living in Japan? 合法ですか？" },
       {
         type: "p",
-        text: "Yes, under two conditions we treat as standard: content follows Japan's rules before publishing, and income is declared for taxes. We never publish anything that breaks those rules for creators based in Japan, no exceptions, and the team prepares the income data you need for tax filing.",
+        text: "Yes, under two conditions we treat as standard: content follows Japan's rules before publishing, and income is declared for taxes. For creators based in Japan, we never publish anything that breaks those rules, with no exceptions, and the team prepares the income data you need for tax filing.",
       },
       { type: "h3", text: "Will people in Japan find my page? 日本の知り合いにバレませんか？" },
       {
@@ -5932,7 +5932,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         "type": "p",
-        "text": "Honestly, about the numbers: $3,000–15,000 is the page's gross balance — turnover, not a payout in hand. The model receives 20–30% of gross — the share depends on the plan, the niche, and the team setup — and the agency reinvests the rest into the traffic, promotion and chat team that grow that balance. The $45,000-a-month case is the market's peak, a public example of another model: we cite it as proof of the niche's ceiling, not as a promise."
+        "text": "Honestly, about the numbers: $3,000–15,000 is the page's gross balance — turnover, not a payout in hand. The model receives 20–30% of gross — the share depends on the plan, the niche, and the team setup — and the agency reinvests the rest into the traffic, promotion and chat team that grow that balance. The $45,000-a-month case is the market's peak and a public example from another creator: we cite it as proof of the niche's ceiling, not as a promise."
       },
       {
         "type": "cases",

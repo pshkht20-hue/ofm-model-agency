@@ -87,7 +87,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How much do models typically earn with an agency?',
         answer:
-          'The range is wide: from a few hundred dollars for beginners to five-figure months for top accounts. At OFM, the balances of the agency’s top pages run at $15,000 to $50,000 per month (gross), but that is not a guarantee or a minimum. Results depend on niche, discipline, content, and traffic volume. For a detailed breakdown by level and niche, see [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
+          'The range is wide: from a few hundred dollars for beginners to five-figure months for top accounts. At OFM, top pages reach balances of $15,000 to $50,000 per month (gross), but that is not a guarantee or a minimum. Results depend on niche, discipline, content, and traffic volume. For a detailed breakdown by level and niche, see [how much OnlyFans models earn](/blog/onlyfans-skolko-zarabatyvayut-modeli).',
       },
       {
         question: 'Can I stop working with the agency, and how fast?',

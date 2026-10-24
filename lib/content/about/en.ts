@@ -101,7 +101,7 @@ export const ABOUT_EN: AboutContent = {
       {
         title: 'Formats and boundaries are set at the start',
         description:
-          'We agree them with your manager before launch and write them into the content plan. Nothing goes out by default.',
+          'Your manager agrees on them with you before launch and writes them into the content plan. Nothing goes out by default.',
       },
       {
         title: 'Application data',

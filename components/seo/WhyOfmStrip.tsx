@@ -39,7 +39,7 @@ const STATS: Record<Locale, Stat[]> = {
     { value: '3+', label: 'años en el mercado' },
     { value: '220+', label: 'páginas lanzadas' },
     { value: '24 h', label: 'para procesar la solicitud' },
-    { value: 'Tu manager', label: 'en contacto cada día' },
+    { value: 'Tu manager', label: 'en contacto todos los días' },
   ],
 };
 
