@@ -63,7 +63,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     cta: {
       heading: 'Заполнить анкету модели',
-      text: 'Анкета занимает 2–3 минуты: имя, возраст, страна и пара слов о себе. Менеджер напишет тебе в Telegram в течение 24 часов — бесплатно и ни к чему не обязывает.',
+      text: 'Анкета занимает 2-3 минуты: имя, Telegram, возраст и пара слов о себе. Менеджер напишет тебе в Telegram в рабочие часы, 9:00-23:00 по Киеву. Это бесплатно и ни к чему не обязывает.',
       primaryLabel: 'Заполнить анкету',
     },
   },
@@ -123,7 +123,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     cta: {
       heading: 'Заповнити анкету моделі',
-      text: 'Анкета займає 2–3 хвилини: ім’я, вік, країна та кілька слів про себе. Менеджер напише тобі в Telegram протягом 24 годин — безплатно й ні до чого не зобов’язує.',
+      text: 'Анкета займає 2-3 хвилини: ім’я, Telegram, вік і кілька слів про себе. Менеджер напише тобі в Telegram у робочі години, 9:00-23:00 за Києвом. Це безплатно й ні до чого не зобов’язує.',
       primaryLabel: 'Заповнити анкету',
     },
   },
@@ -183,7 +183,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     cta: {
       heading: 'Fill in the model application',
-      text: 'The application takes 2–3 minutes: name, age, country and a few words about yourself. A manager will message you on Telegram within 24 hours — free and with no obligation.',
+      text: "The application takes 2-3 minutes: name, Telegram, age and a few words about yourself. A manager will message you on Telegram during working hours, 9:00-23:00 Kyiv time. It's free and comes with no obligation.",
       primaryLabel: 'Fill in the application',
     },
   },
@@ -243,7 +243,7 @@ export const MODEL_GEO_HUB: Record<Locale, ModelGeoHubContent> = {
     ],
     cta: {
       heading: 'Rellenar la solicitud de modelo',
-      text: 'La solicitud lleva 2–3 minutos: nombre, edad, país y unas palabras sobre ti. Un manager te escribirá por Telegram en 24 horas — gratis y sin compromiso.',
+      text: 'La solicitud lleva 2-3 minutos: nombre, Telegram, edad y unas palabras sobre ti. Un manager te escribirá por Telegram en horario laboral, de 9:00 a 23:00 (hora de Kiev). Es gratis y sin compromiso.',
       primaryLabel: 'Rellenar la solicitud',
     },
   },

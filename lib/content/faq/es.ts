@@ -22,7 +22,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Cómo es el proceso habitual de trabajar con una agencia?',
         answer:
-          'Suele ser: solicitud → breve entrevista → acuerdo de condiciones → auditoría o lanzamiento del perfil → plan de contenido y marketing → chats diarios y analítica semanal → escalado. En OFM\'s Model Agency, tras la solicitud un manager contacta por Telegram en 24 horas y explica las etapas sin presión.',
+          'Suele ser: solicitud → breve entrevista → acuerdo de condiciones → auditoría o lanzamiento del perfil → plan de contenido y marketing → chats diarios y analítica semanal → escalado. En OFM\'s Model Agency, tras la solicitud un manager contacta por Telegram en horario laboral (de 9:00 a 23:00, hora de Kiev) y explica las etapas sin presión.',
       },
       {
         question: '¿OFM está vinculada a la plataforma OnlyFans?',
@@ -157,7 +157,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Cómo solicitar colaboración con OFM\'s Model Agency?',
         answer:
-          'En la página principal, rellena el formulario: nombre, Telegram (obligatorio), Instagram opcional y una breve presentación. Un manager escribirá por Telegram en 24 horas, hará una primera revisión y propondrá el siguiente paso. La solicitud no te compromete a nada.',
+          'En la página principal, rellena el formulario: nombre, Telegram (obligatorio) y, si quieres, tu edad y unas palabras sobre ti. Un manager escribirá por Telegram en horario laboral (de 9:00 a 23:00, hora de Kiev), hará una primera revisión y propondrá el siguiente paso. La solicitud no te compromete a nada.',
       },
       {
         question: '¿Cuánto tarda el lanzamiento hasta los primeros pagos?',
@@ -197,7 +197,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿En qué se diferencia OFM\'s Model Agency de otros equipos?',
         answer:
-          'Manager personal, marketing y chats 24/7, estrategia de contenido, informes transparentes y foco en confidencialidad. Somos independientes de OnlyFans, no exigimos pago de «entrada» y respondemos a solicitudes en 24 horas. La modelo recibe el 20–30 % del balance total de la página, y la promoción, el tráfico y los chatters los financia la agencia — el plan de trabajo se habla en el casting.',
+          'Manager personal, marketing y chats 24/7, estrategia de contenido, informes transparentes y foco en confidencialidad. Somos independientes de OnlyFans, no exigimos pago de «entrada» y respondemos a las solicitudes en horario laboral, de 9:00 a 23:00 (hora de Kiev). La modelo recibe el 20–30 % del balance total de la página, y la promoción, el tráfico y los chatters los financia la agencia — el plan de trabajo se habla en el casting.',
       },
     ],
   },

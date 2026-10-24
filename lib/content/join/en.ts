@@ -17,7 +17,7 @@ export const JOIN_EN: JoinContent = {
   breadcrumb: 'Casting',
   eyebrow: 'Model recruitment — 2026',
   h1: 'Become an OF Model — Join OFM Agency',
-  lead: "OFM's Model Agency is a full-service management team: 220+ models launched and managed since 2022. We handle marketing, fan chats 24/7 and strategy — you focus on content. The application takes 2 minutes, and a manager replies on Telegram within 24 hours.",
+  lead: "OFM's Model Agency is a full-service management team: 220+ models launched and managed since 2022. We handle marketing, fan chats 24/7 and strategy — you focus on content. The application takes 2 minutes, and a manager replies on Telegram during working hours, 9:00-23:00 Kyiv time.",
   applyCta: 'Apply now — takes 2 minutes',
   antiFud:
     'No paperwork and no obligations: the form commits you to nothing, and you can stop working with us at any time.',
@@ -74,7 +74,7 @@ export const JOIN_EN: JoinContent = {
       {
         title: 'A call with a manager on Telegram',
         description:
-          'Within 24 hours a manager messages you: answers your questions and walks you through terms and formats. No pressure.',
+          'During working hours (9:00-23:00 Kyiv time) a manager messages you: answers your questions and walks you through terms and formats. No pressure.',
       },
       {
         title: 'Onboarding and page launch',
@@ -142,7 +142,7 @@ export const JOIN_EN: JoinContent = {
   form: {
     heading: 'Apply to the agency',
     description:
-      'Fill out the form — a manager will message you on Telegram within 24 hours. Free, and it commits you to nothing.',
+      'Fill out the form: a manager will message you on Telegram during working hours, 9:00-23:00 Kyiv time. Free, and it commits you to nothing.',
     telegramLabel: 'Or message us on Telegram right away',
   },
   jobPosting: {

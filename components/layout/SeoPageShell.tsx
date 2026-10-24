@@ -15,6 +15,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { trackCtaClick } from '@/lib/analytics/gtag';
+import { RESPONSE_TEXT } from '@/lib/content/response-hours';
 import {
   descReveal,
   staggerContainer,
@@ -26,11 +27,12 @@ import {
 type Crumb = { label: string; href?: string };
 
 /** Локальные строки конверсионного слоя — messages/* не трогаем, слой аддитивный. */
+// «Окно 1» (W1-09): часы ответа из одной константы; «страниц» вместо «моделей» по совету №35.
 const TRUST_LINE: Record<Locale, string> = {
-  ru: '220+ моделей · Отвечаем за 24 часа',
-  uk: '220+ моделей · Відповідаємо протягом 24 годин',
-  en: '220+ models · We reply within 24 hours',
-  es: '220+ modelos · Respondemos en 24 horas',
+  ru: `220+ запущенных страниц · ${RESPONSE_TEXT.ru.chip}`,
+  uk: `220+ запущених сторінок · ${RESPONSE_TEXT.uk.chip}`,
+  en: `220+ pages launched · ${RESPONSE_TEXT.en.chip}`,
+  es: `220+ páginas lanzadas · ${RESPONSE_TEXT.es.chip}`,
 };
 
 const TELEGRAM_LABEL: Record<Locale, string> = {

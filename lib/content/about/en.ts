@@ -21,7 +21,7 @@ export const ABOUT_EN: AboutContent = {
   facts: [
     { value: '2022', label: 'working since' },
     { value: '220+', label: 'pages launched and managed' },
-    { value: '15 minutes', label: 'typical first reply from a manager' },
+    { value: '9:00-23:00', label: 'manager working hours, Kyiv time' },
     { value: '2–3 hours', label: 'a model\'s daily workload' },
   ],
   who: {
@@ -138,7 +138,7 @@ export const ABOUT_EN: AboutContent = {
   contacts: {
     heading: 'How to reach us',
     description:
-      'Telegram is fastest: a manager usually replies within 15 minutes, occasionally within a day. If you prefer email, write to the agency address. Or simply leave an application and we will get in touch ourselves.',
+      'Telegram is fastest: a manager replies during working hours, 9:00-23:00 Kyiv time, and night messages are handled in the morning. If you prefer email, write to the agency address. Or simply leave an application and we will get in touch ourselves.',
     telegramLabel: 'Message us on Telegram',
     emailLabel: 'Agency email',
     formLabel: 'Leave an application',

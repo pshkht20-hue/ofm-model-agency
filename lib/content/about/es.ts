@@ -21,7 +21,7 @@ export const ABOUT_ES: AboutContent = {
   facts: [
     { value: '2022', label: 'año en que empezamos' },
     { value: '220+', label: 'páginas lanzadas y gestionadas' },
-    { value: '15 minutos', label: 'primera respuesta habitual del manager' },
+    { value: '9:00-23:00', label: 'horario del manager, hora de Kiev' },
     { value: '2–3 horas', label: 'dedicación diaria de la modelo' },
   ],
   who: {
@@ -138,7 +138,7 @@ export const ABOUT_ES: AboutContent = {
   contacts: {
     heading: 'Cómo contactarnos',
     description:
-      'Lo más rápido es Telegram: el manager suele responder en 15 minutos, como mucho en un día. Si prefieres el correo, escribe a la dirección de la agencia. O simplemente deja tu solicitud y te escribimos nosotros.',
+      'Lo más rápido es Telegram: el manager responde en horario laboral, de 9:00 a 23:00 (hora de Kiev), y los mensajes de la noche se atienden por la mañana. Si prefieres el correo, escribe a la dirección de la agencia. O simplemente deja tu solicitud y te escribimos nosotros.',
     telegramLabel: 'Escríbenos por Telegram',
     emailLabel: 'Correo de la agencia',
     formLabel: 'Dejar solicitud',
