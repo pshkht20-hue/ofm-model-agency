@@ -11,8 +11,8 @@ import { RESPONSE_TEXT } from '@/lib/content/response-hours';
  */
 
 /**
- * Р-W1-1 (строгая строка «С других ников мы не пишем»): пока владелец не
- * подтвердил, показываем мягкую «сверьте ник». Подтвердил = поставить true.
+ * Р-W1-1 (строгий хвост «С других ников мы не пишем»): пока владелец не
+ * подтвердил, после строки №28 показываем мягкий «сверьте ник». Подтвердил = поставить true.
  */
 export const OFFICIAL_ACCOUNT_STRICT = false;
 
@@ -41,8 +41,11 @@ type ApplyScreenTexts = {
   step2: string;
   step3Model: string;
   step3Chatter: string;
-  officialStrict: string;
-  officialSoft: string;
+  /** №28 (утверждено 24.10): кому мы пишем первыми и официальный ник. Экран успеха и экран ошибки. */
+  firstContact: string;
+  /** Хвост строки №28 на экране успеха: строгий (Р-W1-1) или мягкий. */
+  officialStrictTail: string;
+  officialSoftTail: string;
   channel: string;
   nickWarning: string;
   errorTitle: string;
@@ -70,8 +73,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     step3Model:
       'Если всё подходит, команда запускает страницу: регистрацию и верификацию ведёт агентство, запуск обычно занимает 7-14 дней.',
     step3Chatter: 'Если всё подходит, дальше тестовое задание, собеседование и обучение.',
-    officialStrict: 'Официальный аккаунт менеджера: @ofmm_agency. С других ников мы не пишем.',
-    officialSoft: 'Официальный аккаунт менеджера: @ofmm_agency. Сверьте ник, если вам написали.',
+    firstContact: 'Первыми мы пишем только тем, кто оставил заявку. Официальный аккаунт: @ofmm_agency.',
+    officialStrictTail: 'С других ников мы не пишем.',
+    officialSoftTail: 'Сверьте ник, если вам написали.',
     channel: 'Пока ждёте: наш канал в Telegram @ofmmAgency',
     nickWarning:
       'Похоже, в нике ошибка, и мы можем не найти вас сами. Напишите менеджеру по кнопке выше, так мы точно свяжемся.',
@@ -100,8 +104,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     step3Model:
       'Якщо все підходить, команда запускає сторінку: реєстрацію та верифікацію веде агенція, запуск зазвичай триває 7-14 днів.',
     step3Chatter: 'Якщо все підходить, далі тестове завдання, співбесіда й навчання.',
-    officialStrict: 'Офіційний акаунт менеджера: @ofmm_agency. З інших ніків ми не пишемо.',
-    officialSoft: 'Офіційний акаунт менеджера: @ofmm_agency. Звірте нік, якщо вам написали.',
+    firstContact: 'Першими ми пишемо лише тим, хто залишив заявку. Офіційний акаунт: @ofmm_agency.',
+    officialStrictTail: 'З інших ніків ми не пишемо.',
+    officialSoftTail: 'Звірте нік, якщо вам написали.',
     channel: 'Поки чекаєте: наш канал у Telegram @ofmmAgency',
     nickWarning:
       "Схоже, у ніку помилка, і ми можемо не знайти вас самі. Напишіть менеджеру кнопкою вище, так ми точно зв'яжемося.",
@@ -130,8 +135,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     step3Model:
       "If it's a fit, the team launches your page: the agency handles registration and verification, and the launch usually takes 7-14 days.",
     step3Chatter: "If it's a fit, next come a test task, an interview and training.",
-    officialStrict: "Our manager's official account: @ofmm_agency. We don't message from any other username.",
-    officialSoft: "Our manager's official account: @ofmm_agency. If someone messages you, check the username.",
+    firstContact: 'We only reach out first to people who have sent us an application. Official account: @ofmm_agency.',
+    officialStrictTail: "We don't message from any other username.",
+    officialSoftTail: 'If someone messages you, check the username.',
     channel: 'While you wait: our Telegram channel @ofmmAgency',
     nickWarning:
       "Your username may have a typo, so we might not be able to find you. Tap the button above to message the manager, and we'll be sure to connect.",
@@ -160,8 +166,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
     step3Model:
       'Si encaja, el equipo lanza tu página: la agencia se encarga del registro y la verificación, y el lanzamiento suele tardar de 7 a 14 días.',
     step3Chatter: 'Si encaja, siguen una prueba, una entrevista y la formación.',
-    officialStrict: 'Cuenta oficial del manager: @ofmm_agency. No escribimos desde ninguna otra cuenta.',
-    officialSoft: 'Cuenta oficial del manager: @ofmm_agency. Si alguien te escribe, comprueba el usuario.',
+    firstContact: 'Solo escribimos primero a quienes nos han enviado una solicitud. Cuenta oficial: @ofmm_agency.',
+    officialStrictTail: 'No escribimos desde ninguna otra cuenta.',
+    officialSoftTail: 'Si alguien te escribe, comprueba el usuario.',
     channel: 'Mientras esperas: nuestro canal de Telegram @ofmmAgency',
     nickWarning:
       'Puede que tu usuario tenga un error y no te encontremos. Escribe al manager con el botón de arriba para que podamos contactarte.',

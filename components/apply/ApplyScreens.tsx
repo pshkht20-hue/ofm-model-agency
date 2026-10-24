@@ -103,7 +103,8 @@ export function ApplySuccessScreen({
         </ol>
         <p className="mt-4 flex items-start gap-1.5 text-xs leading-relaxed text-white/55">
           <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent-cyan/80" aria-hidden />
-          {OFFICIAL_ACCOUNT_STRICT ? s.officialStrict : s.officialSoft}
+          {/* №28: кому пишем первыми и официальный ник, затем хвост Р-W1-1. */}
+          {s.firstContact} {OFFICIAL_ACCOUNT_STRICT ? s.officialStrictTail : s.officialSoftTail}
         </p>
         {channelHref && (
           <p className="mt-2 text-xs text-white/50">
@@ -189,6 +190,11 @@ export function ApplyErrorScreen({
           {s.retry}
         </button>
       )}
+      {/* №28 и на экране ошибки: девушка пишет сама, а мы пишем первыми только по заявке. */}
+      <p className="flex max-w-md items-start justify-center gap-1.5 text-xs leading-relaxed text-white/55">
+        <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent-cyan/80" aria-hidden />
+        {s.firstContact}
+      </p>
     </div>
   );
 }
