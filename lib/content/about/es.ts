@@ -79,7 +79,7 @@ export const ABOUT_ES: AboutContent = {
       items: [
         'Grabar según el plan de contenido, normalmente 2–3 horas al día',
         'Mantener el contacto con el manager: opinión sobre el plan, ideas propias y peticiones',
-        'Decidir qué se publica y qué no; los límites se acuerdan antes del lanzamiento',
+        'Acordar formatos y límites con tu manager: se fijan desde el inicio',
       ],
     },
     share:
@@ -99,9 +99,9 @@ export const ABOUT_ES: AboutContent = {
           'La página puede bloquearse en tu país y en los vecinos para que conocidos y paisanos no la encuentren. No te cuesta ingresos: el público que paga lo traemos de Estados Unidos, Canadá, Reino Unido y Australia.',
       },
       {
-        title: 'Tú decides qué se publica',
+        title: 'Formatos y límites, fijados desde el inicio',
         description:
-          'Los formatos y los límites se acuerdan antes del lanzamiento y quedan escritos en el plan de contenido. Nada sale publicado por defecto.',
+          'Los acordamos con tu manager antes del lanzamiento y quedan escritos en el plan de contenido. Nada sale publicado por defecto.',
       },
       {
         title: 'Datos del formulario',

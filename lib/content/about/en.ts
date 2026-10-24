@@ -79,7 +79,7 @@ export const ABOUT_EN: AboutContent = {
       items: [
         'Shooting to the content plan — usually 2–3 hours a day',
         'Staying in touch with the manager: feedback on the plan, own ideas and requests',
-        'Deciding what goes public and what does not — boundaries are agreed before launch',
+        'Agreeing formats and boundaries with the manager: they are set at the start',
       ],
     },
     share:
@@ -99,9 +99,9 @@ export const ABOUT_EN: AboutContent = {
           'The page can be blocked in your country and neighbouring ones so that friends and neighbours never find it. It does not cost you income: the paying audience comes from the US, Canada, the UK and Australia.',
       },
       {
-        title: 'You decide what gets published',
+        title: 'Formats and boundaries are set at the start',
         description:
-          'Formats and boundaries are agreed before launch and written into the content plan. Nothing goes out by default.',
+          'We agree them with your manager before launch and write them into the content plan. Nothing goes out by default.',
       },
       {
         title: 'Application data',

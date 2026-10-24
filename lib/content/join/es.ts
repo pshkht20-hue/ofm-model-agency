@@ -61,7 +61,7 @@ export const JOIN_ES: JoinContent = {
           'Plan de contenido, ángulos, comunicación con la audiencia — el equipo te lo enseña todo durante el onboarding.',
       },
     ],
-    note: 'Sobre la privacidad: los formatos de contenido y tu nivel de anonimato se acuerdan de forma individual en el casting — juntas encontramos la opción con la que te sientas cómoda.',
+    note: 'Sobre la privacidad: activamos el geobloqueo de los países que elijas al lanzar tu página. Los formatos y los límites se fijan al inicio junto con tu manager.',
   },
   steps: {
     heading: 'Cómo es el casting',

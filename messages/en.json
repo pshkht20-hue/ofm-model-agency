@@ -18,7 +18,7 @@
   },
   "social": {
     "footerTitle": "Social",
-    "footerLead": "Agency news, case studies, and manager replies — follow us where you prefer.",
+    "footerLead": "Agency news, case studies, and manager replies: follow us where you prefer.",
     "menuEyebrow": "Follow us",
     "menuLead": "Stay updated on OFM — Telegram is the fastest way to reach us.",
     "telegram": "Telegram",
@@ -199,7 +199,7 @@
         {
           "title": "Content strategy",
           "badge": "monthly plan",
-          "desc": "A forward plan: what to shoot, how to package PPV and mass messages so subs don’t churn after two weeks. Ideas fit your schedule, look, and boundaries — GFE, fetish, fitness, and other niches — no burnout from random shoots.",
+          "desc": "A forward plan: what to shoot, how to package PPV and mass messages so subs don’t churn after two weeks. Ideas fit your schedule, look and boundaries, from fitness to lifestyle, with no burnout from random shoots.",
           "highlights": [
             "Profile and competitor audit before launch",
             "Shoot concepts and references for your niche",
@@ -265,7 +265,7 @@
           "options": {
             "exploring": {
               "label": "Not sure yet — help me find my niche",
-              "desc": "Your manager will match a niche to your look, personality, and schedule — from cosplay to GFE"
+              "desc": "Your manager will match a niche to your type, personality and schedule: from cosplay to lifestyle"
             },
             "natural": {
               "label": "My own style, no fixed niche",
@@ -273,11 +273,11 @@
             },
             "mature": {
               "label": "Mature / 30+ & 40+",
-              "desc": "Age niche with top retention — natural confidence and GFE for an adult 30–60 audience"
+              "desc": "Age niche with top retention: natural confidence for an adult 30-60 audience"
             },
             "fitness": {
               "label": "Fitness / athletic",
-              "desc": "Your physique as an asset — premium customs and challenges, explicit content optional"
+              "desc": "Your physique as an asset: premium customs and challenges"
             },
             "cosplay": {
               "label": "Cosplay / roleplay",
@@ -285,7 +285,7 @@
             },
             "asian": {
               "label": "Asian / Kawaii",
-              "desc": "Ethnic niche with loyal fans — kawaii, exotic, personal GFE"
+              "desc": "Ethnic niche with loyal fans: kawaii aesthetics and steady demand"
             },
             "busty": {
               "label": "Busty / curves focus",
@@ -297,15 +297,15 @@
             },
             "tattoo": {
               "label": "Tattoo / Alt",
-              "desc": "Alternative style — edgy image, ink fetish, custom roleplay"
+              "desc": "Alternative style: an edgy image with tattoos as part of the brand"
             },
             "ebony": {
               "label": "Ebony / Afro",
-              "desc": "Ethnic niche with cultural appeal — dance, curves, GFE for loyal audiences"
+              "desc": "Ethnic niche with cultural appeal: dance and a bold presence for loyal audiences"
             },
             "babyface": {
               "label": "Babyface / cute",
-              "desc": "Sweet, youthful look — GFE, soft fetish, roleplay scenarios"
+              "desc": "Soft, warm presence with the focus on personality: steady demand from subscribers"
             }
           }
         },
@@ -394,15 +394,15 @@
         "scaleReady": "You have a strong base — prioritize PPV scripts, VIP fans, and ad scaling.",
         "momentum": "You're on the right track: weekly reports and price tweaks every 7 days will accelerate growth.",
         "agencyBoost": "Your OFM manager will build a strategy for your profile — from niche to pricing and posting schedule.",
-        "archetypeExplore": "On your consult we'll map 2–3 niches for you — cosplay, GFE, fetish, or lifestyle. An archetype can be built even if you don't have one yet.",
+        "archetypeExplore": "On your consult we'll map 2-3 niches for you, such as cosplay, fitness or lifestyle. An archetype can be built even if you don't have one yet.",
         "archetypeNatural": "A personal brand monetizes too: consistency, fan connection, and clear positioning matter. We'll package you — not a generic template.",
         "archetypeCosplay": "Cosplay can add +300% to custom tips: fans pay for the character and fantasy. Costume and roleplay matter more than \"perfect\" body stats.",
-        "archetypeAsian": "Kawaii niches hold 70–90% retention: personal GFE and targeted PPV drive steady income from loyal fans.",
+        "archetypeAsian": "Kawaii niches hold 70-90% retention: regular fan communication and targeted PPV drive steady income from loyal fans.",
         "archetypeBusty": "Evergreen demand niche: pairing with cosplay or roleplay boosts PPV. We'll shape pricing and content plan for your format.",
         "archetypeBlonde": "Girl-next-door is competitive but stable: lives, photosets, and personal DMs deliver predictable growth.",
         "archetypeTattoo": "Alt looks stand out in the feed: edgy roleplay and customs can add +250% to average spend from engaged fans.",
-        "archetypeEbony": "Ethnic niche is growing globally: dance, curves, and GFE build a strong base for repeat purchases.",
-        "archetypeBabyface": "Babyface is one of the most in-demand archetypes: GFE and soft roleplay drive high LTV. Even starting from zero with no audience, a realistic benchmark is $16K+/mo with the OFM team.",
+        "archetypeEbony": "Ethnic niche is growing globally: dance and a bold presence build a strong base for repeat purchases.",
+        "archetypeBabyface": "One of the most in-demand types: regular communication with subscribers and a well-planned PPV strategy drive high LTV (how much one subscriber brings in over time). Your manager will show you a realistic starting benchmark on Telegram.",
         "archetypeMature": "Mature is the retention champion: fans 30–60 pay steadily and rarely churn, and the niche is still half-empty. Age here is a strategy, not a disclaimer — the market's most famous case started at 53.",
         "archetypeFitness": "Fitness is the niche where athletic physique itself is a rare asset: a known market case earns ~$10K/mo on athletic customs. Your physique is a ready asset — flexing, challenges, and custom programs become the premium line of your price list."
       }
@@ -442,7 +442,7 @@
     "telegramWarn": "Looks like a typo: Telegram usernames use only Latin letters, digits and _. Check it or enter a phone number.",
     "message": "Message",
     "submit": "Submit application",
-    "privacy": "100% confidential · anonymous · no obligation",
+    "privacy": "Confidential · no obligation",
     "sending": "Sending…",
     "successTitle": "Application sent",
     "errorGeneric": "Could not send",
@@ -486,7 +486,7 @@
     },
     "calc": {
       "title": "How much will you earn?",
-      "body": "Newcomers with the agency usually reach $500–1000 in their very first month. Answer 4 questions — get your personal estimate in 30 seconds.",
+      "body": "Newcomers with the agency usually take home $500-1,000 in their very first month. Answer 4 questions and get your personal estimate in 30 seconds.",
       "button": "Calculate my income",
       "note": "The estimate is a guide, not a guarantee of income."
     }

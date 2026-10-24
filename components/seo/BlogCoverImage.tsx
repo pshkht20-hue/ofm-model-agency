@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import type { BlogCover } from '@/lib/content/blog/covers';
 
 /**
@@ -69,14 +70,24 @@ export function BlogCoverImage({
               о вводящих в заблуждение визуалах); «Фото» остаётся только настоящим
               Unsplash-снимкам. */}
           {t(isOwnPhoto ? 'illustration' : 'photo')}{' '}
-          <a
-            href={cover.photographerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/65 hover:text-accent-pink transition-colors underline-offset-2 hover:underline"
-          >
-            {cover.photographer}
-          </a>
+          {isOwnPhoto ? (
+            <Link
+              href="/"
+              prefetch={false}
+              className="text-white/65 hover:text-accent-pink transition-colors underline-offset-2 hover:underline"
+            >
+              {cover.photographer}
+            </Link>
+          ) : (
+            <a
+              href={cover.photographerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/65 hover:text-accent-pink transition-colors underline-offset-2 hover:underline"
+            >
+              {cover.photographer}
+            </a>
+          )}
           {!isOwnPhoto && cover.unsplashUrl && (
             <>
               {' · '}

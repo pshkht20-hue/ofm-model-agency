@@ -61,7 +61,7 @@ export const JOIN_EN: JoinContent = {
           'Content planning, angles, audience communication — the team teaches everything during onboarding.',
       },
     ],
-    note: 'About privacy: content formats and your level of anonymity are discussed individually at the casting call — together we find a setup you are comfortable with.',
+    note: 'About privacy: we set up a geo-block for the countries you choose when your page launches. Formats and boundaries are set at the start together with your manager.',
   },
   steps: {
     heading: 'How casting works',
