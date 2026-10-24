@@ -8,10 +8,16 @@ import { useLike } from '@/hooks/useLike';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { EASE_SMOOTH } from '@/lib/motion';
 
+/**
+ * Кнопка «Нравится» без числа (решение владельца №6, вариант А, 24.10.2026).
+ * Раньше рядом с сердечком стояло число из формулы (lib/likes/seed.ts, хеш
+ * адреса статьи): не связано с людьми, класс «искажённые социальные
+ * одобрения». Отметка хранится только в браузере девушки (localStorage),
+ * число популярности в другом виде не возвращаем.
+ */
 type LikeButtonProps = {
   kind: LikeKind;
   itemId: string;
-  baseCount: number;
   /** helpful — отзывы; article — статья; card — карточка в списке */
   variant?: 'helpful' | 'article' | 'card';
   className?: string;
@@ -20,13 +26,12 @@ type LikeButtonProps = {
 export function LikeButton({
   kind,
   itemId,
-  baseCount,
   variant = 'card',
   className = '',
 }: LikeButtonProps) {
   const t = useTranslations('likes');
   const reduced = useReducedMotion();
-  const { liked, count, toggle, ready } = useLike(kind, itemId, baseCount);
+  const { liked, toggle } = useLike(kind, itemId);
 
   const labelKey =
     kind === 'review'
@@ -87,23 +92,12 @@ export function LikeButton({
         )}
       </motion.span>
 
-      <span className="flex flex-col items-start leading-none min-w-0">
-        <span
-          className={`font-semibold tabular-nums tracking-tight ${
-            isArticle ? 'text-base' : 'text-sm'
-          } ${liked ? 'text-white' : 'text-white/75'}`}
-        >
-          {ready ? count.toLocaleString() : baseCount.toLocaleString()}
-        </span>
-        <span
-          className={`mt-0.5 truncate max-w-[9rem] ${
-            isArticle ? 'text-[11px]' : 'text-[10px]'
-          } uppercase tracking-[0.12em] ${
-            liked ? 'text-accent-cyan/80' : 'text-white/35'
-          }`}
-        >
-          {t(labelKey)}
-        </span>
+      <span
+        className={`truncate max-w-[9rem] font-medium leading-none uppercase tracking-[0.12em] ${
+          isArticle ? 'text-xs' : 'text-[11px]'
+        } ${liked ? 'text-white' : 'text-white/60'}`}
+      >
+        {t(labelKey)}
       </span>
     </button>
   );

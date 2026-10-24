@@ -4,7 +4,8 @@ import { useCallback, useEffect, useState } from 'react';
 import type { LikeKind } from '@/lib/likes/storage';
 import { isItemLiked, setItemLiked } from '@/lib/likes/storage';
 
-export function useLike(kind: LikeKind, itemId: string, baseCount: number) {
+/** Отметка «Нравится» только в браузере девушки, без счётчика (решение №6, 24.10.2026). */
+export function useLike(kind: LikeKind, itemId: string) {
   const [liked, setLiked] = useState(false);
   const [ready, setReady] = useState(false);
 
@@ -12,8 +13,6 @@ export function useLike(kind: LikeKind, itemId: string, baseCount: number) {
     setLiked(isItemLiked(kind, itemId));
     setReady(true);
   }, [kind, itemId]);
-
-  const count = baseCount + (ready && liked ? 1 : 0);
 
   const toggle = useCallback(() => {
     setLiked((prev) => {
@@ -23,5 +22,5 @@ export function useLike(kind: LikeKind, itemId: string, baseCount: number) {
     });
   }, [kind, itemId]);
 
-  return { liked: ready && liked, count, toggle, ready };
+  return { liked: ready && liked, toggle, ready };
 }

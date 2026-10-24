@@ -1,6 +1,5 @@
 'use client';
 
-import { getBlogLikeSeed } from '@/lib/likes/seed';
 import { LikeButton } from '@/components/ui/LikeButton';
 
 export function BlogArticleLikeBar({ slug }: { slug: string }) {
@@ -9,7 +8,6 @@ export function BlogArticleLikeBar({ slug }: { slug: string }) {
       <LikeButton
         kind="blog"
         itemId={slug}
-        baseCount={getBlogLikeSeed(slug)}
         variant="article"
       />
     </div>

@@ -14,7 +14,6 @@ import { getBlogCategoryLabels } from '@/lib/content/blog/locale/labels';
 import type { Locale } from '@/i18n/routing';
 import { BlogCoverImage } from '@/components/seo/BlogCoverImage';
 import { LikeButton } from '@/components/ui/LikeButton';
-import { getBlogLikeSeed } from '@/lib/likes/seed';
 import { useReducedMotion } from '@/hooks/useMotionPreferences';
 import { SPRING_HOVER, hoverLift, staggerItem } from '@/lib/motion';
 
@@ -99,7 +98,6 @@ export function BlogPostCard({
         <LikeButton
           kind="blog"
           itemId={post.slug}
-          baseCount={getBlogLikeSeed(post.slug)}
           variant="card"
         />
       </div>
