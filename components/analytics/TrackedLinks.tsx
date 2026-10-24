@@ -5,6 +5,12 @@ import { useLocale } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { trackCtaClick, trackTelegramClick } from '@/lib/analytics/gtag';
 import type { CtaLocation, TelegramClickLocation } from '@/lib/analytics/events';
+import {
+  isManagerTelegramHref,
+  pageCodeFor,
+  pageDraftText,
+  withTelegramDraft,
+} from '@/lib/telegram-draft';
 
 type TrackedCtaLinkProps = {
   href: ComponentProps<typeof Link>['href'];
@@ -43,6 +49,8 @@ type TrackedTelegramLinkProps = {
 /**
  * Клиентская <a> для авто-ссылок на Telegram в тексте статей (linkifyTelegram):
  * низкофрикционный путь конверсии, который раньше был полностью невидим.
+ * Ссылка на чат менеджера получает готовое первое сообщение с кодом страницы
+ * («Окно 1», W1-06b); ссылки на канал t.me/ofmmAgency не меняются.
  */
 export function TrackedTelegramLink({
   href,
@@ -52,10 +60,13 @@ export function TrackedTelegramLink({
 }: TrackedTelegramLinkProps) {
   const locale = useLocale();
   const pathname = usePathname();
+  const finalHref = isManagerTelegramHref(href)
+    ? withTelegramDraft(href, pageDraftText(locale, pageCodeFor(pathname)))
+    : href;
 
   return (
     <a
-      href={href}
+      href={finalHref}
       target="_blank"
       rel="noopener noreferrer"
       className={className}

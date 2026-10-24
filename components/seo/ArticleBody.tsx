@@ -9,6 +9,7 @@ import { ArticleCalcTeaser } from '@/components/seo/ArticleCalcTeaser';
 import { ArticleInlineCta } from '@/components/seo/ArticleInlineCta';
 import { ArticleVideo } from '@/components/seo/ArticleVideo';
 import type { ArticleVideoPlacement } from '@/lib/content/blog/video-embeds';
+import { isManagerTelegramHref } from '@/lib/telegram-draft';
 
 const fmtCaseNet = (n: number) =>
   n >= 1_000_000 ? `$${(n / 1_000_000).toFixed(2)}M` : `$${Math.round(n / 1_000)}K`;
@@ -257,13 +258,25 @@ function renderBlock(block: BlogBlock, i: number) {
       >
         <h2 className="font-serif text-xl text-white mb-3">{block.title}</h2>
         <p className="text-body text-sm mb-6 max-w-lg mx-auto">{linkifyTelegram(block.body)}</p>
-        <TrackedCtaLink
-          href={block.buttonHref}
-          location="article_cta"
-          className="btn-primary inline-flex"
-        >
-          {block.buttonLabel}
-        </TrackedCtaLink>
+        {/* Кнопка прямо в чат менеджера получает черновик с кодом страницы («Окно 1»,
+            W1-06d); кнопки на канал и внутренние ссылки идут прежним путём. */}
+        {isManagerTelegramHref(block.buttonHref) ? (
+          <TrackedTelegramLink
+            href={block.buttonHref}
+            location="article_cta"
+            className="btn-primary inline-flex"
+          >
+            {block.buttonLabel}
+          </TrackedTelegramLink>
+        ) : (
+          <TrackedCtaLink
+            href={block.buttonHref}
+            location="article_cta"
+            className="btn-primary inline-flex"
+          >
+            {block.buttonLabel}
+          </TrackedCtaLink>
+        )}
         {block.note ? (
           <p className="text-xs text-white/40 mt-4 max-w-md mx-auto">{linkifyTelegram(block.note)}</p>
         ) : null}

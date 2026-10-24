@@ -50,7 +50,7 @@ export function StickyApplyBar({
           className="fixed bottom-0 left-0 right-0 z-[55] p-4 md:hidden"
         >
           {variant === 'telegram' ? (
-            <TelegramCta location="contact_primary" label={label} className="w-full" />
+            <TelegramCta location="sticky_telegram" label={label} className="w-full" />
           ) : (
             <Link
               href={href}

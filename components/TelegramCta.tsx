@@ -2,10 +2,12 @@
 
 import { ArrowRight } from 'lucide-react';
 import { useLocale } from 'next-intl';
+import { usePathname } from '@/i18n/navigation';
 import { getSocialHref } from '@/lib/social';
 import { SocialIcon } from '@/components/social/SocialIcons';
 import { trackTelegramClick } from '@/lib/analytics/gtag';
 import type { TelegramClickLocation } from '@/lib/analytics/events';
+import { pageCodeFor, pageDraftText, withTelegramDraft } from '@/lib/telegram-draft';
 
 type TelegramCtaProps = {
   location: TelegramClickLocation;
@@ -13,23 +15,34 @@ type TelegramCtaProps = {
   /** 'button' — крупная фирменная кнопка; 'inline' — текстовая ссылка со стрелкой. */
   variant?: 'button' | 'inline';
   className?: string;
+  /**
+   * Готовое первое сообщение («Окно 1», W1-06a). По умолчанию шаблон страницы
+   * с её кодом ([vac-pl], [blog-<слаг>]); экраны после заявки и ошибки
+   * передают свой текст с кодом заявки.
+   */
+  draft?: string;
 };
 
 /**
  * Низкофрикционный путь конверсии: прямой контакт в Telegram (без формы).
  * Скрывается, если канал отключён через env. Каждый клик трекается в GA4.
+ * Черновик сообщения добавляется только в видимую ссылку: lib/social.ts и
+ * разметка Organization остаются с чистым адресом.
  */
 export function TelegramCta({
   location,
   label,
   variant = 'button',
   className = '',
+  draft,
 }: TelegramCtaProps) {
   const locale = useLocale();
-  const href = getSocialHref('telegram');
-  if (!href) return null;
+  const pathname = usePathname();
+  const base = getSocialHref('telegram');
+  if (!base) return null;
+  const href = withTelegramDraft(base, draft ?? pageDraftText(locale, pageCodeFor(pathname)));
 
-  const onClick = () => trackTelegramClick({ location, locale });
+  const onClick = () => trackTelegramClick({ location, locale, page_path: pathname });
 
   if (variant === 'inline') {
     return (

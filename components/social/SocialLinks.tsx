@@ -7,6 +7,8 @@ import { getSocialLinks, type SocialLink, type SocialPlatform } from '@/lib/soci
 import { SocialIcon } from '@/components/social/SocialIcons';
 import { trackTelegramClick, trackWhatsappClick } from '@/lib/analytics/gtag';
 import type { TelegramClickLocation } from '@/lib/analytics/events';
+import { usePathname } from '@/i18n/navigation';
+import { pageCodeFor, pageDraftText, withTelegramDraft } from '@/lib/telegram-draft';
 
 const SOCIAL_LOCATION: Record<'nav' | 'menu' | 'footer', TelegramClickLocation> = {
   nav: 'navbar_social',
@@ -62,23 +64,29 @@ function SocialLinkButton({
 }) {
   const neon = PLATFORM_NEON[link.platform];
   const locale = useLocale();
+  const pathname = usePathname();
   const reduced = useReducedMotion();
+  // Черновик первого сообщения только для чата менеджера, не для канала («Окно 1», W1-06c).
+  const href =
+    link.platform === 'telegram'
+      ? withTelegramDraft(link.href, pageDraftText(locale, pageCodeFor(pathname)))
+      : link.href;
   const isFooter = variant === 'footer';
   const isMenu = variant === 'menu';
   const isNav = variant === 'nav';
 
   return (
     <motion.a
-      href={link.href}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
       title={label}
       onClick={() => {
         if (link.platform === 'telegram' || link.platform === 'telegramChannel') {
-          trackTelegramClick({ location: SOCIAL_LOCATION[variant], locale });
+          trackTelegramClick({ location: SOCIAL_LOCATION[variant], locale, page_path: pathname });
         } else if (link.platform === 'whatsapp') {
-          trackWhatsappClick({ location: SOCIAL_LOCATION[variant], locale });
+          trackWhatsappClick({ location: SOCIAL_LOCATION[variant], locale, page_path: pathname });
         }
         onLinkClick?.();
       }}
