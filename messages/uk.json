@@ -670,6 +670,7 @@
   "legalUi": {
     "privacyTitle": "Політика конфіденційності",
     "termsTitle": "Умови використання",
+    "privacyUpdated": "Оновлено: 28 жовтня 2026",
     "privacyMeta": {
       "title": "Політика конфіденційності",
       "description": "Політика конфіденційності OFM's Model Agency: які дані збираємо при заявці на сайті та як їх захищаємо."
@@ -702,15 +703,15 @@
   },
   "cookieConsent": {
     "title": "Cookies",
-    "description": "необхідні для роботи сайту, аналітика — лише за вашою згодою",
+    "description": "одні потрібні для роботи сайту, інші для аналітики й записів сесій (Google Analytics, Microsoft Clarity), їх вмикаємо лише за твоєю згодою. Докладніше в",
     "privacyLink": "політиці конфіденційності",
     "accept": "Прийняти",
     "reject": "Лише потрібні",
     "detailsToggle": "Докладніше",
     "necessaryTitle": "Необхідні",
-    "necessaryDesc": "мова та ваш вибір щодо cookies",
+    "necessaryDesc": "мова та твій вибір щодо cookies",
     "analyticsTitle": "Аналітика",
-    "analyticsDesc": "Google Analytics, лише за згодою",
+    "analyticsDesc": "Google Analytics і Microsoft Clarity: статистика, теплові карти й записи дій на сторінках, поля форм приховані. Лише за згодою",
     "legalNote": "Змінити вибір: «Налаштування cookies» у підвалі сайту."
   },
   "languageSwitcher": {

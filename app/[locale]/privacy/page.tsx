@@ -41,7 +41,7 @@ export default async function PrivacyPage({ params }: Props) {
       <h1 className="heading-section text-[clamp(1.75rem,4vw,2.5rem)] mb-8">
         {t('privacyTitle')}
       </h1>
-      <p className="text-body mb-10">{tCommon('updated')}</p>
+      <p className="text-body mb-10">{t('privacyUpdated')}</p>
 
       <div className="space-y-10">
         {sections.map((section) => (

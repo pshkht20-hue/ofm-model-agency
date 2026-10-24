@@ -1,7 +1,7 @@
 'use client';
 
 import Script from 'next/script';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   CONSENT_EVENT,
   getStoredConsent,
@@ -10,6 +10,12 @@ import {
 } from '@/lib/cookies/consent';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
+function denyAnalyticsConsent() {
+  if (typeof window === 'undefined') return;
+  const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
+  gtag?.('consent', 'update', { analytics_storage: 'denied' });
+}
 
 function grantAnalyticsConsent() {
   if (typeof window === 'undefined') return;
@@ -43,9 +49,16 @@ export function AnalyticsLoader() {
     return () => window.removeEventListener(CONSENT_EVENT, onConsent);
   }, []);
 
+  // Отзыв («Окно 1», W1-23): если аналитика уже работала и согласие сняли,
+  // сразу отказ для gtag; cookies и перезагрузку делает revokeAnalytics().
+  const wasEnabledRef = useRef(false);
   useEffect(() => {
     if (enabled) {
+      wasEnabledRef.current = true;
       grantAnalyticsConsent();
+    } else if (wasEnabledRef.current) {
+      wasEnabledRef.current = false;
+      denyAnalyticsConsent();
     }
   }, [enabled]);
 

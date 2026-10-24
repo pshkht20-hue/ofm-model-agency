@@ -670,6 +670,7 @@
   "legalUi": {
     "privacyTitle": "Политика конфиденциальности",
     "termsTitle": "Условия использования",
+    "privacyUpdated": "Обновлено: 28 октября 2026",
     "privacyMeta": {
       "title": "Политика конфиденциальности",
       "description": "Политика конфиденциальности OFM's Model Agency: какие данные собираем при заявке на сайте и как их защищаем."
@@ -702,15 +703,15 @@
   },
   "cookieConsent": {
     "title": "Cookies",
-    "description": "необходимые для работы сайта, аналитика — только с вашего согласия",
+    "description": "одни нужны для работы сайта, другие для аналитики и записей сессий (Google Analytics, Microsoft Clarity), их включаем только с твоего согласия. Подробнее в",
     "privacyLink": "политике конфиденциальности",
     "accept": "Принять",
     "reject": "Только нужные",
     "detailsToggle": "Подробнее",
     "necessaryTitle": "Необходимые",
-    "necessaryDesc": "язык и ваш выбор по cookies",
+    "necessaryDesc": "язык и твой выбор по cookies",
     "analyticsTitle": "Аналитика",
-    "analyticsDesc": "Google Analytics, только по согласию",
+    "analyticsDesc": "Google Analytics и Microsoft Clarity: статистика, тепловые карты и записи действий на страницах, поля форм скрыты. Только по согласию",
     "legalNote": "Изменить выбор: «Настройки cookies» в подвале сайта."
   },
   "languageSwitcher": {

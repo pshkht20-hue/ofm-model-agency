@@ -665,6 +665,7 @@
   "legalUi": {
     "privacyTitle": "Privacy policy",
     "termsTitle": "Terms of use",
+    "privacyUpdated": "Updated: 28 October 2026",
     "privacyMeta": {
       "title": "Privacy policy",
       "description": "OFM's Model Agency privacy policy: what data we collect when you apply and how we protect it."
@@ -697,7 +698,7 @@
   },
   "cookieConsent": {
     "title": "Cookies",
-    "description": "essential for the site to work; analytics only with your consent",
+    "description": "some are needed for the site to work, others for analytics and session recordings (Google Analytics, Microsoft Clarity), and those we switch on only with your consent. Details in our",
     "privacyLink": "privacy policy",
     "accept": "Accept",
     "reject": "Essential only",
@@ -705,7 +706,7 @@
     "necessaryTitle": "Essential",
     "necessaryDesc": "language and your cookie preference",
     "analyticsTitle": "Analytics",
-    "analyticsDesc": "Google Analytics, consent-based only",
+    "analyticsDesc": "Google Analytics and Microsoft Clarity: statistics, heatmaps and recordings of actions on pages, form fields hidden. Only with consent",
     "legalNote": "Change your choice anytime via \"Cookie settings\" in the footer."
   },
   "languageSwitcher": {

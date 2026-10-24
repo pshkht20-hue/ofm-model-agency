@@ -10,6 +10,7 @@ import { EASE_SMOOTH } from '@/lib/motion';
 import {
   getStoredConsent,
   REOPEN_CONSENT_EVENT,
+  revokeAnalytics,
   storeConsent,
   type ConsentChoice,
 } from '@/lib/cookies/consent';
@@ -35,6 +36,8 @@ export function CookieConsent() {
   function choose(choice: ConsentChoice) {
     storeConsent(choice);
     setVisible(false);
+    // «Только нужные» после работавшей аналитики: отзыв и перезагрузка (W1-23).
+    if (choice === 'necessary') revokeAnalytics();
   }
 
   return (
@@ -78,7 +81,7 @@ export function CookieConsent() {
                       >
                         {t('title')}
                       </span>
-                      {' — '}
+                      {': '}
                       {t('description')}{' '}
                       <Link
                         href="/privacy"
@@ -138,13 +141,13 @@ export function CookieConsent() {
                           <span className="font-medium text-white/68">
                             {t('necessaryTitle')}
                           </span>
-                          <span className="text-white/42"> — {t('necessaryDesc')}</span>
+                          <span className="text-white/42">: {t('necessaryDesc')}</span>
                         </li>
                         <li className="rounded-lg bg-white/[0.02] px-2.5 py-2">
                           <span className="font-medium text-white/68">
                             {t('analyticsTitle')}
                           </span>
-                          <span className="text-white/42"> — {t('analyticsDesc')}</span>
+                          <span className="text-white/42">: {t('analyticsDesc')}</span>
                         </li>
                       </ul>
                       <p className="mt-2 text-[10px] sm:text-[11px] text-white/32 leading-relaxed">

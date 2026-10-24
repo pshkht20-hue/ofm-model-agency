@@ -14,6 +14,11 @@ import {
  * согласия на аналитику, тем же контрактом, что AnalyticsLoader: дефолт
  * «запрещено», включение по CONSENT_EVENT. ID проекта не секрет (виден в HTML
  * любого сайта с Clarity), поэтому живёт в env с фолбэком в коде.
+ *
+ * «Окно 1» (W1-23): сразу после загрузчика сигнал Consent API v2
+ * (learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-consent-api-v2):
+ * аналитика granted, реклама denied; очередь c[a].q уже создана загрузчиком,
+ * вызов дождётся скрипта. Отзыв согласия: revokeAnalytics() в lib/cookies/consent.ts.
  */
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || 'y2xm7yxice';
 
@@ -50,6 +55,7 @@ export function ClarityLoader() {
           t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "${CLARITY_ID}");
+        window.clarity('consentv2', { ad_Storage: "denied", analytics_Storage: "granted" });
       `}
     </Script>
   );
