@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
-import { BadgeCheck, ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
 import { m as motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { caseShots, type CaseShot, type ResultTier } from '@/lib/results/cases';
@@ -15,10 +15,12 @@ const TIER_BADGE: Record<ResultTier, string> = {
   prime: 'from-accent-cyan/90 to-accent-violet/70',
 };
 
-const fmtNet = (n: number) =>
+// Все суммы кейсов в gross, как и остальные подписи сайта (решение владельца №7,
+// вариант А, 24.10.2026): до этого карточки показывали net рядом с «gross total».
+const fmtGross = (n: number) =>
   n >= 1_000_000 ? `$${(n / 1_000_000).toFixed(2)}M` : `$${Math.round(n / 1_000)}K`;
 
-/** Карточка-«телефон» в карусели: превью верха скрина + NET и период. */
+/** Карточка-«телефон» в карусели: превью верха скрина + gross и период. */
 function ShotCard({
   shot,
   onOpen,
@@ -41,7 +43,7 @@ function ShotCard({
       whileHover={reduced ? undefined : { y: -6 }}
       transition={{ duration: 0.3, ease: EASE_SOFT }}
       className="group relative w-[264px] shrink-0 snap-center rounded-[2.1rem] border border-white/[0.09] bg-[#0b0814] p-2 pb-3 text-left shadow-[0_18px_50px_-22px_rgba(0,0,0,0.85)] transition-colors duration-300 hover:border-accent-pink/40 hover:shadow-[0_22px_60px_-18px_rgba(255,91,181,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-pink/70 sm:w-[290px]"
-      aria-label={`${alt} — ${hint}`}
+      aria-label={`${alt}. ${hint}`}
     >
       {/* динамик-«чёлка» телефона */}
       <span className="mx-auto mb-2 mt-1 block h-1.5 w-16 rounded-full bg-white/10" aria-hidden />
@@ -52,14 +54,13 @@ function ShotCard({
           alt={alt}
           fill
           sizes="(max-width: 640px) 70vw, 290px"
-          className="object-cover object-top"
+          className={`${shot.croppedAtTotal ? 'object-contain' : 'object-cover'} object-top`}
         />
 
-        {/* tier-чип */}
+        {/* tier-чип (без галочки «подтверждено»: проверяющего нет, решение №7) */}
         <span
           className={`absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-gradient-to-r ${TIER_BADGE[shot.tier]} px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-white shadow-[0_2px_12px_rgba(0,0,0,0.35)]`}
         >
-          <BadgeCheck className="h-3 w-3" aria-hidden />
           {tierLabel}
         </span>
 
@@ -73,13 +74,13 @@ function ShotCard({
           </span>
         </span>
 
-        {/* низ: NET + период */}
+        {/* низ: gross + период */}
         <span className="absolute inset-x-0 bottom-0 block bg-gradient-to-t from-black/90 via-black/60 to-transparent px-4 pb-3.5 pt-10">
           <span className="text-gradient-brand block text-2xl font-extrabold tabular-nums leading-none">
-            {fmtNet(shot.netTotal)}
+            {fmtGross(shot.grossTotal)}
           </span>
           <span className="mt-1.5 flex items-center justify-between text-[11px] text-white/70">
-            <span className="font-semibold uppercase tracking-wider text-white/55">net</span>
+            <span className="font-semibold uppercase tracking-wider text-white/55">gross</span>
             <span>{shot.periodLabel}</span>
           </span>
         </span>
@@ -224,13 +225,12 @@ function Lightbox({
         <span
           className={`inline-flex items-center gap-1 rounded-full bg-gradient-to-r ${TIER_BADGE[shot.tier]} px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-white`}
         >
-          <BadgeCheck className="h-3 w-3" aria-hidden />
           {tierLabel}
         </span>
         <span className="text-gradient-brand text-lg font-extrabold tabular-nums">
-          {fmtNet(shot.netTotal)}
+          {fmtGross(shot.grossTotal)}
         </span>
-        <span className="text-xs uppercase tracking-wider text-white/45">net</span>
+        <span className="text-xs uppercase tracking-wider text-white/45">gross</span>
         <span className="text-xs text-white/55">{shot.periodLabel}</span>
       </div>
     </motion.div>

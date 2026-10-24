@@ -11,7 +11,7 @@ import { ArticleVideo } from '@/components/seo/ArticleVideo';
 import type { ArticleVideoPlacement } from '@/lib/content/blog/video-embeds';
 import { isManagerTelegramHref } from '@/lib/telegram-draft';
 
-const fmtCaseNet = (n: number) =>
+const fmtCaseGross = (n: number) =>
   n >= 1_000_000 ? `$${(n / 1_000_000).toFixed(2)}M` : `$${Math.round(n / 1_000)}K`;
 
 const TELEGRAM_URL = 'https://t.me/ofmm_agency';
@@ -188,7 +188,9 @@ function renderBlock(block: BlogBlock, i: number) {
     );
   }
   if (block.type === 'cases') {
-    const combined = caseShots.reduce((sum, s) => sum + s.netTotal, 0);
+    // Плашка кейсов в 61 статье: gross ($4.09M), как подписи под ней и блок
+    // кейсов на главной (решение владельца №7, вариант А, 24.10.2026).
+    const combined = caseShots.reduce((sum, s) => sum + s.grossTotal, 0);
     return (
       <Link
         key={i}
@@ -207,14 +209,14 @@ function renderBlock(block: BlogBlock, i: number) {
                 alt=""
                 fill
                 sizes="42px"
-                className="object-cover object-top"
+                className={`${shot.croppedAtTotal ? 'object-contain' : 'object-cover'} object-top`}
               />
             </span>
           ))}
         </span>
         <span className="min-w-0 flex-1 text-center sm:text-left">
           <span className="text-gradient-brand block text-2xl font-extrabold tabular-nums leading-tight">
-            {fmtCaseNet(combined)} NET
+            {fmtCaseGross(combined)} gross
           </span>
           <span className="mt-1 block text-sm font-medium text-white">{block.title}</span>
           <span className="mt-1 block text-xs leading-relaxed text-white/45">{block.note}</span>

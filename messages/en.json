@@ -59,7 +59,7 @@
       "antiFud": "No paperwork — the form commits you to nothing, and you can walk away at any time.",
       "statModels": "creators",
       "statIncome": "Page balances",
-      "balanceNote": "All figures on this site are gross OnlyFans page totals — not the creator's net payout after fees.",
+      "balanceNote": "All figures on this site are gross OnlyFans page totals, not the creator's net payout after fees.",
       "trustModels": "models trust OFM",
       "trustBadge": "Since 2022",
       "trustVerified": "Privacy-first and secure onboarding",
@@ -594,27 +594,27 @@
   "models": {
     "eyebrow": "Results",
     "title": "Real case studies",
-    "description": "OnlyFans statistics screenshots — page balance totals and peak months. Gross totals, not creators' net payout. Published with consent; no personal data shown.",
+    "description": "OnlyFans statistics screenshots: each page's total for the period. Amounts are gross, before the OnlyFans fee, and are not the model's income. Published with consent, no personal data shown.",
     "totalNet": "Total for period",
     "peakMonth": "Peak total / mo",
     "perMonth": "/ mo",
     "verified": "Verified",
     "aggregateLabel": "Combined across 4 cases",
-    "aggregateHint": "gross total · not creator net",
+    "aggregateHint": "gross, before the OnlyFans fee · not the model's income",
     "galleryHint": "Open full size",
     "lightbox": {
       "close": "Close",
       "prev": "Previous case",
       "next": "Next case",
       "counter": "{current} of {total}",
-      "zoomHint": "The screenshot scrolls — swipe down to see monthly totals"
+      "zoomHint": "Check the numbers: in the TOTAL row, GROSS is on the left and NET after the OnlyFans fee on the right"
     },
     "cta": "I want similar results",
-    "disclaimer": "OnlyFans statistics screenshots published with creators' consent. Figures are gross page totals, not net payout or guaranteed results. OFM is not affiliated with OnlyFans.",
+    "disclaimer": "OnlyFans statistics screenshots, published with the models' consent. Amounts are gross: everything subscribers paid, before the OnlyFans fee. This is not the model's income and not a guarantee of results. OFM is not affiliated with OnlyFans.",
     "altScreenshot": {
-      "elite": "OnlyFans statistics screenshot — Elite case, gross page balance total, OFM agency",
-      "pro": "OnlyFans statistics screenshot — Pro case, gross page balance total, OFM agency",
-      "prime": "OnlyFans statistics screenshot — Prime case, gross page balance total, OFM agency"
+      "elite": "OnlyFans statistics screenshot: Elite case, gross page balance total, OFM agency",
+      "pro": "OnlyFans statistics screenshot: Pro case, gross page balance total, OFM agency",
+      "prime": "OnlyFans statistics screenshot: Prime case, gross page balance total, OFM agency"
     },
     "tiers": {
       "elite": "Elite",

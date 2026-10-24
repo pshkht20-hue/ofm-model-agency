@@ -9,13 +9,14 @@ import { IncomeCalculator } from '@/components/IncomeCalculatorSection';
 import { CaseGallery } from '@/components/CaseGallery';
 import { MotionFade } from '@/components/ui/Reveal';
 
-const fmtNet = (n: number) =>
+const fmtGross = (n: number) =>
   n >= 1_000_000 ? `$${(n / 1_000_000).toFixed(2)}M` : `$${Math.round(n / 1_000)}K`;
 
 export function ModelShowcase() {
   const t = useTranslations('models');
   const tCalc = useTranslations('home.calculator');
-  const combined = caseShots.reduce((sum, s) => sum + s.netTotal, 0);
+  // Итог в gross ($4.09M), одна система с карточками и подписями (решение №7, 24.10.2026).
+  const combined = caseShots.reduce((sum, s) => sum + s.grossTotal, 0);
 
   return (
     <SectionShell id="models" wide>
@@ -28,7 +29,7 @@ export function ModelShowcase() {
       <MotionFade className="mt-6 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 text-center">
         <span className="text-sm text-white/55">{t('aggregateLabel')}</span>
         <span className="text-gradient-brand text-2xl font-extrabold tabular-nums sm:text-3xl">
-          {fmtNet(combined)}
+          {fmtGross(combined)}
         </span>
         <span className="text-xs text-white/40">{t('aggregateHint')}</span>
       </MotionFade>

@@ -59,7 +59,7 @@
       "antiFud": "Без бюрократії — анкета ні до чого не зобов’язує, і піти можна будь-якої миті.",
       "statModels": "моделей",
       "statIncome": "Баланси",
-      "balanceNote": "Усі суми на сайті — gross total балансу сторінки OnlyFans, не чистий дохід моделі після комісій.",
+      "balanceNote": "Усі суми на сайті: gross total балансу сторінки OnlyFans, не чистий дохід моделі після комісій.",
       "trustModels": "моделей довіряють OFM",
       "trustBadge": "З 2022 року",
       "trustVerified": "Конфіденційність і безпека даних",
@@ -599,27 +599,27 @@
   "models": {
     "eyebrow": "Результати",
     "title": "Реальні кейси",
-    "description": "Скріншоти статистики OnlyFans — total балансу сторінки та пікові місяці. Gross total, не чистий дохід моделі. Публікуємо за згодою та без персональних даних.",
+    "description": "Скріншоти статистики OnlyFans: підсумок сторінки за період. Суми gross, до комісії OnlyFans, це не дохід моделі. Публікуємо за згодою та без персональних даних.",
     "totalNet": "Total за період",
     "peakMonth": "Пік total / міс",
     "perMonth": "/ міс",
     "verified": "Підтверджено",
     "aggregateLabel": "Сумарно по 4 кейсах",
-    "aggregateHint": "gross total · не net моделі",
+    "aggregateHint": "gross, до комісії OnlyFans · не дохід моделі",
     "galleryHint": "Відкрити у повному розмірі",
     "lightbox": {
       "close": "Закрити",
       "prev": "Попередній кейс",
       "next": "Наступний кейс",
       "counter": "{current} із {total}",
-      "zoomHint": "Скріншот гортається — прокрути, щоб побачити помісячні суми"
+      "zoomHint": "Звірте цифри: у рядку TOTAL ліворуч GROSS, праворуч NET після комісії OnlyFans"
     },
     "cta": "Хочу такий самий результат",
-    "disclaimer": "Скріншоти статистики OnlyFans за згодою моделей. Суми — gross total балансу сторінки, не чистий дохід і не гарантія результату. OFM не афілійований з OnlyFans.",
+    "disclaimer": "Скріншоти статистики OnlyFans за згодою моделей. Суми gross: усе, що заплатили підписники, до комісії OnlyFans. Це не дохід моделі й не гарантія результату. OFM не афілійований з OnlyFans.",
     "altScreenshot": {
-      "elite": "Скріншот статистики OnlyFans — кейс Elite, gross total балансу сторінки, OFM агенція",
-      "pro": "Скріншот статистики OnlyFans — кейс Pro, gross total балансу сторінки, OFM агенція",
-      "prime": "Скріншот статистики OnlyFans — кейс Prime, gross total балансу сторінки, OFM агенція"
+      "elite": "Скріншот статистики OnlyFans: кейс Elite, gross total балансу сторінки, OFM агенція",
+      "pro": "Скріншот статистики OnlyFans: кейс Pro, gross total балансу сторінки, OFM агенція",
+      "prime": "Скріншот статистики OnlyFans: кейс Prime, gross total балансу сторінки, OFM агенція"
     },
     "tiers": {
       "elite": "Elite",

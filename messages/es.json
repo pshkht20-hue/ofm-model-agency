@@ -59,7 +59,7 @@
       "antiFud": "Sin papeleo: el formulario no te compromete a nada y puedes dejarlo cuando quieras.",
       "statModels": "modelos",
       "statIncome": "Balances",
-      "balanceNote": "Todas las cifras del sitio son gross total del balance OnlyFans — no el ingreso neto de la modelo tras comisiones.",
+      "balanceNote": "Todas las cifras del sitio son gross total del balance OnlyFans, no el ingreso neto de la modelo tras comisiones.",
       "trustModels": "modelos confían en OFM",
       "trustBadge": "Desde 2022",
       "trustVerified": "Privacidad y datos seguros",
@@ -594,27 +594,27 @@
   "models": {
     "eyebrow": "Resultados",
     "title": "Casos reales",
-    "description": "Capturas de estadísticas OnlyFans — total del balance de página y meses pico. Gross total, no ingreso neto de la modelo. Publicadas con consentimiento, sin datos personales.",
+    "description": "Capturas de estadísticas de OnlyFans: el total de cada página en el periodo. Las cifras son gross, antes de la comisión de OnlyFans, y no son el ingreso de la modelo. Publicadas con consentimiento y sin datos personales.",
     "totalNet": "Total del periodo",
     "peakMonth": "Pico total / mes",
     "perMonth": "/ mes",
     "verified": "Verificado",
     "aggregateLabel": "Combinado en 4 casos",
-    "aggregateHint": "gross total · no net de la modelo",
+    "aggregateHint": "gross, antes de la comisión de OnlyFans · no es el ingreso de la modelo",
     "galleryHint": "Abrir a tamaño completo",
     "lightbox": {
       "close": "Cerrar",
       "prev": "Caso anterior",
       "next": "Caso siguiente",
       "counter": "{current} de {total}",
-      "zoomHint": "La captura se desplaza — desliza para ver los totales mensuales"
+      "zoomHint": "Compruébalo: en la fila TOTAL, a la izquierda GROSS y a la derecha NET tras la comisión de OnlyFans"
     },
     "cta": "Quiero resultados así",
-    "disclaimer": "Capturas de estadísticas OnlyFans con consentimiento de las modelos. Las cifras son gross total del balance, no ingreso neto ni garantía de resultado. OFM no está afiliado a OnlyFans.",
+    "disclaimer": "Capturas de estadísticas de OnlyFans publicadas con el consentimiento de las modelos. Las cifras son gross: todo lo que pagaron los suscriptores, antes de la comisión de OnlyFans. No son el ingreso de la modelo ni una garantía de resultado. OFM no está afiliado a OnlyFans.",
     "altScreenshot": {
-      "elite": "Captura de estadísticas OnlyFans — caso Elite, gross total de la página, agencia OFM",
-      "pro": "Captura de estadísticas OnlyFans — caso Pro, gross total de la página, agencia OFM",
-      "prime": "Captura de estadísticas OnlyFans — caso Prime, gross total de la página, agencia OFM"
+      "elite": "Captura de estadísticas OnlyFans: caso Elite, gross total de la página, agencia OFM",
+      "pro": "Captura de estadísticas OnlyFans: caso Pro, gross total de la página, agencia OFM",
+      "prime": "Captura de estadísticas OnlyFans: caso Prime, gross total de la página, agencia OFM"
     },
     "tiers": {
       "elite": "Elite",

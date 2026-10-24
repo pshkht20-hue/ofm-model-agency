@@ -45,7 +45,7 @@ export const resultCases: ResultCase[] = [
   {
     id: '01',
     tier: 'elite',
-    periodLabel: 'Jul 2024 — Jan 2026',
+    periodLabel: 'Jul 2024 - Jan 2026',
     featured: true,
     statement: {
       netTotal: 1_644_029.67,
@@ -76,7 +76,7 @@ export const resultCases: ResultCase[] = [
   {
     id: '02',
     tier: 'pro',
-    periodLabel: 'Jul 2023 — Jan 2026',
+    periodLabel: 'Jul 2023 - Jan 2026',
     statement: {
       netTotal: 947_164.73,
       grossTotal: 1_183_957.32,
@@ -106,7 +106,7 @@ export const resultCases: ResultCase[] = [
   {
     id: '03',
     tier: 'prime',
-    periodLabel: 'Dec 2023 — Jan 2026',
+    periodLabel: 'Dec 2023 - Jan 2026',
     statement: {
       netTotal: 392_062.69,
       grossTotal: 490_062.89,
@@ -144,37 +144,47 @@ export type CaseShot = {
   tier: ResultTier;
   periodLabel: string;
   netTotal: number;
+  /** На карточках, в итоге и в плашке статей показываем gross (решение владельца №7, вариант А, 24.10.2026). */
   grossTotal: number;
   src: string;
   width: number;
   height: number;
+  /**
+   * Скриншот обрезан по строку TOTAL (итог, график, разбивка, GROSS / NET),
+   * помесячный список убран: помесячные суммы выше канона $15K-50K не показываем
+   * (решение №7, 24.10.2026). Такой файл шире формата карточки, поэтому
+   * в превью он вписывается целиком (object-contain), а не обрезается по бокам.
+   */
+  croppedAtTotal?: true;
 };
 
 export const caseShots: CaseShot[] = [
   {
     id: 'shot-01',
     tier: 'elite',
-    periodLabel: 'Jul 2024 — Jan 2026',
+    periodLabel: 'Jul 2024 - Jan 2026',
     netTotal: 1_644_029.67,
     grossTotal: 2_055_142.39,
-    src: '/cases/case-01-1644k.webp',
+    src: '/cases/case-01-total.webp',
     width: 1179,
-    height: 2071,
+    height: 1148,
+    croppedAtTotal: true,
   },
   {
     id: 'shot-02',
     tier: 'pro',
-    periodLabel: 'Jul 2023 — Jan 2026',
+    periodLabel: 'Jul 2023 - Jan 2026',
     netTotal: 947_164.73,
     grossTotal: 1_183_957.32,
-    src: '/cases/case-02-947k.webp',
+    src: '/cases/case-02-total.webp',
     width: 1179,
-    height: 2100,
+    height: 1161,
+    croppedAtTotal: true,
   },
   {
     id: 'shot-03',
     tier: 'prime',
-    periodLabel: 'Dec 2023 — Jan 2026',
+    periodLabel: 'Dec 2023 - Jan 2026',
     netTotal: 392_062.69,
     grossTotal: 490_062.89,
     src: '/cases/case-03-392k.webp',
@@ -184,7 +194,7 @@ export const caseShots: CaseShot[] = [
   {
     id: 'shot-04',
     tier: 'prime',
-    periodLabel: 'Feb 2024 — Aug 2025',
+    periodLabel: 'Feb 2024 - Aug 2025',
     netTotal: 289_420.8,
     grossTotal: 361_780.0,
     src: '/cases/case-04-289k.webp',
