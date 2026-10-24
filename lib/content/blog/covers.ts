@@ -554,16 +554,14 @@ export const BLOG_COVERS: Record<string, BlogCover> = {
     photographerUrl: 'https://ofmmodels.com',
     unsplashUrl: 'https://ofmmodels.com',
   },
-  // Новая статья «Онлик» (поезд K, 24.10.2026, K-TRAIN-SPEC §5.3, вариант А):
-  // пауза на новые картинки с 16.10, поэтому переиспользуем готовую обложку
-  // пиллара (стеклянный замочек с неоновым сердцем, без людей, текста и логотипов)
-  // со своим alt. Минус: та же картинка на двух адресах. Если владелец разрешит
-  // процедурную обложку (вариант В), кладём public/blog/covers/onlik-chto-eto.jpg
-  // и меняем здесь только путь.
+  // Статья «Онлик» (поезд K, 24.10.2026). Своя обложка с 24.10.2026: вариант №1,
+  // выбран владельцем (стиль «Полночный сейф»: смартфон с замочком у розовой
+  // кольцевой лампы, без людей и логотипов), 1600×900 q92. До этого стояла
+  // обложка пиллара chto-takoe-onlyfans.
   'onlik-chto-eto': {
-    localSrc: '/blog/covers/chto-takoe-onlyfans.jpg',
-    remoteSrc: '/blog/covers/chto-takoe-onlyfans.jpg',
-    alt: 'Стеклянный замочек с неоновым сердцем: онлик, то есть OnlyFans, и закрытая страница по подписке',
+    localSrc: '/blog/covers/onlik-chto-eto.jpg',
+    remoteSrc: '/blog/covers/onlik-chto-eto.jpg',
+    alt: 'Смартфон с замочком на экране у розовой кольцевой лампы: онлик, то есть OnlyFans, и закрытая страница по подписке',
     photographer: 'OFM Models',
     photographerUrl: 'https://ofmmodels.com',
     unsplashUrl: 'https://ofmmodels.com',
