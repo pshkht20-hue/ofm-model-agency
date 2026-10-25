@@ -3889,7 +3889,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "You can work with your face shown or not — that is your choice, and both formats exist. Your face is a strong asset: subscribers pay for a person and a real conversation, not for an anonymous set of images. But privacy from the people you know does not rest on hiding your face; it rests on geo-blocking, which we cover below.",
+        text: "Your face is a strong asset: subscribers pay for a person and a real conversation, not for an anonymous set of images. Privacy from the people you know does not rest on hiding your face; it rests on geo-blocking, which we cover below.",
       },
       {
         type: "p",
@@ -4189,7 +4189,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Both formats exist, but your face is a strong asset: subscribers pay for a person and a real conversation, and pages with a face usually earn more. Privacy, meanwhile, rests on geo-blocking rather than on hiding your face, so the two questions are separate ones.",
+        text: "Your face is your strongest asset, which is why OFM builds pages around it: subscribers pay for a person and a real conversation, and pages with a face usually earn more. Privacy, meanwhile, rests on geo-blocking rather than on hiding your face, so the two questions are separate ones.",
       },
       {
         type: "h3",
@@ -4427,7 +4427,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "Anonymity: geo-blocking Japan is the default — 日本からは見えません" },
       {
         type: "p",
-        text: "For every Japanese creator we launch, blocking Japan is not an option you have to ask for — it is the standard setting from day one. We also block any other country you name. Promotion runs only toward the US, Canada, Australia and Western Europe, so your page never appears in recommendations at home. How much to show your face is your decision, made together with your manager: many creators work with partial face, angles or masks, and we plan content around that choice.",
+        text: "For every Japanese creator we launch, blocking Japan is not an option you have to ask for — it is the standard setting from day one. We also block any other country you name. Promotion runs only toward the US, Canada, Australia and Western Europe, so your page never appears in recommendations at home. Your face stays your main asset, and your privacy rests on this geo-blocking rather than on hiding it; your look and presentation are planned together with your manager.",
       },
       {
         type: "p",

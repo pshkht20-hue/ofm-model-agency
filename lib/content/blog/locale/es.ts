@@ -1893,7 +1893,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h3", text: "¿Tengo que mostrar la cara?" },
       {
         type: "p",
-        text: "No necesitas esconderla — la cara es tu mayor activo: los suscriptores pagan por la persona y la conexión, y las páginas con rostro suelen facturar más. La privacidad se protege con el geo-bloqueo de tu país de residencia, no ocultándote. El análisis de ambos formatos está en la guía sobre el trabajo sin mostrar el rostro.",
+        text: "No necesitas esconderla — la cara es tu mayor activo: los suscriptores pagan por la persona y la conexión, y las páginas con rostro suelen facturar más. La privacidad se protege con el geo-bloqueo de tu país de residencia, no ocultándote. El análisis completo está en la guía sobre el rostro y el anonimato en OnlyFans.",
       },
       { type: "h3", text: "¿Cuánto puedo ganar el primer mes?" },
       {
@@ -3283,7 +3283,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h3", text: "¿Cuánto pagan por fotos de pies en Only?" },
       {
         type: "p",
-        text: "El nicho de pies existe y es real: un set o un custom suele venderse entre $5 y $25, y los pedidos personalizados pagan más. Pero nadie vive de fotos sueltas: el ingreso estable sale de combinar suscripción, PPV y customs dentro de un nicho trabajado con constancia. La ventaja evidente: es uno de los nichos donde se trabaja sin mostrar la cara desde el primer día.",
+        text: "El nicho de pies existe y es real: un set o un custom suele venderse entre $5 y $25, y los pedidos personalizados pagan más. Pero nadie vive de fotos sueltas: el ingreso estable sale de combinar suscripción, PPV y customs dentro de un nicho trabajado con constancia.",
       },
       {
         type: "nav",
@@ -3333,11 +3333,11 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h2",
-        text: "Cómo ganar dinero en OnlyFans (también sin mostrar la cara)",
+        text: "Cómo ganar dinero en OnlyFans",
       },
       {
         type: "p",
-        text: "La fórmula ya la conoces: contenido que retiene, tráfico que trae suscriptores y chats que convierten. Vamos a lo concreto: qué se publica, cómo se vende y qué hacer si no quieres mostrar la cara.",
+        text: "La fórmula ya la conoces: contenido que retiene, tráfico que trae suscriptores y chats que convierten. Vamos a lo concreto: qué se publica, cómo se vende y cómo cuidar tu privacidad.",
       },
       {
         type: "h3",
@@ -3354,7 +3354,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "¿Y sin mostrar la cara? Es posible y hay nichos enteros que funcionan así: pies, fitness, cosplay con máscara, ASMR. Eso sí, seamos honestas: la cara es un activo fuerte —los fans pagan por una persona y una conexión— y las páginas con rostro suelen facturar más. La buena noticia: el anonimato real no depende de esconder la cara sino de un sistema — geobloqueo de tu país, seudónimo, marcas de agua y cero datos personales en el perfil. Así tu entorno no te encuentra aunque trabajes a cara descubierta.",
+        text: "La cara es un activo fuerte: los fans pagan por una persona y una conexión, y las páginas con rostro suelen facturar más. La privacidad no depende de esconder la cara, sino de un sistema: geobloqueo de tu país, seudónimo, marcas de agua y cero datos personales en el perfil.",
       },
       {
         type: "nav",
@@ -3426,7 +3426,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Sí: nichos como pies, fitness, cosplay o ASMR funcionan sin rostro, y el anonimato se refuerza con geobloqueo, seudónimo y marcas de agua. La parte honesta: las páginas con cara suelen facturar más, porque los fans pagan por una persona y una conexión. Muchas empiezan sin rostro y deciden después, cuando ven cómo funciona la privacidad por dentro.",
+        text: "La cara es tu activo más fuerte, y en OFM trabajamos con ella: los fans pagan por una persona y una conexión, y las páginas con cara suelen facturar más. La privacidad la da el geobloqueo, no ocultar el rostro.",
       },
       {
         type: "p",
