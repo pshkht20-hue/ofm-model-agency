@@ -131,7 +131,10 @@ const EMBEDS: Record<string, Partial<Record<Locale, ArticleVideoPlacement>>> = {
    * До A1 тот же абзац стоял на [6]: строка 18+ сдвинула индексы на +1.
    *
    * rabota-dlya-devushek-onlajn (ru и uk зеркальны): [0] p-лид → [1] p «Этот
-   * разбор для девушки…» → [2] nav. Вставка после [1]; inline-CTA на 26.
+   * разбор для девушки…» → [2] p «только для девушек 18+» (Санитарный A1,
+   * 24.10) → [3] nav. Вставка после [2]: паттерн «карточка после лида перед
+   * nav», строка 18+ остаётся частью лида и идёт до ролика о доходе;
+   * inline-CTA на 27. До A1 nav стоял на [2], вставка была после [1].
    */
   'onlyfans-skolko-zarabatyvayut-modeli': {
     ru: { afterIndex: 1, data: RU_EARN },
@@ -146,8 +149,8 @@ const EMBEDS: Record<string, Partial<Record<Locale, ArticleVideoPlacement>>> = {
     uk: { afterIndex: 7, data: UK_EARN },
   },
   'rabota-dlya-devushek-onlajn': {
-    ru: { afterIndex: 1, data: RU_EARN },
-    uk: { afterIndex: 1, data: UK_EARN },
+    ru: { afterIndex: 2, data: RU_EARN },
+    uk: { afterIndex: 2, data: UK_EARN },
   },
 };
 
