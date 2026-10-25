@@ -21,15 +21,6 @@ import { applicationDraftText, type DraftRole } from '@/lib/telegram-draft';
  * Код, имя и подписи скрыты от записей Clarity обёрткой формы (data-clarity-mask).
  */
 
-function CodeChip({ label, code }: { label: string; code: string }) {
-  return (
-    <p className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.04] px-4 py-1.5 text-sm text-white/70">
-      {label}
-      <span className="font-mono text-base font-semibold tracking-[0.2em] text-white">{code}</span>
-    </p>
-  );
-}
-
 type SuccessProps = {
   locale: string;
   role: DraftRole;
@@ -71,7 +62,6 @@ export function ApplySuccessScreen({
         >
           {compact ? s.quickSuccessTitle : s.successTitle}
         </h3>
-        <CodeChip label={s.codeLabel} code={code} />
         <p className="max-w-md text-sm leading-relaxed text-white/65">{night ? s.nightLine : s.dayLine}</p>
         <TelegramCta
           location={compact ? 'quick_apply_success' : 'apply_success'}
@@ -174,7 +164,6 @@ export function ApplyErrorScreen({
       >
         {s.errorTitle}
       </h3>
-      <CodeChip label={s.codeLabel} code={code} />
       <p className="max-w-md text-sm leading-relaxed text-white/65">{text}</p>
       <TelegramCta
         location={compact ? 'quick_apply_error' : 'apply_error'}
