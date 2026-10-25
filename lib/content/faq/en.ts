@@ -92,7 +92,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'Can I stop working with the agency, and how fast?',
         answer:
-          'Any time, and that is a deliberate policy. You start without red tape: how leaving works and what happens to the balance and the page are discussed before launch, together with the percentage, the work plan and content boundaries. What keeps an honest team honest is results: if we didn’t grow balances, models would leave.',
+          'Of course, you can end the collaboration at any time. Just give your manager 2-3 weeks’ notice so we can wind down all processes ahead of time.',
       },
       {
         question: 'Who owns the OnlyFans account?',

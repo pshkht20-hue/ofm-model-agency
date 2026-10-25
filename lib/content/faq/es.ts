@@ -92,7 +92,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Puedo dejar la agencia y con qué rapidez?',
         answer:
-          'En cualquier momento, y es una postura deliberada. Empiezas sin burocracia: cómo funciona la salida y qué pasa con el balance y la página lo hablamos antes del lanzamiento, junto con el porcentaje, el plan de trabajo y los límites del contenido. A un equipo honesto lo sostienen los resultados: si no hiciéramos crecer los balances, las modelos se irían.',
+          'Por supuesto, puedes terminar la colaboración en cualquier momento. Avisa a tu manager con 2-3 semanas de antelación para que podamos detener todos los procesos a tiempo.',
       },
       {
         question: '¿A quién pertenece la cuenta de OnlyFans?',
