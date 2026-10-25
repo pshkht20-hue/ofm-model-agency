@@ -124,9 +124,11 @@ const EMBEDS: Record<string, Partial<Record<Locale, ArticleVideoPlacement>>> = {
    * rabota-dlya-mam-v-dekrete (ru и uk зеркальны): правило чувствительных
    * сочетаний (docs/BRAND-IMAGE-STYLE-2026-09.md) — карточку не ставить
    * вплотную к абзацам про ребёнка. Лид [0] заканчивается «под ребёнка»,
-   * [4] p и [5] ul — про режим ребёнка, поэтому вставка после [6] — нейтральный
-   * p про фильтр форматов («не берут денег за вход»), перед h2 [7] «6 форматов»;
-   * соседние блоки [6]/[7] без упоминаний детей, inline-CTA на 24.
+   * [2] p — строка «только для девушек 18+» (Санитарный A1, 24.10), [3] nav,
+   * [5] p и [6] ul — про режим ребёнка, поэтому вставка после [7] — нейтральный
+   * p про фильтр форматов («не берут денег за вход»), перед h2 [8] «6 форматов»;
+   * соседние блоки [7]/[8] без упоминаний детей, inline-CTA на 25.
+   * До A1 тот же абзац стоял на [6]: строка 18+ сдвинула индексы на +1.
    *
    * rabota-dlya-devushek-onlajn (ru и uk зеркальны): [0] p-лид → [1] p «Этот
    * разбор для девушки…» → [2] nav. Вставка после [1]; inline-CTA на 26.
@@ -140,8 +142,8 @@ const EMBEDS: Record<string, Partial<Record<Locale, ArticleVideoPlacement>>> = {
     uk: { afterIndex: 1, data: UK_EARN },
   },
   'rabota-dlya-mam-v-dekrete': {
-    ru: { afterIndex: 6, data: RU_EARN },
-    uk: { afterIndex: 6, data: UK_EARN },
+    ru: { afterIndex: 7, data: RU_EARN },
+    uk: { afterIndex: 7, data: UK_EARN },
   },
   'rabota-dlya-devushek-onlajn': {
     ru: { afterIndex: 1, data: RU_EARN },
