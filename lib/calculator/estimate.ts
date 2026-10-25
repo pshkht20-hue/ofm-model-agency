@@ -40,9 +40,18 @@ const GLOBAL_FLOOR_LOW = 7_000;
 const GLOBAL_FLOOR_HIGH = 8_000;
 
 /**
+ * Потолок публичного доход-клейма проекта: балансы топ-страниц $15 000-50 000
+ * (gross). Решение владельца №34 (25.10.2026): «просто сделай потолок 50к».
+ * Ни одна полоса, ни превью-вилка, ни результат калькулятора не выше этой суммы.
+ */
+export const INCOME_CAP_USD = 50_000;
+
+/**
  * Диапазоны total баланса страницы OnlyFans (gross), не net модели.
  * `min` — score 0: без опыта, без аудитории, минимум времени.
  * `max` — score 1: опыт + соцсети + полная занятость.
+ * Верх каждой полосы не выше INCOME_CAP_USD (№34: было $52-68K у babyface,
+ * cosplay, asian, busty, ebony; срезано до $50K, низ полос и названия типажей прежние).
  */
 const ARCHETYPE_BANDS: Record<
   Archetype,
@@ -50,13 +59,13 @@ const ARCHETYPE_BANDS: Record<
 > = {
   exploring: { low: [7_000, 13_000], high: [11_000, 26_000] },
   natural: { low: [7_000, 12_000], high: [10_000, 24_000] },
-  babyface: { low: [16_000, 24_000], high: [40_000, 58_000] },
-  cosplay: { low: [18_000, 28_000], high: [45_000, 68_000] },
-  asian: { low: [15_000, 26_000], high: [42_000, 62_000] },
-  busty: { low: [14_000, 24_000], high: [38_000, 55_000] },
+  babyface: { low: [16_000, 24_000], high: [40_000, 50_000] },
+  cosplay: { low: [18_000, 28_000], high: [45_000, 50_000] },
+  asian: { low: [15_000, 26_000], high: [42_000, 50_000] },
+  busty: { low: [14_000, 24_000], high: [38_000, 50_000] },
   blonde: { low: [10_000, 18_000], high: [32_000, 50_000] },
   tattoo: { low: [11_000, 19_000], high: [34_000, 48_000] },
-  ebony: { low: [11_000, 20_000], high: [35_000, 52_000] },
+  ebony: { low: [11_000, 20_000], high: [35_000, 50_000] },
   // Mature 30+/40+: рекордное удержание и полупустой RU-сегмент, но без
   // мега-китов — вилка между natural и blonde. Зеркалит таблицу денег
   // mature-modeli-onlyfans (система $3–15K gross, топ $15–50K): net 20–30%
@@ -122,6 +131,9 @@ function resolveInsights(answers: CalculatorAnswers): string[] {
 function finalizeRange(low: number, high: number): { low: number; high: number } {
   let safeLow = Math.max(low, GLOBAL_FLOOR_LOW);
   let safeHigh = Math.max(high, GLOBAL_FLOOR_HIGH, safeLow + 1_500);
+  // Страховка потолка: даже если полосу поправят, результат не выйдет за $50K.
+  safeHigh = Math.min(safeHigh, INCOME_CAP_USD);
+  safeLow = Math.min(safeLow, safeHigh - 1_500);
   return { low: roundToHundred(safeLow), high: roundToHundred(safeHigh) };
 }
 

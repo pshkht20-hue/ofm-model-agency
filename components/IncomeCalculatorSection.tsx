@@ -21,6 +21,7 @@ import { SectionShell } from '@/components/ui/SectionShell';
 import { formatUsd, usdParts } from '@/lib/results/format';
 import {
   estimateIncome,
+  INCOME_CAP_USD,
   QUESTION_ORDER,
   type Archetype,
   type CalculatorAnswers,
@@ -53,10 +54,10 @@ const INITIAL_ANSWERS: Partial<CalculatorAnswers> = {};
 
 /** Пауза перед авто-переходом на следующий шаг после выбора опции (шаги 1–3). */
 const AUTO_NEXT_DELAY_MS = 350;
-// Потолок публичного доход-клейма проекта — $50K. Вилки топ-типажей считаются
-// выше, но в текст кнопки такие цифры не выносим («забронировать $68K» читается
-// как обещание) — показываем нейтральный вариант без чисел.
-const CTA_RANGE_CAP_USD = 50_000;
+// Потолок публичного доход-клейма проекта — $50K. С №34 (25.10.2026) вилки
+// сами срезаны этим потолком в estimate.ts; проверка остаётся страховкой:
+// сумму выше потолка в текст кнопки не выносим, показываем вариант без чисел.
+const CTA_RANGE_CAP_USD = INCOME_CAP_USD;
 
 /** «Инклюзивные» типажи показываем первыми — снижают порог входа на самом сложном шаге. */
 const ARCHETYPES_FIRST = ['exploring', 'natural'];
