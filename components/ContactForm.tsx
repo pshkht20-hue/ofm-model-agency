@@ -105,6 +105,9 @@ export function ContactForm() {
   // умолчанию). Разделение нужно владельцу для сортировки лидов в Telegram.
   const [role, setRole] = useState<ApplicantRole>('model');
   const [name, setName] = useState('');
+  // Имя из отправленной анкеты для готового сообщения в Telegram (тексты v2, 25.10):
+  // поле name очищается после успеха, а экрану имя нужно и дальше.
+  const [sentName, setSentName] = useState('');
   const [telegram, setTelegram] = useState('');
   const [age, setAge] = useState('');
   const [message, setMessage] = useState('');
@@ -258,6 +261,7 @@ export function ContactForm() {
     setErrorMessage('');
     const withPrefill = payload.hasCalcPrefill === true;
     const usedCode = String(payload.code);
+    setSentName(typeof payload.name === 'string' ? payload.name : '');
 
     // Все попытки отправки — включая те, что закончатся 400/429/сеткой.
     trackFormSubmit({ locale, has_calc_prefill: withPrefill, page_path: pagePath });
@@ -378,6 +382,7 @@ export function ContactForm() {
             locale={locale}
             role={role}
             code={code}
+            name={sentName}
             night={night}
             contactSuspicious={contactSuspicious}
             headingRef={headingRef}
@@ -390,6 +395,7 @@ export function ContactForm() {
             locale={locale}
             role={role}
             code={code}
+            name={sentName}
             kind={errorScreen}
             serverText={errorMessage}
             onRetry={retry}

@@ -260,7 +260,7 @@ function renderBlock(block: BlogBlock, i: number) {
       >
         <h2 className="font-serif text-xl text-white mb-3">{block.title}</h2>
         <p className="text-body text-sm mb-6 max-w-lg mx-auto">{linkifyTelegram(block.body)}</p>
-        {/* Кнопка прямо в чат менеджера получает черновик с кодом страницы («Окно 1»,
+        {/* Кнопка прямо в чат менеджера получает черновик по теме статьи («Окно 1»,
             W1-06d); кнопки на канал и внутренние ссылки идут прежним путём. */}
         {isManagerTelegramHref(block.buttonHref) ? (
           <TrackedTelegramLink

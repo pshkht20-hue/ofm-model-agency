@@ -6,7 +6,6 @@ import { TelegramCta } from '@/components/TelegramCta';
 import { SuccessCheckmark } from '@/components/ui/SuccessCheckmark';
 import {
   applyScreens,
-  fill,
   OFFICIAL_ACCOUNT_STRICT,
   SHOW_CHANNEL_LINE,
 } from '@/lib/content/apply-screens';
@@ -16,9 +15,10 @@ import { applicationDraftText, type DraftRole } from '@/lib/telegram-draft';
 /**
  * Экраны после заявки и при сбое («Окно 1», W1-01, W1-02, W1-03): общие для
  * полной анкеты (ContactForm) и быстрой заявки (QuickApply, compact).
- * Главная кнопка ведёт в Telegram с готовым сообщением, в котором уже есть
- * код заявки: девушка пишет первой, и менеджер сразу видит, чья это заявка.
- * Код и подписи скрыты от записей Clarity обёрткой формы (data-clarity-mask).
+ * Главная кнопка ведёт в Telegram с готовым сообщением (тексты v2, 25.10): в нём
+ * имя девушки из анкеты, без кода. Менеджер сверяет с карточкой по имени и
+ * времени, видимый код заявки остаётся на экране и в уведомлении владельцу.
+ * Код, имя и подписи скрыты от записей Clarity обёрткой формы (data-clarity-mask).
  */
 
 function CodeChip({ label, code }: { label: string; code: string }) {
@@ -34,6 +34,8 @@ type SuccessProps = {
   locale: string;
   role: DraftRole;
   code: string;
+  /** Имя из анкеты для готового сообщения; у быстрой заявки поля имени нет. */
+  name?: string;
   night: boolean;
   /** Ник не похож на ник Telegram или телефон: просим написать самой. */
   contactSuspicious: boolean;
@@ -47,6 +49,7 @@ export function ApplySuccessScreen({
   locale,
   role,
   code,
+  name,
   night,
   contactSuspicious,
   compact = false,
@@ -73,7 +76,7 @@ export function ApplySuccessScreen({
         <TelegramCta
           location={compact ? 'quick_apply_success' : 'apply_success'}
           label={s.mainButton}
-          draft={applicationDraftText(locale, role, code, 'success')}
+          draft={applicationDraftText(locale, role, 'success', name)}
           className="w-full sm:w-auto"
         />
         <p className="max-w-sm text-xs leading-relaxed text-white/50">
@@ -129,6 +132,8 @@ type ErrorProps = {
   locale: string;
   role: DraftRole;
   code: string;
+  /** Имя из анкеты для готового сообщения; у быстрой заявки поля имени нет. */
+  name?: string;
   kind: ApplyErrorKind;
   /** Текст лимита 429 от сервера (на языке страницы). */
   serverText?: string;
@@ -143,6 +148,7 @@ export function ApplyErrorScreen({
   locale,
   role,
   code,
+  name,
   kind,
   serverText,
   onRetry,
@@ -155,7 +161,9 @@ export function ApplyErrorScreen({
   const text =
     kind === 'rate' && serverText
       ? serverText
-      : fill(kind === 'network' ? s.errorNetwork : s.errorServer, code);
+      : kind === 'network'
+        ? s.errorNetwork
+        : s.errorServer;
 
   return (
     <div id={id} role="alert" className={`flex flex-col items-center text-center ${compact ? 'gap-3 pt-2' : 'gap-4 py-2'}`}>
@@ -171,7 +179,7 @@ export function ApplyErrorScreen({
       <TelegramCta
         location={compact ? 'quick_apply_error' : 'apply_error'}
         label={s.errorButton}
-        draft={applicationDraftText(locale, role, code, 'error')}
+        draft={applicationDraftText(locale, role, 'error', name)}
         className="w-full sm:w-auto"
       />
       {/* Лимит 429: повтор в течение 10 минут снова упрётся в лимит, поэтому только Telegram. */}

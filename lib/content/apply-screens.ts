@@ -7,7 +7,8 @@ import { RESPONSE_TEXT } from '@/lib/content/response-hours';
  * Голос: «вы» в RU и «ви» в UK (решение №36), EN без изменений, ES на «tú», как
  * весь сайт; «девушки/дівчата», без процентов, сумм и договоров: экран
  * быстрой заявки живёт на вакансиях, поэтому и он по витринным правилам.
- * {code} в строках подставляется функцией fill().
+ * Код заявки в тексты экранов не подставляется: готовое сообщение в Telegram
+ * с v2 (25.10) несёт имя девушки, а код виден только на плашке экрана.
  */
 
 /**
@@ -81,9 +82,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
       'Похоже, в нике ошибка, и мы можем не найти вас сами. Напишите менеджеру по кнопке выше, так мы точно свяжемся.',
     errorTitle: 'Заявка не дошла',
     errorServer:
-      'Сбой на нашей стороне. Напишите менеджеру в Telegram: код заявки {code} уже в сообщении, так мы ничего не потеряем. Или попробуйте отправить ещё раз.',
+      'Сбой на нашей стороне. Напишите менеджеру в Telegram: сообщение уже готово, так мы ничего не потеряем. Или попробуйте отправить ещё раз.',
     errorNetwork:
-      'Нет связи с интернетом. Проверьте сеть и отправьте ещё раз или напишите менеджеру в Telegram: код {code} уже в сообщении.',
+      'Нет связи с интернетом. Проверьте сеть и отправьте ещё раз или напишите менеджеру в Telegram: сообщение уже готово.',
     errorButton: 'Написать менеджеру в Telegram',
     retry: 'Отправить ещё раз',
     validationTelegram: 'Написать менеджеру в Telegram',
@@ -112,9 +113,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
       "Схоже, у ніку помилка, і ми можемо не знайти вас самі. Напишіть менеджеру кнопкою вище, так ми точно зв'яжемося.",
     errorTitle: 'Заявка не дійшла',
     errorServer:
-      'Збій на нашому боці. Напишіть менеджеру в Telegram: код заявки {code} уже в повідомленні, так ми нічого не втратимо. Або спробуйте надіслати ще раз.',
+      'Збій на нашому боці. Напишіть менеджеру в Telegram: повідомлення вже готове, так ми нічого не втратимо. Або спробуйте надіслати ще раз.',
     errorNetwork:
-      "Немає зв'язку з інтернетом. Перевірте мережу й надішліть ще раз або напишіть менеджеру в Telegram: код {code} уже в повідомленні.",
+      "Немає зв'язку з інтернетом. Перевірте мережу й надішліть ще раз або напишіть менеджеру в Telegram: повідомлення вже готове.",
     errorButton: 'Написати менеджеру в Telegram',
     retry: 'Надіслати ще раз',
     validationTelegram: 'Написати менеджеру в Telegram',
@@ -143,9 +144,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
       "Your username may have a typo, so we might not be able to find you. Tap the button above to message the manager, and we'll be sure to connect.",
     errorTitle: "Your application didn't go through",
     errorServer:
-      'Something went wrong on our side. Message the manager on Telegram: your code {code} is already in the message, so nothing gets lost. Or try sending again.',
+      'Something went wrong on our side. Message the manager on Telegram: the message is already written for you, so nothing gets lost. Or try sending again.',
     errorNetwork:
-      'No internet connection. Check your network and send again, or message the manager on Telegram: your code {code} is already in the message.',
+      'No internet connection. Check your network and send again, or message the manager on Telegram: the message is already written for you.',
     errorButton: 'Message the manager on Telegram',
     retry: 'Send again',
     validationTelegram: 'Message the manager on Telegram',
@@ -174,9 +175,9 @@ export const APPLY_SCREENS: Record<Locale, ApplyScreenTexts> = {
       'Puede que tu usuario tenga un error y no te encontremos. Escribe al manager con el botón de arriba para que podamos contactarte.',
     errorTitle: 'Tu solicitud no se envió',
     errorServer:
-      'Hubo un fallo por nuestra parte. Escribe al manager por Telegram: tu código {code} ya está en el mensaje, así no se pierde nada. O intenta enviarla otra vez.',
+      'Hubo un fallo por nuestra parte. Escribe al manager por Telegram: el mensaje ya está listo, así no se pierde nada. O intenta enviarla otra vez.',
     errorNetwork:
-      'Sin conexión a internet. Revisa la red y vuelve a enviarla, o escribe al manager por Telegram: tu código {code} ya está en el mensaje.',
+      'Sin conexión a internet. Revisa la red y vuelve a enviarla, o escribe al manager por Telegram: el mensaje ya está listo.',
     errorButton: 'Escribir al manager por Telegram',
     retry: 'Enviar otra vez',
     validationTelegram: 'Escribir al manager por Telegram',
@@ -193,11 +194,6 @@ export const QUICK_CONSENT: Record<Locale, { text: string; link: string }> = {
 
 export function applyScreens(locale: string): ApplyScreenTexts {
   return APPLY_SCREENS[(locale in APPLY_SCREENS ? locale : 'ru') as Locale];
-}
-
-/** Подстановка кода заявки в строку с {code}. */
-export function fill(text: string, code: string): string {
-  return text.replace(/\{code\}/g, code);
 }
 
 /**

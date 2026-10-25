@@ -5,7 +5,7 @@ import { routing } from '@/i18n/routing';
  * Ответы /api/application на языке страницы («Окно 1», W1-04): RU и UK на «вы»
  * (решение №36), ES на «tú», как весь сайт.
  * submitFailed и rateLimit зовут написать менеджеру: экран ошибки сам даёт
- * кнопку Telegram с кодом заявки в готовом сообщении.
+ * кнопку Telegram с готовым сообщением (с v2 в нём имя из анкеты, не код).
  */
 const ERRORS: Record<
   Locale,
@@ -30,7 +30,7 @@ const ERRORS: Record<
     ageConfirmRequired: 'Подтвердите, что вам есть 18 лет',
     messageTooLong: 'Сообщение слишком длинное',
     submitFailed:
-      'Заявка не отправилась из-за сбоя. Напишите менеджеру в Telegram: код заявки уже в сообщении.',
+      'Заявка не отправилась из-за сбоя. Напишите менеджеру в Telegram: сообщение уже готово.',
     rateLimit: 'Слишком много заявок подряд. Подождите 10-15 минут или напишите менеджеру в Telegram.',
   },
   en: {
@@ -42,7 +42,7 @@ const ERRORS: Record<
     ageConfirmRequired: 'Please confirm you are 18 or older',
     messageTooLong: 'Message is too long',
     submitFailed:
-      "Your application didn't go through because of a glitch. Message the manager on Telegram: your application code is already in the message.",
+      "Your application didn't go through because of a glitch. Message the manager on Telegram: the message is already written for you.",
     rateLimit: 'Too many applications in a row. Wait 10-15 minutes or message the manager on Telegram.',
   },
   uk: {
@@ -54,7 +54,7 @@ const ERRORS: Record<
     ageConfirmRequired: 'Підтвердіть, що вам є 18 років',
     messageTooLong: 'Повідомлення задовге',
     submitFailed:
-      'Заявка не надіслалася через збій. Напишіть менеджеру в Telegram: код заявки вже в повідомленні.',
+      'Заявка не надіслалася через збій. Напишіть менеджеру в Telegram: повідомлення вже готове.',
     rateLimit: 'Забагато заявок поспіль. Зачекайте 10-15 хвилин або напишіть менеджеру в Telegram.',
   },
   es: {
@@ -66,7 +66,7 @@ const ERRORS: Record<
     ageConfirmRequired: 'Confirma que tienes 18 años o más',
     messageTooLong: 'El mensaje es demasiado largo',
     submitFailed:
-      'La solicitud no se envió por un fallo. Escribe al manager por Telegram: el código de tu solicitud ya está en el mensaje.',
+      'La solicitud no se envió por un fallo. Escribe al manager por Telegram: el mensaje ya está listo.',
     rateLimit: 'Demasiadas solicitudes seguidas. Espera 10-15 minutos o escribe al manager por Telegram.',
   },
 };

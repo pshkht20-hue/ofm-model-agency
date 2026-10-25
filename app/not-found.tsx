@@ -119,7 +119,7 @@ export default function NotFound() {
         <NotFoundTitle titles={TITLES} />
         {LOCALES.map((l) => {
           const copy = COPY[l];
-          // Черновик с кодом страницы 404 той же чистой функцией, что в TelegramCta.
+          // Черновик для 404 (общий текст v2) той же чистой функцией, что в TelegramCta.
           const telegramHref = telegramBase ? withTelegramDraft(telegramBase, pageDraftText(l, '404')) : null;
           return (
             <div key={l} data-nf-lang={l} lang={l} style={block}>

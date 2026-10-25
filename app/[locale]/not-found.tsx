@@ -9,7 +9,7 @@ import { pageDraftText } from '@/lib/telegram-draft';
 // локально: ключи нужны только здесь. Meta robots не добавляем: Next сам ставит
 // noindex для not-found, второй тег был бы дублем.
 // «Окно 1» (W1-27): тексты на «вы» (решение №36), ссылки на главную и вакансии, кнопка
-// Telegram с готовым сообщением и кодом страницы 404.
+// Telegram с готовым сообщением (общий текст v2, без кода).
 const COPY: Record<Locale, { title: string; text: string; home: string; vacancies: string; telegram: string }> = {
   ru: {
     title: 'Страница не найдена',
