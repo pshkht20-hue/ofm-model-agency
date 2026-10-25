@@ -231,7 +231,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Los juicios por contratos de creadoras casi no existen en este mercado; para la mayoría de las chicas un «contrato» firmado es un ritual tranquilizador, no una protección. Los abogados que revisaron contratos de agencias en el Reino Unido concluyeron que sobre todo quitan poder de negociación a la creadora. La protección real es otra: historial de pagos verificable, casos vivos y la libertad de irte en el momento en que algo no te cuadre. Las agencias que exigen permanencias de 12–36 meses con penalizaciones por salida te están cobrando, literalmente, por despedirlas. Esto es lo que conviene dejar claro en el casting:",
+        text: "La protección real la dan tres cosas que puedes comprobar antes de empezar: la reputación del equipo, un historial de pagos verificable y la libertad de irte en el momento en que algo no te cuadre. Esto es lo que conviene dejar claro en el casting:",
       },
       {
         type: "ul",

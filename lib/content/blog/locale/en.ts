@@ -247,7 +247,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Court battles over creator contracts are practically unheard of in this market; for most girls a signed “contract” is a comfort ritual, not protection. Lawyers who reviewed agency contracts in the UK found they mostly strip creators of negotiating power. Real protection looks different: verifiable payout history, live cases, and the freedom to walk away the moment something feels off. Agencies that demand 12–36-month lock-ins with exit penalties are literally making you pay to fire them. Here is what to pin down at the casting instead:",
+        text: "Real protection comes from three things you can check before you start: the team's reputation, verifiable payout history and the freedom to walk away the moment something feels off. Here is what to pin down at the casting:",
       },
       {
         type: "ul",
