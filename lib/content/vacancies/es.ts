@@ -153,7 +153,7 @@ export const VACANCY_HUB_ES: VacancyHubContent = {
     {
       question: '¿Cuánto paga una agencia de OnlyFans?',
       answer:
-        'Chatter: tarifa base + bono por las ventas de tu propio chat (rango en la entrevista tras la prueba). Modelo: de $3 000 a $10 000/mes, y las páginas top de la agencia alcanzan saldos de $15 000-50 000/mes. Tu rango personal y el plan te los mostramos por Telegram.',
+        'Chatter: tarifa base + bono por las ventas de tu propio chat (rango en la entrevista tras la prueba). Modelo: de $3 000 a $10 000/mes. Tu rango personal y el plan te los mostramos por Telegram.',
     },
     {
       question: '¿Cuándo llega el primer pago?',
@@ -379,7 +379,7 @@ const FOR_GIRLS_ES: VacancyContent = {
     {
       heading: 'Qué obtienes',
       bullets: [
-        'Ingresos de $3 000 a $10 000/mes; las páginas top de la agencia alcanzan balances de $15 000–50 000/mes',
+        'Ingresos de $3 000 a $10 000/mes',
         'El equipo lleva la página: registro, promo, chat y finanzas dejan de ser tu problema',
         'Contenido 2–3 horas al día según un plan listo — compatible con estudios u otro empleo',
         'Formación y onboarding desde cero — no hacen falta experiencia ni portafolio',
@@ -444,7 +444,7 @@ const FOR_GIRLS_ES: VacancyContent = {
     {
       question: '¿Cuánto se puede ganar?',
       answer:
-        'El rango visible es de $3 000 a $10 000/mes; las páginas top de la agencia alcanzan balances de $15 000–50 000/mes. Las condiciones exactas para tu caso te las contamos por Telegram.',
+        'El rango visible es de $3 000 a $10 000/mes. Las condiciones exactas para tu caso te las contamos por Telegram.',
     },
     {
       question: '¿Cuándo llega el primer dinero?',

@@ -155,7 +155,7 @@ export const VACANCY_HUB_EN: VacancyHubContent = {
     {
       question: 'How much does an OnlyFans agency pay?',
       answer:
-        'Chatter: base rate + a bonus on your own chat’s sales (range named at the interview after the test task). Model: $3 000-10 000/mo, and the agency’s top pages reach balances of $15 000-50 000/mo. We’ll share your personal range and plan on Telegram.',
+        'Chatter: base rate + a bonus on your own chat’s sales (range named at the interview after the test task). Model: $3 000-10 000/mo. We’ll share your personal range and plan on Telegram.',
     },
     {
       question: 'When does the first payout arrive?',
@@ -381,7 +381,7 @@ const FOR_GIRLS_EN: VacancyContent = {
     {
       heading: 'What you get',
       bullets: [
-        'Income from $3 000 to $10 000/mo; the agency’s top pages reach balances of $15 000–50 000/mo',
+        'Income from $3 000 to $10 000/mo',
         'The team runs the page: registration, promo, chat and finances are off your plate',
         '2–3 hours of content a day on a ready plan — fits around studies or another job',
         'Training and onboarding from scratch — no experience or portfolio needed',
@@ -446,7 +446,7 @@ const FOR_GIRLS_EN: VacancyContent = {
     {
       question: 'How much can I earn?',
       answer:
-        'The visible range is from $3 000 to $10 000/mo; the agency’s top pages reach balances of $15 000–50 000/mo. We’ll go through the exact terms for your situation on Telegram.',
+        'The visible range is from $3 000 to $10 000/mo. We’ll go through the exact terms for your situation on Telegram.',
     },
     {
       question: 'When does the first money come?',
