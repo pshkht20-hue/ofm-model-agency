@@ -145,6 +145,11 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
           'Solo creadoras mayores de 18 años que puedan completar la verificación de la plataforma. OnlyFans exige confirmación de identidad según sus normas; sin eso no hay monetización plena.',
       },
       {
+        question: '¿Qué documentos sirven para la verificación?',
+        answer:
+          'La plataforma solo acepta un documento original y vigente con foto: pasaporte nacional, pasaporte internacional, tarjeta de identidad o licencia de conducir. Las copias en papel, los escaneos, las fotos de copias y los documentos vencidos no pasan: la verificación incluye un selfie sosteniendo el mismo documento. Tus documentos los muestras solo a la plataforma, no hace falta enviarlos a la agencia. Si ahora no tienes el original a mano, por ejemplo está en la notaría o en renovación, deja tu solicitud igualmente: acordaremos el inicio para la fecha en que lo recuperes.',
+      },
+      {
         question: '¿Cuánto tiempo debe dedicar la propia modelo?',
         answer:
           'Depende del formato. Como mínimo: rodajes y alineación del plan (a menudo 5–15 horas semanales al inicio). Con management completo el equipo cubre chats y marketing, pero sin tu contenido el crecimiento se detiene.',

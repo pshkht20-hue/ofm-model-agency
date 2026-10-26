@@ -145,6 +145,11 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
           'Only creators aged 18+ who can complete platform verification. OnlyFans requires identity confirmation under its rules — without that, full monetization is not possible.',
       },
       {
+        question: 'Which documents work for verification?',
+        answer:
+          'The platform accepts only an original, valid photo ID: a national passport, an international passport, an ID card or a driving licence. Paper copies, scans, photos of copies and expired documents do not pass: verification includes a selfie holding the same document. You show your documents only to the platform itself, there is no need to send them to the agency. If the original is not at hand right now, for example at a notary or being renewed, leave an application anyway: we will plan the start for the date the document is back.',
+      },
+      {
         question: 'How much time does the model need to commit?',
         answer:
           'It depends on the format. At minimum: shoots and plan alignment (often 5–15 hours per week at the start). With full management, the team handles chats and marketing, but growth stops without your content.',
