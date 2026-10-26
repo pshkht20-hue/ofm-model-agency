@@ -4,6 +4,7 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { Geist, Playfair_Display } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import { AnalyticsLoader } from '@/components/analytics/AnalyticsLoader';
 import { AttributionCapture } from '@/components/analytics/AttributionCapture';
 import { ClarityLoader } from '@/components/analytics/ClarityLoader';
@@ -167,6 +168,9 @@ export default async function LocaleLayout({ children, params }: Props) {
             <ClarityLoader />
             <ScrollDepthTracker />
             <AttributionCapture />
+            {/* Vercel Web Analytics: безкуковый счётчик визитов (знаменатель для GA4,
+                которая видит только согласившихся). Скрипт лёгкий, контент не меняет. */}
+            <Analytics />
           </NextIntlClientProvider>
         </MotionProvider>
       </body>
