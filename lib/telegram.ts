@@ -354,9 +354,11 @@ export function formatApplicationMessage(data: ApplicationPayload, options: Form
 
   const roleLabel = ROLE_LABELS[data.role ?? 'model'];
   const codePart = data.code ? ` · код ${escapeTelegramHtml(data.code)}` : '';
+  // Решение владельца 26.10: заголовок без кода (вариант Б), код служебной
+  // строкой в хвосте. У теста цепочки код остаётся в заголовке.
   const header = data.synthetic
     ? `🧪 <b>ТЕСТ ЦЕПОЧКИ (робот), не лид${codePart}</b>`
-    : `🆕 <b>Новая заявка · ${roleLabel}${codePart}</b>`;
+    : `🆕 <b>Новая заявка · ${roleLabel}</b>`;
   const quick = data.formType === 'quick';
   const lines = [
     header,
@@ -377,6 +379,7 @@ export function formatApplicationMessage(data: ApplicationPayload, options: Form
     data.message
       ? `\n✨ <b>Интересы:</b>\n${escapeTelegramHtml(data.message)}`
       : null,
+    data.code && !data.synthetic ? `🔑 <b>Код заявки:</b> ${escapeTelegramHtml(data.code)}` : null,
     ...(data.attribution ? formatAttribution(data.attribution, data.device, options) : []),
   ];
 
