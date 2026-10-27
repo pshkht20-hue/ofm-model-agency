@@ -97,7 +97,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿A quién pertenece la cuenta de OnlyFans?',
         answer:
-          'La página se registra con los documentos de la modelo: la verificación en la plataforma la pasas tú, y conoces todos los datos de tu cuenta — el nick, el correo, qué está registrado a nombre de quién. Gestionar la cuenta y sus finanzas es trabajo de la agencia: registro, ventas, sistemas de pago y pagos según calendario. Tu acceso a la página es por acuerdo — por ejemplo, el día de pago. Si terminas la colaboración — y puedes hacerlo en cualquier momento —, la página registrada con tus documentos se queda contigo.',
+          'La página se registra con los documentos de la modelo: la verificación en la plataforma la pasas tú, y todos los datos de tu cuenta - el nick, el correo, qué está registrado a nombre de quién - están a tu vista. Gestionar la cuenta y sus finanzas es trabajo de la agencia: registro, ventas, sistemas de pago y pagos según calendario. Tu acceso a la cuenta es total y sin restricciones: trabajamos con máxima transparencia. Si terminas la colaboración - y puedes hacerlo en cualquier momento - la página registrada con tus documentos se queda contigo.',
       },
       {
         question: '¿Cómo funcionan los pagos desde la plataforma?',
@@ -107,12 +107,12 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Cómo recibo los pagos?',
         answer:
-          'Los pagos son mensuales, con un calendario que tu manager fija antes de empezar. Lo más habitual es que tu parte llegue a tu tarjeta; el método exacto lo ajustamos a tu país ya en el chat. Si nunca has tenido una cuenta en un sistema de pago, incluso mejor: nos encargamos del registro y la configuración, y tú no pagas nada.',
+          'Los pagos llegan dos veces al mes, con un calendario que tu manager fija antes de empezar. Lo más habitual es que tu parte llegue a tu tarjeta; el método exacto lo ajustamos a tu país ya en el chat. Si nunca has tenido una cuenta en un sistema de pago, incluso mejor: nos encargamos del registro y la configuración, y tú no pagas nada.',
       },
       {
         question: '¿Cuándo llega el primer pago?',
         answer:
-          'El primer mes es de preparación: puesta a punto de la página, publicidad y captación de suscriptores dispuestos a pagar. El primer pago llega al cierre del primer mes de liquidación, y tu manager fija el calendario antes del inicio, sin ningún «ya veremos». A partir de ahí los pagos son mensuales, y en el casting escucharás una estimación honesta del primer mes.',
+          'El primer mes es de preparación: puesta a punto de la página, publicidad y captación de suscriptores dispuestos a pagar. Los pagos llegan dos veces al mes, y tu manager fija el calendario antes del inicio, sin ningún «ya veremos». En el casting escucharás una estimación honesta del primer mes.',
       },
       {
         question: '¿Qué significan «total», «balance» y «neto»?',
@@ -127,12 +127,12 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Quién gestiona la cuenta y cómo se protegen mis datos?',
         answer:
-          'La cuenta la gestiona por completo el equipo de la agencia — eso es el full service: marketing, chats, ventas y sistemas de pago están de nuestro lado, mientras que la página está registrada con los documentos de la modelo y tú conoces todos los datos de tu cuenta. Dentro del equipo rigen NDA y reglamentos internos: los datos personales y el contenido solo los ven quienes los necesitan para trabajar. Tu acceso a la página es por acuerdo — por ejemplo, el día de pago.',
+          'La cuenta la gestiona por completo el equipo de la agencia - eso es el full service: marketing, chats, ventas y sistemas de pago están de nuestro lado, mientras que la página está registrada con los documentos de la modelo y tú conoces todos los datos de tu cuenta. Rigen reglamentos internos estrictos: los datos personales y el contenido solo los ven quienes los necesitan para trabajar.',
       },
       {
         question: '¿Podré ver lo que pasa en mi página?',
         answer:
-          'Sí. No te pedimos que nos creas sin más: ves las estadísticas y los balances de tu página, y te damos acceso a ella cuando lo acordemos, por ejemplo, en los días de pago, para que puedas comprobar las cifras. Tu manager te explica abiertamente el plan de trabajo y el resultado: si hay crecimiento o no, y qué cambiamos. Es justo lo que más sorprende a las chicas que vienen de otras agencias.',
+          'Sí, por completo. Tu acceso a la cuenta no tiene restricciones: las estadísticas, los balances y todo lo que pasa en la página están abiertos para ti en cualquier momento - trabajamos con máxima transparencia. Tu manager te explica abiertamente el plan y el resultado: si hay crecimiento o no, y qué cambiamos. Es justo lo que más sorprende a las chicas que vienen de otras agencias.',
       },
       {
         question: '¿Cómo protegen la identidad y el contenido frente a filtraciones?',
@@ -187,7 +187,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Cuánto contenido hay que producir?',
         answer:
-          'Los mínimos varían; muchas agencias recomiendan unas 10–14 piezas de contenido al mes como referencia inicial. Más contenido de calidad suele dar más puntos de entrada para suscriptores y ventas en DM.',
+          'El plan de contenido llega más o menos una vez por semana: de media, unas 100-150 fotos y 20-30 vídeos. Suena a mucho, pero una o dos sesiones por look cubren la mayor parte del plan: las poses y los ángulos cambian más rápido que los outfits. Todo viene detallado punto por punto, y el plan se adapta a tu horario.',
       },
       {
         question: '¿Cómo solicitar colaboración con OFM\'s Model Agency?',

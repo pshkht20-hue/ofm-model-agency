@@ -97,7 +97,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'Who owns the OnlyFans account?',
         answer:
-          'The page is registered with the model\'s own documents: you pass platform verification yourself and know all your account details — the handle, the email, what is registered where. Running the account and its finances is the agency\'s job: registration, sales, payment systems, and payouts on a fixed schedule. You access the page by arrangement — for example, on payout day. If you end the partnership — which you can do at any moment — the page registered with your documents stays with you.',
+          'The page is registered with the model\'s own documents: you pass platform verification yourself, and every account detail - the handle, the email, what is registered where - is in front of you. Running the account and its finances is the agency\'s job: registration, sales, payment systems, and payouts on schedule. Your access to the account is full and unrestricted: we work with complete transparency. If you end the partnership - which you can do at any moment - the page registered with your documents stays with you.',
       },
       {
         question: 'How do payouts from the platform work?',
@@ -107,12 +107,12 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How do I get paid?',
         answer:
-          'Payouts come once a month, on a schedule your manager sets before you start. Most often your share arrives on your card; the exact method is matched to your country in the chat. If you have never had a payment service account, that is actually a plus: we take care of the registration and setup, and you never pay for anything.',
+          'Payouts come twice a month, on a schedule your manager sets before you start. Most often your share arrives on your card; the exact method is matched to your country in the chat. If you have never had a payment service account, that is actually a plus: we take care of the registration and setup, and you never pay for anything.',
       },
       {
         question: 'When will I get my first payout?',
         answer:
-          'The first month is a preparation stage: setting up the page, advertising, and building a base of paying subscribers. Your first payout comes after your first billing month closes, and your manager names the schedule before launch, with no vague “we\'ll see”. After that, payouts arrive monthly, and you will hear an honest first-month estimate at the casting call.',
+          'The first month is a preparation stage: setting up the page, advertising, and building a base of paying subscribers. Payouts come twice a month, and your manager names the schedule before launch, with no vague “we\'ll see”. You will hear an honest first-month estimate at the casting call.',
       },
       {
         question: 'What do “total”, “balance”, and “net” mean?',
@@ -127,12 +127,12 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'Who runs the account, and how is my data protected?',
         answer:
-          'The agency team runs the account in full — that is what full-service means: marketing, chats, sales, and payment systems are on our side, while the page itself is registered with the model\'s documents and you know all your account details. Inside the team, NDAs and internal policies apply: personal data and content are visible only to the people who need them for the job. You access the page by arrangement — for example, on payout day.',
+          'The agency team runs the account in full - that is what full-service means: marketing, chats, sales, and payment systems are on our side, while the page itself is registered with the model\'s documents and you know all your account details. Strict internal policies apply: personal data and content are visible only to the people who need them for the job.',
       },
       {
         question: 'Will I be able to see what is happening on my page?',
         answer:
-          'Yes. We don\'t ask you to take our word for it: you can see your page\'s stats and balances, and we give you access to the page by arrangement, for example on payout days, so you can check the numbers yourself. Your manager openly walks you through the work plan and the results: whether the page is growing or not, and what we are changing. This is what most often surprises girls who come to us from other agencies.',
+          'Yes, fully. Your access to the account is unrestricted: stats, balances, and everything happening on the page are open to you at any moment - we work with complete transparency. Your manager openly walks you through the plan and the results: whether the page is growing or not, and what we are changing. This is what most often surprises girls who come to us from other agencies.',
       },
       {
         question: 'How are identity and content protected from leaks?',
@@ -187,7 +187,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How much content do I need to produce?',
         answer:
-          'Minimums vary by agency; many recommend about 10–14 content units per month as a starting benchmark. More quality content usually means more entry points for subscribers and DM sales.',
+          'A content plan arrives about once a week: on average around 100-150 photos and 20-30 videos. It sounds like a lot, but one or two shooting days per look cover most of the plan: poses and angles change faster than outfits. Everything is listed point by point, and the plan is built around your schedule.',
       },
       {
         question: 'How do I apply to OFM\'s Model Agency?',
