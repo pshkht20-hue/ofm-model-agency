@@ -104,6 +104,21 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
         answer:
           'La parte de pagos la lleva íntegramente la agencia: registro y configuración de los sistemas de pago (Paxum, Skrill y otros), control de los ingresos y pagos a la modelo según un calendario fijo. No tienes que pelearte con SWIFT, comisiones ni verificaciones de monederos — tu parte llega en dólares en las fechas acordadas, y el calendario se fija en el casting. Así se protegen las dos partes: los balances de las páginas han sido objetivo de estafadores más de una vez, por eso el circuito financiero lo cierra el equipo. Los impuestos, háblalos con tu manager y, si hace falta, con un asesor en tu jurisdicción.',
       },
+      {
+        question: '¿Cómo recibo los pagos?',
+        answer:
+          'Los pagos se hacen una vez al mes según un calendario acordado. La plataforma transfiere los ingresos de la página a un sistema de pago (normalmente Paxum o Skrill) gestionado por la agencia, y tu parte te llega por el método que acordemos: por lo general, a una tarjeta bancaria o en USDT. Si nunca has tenido una cuenta en un sistema de pago, eso es incluso una ventaja: nos encargamos del registro y la configuración. Las comisiones de retiro las hablamos de antemano, para que la cantidad que recibas no te sorprenda.',
+      },
+      {
+        question: '¿Cuándo llega el primer pago?',
+        answer:
+          'El primer mes es de preparación: puesta a punto de la página, publicidad y captación de suscriptores dispuestos a pagar. Por eso el primer pago llega al cierre del primer mes de liquidación, y tu manager fija el calendario antes del inicio, sin ningún «ya veremos». A partir de ahí, los pagos son mensuales. Tu manager te dice con honestidad en el casting qué ingresos puedes esperar el primer mes: sin prometer maravillas.',
+      },
+      {
+        question: '¿Qué significan «total», «balance» y «neto»?',
+        answer:
+          'El total (también llamado balance o gross) es la facturación global de la página al mes: todo lo que pagaron los suscriptores. De ahí se financian la publicidad, el tráfico y el equipo: gracias a esa reinversión, la página crece mes a mes. «Neto» es la parte de la modelo, lo que te llevas tú. Todas las cifras de las páginas que mostramos en el sitio se indican como total bruto (gross): así se hace en el sector y es la forma más honesta de comparar páginas.',
+      },
     ],
   },
   {
@@ -113,6 +128,11 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
         question: '¿Quién gestiona la cuenta y cómo se protegen mis datos?',
         answer:
           'La cuenta la gestiona por completo el equipo de la agencia — eso es el full service: marketing, chats, ventas y sistemas de pago están de nuestro lado, mientras que la página está registrada con los documentos de la modelo y tú conoces todos los datos de tu cuenta. Dentro del equipo rigen NDA y reglamentos internos: los datos personales y el contenido solo los ven quienes los necesitan para trabajar. Tu acceso a la página es por acuerdo — por ejemplo, el día de pago.',
+      },
+      {
+        question: '¿Podré ver lo que pasa en mi página?',
+        answer:
+          'Sí. No te pedimos que nos creas sin más: ves las estadísticas y los balances de tu página, y te damos acceso a ella cuando lo acordemos, por ejemplo, en los días de pago, para que puedas comprobar las cifras. Tu manager te explica abiertamente el plan de trabajo y el resultado: si hay crecimiento o no, y qué cambiamos. Es justo lo que más sorprende a las chicas que vienen de otras agencias.',
       },
       {
         question: '¿Cómo protegen la identidad y el contenido frente a filtraciones?',
@@ -153,6 +173,16 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
         question: '¿Cuánto tiempo debe dedicar la propia modelo?',
         answer:
           'Depende del formato. Como mínimo: rodajes y alineación del plan (a menudo 5–15 horas semanales al inicio). Con management completo el equipo cubre chats y marketing, pero sin tu contenido el crecimiento se detiene.',
+      },
+      {
+        question: '¿Puedo compaginarlo con un trabajo o con los estudios?',
+        answer:
+          'Sí, la mayoría de nuestras modelos lo compaginan. El plan de contenido llega una vez por semana y puedes grabar los días y a las horas que te vengan bien: lo importante es entregar a tiempo. Tu manager planifica los pedidos personalizados según tu horario: ni un trabajo de lunes a viernes ni los estudios son un obstáculo. Cuánto tiempo llevan las grabaciones lo tienes en la respuesta de arriba.',
+      },
+      {
+        question: 'Tengo un apartamento normal y no siempre estoy sola en casa. ¿Puedo hacerlo igualmente?',
+        answer:
+          'Sí, sin problema. Para grabar basta con una zona ordenada: una cama, un fondo neutro, luz natural o un aro de luz. No hace falta una decoración «de Instagram»: los suscriptores valoran más la naturalidad que el glamour. Si a veces está tu familia en casa, el plan de contenido se ajusta a tus horas libres. Y para los cortes de luz, la solución es grabar por tandas con luz natural y tener el aro de luz cargado: el equipo te explicará cómo organizar el proceso.',
       },
       {
         question: '¿Cuánto contenido hay que producir?',

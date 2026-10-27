@@ -104,6 +104,21 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
         answer:
           'The agency runs the entire payment side: registering and setting up payment systems (Paxum, Skrill, and others), tracking income, and paying the model on a fixed schedule. You don\'t have to figure out SWIFT, fees, or wallet verifications — your share arrives in dollars on agreed dates, and the schedule is set at the casting call. This protects both sides: page balances have been targeted by scammers more than once, so the team keeps the financial loop closed. Discuss taxes with your manager and, if needed, an advisor in your jurisdiction.',
       },
+      {
+        question: 'How do I get paid?',
+        answer:
+          'Payouts come once a month on an agreed schedule. The platform transfers the page\'s income to a payment service account (usually Paxum or Skrill) managed by the agency, and your share is paid out by the method we agree on: most often to a bank card or in USDT. If you have never used a payment service like this, that is actually a plus: we take care of the registration and setup. Withdrawal fees are discussed in advance, so the amount you take home is never a surprise.',
+      },
+      {
+        question: 'When will I get my first payout?',
+        answer:
+          'The first month is a preparation stage: setting up the page, advertising, and building a base of paying subscribers. That is why the first payout comes after your first billing month closes, and your manager sets the payout schedule before launch, with no vague “we\'ll see”. After that, payouts arrive monthly. Your manager gives you an honest first-month income estimate at the casting call: no pie-in-the-sky promises.',
+      },
+      {
+        question: 'What do “total”, “balance”, and “net” mean?',
+        answer:
+          'The total (also called the balance, or gross) is the page\'s overall revenue for the month: everything subscribers paid. Advertising, traffic, and the team are funded from it: thanks to this reinvestment, the page grows month after month. “Net” is the model\'s share, the money you take home. All page figures on the site are stated as gross totals: that is how the industry does it, and it is the fairer way to compare pages.',
+      },
     ],
   },
   {
@@ -113,6 +128,11 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
         question: 'Who runs the account, and how is my data protected?',
         answer:
           'The agency team runs the account in full — that is what full-service means: marketing, chats, sales, and payment systems are on our side, while the page itself is registered with the model\'s documents and you know all your account details. Inside the team, NDAs and internal policies apply: personal data and content are visible only to the people who need them for the job. You access the page by arrangement — for example, on payout day.',
+      },
+      {
+        question: 'Will I be able to see what is happening on my page?',
+        answer:
+          'Yes. We don\'t ask you to take our word for it: you can see your page\'s stats and balances, and we give you access to the page by arrangement, for example on payout days, so you can check the numbers yourself. Your manager openly walks you through the work plan and the results: whether the page is growing or not, and what we are changing. This is what most often surprises girls who come to us from other agencies.',
       },
       {
         question: 'How are identity and content protected from leaks?',
@@ -153,6 +173,16 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
         question: 'How much time does the model need to commit?',
         answer:
           'It depends on the format. At minimum: shoots and plan alignment (often 5–15 hours per week at the start). With full management, the team handles chats and marketing, but growth stops without your content.',
+      },
+      {
+        question: 'Can I combine this with a job or my studies?',
+        answer:
+          'Yes, most of our models do. The content plan arrives once a week, and you can shoot on the days and at the times that suit you: the main thing is to deliver on time. Your manager plans custom orders around your schedule: a nine-to-five job or classes won\'t get in the way. How much time the shoots take is covered in the answer above.',
+      },
+      {
+        question: 'I live in an ordinary apartment and I\'m not always home alone. Can I still do this?',
+        answer:
+          'Yes, you can. One tidy spot is enough for shoots: a bed, a neutral background, daylight or a ring light. You don\'t need an “Instagram-worthy” interior: subscribers value a natural feel over glossy perfection. If your family is sometimes home, we build your content plan around your free hours. And during power outages, two things save the day: shooting in batches in daylight and keeping your ring light charged. The team will show you how to organize the process.',
       },
       {
         question: 'How much content do I need to produce?',
