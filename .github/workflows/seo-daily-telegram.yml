@@ -36,21 +36,9 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
-      - name: Restore rank history
-        uses: actions/cache@v4
-        with:
-          path: docs/analytics-reports/rank-history
-          key: rank-history-${{ github.run_id }}
-          restore-keys: rank-history-
-
-      - name: Track positions (DataForSEO)
-        continue-on-error: true
-        run: npm run seo:positions -- --notify
-        env:
-          DATAFORSEO_USERNAME: ${{ secrets.DATAFORSEO_USERNAME }}
-          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      # Шаг «Track positions» (16 ключей, seo-positions.mjs) отключён 27.10.2026 по решению владельца:
+      # позиции теперь снимает SEO-штаб (ofm-shtab, серия 82 выдачи, 3 среза в день, медиана и светофор).
+      # Недостающие ключи перенесены в серию штаба 27.10 (онлифанс, онліфанс, ofm agency, онліфанс україна).
 
       - name: SEO alerts
         continue-on-error: true
