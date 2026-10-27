@@ -107,12 +107,12 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Cómo recibo los pagos?',
         answer:
-          'Los pagos se hacen una vez al mes según un calendario acordado. La plataforma transfiere los ingresos de la página a un sistema de pago (normalmente Paxum o Skrill) gestionado por la agencia, y tu parte te llega por el método que acordemos: por lo general, a una tarjeta bancaria o en USDT. Si nunca has tenido una cuenta en un sistema de pago, eso es incluso una ventaja: nos encargamos del registro y la configuración. Las comisiones de retiro las hablamos de antemano, para que la cantidad que recibas no te sorprenda.',
+          'Los pagos son mensuales, con un calendario que tu manager fija antes de empezar. Lo más habitual es que tu parte llegue a tu tarjeta; el método exacto lo ajustamos a tu país ya en el chat. Si nunca has tenido una cuenta en un sistema de pago, incluso mejor: nos encargamos del registro y la configuración, y tú no pagas nada.',
       },
       {
         question: '¿Cuándo llega el primer pago?',
         answer:
-          'El primer mes es de preparación: puesta a punto de la página, publicidad y captación de suscriptores dispuestos a pagar. Por eso el primer pago llega al cierre del primer mes de liquidación, y tu manager fija el calendario antes del inicio, sin ningún «ya veremos». A partir de ahí, los pagos son mensuales. Tu manager te dice con honestidad en el casting qué ingresos puedes esperar el primer mes: sin prometer maravillas.',
+          'El primer mes es de preparación: puesta a punto de la página, publicidad y captación de suscriptores dispuestos a pagar. El primer pago llega al cierre del primer mes de liquidación, y tu manager fija el calendario antes del inicio, sin ningún «ya veremos». A partir de ahí los pagos son mensuales, y en el casting escucharás una estimación honesta del primer mes.',
       },
       {
         question: '¿Qué significan «total», «balance» y «neto»?',
@@ -195,7 +195,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
           'En la página principal, rellena el formulario: nombre, Telegram (obligatorio) y, si quieres, tu edad y unas palabras sobre ti. Un manager escribirá por Telegram en un plazo de 24 horas, hará una primera revisión y propondrá el siguiente paso. La solicitud no te compromete a nada.',
       },
       {
-        question: '¿Cuánto tarda el lanzamiento hasta los primeros pagos?',
+        question: '¿Cuánto tarda el lanzamiento?',
         answer:
           'De media, 7–14 días tras la aprobación y el acuerdo de estrategia, si estás lista para la verificación y un paquete inicial de contenido. Los plazos pueden acortarse o alargarse según tu nicho y disponibilidad.',
       },

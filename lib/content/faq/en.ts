@@ -107,12 +107,12 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
       {
         question: 'How do I get paid?',
         answer:
-          'Payouts come once a month on an agreed schedule. The platform transfers the page\'s income to a payment service account (usually Paxum or Skrill) managed by the agency, and your share is paid out by the method we agree on: most often to a bank card or in USDT. If you have never used a payment service like this, that is actually a plus: we take care of the registration and setup. Withdrawal fees are discussed in advance, so the amount you take home is never a surprise.',
+          'Payouts come once a month, on a schedule your manager sets before you start. Most often your share arrives on your card; the exact method is matched to your country in the chat. If you have never had a payment service account, that is actually a plus: we take care of the registration and setup, and you never pay for anything.',
       },
       {
         question: 'When will I get my first payout?',
         answer:
-          'The first month is a preparation stage: setting up the page, advertising, and building a base of paying subscribers. That is why the first payout comes after your first billing month closes, and your manager sets the payout schedule before launch, with no vague “we\'ll see”. After that, payouts arrive monthly. Your manager gives you an honest first-month income estimate at the casting call: no pie-in-the-sky promises.',
+          'The first month is a preparation stage: setting up the page, advertising, and building a base of paying subscribers. Your first payout comes after your first billing month closes, and your manager names the schedule before launch, with no vague “we\'ll see”. After that, payouts arrive monthly, and you will hear an honest first-month estimate at the casting call.',
       },
       {
         question: 'What do “total”, “balance”, and “net” mean?',
@@ -195,7 +195,7 @@ export const FAQ_CATEGORIES_EN: FaqCategory[] = [
           'On the [OFM agency](/) homepage, fill out the form: name, Telegram (required), and optionally your age and a few words about yourself. A manager will message you on Telegram within 24 hours, run an initial review, and suggest next steps. Applying commits you to nothing.',
       },
       {
-        question: 'How long from launch to first payouts?',
+        question: 'How long does the launch take?',
         answer:
           'On average, 7–14 days after approval and strategy alignment — if you are ready to complete verification and release a starter content pack. Timelines can be shorter or longer depending on your niche and schedule.',
       },
