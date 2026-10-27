@@ -83,7 +83,7 @@ const RU: ModelGeoContent = {
   faq: [
     {
       q: 'Что такое бесплатный аудит страницы?',
-      a: 'Менеджер смотрит твою страницу до любых договорённостей: контент, цены, подачу, работу с подписчиками — и присылает короткий разбор, где именно теряется рост. Это бесплатно и ни к чему не обязывает: разбор остаётся у тебя, даже если решишь работать сама.',
+      a: 'Менеджер ещё до старта изучает страницу: контент, цены, подачу, работу с подписчиками, и присылает в Telegram короткий разбор, где теряется рост. Это бесплатно и ни к чему не обязывает: дальше вместе решим, как пробить потолок дохода.',
     },
     {
       q: 'У меня небольшая аудитория — этого достаточно?',
@@ -143,7 +143,7 @@ const UK: ModelGeoContent = {
   faq: [
     {
       q: 'Що таке безплатний аудит сторінки?',
-      a: 'Менеджер дивиться твою сторінку до будь-яких домовленостей: контент, ціни, подачу, роботу з підписниками — і надсилає короткий розбір, де саме губиться зростання. Це безплатно і ні до чого не зобовʼязує: розбір залишається в тебе, навіть якщо вирішиш працювати сама.',
+      a: 'Менеджер ще до старту вивчає сторінку: контент, ціни, подачу, роботу з підписниками, і надсилає в Telegram короткий розбір, де губиться зростання. Це безкоштовно й ні до чого не зобовʼязує: далі разом вирішимо, як пробити стелю доходу.',
     },
     {
       q: 'У мене невелика аудиторія — цього достатньо?',
@@ -203,7 +203,7 @@ const EN: ModelGeoContent = {
   faq: [
     {
       q: 'What is the free page audit?',
-      a: 'Before any commitments, the manager reviews your page — content, pricing, positioning, subscriber work — and sends you a short breakdown of where the growth is leaking. It is free and non-binding: the breakdown stays yours even if you decide to keep working solo.',
+      a: 'Before you start, a manager reviews your page (content, pricing, presentation, fan engagement) and sends you a short breakdown on Telegram of where growth is being lost. It is free and there is no obligation: then we work out together how to break through your income ceiling.',
     },
     {
       q: 'My audience is small — is that enough?',
@@ -263,7 +263,7 @@ const ES: ModelGeoContent = {
   faq: [
     {
       q: '¿Qué es la auditoría gratuita de la página?',
-      a: 'Antes de cualquier acuerdo, el manager revisa tu página — contenido, precios, posicionamiento, trabajo con suscriptores — y te envía un análisis breve de dónde se pierde el crecimiento. Es gratis y sin compromiso: el análisis es tuyo aunque decidas seguir por tu cuenta.',
+      a: 'Antes de empezar, un manager revisa tu página (contenido, precios, presentación, trato con los fans) y te envía por Telegram un breve análisis de dónde se pierde el crecimiento. Es gratis y sin compromiso: después decidimos juntos cómo romper tu techo de ingresos.',
     },
     {
       q: 'Mi audiencia es pequeña, ¿es suficiente?',

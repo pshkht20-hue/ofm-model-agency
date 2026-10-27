@@ -124,9 +124,9 @@ export const ABOUT_ES: AboutContent = {
           'Ni por la solicitud, ni por la formación, ni por la promoción. Todo lo que hace falta para lanzar lo paga la agencia; no cobramos nada a la modelo en ninguna etapa.',
       },
       {
-        title: 'No retenemos a nadie',
+        title: 'Libertad para salir cuando quieras',
         description:
-          'No hay papeleo para entrar, así que tampoco lo hay para salir. Puedes dejar de trabajar con nosotros cuando quieras: basta con decírselo a tu manager.',
+          'Sin papeleo para entrar ni para salir: para dejar de trabajar con nosotros, basta con escribir a tu manager.',
       },
       {
         title: 'No trabajamos con menores',

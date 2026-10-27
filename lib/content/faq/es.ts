@@ -52,7 +52,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Qué canales de marketing usan las agencias?',
         answer:
-          'Lo más habitual: Instagram, TikTok, Twitter/X, Reddit, colaboraciones con otras creadoras y shoutouts de pago cuando conviene y es seguro para la cuenta. La estrategia depende del nicho, de tu marca personal y de la geografía de la audiencia. El objetivo es tráfico cualificado, no visitas vacías.',
+          'Traemos suscriptores de Estados Unidos, Canadá y Australia: una audiencia que paga, no tu ciudad ni tus conocidos. Los canales se eligen según tu imagen y tu nicho, y toda la promoción la financia la agencia. Buscamos fans que pagan, no visitas vacías. Tu manager te mostrará la estrategia para tu página por Telegram.',
       },
       {
         question: '¿Hay que mostrar la cara? ¿Me verán mis conocidos?',
@@ -72,12 +72,12 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Qué porcentaje cobra una agencia de OnlyFans?',
         answer:
-          'Respuesta directa, sin «lo hablamos de forma individual»: en OFM la modelo recibe el 20–30 % del balance bruto total de la página — según el plan de trabajo, tu perfil y el equipo asignado. Por qué ese reparto: la agencia lo financia todo — promoción, tráfico, chatters 24/7, gestión —, así que tú no inviertes ni un céntimo. La clave es la reinversión: parte de los ingresos de la página vuelve a su crecimiento, porque sin reinversión el balance simplemente no crece, y el 25 % de un balance en crecimiento a los seis meses vale más que el 100 % de una página sola parada en cero. Contexto de mercado: las agencias de la CEI pagan a las modelos 20–30 % y las occidentales hasta 40 %, así que es un rango honesto. Las cifras del sitio son totales brutos de la página OnlyFans, no el pago neto de la creadora.',
+          'En OFM la modelo recibe el 20-30 % del balance bruto de la página: el porcentaje exacto depende del plan de trabajo, de tu perfil y del equipo en el que entres. Pero las modelos con experiencia no comparan porcentajes, sino lo que cobran de verdad, y hay un motivo: el balance solo crece cuando se invierte en la página. La promoción, el tráfico y el equipo de chat 24/7 los financia la agencia, tú no inviertes nada, y una parte importante de los ingresos de la página se reinvierte en su crecimiento. Por eso el 20-30 % de un balance que crece supera rápido a un porcentaje alto allí donde nadie invierte en la página. Qué porcentaje tendrás tú y en qué páginas de tu perfil se ve, te lo mostrará tu manager en el casting.',
       },
       {
         question: '¿Cuánto cobra una agencia de OnlyFans? Modelos de pago habituales',
         answer:
-          'El estándar del sector es el revenue share: la agencia gana un porcentaje de los ingresos de la página, y solo cuando tú ganas. En la CEI las modelos suelen recibir el 20–30 % del balance bruto; algunos equipos occidentales pagan hasta el 40 % — mientras que las agencias occidentales de full management se quedan con el 50–60 %. En OFM la modelo recibe el 20–30 %: la promoción, el tráfico y los chatters 24/7 los financia la agencia, y parte de los ingresos se reinvierte en el crecimiento de la página. Compara el dinero que te llega a los seis meses, no los porcentajes. No cobramos pagos de «entrada».',
+          'El estándar del sector es el revenue share: la agencia gana un porcentaje de los ingresos de la página, y solo cuando tú ganas. En OFM la modelo recibe el 20-30 % del balance bruto, y la promoción, el tráfico y los chatters 24/7 los financia la agencia. Parte de los ingresos se reinvierte en la página, así que lo que cobras crece con ella: lo que importa es lo que recibes, no el porcentaje. Sin pagos de entrada. Tu manager te dará una estimación personal por Telegram.',
       },
       {
         question: '¿Qué comisiones son normales y cuáles son señal de alerta?',
@@ -102,7 +102,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Cómo funcionan los pagos desde la plataforma?',
         answer:
-          'La parte de pagos la lleva íntegramente la agencia: registro y configuración de los sistemas de pago (Paxum, Skrill y otros), control de los ingresos y pagos a la modelo según un calendario fijo. No tienes que pelearte con SWIFT, comisiones ni verificaciones de monederos — tu parte llega en dólares en las fechas acordadas, y el calendario se fija en el casting. Así se protegen las dos partes: los balances de las páginas han sido objetivo de estafadores más de una vez, por eso el circuito financiero lo cierra el equipo. Los impuestos, háblalos con tu manager y, si hace falta, con un asesor en tu jurisdicción.',
+          'La parte de pagos la lleva íntegramente la agencia: registro y configuración de los sistemas de pago (Paxum, Skrill y otros), control de los ingresos y pagos a la modelo según un calendario fijo. No tienes que pelearte con SWIFT, comisiones ni verificaciones de monederos: tú solo recibes tu parte en dólares en las fechas acordadas, y el calendario se fija en el casting. Los impuestos, háblalos con tu manager y, si hace falta, con un asesor en tu jurisdicción.',
       },
       {
         question: '¿Cómo recibo los pagos?',
@@ -137,7 +137,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: '¿Cómo protegen la identidad y el contenido frente a filtraciones?',
         answer:
-          'Lo básico: NDA, reglamentos internos, prohibición de publicar material sin consentimiento, monitorización de filtraciones (DMCA y similares cuando aplique) y recomendaciones de geo-bloqueos y marcas de agua. No existe anonimato total en internet, pero el riesgo puede reducirse mucho con proceso.',
+          'Protegemos tu anonimato en cada nivel: geobloqueo de tu país y de los vecinos, marcas de agua en las vistas previas y monitorización de filtraciones con retirada de copias (DMCA). Tus datos personales se quedan con quienes gestionan tu página. Tu manager te mostrará por Telegram cómo lo configuramos para ti.',
       },
       {
         question: '¿Publican agencias mis datos o ingresos sin permiso?',
@@ -212,7 +212,7 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
       {
         question: 'Cómo elegir una buena agencia de OnlyFans: lista de comprobación',
         answer:
-          'Comprueba: (1) porcentaje transparente y lista clara de servicios; (2) casos verificables y pagos reales — o la posibilidad de hablar con una modelo activa; (3) un casting real con un manager, no un «firma hoy» por privado; (4) la agencia financia el lanzamiento y nunca te pide dinero; (5) rapidez y tono de la respuesta; (6) política de privacidad clara; (7) libertad de terminar la colaboración en cualquier momento. Compara 2–3 agencias antes de decidir.',
+          'Comprueba: (1) porcentaje transparente y lista clara de servicios; (2) casos verificables y pagos reales, o la posibilidad de hablar con una modelo activa; (3) un casting real con un manager, no un «firma hoy» por privado; (4) la agencia financia el lanzamiento y nunca te pide dinero; (5) rapidez y tono de la respuesta; (6) política de privacidad clara; (7) libertad de terminar la colaboración en cualquier momento. Todo esto puedes comprobarlo con nosotros en el casting: escribe a un manager por Telegram, respondemos a todas las solicitudes en 24 horas.',
       },
       {
         question: '¿Qué preguntas hacer al manager en la primera llamada?',
@@ -220,9 +220,9 @@ export const FAQ_CATEGORIES_ES: FaqCategory[] = [
           'Pregunta: qué porcentaje recibe la modelo y qué hace la agencia por su parte; quién gestiona los chats y cuántos turnos al día; cómo funciona el marketing y quién lo financia; frecuencia de informes y calendario de pagos; qué casos de crecimiento hay en tu nicho; qué pasa si los ingresos no crecen en 60 días; con qué rapidez puedes dejar la colaboración. Una agencia seria responde con calma y concreción, sin presión de «decide ya».',
       },
       {
-        question: 'Señales de fraude y agencias tóxicas',
+        question: '¿Cómo reconocer una agencia honesta?',
         answer:
-          'Señales de alarma: te piden dinero — «por promoción», formación o entrada; prometen $10–100K fijos de inmediato, sin analizar el nicho; no hay casos verificables ni pagos reales; no hay casting en vivo ni manager — solo presión de «decide hoy»; amenazas al intentar irte; publicar tu material sin consentimiento. Un equipo honesto gana un porcentaje del resultado y te da tiempo para pensar con calma.',
+          'Una agencia honesta no cobra nada a la modelo al empezar, gana solo un porcentaje del resultado, hace un casting en vivo y te da tiempo para pensar. Así trabaja OFM: financiamos el lanzamiento, la página está a tu nombre y puedes irte cuando quieras. Compruébalo: escribe a un manager por Telegram.',
       },
       {
         question: '¿Se puede combinar agencia y gestión propia de la cuenta?',

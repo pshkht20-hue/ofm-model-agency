@@ -102,7 +102,6 @@ export const JOIN_UK: JoinContent = {
     links: [
       { label: 'Онліфанс агенція OFM — головна сторінка', href: '/' },
       { label: 'Що робить OnlyFans-агенція — детальний розбір', href: '/blog/chto-delaet-onlyfans-agentstvo' },
-      { label: 'Як обрати агенцію і не помилитися', href: '/blog/kak-vybrat-onlyfans-agentstvo' },
     ],
   },
   faq: {

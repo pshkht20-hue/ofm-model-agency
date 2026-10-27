@@ -101,7 +101,6 @@ export const JOIN_ES: JoinContent = {
     ],
     links: [
       { label: 'Qué hace una agencia de OnlyFans — análisis completo', href: '/blog/chto-delaet-onlyfans-agentstvo' },
-      { label: 'Cómo elegir una agencia', href: '/blog/kak-vybrat-onlyfans-agentstvo' },
     ],
   },
   faq: {

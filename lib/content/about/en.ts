@@ -124,9 +124,9 @@ export const ABOUT_EN: AboutContent = {
           'Not for the application, not for training, not for promotion. Everything a launch needs is paid by the agency; we take no money from a model at any stage.',
       },
       {
-        title: 'We do not hold anyone by force',
+        title: 'Free to leave anytime',
         description:
-          'There is no paperwork on the way in, so there is none on the way out either. You can stop working with us whenever you want — just tell your manager.',
+          'No paperwork on the way in and none on the way out: to stop working with us, just message your manager.',
       },
       {
         title: 'We do not work with minors',
