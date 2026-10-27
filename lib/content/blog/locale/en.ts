@@ -235,7 +235,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Here is the honest market math. CIS agencies typically pay the model 20–30% of the page's gross balance; some Western teams advertise up to 40% — but usually cover chatting only. For genuine full management, European agencies keep 50–60% for themselves, and the model often still funds her own promo. At OFM the model keeps 20–30% of gross with zero investment: promo, paid traffic, 24/7 chatters and management are funded entirely by the agency, and part of the page's income is reinvested into its growth — that reinvestment is what makes the balance climb. Any upfront fee to “join” or “set up” is a classic red flag: a real agency earns only when you do.",
+        text: "Count what you take home, not what the agency charges. At OFM the model keeps 20-30% of gross with zero investment: promo, paid traffic, 24/7 chatters and management are funded entirely by the agency, and part of the page's income is reinvested into its growth, which is what makes the balance climb. Any upfront fee to “join” or “set up” is a classic red flag: a real agency earns only when you do.",
       },
       {
         type: "tip",
@@ -266,11 +266,11 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Submit an application and evaluate response time. Ask for 2–3 references (even anonymized growth numbers). Review their FAQ and blog—mature teams explain processes publicly. Compare at least two companies.",
+        text: "Message an OFM manager on Telegram @ofmm_agency: we'll show growth cases, explain exactly what the agency's share funds, and walk through your launch plan before you decide anything.",
       },
       {
         type: "p",
-        text: "At OFM's Model Agency, a manager replies on Telegram within 24 hours after you apply on the site; terms are discussed individually, with no “entry” fee. Use this article as a base for interviewing any team.",
+        text: "At OFM's Model Agency, a manager replies on Telegram within 24 hours after you apply on the site; terms are discussed individually, with no “entry” fee. Bring the questions from this article: we answer every one in writing before you start.",
       },
       {
         type: "nav",
@@ -427,29 +427,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Agencies rarely publish price lists, which is why \"how much do OnlyFans managers cost\" has no single answer. But the market runs on three models, and once you know them, every offer you'll ever get becomes easy to place:",
-      },
-      {
-        type: "table",
-        caption: "The three pricing models on the OnlyFans management market",
-        headers: ["Pricing model", "Typical market terms", "What to check"],
-        rows: [
-          [
-            "Revenue share, full service",
-            "The agency keeps 30–50% of page earnings and runs everything",
-            "What the share funds: ads, chat shifts, management — ask for the list",
-          ],
-          [
-            "Revenue share, chat-only",
-            "Smaller cut, but the agency only staffs your DMs",
-            "Marketing stays on you — without fan inflow, chatters sell to an empty room",
-          ],
-          [
-            "Flat fee",
-            "$500–2,000 per month regardless of results",
-            "You pay even in a bad month — the team earns whether you grow or not",
-          ],
-        ],
+        text: "Agencies rarely publish price lists, which is why \"how much do OnlyFans managers cost\" has no single answer. The question that matters for you is simpler: how much do you keep, and what does the agency pay for?",
       },
       {
         type: "p",
@@ -556,7 +534,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Market-wide: full-service agencies keep 30–50% of page earnings, chat-only teams take less but leave marketing to you, and freelance managers charge flat fees of $500–2,000 a month win or lose. At OFM the model keeps 20–30% of the gross page balance with zero investment — the agency funds the ads, traffic, 24/7 chat team and management, and reinvests part of the income into the page's growth.",
+        text: "Nothing upfront. At OFM the model keeps 20-30% of the gross balance and invests nothing: ads, traffic, the 24/7 chat team and management are funded by the agency, and part of the income is reinvested into growth. Your manager will walk you through the numbers on Telegram.",
       },
       {
         type: "h3",
@@ -901,7 +879,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Compare at least two agencies using our checklist articles, read the FAQ, and review case studies. If you want an OnlyFans agency in Ukraine with 24/7 chats and transparent terms—apply on the homepage. No obligation until you agree on terms.",
+        text: "If you want an OnlyFans agency in Ukraine with 24/7 chats and transparent terms, apply on the homepage: a manager replies on Telegram within 24 hours, with no entry fee and no obligation.",
       },
       {
         type: "nav",
@@ -1810,7 +1788,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "The market range: CIS agencies pay models 20–30% of the gross balance, some Western teams up to 40% with a thinner service list, and European full management usually leaves the model 40–50% — without funded traffic or a 24/7 chat team. At OFM the model keeps 20–30%, the agency funds everything, and the figure that matters is not the percentage but how your monthly payout grows.",
+        text: "At OFM the model keeps 20-30% of the gross balance and invests nothing: the agency funds traffic, the 24/7 chat team and management, and the figure that matters is how your monthly payout grows.",
       },
       {
         type: "tip",
@@ -1873,9 +1851,9 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   "onlyfans-agentstvo-dlya-nachinayushchih": {
-    title: "OnlyFans for Beginners: Agency or Solo in 2026",
+    title: "OnlyFans for Beginners 2026: Start With an Agency in 7-14 Days",
     description:
-      "How to start OnlyFans step by step in 2026: verification, niche, first content, marketing, and when to bring in agency management. A beginner roadmap.",
+      "How to start OnlyFans with no experience: you create, the OFM team handles verification, promotion and 24/7 chats. Launch in 7-14 days with zero investment, 18+.",
     keywords: [
       "how to start onlyfans",
       "onlyfans for beginners",
@@ -1927,11 +1905,11 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h2",
-        text: "When to bring in an agency at the start",
+        text: "Why starting with an agency is faster",
       },
       {
         type: "p",
-        text: "It makes sense if you want to cover the whole path in 7-14 days with a team, instead of learning by trial and error in your DMs at night. OFM takes on beginners: apply on the site and a manager reaches out on Telegram (@ofmm_agency) within 24 hours.",
+        text: "With a team you cover the whole path in 7-14 days, instead of learning by trial and error in your DMs at night. OFM takes on beginners: apply on the site and a manager reaches out on Telegram (@ofmm_agency) within 24 hours.",
       },
       {
         type: "nav",
@@ -2300,7 +2278,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
     blocks: [
       {
         type: "p",
-        text: "OnlyFans is a business with heightened privacy risks. Total anonymity doesn't exist, but the right process makes doxxing and leaks far less likely.",
+        text: "Anonymity on OnlyFans is built as a system: geo-blocking your country, promotion only to the US, Canada and Australia, separate work details and watermarks. At OFM the team sets it all up before launch.",
       },
       {
         type: "h2",
@@ -2574,7 +2552,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h2", text: "The model's share: benchmarks for Moldova" },
       {
         type: "p",
-        text: "The honest market picture: CIS agencies pay the model 20–30% of the page's gross balance; some Western teams advertise up to 40% but usually cover chatting only, and European full management leaves the model 40–50% without funded traffic. At OFM the model keeps 20–30% — and the agency funds everything: promo, paid traffic, 24/7 chatters, management, plus reinvestment into the page's growth. Any upfront fee is a red flag. And instead of paperwork, insist on what actually protects you: transparent terms agreed at the casting, verifiable payouts, and the freedom to stop the partnership at any moment.",
+        text: "At OFM the model keeps 20-30%, and the agency funds everything: promo, paid traffic, 24/7 chatters, management and reinvestment into the page's growth. Any upfront fee is a red flag. And instead of paperwork, insist on what actually protects you: transparent terms agreed at the casting, verifiable payouts, and the freedom to stop the partnership at any moment.",
       },
       { type: "h2", text: "How working with OFM looks" },
       {
@@ -2593,7 +2571,7 @@ const EN_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "tip",
-        text: "For a full selection checklist see „How to choose an OnlyFans agency“, and for the warning signs read „Agency scams: 10 red flags“ — comparing at least two teams side by side is the simplest way to avoid a bad fit.",
+        text: "For the full checklist see „How to choose an OnlyFans agency“. Any question about terms? A manager answers on Telegram @ofmm_agency.",
       },
       {
         type: "nav",

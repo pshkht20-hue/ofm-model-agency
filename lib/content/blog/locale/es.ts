@@ -219,7 +219,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "La matemática honesta del mercado: las agencias del este de Europa suelen pagar a la modelo el 20–30% del balance bruto de la página; algunos equipos occidentales anuncian hasta un 40%, pero normalmente solo cubren el chat. En el full management europeo la agencia se queda el 50–60%, y la modelo muchas veces aún paga su propia promoción. En OFM la modelo se queda con el 20–30% del bruto sin invertir nada: la promoción, el tráfico de pago, los chatters 24/7 y el management los financia por completo la agencia, y parte del ingreso de la página se reinvierte en su crecimiento — esa reinversión es lo que hace subir el balance. Cualquier pago anticipado por “entrada” o “configuración” es una señal de alerta clásica: una agencia real solo gana cuando ganas tú.",
+        text: "Cuenta lo que te llega a ti, no lo que cobra la agencia. En OFM la modelo se queda con el 20-30% del bruto sin invertir nada: la promoción, el tráfico de pago, los chatters 24/7 y el management los financia por completo la agencia, y parte del ingreso de la página se reinvierte en su crecimiento, que es lo que hace subir el balance. Cualquier pago anticipado por “entrada” o “configuración” es una señal de alerta clásica: una agencia real solo gana cuando ganas tú.",
       },
       {
         type: "tip",
@@ -250,11 +250,11 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "Envía la solicitud y valora el tiempo de respuesta. Pide 2–3 referencias (aunque sean cifras de crecimiento anonimizadas). Revisa FAQ y blog: los equipos maduros explican procesos en público. Compara al menos dos empresas.",
+        text: "Escribe a un manager de OFM por Telegram @ofmm_agency: te mostramos casos con evolución del balance, qué financia la parte de la agencia y tu plan de arranque antes de decidir nada.",
       },
       {
         type: "p",
-        text: "En OFM's Model Agency, un manager responde por Telegram en 24 horas tras solicitar en la web; las condiciones se discuten de forma individual, sin cuota de “entrada”. Usa este artículo como base para entrevistar a cualquier equipo.",
+        text: "En OFM's Model Agency, un manager responde por Telegram en 24 horas tras solicitar en la web; las condiciones se discuten de forma individual, sin cuota de “entrada”. Hazle las preguntas de este artículo: te respondemos cada una por escrito antes de empezar.",
       },
       {
         type: "nav",
@@ -619,7 +619,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "El panorama honesto: en el mercado del este de Europa la modelo recibe el 20–30% del balance bruto de la página; algunos equipos occidentales anuncian hasta un 40% pero suelen cubrir solo el chat, y en el full management europeo a la modelo le queda el 40–50% sin tráfico financiado. En OFM la modelo se queda con el 20–30% y la agencia lo financia todo: promoción, tráfico de pago, chatters 24/7, management y la reinversión en el crecimiento de la página. Cualquier pago por adelantado es una señal de alerta. Y en lugar de papeles, exige lo que protege de verdad: condiciones transparentes acordadas en el casting, pagos verificables y la libertad de dejar la colaboración en cualquier momento.",
+        text: "En OFM la modelo se queda con el 20-30% y la agencia lo financia todo: promoción, tráfico de pago, chatters 24/7, management y la reinversión en el crecimiento de la página. Cualquier pago por adelantado es una señal de alerta. Y en lugar de papeles, exige lo que protege de verdad: condiciones transparentes acordadas en el casting, pagos verificables y la libertad de dejar la colaboración en cualquier momento.",
       },
       {
         type: "h2",
@@ -1565,7 +1565,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "El rango del mercado: en el este de Europa las agencias pagan a la modelo el 20–30% del balance bruto; algunos equipos occidentales llegan al 40% con una lista de servicios más corta, y en el full management europeo a la modelo le queda el 40–50% — sin tráfico financiado ni equipo de chat 24/7. En OFM la modelo se queda con el 20–30%, la agencia lo financia todo, y lo que importa no es el porcentaje sino cómo crece tu pago mensual.",
+        text: "En OFM la modelo se queda con el 20-30% del bruto y no invierte nada: la agencia financia el tráfico, el equipo de chat 24/7 y el management; lo que importa es cómo crece tu pago mensual.",
       },
       {
         type: "tip",
@@ -1624,9 +1624,9 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
     ],
   },
   "onlyfans-agentstvo-dlya-nachinayushchih": {
-    title: "OnlyFans para principiantes: agencia o sola en 2026",
+    title: "OnlyFans para principiantes 2026: empieza con agencia en 7-14 días",
     description:
-      "Cómo empezar en OnlyFans paso a paso: verificación, nicho, primer contenido, tráfico y cuándo sumar una agencia que promociona y vende por ti.",
+      "Cómo empezar en OnlyFans sin experiencia: tú creas y el equipo OFM lleva la verificación, la promoción y los chats 24/7. Arranque en 7-14 días sin inversión, 18+.",
     keywords: [
       "cómo empezar en onlyfans",
       "onlyfans para principiantes",
@@ -1678,11 +1678,11 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "h2",
-        text: "Cuándo sumar una agencia al empezar",
+        text: "Por qué con agencia empiezas más rápido",
       },
       {
         type: "p",
-        text: "Tiene sentido si quieres recorrer el camino en 7–14 días con un equipo, en lugar de aprender a base de errores en los DM de madrugada. OFM acepta principiantes: dejas tu solicitud en la web y un manager te escribe por Telegram en 24 horas.",
+        text: "Con un equipo recorres el camino en 7-14 días, en lugar de aprender a base de errores en los DM de madrugada. OFM acepta principiantes: dejas tu solicitud en la web y un manager te escribe por Telegram en 24 horas.",
       },
       {
         type: "nav",
@@ -2239,7 +2239,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
     blocks: [
       {
         type: "p",
-        text: "OnlyFans es un negocio con un riesgo de privacidad alto. El anonimato total no existe, pero un proceso bien montado reduce muchísimo las probabilidades de doxxing y de filtraciones de tu contenido.",
+        text: "El anonimato en OnlyFans se construye como sistema: geobloqueo de tu país, promoción solo hacia EE. UU., Canadá y Australia, datos de trabajo separados y marcas de agua. En OFM el equipo lo configura antes del lanzamiento.",
       },
       {
         type: "h2",
@@ -2518,12 +2518,12 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "tip",
-        text: "Antes de decidir, compara al menos dos agencias con la lista de control del artículo «Cómo elegir agencia OnlyFans» y repasa las señales de fraude en «Estafas: señales de fraude».",
+        text: "La lista completa está en «Cómo elegir agencia OnlyFans»; cualquier duda sobre condiciones la resuelve un manager de OFM por Telegram @ofmm_agency.",
       },
       { type: "h2", text: "El porcentaje de la modelo: referencias para el mercado moldavo" },
       {
         type: "p",
-        text: "El panorama honesto del mercado: en el este de Europa la modelo recibe el 20–30% del balance bruto de la página; algunos equipos occidentales anuncian hasta un 40% pero suelen cubrir solo el chat, y en el full management europeo a la modelo le queda el 40–50% sin tráfico financiado. En OFM la modelo se queda con el 20–30% y la agencia lo financia todo: promoción, tráfico de pago, chatters 24/7, management y la reinversión en el crecimiento de la página. Cualquier pago por adelantado es una señal de alerta. Y en lugar de papeles, fíjate en lo que protege de verdad: condiciones transparentes acordadas en el casting, pagos verificables y la libertad de irte en cualquier momento. Las cifras no son un sueldo garantizado: dependen de tu nicho, tu constancia y el trabajo conjunto.",
+        text: "En OFM la modelo se queda con el 20-30% y la agencia lo financia todo: promoción, tráfico de pago, chatters 24/7, management y la reinversión en el crecimiento de la página. Cualquier pago por adelantado es una señal de alerta. Y en lugar de papeles, fíjate en lo que protege de verdad: condiciones transparentes acordadas en el casting, pagos verificables y la libertad de irte en cualquier momento. Las cifras no son un sueldo garantizado: dependen de tu nicho, tu constancia y el trabajo conjunto.",
       },
       { type: "h2", text: "Cómo es la colaboración con OFM" },
       {
@@ -3698,7 +3698,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       },
       {
         type: "p",
-        text: "El precio aparece después. Turnos de 6–8 horas, casi siempre de noche, porque los que pagan viven en el horario de Estados Unidos. Multas por llegar tarde en más de un estudio. Y la matemática que conoces mejor que nadie: la plataforma toma su comisión, el estudio la suya — en muchos estudios se queda con entre el 40 y el 60% de lo que generas —, todo a cambio de una habitación y una cámara que no son tuyas. Hace poco medio internet colombiano discutió si las chicas webcam «son modelos o no». Debate equivocado. La pregunta útil no es cómo te llaman: es cuánto de tu trabajo se queda contigo — y quién decide tu horario.",
+        text: "El precio aparece después. Turnos de 6-8 horas, casi siempre de noche, porque los que pagan viven en el horario de Estados Unidos. Multas por llegar tarde en más de un estudio. Y la matemática que conoces mejor que nadie: la plataforma toma su comisión, el estudio la suya, todo a cambio de una habitación y una cámara que no son tuyas. Hace poco medio internet colombiano discutió si las chicas webcam «son modelos o no». Debate equivocado. La pregunta útil no es cómo te llaman: es cuánto de tu trabajo se queda contigo y quién decide tu horario.",
       },
       {
         type: "h2",
@@ -3809,7 +3809,7 @@ const ES_OVERLAY: BlogLocaleOverlayMap = {
       { type: "h3", text: "¿Cuánto gana una modelo webcam?" },
       {
         type: "p",
-        text: "Depende de las horas y del reparto. El fan compra tokens, la plataforma toma su comisión y el estudio la suya — en muchos estudios, entre el 40 y el 60% de lo que generas; los pagos suelen ser semanales. Con turnos completos y constancia se puede vivir de esto, pero el contador se detiene cada vez que apagas la cámara: no hay acumulación de mes a mes. En OnlyFans la misma constancia produce un balance que crece — con equipo, la referencia va de $500–1.000 el primer mes hacia $500–3.000 con los meses (cifras gross, orientativas, no una garantía).",
+        text: "Depende de las horas y del reparto. El fan compra tokens, la plataforma toma su comisión y el estudio la suya; los pagos suelen ser semanales. Con turnos completos y constancia se puede vivir de esto, pero el contador se detiene cada vez que apagas la cámara: no hay acumulación de mes a mes. En OnlyFans la misma constancia produce un balance que crece: con equipo, la referencia va de $500-1.000 el primer mes hacia $500-3.000 con los meses (cifras gross, orientativas, no una garantía).",
       },
       { type: "h3", text: "¿Qué se necesita para pasar del webcam a OnlyFans?" },
       {
